@@ -1,0 +1,13 @@
+{
+ "dataset": "DS113 Cataract-101",
+ "factor": "Surgeon (levels: {1: 25, 2: 24, 3: 32, 4: 20})",
+ "content": "phase (categorical)",
+ "videos": 101,
+ "frames_total": 1263116,
+ "frames_dropped_unlabelled": 29237,
+ "table_rows": 4,
+ "table_cols": 10,
+ "cramers_v": 0.0729373733561268,
+ "d8_rule_pass": true,
+ "note": "DS113 is not SS-eligible (101 < 200 trajectories); V reported per gate \u00a74"
+}

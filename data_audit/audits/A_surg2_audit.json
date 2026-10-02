@@ -1,0 +1,1405 @@
+[
+ {
+  "id": "DS128",
+  "name": "EndoVis 2020 (Endoscopic Vision Challenge, MICCAI 2020 umbrella record)",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://zenodo.org/records/3715646",
+   "https://zenodo.org/api/records/3715646",
+   "/media/user/LaCie/medvideo_gate/DS128/EndoscopicVisionChallenge.pdf"
+  ],
+  "trajectory_unit": "Umbrella challenge-design record with no data of its own. It describes four sub-challenge datasets: CATARACTS workflow (one video = one cataract surgery), CATARACTS semantic segmentation (annotated frames from CATARACTS videos), MISAW (one case = one robotic micro-anastomosis training trial) and SurgVisDom (VR / porcine task video clips). These are audited separately as DS114 (CATARACTS), DS143 (MISAW) and DS170 (SurgVisDom). Verdicts below summarise the sub-challenge descriptions in this record and name the sub-challenge each refers to.",
+  "n_trajectories": null,
+  "n_trajectories_quote": "50 cataract surgeries have been recorded. [...] Training: 17 cases [...] Testing: 10 cases [...] 22 (VR) + 3 (porcine) training cases will be made available for the 3 tasks resulting in a total set of 75 training videos. The test set will contain a total of 30 video clips",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "Each frame of the videos has a list of twenty classes, indicating in which activities the surgeon is at. [...] Kinematic data (x, y, z, alpha, beta, gamma at 30hz)",
+   "source": "https://zenodo.org/records/3715646 (EndoscopicVisionChallenge.pdf; local copy /media/user/LaCie/medvideo_gate/DS128/EndoscopicVisionChallenge.pdf)",
+   "reason": "Time-stamped human action variables exist in sub-challenges (CATARACTS per-frame surgeon activities; MISAW robot kinematics + per-timestamp activities; SurgVisDom per-clip activity labels), but no sub-challenge reaches 200 human trajectories (CATARACTS 50, MISAW 27, SurgVisDom <=105 clips). No single release unit exists for the umbrella record."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "Workflow annotation (not provide for test cases), containing for each timestamp the label for phase, steps, [...] Each video clip will include a label of the activity being performed.",
+   "source": "https://zenodo.org/records/3715646 (EndoscopicVisionChallenge.pdf; local copy /media/user/LaCie/medvideo_gate/DS128/EndoscopicVisionChallenge.pdf)",
+   "reason": "The annotation inventories described for all four sub-challenges are activity/phase/step labels and segmentation masks; no outcome (task success, skill score, error, complication, post-action sensor measurement) is documented."
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "Training, validation and test cases are videos of cataract surgery. [...] Video and kinematic data are recorded synchronously at 30 Hz.",
+   "source": "https://zenodo.org/records/3715646 (EndoscopicVisionChallenge.pdf; local copy /media/user/LaCie/medvideo_gate/DS128/EndoscopicVisionChallenge.pdf)",
+   "reason": "PASS only for the CATARACTS-workflow (full surgery videos) and MISAW (synchronous 30 Hz trials) sub-datasets. CATARACTS-segmentation is annotated frames and SurgVisDom is video clips (both would FAIL)."
+  },
+  "D4": {
+   "verdict": "UNKNOWN",
+   "quote": "Surgeries were performed by three surgeons: a renowned expert, a one-year experienced surgeon and an intern. [...] Brest University Hospital, France. [...] Surgeries were performed under an OPMI Lumera T microscope (Carl Zeiss Meditec, Jena, Germany).",
+   "source": "https://zenodo.org/records/3715646 (EndoscopicVisionChallenge.pdf; local copy /media/user/LaCie/medvideo_gate/DS128/EndoscopicVisionChallenge.pdf)",
+   "reason": "CATARACTS: one site, one microscope; 50 videos by 3 surgeons, but the per-video surgeon assignment is not given in this record (see DS114). MISAW: per-case operator counts are given and all are <20 (FAIL). SurgVisDom: no per-trajectory factor. No factor is shown to have >=2 levels with >=20 trajectories."
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "CC BY NC SA. [...] Publicly available for non-commercial use after the challenge and the challenge paper submission. [...] CC BY NC ND.",
+   "source": "https://zenodo.org/records/3715646 (EndoscopicVisionChallenge.pdf; local copy /media/user/LaCie/medvideo_gate/DS128/EndoscopicVisionChallenge.pdf)",
+   "reason": "CATARACTS and MISAW data: CC BY-NC-SA (research use; derived material shareable under the same terms); CATARACTS also requires a signed terms-and-conditions document at registration. SurgVisDom: CC BY-NC-ND, which does not allow sharing adapted material (FAIL for that sub-challenge). The Zenodo record licence (cc-by-nd-4.0) covers the design document only."
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "This is the challenge design document for the \"Endoscopic Vision Challenge\", accepted for MICCAI 2020.",
+   "source": "https://zenodo.org/api/records/3715646",
+   "reason": "The record holds only a 9.1 MB design PDF. No dataset sizes are documented for any sub-challenge."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "Each frame of the videos has a list of twenty classes, indicating in which activities the surgeon is at. [...] Frames from 35 cataract surgery videos have been annotated for scene segmentation.",
+   "source": "https://zenodo.org/records/3715646 (EndoscopicVisionChallenge.pdf; local copy /media/user/LaCie/medvideo_gate/DS128/EndoscopicVisionChallenge.pdf)",
+   "reason": "Per-frame human activity labels (CATARACTS) and per-timestamp phase/step labels (MISAW) vary within trajectories and are not acquisition metadata."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4 in this record (CATARACTS operator assignment undocumented here; MISAW operators <20 each; single sites/devices)."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "All human: CATARACTS clinician-performed cataract surgery (50); MISAW human teleoperation of a master-slave robot on a training task by 3 expert surgeons + 3 engineering students (27); SurgVisDom VR (da Vinci SimNow) and porcine tasks by surgeons/non-surgeons (75 training videos + 30 test clips).",
+   "site": "CATARACTS: Brest University Hospital (1). MISAW: University of Tokyo (1). SurgVisDom: Intuitive Surgical training labs.",
+   "device": "CATARACTS: Zeiss OPMI Lumera T microscope. MISAW: master-slave robotic platform + HD stereo-microscope. SurgVisDom: da Vinci (SimNow VR + porcine).",
+   "operator": "CATARACTS: 3 surgeons (per-video assignment not given). MISAW train: Surgeon 2: 3, Surgeon 3: 4, Engineering student 1: 6, Engineering student 2: 4; test: Surgeon 1: 4, Engineering student 3: 6.",
+   "annotation_type": "CATARACTS: per-frame 20 surgical activities. CATARACTS-seg: pixel segmentation of frames from 35 videos. MISAW: per-timestamp phase/step/left-hand/right-hand activity at 30 Hz + kinematics. SurgVisDom: per-clip task label."
+  },
+  "registration_required": "yes",
+  "notes": "Umbrella record. The sub-challenge datasets are separate entries: DS114 CATARACTS, DS143 MISAW, DS170 SurgVisDom. Even counted together, the distinct trajectories (<=50+27+105=182) are below 200, and they are not one release unit. Not SS-eligible and not RA-eligible."
+ },
+ {
+  "id": "DS129",
+  "name": "ESAD / SARAS-ESAD / SARAS-MESAD",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://zenodo.org/records/4471476",
+   "/media/user/LaCie/medvideo_gate/DS129/ESAD_paper.pdf",
+   "https://saras-esad.grand-challenge.org/",
+   "https://saras-esad.grand-challenge.org/Dataset/",
+   "https://saras-esad.grand-challenge.org/download/",
+   "https://saras-esad.grand-challenge.org/rules/",
+   "https://saras-mesad.grand-challenge.org/",
+   "https://saras-mesad.grand-challenge.org/dataset/",
+   "https://saras-mesad.grand-challenge.org/download/",
+   "https://saras-mesad.grand-challenge.org/rules/"
+  ],
+  "trajectory_unit": "One complete robot-assisted radical prostatectomy (RARP) recording: real patient (ESAD = MESAD-Real) or phantom (MESAD-Phantom). Released as JPEG frame sequences with per-frame label files.",
+  "n_trajectories": 9,
+  "n_trajectories_quote": "the first dataset (MESAD-Real) is composed by 4 annotated videos of real surgeries on human patients, while the second dataset (MESAD-Phantom) contains 5 annotated videos of surgical procedures on artificial human anatomies.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "Given a video frame, we draw bounding box around surgical tool which is performing action and label it with action label. [...] we collected four complete prostatectomy procedure with the consent of the patients and hospital.",
+   "source": "https://zenodo.org/records/4471476 (ESAD paper PDF; arXiv:2006.07164; local copy /media/user/LaCie/medvideo_gate/DS129/ESAD_paper.pdf) ; https://zenodo.org/api/records/4471476",
+   "reason": "Frame-level human-annotated surgeon action labels (21 classes at 1 fps) are a time-stamped action variable, but there are only 4 real and 5 phantom procedures, far below 200. Collection mode: clinician-performed (real) and phantom training procedures; no programmatic collection."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "Each instance is annotated with a bounding box and its action label from classes.",
+   "source": "https://zenodo.org/records/4471476 (ESAD paper PDF; arXiv:2006.07164; local copy /media/user/LaCie/medvideo_gate/DS129/ESAD_paper.pdf)",
+   "reason": "The only annotation is action bounding boxes with action class. No outcome variable is documented."
+  },
+  "D3": {
+   "verdict": "UNKNOWN",
+   "quote": "Each directory has frames names in the order of their occurrence (e.g. RARP2_frame_1.jpg, RARP2_frame_2.jpg, etc). [...] Each video is recorded videos at 30 FPS but annotation are performed at 1 FPS",
+   "source": "https://saras-esad.grand-challenge.org/download/ ; https://zenodo.org/records/4471476 (ESAD paper PDF; arXiv:2006.07164; local copy /media/user/LaCie/medvideo_gate/DS129/ESAD_paper.pdf)",
+   "reason": "Frames come from complete procedures and are ordered, but the release is image frames, not video. The sampling rate and contiguity of the released frames are not stated (annotation at 1 fps; \"Not all the frames in the dataset are labeled\"). MESAD describes its data as \"a set of video frames annotated for static action detection purposes\"."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "Dataset contains digital recordings from da Vinci Xi robotic system [...] Dataset is created from the four sessions of complete prostatectomy procedure performed by expert surgeons on real patients.",
+   "source": "https://saras-esad.grand-challenge.org/Dataset/",
+   "reason": "One robotic system and 4 real (+5 phantom) procedures. No per-trajectory site/device/operator table, and too few trajectories for 2 levels with >=20."
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "License: This dataset is released under CC BY-NC-SA license. [...] This dataset is licensed by a CC BY-NC-SA 4.0 license.",
+   "source": "https://saras-esad.grand-challenge.org/download/ ; https://saras-mesad.grand-challenge.org/download/",
+   "reason": "CC BY-NC-SA 4.0 permits non-commercial research use and sharing of adapted material (derived features) under the same terms. The challenge rules add \"Participating teams are not allowed to share the challenge data.\""
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "Training data contains a total of 22,601 annotated frames and contains 28,055 action instances.",
+   "source": "https://saras-esad.grand-challenge.org/Dataset/",
+   "reason": "Frame counts are given, but no file size is documented."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "Each frame can have multiple number of action instances. Each instance is annotated with a bounding box and its action label from classes.",
+   "source": "https://zenodo.org/records/4471476 (ESAD paper PDF; arXiv:2006.07164; local copy /media/user/LaCie/medvideo_gate/DS129/ESAD_paper.pdf)",
+   "reason": "Frame-level human annotations (action class + box around tool and organ, verified by a medical professional) vary within trajectories and are not acquisition metadata."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "Clinician-performed RARP on patients (4; da Vinci Xi) + procedures on artificial phantoms (5).",
+   "site": "Not documented per video. Single SARAS clinical source implied; the paper affiliation lists San Raffaele Hospital, Milan.",
+   "device": "da Vinci Xi, 8 mm binocular endoscope, 0 or 30 degree lens (monocular stream used).",
+   "operator": "\"expert surgeons\" (number not given).",
+   "annotation_type": "Bounding boxes + action class (21 real / 14 phantom classes, 11 shared). ESAD: train 22,601 / val 4,574 / test 6,223 frames. MESAD: Real train 23,366 / val 2,024 images; Phantom train 22,609 / val 2,285 images."
+  },
+  "registration_required": "yes",
+  "notes": "Grand-Challenge pages: \"Once you are registered with this challenge, you can download the training and validation dataset\". Not SS- or RA-eligible (9 trajectories)."
+ },
+ {
+  "id": "DS130",
+  "name": "Fetoscopy Placenta Dataset (Bano et al. MICCAI 2020)",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://rdr.ucl.ac.uk/articles/dataset/Fetoscopy_Placenta_Dataset/30536171",
+   "https://api.figshare.com/v2/articles/30536171",
+   "/media/user/LaCie/medvideo_gate/DS130/Read_me.txt"
+  ],
+  "trajectory_unit": "One in-vivo TTTS fetoscopic procedure video. Only sub-sampled annotated frames and short unannotated clips are released.",
+  "n_trajectories": 6,
+  "n_trajectories_quote": "In total, there are 483 annotated placental images from 6 in invivo video, where the videos are named as video01, video02,..., video006.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "The folder contains the images and manually annotated ground-truth vessel segmentation masks for a sub-sampled set of images from 6 different fetoscopic videos.",
+   "source": "/media/user/LaCie/medvideo_gate/DS130/Read_me.txt (from https://rdr.ucl.ac.uk/articles/dataset/Fetoscopy_Placenta_Dataset/30536171)",
+   "reason": "No action variable is recorded. 6 videos."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "These video clips contain sequential frames which are not manually annotated for placental vessel but the predicted maps returned from the leave-one-video-out cross-validation as reported in \\cite{bano2019vessel} are provided for vessel registration and mosaicking.",
+   "source": "/media/user/LaCie/medvideo_gate/DS130/Read_me.txt",
+   "reason": "No outcome variable. The clip maps are model-derived, which never qualifies."
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "a sub-sampled set of images from 6 different fetoscopic videos [...] The folder contains video clips from the 6 fetoscopic videos.",
+   "source": "/media/user/LaCie/medvideo_gate/DS130/Read_me.txt",
+   "reason": "Sub-sampled frames plus short clips (50-400 frames each). No continuous full procedure recordings."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "video01 - 121 images",
+   "source": "/media/user/LaCie/medvideo_gate/DS130/Read_me.txt",
+   "reason": "Only 6 videos. No per-video site/device/operator is documented."
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "The Fetoscopy Placenta Dataset is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).",
+   "source": "/media/user/LaCie/medvideo_gate/DS130/Read_me.txt ; https://api.figshare.com/v2/articles/30536171 (license CC BY-NC-SA 4.0)",
+   "reason": "CC BY-NC-SA 4.0: non-commercial research use; adapted material shareable under the same terms."
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "\"name\": \"Vessel_registration_unannotated_clips.zip\", \"size\": 280035372",
+   "source": "https://api.figshare.com/v2/articles/30536171",
+   "reason": "Repository file sizes: 3,042 + 189,124,327 + 280,035,372 bytes = 0.47 GB total, far below 2.02 TB."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "manually annotated ground-truth vessel segmentation masks",
+   "source": "/media/user/LaCie/medvideo_gate/DS130/Read_me.txt",
+   "reason": "Manual vessel masks on 483 frames vary within videos (scene content). The clip maps are model-derived and do not qualify."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "Clinician-performed TTTS fetoscopic laser procedures (in vivo).",
+   "site": "Not documented per video.",
+   "device": "Not documented.",
+   "operator": "Not documented.",
+   "annotation_type": "Manual vessel segmentation on 483 frames (video01 121, video02 101, video03 39, video04 88, video05 37, video06 97); 6 unannotated clips (950 frames) with model-predicted maps."
+  },
+  "registration_required": "no",
+  "notes": "Superseded in scale by FetReg (DS131). Not eligible for either arm."
+ },
+ {
+  "id": "DS131",
+  "name": "FetReg / FetReg 2021",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://www.synapse.org/#!Synapse:syn25313156 (wiki via Synapse REST API)",
+   "https://arxiv.org/abs/2206.12512",
+   "https://arxiv.org/abs/2106.05923",
+   "https://www.ucl.ac.uk/interventional-surgical-sciences/weiss-open-research/weiss-open-data-server/fetreg-largescale-multi-centre-fetoscopy-placenta-dataset (HTTP 403 Cloudflare; not readable)"
+  ],
+  "trajectory_unit": "One in-vivo TTTS fetoscopy procedure. Released as annotated frames plus one short unannotated clip per procedure.",
+  "n_trajectories": 24,
+  "n_trajectories_quote": "from 18 in-vivo TTTS fetoscopy procedures and 18 short video clips of an average length of 411 frames [...] an unseen test dataset of 658 pixel-annotated images from 6 fetoscopic procedures and 6 short clips.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "we released a dataset of 2060 images, pixel-annotated for vessels, tool, fetus and background classes",
+   "source": "https://arxiv.org/abs/2206.12512 (local copy /media/user/LaCie/medvideo_gate/DS131/arxiv_2206.12512.pdf)",
+   "reason": "No action variable is recorded (segmentation only). 24 procedures."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "No registration annotations were provided as it is not possible",
+   "source": "https://arxiv.org/abs/2206.12512 (local copy /media/user/LaCie/medvideo_gate/DS131/arxiv_2206.12512.pdf)",
+   "reason": "No outcome variable is documented (pixel segmentation; unannotated registration clips)."
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "18 short video clips of an average length of 411 frames",
+   "source": "https://arxiv.org/abs/2206.12512 (local copy /media/user/LaCie/medvideo_gate/DS131/arxiv_2206.12512.pdf)",
+   "reason": "Annotated frames and short clips only. No full procedure recordings."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "For each video, center ID (I - UCLH, II - IGG), image resolution,",
+   "source": "https://arxiv.org/abs/2206.12512 (local copy /media/user/LaCie/medvideo_gate/DS131/arxiv_2206.12512.pdf) Table 2",
+   "reason": "Per-video centre is recorded in Table 2, but the counts are UCLH 12 (train 9, test 3) and IGG 12 (train 9, test 3). Both are <20. The Synapse wiki names three centres (incl. Leuven), but Table 2 lists only I and II. Device (\"varying facilities (e.g., device, light scope)\") is not per video; operator is not documented."
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "The FetReg2021 challenge data (both training and test) is now publicly available [...] under CC BY-NC-SA 4.0 license.",
+   "source": "https://www.synapse.org/#!Synapse:syn25313156 (main wiki, announcement 30/06/2022)",
+   "reason": "CC BY-NC-SA 4.0 permits non-commercial research use and sharing of adapted material under the same terms. Older wiki text (\"only available to registered participants and self-publication is not allowed\") predates the public release."
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "FetReg dataset for task 1 contains 2060 images from18 fetoscopic procedures which are annotated for semantic segmentation.",
+   "source": "https://www.synapse.org/#!Synapse:syn25313156/wiki/610166",
+   "reason": "Image counts only. No size is documented, and the hosting page could not be read (Cloudflare 403)."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "Each pixel in each image is labelled with background, placental vessel, ablation tool or fetus class.",
+   "source": "https://www.synapse.org/#!Synapse:syn25313156/wiki/610166",
+   "reason": "Human pixel-wise scene labels on frames vary within procedures."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4 (site levels 12/12 < 20)."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "Clinician-performed fetoscopic laser photocoagulation (in vivo).",
+   "site": "Per video (Table 2): UCLH 12, IGG 12.",
+   "device": "Varies by centre (resolution per video documented: 320x320 to 720x720). No per-video device model.",
+   "operator": "Not documented.",
+   "annotation_type": "2,718 pixel-annotated frames (train 2,060 + test 658; vessel/tool/fetus/background); 24 unannotated clips (7,411 + 2,205 frames)."
+  },
+  "registration_required": "unknown",
+  "notes": "Public release on the UCL WEISS open data server (page blocked by Cloudflare at audit time, so access mechanics could not be verified). During the challenge, Synapse access required registration + EndoVis rules form."
+ },
+ {
+  "id": "DS132",
+  "name": "Hashemi 2025 human robotic surgery dataset (Closing the data gap)",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://www.synapse.org/#!Synapse:syn65669574 (wiki + anonymous file listing via Synapse REST API)",
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC12641048/",
+   "https://github.com/NasHas/Closing-the-data-gap-leveraging-pretrained-neural-networks-for-robotic-surgical-assessment-on-limit (README)"
+  ],
+  "trajectory_unit": "One clinical robot-assisted procedure recording. 27 video files on Synapse, since some procedures are split into parts or sub-clips by surgeon.",
+  "n_trajectories": 15,
+  "n_trajectories_quote": "The clinical data consisted of 15 full surgical procedure recordings made on urological, general surgical and thoracic procedures",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "all videos were labelled temporally according to whether suturing or dissection sequences occurred for the action recognition task",
+   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12641048/ (Hashemi et al., J Robot Surg 2025, doi:10.1007/s11701-025-02994-y)",
+   "reason": "Human-annotated time-stamped action labels (suturing/dissection, suture type, needle driving/handling) from clinician-performed procedures, but only 15 procedures (<200)."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "For skills assessment, complete videos were labelled as either ‘experienced’ or ‘novice’ depending on whether the procedure was done by an experienced or a novice RAS surgeon",
+   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12641048/ (Hashemi et al., J Robot Surg 2025, doi:10.1007/s11701-025-02994-y)",
+   "reason": "The \"skill\" label is operator experience category (operator metadata defined by case volume), not an outcome after the action. No other outcome is documented."
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "The clinical data consisted of 15 full surgical procedure recordings",
+   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12641048/ (Hashemi et al., J Robot Surg 2025, doi:10.1007/s11701-025-02994-y)",
+   "reason": "Full procedure recordings (some split into parts by surgeon)."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "The study was conducted at Departments of Urology, Gastro-intestinal surgery, and Thoracic surgery at Aalborg University Hospital, Aalborg, Denmark. [...] We included 12 surgeons, eight experienced RAS surgeons and four novice RAS surgeons",
+   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12641048/ (Hashemi et al., J Robot Surg 2025, doi:10.1007/s11701-025-02994-y)",
+   "reason": "One site, one platform (da Vinci), 12 surgeons over 15 procedures. No level reaches 20."
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "The data and codes are open-source. However, when using it, please make a reference to our paper and repository.",
+   "source": "https://www.synapse.org/#!Synapse:syn65669574/wiki/631434",
+   "reason": "Described as \"open-source\" but no licence is named. Derived-feature release is not addressed."
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "Download the video data from the 'Videos'-folder.",
+   "source": "https://www.synapse.org/#!Synapse:syn65669574 (Synapse entity/children sumFileSizesBytes)",
+   "reason": "Synapse listing: Videos folder 61,044,807,121 bytes (27 mp4) + Labels 335,456 bytes + root files 372,783,137 bytes, about 61.4 GB."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "All actions were labeled from start to completion.",
+   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12641048/ (Hashemi et al., J Robot Surg 2025, doi:10.1007/s11701-025-02994-y)",
+   "reason": "Temporal human labels of suturing/dissection segments vary within procedures (single annotator)."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "Clinician-performed robot-assisted surgery on patients (some procedures shared between surgeons).",
+   "site": "1 (Aalborg University Hospital).",
+   "device": "da Vinci Surgical System recorded via HDMI capture cards (15 fps, 2560x720).",
+   "operator": "12 surgeons (8 experienced, 4 novice); per-procedure distribution in the paper Supplementary Table 5 (not inspected).",
+   "annotation_type": "BORIS temporal labels: suturing (single/running; needle driving/handling) vs dissection; video-level experienced/novice label; 27 per-video xlsx label files."
+  },
+  "registration_required": "yes",
+  "notes": "Synapse file download needs a Synapse account (anonymous file request returned HTTP 403). No data-use agreement is documented. Not eligible."
+ },
+ {
+  "id": "DS133",
+  "name": "HeiChole (EndoVis 2019 Surgical Workflow and Skill) / HeiSurF",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://doi.org/10.1016/j.media.2023.102770",
+   "https://arxiv.org/abs/2109.14956",
+   "https://www.synapse.org/#!Synapse:syn18824884 (wiki + anonymous file listing)",
+   "https://www.synapse.org/#!Synapse:syn25101790 (HeiSurF wiki)"
+  ],
+  "trajectory_unit": "One laparoscopic cholecystectomy video (camera insertion to last removal).",
+  "n_trajectories": 33,
+  "n_trajectories_quote": "The data set contains n=33 videos of laparoscopic cholecystectomies from three surgical centers in Germany with a total video length of 22 hours.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "Annotations for action were a 4D binary vector per frame indicating if the corresponding action is being performed (1) or not (0)).",
+   "source": "https://doi.org/10.1016/j.media.2023.102770 (arXiv:2109.14956; local copy /media/user/LaCie/medvideo_gate/DS133/arxiv_2109.14956.pdf)",
+   "reason": "Framewise human action labels (grasp/hold/cut/clip, with performer) in clinician-performed surgery, but only 33 videos (24 training videos are public on Synapse). This is below 200."
+  },
+  "D2": {
+   "verdict": "PASS",
+   "quote": "To assess the surgical skill, the videos were scored using the modified Global Operative Assessment of Laparoscopic Skills (GOALS).",
+   "source": "https://doi.org/10.1016/j.media.2023.102770 (arXiv:2109.14956; local copy /media/user/LaCie/medvideo_gate/DS133/arxiv_2109.14956.pdf)",
+   "reason": "Candidate outcome: human-rated modified GOALS skill (5 dimensions, 1-5) per full video and per phase video (Calot triangle dissection, gallbladder dissection), rated by two medical students. This is a trajectory-level rating, not a post-action time point."
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "Every video starts at the first insertion of the laparoscopic camera into the patient’s abdomen and ends with the last removal of the laparoscopic camera.",
+   "source": "https://doi.org/10.1016/j.media.2023.102770 (arXiv:2109.14956; local copy /media/user/LaCie/medvideo_gate/DS133/arxiv_2109.14956.pdf)",
+   "reason": "Full continuous procedure videos. Extra-abdominal frames are censored to white frames."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "The operation videos at Heidelberg University Hospital (n=15) were recorded with a laparoscopic 2D camera (Karl Storz SE & Co KG, Tuttlingen Germany) [...] The operation videos at Salem Hospital (n=15) and the GRN-hospital Sinsheim (n=3) were recorded with the laparoscopic 2D camera ENDOCAM Logic HD (Richard Wolf GmbH, Knittlingen, Germany)",
+   "source": "https://doi.org/10.1016/j.media.2023.102770 (arXiv:2109.14956; local copy /media/user/LaCie/medvideo_gate/DS133/arxiv_2109.14956.pdf)",
+   "reason": "Site levels 15/15/3 and device levels 15 (Storz) / 18 (Wolf) are all <20. Only dataset-level counts are given; no per-video site table was found publicly. Operator is not documented."
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "ShareAlike (CC BY-NC-SA) license on Synapse (https://www.synapse.org/#!Synapse:syn18824884/files/), which means that it will be publicly available for non-commercial usage.",
+   "source": "https://doi.org/10.1016/j.media.2023.102770 (arXiv:2109.14956; local copy /media/user/LaCie/medvideo_gate/DS133/arxiv_2109.14956.pdf) (User Notes)",
+   "reason": "CC BY-NC-SA: non-commercial research use; adapted material shareable under the same terms. Synapse registration with agreement to cite."
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "For each surgery, the video captured by the endoscope is provided.",
+   "source": "https://www.synapse.org/#!Synapse:syn18824884 (Synapse entity/children sumFileSizesBytes)",
+   "reason": "Synapse listing: Videos/Full 66.4 GB + Videos/Full/HD 115.8 GB + Videos/Skill 45.3 GB + annotations about 0.7 GB, about 228.2 GB total."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "Annotations for surgical phase were one value per frame.",
+   "source": "https://doi.org/10.1016/j.media.2023.102770 (arXiv:2109.14956; local copy /media/user/LaCie/medvideo_gate/DS133/arxiv_2109.14956.pdf)",
+   "reason": "Per-frame human phase and instrument-presence labels vary within trajectories."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "Clinician-performed laparoscopic cholecystectomy.",
+   "site": "Heidelberg University Hospital 15, Salem Hospital 15, GRN-hospital Sinsheim 3 (dataset-level). Training split: 12 Heidelberg + 12 Salem; test 3/3/3.",
+   "device": "Karl Storz 2D camera (Heidelberg, 15); Richard Wolf ENDOCAM Logic HD (Salem + Sinsheim, 18).",
+   "operator": "Not documented.",
+   "annotation_type": "Framewise phase (7), action (4, with performer), instrument category/type presence; modified GOALS skill (5 dimensions) per full/Calot/dissection video."
+  },
+  "registration_required": "yes",
+  "notes": "Synapse listing shows 24 public full videos (Hei-Chole1..24) with annotation folders Action/Instrument/Phase/Skill. RA candidate on D2/D3/D5/D6 but fails D1 (n<200) and D4. One HeiChole video (HeiChole2) is reused in PhaKIR (DS147)."
+ },
+ {
+  "id": "DS134",
+  "name": "HeiCo (Heidelberg Colorectal Data Set)",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://www.synapse.org/#!Synapse:syn21903917 (wiki + anonymous file listing incl. all 10,040 frame folders)",
+   "https://www.nature.com/articles/s41597-021-00882-2"
+  ],
+  "trajectory_unit": "One laparoscopic colorectal procedure (video + device CSV + phase CSV per procedure folder).",
+  "n_trajectories": 30,
+  "n_trajectories_quote": "Our data set comprises 30 laparoscopic videos and corresponding sensor data from medical devices in the operating room for three different types of laparoscopic surgery.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "Annotations include surgical phase information and information on the status of medical devices for all frames",
+   "source": "https://www.nature.com/articles/s41597-021-00882-2 (Maier-Hein et al., Sci Data 8:101, 2021)",
+   "reason": "Per-frame device-status streams and expert phase labels exist, but there are only 30 procedures (<200). Clinician-performed; no programmatic collection."
+  },
+  "D2": {
+   "verdict": "UNKNOWN",
+   "quote": "KARL STORZ OR1 FUSION® was used to record additional data streams from medical devices in the room, namely Insufflator Thermoflator, OR lights, cold light fountain Xenon 300, and Camera Image 1.",
+   "source": "https://www.nature.com/articles/s41597-021-00882-2 (Maier-Hein et al., Sci Data 8:101, 2021)",
+   "reason": "Candidate: OR device sensor streams (e.g. insufflator), recorded independently of the video. The parameter list (Table 1) could not be rendered, so it is not verified whether any stream is a post-action measurement rather than a device setting."
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "frames corresponding to parts of the surgery performed outside of the abdomen were manually identified and subsequently replaced by blue images.",
+   "source": "https://www.nature.com/articles/s41597-021-00882-2 (Maier-Hein et al., Sci Data 8:101, 2021)",
+   "reason": "Full procedure videos; extra-abdominal frames replaced, not cut."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "Furthermore, we acquired data from only one hospital. This implies limited variability with respect to the acquisition conditions as only one specific endoscope and light source were used.",
+   "source": "https://www.nature.com/articles/s41597-021-00882-2 (Maier-Hein et al., Sci Data 8:101, 2021)",
+   "reason": "Single site and device; 30 procedures; operator not documented."
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "The data set was published under a Creative Commons Attribution-NonCommercial-ShareAlike (CC BY-NC-SA) license, which means that it will be publicly available for non-commercial usage.",
+   "source": "https://www.nature.com/articles/s41597-021-00882-2 (Maier-Hein et al., Sci Data 8:101, 2021) ; https://www.synapse.org/#!Synapse:syn21903917",
+   "reason": "CC BY-NC-SA: non-commercial research use; derived material shareable under the same terms."
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "The complete data set contains 10,040 image frames.",
+   "source": "https://www.synapse.org/#!Synapse:syn21903917 (Synapse entity/children sumFileSizesBytes)",
+   "reason": "Synapse listing: procedure-level files (.avi + Device.csv + Phase.csv) 161.2 GB; all 10,040 instrument-segmentation frame folders (raw.png, 10s_video.zip, masks) 870.1 GB; total about 1.03 TB, under 2.02 TB. The videos-only subset is 161 GB."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "Annotations include surgical phase labels for all frames in the videos as well as instance-wise segmentation masks for surgical instruments in more than 10,000 individual frames.",
+   "source": "https://www.synapse.org/#!Synapse:syn21903917/wiki/601992",
+   "reason": "Per-frame human phase labels and instrument masks vary within trajectories."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "Clinician-performed laparoscopic colorectal surgery (routine).",
+   "site": "1 (Heidelberg University Hospital).",
+   "device": "1 (KARL STORZ Image 1 camera, 30 degree telescope, Xenon 300; OR1 FUSION).",
+   "operator": "Not documented.",
+   "annotation_type": "Per-frame phase (single expert surgeon), per-frame device status, instrument instance masks on 10,040 frames (8,228 masks)."
+  },
+  "registration_required": "yes",
+  "notes": "The download script states \"1. Create an account for synapse 2. Register for the Challenge\". The 30 HeiCo videos are reused in ORena FOCUS (DS145, HeiCo-FOCUS). Not eligible (n=30)."
+ },
+ {
+  "id": "DS135",
+  "name": "HiSWA-RLLS (EndoVis 2024 Hierarchical Surgical Workflow Analysis, Robotic Left Lateral Sectionectomy)",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://www.synapse.org/#!Synapse:syn54626087 (wiki + anonymous file listing)",
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC10583914/",
+   "https://opencas.dkfz.de/endovis/challenges/2024/ (search hit only)"
+  ],
+  "trajectory_unit": "One robotic left lateral sectionectomy video (execution phase, without access/closure). Released on Synapse as per-video image archives plus per-video 5-fps annotation JSON.",
+  "n_trajectories": 45,
+  "n_trajectories_quote": "From December 2016 to May 2019, 45 cases of RLLS videos were enrolled in our dataset.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "Frames of RLLS videos were annotated with step, task, and activity based on prior studies [...] The temporal annotations in this study were made by three senior surgeons with more than 5 years of clinical experience.",
+   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10583914/ (Liu et al., Int J Surg 2023, doi:10.1097/JS9.0000000000000559)",
+   "reason": "Per-frame human activity labels (instrument-action-target) in clinician-performed robotic surgery, but only 45 cases (about 30-31 videos in the public Synapse listing). This is below 200."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "The authors defined those activities that truly contribute to the surgery as effective frames, while other activities are labeled as under-effective frames.",
+   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10583914/ (Liu et al., Int J Surg 2023, doi:10.1097/JS9.0000000000000559)",
+   "reason": "The documented annotations are step/task/activity plus an under-effective flag. No outcome after the action is documented."
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "All frames of RLLS videos in this study are labeled with temporal annotations. [...] we sample the videos into frames with a fixed 5fps sampling rate",
+   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10583914/ (Liu et al., Int J Surg 2023, doi:10.1097/JS9.0000000000000559)",
+   "reason": "Continuous execution-phase recordings, released as image sequences with per-video \"_fps5\" annotation files (Synapse). Caveat: released as extracted frames (\"surgical images extracted from clinical procedures\"), not native video; access/closure phases excluded."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "All operations were performed by four expert surgeons who had finished at least 20 RLLS previously using the da Vinci Si Surgical System (Intuitive Surgical). [...] we use experts B and C for training and experts A and D for testing, which is in a 34:11 split. [...] the cases included in this study were acquired from a single center",
+   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10583914/ (Liu et al., Int J Surg 2023, doi:10.1097/JS9.0000000000000559)",
+   "reason": "One centre and one robot. 4 surgeons: B+C together 34 and A+D 11, so at most one surgeon can have >=20. Per-video surgeon is not documented publicly (the Synapse prefixes A/B/C are undocumented)."
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "Access to the data of the challenge will only be provided once the following form has been filled out, scanned, and sent to ShangZhao",
+   "source": "https://www.synapse.org/#!Synapse:syn54626087/wiki/626813",
+   "reason": "No data licence is stated. Access is via a signed form and the EndoVis rules. The CC BY-SA 4.0 of the journal article covers the article only."
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "ALL annotation files are released !!!",
+   "source": "https://www.synapse.org/#!Synapse:syn54626087 (Synapse entity/children sumFileSizesBytes)",
+   "reason": "Synapse listing: Images folder 70,803,479,656 bytes (31 zip) + Annotations 43,142,456 bytes (30 JSON), about 70.8 GB."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "Effective frames of all RLLS videos are annotated with three hierarchical levels of 4 steps, 12 tasks, and 26 activities.",
+   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10583914/ (Liu et al., Int J Surg 2023, doi:10.1097/JS9.0000000000000559)",
+   "reason": "Per-frame human workflow labels vary within trajectories."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "Clinician-performed robotic surgery (da Vinci Si).",
+   "site": "1 (Chinese PLA General Hospital).",
+   "device": "1 (da Vinci Si; Hisense surgical record system, 60 fps, 1280x1024).",
+   "operator": "4 expert surgeons A-D (B+C: 34 cases, A+D: 11); per-video assignment not public.",
+   "annotation_type": "Per-frame step (4) / task (12) / activity (26) + under-effective flag, by 3 senior surgeons; public Synapse annotation files A00-A04, B00-B13, C00-C10 (_fps5.json)."
+  },
+  "registration_required": "yes",
+  "notes": "The test split is non-public (\"quantified using a non-public test split of the publicly available HiSWA-RLLS dataset\"). Not eligible."
+ },
+ {
+  "id": "DS136",
+  "name": "iMED: A Multi-Endoscope Dataset for Surgical 3D Perception",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://rdr.ucl.ac.uk/articles/dataset/iMED_A_Multi-Endoscope_Dataset_for_Surgical_3D_Perception/32764638",
+   "https://api.figshare.com/v2/articles/32764638 (+ /versions: v1 only)",
+   "https://github.com/surgical-vision/imed (README)",
+   "https://imed-challenge.github.io/",
+   "https://www.synapse.org/Synapse:syn74277461/wiki/639538 (+ Data 640041, Policies 640044)"
+  ],
+  "trajectory_unit": "Ambiguous under the gate unit. The data are 340 short synchronized multi-endoscope sequences (scripted camera-motion / manipulation episodes), recorded in sessions on 14 specimens (ex vivo, postmortem, live). Counted conservatively per specimen session (sequences of one session = clips of one \"procedure\"): 14. If each sequence were a trajectory: 340, but only a v1.0 subset (about one scene per session) is public.",
+  "n_trajectories": 14,
+  "n_trajectories_quote": "340 sequences (~170K synchronized timepoints, 4 views per timepoint) recorded simultaneously from two physically independent stereo endoscopes across ex vivo, postmortem, and live surgical settings spanning 14 specimens",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "movement_types=[\"off_camera_manipulation\", \"tool_manipulation\"],",
+   "source": "https://github.com/surgical-vision/imed (README, Metadata Filtering)",
+   "reason": "No time-stamped human action variable is documented. Sequences carry a per-sequence motion category (e.g. circular/zoom/lateral camera motion, tool_manipulation), i.e. scripted experimental conditions, and the operator/collection mode is not documented. Under the gate unit, 14 specimen sessions (<200)."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "Estimate accurate per-frame relative camera poses between two endoscopes in deformable surgical environments.",
+   "source": "https://imed-challenge.github.io/",
+   "reason": "The documented signals are poses, calibration, tool masks and metadata for 3D-perception tasks. No outcome variable."
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "processed stereo videos  raw stereo videos  timestamp CSV files",
+   "source": "https://api.figshare.com/v2/articles/32764638 (description)",
+   "reason": "Each sequence is a continuous, time-stamped stereo video of one complete scripted episode (not cut from a longer recording). Caveat: sequences are short (~100-200 frames after subsampling in the challenge subsets), and a specimen session is a set of separate sequences."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "All data were acquired using Da Vinci 5 surgical systems with pairs of stereo endoscopes (8 mm, 0° and 30°) capturing four synchronized HDMI streams at 1280×1024 resolution and 60 Hz",
+   "source": "https://www.synapse.org/Synapse:syn74277461/wiki/640041",
+   "reason": "One robotic system type, with both endoscopes recorded simultaneously (not a per-trajectory factor). Site and operator are not documented per sequence; only 14 specimens."
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "The iMED dataset is released under a CC BY (Attribution) license.",
+   "source": "https://www.synapse.org/Synapse:syn74277461/wiki/640044 ; https://api.figshare.com/v2/articles/32764638 (license CC BY 4.0)",
+   "reason": "CC BY 4.0 permits research use and sharing of derived material with attribution."
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "The full dataset contains approximately seven scenes per session and be approximately 45 GB.",
+   "source": "https://api.figshare.com/v2/articles/32764638 (description)",
+   "reason": "Full dataset about 45 GB; public v1.0 subset 5,491,568,856 bytes."
+  },
+  "D7": {
+   "verdict": "UNKNOWN",
+   "quote": "Tool segmentation masks from SAM 3. [...] released per-sequence metadata, including motion category, tool flags/types, ArUco flags, energy usage, tissue deformation, and file references",
+   "source": "https://www.synapse.org/Synapse:syn74277461/wiki/640041 ; https://github.com/surgical-vision/imed",
+   "reason": "Frame-level masks and depth are model-derived (SAM 3, FoundationStereo), which never qualifies. Reference poses describe camera motion (acquisition). Per-sequence content metadata (tool/energy/deformation flags) exists, but its provenance (human vs automatic) is not documented, and it is constant within a sequence."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4; no D7 variable confirmed."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "Experimental recordings with Da Vinci 5 (ex vivo, in vivo postmortem, in vivo live); scripted motion categories; operator/teleoperation mode not documented.",
+   "site": "Not documented per sequence (UCL / Intuitive organisers).",
+   "device": "Da Vinci 5 with two stereo endoscopes (0 and 30 degree) recorded simultaneously.",
+   "operator": "Not documented.",
+   "annotation_type": "ArUco reference poses; SAM-3 tool masks (model); FoundationStereo depth (model); per-sequence/scene/session metadata."
+  },
+  "registration_required": "no",
+  "notes": "v1.0 (one representative scene per session) is open on UCL RDR. The full release was planned for Sept 8, 2026, but only figshare version 1 exists at audit time. Challenge data on Synapse requires an account and signed rules. Not eligible."
+ },
+ {
+  "id": "DS137",
+  "name": "JIGSAWS (JHU-ISI Gesture and Skill Assessment Working Set)",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://doi.org/10.1109/tbme.2016.2647680",
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC5559351/",
+   "http://web.archive.org/web/20260918020952/https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/ (official page; live URL returned Cloudflare 403)"
+  ],
+  "trajectory_unit": "One trial (one subject performing one instance of one bench-top task) with synchronized stereo video and kinematics.",
+  "n_trajectories": 101,
+  "n_trajectories_quote": "The tasks are 4-throw suturing (39 trials), needle-passing (26 trials), and knot-tying (36 trials) performed on benchtop training phantoms.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "the kinematic data contains variables of both master and slave’s left and right manipulators (76 motion variables collected at 30 frames per second: tooltip positions and orientation, linear and rotational velocities, and gripper angle).",
+   "source": "https://doi.org/10.1109/tbme.2016.2647680 (Ahmidi et al., IEEE TBME 2017; full text https://pmc.ncbi.nlm.nih.gov/articles/PMC5559351/)",
+   "reason": "Recorded teleoperation kinematics (master+slave) and human gesture labels per frame. All trials are human-teleoperated by 8 subjects. However, 101 trials (other sources report 103 with 28 needle-passing) is below 200."
+  },
+  "D2": {
+   "verdict": "PASS",
+   "quote": "skill  (global rating score using modified objective structured assessments of technical skills).",
+   "source": "https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/ (live page HTTP 403; read via http://web.archive.org/web/20260918020952/https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/)",
+   "reason": "Candidate outcome: human-rated GRS (modified OSATS, includes \"quality of final product\") per trial, on the same trajectory."
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "The stereo video is recorded at 30 frames per second with 640×480 pixel resolution.",
+   "source": "https://doi.org/10.1109/tbme.2016.2647680 (Ahmidi et al., IEEE TBME 2017; full text https://pmc.ncbi.nlm.nih.gov/articles/PMC5559351/)",
+   "reason": "Each trial is a continuous synchronized video + kinematics recording of a complete task episode."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "Each subject participated in 3 to 5 data collection sessions, in which they performed one trial of each task.",
+   "source": "https://doi.org/10.1109/tbme.2016.2647680 (Ahmidi et al., IEEE TBME 2017; full text https://pmc.ncbi.nlm.nih.gov/articles/PMC5559351/)",
+   "reason": "At most 5 sessions x 3 tasks = 15 trials per operator (<20). One site (JHU) and one da Vinci system. Skill level (expert/intermediate/novice) is an operator attribute, not the operator factor."
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "** This dataset is released for the purpose of academic research, not for commercial usage. **",
+   "source": "https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/ (live page HTTP 403; read via http://web.archive.org/web/20260918020952/https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/)",
+   "reason": "Academic research use is permitted; release of derived features is not addressed. No standard licence."
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "Please complete the this form to access the data set and utilities.",
+   "source": "https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/ (live page HTTP 403; read via http://web.archive.org/web/20260918020952/https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/)",
+   "reason": "No size is documented on the public pages."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "gesture  (atomic surgical activity segment labels).",
+   "source": "https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/ (live page HTTP 403; read via http://web.archive.org/web/20260918020952/https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/)",
+   "reason": "Human gesture segment labels vary within trials. Kinematics are also sensor ground truth of instrument state."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "Human teleoperation (da Vinci) on bench-top phantoms; 8 right-handed subjects.",
+   "site": "1 (JHU / Intuitive collaboration).",
+   "device": "1 (da Vinci Surgical System).",
+   "operator": "8 subjects, <=15 trials each; skill levels: expert/intermediate/novice.",
+   "annotation_type": "15-gesture vocabulary, frame-level segments; GRS (modified OSATS) per trial; 76-variable kinematics at 30 Hz."
+  },
+  "registration_required": "yes",
+  "notes": "Access by request form. Strong RA-type content (kinematics + gestures + GRS), but fails D1 (n<200) and D4."
+ },
+ {
+  "id": "DS138",
+  "name": "LapSurg-230K",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://figshare.com/articles/dataset/LapSurg-230K/32237319",
+   "https://api.figshare.com/v2/articles/32237319",
+   "/media/user/LaCie/medvideo_gate/DS138/train.csv",
+   "/media/user/LaCie/medvideo_gate/DS138/val.csv",
+   "/media/user/LaCie/medvideo_gate/DS138/test.csv",
+   "https://publications.aston.ac.uk/id/eprint/49150/1/T_Chen_et_al_Neural_Wave_Propagation_for_Surgical_Video_Action_Recognition_A_New_Dataset_and_Baseline_AAM.pdf"
+  ],
+  "trajectory_unit": "One surgery video (patient). Released only as 30-frame action clips; clips from the same procedure count once.",
+  "n_trajectories": 52,
+  "n_trajectories_quote": "52 surgery videos were collected at RuiJin Hospital LuWan Branch, School of Medicine, Shanghai Jiaotong University, between 2021 and 2023.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "The annotated videos are segmented into non-uniform temporal chunks, each labeled with a single action by technicians.",
+   "source": "https://doi.org/10.1109/tip.2026.3695410 (accepted manuscript https://publications.aston.ac.uk/id/eprint/49150/ ; local copy /media/user/LaCie/medvideo_gate/DS138/lapsurg_paper_AAM.pdf)",
+   "reason": "Clip-level action labels exist, but they are released as isolated clips without within-procedure timestamps. Only 52 procedures (<200). Released CSVs: 7,569 clips from 52 patients."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "well-annotated for 11 key actions",
+   "source": "https://doi.org/10.1109/tip.2026.3695410 (accepted manuscript https://publications.aston.ac.uk/id/eprint/49150/ ; local copy /media/user/LaCie/medvideo_gate/DS138/lapsurg_paper_AAM.pdf)",
+   "reason": "Only action class labels. No outcome."
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "A looping strategy with padding operations is then applied to further divide these chunks into 7,569 uniform-length video clips, each comprising 30 frames, suitable for model training.",
+   "source": "https://doi.org/10.1109/tip.2026.3695410 (accepted manuscript https://publications.aston.ac.uk/id/eprint/49150/ ; local copy /media/user/LaCie/medvideo_gate/DS138/lapsurg_paper_AAM.pdf)",
+   "reason": "Short 30-frame clips only; no full procedure recordings released."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "52 surgery videos were collected at RuiJin Hospital LuWan Branch [...] The equipment included a 26003BA HOPKINS 30° endoscope",
+   "source": "https://doi.org/10.1109/tip.2026.3695410 (accepted manuscript https://publications.aston.ac.uk/id/eprint/49150/ ; local copy /media/user/LaCie/medvideo_gate/DS138/lapsurg_paper_AAM.pdf)",
+   "reason": "Single site and single endoscope type; operator not documented."
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "The complete dataset, licensed under CC-BY 4.0",
+   "source": "https://doi.org/10.1109/tip.2026.3695410 (accepted manuscript https://publications.aston.ac.uk/id/eprint/49150/ ; local copy /media/user/LaCie/medvideo_gate/DS138/lapsurg_paper_AAM.pdf) ; https://api.figshare.com/v2/articles/32237319 (license CC BY 4.0)",
+   "reason": "CC BY 4.0. The consent text says the data \"would be used solely for academic research\"."
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "\"name\": \"918.rar\", \"size\": 585873199",
+   "source": "https://api.figshare.com/v2/articles/32237319",
+   "reason": "Repository total: 55 files, 12,729,163,233 bytes (12.7 GB)."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "each labeled with a single action by technicians",
+   "source": "https://doi.org/10.1109/tip.2026.3695410 (accepted manuscript https://publications.aston.ac.uk/id/eprint/49150/ ; local copy /media/user/LaCie/medvideo_gate/DS138/lapsurg_paper_AAM.pdf)",
+   "reason": "Segment-level human action class varies across the clips of a procedure. Weak: clips are isolated."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "Clinician-performed laparoscopic surgery (9 surgery types).",
+   "site": "1 (RuiJin Hospital LuWan Branch).",
+   "device": "1 (HOPKINS 26003BA 30 degree endoscope, 1920x1080, 25 fps).",
+   "operator": "Not documented.",
+   "annotation_type": "11 action classes on 7,569 clips (CSV counts: UseClip 1561, Suction 1473, HookCut 1031, LocPanoView 767, NeedleIn 721, ScissorCut 483, NeedleOut 478, PanoView 394, AbdominalEntry 379, Incise 259, Excise 23)."
+  },
+  "registration_required": "no",
+  "notes": "Not eligible: short clips only, single site, n=52."
+ },
+ {
+  "id": "DS139",
+  "name": "LASK: A Dataset for Laparoscopic Skill and 7-DoF Kinematics",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://zenodo.org/records/20752651",
+   "https://zenodo.org/api/records/20752651",
+   "/media/user/LaCie/medvideo_gate/DS139/README.md"
+  ],
+  "trajectory_unit": "One peg-transfer box-trainer trial (endoscopic video + dense EM tool kinematics).",
+  "n_trajectories": 37,
+  "n_trajectories_quote": "LASK comprises 37 annotated trials organised into a cross-cohort benchmark: a 7-DoF training set (19 trials), a 7-DoF in-distribution validation set (10 trials), and a 6-DoF out-of-distribution test set (8 trials), spanning surgeons from novice to expert.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "Each trial provides per-frame electromagnetic tool poses (~91,000 frames; positions in millimetres, orientations as unit quaternions, plus calibrated jaw angles for the 7-DoF cohorts), time-aligned to the video.",
+   "source": "https://zenodo.org/records/20752651",
+   "reason": "Recorded kinematics of human-operated graspers (a time-stamped action variable), with all trials performed by human participants. However, 37 trials (<200)."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "One row per trial: `dataset, role, trial_id, handedness` (Right / Left / Both),",
+   "source": "/media/user/LaCie/medvideo_gate/DS139/README.md",
+   "reason": "Per-trial metadata are handedness and procedure experience (operator attributes before the trial). No task success, score or error outcome is documented."
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "endoscopic video, one per trial",
+   "source": "/media/user/LaCie/medvideo_gate/DS139/README.md",
+   "reason": "Continuous per-trial video with dense time-aligned kinematics. Camera-dropout runs are concatenated."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "a 7-DoF training set (19 trials), a 7-DoF in-distribution validation set (10 trials), and a 6-DoF out-of-distribution test set (8 trials)",
+   "source": "https://zenodo.org/records/20752651",
+   "reason": "Cohorts/sites: 9th Urology Bootcamp 2024 (19), BAPES Norwich 2024 (10), 8th Urology Bootcamp 2023 (8), all <20. Device (7-DoF straight tools vs 6-DoF fenestrated+curved): 29 vs 8, so only one level >=20. No operator ID documented."
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "Released for academic and research use.",
+   "source": "/media/user/LaCie/medvideo_gate/DS139/README.md ; https://zenodo.org/api/records/20752651 (license cc-by-4.0)",
+   "reason": "The Zenodo licence CC BY 4.0 permits research use and derived-feature release."
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "This is a current subset of the entire dataset, which will be added to this record in the near future.",
+   "source": "https://zenodo.org/api/records/20752651",
+   "reason": "Repository file sizes: 1,221,551,738 + 3,143,008,423 + 2,592,141,616 + 3,455 bytes, about 6.96 GB."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "Per-frame poses from the NDI Aurora electromagnetic tracker.",
+   "source": "/media/user/LaCie/medvideo_gate/DS139/README.md",
+   "reason": "Sensor ground truth of instrument state (tool poses, jaw angles) varies within trials. Sparse manual masks/keypoints are also provided."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "Human-operated laparoscopic box trainer (novice to expert); no programmatic collection.",
+   "site": "3 cohorts/events: 19 / 10 / 8.",
+   "device": "7-DoF straight tools with jaw sensor (29) vs 6-DoF fenestrated + curved tools (8); NDI Aurora EM tracker.",
+   "operator": "No operator ID; per-trial handedness and procedure counts.",
+   "annotation_type": "Dense EM kinematics; sparse (about every 100th frame) manual segmentation polygons, tooltip/jaw/shaft keypoints, visibility flags."
+  },
+  "registration_required": "no",
+  "notes": "The record says more trials will be added later. Re-check if the expansion exceeds 200 trials with per-trial site/operator."
+ },
+ {
+  "id": "DS140",
+  "name": "m2cai16-tool-locations",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "http://ai.stanford.edu/~syyeung/tooldetection.html",
+   "https://doi.org/10.48550/arxiv.1802.08774",
+   "https://doi.org/10.1109/wacv.2018.00081",
+   "HTTP HEAD http://ai.stanford.edu/~syyeung/resources/m2cai16-tool-locations.zip"
+  ],
+  "trajectory_unit": "One cholecystectomy video of m2cai16-tool. Only annotated frames are released.",
+  "n_trajectories": 10,
+  "n_trajectories_quote": "The m2cai16-tool-locations dataset contains spatial tool annotations for 2,532 frames across the first 10 videos in the m2cai16-tool dataset, which includes 15 videos in total.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "In m2cai16-tool-locations, we label 2532 of the frames, under supervision and spot-checking from a surgeon, with the coordinates of spatial bounding boxes around the tools.",
+   "source": "https://doi.org/10.48550/arxiv.1802.08774 (Jin et al., WACV 2018; local copy /media/user/LaCie/medvideo_gate/DS140/arxiv_1802.08774.pdf)",
+   "reason": "Tool bounding boxes only. No action variable; 10 videos."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "the three surgeons independently rated four of the test videos using a modified version of the GOALS assessment rubric.",
+   "source": "https://doi.org/10.48550/arxiv.1802.08774 (Jin et al., WACV 2018; local copy /media/user/LaCie/medvideo_gate/DS140/arxiv_1802.08774.pdf)",
+   "reason": "GOALS ratings exist only for 4 test videos (11-15, not in the release) and are reported only in the paper table. The released dataset has no outcome."
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "The videos, whose durations range from 20 to 75 minutes, are downsampled to 1 fps for processing.",
+   "source": "https://doi.org/10.48550/arxiv.1802.08774 (Jin et al., WACV 2018; local copy /media/user/LaCie/medvideo_gate/DS140/arxiv_1802.08774.pdf)",
+   "reason": "Release is 2,532 annotated frames, not continuous recordings."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "Both m2cai16-tool and Cholec80 contain cholecystectomy surgical videos performed at the University Hospital of Strasbourg in France",
+   "source": "https://doi.org/10.48550/arxiv.1802.08774 (Jin et al., WACV 2018; local copy /media/user/LaCie/medvideo_gate/DS140/arxiv_1802.08774.pdf)",
+   "reason": "Single site; 10 videos; no per-video device/operator."
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "We will publicly release this dataset.",
+   "source": "https://doi.org/10.48550/arxiv.1802.08774 (Jin et al., WACV 2018; local copy /media/user/LaCie/medvideo_gate/DS140/arxiv_1802.08774.pdf) ; http://ai.stanford.edu/~syyeung/tooldetection.html",
+   "reason": "No licence is stated on the dataset page or in the paper."
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "Data m2cai16-tool-locations",
+   "source": "http://ai.stanford.edu/~syyeung/tooldetection.html ; HTTP Content-Length of resources/m2cai16-tool-locations.zip = 145290123",
+   "reason": "Release zip is 145 MB (server Content-Length). The underlying m2cai16-tool videos are a separate dataset."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "Our dataset consists of 3,141 annotations of 7 surgical instrument classes",
+   "source": "http://ai.stanford.edu/~syyeung/tooldetection.html",
+   "reason": "Human frame-level tool boxes vary within videos."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "Clinician-performed laparoscopic cholecystectomy.",
+   "site": "1 (University Hospital of Strasbourg).",
+   "device": "Not documented.",
+   "operator": "Not documented.",
+   "annotation_type": "3,141 bounding boxes (7 tools) on 2,532 frames from videos 1-10."
+  },
+  "registration_required": "no",
+  "notes": "Direct zip download. Not eligible."
+ },
+ {
+  "id": "DS141",
+  "name": "MACS: Microsurgical Aneurysm Clipping Surgery Dataset",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://rdr.ucl.ac.uk/articles/dataset/Microsurgical_Aneurysm_Clipping_Surgery_MACS_Dataset_with_image-level_aneurysm_presence_absence_annotations/23533731",
+   "https://api.figshare.com/v2/articles/23533731",
+   "/media/user/LaCie/medvideo_gate/DS141/README.md"
+  ],
+  "trajectory_unit": "One microsurgical aneurysm clipping procedure video (patient). Released as 5-fps frames sorted into class folders.",
+  "n_trajectories": 16,
+  "n_trajectories_quote": "We collected and present a microsurgical aneurysm clipping surgery (MACS) dataset comprising of 16 videos of MACS procedures with aneurysm presence/ absence annotations at frame-level (~350k frames) conducted by expert neurosurgeons.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "Frames were classified as follows: Type-X : No aneurysm in microscope’s view, Type-Y : Aneurysm in microscope’s view (including both visible and clipped aneurysms), Type-Z: Frame excluded from analysis.",
+   "source": "https://api.figshare.com/v2/articles/23533731",
+   "reason": "No action variable; 16 videos."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "aneurysm presence/ absence annotations at frame-level",
+   "source": "https://api.figshare.com/v2/articles/23533731",
+   "reason": "Only presence/absence labels. No outcome."
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "We extract frames at 5 fps and establish a dataset of 356,165 images. [...] Type-Z: Frame excluded from analysis.",
+   "source": "https://api.figshare.com/v2/articles/23533731",
+   "reason": "Released as extracted frames sorted into class folders (0/1), with Type-Z frames excluded. Not contiguous recordings."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "The study was registered with the hospital’s (National Hospital for Neurology and Neurosurgery, UCLH NHS) local audit committee",
+   "source": "https://api.figshare.com/v2/articles/23533731",
+   "reason": "Single hospital; 16 videos; no per-video device/operator."
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "If you download and use the dataset please cite",
+   "source": "/media/user/LaCie/medvideo_gate/DS141/README.md ; https://api.figshare.com/v2/articles/23533731 (license CC BY-NC 4.0)",
+   "reason": "CC BY-NC 4.0 permits non-commercial research use and sharing of adaptations."
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "The MACS dataset is composed of FHD (1920x1080) surgical videos from the operative microscope of 16 patients during surgical repair of intracerebral aneurysms.",
+   "source": "https://api.figshare.com/v2/articles/23533731",
+   "reason": "Repository total: 18 files, 12,824,630,603 bytes (12.8 GB)."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "The MACS dataset was blindly reviewed by two senior vascular neurosurgeons in duplicate.",
+   "source": "https://api.figshare.com/v2/articles/23533731",
+   "reason": "Frame-level human aneurysm-in-view labels vary within videos."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "Clinician-performed microsurgery.",
+   "site": "1 (NHNN, UCLH).",
+   "device": "Operative microscope (model not stated).",
+   "operator": "\"expert neurosurgeons\" (not per video).",
+   "annotation_type": "Frame-level Type-X/Y (aneurysm absent/present), 356,165 frames at 5 fps."
+  },
+  "registration_required": "no",
+  "notes": "Not eligible."
+ },
+ {
+  "id": "DS142",
+  "name": "MIPO dataset (distal radius fracture MIPO surgical workflow)",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://zenodo.org/records/17698695",
+   "https://zenodo.org/records/17311085",
+   "https://github.com/camGcam/MIPO-Dataset (README, docs/surgeons.csv, docs/labels.md, docs/video_recording_recommendations.md, annotations/README.md)",
+   "/media/user/LaCie/medvideo_gate/DS142/surgeons.csv",
+   "/media/user/LaCie/medvideo_gate/DS142/labels.md",
+   "/media/user/LaCie/medvideo_gate/DS142/video_recording_recommendations.md",
+   "/media/user/LaCie/medvideo_gate/DS142/README.md"
+  ],
+  "trajectory_unit": "One distal-radius-fracture MIPO surgery video (open surgery, OR-light camera).",
+  "n_trajectories": 50,
+  "n_trajectories_quote": "The dataset contains **50 videos** of distal radius fractures (DRFs) treated with minimally invasive plate osteosynthesis (MIPO).",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "This means that every video frame has a phase, step, and task label, while only a subset of frames has action annotations.",
+   "source": "/media/user/LaCie/medvideo_gate/DS142/labels.md (https://github.com/camGcam/MIPO-Dataset/blob/HEAD/docs/labels.md)",
+   "reason": "Frame-level human action annotations (6 actions) in clinician-performed surgery, but only 50 videos (<200)."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "The DRF MIPO procedure was divided into a hierarchy of (continuous) surgical **stages** and (intermittent) **actions**.",
+   "source": "/media/user/LaCie/medvideo_gate/DS142/labels.md",
+   "reason": "Only workflow labels. No outcome."
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "- Start recording as soon as the sterile gloves are put on. [...] - Stop recording once the tourniquet is removed.",
+   "source": "/media/user/LaCie/medvideo_gate/DS142/video_recording_recommendations.md ; https://zenodo.org/records/17698695 (\"50 MP4 files are provided, one for each video in the dataset.\")",
+   "reason": "Continuous full-procedure MP4 recordings."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "The correspondence between videos and surgeons is provided in `surgeons.csv`.",
+   "source": "https://github.com/camGcam/MIPO-Dataset (README) ; /media/user/LaCie/medvideo_gate/DS142/surgeons.csv",
+   "reason": "Operator is recorded per trajectory (surgeons.csv). Counts: surgeon 1: 6, 2: 21, 3: 15, 4: 7, 5: 1, so only one level has >=20. Single site (Strasbourg) and single camera type."
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "This project is distributed under the **Creative Commons Attribution–NonCommercial 4.0 International License (CC BY-NC 4.0)**.",
+   "source": "https://github.com/camGcam/MIPO-Dataset (README) ; https://zenodo.org/api/records/17698695 (license cc-by-nc-4.0)",
+   "reason": "CC BY-NC 4.0. The repository LICENSE file contains CC BY-NC-SA 4.0 text (discrepancy); either permits non-commercial research and derived-feature sharing."
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "50 MP4 files are provided, one for each video in the dataset.",
+   "source": "https://zenodo.org/api/records/17698695",
+   "reason": "Zenodo file sizes: 50 videos, 43,042,543,835 bytes (43.0 GB). Annotations on GitHub are about 0.5 GB; optional DINO features 3.86 GB."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "one line per frame: `frame_number<TAB>label_name`",
+   "source": "/media/user/LaCie/medvideo_gate/DS142/README.md (annotations/README.md)",
+   "reason": "Per-frame human phase/step/task labels vary within trajectories."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4 (operator: only surgeon 2 has >=20)."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "Clinician-performed open orthopaedic surgery (DRF MIPO).",
+   "site": "1 (Strasbourg University Hospitals, Dept. of Hand Surgery).",
+   "device": "1 (HD camera embedded in OR surgical lighting, ~60 fps, 1920x1080).",
+   "operator": "Per video (surgeons.csv): s1 6, s2 21, s3 15, s4 7, s5 1.",
+   "annotation_type": "Per-frame 4 phases / 6 steps / 19 tasks; intermittent multi-label 6 actions."
+  },
+  "registration_required": "no",
+  "notes": "Operator is recorded per trajectory, but only one surgeon reaches 20 videos. Not eligible."
+ },
+ {
+  "id": "DS143",
+  "name": "MISAW (MIcro-Surgical Anastomose Workflow recognition)",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://www.synapse.org/#!Synapse:syn21776936 (wiki + anonymous file listing)",
+   "https://zenodo.org/records/3715646 (EndoVis 2020 design document, MISAW section; local copy /media/user/LaCie/medvideo_gate/DS128/EndoscopicVisionChallenge.pdf)",
+   "https://www.sciencedirect.com/science/article/pii/S0169260721005265 (joint paper; not read)"
+  ],
+  "trajectory_unit": "One micro-anastomosis training trial (case) on a master-slave robotic platform: synchronized stereo video + kinematics + workflow annotation.",
+  "n_trajectories": 27,
+  "n_trajectories_quote": "Training: 17 cases [...] Testing: 10 cases",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "Kinematic data are recorded at 30Hz from encoders mounted on the two robotic arms of the master-slave robotic platform (Mitsuishi et al. 2013).",
+   "source": "https://www.synapse.org/#!Synapse:syn21776936/wiki/601701",
+   "reason": "Recorded teleoperation kinematics + per-timestamp human activity labels; all trials human-operated (3 surgeons + 3 engineering students). However, 27 cases (<200)."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "Workflow annotation (not provide for test cases), containing for each timestamp the label for phase, steps, left-hand activity, and right-hand activity.",
+   "source": "https://www.synapse.org/#!Synapse:syn21776936/wiki/601701",
+   "reason": "Only workflow annotation. No outcome (e.g. anastomosis quality) is documented."
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "The Kinematic and video data were synchronously acquired at 30 Hz",
+   "source": "https://www.synapse.org/#!Synapse:syn21776936/wiki/601701",
+   "reason": "Continuous synchronized trial recordings."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "Training dataset (17 cases; 4 users): [...] Engineering student 1: 6 cases [...] Engineering student 3: 6 cases",
+   "source": "https://zenodo.org/records/3715646 (EndoVis 2020 design document, MISAW section)",
+   "reason": "Per-case operator is documented; the maximum is 6 cases per operator (<20). One site (University of Tokyo) and one platform."
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "CC BY NC SA. [...] Publicly available for non-commercial use after the challenge and the challenge paper submission.",
+   "source": "https://zenodo.org/records/3715646 (EndoVis 2020 design document, MISAW data usage agreement)",
+   "reason": "CC BY-NC-SA: non-commercial research use; adapted material shareable under the same terms."
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "The full dataset is available for download",
+   "source": "https://www.synapse.org/#!Synapse:syn21776936 (Synapse entity/children sumFileSizesBytes)",
+   "reason": "Synapse Data folder: MISAW-Training-data.rar + MISAW-Test-data.rar = 1,240,729,046 bytes (1.24 GB)."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "An activity is a physical action performed by the surgeon and is composed of three",
+   "source": "https://www.synapse.org/#!Synapse:syn21776936/wiki/601701",
+   "reason": "Per-timestamp phase/step/activity (30 Hz) human labels vary within trials. Kinematics are also sensor ground truth of instrument state."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "Human teleoperation of a master-slave robot on an artificial-vessel micro-anastomosis training task.",
+   "site": "1 (University of Tokyo; annotation at Univ. Rennes).",
+   "device": "1 (master-slave platform, Mitsuishi et al. 2013; HD stereo-microscope 960x540).",
+   "operator": "Train: Surgeon 2: 3, Surgeon 3: 4, Eng. student 1: 6, Eng. student 2: 4; Test: Surgeon 1: 4, Eng. student 3: 6.",
+   "annotation_type": "Per-timestamp (30 Hz) phase (2), step (6), left/right activity (17 verbs, 9 targets, 1 instrument); kinematics x,y,z,alpha,beta,gamma."
+  },
+  "registration_required": "yes",
+  "notes": "The wiki states \"(synapse account required)\". Also part of DS128 (EndoVis 2020). Not eligible (n=27)."
+ },
+ {
+  "id": "DS144",
+  "name": "NeuroSurgicalTools",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://doi.org/10.1109/tmi.2015.2450831",
+   "https://rodrigob.github.io/documents/2015_tmi_bouget_et_al_detecting_surgical_tools.pdf",
+   "https://medicis.univ-rennes1.fr/software (stated dataset location; HTTP 503 at audit time)",
+   "https://medicis.univ-rennes1.fr/activities/theme1/projects/std/index (HTTP 503)"
+  ],
+  "trajectory_unit": "One neurosurgical microscope video. Only randomly selected frames are released.",
+  "n_trajectories": 14,
+  "n_trajectories_quote": "This new dataset is derived from a set of 14 monocular videos",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "Every tool in each image is annotated with a bounding polygon and a class label.",
+   "source": "https://doi.org/10.1109/tmi.2015.2450831 (Bouget et al., IEEE TMI 34(12):2603, 2015; PDF https://rodrigob.github.io/documents/2015_tmi_bouget_et_al_detecting_surgical_tools.pdf, local copy /media/user/LaCie/medvideo_gate/DS144/bouget_tmi2015.pdf)",
+   "reason": "Tool polygons only. No action variable; 14 videos."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "Annotations were done by a domain expert using the LabelMe software [30].",
+   "source": "https://doi.org/10.1109/tmi.2015.2450831 (Bouget et al., IEEE TMI 34(12):2603, 2015; PDF https://rodrigob.github.io/documents/2015_tmi_bouget_et_al_detecting_surgical_tools.pdf, local copy /media/user/LaCie/medvideo_gate/DS144/bouget_tmi2015.pdf)",
+   "reason": "Only tool annotations. No outcome."
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "After sampling at 1 Hz, a random selection is performed to assemble the proposed dataset which consists of 2 476 frames.",
+   "source": "https://doi.org/10.1109/tmi.2015.2450831 (Bouget et al., IEEE TMI 34(12):2603, 2015; PDF https://rodrigob.github.io/documents/2015_tmi_bouget_et_al_detecting_surgical_tools.pdf, local copy /media/user/LaCie/medvideo_gate/DS144/bouget_tmi2015.pdf)",
+   "reason": "Randomly selected frames, not continuous recordings."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "during in-vivo surgeries performed at CHU Pontchaillou, Rennes.",
+   "source": "https://doi.org/10.1109/tmi.2015.2450831 (Bouget et al., IEEE TMI 34(12):2603, 2015; PDF https://rodrigob.github.io/documents/2015_tmi_bouget_et_al_detecting_surgical_tools.pdf, local copy /media/user/LaCie/medvideo_gate/DS144/bouget_tmi2015.pdf)",
+   "reason": "Single site; one microscope model (Zeiss OPMI Pentero classic); 14 videos; no per-video factor table."
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "2 476 images from neurosurgical microscopes, which is made freely available.",
+   "source": "https://doi.org/10.1109/tmi.2015.2450831 (Bouget et al., IEEE TMI 34(12):2603, 2015; PDF https://rodrigob.github.io/documents/2015_tmi_bouget_et_al_detecting_surgical_tools.pdf, local copy /media/user/LaCie/medvideo_gate/DS144/bouget_tmi2015.pdf)",
+   "reason": "Stated as freely available, but no licence is given, and the dataset page could not be read (HTTP 503)."
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "dataset which consists of 2 476 frames.",
+   "source": "https://doi.org/10.1109/tmi.2015.2450831 (Bouget et al., IEEE TMI 34(12):2603, 2015; PDF https://rodrigob.github.io/documents/2015_tmi_bouget_et_al_detecting_surgical_tools.pdf, local copy /media/user/LaCie/medvideo_gate/DS144/bouget_tmi2015.pdf)",
+   "reason": "No size documented."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "Every tool in each image is annotated with a bounding polygon and a class label.",
+   "source": "https://doi.org/10.1109/tmi.2015.2450831 (Bouget et al., IEEE TMI 34(12):2603, 2015; PDF https://rodrigob.github.io/documents/2015_tmi_bouget_et_al_detecting_surgical_tools.pdf, local copy /media/user/LaCie/medvideo_gate/DS144/bouget_tmi2015.pdf)",
+   "reason": "Expert frame-level tool polygons vary within videos."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "Clinician-performed brain/spine tumour removal.",
+   "site": "1 (CHU Pontchaillou, Rennes).",
+   "device": "1 model (Zeiss OPMI Pentero classic).",
+   "operator": "Not documented.",
+   "annotation_type": "3,819 tool polygons (7 categories) on 2,476 frames; train/test split 1,221 / 1,255."
+  },
+  "registration_required": "unknown",
+  "notes": "The dataset host was unavailable (503). Not eligible."
+ },
+ {
+  "id": "DS145",
+  "name": "ORena SAVE FOCUS (HeiCo-FOCUS + LapChole-FOCUS)",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://zenodo.org/records/19848528",
+   "/media/user/LaCie/medvideo_gate/DS145/ORena_FOCUS_design.pdf",
+   "https://github.com/IMSY-DKFZ/orena-focus (README)",
+   "https://huggingface.co/datasets/orena-dkfz/heico-focus-vqa (API card metadata, file tree)",
+   "https://huggingface.co/datasets/orena-dkfz/lapchole-focus-vqa (API card metadata, LICENSE, file tree)"
+  ],
+  "trajectory_unit": "One full-length laparoscopic procedure video.",
+  "n_trajectories": 200,
+  "n_trajectories_quote": "FOCUS builds upon two datasets: **HeiCo-FOCUS** (30 videos) and LapChole-FOCUS (170 videos).",
+  "D1": {
+   "verdict": "UNKNOWN",
+   "quote": "the identification of \"moments of importance\" (e.g., specific points of foreign object insertion and retrieval) from the temporal data generated in Stage 4",
+   "source": "https://zenodo.org/records/19848528 (challenge design PDF; local copy /media/user/LaCie/medvideo_gate/DS145/ORena_FOCUS_design.pdf)",
+   "reason": "Clinician-performed surgery. Foreign-object insertion/retrieval events (surgeon actions) are identified by clinicians but used to generate VQA pairs. A released time-stamped action variable per trajectory is not documented. The released units are 200 videos (exactly 200)."
+  },
+  "D2": {
+   "verdict": "UNKNOWN",
+   "quote": "or determining whether all introduced foreign objects requiring retrieval have been removed.",
+   "source": "https://zenodo.org/records/19848528 (challenge design PDF; local copy /media/user/LaCie/medvideo_gate/DS145/ORena_FOCUS_design.pdf)",
+   "reason": "Candidate: retrieval status of foreign objects (a post-action human-verified state), exposed only through VQA answers, some generated automatically from expert annotations. Whether a per-trajectory outcome variable is released is not documented."
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "the first challenge resource to provide full-length laparoscopic videos with fine-grained foreign-object annotations at scale",
+   "source": "https://zenodo.org/records/19848528",
+   "reason": "Full-length procedure videos (new videos de-identified by out-of-body blurring and \"trimmed accordingly\")."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "We will provide the following metadata corresponding to each VQA-pair: procedure name, timestamp of the frame. [...] The remaining cases were recorded with diverse surgical endoscopy systems.",
+   "source": "https://zenodo.org/records/19848528 (challenge design PDF; local copy /media/user/LaCie/medvideo_gate/DS145/ORena_FOCUS_design.pdf)",
+   "reason": "No per-trajectory site/device/operator. The DUA forbids re-identifying \"individual surgeons or facilities, or the provenance of the video\"; video file names carry only index + procedure. HeiCo-FOCUS (30) is one site/device."
+  },
+  "D5": {
+   "verdict": "FAIL",
+   "quote": "1. to use the data and videos provided only within the scope of the challenge and for the purposes of participating in the challenge, [...] 3. to not publish the data or underlying annotations, or otherwise make them publicly available,",
+   "source": "https://huggingface.co/datasets/orena-dkfz/lapchole-focus-vqa/blob/main/LICENSE",
+   "reason": "The LapChole-FOCUS 170 videos (85% of trajectories) are limited to challenge-only use, with no publication of data or annotations. HeiCo-FOCUS (30) is CC BY-NC-SA 4.0 with a publication embargo until the challenge paper is submitted."
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "\"usedStorage\":96149235457",
+   "source": "https://huggingface.co/api/datasets/orena-dkfz/lapchole-focus-vqa?expand[]=usedStorage ; heico-focus-vqa usedStorage 160683266226",
+   "reason": "Hugging Face storage: 96.1 GB (LapChole, 170 videos) + 160.7 GB (HeiCo, 30 videos), about 256.8 GB."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "Output: Frames (sampled at 1 fps) with class and instance assignments and bounding boxes around all foreign objects",
+   "source": "https://zenodo.org/records/19848528 (challenge design PDF; local copy /media/user/LaCie/medvideo_gate/DS145/ORena_FOCUS_design.pdf)",
+   "reason": "Frame-level human-refined foreign-object annotations vary within trajectories. Caveat: release of the boxes themselves is not documented; frame-timestamped QA answers (e.g. counts of visible sponges) are released."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4."
+  },
+  "ge200_trajectories": "PASS",
+  "counts": {
+   "collection_mode": "Clinician-performed laparoscopic surgery (170 cholecystectomies + 30 HeiCo colorectal).",
+   "site": "HeiCo 30: Heidelberg University Hospital; LapChole 170: multiple sites worldwide (SAVE / Wellcome Leap), not per video. Test (200, unreleased) from >5 other centres.",
+   "device": "HeiCo: KARL STORZ OR1 FUSION; others \"diverse surgical endoscopy systems\" (not per video).",
+   "operator": "Not provided (\"N/A for regulatory reasons\").",
+   "annotation_type": "5 s clip presence flags (crowd), 1 fps boxes + instance IDs (crowd + YOLO + medical-student/expert refinement), VQA pairs (FRAME/SEGMENT/PROCEDURE tracks)."
+  },
+  "registration_required": "yes",
+  "notes": "Design doc: 400 videos total (200 train, 20 validation, 200 test); \"The test data will not be released.\" Released on HF: 30 HeiCo + 170 LapChole = 200 (exactly the threshold). D5 FAIL (challenge-only DUA) and D4 FAIL exclude it from both arms. The HeiCo-FOCUS subset duplicates DS134."
+ },
+ {
+  "id": "DS146",
+  "name": "P2ILF (Preoperative to Intraoperative Laparoscopy Fusion)",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://p2ilf.grand-challenge.org/",
+   "https://p2ilf.grand-challenge.org/faqs/",
+   "https://p2ilf.grand-challenge.org/Data/ (HTTP 403 Forbidden)",
+   "https://zenodo.org/record/6362162",
+   "/media/user/LaCie/medvideo_gate/DS146/P2ILF_design.pdf",
+   "https://arxiv.org/abs/2401.15753"
+  ],
+  "trajectory_unit": "One patient (set of laparoscopic still images + preoperative 3D liver model).",
+  "n_trajectories": 11,
+  "n_trajectories_quote": "The teams were provided with training data consisting of 167 laparoscopic images and 9 preoperative 3D models from 9 patients, with the corresponding 2D and 3D landmark annotations.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "The teams were provided with training data consisting of 167 laparoscopic images and 9 preoperative 3D models from 9 patients",
+   "source": "https://arxiv.org/abs/2401.15753",
+   "reason": "No action variable; 11 patients (9 train + 2 test)."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "with the corresponding 2D and 3D landmark annotations.",
+   "source": "https://arxiv.org/abs/2401.15753",
+   "reason": "Only landmark annotations. No outcome."
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "Train: 250 frames (total 10 patients)",
+   "source": "https://zenodo.org/record/6362162 (challenge design PDF; local copy /media/user/LaCie/medvideo_gate/DS146/P2ILF_design.pdf)",
+   "reason": "Still images per patient, not continuous recordings."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "The centers involved for data acquisition are:",
+   "source": "https://zenodo.org/record/6362162 (challenge design PDF; local copy /media/user/LaCie/medvideo_gate/DS146/P2ILF_design.pdf)",
+   "reason": "Two centres planned (Clermont-Ferrand, Oxford); 11 patients; no per-patient factor with >=20."
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "Currently agreed license type is CC-BY-NC-SA which will be during the challenge. Post challenge we will revisit",
+   "source": "https://zenodo.org/record/6362162 (challenge design PDF; local copy /media/user/LaCie/medvideo_gate/DS146/P2ILF_design.pdf) ; https://p2ilf.grand-challenge.org/",
+   "reason": "CC BY-NC-SA during the challenge only. The post-challenge licence is undecided, and the site says \"NO LONGER ACCEPTING ANY DATA REQUEST!!!\"."
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "Training data (patient) is now available upon request for challenge participants !!!",
+   "source": "https://p2ilf.grand-challenge.org/",
+   "reason": "No size documented."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "They are usually marked by hand in both the laparoscopic image and the 3D model",
+   "source": "https://arxiv.org/abs/2401.15753",
+   "reason": "Per-image human landmark contours (ridge, ligament, silhouette) vary across a patient's images."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "Clinician-performed laparoscopic liver surgery (+ phantoms).",
+   "site": "2 planned (CHU Clermont-Ferrand; Oxford), not per patient.",
+   "device": "Karl Storz laparoscope; Siemens CT.",
+   "operator": "Not documented.",
+   "annotation_type": "2D/3D landmark contours on 167 + 16 images; 3D liver meshes; phantom registration ground truth."
+  },
+  "registration_required": "yes",
+  "notes": "Data was available only on request to challenge participants and requests are closed. Not eligible."
+ },
+ {
+  "id": "DS147",
+  "name": "PhaKIR (Surgical Procedure Phase, Keypoint, and Instrument Recognition)",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://zenodo.org/records/15740620 (restricted record; description via API)",
+   "https://arxiv.org/html/2511.06549"
+  ],
+  "trajectory_unit": "One complete laparoscopic cholecystectomy video.",
+  "n_trajectories": 8,
+  "n_trajectories_quote": "We present the Surgical Procedure Phase, Keypoint, and Instrument Recognition (PhaKIR) dataset, comprising eight complete laparoscopic cholecystectomy videos recorded at three medical centers.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "The dataset provides frame-level annotations for three interconnected tasks: surgical phase recognition (485,875 frames), instrument keypoint estimation (19,435 frames), and instrument instance segmentation (19,435 frames).",
+   "source": "https://arxiv.org/abs/2511.06549 (Rueckert et al.; Data in Brief 68:113147, 2026)",
+   "reason": "No action variable (phases, keypoints, masks); 8 videos."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "Finally, the dataset contains only RGB video; no other multimodal information is included.",
+   "source": "https://arxiv.org/abs/2511.06549 (Rueckert et al.; Data in Brief 68:113147, 2026)",
+   "reason": "No outcome."
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "For surgical phase recognition, every frame was annotated (25 fps), resulting in 485,875 labeled frames.",
+   "source": "https://arxiv.org/abs/2511.06549 (Rueckert et al.; Data in Brief 68:113147, 2026)",
+   "reason": "Complete procedure videos at 25 fps (extra-abdominal sequences removed, with cut indices provided)."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "Hospital MRI MRI MRI MRI MRI MRI UKHD KWS",
+   "source": "https://arxiv.org/abs/2511.06549 (Rueckert et al.; Data in Brief 68:113147, 2026) Table 1",
+   "reason": "Per-video hospital is recorded (Table 1): MRI 6, UKHD 1, KWS 1, all <20."
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "Accordingly, the present dataset is distributed under the same licensing terms and is publicly accessible upon request at https://zenodo.org/records/15740619 .",
+   "source": "https://arxiv.org/abs/2511.06549 (Rueckert et al.; Data in Brief 68:113147, 2026) ; https://zenodo.org/api/records/15740620 (license cc-by-nc-sa-4.0)",
+   "reason": "CC BY-NC-SA 4.0 (access by request). Permits non-commercial research use and sharing of adapted material under the same terms."
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "Register on the Zenodo platform and login: Only then the Access Request Form below will become visible.",
+   "source": "https://zenodo.org/records/15740620",
+   "reason": "Restricted record: file list and sizes are not visible, and no size is documented."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "For surgical phase recognition, every frame was annotated (25 fps)",
+   "source": "https://arxiv.org/abs/2511.06549 (Rueckert et al.; Data in Brief 68:113147, 2026)",
+   "reason": "Per-frame human phase labels; 1-fps instrument masks/keypoints."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "Clinician-performed (\"experienced physicians\") laparoscopic cholecystectomy.",
+   "site": "Per video: TUM MRI 6, Heidelberg UKHD 1 (= HeiChole2), Weilheim-Schongau KWS 1.",
+   "device": "\"different endoscopic cameras\" (not per video).",
+   "operator": "Not documented.",
+   "annotation_type": "Per-frame phase (8 classes); instrument instance segmentation (19 classes) and keypoints at 1 fps."
+  },
+  "registration_required": "yes",
+  "notes": "Zenodo login + access request. Not eligible (n=8)."
+ }
+]

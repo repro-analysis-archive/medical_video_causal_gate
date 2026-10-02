@@ -1,0 +1,138 @@
+{
+ "n": 194,
+ "SS_passing": [],
+ "RA_passing": [],
+ "D4_pass": [
+  "DS113",
+  "DS155",
+  "DS024"
+ ],
+ "ge200_pass": [
+  "DS076",
+  "DS000",
+  "DS145",
+  "DS155",
+  "DS159",
+  "DS173",
+  "DS178",
+  "DS180",
+  "DS009",
+  "DS016",
+  "DS017",
+  "DS021",
+  "DS028",
+  "DS029",
+  "DS031",
+  "DS033",
+  "DS035",
+  "DS037",
+  "DS046",
+  "DS047",
+  "DS048",
+  "DS049",
+  "DS050",
+  "DS053",
+  "DS054",
+  "DS055",
+  "DS056",
+  "DS065",
+  "DS066",
+  "DS067",
+  "DS068",
+  "DS069",
+  "DS186",
+  "DS187",
+  "DS188",
+  "DS190",
+  "DS191",
+  "DS192",
+  "DS193"
+ ],
+ "ge200_unknown": [
+  "DS088",
+  "DS091",
+  "DS092",
+  "DS094",
+  "DS103",
+  "DS106",
+  "DS107",
+  "DS109",
+  "DS161",
+  "DS163",
+  "DS169",
+  "DS170",
+  "DS183",
+  "DS002",
+  "DS005",
+  "DS014",
+  "DS015",
+  "DS018",
+  "DS019",
+  "DS020",
+  "DS022",
+  "DS036",
+  "DS039",
+  "DS040",
+  "DS041",
+  "DS042",
+  "DS045",
+  "DS057",
+  "DS058",
+  "DS059",
+  "DS060",
+  "DS061",
+  "DS062",
+  "DS063",
+  "DS064"
+ ],
+ "verdict_counts": {
+  "D1": {
+   "PASS": 33,
+   "FAIL": 136,
+   "UNKNOWN": 25,
+   "PENDING": 0
+  },
+  "D2": {
+   "PASS": 50,
+   "FAIL": 129,
+   "UNKNOWN": 15,
+   "PENDING": 0
+  },
+  "D3": {
+   "PASS": 95,
+   "FAIL": 75,
+   "UNKNOWN": 24,
+   "PENDING": 0
+  },
+  "D4": {
+   "PASS": 3,
+   "FAIL": 174,
+   "UNKNOWN": 17,
+   "PENDING": 0
+  },
+  "D5": {
+   "PASS": 149,
+   "FAIL": 6,
+   "UNKNOWN": 39,
+   "PENDING": 0
+  },
+  "D6": {
+   "PASS": 153,
+   "FAIL": 0,
+   "UNKNOWN": 41,
+   "PENDING": 0
+  },
+  "D7": {
+   "PASS": 150,
+   "FAIL": 26,
+   "UNKNOWN": 18,
+   "PENDING": 0
+  },
+  "D8": {
+   "PASS": 1,
+   "FAIL": 191,
+   "UNKNOWN": 0,
+   "PENDING": 2
+  }
+ }
+}

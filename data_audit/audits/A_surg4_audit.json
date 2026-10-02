@@ -117,7 +117,7 @@
   },
   "D5": {
    "verdict": "UNKNOWN",
-   "quote": "The training data corresponding to this challenge has been released with the 2022 challenge publication (https://arxiv.org/pdf/2305.07152.pdf) and is free for use with proper citation. || CC BY NC ND.",
+   "quote": "The training data corresponding to this challenge has been released with the 2022 challenge publication (https://arxiv.org/pdf/2305.07152.pdf) and is free for use with proper citation || CC BY NC ND.",
    "source": "https://surgtoolloc23.grand-challenge.org/ (WebFetch) || https://zenodo.org/records/6390403 (EndoVis 2022 challenge proposal PDF, SurgToolLoc section \"Data usage agreement\" item; local copy /media/user/LaCie/medvideo_gate/DS168/EndoVis2022.pdf)",
    "reason": "The release names no licence (\"free for use with proper citation\"). The pre-challenge proposal states CC BY-NC-ND, whose NoDerivatives term may bar sharing derived material. Whether derived features may be released is not established."
   },
@@ -280,7 +280,7 @@
    "verdict": "PASS",
    "quote": "Clinical experts annotated eight surgical training steps executed in a controlled environment.",
    "source": "https://arxiv.org/abs/2501.09209 (HTML; SurgVU dataset paper)",
-   "reason": "Step labels vary within cases: in the inspected label archive 149/155 cases contain >=2 distinct steps. Not acquisition metadata."
+   "reason": "Step labels vary within cases: in the inspected label archive 150/155 cases contain >=2 distinct steps. Not acquisition metadata."
   },
   "D8": {
    "verdict": "FAIL",

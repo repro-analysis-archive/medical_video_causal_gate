@@ -1,0 +1,273 @@
+{
+ "n_cases": 236,
+ "n_contiguous": 162,
+ "contiguous_by_recorder": {
+  "online (multitask)": 66,
+  "offline (stitch-coldcut)": 96
+ },
+ "cases_by_recorder": {
+  "online": 140,
+  "offline": 96
+ },
+ "descriptive_contiguous_at": {
+  "0.5": 106,
+  "1.0": 162,
+  "2.0": 214,
+  "5.0": 235
+ },
+ "max_gap_quantiles_online": {
+  "0.0": 0.235,
+  "0.25": 0.742,
+  "0.5": 1.073,
+  "0.75": 1.521,
+  "0.9": 2.289,
+  "1.0": 5.938
+ },
+ "max_gap_quantiles_offline": {
+  "0.0": 0.1,
+  "0.25": 0.1,
+  "0.5": 0.1,
+  "0.75": 0.1,
+  "0.9": 0.1,
+  "1.0": 0.1
+ },
+ "max_boundary_gap_quantiles": {
+  "0.0": 0.045,
+  "0.5": 0.261,
+  "0.9": 1.13,
+  "1.0": 5.093
+ },
+ "median_dt_online": 0.14862120151519775,
+ "median_dt_offline": 0.09999990463256836,
+ "t_missing_total": 0,
+ "cases_with_decrease": 0,
+ "operator_levels_contiguous": {
+  "2": 38,
+  "11": 28,
+  "13": 20,
+  "3": 16,
+  "5": 14,
+  "7": 13,
+  "12": 13,
+  "1": 10,
+  "6": 4,
+  "8": 2,
+  "10": 2,
+  "4": 1,
+  "9": 1
+ },
+ "qualifying_levels_contiguous": 3,
+ "ge200_contiguous": false,
+ "D8": {
+  "observation.cartesian_state.psm1.pose.position.x": {
+   "all_levels": {
+    "V": 0.2910508321311848,
+    "rows": 13,
+    "cols": 4,
+    "quartile_cuts": [
+     0.007100287125196975,
+     0.018122751542604634,
+     0.028803281775958964
+    ],
+    "frames_dropped_missing": 0,
+    "trajectories": 162
+   },
+   "qualifying_levels_only_descriptive": {
+    "V": 0.2750164419377967,
+    "rows": 3,
+    "cols": 4,
+    "quartile_cuts": [
+     0.010149917460003335,
+     0.01964701559032553,
+     0.028936368108182023
+    ],
+    "frames_dropped_missing": 0,
+    "trajectories": 86
+   }
+  },
+  "observation.cartesian_state.psm1.pose.position.y": {
+   "all_levels": {
+    "V": 0.46657855880999527,
+    "rows": 13,
+    "cols": 4,
+    "quartile_cuts": [
+     -0.02664812024740383,
+     -0.011145325980599988,
+     -0.001619248339993093
+    ],
+    "frames_dropped_missing": 0,
+    "trajectories": 162
+   },
+   "qualifying_levels_only_descriptive": {
+    "V": 0.3362160681849212,
+    "rows": 3,
+    "cols": 4,
+    "quartile_cuts": [
+     -0.013799002773746474,
+     -0.004789383887661314,
+     0.004322841118807937
+    ],
+    "frames_dropped_missing": 0,
+    "trajectories": 86
+   }
+  },
+  "observation.cartesian_state.psm1.pose.position.z": {
+   "all_levels": {
+    "V": 0.49736168855422097,
+    "rows": 13,
+    "cols": 4,
+    "quartile_cuts": [
+     0.029518984353168992,
+     0.04470549744522018,
+     0.07531992400038678
+    ],
+    "frames_dropped_missing": 0,
+    "trajectories": 162
+   },
+   "qualifying_levels_only_descriptive": {
+    "V": 0.47193486842666205,
+    "rows": 3,
+    "cols": 4,
+    "quartile_cuts": [
+     0.024849149356683947,
+     0.03490746770527736,
+     0.050074098342602236
+    ],
+    "frames_dropped_missing": 0,
+    "trajectories": 86
+   }
+  },
+  "observation.cartesian_state.psm2.pose.position.x": {
+   "all_levels": {
+    "V": 0.44930514725213233,
+    "rows": 13,
+    "cols": 4,
+    "quartile_cuts": [
+     -0.029929189583565996,
+     -0.01586266871418167,
+     0.0036846265037656645
+    ],
+    "frames_dropped_missing": 0,
+    "trajectories": 162
+   },
+   "qualifying_levels_only_descriptive": {
+    "V": 0.30240966484464876,
+    "rows": 3,
+    "cols": 4,
+    "quartile_cuts": [
+     -0.0354734625084947,
+     -0.02615690732270537,
+     -0.01613885009543775
+    ],
+    "frames_dropped_missing": 0,
+    "trajectories": 86
+   }
+  },
+  "observation.cartesian_state.psm2.pose.position.y": {
+   "all_levels": {
+    "V": 0.44465236464348945,
+    "rows": 13,
+    "cols": 4,
+    "quartile_cuts": [
+     -0.022204152228176004,
+     -0.00806476826142851,
+     0.0013309854161711876
+    ],
+    "frames_dropped_missing": 0,
+    "trajectories": 162
+   },
+   "qualifying_levels_only_descriptive": {
+    "V": 0.24525523943205846,
+    "rows": 3,
+    "cols": 4,
+    "quartile_cuts": [
+     -0.013653191243854695,
+     -0.004623282821853508,
+     0.003746352591553599
+    ],
+    "frames_dropped_missing": 0,
+    "trajectories": 86
+   }
+  },
+  "observation.cartesian_state.psm2.pose.position.z": {
+   "all_levels": {
+    "V": 0.5751335791676827,
+    "rows": 13,
+    "cols": 4,
+    "quartile_cuts": [
+     0.016708638486816974,
+     0.03102805133950698,
+     0.06774950538150931
+    ],
+    "frames_dropped_missing": 0,
+    "trajectories": 162
+   },
+   "qualifying_levels_only_descriptive": {
+    "V": 0.5461758553226197,
+    "rows": 3,
+    "cols": 4,
+    "quartile_cuts": [
+     0.009652649914492537,
+     0.023006202348568844,
+     0.033312154490421464
+    ],
+    "frames_dropped_missing": 0,
+    "trajectories": 86
+   }
+  },
+  "observation.state.psm1.gripper": {
+   "all_levels": {
+    "V": 0.471751676100833,
+    "rows": 13,
+    "cols": 4,
+    "quartile_cuts": [
+     -0.3245859959934685,
+     0.0,
+     0.5958590190955186
+    ],
+    "frames_dropped_missing": 0,
+    "trajectories": 162
+   },
+   "qualifying_levels_only_descriptive": {
+    "V": 0.19543592679482563,
+    "rows": 3,
+    "cols": 4,
+    "quartile_cuts": [
+     -0.3301250061640057,
+     0.0,
+     1.178978314798802
+    ],
+    "frames_dropped_missing": 0,
+    "trajectories": 86
+   }
+  },
+  "observation.state.psm2.gripper": {
+   "all_levels": {
+    "V": 0.5203760304284836,
+    "rows": 13,
+    "cols": 3,
+    "quartile_cuts": [
+     -0.3391813582984243,
+     0.0,
+     0.0
+    ],
+    "frames_dropped_missing": 0,
+    "trajectories": 162
+   },
+   "qualifying_levels_only_descriptive": {
+    "V": 0.30670066864491397,
+    "rows": 3,
+    "cols": 4,
+    "quartile_cuts": [
+     -0.3417569275221335,
+     -0.3352192397767082,
+     0.0
+    ],
+    "frames_dropped_missing": 0,
+    "trajectories": 86
+   }
+  }
+ },
+ "D8_pass": true,
+ "D7_density": 1.0
+}
