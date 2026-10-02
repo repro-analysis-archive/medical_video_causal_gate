@@ -45,3 +45,11 @@ Before this commit, only reachability probes were made (one request per source);
   `/media/user/LaCie/medvideo_gate/` (not the H1R raw disk).
   * Allowed on the sample: container metadata and a few frames.
   * Nothing more: no computation on video, no representation extraction, no model.
+
+## 4. Pagination note (added after the first run; depth unchanged)
+
+* **Zenodo** rejects `size=50` (HTTP 400; the maximum page size is 25). The first 50 are taken as pages 1–2 of
+  `size=25&sort=bestmatch`.
+* **PhysioNet** returns 10 results per page. The first 50 are pages 1–5.
+* The failed first-run responses are kept in `runs/` (zenodo: 0 records, FAILED; physionet: 10 per query).
+* No other source changes.
