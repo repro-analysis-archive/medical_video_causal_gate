@@ -103,3 +103,104 @@ settles RELATED or NONE, that grade is recorded (gate §6: "Screening to RELATED
 | L2 | **NONE**. No acquisition information | — |
 | L3 | **RELATED**. A semi-synthetic causal benchmark on real EHR, not on medical video, with no acquisition instrument | "we first construct semi-synthetic derivations of our observational dataset" (§I, p. 2) |
 | L4 | **RELATED**. It distinguishes **persistent vs transient confounding** in the semi-synthetic design. This concerns clinical confounders, not acquisition information in representations, and not intervention duration | "We define persisting confounding as confounders that are assigned at birth and persist through one's life course … transient confounding as confounders that manifest at a point or period of one's life" (§II.B, p. 3) |
+
+## S3. Citation chasing: one level backward and forward from every DIRECT / PARTIAL hit (K1–K4, N0712)
+
+* **Screening.** 298 citation records were screened: 138 NONE, 105 RELATED, 55 FULLTEXT
+  (`screening/citation_batch_decisions.json`).
+* **The 55 FULLTEXT records are 30 distinct works.**
+  * Ten records are K1–K4 themselves, already graded above:
+    * K1: C0087, C0128, C0171;
+    * K2: C0022, C0129, C0172, C0297;
+    * K3: C0106, C0188;
+    * K4: C0105.
+  * The other 26 works are graded below.
+* **Reading.** Where DIRECT or PARTIAL was possible, the lead analyst read the full text: abstract, introduction,
+  method, experiments and discussion. The whole text was also searched for site, scanner, device, camera, sensor,
+  acquisition, batch, instrument, overlap, positivity, video, sequential, longitudinal, time-varying, harmoniz-,
+  invarian- and debias-. Pages are PDF pages.
+* **Grade convention.** For L1, a pretrained language model (BERT, DistilBERT, RoBERTa, ClinicalBERT, LLM) counts as
+  a foundation representation, and a topic model as a generative representation. With text, images or EHR in place
+  of video, exactly one element differs, so the grade is PARTIAL. A representation that is neither (TF-IDF, a small task-specific
+  CNN) differs in a second element, so the grade is RELATED.
+
+### S3.1 Full text read
+
+| work (records) | L1 | L2 | L3 | L4 | supporting passage (location) |
+|---|---|---|---|---|---|
+| Veitch, Sridhar & Blei (2020). Adapting Text Embeddings for Causal Inference. UAI; arXiv:1905.12741 (C0059, C0116, C0147) | **PARTIAL** (text) | RELATED | RELATED | NONE | L1: "We combine these two ideas to adapt modern methods for language modeling — BERT and topic models — in service of causal inference" (§1, p. 2). L2: overlap is only the standard assumption, and treatment-only information is discarded by supervision: "causal adjustment requires only the aspects of text that are predictive of both the treatment and outcome" (Abstract, p. 1). No acquisition information. L3: semi-synthetic outcomes simulated on real PeerRead / Reddit text (p. 6); not medical video, no instrument |
+| Pryzant, Card, Jurafsky, Veitch & Sridhar (2021). Causal Effects of Linguistic Properties. NAACL; arXiv:2010.12919 (C0048, C0108, C0139, C0193) | **PARTIAL** (text) | NONE | RELATED | NONE | L1: "We approximate this confounding information in the text … with a learned representation b(W) … We use DistilBERT … to produce a representation of the text" (§5.2, p. 4). L2: the focus is treatment mismeasurement; no acquisition information. L3: partially simulated Amazon reviews (§6.1, p. 5); not medical video, no instrument |
+| Gui & Veitch (2023). Causal Estimation for Text Data with (Apparent) Overlap Violations. ICLR; arXiv:2210.00079 (C0019, C0085, C0125, C0169) | **PARTIAL** (text) | RELATED | RELATED | NONE | L1: "the idea is to use supervised representation learning to produce a data representation that preserves confounding information while eliminating information that is only predictive of the treatment. This representation then suffices for adjustment and satisfies overlap." (Abstract, p. 1); "we train DistilBERT … modified to include three heads" (§4.2, p. 6). L2: overlap fails because the representation encodes the **treatment attribute itself** ("Since the treatment is a linguistic property determined by the text, the probability of treatment given any text is either 0 or 1", §1, p. 2); not acquisition information. L3: semi-synthetic Amazon reviews with a real confounder (§5.1, p. 8); not medical video, no instrument |
+| Ahrens, Ashwin, Calliess & Nguyen (2021). Bayesian Topic Regression for Causal Inference. EMNLP; arXiv:2109.05317 (C0000, C0066) | **PARTIAL** (text; generative topic model) | NONE | RELATED | NONE | L1: "we assume that our models can learn a supervised text representation Zi = g(Wi, yi, ti, Ci), which in our case, together with Ci blocks all 'backdoor path' between yi and ti" (§2.1, p. 2); "Its generative process builds on LDA-based models" (§2.3, p. 3). L3: semi-synthetic Booking.com / Yelp review data (§6, p. 7); not medical video, no instrument. L2: no overlap or acquisition analysis |
+| Roberts, Stewart & Nielsen (2020). Adjusting for Confounding with Text Matching. AJPS 64(4); author PDF (C0051, C0111, C0197) | **PARTIAL** (text; generative topic model) | **RELATED: the closest statement of the L2 mechanism** | RELATED | NONE | L1: "Our proposed solution is to estimate a low-dimensional summary of the text and condition on this summary via matching" (Abstract, p. 1); "TIRM uses a structural topic model (STM …) as the measurement model to jointly estimate the topics (the low-dimensional representation) and a projection of information about treatment" (p. 5). L2: "if the text is an instrument, meaning it explains the outcome only through the treatment, conditioning on the text can amplify the bias of unconditioned confounders (Pearl 2011)" (p. 3); "Conditioning on V reduces bias, but conditioning on Z would amplify bias from U. If the text contains some combination of V and Z that cannot be separated, we want to condition on the text only if the confounding (V) was large relative to the instrument (Z)." (p. 4). This is a **qualitative remark** about **generic text content**, in **text, not video**, with **no acquisition information** and no analysis, so two elements differ and the grade is RELATED. It must be cited as prior statement of Z-bias through a learned text summary. L3: "we base our simulation off of the real text of articles in the IR literature, but simulate treatment effects and confounding" (p. 9); not medical video, no instrument manipulated |
+| Daoud, Jerzak & Johansson (2022). Conceptualizing Treatment Leakage in Text-based Causal Inference. NAACL; arXiv:2205.00465 (C0008, C0076) | RELATED | RELATED | NONE | NONE | L1: the propensity uses "an L2-normalized TF-IDF vector using the 256 most frequent terms" (App. C.2, p. 8), not a generative or foundation representation. L2: treatment leakage into the adjustment text breaks overlap ("This lack of overlap would violate the identification assumptions…", §2.1.1, p. 3; "Without distillation (red), the estimated propensities cluster near 0 and 1", §5, p. 4); this is treatment information, not acquisition information. L3: the documents are GPT-2-generated, not real medical video |
+| Mozer, Miratrix, Kaufman & Anastasopoulos (2020). Matching with Text Data. Political Analysis 28(4); arXiv:1801.00644 (C0043, C0104, C0187) | RELATED | NONE | NONE | NONE | L1: compares over 100 text representations × distance metrics for matching, including STM and "a Word2Vec representation" (§3, p. 12). The selected method and the MIMIC TTE application use TF-IDF / cosine matching (§5, p. 30). The core is match-quality evaluation, not adjustment with a generative or foundation representation |
+| Mozer, Kaufman, Celi & Miratrix (2024). Leveraging text data for causal inference using electronic health records. arXiv:2307.03687 (C0042) | RELATED | NONE | NONE | NONE | Confounding adjustment uses "optimal full matching using the cosine distance calculated over the DTM" (§5.1, p. 17). ClinicalBERT embeddings were explored but not used for adjustment: "we found that BoW representation to be better suited the task at hand" (§3.3, p. 9). They appear only in the heterogeneity analysis (§6.1, p. 23). Borderline toward L1 PARTIAL (medical text); the gate consequence is the same |
+| Klaassen et al. (2024). DoubleMLDeep: Estimation of Causal Effects with Multimodal Data. arXiv:2402.01785 (C0034, C0091) | **PARTIAL** (text + images) | NONE | RELATED | NONE | L1: "We use pre-trained transformer-based models such as BERT … RoBERTa … or LLMs … For the image processing, we rely on transformer-based models such as BEIT … or Vision Transformers" as nuisance learners for confounding by text and images in the PLR model (§4, p. 4). L3: a semi-synthetic benchmark from DIAMONDS / IMDB / CIFAR-10 (§5.1, p. 5); not medical video, no instrument |
+| Jerzak, Johansson & Daoud (2023a). Integrating Earth Observation Data into Causal Inference. arXiv:2301.12985 (C0025) | RELATED | RELATED | RELATED | NONE | L1: satellite images are adjusted for through small task-specific convolutional models: a single-layer convolutional model in the simulation (§4.1, p. 12), and three convolutional layers of 32 filters in the application (p. 14). These are images, and not generative / foundation representations. L2: **sensor resolution** limits which confounders are captured: "resolution is a key driver of the residual confounding … Smaller confounder objects, therefore, introduce residual bias" (§3.5, p. 10). That is acquisition **under-capturing confounders**, not acquisition information acting as an instrument. Overlap is discussed for raw images vs latent representations (§3.4, p. 9). L3: confounding simulated from real Landsat images (§4.1, p. 11); not medical video, no instrument |
+| Jerzak, Johansson & Daoud (2023b). Image-based Treatment Effect Heterogeneity. CLeaR; arXiv:2206.06417 (C0026, C0173) | RELATED | NONE | RELATED | NONE | RCT CATE by satellite image: "In the RCT setting, Mi is not a confounder, since the treatment was randomized" (§2, p. 4). Images are moderators, not adjustment covariates. L3: simulation on real satellite images; not medical video, no instrument |
+| Lin, Morency & Ben-Michael (2024). Isolated Causal Effects of Natural Language. ICML 2025; arXiv:2410.14812 (C0039, C0135) | **PARTIAL** (text) | RELATED | RELATED | NONE | L1: non-focal language is approximated by "Sentence embeddings from transformer-based language models" (§4.2, p. 6) and adjusted for in the isolated-effect estimator. L2: a fidelity–overlap trade-off for dense representations: "representations with good fidelity are also more prone to overlap violations" (§3.3, p. 5). This concerns treatment-attribute information, not acquisition information. L3: semi-synthetic Amazon outcome (§4.1, p. 5) |
+| Feldman, Venugopal, Spiess & Feder (2026). Causal Effect Estimation with Latent Textual Treatments. arXiv:2602.15730 (C0123) | **PARTIAL** (text) | RELATED | RELATED | NONE | L1: "we control for such unwanted variations by adjusting for dense contextual embeddings using robust causal machine learning" (§1, p. 2). L2: "Using such embeddings as controls will … lead to a positivity violation … controlling for more sophisticated text embeddings destroys variation in treatment" (§1, p. 2; §7.2, p. 6); the remedy is residualizing the treatment concept out of the embeddings. Treatment information, not acquisition information. L3: semi-synthetic text simulations (§1, p. 2) |
+| Guo, Marmarelis, Morstatter & Lerman (2025). Estimating Causal Effects of Text Interventions Leveraging LLMs. IJCNLP-AACL; arXiv:2410.21474 (C0126) | **PARTIAL** (text) | RELATED | RELATED | RELATED | L1: CausalDANN uses "(1) a BERT encoder for textual representation, (2) an outcome predictor … and (3) a domain predictor … trained adversarially … ensuring domain-invariant embeddings" (§3, p. 5), and adjusts by outcome regression on the representation. L2 / L4: the invariance is to the **LLM-intervened vs original text domain**, not to acquisition information; the setting is static. L3: semi-synthetic Amazon reviews (§4, p. 6) |
+| Rao et al. (2023). Systolic Blood Pressure and Cardiovascular Risk in Patients With Diabetes. Hypertension 80(3); PMC9944753 (C0262) | **PARTIAL** (EHR; inherits T-BEHRT) | NONE | NONE | NONE | "we used Targeted Bidirectional Electronic Health Records Transformer (T-BEHRT) for risk ratio (RR) estimation … T-BEHRT was first trained to jointly predict exposure category (propensity score) and risk of outcome" (Methods, Statistical and Deep Learning Analyses). Pretraining is not restated in this paper; the method is T-BEHRT (S2). An application with no acquisition, benchmark or sequential analysis |
+| Rao et al. (2023). Systolic blood pressure, chronic obstructive pulmonary disease and cardiovascular risk. Heart 109(16); PMC10423512 (C0265) | **PARTIAL** (EHR; inherits T-BEHRT) | NONE | NONE | NONE | "The model incorporates EHR records, specifically diagnoses and medications—longitudinal in nature … and adjusts for confounding features in the medical history of the patient" (Methods, Statistical and deep learning analyses). An application, as above |
+| Rao et al. (2023). Sodium-based paracetamol: impact on blood pressure, cardiovascular events, and all-cause mortality. Eur Heart J 44(44); PMC10635668 (C0276) | **PARTIAL** (EHR; inherits T-BEHRT) | NONE | NONE | NONE | "the encoder model is employed to condense high-dimensional minimally processed EHR data into a rich compact vector … Second, the patient representation vector is used as input to jointly learn the propensity score … and the outcome of interest" (Methods, Statistical methods). An application, as above |
+
+### S3.2 Settled at RELATED / NONE from the abstract or record (gate §6: "Screening to RELATED or NONE may use abstracts")
+
+| work (records) | L1 | L2 | L3 | L4 | basis |
+|---|---|---|---|---|---|
+| Egami, Fong, Grimmer, Roberts & Stewart (2022). How to make causal inferences using texts. Sci Adv 8(42) (C0012, C0080, C0163) | RELATED | NONE | NONE | NONE | abstract: "a conceptual framework for making causal inferences with discovered measures as a treatment or outcome"; text as treatment or outcome, not adjustment covariates |
+| Feder et al. (2022). Causal Inference in Natural Language Processing. TACL (C0014) | RELATED | NONE | NONE | NONE | a survey; it does not itself do the claim |
+| Keith, Jensen & O'Connor (2020). Text and Causal Inference: A Review of Using Text to Remove Confounding. ACL (C0032) | RELATED | NONE | NONE | NONE | a review; it does not itself do the claim |
+| Correlation does not equal causation … immunotherapy. Front Immunol 2025 (C0260) | RELATED | NONE | NONE | NONE | abstract: a review / perspective naming Targeted-BEHRT, CIMLA and CURE |
+| Manolis & Kallistratos (2023). Deep learning approach to unmask hidden salt effects. Eur Heart J (C0270) | RELATED | NONE | NONE | NONE | an editorial comment on C0276 |
+| Zhang et al. (2025). Causal inference model for accurate medical diagnosis in CABG. Artif Intell Med 167 (C0280) | RELATED | NONE | NONE | NONE | abstract (PubMed 40412270): backdoor adjustment inside a **risk-prediction** model, from structured EHR; not a treatment-effect estimate |
+| A Survey of Deep Causal Models and Their Industrial Applications (2023) (C0284) | RELATED | NONE | NONE | NONE | a survey |
+| Causal Forests for Discovering Diagnostic Language in Electronic Health Records. ASMB 2025 (C0290) | RELATED | NONE | NONE | NONE | abstract: words are the **treatments** (causal forests on MIMIC-III notes); no representation adjustment |
+
+### S3.3 UNRESOLVED
+
+| work (record) | what is open | reason |
+|---|---|---|
+| OmniNet: an expandable causal inference network for multiple modalities. Neural Comput Appl 2025, doi 10.1007/s00521-025-11202-9 (C0288) | **L1 only** (could be PARTIAL if a pretrained image / text encoder is used as a pre-treatment covariate). L2–L4: NONE from the abstract (no acquisition, benchmark or sequential content) | the OA PDF and the article HTML both return a bot challenge ("Client Challenge"); not in Europe PMC |
+
+**Correction to the earlier UNRESOLVED list.** C0262, C0265 and C0276 were listed as UNRESOLVED after publisher PDFs
+returned bot challenges. All three were then read in full from PMC (PMC9944753, PMC10423512, PMC10635668). Only C0288
+remains UNRESOLVED.
+
+## S4. Lead review of the acquisition / site records screened RELATED (L2 consistency check)
+
+* **Why this review.** §8 gives an L2 PARTIAL example: "acquisition information analysed for prediction shortcuts,
+  but tied to overlap or confounding only qualitatively". The screening rubric routed "site/shortcut leakage in
+  embeddings without causal estimation" to RELATED. To make sure no L2 PARTIAL was lost at screening, the lead
+  analyst reviewed every native record screened RELATED whose title or reason mentions site, scanner, batch,
+  acquisition, device, shortcut, leakage or harmonization: **48 records**.
+* **Rule applied, from §8 and the gate's lowest-grade logic.**
+  * The L2 elements are:
+    * representations of **video**;
+    * **instrument-like** acquisition information;
+    * which **amplifies bias or degrades overlap in causal estimation**.
+  * A **static-image** shortcut paper differs in two of them (images instead of video; predictive "confounding" of a
+    classifier instead of bias or overlap in causal-effect estimation), so it is **RELATED**.
+  * Only a **video** paper whose acquisition analysis is tied, even qualitatively, to causal-estimation confounding or
+    overlap could be PARTIAL.
+* **Result.**
+  * **All 48 abstracts concern prediction:** classification, segmentation, retrieval or explanation. Harmonization
+    reviews and generic longitudinal causal methods are in the same position.
+  * **None estimates the effect of an action or treatment.** The abstracts settle RELATED (gate §6).
+  * The highest-risk abstracts were read in full:
+    * **N0230:** "acquisition-related confounding" of frozen CT foundation-model features in **malignancy
+      classification**;
+    * **N0240:** pathology foundation models "encode pronounced scanner-specific variability";
+    * **N0241:** negative controls for "volume-driven or contextual confounding" of **predictive** signatures;
+    * **N0244:** "dataset membership, not a causal site … effect";
+    * **N0384:** CIV-DG, where conditional IVs are used for **domain-generalization prediction**, not effect
+      estimation;
+    * **N0125, N0246, N0253, N0651.**
+  * The two video or video-like records are also prediction only:
+    * **N0210:** surgical-video skill-assessment **explanation bias** across surgeons and hospitals; no acquisition
+      information in representations, no causal estimation;
+    * **N0389:** cine CMR view–disease disentanglement for **classification**.
+* **Conclusion.** No L2 DIRECT or PARTIAL among these records. They are the RELATED evidence for L2 and are cited as
+  such in `LIT_GATE_RESULT.md`.

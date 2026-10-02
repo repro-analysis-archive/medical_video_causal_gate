@@ -103,3 +103,19 @@ Gate §6 names the grades but does not define them. They are applied per claim, 
 * **NONE:** unrelated.
 
 A source is graded separately on L1, L2, L3 and L4. A combined condition takes the lowest component grade (gate §6).
+
+## 9. Erratum: proceedings venue names (before any proceedings or Semantic Scholar content query)
+
+* **Defect.** The venue probes (run 2026-10-02 03:26–03:36 UTC) resolved two venues wrongly:
+  * MIDL → "arXiv.org" / "ArXiv". The probe paper's `publicationVenue` is arXiv. As a filter, this would admit every
+    arXiv record into the proceedings arm.
+  * CLeaR → "CLEaR, Classification of Events, Activities and Relationships": a different conference, alongside the
+    correct "Conference on Causal Learning and Reasoning".
+* **Fix.** Fixed names replace the probe result for these two venues (`OVERRIDE` in `search_s2.py`):
+  * MIDL: "Medical Imaging with Deep Learning", "International Conference on Medical Imaging with Deep Learning", "MIDL";
+  * CLeaR: "Conference on Causal Learning and Reasoning", "Conf Causal Learn Reason", "CLeaR".
+  * The other five venues are unchanged.
+* **Status at the time of this erratum.** No Semantic Scholar content sub-query had returned. The first sub-query
+  received HTTP 429 continuously from 03:37 to 04:07 UTC, through backoff waits of 120–900 s. The run was then stopped.
+  Under §4 the Semantic Scholar and proceedings arms are **BLOCKED (needs an API key: investigator action)**. The
+  corrected script is what a re-run with a key would execute.

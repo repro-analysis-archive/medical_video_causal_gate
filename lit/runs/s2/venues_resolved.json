@@ -1,0 +1,45 @@
+{
+ "MICCAI": [
+  "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+  "Medical Image Computing and Computer-Assisted Intervention",
+  "MICCAI",
+  "Med Image Comput Comput Interv",
+  "Int Conf Med Image Comput Comput Interv"
+ ],
+ "IPMI": [
+  "Information Processing in Medical Imaging",
+  "Inf Process Med Imaging",
+  "IPMI"
+ ],
+ "MIDL": [
+  "arXiv.org",
+  "ArXiv"
+ ],
+ "NeurIPS": [
+  "Neural Information Processing Systems",
+  "Neural Inf Process Syst",
+  "NeurIPS",
+  "NIPS"
+ ],
+ "ICML": [
+  "International Conference on Machine Learning",
+  "ICML",
+  "Int Conf Mach Learn"
+ ],
+ "CLeaR": [
+  "CLEaR",
+  "Classification of Events, Activities and Relationships",
+  "CLEAR",
+  "CLeaR",
+  "Conf Causal Learn Reason",
+  "Classif Event Act Relatsh",
+  "Conference on Causal Learning and Reasoning"
+ ],
+ "UAI": [
+  "Conference on Uncertainty in Artificial Intelligence",
+  "Uncertainty in Artificial Intelligence",
+  "UAI",
+  "Conf Uncertain Artif Intell",
+  "Uncertain Artif Intell"
+ ]
+}

@@ -10,6 +10,10 @@ FIELDS = "paperId,title,abstract,year,venue,publicationVenue,externalIds,publica
 PROBES = {"MICCAI": "arXiv:1505.04597", "IPMI": "arXiv:1703.05921", "MIDL": "arXiv:1804.03999",
           "NeurIPS": "arXiv:1706.03762", "ICML": "arXiv:2002.05709", "CLeaR": "arXiv:2302.08070", "UAI": "arXiv:1803.05407"}
 FALLBACK = {"CLeaR": ["Conference on Causal Learning and Reasoning", "CLeaR"]}
+# Erratum (SEARCH_IMPLEMENTATION.md §9, before any content query): the MIDL probe resolved to "arXiv.org" and the CLeaR
+# probe to a different conference ("Classification of Events, Activities and Relationships"). Fixed names replace them.
+OVERRIDE = {"MIDL": ["Medical Imaging with Deep Learning", "International Conference on Medical Imaging with Deep Learning", "MIDL"],
+            "CLeaR": ["Conference on Causal Learning and Reasoning", "Conf Causal Learn Reason", "CLeaR"]}
 LOG = open(os.path.join(OUT, "run.log"), "a")
 
 
@@ -45,7 +49,7 @@ def venues():
         r = cached(f"probe_{v}", f"https://api.semanticscholar.org/graph/v1/paper/{pid}?fields=venue,publicationVenue")
         pv = ((r or {}).get("response") or {}).get("publicationVenue") or {}
         n = [pv["name"]] + pv.get("alternate_names", []) if pv.get("name") else []
-        names[v] = n if n else FALLBACK.get(v, [])
+        names[v] = OVERRIDE.get(v) or (n if n else FALLBACK.get(v, []))
         log("venue", v, "->", names[v][:3])
     json.dump(names, open(os.path.join(OUT, "venues_resolved.json"), "w"), indent=1)
     return names

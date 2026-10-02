@@ -1,0 +1,26 @@
+2026-10-02T03:23:19Z HTTP 429 wait 30
+2026-10-02T03:23:49Z HTTP 429 wait 60
+2026-10-02T03:24:49Z HTTP 429 wait 120
+2026-10-02T03:26:54Z venue MICCAI -> ['International Conference on Medical Image Computing and Computer-Assisted Intervention', 'Medical Image Computing and Computer-Assisted Intervention', 'MICCAI']
+2026-10-02T03:26:54Z HTTP 429 wait 30
+2026-10-02T03:27:28Z venue IPMI -> ['Information Processing in Medical Imaging', 'Inf Process Med Imaging', 'IPMI']
+2026-10-02T03:27:29Z HTTP 429 wait 30
+2026-10-02T03:27:59Z HTTP 429 wait 60
+2026-10-02T03:29:04Z venue MIDL -> ['arXiv.org', 'ArXiv']
+2026-10-02T03:29:08Z venue NeurIPS -> ['Neural Information Processing Systems', 'Neural Inf Process Syst', 'NeurIPS']
+2026-10-02T03:29:08Z HTTP 429 wait 30
+2026-10-02T03:29:38Z HTTP 429 wait 60
+2026-10-02T03:30:39Z HTTP 429 wait 120
+2026-10-02T03:32:43Z venue ICML -> ['International Conference on Machine Learning', 'ICML', 'Int Conf Mach Learn']
+2026-10-02T03:32:47Z venue CLeaR -> ['CLEaR', 'Classification of Events, Activities and Relationships', 'CLEAR']
+2026-10-02T03:32:47Z HTTP 429 wait 30
+2026-10-02T03:33:18Z HTTP 429 wait 60
+2026-10-02T03:34:18Z HTTP 429 wait 120
+2026-10-02T03:36:22Z venue UAI -> ['Conference on Uncertainty in Artificial Intelligence', 'Uncertainty in Artificial Intelligence', 'UAI']
+2026-10-02T03:36:22Z HTTP 429 wait 30
+2026-10-02T03:36:53Z HTTP 429 wait 60
+2026-10-02T03:37:53Z HTTP 429 wait 120
+2026-10-02T03:39:53Z HTTP 429 wait 240
+2026-10-02T03:43:54Z HTTP 429 wait 480
+2026-10-02T03:51:54Z HTTP 429 wait 900
+2026-10-02T04:06:54Z HTTP 429 wait 900

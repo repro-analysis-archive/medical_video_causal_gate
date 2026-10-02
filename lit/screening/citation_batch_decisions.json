@@ -1,0 +1,1900 @@
+[
+ {
+  "uid": "C0000",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Topic-model text representations used for confounding adjustment in causal inference; title only, L1 not ruled out."
+ },
+ {
+  "uid": "C0001",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Hyperparameter optimisation software; unrelated to causal estimation."
+ },
+ {
+  "uid": "C0002",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Experimental causal methodology on conditioning after treatment; no learned representations."
+ },
+ {
+  "uid": "C0003",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "LLM synthetic survey responses; no causal adjustment with representations."
+ },
+ {
+  "uid": "C0004",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal design methodology (priming vs post-treatment bias); no learned representations."
+ },
+ {
+  "uid": "C0005",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Substantive political-science/communication study; no causal adjustment with learned representations."
+ },
+ {
+  "uid": "C0006",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Generic causal identification/estimation methodology; no learned image/video/text representations as adjustment."
+ },
+ {
+  "uid": "C0007",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Generic overlap/limited-overlap methodology; no learned representations."
+ },
+ {
+  "uid": "C0008",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Text-based causal inference with text as confounder; treatment leakage into text adjustment representations. Title only."
+ },
+ {
+  "uid": "C0009",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Foundational conditional-independence theory; generic, no learned representations."
+ },
+ {
+  "uid": "C0010",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Language-model/NLP architecture paper; no causal estimation or acquisition-information analysis."
+ },
+ {
+  "uid": "C0011",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Weak overlap and doubly robust inference; generic, no learned representations."
+ },
+ {
+  "uid": "C0012",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Title only: general text-causal framework; use of learned text representations as confounders not ruled out."
+ },
+ {
+  "uid": "C0013",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Deep nets for semiparametric causal estimation on generic covariates; no image/video/text representations."
+ },
+ {
+  "uid": "C0014",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Survey of causal inference in NLP, covering text as confounder with learned representations; title only."
+ },
+ {
+  "uid": "C0015",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Text as treatment discovery; not representation-based confounder adjustment."
+ },
+ {
+  "uid": "C0016",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Latent (text) treatments; text as treatment, not adjustment covariate."
+ },
+ {
+  "uid": "C0017",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Neural-network regularisation; no causal component."
+ },
+ {
+  "uid": "C0018",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Neural topic modelling tool; no causal estimation."
+ },
+ {
+  "uid": "C0019",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Causal estimation with text data; learned text representations as confounders under apparent overlap violation."
+ },
+ {
+  "uid": "C0020",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal framing for controllable/counterfactual text generation; no treatment effect estimation."
+ },
+ {
+  "uid": "C0021",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Commentary on multiple-causes deconfounding; generic identification."
+ },
+ {
+  "uid": "C0022",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "GenAI internal representations used for causal inference with unstructured data, including confounder adjustment; title only."
+ },
+ {
+  "uid": "C0023",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Generalised propensity score theory; generic."
+ },
+ {
+  "uid": "C0024",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "LATE identification; generic causal theory."
+ },
+ {
+  "uid": "C0025",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Earth-observation imagery as confounder proxies in causal inference; learned image representations likely. Title only."
+ },
+ {
+  "uid": "C0026",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Image-based treatment effect estimation with learned image representations; adjustment role not ruled out. Title only."
+ },
+ {
+  "uid": "C0027",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0028",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0029",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Language-model/NLP architecture paper; no causal estimation or acquisition-information analysis."
+ },
+ {
+  "uid": "C0030",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Sentence-embedding scaling with LLMs; no causal estimation."
+ },
+ {
+  "uid": "C0031",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "ChatGPT in education commentary; unrelated."
+ },
+ {
+  "uid": "C0032",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Review of using text (incl. learned representations) to remove confounding from causal estimates."
+ },
+ {
+  "uid": "C0033",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Substantive political-science/communication study; no causal adjustment with learned representations."
+ },
+ {
+  "uid": "C0034",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "DoubleML with multimodal (image/text) data via deep learned representations as confounders."
+ },
+ {
+  "uid": "C0035",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Experimental design: post-treatment bias vs priming; generic causal methodology."
+ },
+ {
+  "uid": "C0036",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Generative AI in marketing review; unrelated."
+ },
+ {
+  "uid": "C0037",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Language-model/NLP architecture paper; no causal estimation or acquisition-information analysis."
+ },
+ {
+  "uid": "C0038",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Overlap weights for extreme propensity scores; generic."
+ },
+ {
+  "uid": "C0039",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Isolated text effects adjusting for non-focal language via learned representations; title only, not ruled out."
+ },
+ {
+  "uid": "C0040",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "LLM text retrieval fine-tuning; no causal estimation."
+ },
+ {
+  "uid": "C0041",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Post-treatment conditioning bias in experiments; generic causal methodology."
+ },
+ {
+  "uid": "C0042",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Clinical EHR text used for confounding adjustment in causal inference; representation use not ruled out."
+ },
+ {
+  "uid": "C0043",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Matching on text representations (incl. embeddings) for confounding adjustment; match quality evaluation."
+ },
+ {
+  "uid": "C0044",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0045",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Contrastive text/code embeddings (fragment of Neelakantan et al.); no causal estimation."
+ },
+ {
+  "uid": "C0046",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Language-model/NLP architecture paper; no causal estimation or acquisition-information analysis."
+ },
+ {
+  "uid": "C0047",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Substantive political-science/communication study; no causal adjustment with learned representations."
+ },
+ {
+  "uid": "C0048",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Causal effects of linguistic properties, adjusting for text confounding with learned (BERT) representations."
+ },
+ {
+  "uid": "C0049",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Language-model/NLP architecture paper; no causal estimation or acquisition-information analysis."
+ },
+ {
+  "uid": "C0050",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Text-to-image generation model; no causal estimation."
+ },
+ {
+  "uid": "C0051",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Text matching on learned topic representations to adjust for confounding."
+ },
+ {
+  "uid": "C0052",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Merged refs; most relevant Schölkopf et al. causal representation learning; no effect estimation with representations."
+ },
+ {
+  "uid": "C0053",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Learned representations for ITE on generic covariates; not image/video/text."
+ },
+ {
+  "uid": "C0054",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Neural treatment-effect estimation (Dragonnet) on generic covariates; not image/video/text."
+ },
+ {
+  "uid": "C0055",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Language-model/NLP architecture paper; no causal estimation or acquisition-information analysis."
+ },
+ {
+  "uid": "C0056",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "LLMs in medicine review; no causal estimation."
+ },
+ {
+  "uid": "C0057",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0058",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Merged refs (LLaMA; Lipschitz operators); neither involves causal estimation."
+ },
+ {
+  "uid": "C0059",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Adapting text embeddings for causal inference: learned text representations as confounder adjustment."
+ },
+ {
+  "uid": "C0060",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Deconfounder via factor models; generic identification, not learned image/video/text representations."
+ },
+ {
+  "uid": "C0061",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal desiderata for representation learning; no effect estimation with image/video/text adjustment."
+ },
+ {
+  "uid": "C0062",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0063",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0064",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Language-model/NLP architecture paper; no causal estimation or acquisition-information analysis."
+ },
+ {
+  "uid": "C0065",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Generic causal identification/estimation methodology; no learned image/video/text representations as adjustment."
+ },
+ {
+  "uid": "C0066",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Topic-model text representations used for confounding adjustment in causal inference; title only, L1 not ruled out."
+ },
+ {
+  "uid": "C0067",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Hyperparameter optimisation software; unrelated to causal estimation."
+ },
+ {
+  "uid": "C0068",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Venue fragment of Optuna reference; no screenable title."
+ },
+ {
+  "uid": "C0069",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Hyperparameter tuning for DML; generic causal estimation, no learned image/video/text representations."
+ },
+ {
+  "uid": "C0070",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Censorship practices in social media; descriptive, no causal adjustment."
+ },
+ {
+  "uid": "C0071",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Replication practice for LLMs in political science; no causal estimation."
+ },
+ {
+  "uid": "C0072",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Effects of rhetoric (text as treatment) in experiments; no representation-based adjustment."
+ },
+ {
+  "uid": "C0073",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Substantive political-science/communication study; no causal adjustment with learned representations."
+ },
+ {
+  "uid": "C0074",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Paired-comparison statistical model; no causal component."
+ },
+ {
+  "uid": "C0075",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Generic causal identification/estimation methodology; no learned image/video/text representations as adjustment."
+ },
+ {
+  "uid": "C0076",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Text-based causal inference with text as confounder; treatment leakage into text adjustment representations. Title only."
+ },
+ {
+  "uid": "C0077",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Language-model/NLP architecture paper; no causal estimation or acquisition-information analysis."
+ },
+ {
+  "uid": "C0078",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Weak overlap and doubly robust inference; generic, no learned representations."
+ },
+ {
+  "uid": "C0079",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Overlap with high-dimensional covariates; generic, no learned representations."
+ },
+ {
+  "uid": "C0080",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Merged refs; most relevant Egami et al. text-causal framework; confounder use of text representations not ruled out (title only)."
+ },
+ {
+  "uid": "C0081",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Text as treatment discovery; not representation-based confounder adjustment."
+ },
+ {
+  "uid": "C0082",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Microblog censorship keyword analysis; no causal adjustment."
+ },
+ {
+  "uid": "C0083",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Neural-network regularisation; no causal component."
+ },
+ {
+  "uid": "C0084",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Language-model/NLP architecture paper; no causal estimation or acquisition-information analysis."
+ },
+ {
+  "uid": "C0085",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Causal estimation with text data; learned text representations as confounders under apparent overlap violation."
+ },
+ {
+  "uid": "C0086",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Coarsened exact matching; generic causal methodology."
+ },
+ {
+  "uid": "C0087",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "GenAI representations for text-as-treatment effects; representations also capture confounding text features. Title only."
+ },
+ {
+  "uid": "C0088",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Substantive political-science/communication study; no causal adjustment with learned representations."
+ },
+ {
+  "uid": "C0089",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Sentence-embedding scaling with LLMs; no causal estimation."
+ },
+ {
+  "uid": "C0090",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Substantive censorship study; no learned-representation causal adjustment."
+ },
+ {
+  "uid": "C0091",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "DoubleML with multimodal (image/text) data via deep learned representations as confounders."
+ },
+ {
+  "uid": "C0092",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "LLM text retrieval fine-tuning; no causal estimation."
+ },
+ {
+  "uid": "C0093",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0094",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0095",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0096",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0097",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0098",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0099",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0100",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0101",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0102",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0103",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Language-model/NLP architecture paper; no causal estimation or acquisition-information analysis."
+ },
+ {
+  "uid": "C0104",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Matching on text representations (incl. embeddings) for confounding adjustment; match quality evaluation."
+ },
+ {
+  "uid": "C0105",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Video features as treatments using learned video representations; adjustment for other video features not ruled out."
+ },
+ {
+  "uid": "C0106",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "GenAI representations of unstructured data in dynamic (sequential) causal inference; time-varying confounder use plausible. Title only."
+ },
+ {
+  "uid": "C0107",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Contrastive text/code embeddings; no causal estimation."
+ },
+ {
+  "uid": "C0108",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Causal effects of linguistic properties, adjusting for text confounding with learned (BERT) representations."
+ },
+ {
+  "uid": "C0109",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Sentence embedding model; no causal estimation."
+ },
+ {
+  "uid": "C0110",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Structural topic model for experiments; text model, not representation-based confounder adjustment."
+ },
+ {
+  "uid": "C0111",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Text matching on learned topic representations to adjust for confounding."
+ },
+ {
+  "uid": "C0112",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Latent diffusion image synthesis; no causal estimation."
+ },
+ {
+  "uid": "C0113",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Potential-outcomes foundations commentary; generic causal theory."
+ },
+ {
+  "uid": "C0114",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Learned representations for ITE on generic covariates; not image/video/text."
+ },
+ {
+  "uid": "C0115",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Neural treatment-effect estimation (Dragonnet) on generic covariates; not image/video/text."
+ },
+ {
+  "uid": "C0116",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Adapting text embeddings for causal inference: learned text representations as confounder adjustment."
+ },
+ {
+  "uid": "C0117",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal desiderata for representation learning; no effect estimation with image/video/text adjustment."
+ },
+ {
+  "uid": "C0118",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Protest detection from social-media images; prediction only, no causal estimation."
+ },
+ {
+  "uid": "C0119",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0120",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Text embedding foundation model (fragment of Qwen3 Embedding); no causal estimation."
+ },
+ {
+  "uid": "C0121",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Survey vignette order effects; no causal representation component."
+ },
+ {
+  "uid": "C0122",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Merged refs (Blumenau rhetoric; Farrell deep nets); most relevant Farrell, generic deep causal estimation, no image/text adjustment."
+ },
+ {
+  "uid": "C0123",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Latent textual treatments with learned text representations; adjustment for confounding text not ruled out. Title only."
+ },
+ {
+  "uid": "C0124",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Merged Fong & Grimmer refs; text as (latent) treatment, not representation-based confounder adjustment."
+ },
+ {
+  "uid": "C0125",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Causal estimation with text data; learned text representations as confounders under apparent overlap violation."
+ },
+ {
+  "uid": "C0126",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "LLM-based estimation of text-intervention effects; representation-based confounder adjustment not ruled out. Title only."
+ },
+ {
+  "uid": "C0127",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Efficient influence functions for causal estimation; generic."
+ },
+ {
+  "uid": "C0128",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "GenAI representations for text-as-treatment effects; representations also capture confounding text features. Title only."
+ },
+ {
+  "uid": "C0129",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "GenAI representations of text/images for causal inference, including adjustment for unstructured confounders."
+ },
+ {
+  "uid": "C0130",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Sentence-embedding scaling with LLMs; no causal estimation."
+ },
+ {
+  "uid": "C0131",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Incremental propensity score interventions; generic causal methodology."
+ },
+ {
+  "uid": "C0132",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Scaled treatment effects with multiple outcomes; generic causal methodology."
+ },
+ {
+  "uid": "C0133",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Survey response-order effects; unrelated."
+ },
+ {
+  "uid": "C0134",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Text-message RCT application; no learned-representation causal adjustment."
+ },
+ {
+  "uid": "C0135",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Isolated text effects adjusting for non-focal language via learned representations; title only, not ruled out."
+ },
+ {
+  "uid": "C0136",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Merged refs (LLM retrieval; Muñoz & van der Laan); most relevant stochastic-intervention causal effects, generic."
+ },
+ {
+  "uid": "C0137",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Contrastive text/code embeddings; no causal estimation."
+ },
+ {
+  "uid": "C0138",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Spatio-temporal causal inference; generic, no learned image/video/text representations."
+ },
+ {
+  "uid": "C0139",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Causal effects of linguistic properties, adjusting for text confounding with learned (BERT) representations."
+ },
+ {
+  "uid": "C0140",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Language-model/NLP architecture paper; no causal estimation or acquisition-information analysis."
+ },
+ {
+  "uid": "C0141",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Marginal structural models; generic longitudinal causal methodology."
+ },
+ {
+  "uid": "C0142",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Multiply robust g-functional estimation; generic."
+ },
+ {
+  "uid": "C0143",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Neural treatment-effect estimation (Dragonnet) on generic covariates; not image/video/text."
+ },
+ {
+  "uid": "C0144",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Merged refs (texting intervention trial; empirical-process monograph); neither is causal-representation work."
+ },
+ {
+  "uid": "C0145",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0146",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Language-model/NLP architecture paper; no causal estimation or acquisition-information analysis."
+ },
+ {
+  "uid": "C0147",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Adapting text embeddings for causal inference: learned text representations as confounder adjustment."
+ },
+ {
+  "uid": "C0148",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal desiderata for representation learning; no effect estimation with image/video/text adjustment."
+ },
+ {
+  "uid": "C0149",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Generative video world model (action-conditioned); no causal effect estimation."
+ },
+ {
+  "uid": "C0150",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Substantive political-science/communication study; no causal adjustment with learned representations."
+ },
+ {
+  "uid": "C0151",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Hyperparameter optimisation software; unrelated to causal estimation."
+ },
+ {
+  "uid": "C0152",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Venue fragment of Optuna reference; no screenable title."
+ },
+ {
+  "uid": "C0153",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Substantive political-science/communication study; no causal adjustment with learned representations."
+ },
+ {
+  "uid": "C0154",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Dynamic causal inference framework; generic, no learned representations."
+ },
+ {
+  "uid": "C0155",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Time-series cross-sectional causal inference; generic, no learned representations."
+ },
+ {
+  "uid": "C0156",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "ML-measured video emotion as exposure; no evidence of learned representations as adjustment covariates."
+ },
+ {
+  "uid": "C0157",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Neural signals of ad liking; no causal adjustment with representations."
+ },
+ {
+  "uid": "C0158",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Generic causal identification/estimation methodology; no learned image/video/text representations as adjustment."
+ },
+ {
+  "uid": "C0159",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "High-dimensional Gaussian approximation theory; not causal."
+ },
+ {
+  "uid": "C0160",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "HCI study of short-form video and memory; unrelated."
+ },
+ {
+  "uid": "C0161",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Substantive political-science/communication study; no causal adjustment with learned representations."
+ },
+ {
+  "uid": "C0162",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Language-model/NLP architecture paper; no causal estimation or acquisition-information analysis."
+ },
+ {
+  "uid": "C0163",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Title only: general text-causal framework; use of learned text representations as confounders not ruled out."
+ },
+ {
+  "uid": "C0164",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "ML analysis of televised-debate viewer responses; no representation-based causal adjustment indicated."
+ },
+ {
+  "uid": "C0165",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Merged Fong & Grimmer refs; text as (latent) treatment, not representation-based confounder adjustment."
+ },
+ {
+  "uid": "C0166",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Substantive political-science/communication study; no causal adjustment with learned representations."
+ },
+ {
+  "uid": "C0167",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Substantive political-science/communication study; no causal adjustment with learned representations."
+ },
+ {
+  "uid": "C0168",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Language-model/NLP architecture paper; no causal estimation or acquisition-information analysis."
+ },
+ {
+  "uid": "C0169",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Merged refs; most relevant Gui & Veitch: learned text representations as confounders under apparent overlap violation."
+ },
+ {
+  "uid": "C0170",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Efficient influence functions for causal estimation; generic."
+ },
+ {
+  "uid": "C0171",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "GenAI representations for text-as-treatment effects; representations also capture confounding text features. Title only."
+ },
+ {
+  "uid": "C0172",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "GenAI representations of text/images for causal inference, including adjustment for unstructured confounders."
+ },
+ {
+  "uid": "C0173",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Image-based treatment effect estimation with learned image representations; adjustment role not ruled out. Title only."
+ },
+ {
+  "uid": "C0174",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Substantive political-science/communication study; no causal adjustment with learned representations."
+ },
+ {
+  "uid": "C0175",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Game AI benchmark; no causal estimation."
+ },
+ {
+  "uid": "C0176",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Incremental propensity score interventions; generic causal methodology."
+ },
+ {
+  "uid": "C0177",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Review of doubly robust / DML estimation; generic."
+ },
+ {
+  "uid": "C0178",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Speech audio model for social science; no causal adjustment."
+ },
+ {
+  "uid": "C0179",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Targeted maximum likelihood estimation; generic causal methodology."
+ },
+ {
+  "uid": "C0180",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reference fragment (authors/venue only, split string); no screenable title; belongs to an LLM/tool reference."
+ },
+ {
+  "uid": "C0181",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Language-model/NLP architecture paper; no causal estimation or acquisition-information analysis."
+ },
+ {
+  "uid": "C0182",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Marketing study of choice and video-ad attention; no representation-based causal adjustment."
+ },
+ {
+  "uid": "C0183",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "LLM text retrieval fine-tuning; no causal estimation."
+ },
+ {
+  "uid": "C0184",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Real-time response measurement method; no causal representation component."
+ },
+ {
+  "uid": "C0185",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Real-time response measurement reliability; no causal representation component."
+ },
+ {
+  "uid": "C0186",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Word embedding method; no causal estimation."
+ },
+ {
+  "uid": "C0187",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Merged refs; most relevant Mozer et al.: matching on text representations for confounding adjustment."
+ },
+ {
+  "uid": "C0188",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "GenAI representations of unstructured data in dynamic (sequential) causal inference; time-varying confounder use plausible. Title only."
+ },
+ {
+  "uid": "C0189",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Contrastive text/code embeddings; no causal estimation."
+ },
+ {
+  "uid": "C0190",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Neyman potential-outcomes foundations; generic causal theory."
+ },
+ {
+  "uid": "C0191",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Spatio-temporal causal inference; generic, no learned image/video/text representations."
+ },
+ {
+  "uid": "C0192",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Venue-only fragment continuing C0191 (Papadogeorgou et al.); no screenable title."
+ },
+ {
+  "uid": "C0193",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Causal effects of linguistic properties, adjusting for text confounding with learned (BERT) representations."
+ },
+ {
+  "uid": "C0194",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Speech recognition model; no causal estimation."
+ },
+ {
+  "uid": "C0195",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Substantive political-science/communication study; no causal adjustment with learned representations."
+ },
+ {
+  "uid": "C0196",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Automated video analysis measures speech emphasis as exposure; no representation-based adjustment indicated."
+ },
+ {
+  "uid": "C0197",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Text matching on learned topic representations to adjust for confounding."
+ },
+ {
+  "uid": "C0198",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "g-methods for sustained exposures; generic longitudinal causal methodology."
+ },
+ {
+  "uid": "C0199",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Structural nested mean models; generic causal methodology."
+ },
+ {
+  "uid": "C0200",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Marginal structural models; generic longitudinal causal methodology."
+ },
+ {
+  "uid": "C0201",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Misinformation inoculation experiment; no representation-based causal adjustment."
+ },
+ {
+  "uid": "C0202",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Multiply robust g-functional estimation; generic."
+ },
+ {
+  "uid": "C0203",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Potential-outcomes foundations commentary; generic causal theory."
+ },
+ {
+  "uid": "C0204",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Substantive political-science/communication study; no causal adjustment with learned representations."
+ },
+ {
+  "uid": "C0205",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Debiased ML for CATE; generic causal estimation."
+ },
+ {
+  "uid": "C0206",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Substantive political-science/communication study; no causal adjustment with learned representations."
+ },
+ {
+  "uid": "C0207",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Substantive political-science/communication study; no causal adjustment with learned representations."
+ },
+ {
+  "uid": "C0208",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Emotion and video-ad engagement marketing study; no representation-based causal adjustment."
+ },
+ {
+  "uid": "C0209",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Learned visual-frame representations for measurement; no causal effect estimation with adjustment."
+ },
+ {
+  "uid": "C0210",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Semiparametric theory for missing data; generic estimation theory."
+ },
+ {
+  "uid": "C0211",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Publisher fragment of Tsiatis reference; no screenable title."
+ },
+ {
+  "uid": "C0212",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Real-time response measurement; no causal representation component."
+ },
+ {
+  "uid": "C0213",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal desiderata for representation learning; no effect estimation with image/video/text adjustment."
+ },
+ {
+  "uid": "C0214",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Substantive political-science/communication study; no causal adjustment with learned representations."
+ },
+ {
+  "uid": "C0215",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Propensity score theory; generic causal methodology."
+ },
+ {
+  "uid": "C0216",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Optimisation algorithm; unrelated."
+ },
+ {
+  "uid": "C0217",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Marginal structural models; generic longitudinal causal methodology."
+ },
+ {
+  "uid": "C0218",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Generic causal identification/estimation methodology; no learned image/video/text representations as adjustment."
+ },
+ {
+  "uid": "C0219",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Data resource profile (CPRD); no causal representation component."
+ },
+ {
+  "uid": "C0220",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Potential-outcomes framework review; generic causal theory."
+ },
+ {
+  "uid": "C0221",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Bayesian regression trees; predictive method, no causal or representation component."
+ },
+ {
+  "uid": "C0222",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Doubly robust estimation primer; generic."
+ },
+ {
+  "uid": "C0223",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Targeted learning methodology; generic causal estimation."
+ },
+ {
+  "uid": "C0224",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Targeted maximum likelihood estimation; generic causal methodology."
+ },
+ {
+  "uid": "C0225",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Double robustness comparison; generic estimation methodology."
+ },
+ {
+  "uid": "C0226",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "EHR transformer for prediction; no causal estimation or acquisition-information analysis."
+ },
+ {
+  "uid": "C0227",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Propensity score trimming under unmeasured confounding; generic."
+ },
+ {
+  "uid": "C0228",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "AIPW estimator introduction; generic."
+ },
+ {
+  "uid": "C0229",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "CNN for medical-record risk prediction; no causal estimation."
+ },
+ {
+  "uid": "C0230",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical meta-analysis of antihypertensives and cancer; no representation-based causal method."
+ },
+ {
+  "uid": "C0231",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "g-methods tutorial; generic causal methodology."
+ },
+ {
+  "uid": "C0232",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Interpretable RNN visual analytics for EMR prediction; no causal estimation."
+ },
+ {
+  "uid": "C0233",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Administrative database research overview; no causal representation component."
+ },
+ {
+  "uid": "C0234",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Confounding control and proxy measures in health databases; no learned representations."
+ },
+ {
+  "uid": "C0235",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Descriptive comorbidity epidemiology; unrelated."
+ },
+ {
+  "uid": "C0236",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "TMLE tutorial; generic causal methodology."
+ },
+ {
+  "uid": "C0237",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Transformer EHR prediction of heart failure; no causal estimation."
+ },
+ {
+  "uid": "C0238",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "M-bias / covariate adjustment sensitivity; generic causal theory."
+ },
+ {
+  "uid": "C0239",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal effect measures in cross-sectional studies; generic."
+ },
+ {
+  "uid": "C0240",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical IPD meta-analysis; no representation-based causal method."
+ },
+ {
+  "uid": "C0241",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "TMLE with ML on tabular ICU data; no learned image/video/text representations."
+ },
+ {
+  "uid": "C0242",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "High-dimensional feature selection; not causal."
+ },
+ {
+  "uid": "C0243",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "G-estimation application; generic longitudinal causal methodology."
+ },
+ {
+  "uid": "C0244",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Propensity score remarks; generic causal methodology."
+ },
+ {
+  "uid": "C0245",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Dose-response TMLE; generic causal methodology."
+ },
+ {
+  "uid": "C0246",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Longitudinal TMLE on daily EHR; no learned image/video/text representations."
+ },
+ {
+  "uid": "C0247",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Low-shot text classification; no causal estimation."
+ },
+ {
+  "uid": "C0248",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Doubly robust ML with clustered hospitals; tabular covariates, no learned representations."
+ },
+ {
+  "uid": "C0249",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Combining trial and observational data; generic causal methodology."
+ },
+ {
+  "uid": "C0250",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Drug formulary note; unrelated."
+ },
+ {
+  "uid": "C0251",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "AI content pipeline (abstract mismatched, geospatial QA); no causal estimation."
+ },
+ {
+  "uid": "C0252",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multi-task CNN auxiliary tasks; no causal estimation."
+ },
+ {
+  "uid": "C0253",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Multi-task GP for ITE on tabular data; not image/video/text representations."
+ },
+ {
+  "uid": "C0254",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Code-list dataset; unrelated."
+ },
+ {
+  "uid": "C0255",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Review of transformers in healthcare; no causal estimation."
+ },
+ {
+  "uid": "C0256",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal representation learning for OOD generalisation; no causal effect estimation of a treatment."
+ },
+ {
+  "uid": "C0257",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Review of transformers for longitudinal health data; no causal estimation."
+ },
+ {
+  "uid": "C0258",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Review of longitudinal multimodal oncology modelling; no causal estimation."
+ },
+ {
+  "uid": "C0259",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Review of AI in rheumatoid arthritis; no causal estimation."
+ },
+ {
+  "uid": "C0260",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Review of causal ML integrating imaging/multimodal data to control confounding (incl. Targeted-BEHRT); L1 not ruled out."
+ },
+ {
+  "uid": "C0261",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Robotic packaging system; unrelated."
+ },
+ {
+  "uid": "C0262",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Deep-learning (EHR transformer) representations adjust confounding for exposure effect; coded-EHR modality borderline, doubt."
+ },
+ {
+  "uid": "C0263",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Sequential recommendation; no causal treatment-effect estimation indicated."
+ },
+ {
+  "uid": "C0264",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Trajectory forecasting; unrelated."
+ },
+ {
+  "uid": "C0265",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Deep-learning (EHR transformer) representations adjust confounding for exposure effect; coded-EHR modality borderline, doubt."
+ },
+ {
+  "uid": "C0266",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "CVD risk prediction modelling; no causal estimation."
+ },
+ {
+  "uid": "C0267",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Variational representations for ITE on IoT sensor data; not image/video/text adjustment."
+ },
+ {
+  "uid": "C0268",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal-graph analysis of health features; no learned representation adjustment."
+ },
+ {
+  "uid": "C0269",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Design framework for causal inference with digital behavioural data; no learned-representation adjustment described."
+ },
+ {
+  "uid": "C0270",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Commentary on T-BEHRT deep-learning causal estimate of salt effects; coded-EHR modality borderline, doubt."
+ },
+ {
+  "uid": "C0271",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "VAE feature extraction for EMR prediction; no causal estimation."
+ },
+ {
+  "uid": "C0272",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Debiased (causal-style) news recommendation using content; no treatment-effect estimation indicated."
+ },
+ {
+  "uid": "C0273",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal ML HTE with radiographic measurements; no learned image representations."
+ },
+ {
+  "uid": "C0274",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Explainable EHR risk prediction; no causal estimation."
+ },
+ {
+  "uid": "C0275",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Dimensionality reduction method; no causal estimation."
+ },
+ {
+  "uid": "C0276",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Deep-learning (EHR transformer) representations adjust confounding for drug exposure effect; coded-EHR modality borderline, doubt."
+ },
+ {
+  "uid": "C0277",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Debiased recommendation learning; no treatment-effect estimation with representation adjustment indicated."
+ },
+ {
+  "uid": "C0278",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multimodal EHR transformer for prognosis prediction; no causal estimation."
+ },
+ {
+  "uid": "C0279",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Balanced-representation causal model with spatial confounders; tabular/spatial, not image/video/text."
+ },
+ {
+  "uid": "C0280",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Title only: causal inference model for CABG diagnosis; learned-representation adjustment not ruled out."
+ },
+ {
+  "uid": "C0281",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multimodal graph-transformer readmission prediction; no causal estimation."
+ },
+ {
+  "uid": "C0282",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Deconfounded image features for captioning; no causal effect estimation of an action/treatment."
+ },
+ {
+  "uid": "C0283",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "EHR foundation model for risk prediction; no causal estimation."
+ },
+ {
+  "uid": "C0284",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Title only: survey of deep causal models; may cover learned image/text representations as confounders."
+ },
+ {
+  "uid": "C0285",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Special-issue editorial on causal discovery and causality-inspired ML; generic."
+ },
+ {
+  "uid": "C0286",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Commentary on deep learning for epidemiologic data (images, text, video); no causal adjustment described."
+ },
+ {
+  "uid": "C0287",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "ML/DL personalised treatment prediction review; no causal estimation."
+ },
+ {
+  "uid": "C0288",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Modular causal network ingesting multiple data modalities as pre-treatment covariates for effect estimation."
+ },
+ {
+  "uid": "C0289",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multimorbidity measurement for prediction; no causal estimation."
+ },
+ {
+  "uid": "C0290",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Causal forests on clinical-note text; whether learned text representations serve as adjustment covariates unclear; doubt."
+ },
+ {
+  "uid": "C0291",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal disentanglement for emotion recognition; no treatment-effect estimation."
+ },
+ {
+  "uid": "C0292",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Information-system acceptance survey; unrelated."
+ },
+ {
+  "uid": "C0293",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Bibliometric analysis of transformers in cancer imaging; no causal estimation."
+ },
+ {
+  "uid": "C0294",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Systematic mapping of AI/OR for cancer prediction; no causal estimation."
+ },
+ {
+  "uid": "C0295",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal reasoning with knowledge graphs for diagnosis; no representation-based effect adjustment."
+ },
+ {
+  "uid": "C0296",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal-AI framework for natural product evidence; no learned-representation adjustment."
+ },
+ {
+  "uid": "C0297",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "GenAI representations of text/images used for causal estimation, adjusting for textual confounders."
+ }
+]

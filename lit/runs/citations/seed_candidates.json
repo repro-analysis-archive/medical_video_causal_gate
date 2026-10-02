@@ -1,0 +1,96 @@
+{
+ "K1": {
+  "arxiv": "2410.00903",
+  "title": "Causal Inference with Generative Artificial Intelligence: Application to Texts as Treatments",
+  "candidates": [
+   [
+    "W4403826407",
+    "Causal Inference with Generative Artificial Intelligence: Application to Texts as Treatments",
+    2026,
+    0,
+    2,
+    "https://doi.org/10.1080/01621459.2026.2689629"
+   ],
+   [
+    "W7164065931",
+    "Replication Data for: Causal Inference with Generative Artificial Intelligence: Application to Texts as Treatments",
+    2025,
+    0,
+    0,
+    "https://doi.org/10.7910/dvn/2dzq6t"
+   ]
+  ]
+ },
+ "K2": {
+  "arxiv": "2507.03897",
+  "title": "Leveraging Generative Artificial Intelligence for Causal Inference with Unstructured Data",
+  "candidates": [
+   [
+    "W4415058571",
+    "Leveraging Generative Artificial Intelligence for Causal Inference with Unstructured Data",
+    2025,
+    0,
+    1,
+    "https://doi.org/10.48550/arxiv.2507.03897"
+   ],
+   [
+    "W7204275233",
+    "Replication Data for: Leveraging Generative Artificial Intelligence for Causal Inference with Unstructured Data",
+    2026,
+    0,
+    0,
+    "https://doi.org/10.7910/dvn/dx2pex"
+   ]
+  ]
+ },
+ "K3": {
+  "arxiv": "2605.07834",
+  "title": "GenAI Powered Dynamic Causal Inference with Unstructured Data",
+  "candidates": [
+   [
+    "W7160856598",
+    "GenAI Powered Dynamic Causal Inference with Unstructured Data",
+    2026,
+    0,
+    0,
+    "https://doi.org/10.48550/arxiv.2605.07834"
+   ]
+  ]
+ },
+ "K4": {
+  "arxiv": "2607.06126",
+  "title": "Causal Inference with Video Features as Treatments",
+  "candidates": [
+   [
+    "W7167716621",
+    "Causal Inference with Video Features as Treatments",
+    2026,
+    0,
+    0,
+    "https://doi.org/10.48550/arxiv.2607.06126"
+   ]
+  ]
+ },
+ "N0712": {
+  "arxiv": "2202.03487",
+  "title": "Targeted-BEHRT: Deep learning for observational causal inference on longitudinal electronic health records",
+  "candidates": [
+   [
+    "W4221163971",
+    "Targeted-BEHRT: Deep Learning for Observational Causal Inference on Longitudinal Electronic Health Records",
+    2022,
+    65,
+    40,
+    "https://doi.org/10.1109/tnnls.2022.3183864"
+   ],
+   [
+    "W4294743843",
+    "Targeted-BEHRT: Deep learning for observational causal inference on longitudinal electronic health records",
+    2022,
+    0,
+    1,
+    "https://doi.org/10.48550/arxiv.2202.03487"
+   ]
+  ]
+ }
+}
