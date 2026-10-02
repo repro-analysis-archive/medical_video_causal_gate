@@ -1,0 +1,301 @@
+[
+ {
+  "id": "DS128",
+  "key": "endovis2020",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "EndoVis 2020"
+  ],
+  "urls": [
+   "https://zenodo.org/records/3715646"
+  ],
+  "titles": [
+   "Endoscopic Vision Challenge"
+  ]
+ },
+ {
+  "id": "DS129",
+  "key": "esad",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "ESAD",
+   "SARAS-ESAD",
+   "SARAS-MESAD"
+  ],
+  "urls": [
+   "https://saras-esad.grand-challenge.org/",
+   "https://saras-mesad.grand-challenge.org/",
+   "https://zenodo.org/records/4471476"
+  ],
+  "titles": [
+   "ESAD: Endoscopic Surgeon Action Detection Dataset",
+   "SARAS-ESAD",
+   "SARAS-MESAD"
+  ]
+ },
+ {
+  "id": "DS130",
+  "key": "fetoscopyplacentadataset",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Fetoscopy Placenta Dataset"
+  ],
+  "urls": [
+   "https://rdr.ucl.ac.uk/articles/dataset/Fetoscopy_Placenta_Dataset/30536171"
+  ],
+  "titles": [
+   "Fetoscopy Placenta Dataset"
+  ]
+ },
+ {
+  "id": "DS131",
+  "key": "fetreg",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "FetReg",
+   "FetReg 2021"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn25313156"
+  ],
+  "titles": [
+   "FetReg - Placental Vessel Segmentation and Registration in Fetoscopy"
+  ]
+ },
+ {
+  "id": "DS132",
+  "key": "hashemi2025humanroboticsurgerydataset",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Hashemi 2025 human robotic surgery dataset"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn65669574"
+  ],
+  "titles": [
+   "Closing the data gap - leveraging pretrained neural networks for robotic surgical assessment on limited clinical data"
+  ]
+ },
+ {
+  "id": "DS133",
+  "key": "heichole",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "EndoVis Workflow and Skill",
+   "HeiChole",
+   "HeiChole / HeiSurF",
+   "HeiSurF"
+  ],
+  "urls": [
+   "https://doi.org/10.1016/j.media.2023.102770",
+   "https://endovissub-workflowandskill.grand-challenge.org",
+   "https://www.synapse.org/#!Synapse:syn18824884",
+   "https://www.synapse.org/#!Synapse:syn25101790"
+  ],
+  "titles": [
+   "Comparative validation of machine learning algorithms for surgical workflow and skill analysis with the HeiChole benchmark",
+   "HeiChole Surgical Workflow Analysis and Full Scene Segmentation (HeiSurF)",
+   "Surgical Workflow and Skill Analysis Challenge (HeiChole Benchmark)",
+   "endovissub-workflowandskill"
+  ]
+ },
+ {
+  "id": "DS134",
+  "key": "heico",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "HeiCo"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn21903917"
+  ],
+  "titles": [
+   "Heidelberg Colorectal Data Set for Surgical Data Science in the Sensor Operating Room"
+  ]
+ },
+ {
+  "id": "DS135",
+  "key": "hiswarlls",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "HiSWA-RLLS"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn54626087"
+  ],
+  "titles": [
+   "EndoVis24-HiSWA-RLLS Challenge"
+  ]
+ },
+ {
+  "id": "DS136",
+  "key": "imed",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "iMED"
+  ],
+  "urls": [
+   "https://rdr.ucl.ac.uk/articles/dataset/iMED_A_Multi-Endoscope_Dataset_for_Surgical_3D_Perception/32764638"
+  ],
+  "titles": [
+   "iMED: A Multi-Endoscope Dataset for Surgical 3D Perception"
+  ]
+ },
+ {
+  "id": "DS137",
+  "key": "jigsaws",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "JIGSAWS"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/tbme.2016.2647680"
+  ],
+  "titles": [
+   "A Dataset and Benchmarks for Segmentation and Recognition of Gestures in Robotic Surgery"
+  ]
+ },
+ {
+  "id": "DS138",
+  "key": "lapsurg230k",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "LapSurg-230K"
+  ],
+  "urls": [
+   "https://figshare.com/articles/dataset/LapSurg-230K/32237319"
+  ],
+  "titles": [
+   "LapSurg-230K"
+  ]
+ },
+ {
+  "id": "DS139",
+  "key": "lask",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "LASK"
+  ],
+  "urls": [
+   "https://zenodo.org/records/20752651"
+  ],
+  "titles": [
+   "LASK: A Dataset for Laparoscopic Skill and 7-DoF Kinematics"
+  ]
+ },
+ {
+  "id": "DS140",
+  "key": "m2cai16toollocations",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "m2cai16-tool-locations"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/wacv.2018.00081",
+   "https://doi.org/10.48550/arxiv.1802.08774"
+  ],
+  "titles": [
+   "Tool Detection and Operative Skill Assessment in Surgical Videos Using Region-Based Convolutional Neural Networks"
+  ]
+ },
+ {
+  "id": "DS141",
+  "key": "macs",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "MACS"
+  ],
+  "urls": [
+   "https://rdr.ucl.ac.uk/articles/dataset/Microsurgical_Aneurysm_Clipping_Surgery_MACS_Dataset_with_image-level_aneurysm_presence_absence_annotations/23533731"
+  ],
+  "titles": [
+   "Microsurgical Aneurysm Clipping Surgery (MACS) Dataset with image-level aneurysm presence/absence annotations"
+  ]
+ },
+ {
+  "id": "DS142",
+  "key": "mipo",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "MIPO"
+  ],
+  "urls": [
+   "https://zenodo.org/records/17311085",
+   "https://zenodo.org/records/17698695"
+  ],
+  "titles": [
+   "Self-supervised spatial features extracted from the MIPO dataset videos",
+   "Videos of the MIPO Dataset for Surgical Workflow Recognition in Orthopaedic Surgery"
+  ]
+ },
+ {
+  "id": "DS143",
+  "key": "misaw",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "MISAW"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn21776936"
+  ],
+  "titles": [
+   "MIcro-Surgical Anastomose Workflow recognition on training sessions (MISAW)"
+  ]
+ },
+ {
+  "id": "DS144",
+  "key": "neurosurgicaltools",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "NeuroSurgicalTools"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/tmi.2015.2450831"
+  ],
+  "titles": [
+   "Detecting Surgical Tools by Modelling Local Appearance and Global Shape"
+  ]
+ },
+ {
+  "id": "DS145",
+  "key": "orenasavefocus",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "ORena SAVE FOCUS"
+  ],
+  "urls": [
+   "https://zenodo.org/records/19848528"
+  ],
+  "titles": [
+   "ORena-FOCUS: Foreign Object Contextual Understanding for Safe Surgical AI Challenge"
+  ]
+ },
+ {
+  "id": "DS146",
+  "key": "p2ilf",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "P2ILF"
+  ],
+  "urls": [
+   "https://p2ilf.grand-challenge.org/"
+  ],
+  "titles": [
+   "Preoperative to Intraoperative Laparoscopy Fusion"
+  ]
+ },
+ {
+  "id": "DS147",
+  "key": "phakir",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "PhaKIR"
+  ],
+  "urls": [
+   "https://zenodo.org/records/15740620"
+  ],
+  "titles": [
+   "PhaKIR Dataset - Surgical Procedure Phase, Keypoint, and Instrument Recognition"
+  ]
+ }
+]

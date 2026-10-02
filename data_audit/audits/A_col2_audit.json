@@ -1,0 +1,1074 @@
+[
+ {
+  "id": "DS092",
+  "name": "IBD Crowdsourced Endoscopy Annotation (Digital Endoscopy DREAM)",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://www.synapse.org/#!Synapse:syn18599653 (root wiki, read via https://repo-prod.prod.sagebase.org/repo/v1/entity/syn18599653/wiki)",
+   "https://repo-prod.prod.sagebase.org/repo/v1/entity/children (parentId=syn18599653): only child is \"Leaderboard Table\" syn20836743 (annotator activity table)",
+   "https://repo-prod.prod.sagebase.org/repo/v1/entity/syn18599653/accessRequirement (none)",
+   "WebSearch \"Digital Endoscopy DREAM Challenge\" Crohn's videos Celgene (no public release or challenge data found)"
+  ],
+  "trajectory_unit": "one endoscopy video of one Crohn's patient (planned; no video or annotation has been publicly released)",
+  "n_trajectories": null,
+  "n_trajectories_quote": "Celgene/BMS will be making apporximately 1000 endoscopy videos from Crohn’s patients available to facilitate the Digital Endoscopy DREAM Challenge.",
+  "D1": {
+   "verdict": "UNKNOWN",
+   "quote": "we need to thoroughly and clearly annotate them for specific features. Please pre-register as an annotator below. Once these videos are available you will be able to help by annotating Crohn's related features.",
+   "source": "https://www.synapse.org/#!Synapse:syn18599653 (root wiki, read via https://repo-prod.prod.sagebase.org/repo/v1/entity/syn18599653/wiki)"
+  },
+  "D2": {
+   "verdict": "UNKNOWN",
+   "quote": "Once these videos are available you will be able to help by annotating Crohn's related features.",
+   "source": "https://www.synapse.org/#!Synapse:syn18599653 (root wiki, read via https://repo-prod.prod.sagebase.org/repo/v1/entity/syn18599653/wiki)"
+  },
+  "D3": {
+   "verdict": "UNKNOWN",
+   "quote": "Celgene/BMS will be making apporximately 1000 endoscopy videos from Crohn’s patients available to facilitate the Digital Endoscopy DREAM Challenge.",
+   "source": "https://www.synapse.org/#!Synapse:syn18599653 (root wiki, read via https://repo-prod.prod.sagebase.org/repo/v1/entity/syn18599653/wiki)"
+  },
+  "D4": {
+   "verdict": "UNKNOWN",
+   "quote": "Celgene/BMS will be making apporximately 1000 endoscopy videos from Crohn’s patients available to facilitate the Digital Endoscopy DREAM Challenge.",
+   "source": "https://www.synapse.org/#!Synapse:syn18599653 (root wiki, read via https://repo-prod.prod.sagebase.org/repo/v1/entity/syn18599653/wiki)"
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "Please pre-register as an annotator below.",
+   "source": "https://www.synapse.org/#!Synapse:syn18599653 (root wiki, read via https://repo-prod.prod.sagebase.org/repo/v1/entity/syn18599653/wiki)"
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "Celgene/BMS will be making apporximately 1000 endoscopy videos from Crohn’s patients available to facilitate the Digital Endoscopy DREAM Challenge.",
+   "source": "https://www.synapse.org/#!Synapse:syn18599653 (root wiki, read via https://repo-prod.prod.sagebase.org/repo/v1/entity/syn18599653/wiki)"
+  },
+  "D7": {
+   "verdict": "UNKNOWN",
+   "quote": "we need to thoroughly and clearly annotate them for specific features.",
+   "source": "https://www.synapse.org/#!Synapse:syn18599653 (root wiki, read via https://repo-prod.prod.sagebase.org/repo/v1/entity/syn18599653/wiki)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 (UNKNOWN) and no variable meets D7 (UNKNOWN): no data or annotation has been released."
+  },
+  "ge200_trajectories": "UNKNOWN",
+  "counts": {
+   "collection_mode": "not documented (no release)",
+   "site": "not documented",
+   "device": "not documented",
+   "operator": "not documented",
+   "annotation_type": "planned crowdsourced annotation of Crohn's disease features; none released"
+  },
+  "registration_required": "unknown",
+  "notes": "Synapse project (2019) is only a call for annotator pre-registration (Synapse account needed to join); the only child entity is an annotator leaderboard table. No videos, annotations, licence or size are published, and no public DREAM challenge release was found. Every D-criterion is therefore UNKNOWN (not PASS). The ~1000 figure is a planned count, not a released one. D1/D2: the only annotation described is of disease features; no action variable or outcome is described."
+ },
+ {
+  "id": "DS093",
+  "name": "InfoColon",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://www.synapse.org/#!Synapse:syn55251782 (root wiki, read via Synapse REST /entity/syn55251782/wiki)",
+   "https://www.nature.com/articles/s41597-026-07060-2 (Choi et al., Sci Data 13, 748 (2026))",
+   "https://www.nature.com/articles/s41597-026-07060-2/tables/1",
+   "Synapse REST /entity/children for syn69939822 (SNUH_Colonoscopy: 151 folders SNUH_V0001..; each holds SNUH_Vxxxx.mp4, SNUH_Vxxxx_Label.csv, SNUH_Vxxxx_Summary_report.png) and syn68697859 (CNUH_Colonoscopy: 13 folders)",
+   "https://github.com/Choi-Tae-min/InfoColon (README)"
+  ],
+  "trajectory_unit": "one colonoscopy video (MP4) from one hospital examination",
+  "n_trajectories": 164,
+  "n_trajectories_quote": "A total of 110,587 frames (151 videos) were collected from the Healthcare System Gangnam Center at Seoul National University Hospital (SNUH) for health screening purposes, while 9,211 frames (13 videos) were collected from Chungnam National University Hospital (CNUH) for patients with colorectal diseases.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "A CSV file is provided for the colonoscopy videos from each hospital (SNUH and CNUH), labeled by time (seconds) according to the defined classification criteria, into 7 Classes (Informative, Wall, Bubble, Blurry, Bad light, Tool, and Obstacles).",
+   "source": "https://www.nature.com/articles/s41597-026-07060-2 (Choi et al., Sci Data 13, 748 (2026))"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "A CSV file is provided for the colonoscopy videos from each hospital (SNUH and CNUH), labeled by time (seconds) according to the defined classification criteria, into 7 Classes (Informative, Wall, Bubble, Blurry, Bad light, Tool, and Obstacles).",
+   "source": "https://www.nature.com/articles/s41597-026-07060-2 (Choi et al., Sci Data 13, 748 (2026))"
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "Colonoscopy video data: The colonoscopy videos for each hospital (SNUH and CNUH) are provided within the {Hospital}_V{vid num} folder under their respective hospital directories. [...] SNUH videos have a frame rate of approximately 23 frames per second (fps) and a resolution of either 488 × 416 pixels or 528 × 416 pixels.",
+   "source": "https://www.nature.com/articles/s41597-026-07060-2 (Choi et al., Sci Data 13, 748 (2026))"
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "A total of 110,587 frames (151 videos) were collected from the Healthcare System Gangnam Center at Seoul National University Hospital (SNUH) for health screening purposes, while 9,211 frames (13 videos) were collected from Chungnam National University Hospital (CNUH) for patients with colorectal diseases. [...] Both hospitals used an Olympus EVIS CF-HQ290 colonoscope.",
+   "source": "https://www.nature.com/articles/s41597-026-07060-2 (Choi et al., Sci Data 13, 748 (2026))"
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "The dataset is released for non-commercial research use under the Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0) license.",
+   "source": "https://www.synapse.org/#!Synapse:syn55251782 (root wiki, read via Synapse REST /entity/syn55251782/wiki)"
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "SNUH | Colonoscopy Videos (Health Checkup Patients) | Video | 110,587 Frames (151 videos) | 81.9GB [...] CNUH | Colonoscopy Videos (Patients) | Video | 9,211 Frames (13 videos) | 10.7GB",
+   "source": "https://www.nature.com/articles/s41597-026-07060-2/tables/1"
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "Frames were sampled at a rate of one per second from the colonoscopy videos (SNUH: 23 fps, CNUH: 60 fps) and labeled through cross-validation by two endoscopy specialists.",
+   "source": "https://www.nature.com/articles/s41597-026-07060-2 (Choi et al., Sci Data 13, 748 (2026))"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4: site levels SNUH 151 / CNUH 13 (only one level >=20); device is a single model for both hospitals; operator not recorded."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "clinician-performed routine colonoscopy, retrospective (all 164)",
+   "site": "SNUH 151, CNUH 13 (per-video folder prefix)",
+   "device": "Olympus EVIS CF-HQ290 at both hospitals (164); calibration video + camera parameters per hospital",
+   "operator": "not recorded",
+   "annotation_type": "per-second 7-class informative/uninformative frame labels (human, two endoscopy specialists); per-video summary report; re-labelled frames from EndoMapper/Hyper-Kvasir/Nerthus/LDPolyps/SeamXSim"
+  },
+  "registration_required": "yes",
+  "notes": "Registration: files are on Synapse; anonymous REST calls return 'Anonymous users have only READ access permission', so a Synapse account is needed to download (no access requirement / DUA is attached). D1/D2: release contents are frame-quality labels only; no action variable or outcome; also 164 < 200. D3: per-video MP4 files are continuous recordings; the paper does not state explicitly that each is the full procedure (mean ~732 s labelled per SNUH video = 110,587 s / 151). D5: dataset licence on Synapse is CC BY-NC 4.0 (the Sci Data article itself is CC BY-NC-ND, which applies to the article, not the data). D6: hospital videos 92.6 GB plus ~5.9 GB of public-dataset label subsets per Table 1. D7: 'Tool', 'Bubble', 'Blurry' etc. are human frame labels varying within videos."
+ },
+ {
+  "id": "DS094",
+  "name": "LDPolypVideo",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://github.com/dashishi/LDPolypVideo-Benchmark (README.md)",
+   "https://miccai2021.org/openaccess/paperlinks/2021/09/01/268-Paper1167.html (MICCAI 2021 open-access page: abstract, reviews, author rebuttal)",
+   "https://github.com/openmedlab/Awesome-Medical-Dataset/blob/main/resources/LDPolypVideo.md (secondary)",
+   "https://doi.org/10.1007/978-3-030-87240-3_37 (Springer chapter; full text not reachable: JS/bot challenge and login redirect)",
+   "https://api.github.com/repos/dashishi/LDPolypVideo-Benchmark (license: null)"
+  ],
+  "trajectory_unit": "one colonoscopy \"video\" folder of frames (160 annotated + 103 unannotated); mapping of videos to procedures not documented",
+  "n_trajectories": 263,
+  "n_trajectories_quote": "Our database contains 160 colonoscopy videos and 40,266 frames in total with polyp annotations [...] Besides, we also provide 103 videos, including 861,400 frames without full annotations. Each video has a label indicating whether it contains polyps.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "It consists of 160 videos with 40,266 frames, nearly four times the size of the largest existing fully-annotated dataset. [...] Under the `Annotations` folder, the `.txt` files contain the bounding box coordinates for polyps.",
+   "source": "https://github.com/dashishi/LDPolypVideo-Benchmark (README.md) ; https://github.com/openmedlab/Awesome-Medical-Dataset/blob/main/resources/LDPolypVideo.md (secondary)"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "Each video has a label indicating whether it contains polyps. [...] Under the `Annotations` folder, the `.txt` files contain the bounding box coordinates for polyps.",
+   "source": "https://github.com/dashishi/LDPolypVideo-Benchmark (README.md) ; https://github.com/openmedlab/Awesome-Medical-Dataset/blob/main/resources/LDPolypVideo.md (secondary)"
+  },
+  "D3": {
+   "verdict": "UNKNOWN",
+   "quote": "Our database contains 160 colonoscopy videos and 40,266 frames in total with polyp annotations [...] Besides, we also provide 103 videos, including 861,400 frames without full annotations.",
+   "source": "https://github.com/dashishi/LDPolypVideo-Benchmark (README.md)"
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "The official release consists of four separate compressed files that need to be downloaded individually: `TrainValid.rar`, `Test.rar`, `videos with polyps.zip`, and `videos without polyps.zip`. [...] In the subsection of data acquisition, the authors specified ‘Olumpus-290 camera’.",
+   "source": "https://github.com/openmedlab/Awesome-Medical-Dataset/blob/main/resources/LDPolypVideo.md (secondary) ; https://miccai2021.org/openaccess/paperlinks/2021/09/01/268-Paper1167.html (MICCAI 2021 open-access page: abstract, reviews, author rebuttal)"
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "Click here to download the whole dataset in Baidu Cloud",
+   "source": "https://github.com/dashishi/LDPolypVideo-Benchmark (README.md)"
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "40,266 labeled, 861,400 unlabeled",
+   "source": "https://github.com/openmedlab/Awesome-Medical-Dataset/blob/main/resources/LDPolypVideo.md (secondary)"
+  },
+  "D7": {
+   "verdict": "UNKNOWN",
+   "quote": "While labelling, an expert first looks through the entire video and labels several continuous frames for each polyp. Then the polyps in the successive frames are labeled automatically by our annotation tool. If it fails to precisely track the polyp regions due to large change after several frames, the experts will re-label the polyp. For the 160 videos (40266 frames in total), about 5% frames are manually labeled at the first step and 10% frames are the manually labeled when the tracker fails.",
+   "source": "https://miccai2021.org/openaccess/paperlinks/2021/09/01/268-Paper1167.html (MICCAI 2021 open-access page: abstract, reviews, author rebuttal)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 (no per-video site/device/operator metadata in the documented release); D7 also not established."
+  },
+  "ge200_trajectories": "UNKNOWN",
+  "counts": {
+   "collection_mode": "clinician-performed colonoscopy (not stated per video)",
+   "site": "not recorded per video (authors from USTC and First Affiliated Hospital of Anhui Medical University; acquisition site not stated in accessible sources)",
+   "device": "not recorded per video; reviewer quotes the paper's 'Olumpus-290 camera' (single device)",
+   "operator": "not recorded",
+   "annotation_type": "per-frame polyp bounding boxes (tracker-propagated, expert-corrected) for 160 videos; video-level polyp yes/no label for 103 videos"
+  },
+  "registration_required": "no",
+  "notes": "Public Google Drive / Baidu links; no licence file or statement (GitHub licence null) -> D5 UNKNOWN. n_trajectories=263 is the count of 'videos' (upper bound on procedures); whether videos are clips of the same procedure is not documented, so ge200 is UNKNOWN; the annotated subset alone is 160 (<200). D3: the 160 annotated videos average ~252 frames each (sampling/clip status undocumented in accessible text; MICCAI chapter body not reachable); contiguity/full-procedure status of the 103 unannotated videos is not documented. D7: ~85% of box labels are tracker-propagated; full human verification is not stated, so human-annotation status is UNKNOWN. D4 device quote is from a MICCAI reviewer quoting the paper (secondary)."
+ },
+ {
+  "id": "DS095",
+  "name": "POCACO",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://zenodo.org/records/14444297 (record metadata via https://zenodo.org/api/records/14444297)",
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC11742239/ (Papachrysos et al., DEN Open 2025)"
+  ],
+  "trajectory_unit": "one short clip extracted from one colonoscopy recording (clips; procedure-level count not documented)",
+  "n_trajectories": 54,
+  "n_trajectories_quote": "54 Clips of varying length",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "This dataset contains a selection of clips extracted from Colonoscopy recordings, some of which contain Polyps, others are confirmed to only contain healthy mucosa.",
+   "source": "https://zenodo.org/records/14444297 (record metadata via https://zenodo.org/api/records/14444297)"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "28 Annotated polyps 83746 Total frames 72069 Negative frames 11677 Positive frames",
+   "source": "https://zenodo.org/records/14444297 (record metadata via https://zenodo.org/api/records/14444297)"
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "This dataset contains a selection of clips extracted from Colonoscopy recordings [...] Short video clips (20–45 s) presenting normal mucosa or polyps were randomly selected.",
+   "source": "https://zenodo.org/records/14444297 (record metadata via https://zenodo.org/api/records/14444297) ; https://pmc.ncbi.nlm.nih.gov/articles/PMC11742239/ (Papachrysos et al., DEN Open 2025)"
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "Videos from 300 colonoscopies conducted at Oslo University Hospital were analyzed.",
+   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11742239/ (Papachrysos et al., DEN Open 2025)"
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "Access: To access the dataset as a researcher or medical professional, please contact: [e-mail address removed] [...] cc-by-nc-nd-4.0",
+   "source": "https://zenodo.org/records/14444297 (record metadata via https://zenodo.org/api/records/14444297)"
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "83746 Total frames",
+   "source": "https://zenodo.org/records/14444297 (record metadata via https://zenodo.org/api/records/14444297)"
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "Bounding box in COCO format for the current finding in frame $F [...] Finally, an experienced gastroenterologist reviewed the video clips, to assess whether all exclusion criteria were considered, and if the polyps were correctly labeled with bounding boxes.",
+   "source": "https://zenodo.org/records/14444297 (record metadata via https://zenodo.org/api/records/14444297) ; https://pmc.ncbi.nlm.nih.gov/articles/PMC11742239/ (Papachrysos et al., DEN Open 2025)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 (single site, Oslo University Hospital; no per-clip device/operator)."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "clinician-performed colonoscopy (all)",
+   "site": "Oslo University Hospital only",
+   "device": "not recorded per clip",
+   "operator": "not recorded",
+   "annotation_type": "per-frame polyp bounding boxes (COCO) per finding; per-clip positive/negative frame counts"
+  },
+  "registration_required": "yes",
+  "notes": "Zenodo access_right = restricted; files hidden; access by e-mail request to Augere (treated as registration). Licence cc-by-nc-nd-4.0: NoDerivatives forbids sharing adapted material, so release of derived features is not clearly permitted -> D5 UNKNOWN (leaning FAIL; investigator/legal call). Clips are 20-45 s, so D3 FAIL; 54 is an upper bound on procedures. Byte size not shown (restricted record) -> D6 UNKNOWN."
+ },
+ {
+  "id": "DS096",
+  "name": "Polyp-Size",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://springernature.figshare.com/articles/dataset/Polyp-Size_A_Precisely_Annotated_Endoscopic_Dataset_for_AI-Assisted_Polyp_Sizing/28030115 (via https://api.figshare.com/v2/articles/28030115)",
+   "https://www.nature.com/articles/s41597-025-05251-x"
+  ],
+  "trajectory_unit": "one standardized white-light polyp video segment (~10 s); procedure-level count <=42 (64 recordings from 47 patients before selection)",
+  "n_trajectories": 42,
+  "n_trajectories_quote": "Taking the intersection of these two independent assessments, the final dataset consisted of 42 videos meeting all these criteria, selected by both reviewers.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "Metadata file: A CSV file named Polyp_Size_Labels.csv containing detailed annotations for each video.",
+   "source": "https://www.nature.com/articles/s41597-025-05251-x"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "Polyp size : Measured using calibrated vernier calipers after resection, recorded in submillimeters.",
+   "source": "https://www.nature.com/articles/s41597-025-05251-x"
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "These recordings underwent a comprehensive standardization process: endoscopists extracted video segments in standard white-light endoscopy mode (excluding narrow-band imaging and near focus modes). [...] The standardized videos had a cumulative duration of 410 seconds, averaging 9.76 seconds per video, with a frame rate of 30 frames per second.",
+   "source": "https://www.nature.com/articles/s41597-025-05251-x"
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "Second, data collection was limited to a single center, which may constrain the dataset’s diversity and generalizability. [...] The procedures were performed under intravenous anesthesia using an Olympus endoscopy system (CV-290 main unit paired with CF-HQ290I/CF-H290I colonoscopes; Olympus Medical Corporation, Tokyo, Japan).",
+   "source": "https://www.nature.com/articles/s41597-025-05251-x"
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "LICENSE: CC BY",
+   "source": "https://springernature.figshare.com/articles/dataset/Polyp-Size_A_Precisely_Annotated_Endoscopic_Dataset_for_AI-Assisted_Polyp_Sizing/28030115 (via https://api.figshare.com/v2/articles/28030115)"
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "Polyp_Size_Dataset.rar 362536394",
+   "source": "https://springernature.figshare.com/articles/dataset/Polyp-Size_A_Precisely_Annotated_Endoscopic_Dataset_for_AI-Assisted_Polyp_Sizing/28030115 (via https://api.figshare.com/v2/articles/28030115)"
+  },
+  "D7": {
+   "verdict": "FAIL",
+   "quote": "Metadata file: A CSV file named Polyp_Size_Labels.csv containing detailed annotations for each video.",
+   "source": "https://www.nature.com/articles/s41597-025-05251-x"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 (single center; one Olympus CV-290 system; 42 videos) and no frame-level content variable meets D7."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "clinician-performed colonoscopy (all)",
+   "site": "Renji Hospital, Shanghai only",
+   "device": "Olympus CV-290 with CF-HQ290I/CF-H290I colonoscopes (per-video equipment field in CSV)",
+   "operator": "not recorded as a field (Paris class assigned by the operating endoscopist)",
+   "annotation_type": "per-video metadata: caliper-measured polyp size, Paris class, location, histology, demographics, equipment"
+  },
+  "registration_required": "no",
+  "notes": "D2: the caliper size is a non-video measurement taken after resection, but it is a lesion attribute that no recorded action can change, and no action variable is recorded; treated as FAIL (flag for lead if a lesion attribute should count). D5: figshare licence 'CC BY' (CC BY 4.0); the Sci Data article is CC BY-NC-ND (article only). D6: 0.36 GB. Clips ~9.76 s -> D3 FAIL."
+ },
+ {
+  "id": "DS097",
+  "name": "PolypsSet",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0255809",
+   "https://doi.org/10.7910/DVN/FCBUOR (Harvard Dataverse API /api/datasets/:persistentId/?persistentId=doi:10.7910/DVN/FCBUOR)"
+  ],
+  "trajectory_unit": "one polyp video sequence (adaptively sub-sampled frames) from one of four source collections; procedure-level count not documented",
+  "n_trajectories": 155,
+  "n_trajectories_quote": "Eventually, the dataset contains 155 video sequences (37,899 image frames) with the labeled ground truth of the polyp classes and bounding boxes.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "With the help of three endoscopists, we annotated the polyp classes of all collected video sequences and the bounding boxes of the polyp in every frame.",
+   "source": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0255809"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "However, since we only have video sequences, when the endoscopist could not reach an agreement on the classification results, we simply remove those sequences from the dataset",
+   "source": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0255809"
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "we adopt an adaptive sampling rate to extract the frames from each video sequence based on the camera movement and video lengths to reduce the redundancy and homogenize the representativeness of each polyp. [...] After extracting all frames, we carefully checked the generated dataset and manually removed some frames that contain misleading or unuseful information.",
+   "source": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0255809"
+  },
+  "D4": {
+   "verdict": "UNKNOWN",
+   "quote": "In this study, we have collected all publicly available endoscopic datasets in the research community, as well as collected a new dataset from the University of Kansas Medical Center.",
+   "source": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0255809"
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "LICENSE: CC0 1.0",
+   "source": "https://doi.org/10.7910/DVN/FCBUOR (Harvard Dataverse API /api/datasets/:persistentId/?persistentId=doi:10.7910/DVN/FCBUOR)"
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "PolypsSet.zip 2496270802",
+   "source": "https://doi.org/10.7910/DVN/FCBUOR (Harvard Dataverse API /api/datasets/:persistentId/?persistentId=doi:10.7910/DVN/FCBUOR)"
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "With the help of three endoscopists, we annotated the polyp classes of all collected video sequences and the bounding boxes of the polyp in every frame.",
+   "source": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0255809"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 (per-sequence source/site not documented publicly; zip not inspected)."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "clinician-performed colonoscopy (all sources)",
+   "site": "four source collections before filtering: MICCAI 2017 GIANA (18+20 videos), CVC colon DB (15), GLRC (76), KUMC (80); per-sequence assignment after filtering to 155 not documented",
+   "device": "not recorded per sequence",
+   "operator": "not recorded",
+   "annotation_type": "per-frame polyp bounding boxes + per-sequence polyp class (hyperplastic/adenomatous) by three endoscopists"
+  },
+  "registration_required": "no",
+  "notes": "Dataverse file restricted=False. D3 FAIL: frames are adaptively sub-sampled and manually pruned. D4 UNKNOWN: source collection may be encoded in folder names inside the 2.5 GB zip (not inspected; >50 MB); source collection is also not identical to site/device. D5: Dataverse licence CC0 1.0, but sequences from third-party collections (GIANA, CVC colon DB, GLRC) may carry their own terms. 155 < 200."
+ },
+ {
+  "id": "DS098",
+  "name": "Procedurally Generated Colonoscopy and Laparoscopy Data",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://rdr.ucl.ac.uk/articles/dataset/Procedurally_Generated_Colonoscopy_and_Laparoscopy_Data_For_Improved_Model_Training_Performance/23843904 (via https://api.figshare.com/v2/articles/23843904)",
+   "https://discovery.ucl.ac.uk/id/eprint/10212368/1/dowrick_demi_2023%5B9%5D.pdf (DEMI 2023 author manuscript)"
+  ],
+  "trajectory_unit": "none: synthetic Blender renders with geometry randomized per frame (no trajectories)",
+  "n_trajectories": null,
+  "n_trajectories_quote": "Colonoscopy – 50,000 frames Geometry Nodes parameters, controlling the shape of the colon, and the position, size and distribution of polyps were randomized per frame.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "Procedural generation of data allows for large datasets to be rapidly generated and automatically labelled, while also randomising relevant parameters within the simulation to provide a wide variation in models and textures used in the scene.",
+   "source": "https://discovery.ucl.ac.uk/id/eprint/10212368/1/dowrick_demi_2023%5B9%5D.pdf (DEMI 2023 author manuscript)"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "Procedural generation of data allows for large datasets to be rapidly generated and automatically labelled",
+   "source": "https://discovery.ucl.ac.uk/id/eprint/10212368/1/dowrick_demi_2023%5B9%5D.pdf (DEMI 2023 author manuscript)"
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "Geometry Nodes parameters, controlling the shape of the colon, and the position, size and distribution of polyps were randomized per frame.",
+   "source": "https://discovery.ucl.ac.uk/id/eprint/10212368/1/dowrick_demi_2023%5B9%5D.pdf (DEMI 2023 author manuscript)"
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "All images were rendered using the Cycle raytracing engine, at dimensions of 512x512, with a noise threshold of 0.1 and 256 samples.",
+   "source": "https://discovery.ucl.ac.uk/id/eprint/10212368/1/dowrick_demi_2023%5B9%5D.pdf (DEMI 2023 author manuscript)"
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "LICENSE: CC0",
+   "source": "https://rdr.ucl.ac.uk/articles/dataset/Procedurally_Generated_Colonoscopy_and_Laparoscopy_Data_For_Improved_Model_Training_Performance/23843904 (via https://api.figshare.com/v2/articles/23843904)"
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "blender.zip 64723496 polyps.zip 12413245647 liver.zip 6533900954 examples.zip 16431861",
+   "source": "https://rdr.ucl.ac.uk/articles/dataset/Procedurally_Generated_Colonoscopy_and_Laparoscopy_Data_For_Improved_Model_Training_Performance/23843904 (via https://api.figshare.com/v2/articles/23843904)"
+  },
+  "D7": {
+   "verdict": "FAIL",
+   "quote": "Semantic segmentations (Liver) were acquired by re-rendering the scene with each object assigned a flat colour, with bounding boxes (Polyps) derived from the minimum/maximum extents of the segmentation information.",
+   "source": "https://discovery.ucl.ac.uk/id/eprint/10212368/1/dowrick_demi_2023%5B9%5D.pdf (DEMI 2023 author manuscript)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 (synthetic; no site/device/operator) and no variable meets D7 (renderer-generated labels)."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "programmatic (procedural Blender generation), 100%",
+   "site": "none (synthetic)",
+   "device": "none (synthetic)",
+   "operator": "none",
+   "annotation_type": "automatic renderer labels (segmentation, polyp boxes)"
+  },
+  "registration_required": "no",
+  "notes": "SYNTHETIC, not real medical video (out of scope for both arms under gate §1). Total 19.0 GB (CC0). Frames are independent random renders, so there are no trajectories (ge200 FAIL). D7 FAIL because labels are renderer output, neither human annotation nor sensor ground truth of a real scene."
+ },
+ {
+  "id": "DS099",
+  "name": "REAL-Colon",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://plus.figshare.com/articles/media/REAL-colon_dataset/22202866 (via https://api.figshare.com/v2/articles/22202866)",
+   "/media/user/LaCie/medvideo_gate/DS099/dataset_description.md (downloaded from https://ndownloader.figshare.com/files/39495742)",
+   "/media/user/LaCie/medvideo_gate/DS099/video_info.csv (downloaded from https://ndownloader.figshare.com/files/39495739)",
+   "/media/user/LaCie/medvideo_gate/DS099/lesion_info.csv (downloaded from https://ndownloader.figshare.com/files/39495736)",
+   "https://www.nature.com/articles/s41597-024-03359-0 (Biffi et al., Sci Data 11, 539 (2024))",
+   "https://figshare.com/articles/dataset/Temporal_Segmentation_Annotation_for_the_REAL-Colon_dataset/26472913 (via figshare API)",
+   "https://figshare.com/articles/media/Supplementary_REAL-Colon_A_dataset_for_developing_real-world_AI_2_applications_in_colonoscopy/25315261 (figshare API)",
+   "https://doi.org/10.1016/j.cmpb.2025.108782 (abstract via OpenAlex)"
+  ],
+  "trajectory_unit": "one full colonoscopy recording (SSS-VVV), stored as all frames",
+  "n_trajectories": 60,
+  "n_trajectories_quote": "60 recordings, 15 for each of the 4 centers",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "The REAL (Real-world multi-center Endoscopy Annotated video Library) - colon dataset is composed of 60 recordings of real-world colonoscopies. [...] 60 recordings, 15 for each of the 4 centers",
+   "source": "/media/user/LaCie/medvideo_gate/DS099/dataset_description.md (downloaded from https://ndownloader.figshare.com/files/39495742)"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "Polyp information including histology, size and anatomical site has been recorded.",
+   "source": "/media/user/LaCie/medvideo_gate/DS099/dataset_description.md (downloaded from https://ndownloader.figshare.com/files/39495742)"
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "Each colonoscopy has been recorded in its entirety, from start to finish, at maximum resolution, devoid of any pauses or interruptions.",
+   "source": "https://www.nature.com/articles/s41597-024-03359-0 (Biffi et al., Sci Data 11, 539 (2024))"
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "unique_video_name: name of the video in the format SSS-VVV (site-video) [...] endoscope_brand: Endoscope brand (Fuji or Olympus) [...] 60 recordings, 15 for each of the 4 centers",
+   "source": "/media/user/LaCie/medvideo_gate/DS099/dataset_description.md (downloaded from https://ndownloader.figshare.com/files/39495742)"
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "The dataset has been made available under the Creative Commons Attribution (CC BY) license, facilitating both educational and research applications. [...] LICENSE: CC BY 4.0",
+   "source": "https://www.nature.com/articles/s41597-024-03359-0 (Biffi et al., Sci Data 11, 539 (2024)) ; https://plus.figshare.com/articles/media/REAL-colon_dataset/22202866 (via https://api.figshare.com/v2/articles/22202866)"
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "001-001_frames.tar.gz 9498899727 [...] 004-013_frames.tar.gz 44107836008",
+   "source": "https://plus.figshare.com/articles/media/REAL-colon_dataset/22202866 (via https://api.figshare.com/v2/articles/22202866)"
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "Each removed lesion has been annotated with a bounding box in each video frame where it appeared, by trained image annotation specialists supervised by expert gastroenterologists. [...] The annotations categorize each frame into three colonoscopy phase labels: outside, insertion, and withdrawal.",
+   "source": "https://plus.figshare.com/articles/media/REAL-colon_dataset/22202866 (via https://api.figshare.com/v2/articles/22202866) ; https://figshare.com/articles/dataset/Temporal_Segmentation_Annotation_for_the_REAL-Colon_dataset/26472913 (via figshare API)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4: site 15/15/15/15 (no level >=20); device Olympus 53 / Fujifilm 7 (only one level >=20); operator not recorded."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "clinician-performed colonoscopy in 4 clinical studies/campaigns (all 60)",
+   "site": "study 001 (US, 3 centres pooled) 15, 002 (Rome) 15, 003 (St. Pölten) 15, 004 (Sano Hospital) 15 — per video via SSS prefix",
+   "device": "Olympus 53, Fujifilm 7 (video_info.csv endoscope_brand; Fujifilm only in study 002)",
+   "operator": "not recorded",
+   "annotation_type": "per-frame polyp bounding boxes (351,264); per-frame temporal labels (outside/insertion/withdrawal + 7 colon segments; separate figshare item); per-video age/sex/BBPS/fps/num_frames; per-lesion size/site/histology"
+  },
+  "registration_required": "no",
+  "notes": "Strongest real full-procedure colonoscopy set in this batch but only 60 trajectories. Device counts computed from video_info.csv (per-video file inspected). Licence inconsistency: Sci Data paper and figshare page say CC BY (4.0), while the shipped dataset_description.md says 'License CC BY-NC-SA 4.0'; both permit research use and release of derived features (NC-SA under the stricter reading). D6: sum of the 123 figshare file sizes = 945,730,673,646 bytes (~946 GB) <= 2.02 TB. D1: no action variable (insertion/withdrawal are procedural phases) and 60 < 200. D2: histology/size are lesion attributes of resected polyps, not outcomes of a recorded action (FAIL; flag for lead). Note study 001 pools three US centres under one code, so 'site' = clinical study."
+ },
+ {
+  "id": "DS100",
+  "name": "RealSynCol",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://zenodo.org/records/19705803 (via https://zenodo.org/api/records/19705803)",
+   "https://zenodo.org/records/19705803/files/README.md"
+  ],
+  "trajectory_unit": "one synthetic rendered camera trajectory through one CT-derived colon model",
+  "n_trajectories": 20,
+  "n_trajectories_quote": "The **RealSynCol** dataset features **10 colon models** with two trajectories each, totaling **20 sequences** and **28,130 frames**.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "We propose RealSynCol, a highly realistic synthetic dataset designed to replicate the endoscopic environment.",
+   "source": "https://zenodo.org/records/19705803 (via https://zenodo.org/api/records/19705803)"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "The resulting dataset comprises 28,130 frames, paired with ground truth depth maps, optical flow, surface normals, 3D meshes, and camera trajectories.",
+   "source": "https://zenodo.org/records/19705803 (via https://zenodo.org/api/records/19705803)"
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "Represents pixel movement between the current frame (time *t*) and the following frame (time *t*+1). [...] Each line corresponds to a frame's camera-to-world pose, containing 13 elements:",
+   "source": "https://zenodo.org/records/19705803/files/README.md"
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "Colon geometries extracted from 10 CT scans were imported into a virtual environment that closely mimics intraoperative conditions and rendered with realistic vascular textures.",
+   "source": "https://zenodo.org/records/19705803 (via https://zenodo.org/api/records/19705803)"
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "LICENSE: {'id': 'cc-by-4.0'}",
+   "source": "https://zenodo.org/records/19705803 (via https://zenodo.org/api/records/19705803)"
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "Colon_4_forward.zip 15327832890",
+   "source": "https://zenodo.org/records/19705803 (via https://zenodo.org/api/records/19705803)"
+  },
+  "D7": {
+   "verdict": "FAIL",
+   "quote": "The resulting dataset comprises 28,130 frames, paired with ground truth depth maps, optical flow, surface normals, 3D meshes, and camera trajectories.",
+   "source": "https://zenodo.org/records/19705803 (via https://zenodo.org/api/records/19705803)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 (synthetic; no site/device/operator) and no variable meets D7 (renderer ground truth only)."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "programmatic rendering (forward/backward trajectory per colon), 100%",
+   "site": "none (synthetic)",
+   "device": "none (virtual camera)",
+   "operator": "none",
+   "annotation_type": "renderer ground truth: depth, optical flow, normals, mesh, camera pose"
+  },
+  "registration_required": "no",
+  "notes": "SYNTHETIC, not real medical video (out of scope under gate §1). D3 judged on frame contiguity only (sequences are contiguous). D6: 21 files total 121,978,128,796 bytes (~122 GB). D7 FAIL: renderer ground truth is neither human annotation nor sensor ground truth of a real scene."
+ },
+ {
+  "id": "DS101",
+  "name": "Renji ESD video dataset (esophagus + colorectal neoplastic lesions)",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://springernature.figshare.com/articles/dataset/Renji_endoscopic_submucosal_dissection_video_data_set_for_Esophagus/28777862 (via figshare API)",
+   "https://springernature.figshare.com/articles/dataset/Renji_endoscopic_submucosal_dissection_video_data_set_for_colorectal_neoplastic_lesions/28737686 (via figshare API)",
+   "https://www.nature.com/articles/s41597-025-06252-6 (esophageal ESD, Sci Data 12, 2004 (2025))",
+   "https://www.nature.com/articles/s41597-025-05718-x (colorectal ESD, Sci Data 12, 1366 (2025))",
+   "/media/user/LaCie/medvideo_gate/DS101/Clinical_information_esophagus.xls (downloaded from https://ndownloader.figshare.com/files/57205328; header row read via LibreOffice CSV conversion)"
+  ],
+  "trajectory_unit": "one complete ESD procedure recording (one rar per case for esophagus; single rar for colorectal)",
+  "n_trajectories": 55,
+  "n_trajectories_quote": "comprising 25 procedural recordings with 141,909 phase-specific classifications jointly annotated by a specialized endoscopy team [...] which includes 30 procedural recordings with 130,298 phase-specific annotations collaboratively labeled by a team of three specialists in endoscopy.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "For each procedural phase identified within individual recordings, text-based annotations document the precise starting and terminal frames. [...] which includes 30 procedural recordings with 130,298 phase-specific annotations",
+   "source": "https://www.nature.com/articles/s41597-025-06252-6 (esophageal ESD, Sci Data 12, 2004 (2025)) ; https://springernature.figshare.com/articles/dataset/Renji_endoscopic_submucosal_dissection_video_data_set_for_colorectal_neoplastic_lesions/28737686 (via figshare API)"
+  },
+  "D2": {
+   "verdict": "PASS",
+   "quote": "The postoperative pathological assessment included specimen Size, tumor Size, invasion depth, presence of ulceration, presence of lymphovascular invasion, horizontal and vertical resection margin status (positive or negative), histological tumor type, and molecular markers. [...] Video Number,Gender,Age,Endoscopic Morphology,ME-NBI Classification ( (Inoue Classification)),Specimen Size (mm*mm),Tumor Size (mm*mm),Invasion Depth,Ulceration,Lymphovascular Invasion,Horizontal Margin,Vertical Margin",
+   "source": "https://www.nature.com/articles/s41597-025-06252-6 (esophageal ESD, Sci Data 12, 2004 (2025)) ; /media/user/LaCie/medvideo_gate/DS101/Clinical_information_esophagus.xls (downloaded from https://ndownloader.figshare.com/files/57205328; header row read via LibreOffice CSV conversion)"
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "Video collection: 25 complete operative recordings of esophageal ESD were systematically collected and processed [...] The collection encompasses 30 individual procedure videos with accompanying phase classification labels",
+   "source": "https://www.nature.com/articles/s41597-025-06252-6 (esophageal ESD, Sci Data 12, 2004 (2025)) ; https://www.nature.com/articles/s41597-025-05718-x (colorectal ESD, Sci Data 12, 1366 (2025))"
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "all procedures were performed by a single highly experienced senior endoscopist, Dr. Xiaobo Li [...] A primary constraint of our dataset involves its single-institution origin, which restricts the diversity of acquisition parameters due to standardized equipment configurations including specific endoscope models and illumination systems.",
+   "source": "https://www.nature.com/articles/s41597-025-06252-6 (esophageal ESD, Sci Data 12, 2004 (2025)) ; https://www.nature.com/articles/s41597-025-05718-x (colorectal ESD, Sci Data 12, 1366 (2025))"
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "LICENSE: CC0",
+   "source": "https://springernature.figshare.com/articles/dataset/Renji_endoscopic_submucosal_dissection_video_data_set_for_Esophagus/28777862 (via figshare API) ; https://springernature.figshare.com/articles/dataset/Renji_endoscopic_submucosal_dissection_video_data_set_for_colorectal_neoplastic_lesions/28737686 (via figshare API)"
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "21.rar 17006128306 [...] Renji ESD for CNLs.rar 201979357525",
+   "source": "https://springernature.figshare.com/articles/dataset/Renji_endoscopic_submucosal_dissection_video_data_set_for_Esophagus/28777862 (via figshare API) ; https://springernature.figshare.com/articles/dataset/Renji_endoscopic_submucosal_dissection_video_data_set_for_colorectal_neoplastic_lesions/28737686 (via figshare API)"
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "Given our extensive video collection, recordings were downsampled to 1 fps, extracting the initial frame from each second for annotation purposes. Every extracted frame was assigned exclusively to one of the 8 procedural phases based on identification of the starting and ending frames for each respective phase.",
+   "source": "https://www.nature.com/articles/s41597-025-06252-6 (esophageal ESD, Sci Data 12, 2004 (2025))"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4: single site (Renji Hospital), single operator (Dr. Xiaobo Li), single endoscope platform (Olympus CV-260/290)."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "clinician-performed ESD (all 55)",
+   "site": "Renji Hospital only (55)",
+   "device": "Olympus CV-260/290 + IMH-200 (55)",
+   "operator": "single endoscopist (55)",
+   "annotation_type": "time-stamped procedural phase labels (8 phases, start/end frames, 1-fps labelling, human); esophageal per-case clinical/pathology table incl. horizontal/vertical margin status"
+  },
+  "registration_required": "no",
+  "notes": "Two figshare items, both CC0: esophagus 25 cases (212.2 GB) and colorectal 30 cases (202.0 GB); total ~414 GB. D1: phase labels (marking, injection, incision, dissection, vessel treatment, clip, ...) are human, time-stamped, clinician-chosen procedural steps and could serve as an action variable, but 55 < 200 -> FAIL. D2 PASS rests on the esophageal subset: per-case pathology resection-margin status (Horizontal Margin / Vertical Margin columns verified in the downloaded 32 KB xls); the colorectal subset documents no clinical table. D3: 'complete operative recordings', but non-procedural footage was removed in Adobe Premiere ('All video material underwent comprehensive editing using Adobe Premiere to eliminate non-relevant imagery.'). Sci Data articles are CC BY-NC-ND (articles only); data are CC0."
+ },
+ {
+  "id": "DS102",
+  "name": "RT-GAN colonoscopy temporal dataset",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://zenodo.org/records/15460791 (via Zenodo API)",
+   "https://arxiv.org/abs/2310.00868 (PDF)",
+   "https://github.com/nadeemlab/CEP (README.md)"
+  ],
+  "trajectory_unit": "OC video of one patient, released only as sets of 3 sequential frames (triplets)",
+  "n_trajectories": 10,
+  "n_trajectories_quote": "The OC and VC dataset was created from 10 patients at Stony Brook University Hospital that had VC procedures followed by OC procedures.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "The videos for both the VC and OC datasets were split into 300 sets of 3 sequential frames.",
+   "source": "https://arxiv.org/abs/2310.00868 (PDF)"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "In total, training, validation and testing datasets are composed of 1500, 900 and 600 frame triplets respectively.",
+   "source": "https://arxiv.org/abs/2310.00868 (PDF)"
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "The videos for both the VC and OC datasets were split into 300 sets of 3 sequential frames.",
+   "source": "https://arxiv.org/abs/2310.00868 (PDF)"
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "The OC and VC dataset was created from 10 patients at Stony Brook University Hospital that had VC procedures followed by OC procedures.",
+   "source": "https://arxiv.org/abs/2310.00868 (PDF)"
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "LICENSE: {'id': 'cc-by-4.0'}",
+   "source": "https://zenodo.org/records/15460791 (via Zenodo API)"
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "rt_gan_models.zip 93917098 rt_gan_folds.zip 618187935",
+   "source": "https://zenodo.org/records/15460791 (via Zenodo API)"
+  },
+  "D7": {
+   "verdict": "UNKNOWN",
+   "quote": "Haustral fold segmentation data is generated in a similar manner to Mathew et al. [9].",
+   "source": "https://arxiv.org/abs/2310.00868 (PDF)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 (single hospital, 10 patients, no per-trajectory device/operator); D7 not established."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "clinician-performed OC (real) + programmatic VC fly-through (synthetic)",
+   "site": "Stony Brook University Hospital only",
+   "device": "not recorded",
+   "operator": "not recorded",
+   "annotation_type": "generated haustral-fold segmentation data (provenance: \"generated in a similar manner to\" FoldIt); no documented human frame annotation of real OC frames"
+  },
+  "registration_required": "no",
+  "notes": "Zenodo record (CC BY 4.0, 0.71 GB) holds frame-triplet folds + models; the CEP code repository is 'Apache 2.0 with Commons Clause' (code only). D7 UNKNOWN: fold labels are described as 'generated', not human-annotated; not verified further. 10 patients << 200."
+ },
+ {
+  "id": "DS103",
+  "name": "SegCol (EndoVis 2024)",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://www.synapse.org/#!Synapse:syn54124209 (root wiki 626563, via Synapse REST)",
+   "https://www.synapse.org/#!Synapse:syn54124209/wiki/628031 (Data page, via Synapse REST)",
+   "https://www.synapse.org/#!Synapse:syn54124209/wiki/628028 (Rules & Policies, via Synapse REST)",
+   "Synapse REST /entity/children (syn54124209): train.zip syn59491663, valid.zip syn59491665, unlabelled_challenge.zip syn59492496, dataset syn59491650; sizes not visible anonymously"
+  ],
+  "trajectory_unit": "batch of 40 consecutive frames sampled at 10-12 FPS from EndoMapper colonoscopy videos (number of source videos not documented)",
+  "n_trajectories": null,
+  "n_trajectories_quote": "The data consists of images sampled from different real colonoscopy videos ([EndoMapper](https://www.synapse.org/#!Synapse:syn52137895) dataset). Images are sampled as batches of 40 consecutive frames in the range 10-12 FPS.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "Images are labelled with pixel-level masks of 3 instrument classes (captivator, balloon, forceps) and 1 class representing the edges of colon folds.",
+   "source": "https://www.synapse.org/#!Synapse:syn54124209/wiki/628031 (Data page, via Synapse REST)"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "Images are labelled with pixel-level masks of 3 instrument classes (captivator, balloon, forceps) and 1 class representing the edges of colon folds.",
+   "source": "https://www.synapse.org/#!Synapse:syn54124209/wiki/628031 (Data page, via Synapse REST)"
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "Images are sampled as batches of 40 consecutive frames in the range 10-12 FPS. [...] The total number of images used for the challenge is 8440 (training + validation + unlabelled + test).",
+   "source": "https://www.synapse.org/#!Synapse:syn54124209/wiki/628031 (Data page, via Synapse REST)"
+  },
+  "D4": {
+   "verdict": "UNKNOWN",
+   "quote": "The data consists of images sampled from different real colonoscopy videos",
+   "source": "https://www.synapse.org/#!Synapse:syn54124209/wiki/628031 (Data page, via Synapse REST)"
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "You need to be a validated Synapse user and register to the challenge to access the data. [...] Participating teams are not allowed to share the challenge data.",
+   "source": "https://www.synapse.org/#!Synapse:syn54124209/wiki/628031 (Data page, via Synapse REST) ; https://www.synapse.org/#!Synapse:syn54124209/wiki/628028 (Rules & Policies, via Synapse REST)"
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "The total number of images used for the challenge is 8440 (training + validation + unlabelled + test).",
+   "source": "https://www.synapse.org/#!Synapse:syn54124209/wiki/628031 (Data page, via Synapse REST)"
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "Images are labelled with pixel-level masks of 3 instrument classes (captivator, balloon, forceps) and 1 class representing the edges of colon folds. [...] This involved a team of 5 annotators over 3 months.",
+   "source": "https://www.synapse.org/#!Synapse:syn54124209/wiki/628031 (Data page, via Synapse REST)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 (no per-batch site/device/operator documented; UNKNOWN)."
+  },
+  "ge200_trajectories": "UNKNOWN",
+  "counts": {
+   "collection_mode": "clinician-performed colonoscopy (EndoMapper source)",
+   "site": "not documented per batch",
+   "device": "not documented per batch",
+   "operator": "not documented",
+   "annotation_type": "pixel masks: fold edges + 3 instrument classes (human, iMerit annotators, UCL review); 2000 train + 560 valid labelled frames, 5320 unlabelled, 560 test"
+  },
+  "registration_required": "yes",
+  "notes": "Access needs a validated Synapse account, challenge registration and a signed EndoVis rules document sent to the organisers. No licence stated; data-sharing prohibited for participants -> D5 UNKNOWN (release of derived features not addressed). D3 FAIL: 40-frame batches, not full recordings. D4 UNKNOWN: per-batch source-video IDs may exist in the registration-gated files (not inspected). Underlying EndoMapper videos are a separate dataset with its own access process; EndoMapper is not part of this entry."
+ },
+ {
+  "id": "DS104",
+  "name": "SimCol / SimCol-to-3D 2022 / SimCol3D",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://rdr.ucl.ac.uk/articles/dataset/Simcol3D_-_3D_Reconstruction_during_Colonoscopy_Challenge_Dataset/24077763 (via figshare API)",
+   "https://rdr.ucl.ac.uk/articles/dataset/Simcol3D_-_3D_Reconstruction_during_Colonoscopy_Challenge_Dataset/24077763 (README.txt)",
+   "https://github.com/anitarau/simcol (README.md)",
+   "https://www.synapse.org/#!Synapse:syn28548633/wiki/617130 (Dataset Description, via Synapse REST)",
+   "https://www.synapse.org/#!Synapse:syn28548633/wiki/617134 (Participation and Publication Policies)",
+   "https://doi.org/10.1016/j.media.2024.103195 and https://doi.org/10.1109/tmrb.2023.3320267 (listed papers; not read in full)"
+  ],
+  "trajectory_unit": "one synthetic camera trajectory (601 or 1201 rendered frames) through one CT-derived colon",
+  "n_trajectories": 33,
+  "n_trajectories_quote": "Each subfolder \"Frames_xx\" consists of 601 or 1201 RGB images and depth maps. [README tree: SyntheticColon_I Frames_S1..S15, SyntheticColon_II Frames_B1..B15, SyntheticColon_III Frames_O1..O3]",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "The synthetic data includes three different anatomies derived from real human CT scans. Each anatomy provides several randomly generated trajectories with RGB renderings, camera intrinsics, ground truth depths, and ground truth poses.",
+   "source": "https://rdr.ucl.ac.uk/articles/dataset/Simcol3D_-_3D_Reconstruction_during_Colonoscopy_Challenge_Dataset/24077763 (via figshare API)"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "Each anatomy provides several randomly generated trajectories with RGB renderings, camera intrinsics, ground truth depths, and ground truth poses.",
+   "source": "https://rdr.ucl.ac.uk/articles/dataset/Simcol3D_-_3D_Reconstruction_during_Colonoscopy_Challenge_Dataset/24077763 (via figshare API)"
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "Each subfolder \"Frames_xx\" consists of 601 or 1201 RGB images and depth maps. [...] Each text file corresponds to one folder and can be matched based on the trajectory index (1-15).",
+   "source": "https://rdr.ucl.ac.uk/articles/dataset/Simcol3D_-_3D_Reconstruction_during_Colonoscopy_Challenge_Dataset/24077763 (README.txt)"
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "This data release encompasses the synthetic portion of the challenge.",
+   "source": "https://rdr.ucl.ac.uk/articles/dataset/Simcol3D_-_3D_Reconstruction_during_Colonoscopy_Challenge_Dataset/24077763 (via figshare API)"
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "This dataset and accompanying files are licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).",
+   "source": "https://rdr.ucl.ac.uk/articles/dataset/Simcol3D_-_3D_Reconstruction_during_Colonoscopy_Challenge_Dataset/24077763 (README.txt)"
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "SyntheticColon_I.zip 5974224121 [...] SyntheticColon_II.zip 4811491776 [...] SyntheticColon_III.zip 606640377",
+   "source": "https://rdr.ucl.ac.uk/articles/dataset/Simcol3D_-_3D_Reconstruction_during_Colonoscopy_Challenge_Dataset/24077763 (via figshare API)"
+  },
+  "D7": {
+   "verdict": "FAIL",
+   "quote": "Each anatomy provides several randomly generated trajectories with RGB renderings, camera intrinsics, ground truth depths, and ground truth poses.",
+   "source": "https://rdr.ucl.ac.uk/articles/dataset/Simcol3D_-_3D_Reconstruction_during_Colonoscopy_Challenge_Dataset/24077763 (via figshare API)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 (synthetic; no site/device/operator) and no variable meets D7 (renderer ground truth)."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "programmatic (randomly generated virtual-camera trajectories), 100%",
+   "site": "none (synthetic; 3 anatomies: 15/15/3 trajectories)",
+   "device": "none (virtual camera)",
+   "operator": "none",
+   "annotation_type": "renderer ground truth depth + camera pose per frame"
+  },
+  "registration_required": "no",
+  "notes": "SYNTHETIC, not real medical video (out of scope under gate §1). GitHub README: 'Access through Synapse is no longer required.' (UCL RDR, 11.39 GB, CC BY-NC-SA 4.0). The challenge's real test sequences came from EndoMapper (Synapse wiki: 'Real Sequences |59 |7|-| 12.July 2022') and are NOT part of this release; EndoMapper has its own access regulation. D3 judged on frame contiguity only. 'Anatomy' is not a D4 factor."
+ },
+ {
+  "id": "DS105",
+  "name": "SUN-SEG",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://github.com/GewelsJI/VPS/blob/main/docs/DATA_DESCRIPTION.md",
+   "https://github.com/GewelsJI/VPS/blob/main/docs/DATA_PREPARATION.md",
+   "http://amed8k.sundatabase.org/ (SUN Colonoscopy Video Database page incl. Terms of use)",
+   "https://doi.org/10.1007/s11633-022-1371-y (listed paper; arXiv 2203.14291 not read in full)"
+  ],
+  "trajectory_unit": "one SUN case (100 polyp cases from 99 patients + 13 non-polyp videos); SUN-SEG further trims them into 1,106 short clips",
+  "n_trajectories": 113,
+  "n_trajectories_quote": "Notably, the origin SUN dataset has 113 colonoscopy videos, including 100 positive cases with 49, 136 polyp frames and 13 negative cases with 109, 554 non-polyp frames.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "We extend the labels with diverse types, i.e., object mask, boundary, scribble, polygon, and visual attribute.",
+   "source": "https://github.com/GewelsJI/VPS/blob/main/docs/DATA_DESCRIPTION.md"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "We also introduce the pathological information from the original [SUN dataset](http://sundatabase.org/), including pathological classification labels, location information, and shape information.",
+   "source": "https://github.com/GewelsJI/VPS/blob/main/docs/DATA_DESCRIPTION.md"
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "We manually trim them into 378 positive and 728 negative short clips, meanwhile maintaining their intrinsic consecutive relationship. [...] The database comprises of still images of videos, which are collected at the Showa University Northern Yokohama Hospital.",
+   "source": "https://github.com/GewelsJI/VPS/blob/main/docs/DATA_DESCRIPTION.md ; http://amed8k.sundatabase.org/ (SUN Colonoscopy Video Database page incl. Terms of use)"
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "The database comprises of still images of videos, which are collected at the Showa University Northern Yokohama Hospital.",
+   "source": "http://amed8k.sundatabase.org/ (SUN Colonoscopy Video Database page incl. Terms of use)"
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "This database is available for only non-commercial use in research or educational purpose. As long as you use the database for these purposes, you can edit or process images and annotations in this database. [...] we could not distribute the video data due to the strict license.",
+   "source": "http://amed8k.sundatabase.org/ (SUN Colonoscopy Video Database page incl. Terms of use) ; https://github.com/GewelsJI/VPS/blob/main/docs/DATA_PREPARATION.md"
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "which will take up 11.5 + 9.7 GB of storage space. [...] which will take up 11.6 + 10.7 + 11.5 + 10.5 GB of storage space.",
+   "source": "https://github.com/GewelsJI/VPS/blob/main/docs/DATA_PREPARATION.md"
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "Every frame in the database was annotated by the expert endoscopists at Showa University. [...] In polyp-existing frames, each polyp is annotated with a segmentation mask as shown above.",
+   "source": "http://amed8k.sundatabase.org/ (SUN Colonoscopy Video Database page incl. Terms of use) ; https://github.com/GewelsJI/VPS/blob/main/docs/DATA_DESCRIPTION.md"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 (single hospital; no per-case device/operator)."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "clinician-performed colonoscopy (all)",
+   "site": "Showa University Northern Yokohama Hospital only",
+   "device": "not recorded per case",
+   "operator": "not recorded",
+   "annotation_type": "per-frame bounding boxes (SUN, expert endoscopists); SUN-SEG masks, edges, scribbles, polygons, attributes; per-polyp pathology/shape/location"
+  },
+  "registration_required": "yes",
+  "notes": "Frames must be requested from the SUN database by e-mail with agreement to its terms (educational e-mail, non-commercial); SUN-SEG annotations are on Google Drive. D3 FAIL: SUN positive cases contain only polyp-bearing frames (not full procedures) and SUN-SEG clips are 3-11 s. D5 UNKNOWN: research use and editing are allowed, but release of derived features is not addressed. D6: ~65.5 GB of SUN frames + annotations. 113 is an upper bound (99 patients)."
+ },
+ {
+  "id": "DS106",
+  "name": "XDCycleGAN Depth Dataset",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://zenodo.org/records/5520029 (via Zenodo API)",
+   "https://github.com/nadeemlab/CEP (README.md)"
+  ],
+  "trajectory_unit": "none: unpaired image sets (TrainA optical-colonoscopy images from HyperKvasir; TrainB depth images from TCIA CT colonography)",
+  "n_trajectories": null,
+  "n_trajectories_quote": "TrainA contains the optical colonoscopy images (OC). TrainB contains the depth images.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "This is the public dataset that is used for training XDCycleGAN, a deep learning model for unpaired image-to-image translation.",
+   "source": "https://zenodo.org/records/5520029 (via Zenodo API)"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "TrainA contains the optical colonoscopy images (OC). TrainB contains the depth images.",
+   "source": "https://zenodo.org/records/5520029 (via Zenodo API)"
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "TrainA contains the optical colonoscopy images (OC). TrainB contains the depth images.",
+   "source": "https://zenodo.org/records/5520029 (via Zenodo API)"
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "The OC data came from the Hyper Kvasir datset",
+   "source": "https://zenodo.org/records/5520029 (via Zenodo API)"
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "LICENSE: {'id': 'cc-by-4.0'}",
+   "source": "https://zenodo.org/records/5520029 (via Zenodo API)"
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "OC_depth.zip 139612071 xdcyclegan_depthModel_public.zip 132116635",
+   "source": "https://zenodo.org/records/5520029 (via Zenodo API)"
+  },
+  "D7": {
+   "verdict": "FAIL",
+   "quote": "The depth data came from the following TCIA dataset: Smith K, Clark K, Bennett W, Nolan T, Kirby J, Wolfsberger M, Moulton J, Vendt B, Freymann J. (2015). Data From CT_COLONOGRAPHY.",
+   "source": "https://zenodo.org/records/5520029 (via Zenodo API)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 and no variable meets D7 (depth images are unpaired renderings from CT, not annotations of the OC frames)."
+  },
+  "ge200_trajectories": "UNKNOWN",
+  "counts": {
+   "collection_mode": "derived image sets (real OC frames + CT-derived renders)",
+   "site": "not recorded",
+   "device": "not recorded",
+   "operator": "not recorded",
+   "annotation_type": "none for OC frames; unpaired depth renders"
+  },
+  "registration_required": "no",
+  "notes": "Image-level training set for unpaired translation; not trajectories. 0.27 GB, CC BY 4.0 (upstream HyperKvasir and TCIA terms also apply). Number of source OC videos not documented -> ge200 UNKNOWN (irrelevant given D3 FAIL)."
+ },
+ {
+  "id": "DS107",
+  "name": "XDCycleGAN VC Dataset",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://zenodo.org/records/5520019 (via Zenodo API)",
+   "https://github.com/nadeemlab/CEP (README.md)"
+  ],
+  "trajectory_unit": "none: unpaired image sets (TrainA optical-colonoscopy images from HyperKvasir; TrainB virtual-colonoscopy renders from TCIA CT colonography)",
+  "n_trajectories": null,
+  "n_trajectories_quote": "TrainA contains the optical colonoscopy images (OC). TrainB contains the virtual colonoscopy (VC) images.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "This is the public dataset that is used for training XDCycleGAN, a deep learning model for unpaired image-to-image translation.",
+   "source": "https://zenodo.org/records/5520019 (via Zenodo API)"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "TrainA contains the optical colonoscopy images (OC). TrainB contains the virtual colonoscopy (VC) images.",
+   "source": "https://zenodo.org/records/5520019 (via Zenodo API)"
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "TrainA contains the optical colonoscopy images (OC). TrainB contains the virtual colonoscopy (VC) images.",
+   "source": "https://zenodo.org/records/5520019 (via Zenodo API)"
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "The OC data came from the Hyper Kvasir datset",
+   "source": "https://zenodo.org/records/5520019 (via Zenodo API)"
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "LICENSE: {'id': 'cc-by-4.0'}",
+   "source": "https://zenodo.org/records/5520019 (via Zenodo API)"
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "OC_VC.zip 144869019 xdcyclegan_vcModel_public.zip 132130130",
+   "source": "https://zenodo.org/records/5520019 (via Zenodo API)"
+  },
+  "D7": {
+   "verdict": "FAIL",
+   "quote": "The VC and fold annotation data came from the following TCIA dataset",
+   "source": "https://zenodo.org/records/5520019 (via Zenodo API)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 and no variable meets D7 (VC images are unpaired CT-derived renders, not annotations of the OC frames)."
+  },
+  "ge200_trajectories": "UNKNOWN",
+  "counts": {
+   "collection_mode": "derived image sets (real OC frames + CT-derived renders)",
+   "site": "not recorded",
+   "device": "not recorded",
+   "operator": "not recorded",
+   "annotation_type": "none for OC frames; unpaired VC renders"
+  },
+  "registration_required": "no",
+  "notes": "Image-level training set for unpaired translation; not trajectories. 0.28 GB, CC BY 4.0 (upstream HyperKvasir and TCIA terms also apply). Number of source OC videos not documented -> ge200 UNKNOWN (irrelevant given D3 FAIL)."
+ },
+ {
+  "id": "DS000",
+  "name": "CathAction",
+  "category": "C-CATH",
+  "sources_consulted": [
+   "https://arxiv.org/abs/2408.13126 (v2 PDF, Huang et al. 2024)",
+   "https://airvlab.github.io/cathaction/",
+   "https://airvlab.github.io/cathaction/docs/introduction/",
+   "https://airvlab.github.io/cathaction/docs/action-understanding/",
+   "https://airvlab.github.io/cathaction/docs/collision-detection/",
+   "https://airvlab.github.io/cathaction/docs/download/",
+   "https://huggingface.co/datasets/airvlab/CathAction (dataset card README.md)",
+   "https://huggingface.co/api/datasets/airvlab/CathAction/tree/main?recursive=true (file listing with sizes; no file downloaded)",
+   "https://github.com/airvlab/cathaction (README, LICENSE = CC BY-NC-SA 4.0 text)",
+   "https://docs.google.com/forms/d/1wFHbMSSRRivsnxPxJzbiyLIpi02H8szzY13BkbkF6fY/viewform (viewed only; not submitted)",
+   "https://research.utwente.nl/en/publications/cathaction-a-benchmark-for-endovascular-intervention-understandin/ (confirms arXiv preprint status only)"
+  ],
+  "trajectory_unit": "one fluoroscopy video (24 FPS) of one catheterisation by a surgeon on a silicone phantom or live pig (video_id in action CSV); whether any videos are clips of the same procedure is not documented",
+  "n_trajectories": 569,
+  "n_trajectories_quote": "There are a total of 569 videos in our dataset.",
+  "D1": {
+   "verdict": "PASS",
+   "quote": "| `video_id` | string | `video_1` | ID of the video where the action segment is located. | [...] | `start_frame` | int | `430` | Start frame of the action. | [...] We utilize a free and open-source video editor [38] to annotate the start and end times of each narrated action. [...] Ten skilled professional surgeons are tasked with cannulating three arteries, namely the left subclavian (LSA), left common carotid (LCCA), and right common carotid (RCCA), using the commercial catheter and guidewire. [...] There are a total of 569 videos in our dataset.",
+   "source": "https://huggingface.co/datasets/airvlab/CathAction (dataset card README.md) ; https://arxiv.org/abs/2408.13126 (v2 PDF, Huang et al. 2024)"
+  },
+  "D2": {
+   "verdict": "UNKNOWN",
+   "quote": "Therefore, for each frame of the fluoroscopy video, we annotate the tip of the catheter (or guidewire) with a bounding box. There are two classes for the bounding boxes: collision (when the instrument collides with the blood vessel) or normal (when there is no collision). [...] - **images/**: Contains images related to collision and normal events. [...] - **train_phantom.txt**: A text file listing paths to training images and labels for the \"phantom\" data source in the collision detection task.",
+   "source": "https://arxiv.org/abs/2408.13126 (v2 PDF, Huang et al. 2024) ; https://huggingface.co/datasets/airvlab/CathAction (dataset card README.md)"
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "We note that the bounding box annotation can be done independently with the catheterization actions annotation, however, all the videos are encoded with 24 FPS to ensure coherence in the dataset. [...] - **video_frames/**: Contains extracted video frames for each video.",
+   "source": "https://arxiv.org/abs/2408.13126 (v2 PDF, Huang et al. 2024) ; https://huggingface.co/datasets/airvlab/CathAction (dataset card README.md)"
+  },
+  "D4": {
+   "verdict": "UNKNOWN",
+   "quote": "Ten skilled professional surgeons are tasked with cannulating three arteries [...] The experiments are conducted under two interventional radiology fluoroscopic systems, namely Innova 4100 IQ GE Healthcare and EMD Technologies Epsilon X-ray Generator. [...] The annotation files (`training.csv` and `validation.csv`) contain four columns, with the following structure:",
+   "source": "https://arxiv.org/abs/2408.13126 (v2 PDF, Huang et al. 2024) ; https://huggingface.co/datasets/airvlab/CathAction (dataset card README.md)"
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "CathAction is released under CC BY-NC-SA license. [...] I agree to use CathAction dataset under Attribution-NonCommercial-ShareAlike 4.0 International licence.",
+   "source": "https://airvlab.github.io/cathaction/docs/download/ ; https://docs.google.com/forms/d/1wFHbMSSRRivsnxPxJzbiyLIpi02H8szzY13BkbkF6fY/viewform (viewed only; not submitted)"
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "collision_detection.zip 4349341729 segmentation_animal_phantom.zip 9882697706 segmentation_human_train.zip 143049194 video_action_understanding.zip 41808377811",
+   "source": "https://huggingface.co/api/datasets/airvlab/CathAction/tree/main?recursive=true (file listing with sizes; no file downloaded)"
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "| `all_action_classes`| list of int(s) | `[1]` | List of numeric IDs for all detected action classes in the segment. | [...] In particular, the tip of the catheter or guidewire of all frames in our dataset is annotated with a bounding box. Each bounding box shares the class of ether colision when the tip collides with the blood vessel, or normal when there is no collision with the blood vessel.",
+   "source": "https://huggingface.co/datasets/airvlab/CathAction (dataset card README.md) ; https://arxiv.org/abs/2408.13126 (v2 PDF, Huang et al. 2024)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4: operator (10 surgeons) and device (2 fluoroscopy systems) are described only at dataset level; the public action-CSV schema has no operator/device/site column (D4 UNKNOWN; per-video file may exist behind the form)."
+  },
+  "ge200_trajectories": "PASS",
+  "counts": {
+   "collection_mode": "surgeon-performed manual catheterisation with commercial catheter/guidewire (only documented mode; no robotic/programmatic collection described)",
+   "site": "not recorded per video; data source phantom (5 silicone aortic-arch phantoms) vs animal (5 live pigs) — collision split files are by source",
+   "device": "GE Innova 4100 IQ and EMD Technologies Epsilon X-ray generator (dataset level only)",
+   "operator": "10 surgeons (dataset level only)",
+   "annotation_type": "time-stamped action segments (advance/retract catheter, advance/retract guidewire, rotate; start/stop frame per video_id; human, checked by an endovascular surgeon); per-frame tip bounding boxes collision/normal (human; separate images/labels structure); ~25k catheter/guidewire segmentation masks (phantom, animal, human-train subsets)"
+  },
+  "registration_required": "yes",
+  "notes": "Access: Google form (Name, University, licence-agreement checkbox) then HF repo airvlab/CathAction (HF 'gated': false, but the card says to fill the form and agree to the licence first) -> registration yes, no account; nothing downloaded here. D1 PASS rests on dataset-level text: action labels are human, time-stamped, keyed by video_id; actions are chosen by surgeons; only one (manual) collection mode is described. Caveats for the lead: (i) 569 is the total video count; the number of distinct video_ids in training/validation CSVs is not public; (ii) the paper does not explicitly state that no robot-driven or programmatic collection exists, although none is described; (iii) phantom/animal source per video is not in the public CSV schema. D2 UNKNOWN: the paper says every frame of each fluoroscopy video has a collision/normal tip box (a human post-action annotation that would qualify), but the release stores collision data as a separate images/labels structure with phantom/animal split lists and no documented video_id/frame key, and the training split is phantom-only; linkage to action-annotated trajectories cannot be verified publicly. D3 PASS: action data are per-video frame folders at 24 FPS with start/stop frame indices; fluoroscopy was pedal-activated, so within-video gaps are not ruled out. D5: CC BY-NC-SA 4.0 permits non-commercial research and sharing adapted material (derived features) under the same licence. D6: 4 zips total 56,183,471,240 bytes (~56.2 GB; frames + pre-extracted TSN features, not raw video). D7 PASS via the video-linked human action-segment labels (segment-level description of instrument motion visible in the video, varies within video, not acquisition metadata); the per-frame collision/normal and segmentation labels would also qualify, but their trajectory linkage is unverified (see D2). Data are phantom + porcine, not human patients (human data only in a small segmentation subset)."
+ }
+]

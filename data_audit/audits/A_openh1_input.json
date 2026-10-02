@@ -1,0 +1,590 @@
+[
+ {
+  "id": "DS001",
+  "key": "openh:Surgical/cmr_surgical/cholecystectomy",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/cmr_surgical/cholecystectomy"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/cmr_surgical/cholecystectomy"
+  ],
+  "titles": [
+   "Surgical/cmr_surgical/cholecystectomy"
+  ]
+ },
+ {
+  "id": "DS002",
+  "key": "openh:Surgical/cmr_surgical/dry_box",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/cmr_surgical/dry_box"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/cmr_surgical/dry_box"
+  ],
+  "titles": [
+   "Surgical/cmr_surgical/dry_box"
+  ]
+ },
+ {
+  "id": "DS003",
+  "key": "openh:Surgical/cmr_surgical/hysterectomy",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/cmr_surgical/hysterectomy"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/cmr_surgical/hysterectomy"
+  ],
+  "titles": [
+   "Surgical/cmr_surgical/hysterectomy"
+  ]
+ },
+ {
+  "id": "DS004",
+  "key": "openh:Surgical/cmr_surgical/inguinal_hernia",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/cmr_surgical/inguinal_hernia"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/cmr_surgical/inguinal_hernia"
+  ],
+  "titles": [
+   "Surgical/cmr_surgical/inguinal_hernia"
+  ]
+ },
+ {
+  "id": "DS005",
+  "key": "openh:Surgical/cmr_surgical/peg_transfer",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/cmr_surgical/peg_transfer"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/cmr_surgical/peg_transfer"
+  ],
+  "titles": [
+   "Surgical/cmr_surgical/peg_transfer"
+  ]
+ },
+ {
+  "id": "DS006",
+  "key": "openh:Surgical/cmr_surgical/prostatectomy",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/cmr_surgical/prostatectomy"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/cmr_surgical/prostatectomy"
+  ],
+  "titles": [
+   "Surgical/cmr_surgical/prostatectomy"
+  ]
+ },
+ {
+  "id": "DS007",
+  "key": "openh:Surgical/hamlyn/knot_tying",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/hamlyn/knot_tying"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/hamlyn/knot_tying"
+  ],
+  "titles": [
+   "Surgical/hamlyn/knot_tying"
+  ]
+ },
+ {
+  "id": "DS008",
+  "key": "openh:Surgical/hamlyn/needle_grasp_and_handover",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/hamlyn/needle_grasp_and_handover"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/hamlyn/needle_grasp_and_handover"
+  ],
+  "titles": [
+   "Surgical/hamlyn/needle_grasp_and_handover"
+  ]
+ },
+ {
+  "id": "DS009",
+  "key": "openh:Surgical/hamlyn/peg_transfer",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/hamlyn/peg_transfer"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/hamlyn/peg_transfer"
+  ],
+  "titles": [
+   "Surgical/hamlyn/peg_transfer"
+  ]
+ },
+ {
+  "id": "DS010",
+  "key": "openh:Surgical/hamlyn/suturing_1",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/hamlyn/suturing_1"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/hamlyn/suturing_1"
+  ],
+  "titles": [
+   "Surgical/hamlyn/suturing_1"
+  ]
+ },
+ {
+  "id": "DS011",
+  "key": "openh:Surgical/hamlyn/suturing_2",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/hamlyn/suturing_2"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/hamlyn/suturing_2"
+  ],
+  "titles": [
+   "Surgical/hamlyn/suturing_2"
+  ]
+ },
+ {
+  "id": "DS012",
+  "key": "openh:Surgical/hamlyn/tissue_lifting",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/hamlyn/tissue_lifting"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/hamlyn/tissue_lifting"
+  ],
+  "titles": [
+   "Surgical/hamlyn/tissue_lifting"
+  ]
+ },
+ {
+  "id": "DS013",
+  "key": "openh:Surgical/hamlyn/tissue_retraction",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/hamlyn/tissue_retraction"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/hamlyn/tissue_retraction"
+  ],
+  "titles": [
+   "Surgical/hamlyn/tissue_retraction"
+  ]
+ },
+ {
+  "id": "DS014",
+  "key": "openh:Surgical/jhu/imerse/cao_cautery_combined",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/jhu/imerse/cao_cautery_combined"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/jhu/imerse/cao_cautery_combined"
+  ],
+  "titles": [
+   "Surgical/jhu/imerse/cao_cautery_combined"
+  ]
+ },
+ {
+  "id": "DS015",
+  "key": "openh:Surgical/jhu/imerse/nephfat/nephfat",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/jhu/imerse/nephfat/nephfat"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/jhu/imerse/nephfat/nephfat"
+  ],
+  "titles": [
+   "Surgical/jhu/imerse/nephfat/nephfat"
+  ]
+ },
+ {
+  "id": "DS016",
+  "key": "openh:Surgical/jhu/imerse/srt_needle_pickup_handover",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/jhu/imerse/srt_needle_pickup_handover"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/jhu/imerse/srt_needle_pickup_handover"
+  ],
+  "titles": [
+   "Surgical/jhu/imerse/srt_needle_pickup_handover"
+  ]
+ },
+ {
+  "id": "DS017",
+  "key": "openh:Surgical/jhu/imerse/srt_tissue_lift",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/jhu/imerse/srt_tissue_lift"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/jhu/imerse/srt_tissue_lift"
+  ],
+  "titles": [
+   "Surgical/jhu/imerse/srt_tissue_lift"
+  ]
+ },
+ {
+  "id": "DS018",
+  "key": "openh:Surgical/jhu/imerse/srth_porcine_chole",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/jhu/imerse/srth_porcine_chole"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/jhu/imerse/srth_porcine_chole"
+  ],
+  "titles": [
+   "Surgical/jhu/imerse/srth_porcine_chole"
+  ]
+ },
+ {
+  "id": "DS019",
+  "key": "openh:Surgical/jhu/imerse/star_il/star_il",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/jhu/imerse/star_il/star_il"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/jhu/imerse/star_il/star_il"
+  ],
+  "titles": [
+   "Surgical/jhu/imerse/star_il/star_il"
+  ]
+ },
+ {
+  "id": "DS020",
+  "key": "openh:Surgical/jhu/imerse/suturebot",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/jhu/imerse/suturebot"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/jhu/imerse/suturebot"
+  ],
+  "titles": [
+   "Surgical/jhu/imerse/suturebot"
+  ]
+ },
+ {
+  "id": "DS021",
+  "key": "openh:Surgical/jhu/imerse/wound_closure/point_labeled/fausto_0_1_jesse_0_1_2_labeled",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/jhu/imerse/wound_closure/point_labeled/fausto_0_1_jesse_0_1_2_labeled"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/jhu/imerse/wound_closure/point_labeled/fausto_0_1_jesse_0_1_2_labeled"
+  ],
+  "titles": [
+   "Surgical/jhu/imerse/wound_closure/point_labeled/fausto_0_1_jesse_0_1_2_labeled"
+  ]
+ },
+ {
+  "id": "DS022",
+  "key": "openh:Surgical/jhu/lcsr/arcade",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/jhu/lcsr/arcade"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/jhu/lcsr/arcade"
+  ],
+  "titles": [
+   "Surgical/jhu/lcsr/arcade"
+  ]
+ },
+ {
+  "id": "DS023",
+  "key": "openh:Surgical/jhu/lcsr/miracle",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/jhu/lcsr/miracle"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/jhu/lcsr/miracle"
+  ],
+  "titles": [
+   "Surgical/jhu/lcsr/miracle"
+  ]
+ },
+ {
+  "id": "DS024",
+  "key": "openh:Surgical/jhu/lcsr/smarts",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/jhu/lcsr/smarts"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/jhu/lcsr/smarts"
+  ],
+  "titles": [
+   "Surgical/jhu/lcsr/smarts"
+  ]
+ },
+ {
+  "id": "DS025",
+  "key": "openh:Surgical/moon_surgical/moon_laparoscopic_assistant",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/moon_surgical/moon_laparoscopic_assistant"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/moon_surgical/moon_laparoscopic_assistant"
+  ],
+  "titles": [
+   "Surgical/moon_surgical/moon_laparoscopic_assistant"
+  ]
+ },
+ {
+  "id": "DS026",
+  "key": "openh:Surgical/obuda/frs_dome_1",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/obuda/frs_dome_1"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/obuda/frs_dome_1"
+  ],
+  "titles": [
+   "Surgical/obuda/frs_dome_1"
+  ]
+ },
+ {
+  "id": "DS027",
+  "key": "openh:Surgical/obuda/needlethreading_1",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/obuda/needlethreading_1"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/obuda/needlethreading_1"
+  ],
+  "titles": [
+   "Surgical/obuda/needlethreading_1"
+  ]
+ },
+ {
+  "id": "DS028",
+  "key": "openh:Surgical/obuda/needlethreading_2",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/obuda/needlethreading_2"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/obuda/needlethreading_2"
+  ],
+  "titles": [
+   "Surgical/obuda/needlethreading_2"
+  ]
+ },
+ {
+  "id": "DS029",
+  "key": "openh:Surgical/obuda/pegtransfer_1",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/obuda/pegtransfer_1"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/obuda/pegtransfer_1"
+  ],
+  "titles": [
+   "Surgical/obuda/pegtransfer_1"
+  ]
+ },
+ {
+  "id": "DS030",
+  "key": "openh:Surgical/obuda/pegtransfer_2",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/obuda/pegtransfer_2"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/obuda/pegtransfer_2"
+  ],
+  "titles": [
+   "Surgical/obuda/pegtransfer_2"
+  ]
+ },
+ {
+  "id": "DS031",
+  "key": "openh:Surgical/obuda/pork_1",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/obuda/pork_1"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/obuda/pork_1"
+  ],
+  "titles": [
+   "Surgical/obuda/pork_1"
+  ]
+ },
+ {
+  "id": "DS032",
+  "key": "openh:Surgical/obuda/rollercoaster_1",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/obuda/rollercoaster_1"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/obuda/rollercoaster_1"
+  ],
+  "titles": [
+   "Surgical/obuda/rollercoaster_1"
+  ]
+ },
+ {
+  "id": "DS033",
+  "key": "openh:Surgical/obuda/seaspike_1",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/obuda/seaspike_1"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/obuda/seaspike_1"
+  ],
+  "titles": [
+   "Surgical/obuda/seaspike_1"
+  ]
+ },
+ {
+  "id": "DS034",
+  "key": "openh:Surgical/obuda/seaspike_2",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/obuda/seaspike_2"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/obuda/seaspike_2"
+  ],
+  "titles": [
+   "Surgical/obuda/seaspike_2"
+  ]
+ },
+ {
+  "id": "DS035",
+  "key": "openh:Surgical/obuda/seaspike_3",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/obuda/seaspike_3"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/obuda/seaspike_3"
+  ],
+  "titles": [
+   "Surgical/obuda/seaspike_3"
+  ]
+ },
+ {
+  "id": "DS036",
+  "key": "openh:Surgical/obuda/skinphantom_1",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/obuda/skinphantom_1"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/obuda/skinphantom_1"
+  ],
+  "titles": [
+   "Surgical/obuda/skinphantom_1"
+  ]
+ },
+ {
+  "id": "DS037",
+  "key": "openh:Surgical/polyu/openh_dataset_full",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/polyu/openh_dataset_full"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/polyu/openh_dataset_full"
+  ],
+  "titles": [
+   "Surgical/polyu/openh_dataset_full"
+  ]
+ },
+ {
+  "id": "DS038",
+  "key": "openh:Surgical/rob_surgical/all_merged_data",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/rob_surgical/all_merged_data"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/rob_surgical/all_merged_data"
+  ],
+  "titles": [
+   "Surgical/rob_surgical/all_merged_data"
+  ]
+ },
+ {
+  "id": "DS039",
+  "key": "openh:Surgical/sanoscience/sanoscience_v1_2_merged/expert_demonstrations",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/sanoscience/sanoscience_v1_2_merged/expert_demonstrations"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/sanoscience/sanoscience_v1_2_merged/expert_demonstrations"
+  ],
+  "titles": [
+   "Surgical/sanoscience/sanoscience_v1_2_merged/expert_demonstrations"
+  ]
+ },
+ {
+  "id": "DS040",
+  "key": "openh:Surgical/sanoscience/sanoscience_v1_2_merged/nonexpert_failure",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/sanoscience/sanoscience_v1_2_merged/nonexpert_failure"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/sanoscience/sanoscience_v1_2_merged/nonexpert_failure"
+  ],
+  "titles": [
+   "Surgical/sanoscience/sanoscience_v1_2_merged/nonexpert_failure"
+  ]
+ },
+ {
+  "id": "DS041",
+  "key": "openh:Surgical/sanoscience/sanoscience_v1_2_merged/nonexpert_full_modalities",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/sanoscience/sanoscience_v1_2_merged/nonexpert_full_modalities"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/sanoscience/sanoscience_v1_2_merged/nonexpert_full_modalities"
+  ],
+  "titles": [
+   "Surgical/sanoscience/sanoscience_v1_2_merged/nonexpert_full_modalities"
+  ]
+ },
+ {
+  "id": "DS042",
+  "key": "openh:Surgical/sanoscience/sanoscience_v1_2_merged/nonexpert_partial_modalities",
+  "category": "C-SURG (Open-H)",
+  "names": [
+   "Open-H Surgical/sanoscience/sanoscience_v1_2_merged/nonexpert_partial_modalities"
+  ],
+  "urls": [
+   "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment/tree/e29dda7cabf2a2626634c7822db27695553ae523/Surgical/sanoscience/sanoscience_v1_2_merged/nonexpert_partial_modalities"
+  ],
+  "titles": [
+   "Surgical/sanoscience/sanoscience_v1_2_merged/nonexpert_partial_modalities"
+  ]
+ }
+]

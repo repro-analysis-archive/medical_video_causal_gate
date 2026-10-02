@@ -1,0 +1,260 @@
+[
+ {
+  "id": "DS092",
+  "key": "ibdcrowdsourcedendoscopyannotation",
+  "category": "DATASET-C-COL",
+  "names": [
+   "IBD Crowdsourced Endoscopy Annotation (Digital Endoscopy DREAM)"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn18599653"
+  ],
+  "titles": [
+   "IBD - Crowdsourced Endoscopy Annotation"
+  ]
+ },
+ {
+  "id": "DS093",
+  "key": "infocolon",
+  "category": "DATASET-C-COL",
+  "names": [
+   "InfoColon"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn55251782"
+  ],
+  "titles": [
+   "InfoColon - A Real-World Dataset for Informative Frame Classification in Colonoscopy"
+  ]
+ },
+ {
+  "id": "DS094",
+  "key": "ldpolypvideo",
+  "category": "DATASET-C-COL",
+  "names": [
+   "LDPolypVideo"
+  ],
+  "urls": [
+   "https://doi.org/10.1007/978-3-030-87240-3_37"
+  ],
+  "titles": [
+   "LDPolypVideo Benchmark: A Large-Scale Colonoscopy Video Dataset of Diverse Polyps"
+  ]
+ },
+ {
+  "id": "DS095",
+  "key": "pocaco",
+  "category": "DATASET-C-COL",
+  "names": [
+   "POCACO"
+  ],
+  "urls": [
+   "https://zenodo.org/records/14444297"
+  ],
+  "titles": [
+   "POCACO: Polyp Videos for CADe Comparison"
+  ]
+ },
+ {
+  "id": "DS096",
+  "key": "polypsize",
+  "category": "DATASET-C-COL",
+  "names": [
+   "Polyp-Size"
+  ],
+  "urls": [
+   "https://springernature.figshare.com/articles/dataset/Polyp-Size_A_Precisely_Annotated_Endoscopic_Dataset_for_AI-Assisted_Polyp_Sizing/28030115"
+  ],
+  "titles": [
+   "Polyp-Size: A Precisely Annotated Endoscopic Dataset for AI-Assisted Polyp Sizing"
+  ]
+ },
+ {
+  "id": "DS097",
+  "key": "polypsset",
+  "category": "DATASET-C-COL",
+  "names": [
+   "PolypsSet"
+  ],
+  "urls": [
+   "https://doi.org/10.1371/journal.pone.0255809"
+  ],
+  "titles": [
+   "Colonoscopy Polyp Detection and Classification: Dataset Creation and Comparative Evaluations"
+  ]
+ },
+ {
+  "id": "DS098",
+  "key": "procedurallygeneratedcolonoscopyandlaparoscopydata",
+  "category": "DATASET-C-COL",
+  "names": [
+   "Procedurally Generated Colonoscopy and Laparoscopy Data"
+  ],
+  "urls": [
+   "https://rdr.ucl.ac.uk/articles/dataset/Procedurally_Generated_Colonoscopy_and_Laparoscopy_Data_For_Improved_Model_Training_Performance/23843904"
+  ],
+  "titles": [
+   "Procedurally Generated Colonoscopy and Laparoscopy Data For Improved Model Training Performance"
+  ]
+ },
+ {
+  "id": "DS099",
+  "key": "realcolon",
+  "category": "DATASET-C-COL",
+  "names": [
+   "REAL-Colon",
+   "REAL-Colon (polyp counting benchmark)",
+   "REAL-Colon temporal segmentation annotations"
+  ],
+  "urls": [
+   "https://doi.org/10.1016/j.cmpb.2025.108782",
+   "https://doi.org/10.1038/s41597-024-03359-0",
+   "https://doi.org/10.1109/isbi60581.2025.10981023",
+   "https://figshare.com/articles/dataset/Temporal_Segmentation_Annotation_for_the_REAL-Colon_dataset/26472913",
+   "https://figshare.com/articles/media/Supplementary_REAL-Colon_A_dataset_for_developing_real-world_AI_2_applications_in_colonoscopy/25315261",
+   "https://plus.figshare.com/articles/media/REAL-colon_dataset/22202866"
+  ],
+  "titles": [
+   "A temporal convolutional network-based approach and a benchmark dataset for colonoscopy video temporal segmentation",
+   "REAL-Colon: A dataset for developing real-world AI applications in colonoscopy",
+   "REAL-colon dataset",
+   "Supplementary Materials for REAL-Colon: A Dataset for Developing Real-World AI Applications in Colonoscopy",
+   "Temporal Segmentation Annotation for the REAL-Colon dataset"
+  ]
+ },
+ {
+  "id": "DS100",
+  "key": "realsyncol",
+  "category": "DATASET-C-COL",
+  "names": [
+   "RealSynCol"
+  ],
+  "urls": [
+   "https://zenodo.org/records/19705803"
+  ],
+  "titles": [
+   "RealSynCol. A high-fidelity synthetic colon dataset for 3D reconstruction applications"
+  ]
+ },
+ {
+  "id": "DS101",
+  "key": "renjiesdvideodataset",
+  "category": "DATASET-C-COL",
+  "names": [
+   "Renji ESD video dataset",
+   "Renji ESD video dataset (Esophagus)"
+  ],
+  "urls": [
+   "https://springernature.figshare.com/articles/dataset/Renji_endoscopic_submucosal_dissection_video_data_set_for_Esophagus/28777862",
+   "https://springernature.figshare.com/articles/dataset/Renji_endoscopic_submucosal_dissection_video_data_set_for_colorectal_neoplastic_lesions/28737686"
+  ],
+  "titles": [
+   "Renji endoscopic submucosal dissection video data set for Esophagus",
+   "Renji endoscopic submucosal dissection video data set for colorectal neoplastic lesions"
+  ]
+ },
+ {
+  "id": "DS102",
+  "key": "rtgancolonoscopytemporaldataset",
+  "category": "DATASET-C-COL",
+  "names": [
+   "RT-GAN colonoscopy temporal dataset"
+  ],
+  "urls": [
+   "https://zenodo.org/records/15460791"
+  ],
+  "titles": [
+   "RT-GAN: Recurrent Temporal GAN for Adding Lightweight Temporal Consistency to Frame-Based Domain Translation Approaches"
+  ]
+ },
+ {
+  "id": "DS103",
+  "key": "segcol",
+  "category": "DATASET-C-COL",
+  "names": [
+   "SegCol (EndoVis)"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn54124209"
+  ],
+  "titles": [
+   "SegCol_Endovis"
+  ]
+ },
+ {
+  "id": "DS104",
+  "key": "simcol",
+  "category": "DATASET-C-COL",
+  "names": [
+   "SimCol",
+   "SimCol-to-3D 2022",
+   "SimCol3D"
+  ],
+  "urls": [
+   "https://doi.org/10.1016/j.media.2024.103195",
+   "https://doi.org/10.1109/tmrb.2023.3320267",
+   "https://www.synapse.org/#!Synapse:syn28548633"
+  ],
+  "titles": [
+   "Bimodal Camera Pose Prediction for Endoscopy",
+   "SimCol-to-3D 2022 - 3D Reconstruction During Colonoscopy",
+   "SimCol3D \u2014 3D reconstruction during colonoscopy challenge"
+  ]
+ },
+ {
+  "id": "DS105",
+  "key": "sunseg",
+  "category": "DATASET-C-COL",
+  "names": [
+   "SUN-SEG"
+  ],
+  "urls": [
+   "https://doi.org/10.1007/s11633-022-1371-y"
+  ],
+  "titles": [
+   "Video Polyp Segmentation: A Deep Learning Perspective"
+  ]
+ },
+ {
+  "id": "DS106",
+  "key": "xdcyclegandepthdataset",
+  "category": "DATASET-C-COL",
+  "names": [
+   "XDCycleGAN Depth Dataset"
+  ],
+  "urls": [
+   "https://zenodo.org/records/5520029"
+  ],
+  "titles": [
+   "XDCycleGAN Depth Dataset"
+  ]
+ },
+ {
+  "id": "DS107",
+  "key": "xdcycleganvcdataset",
+  "category": "DATASET-C-COL",
+  "names": [
+   "XDCycleGAN VC Dataset"
+  ],
+  "urls": [
+   "https://zenodo.org/records/5520019"
+  ],
+  "titles": [
+   "XDCycleGAN VC Datatset"
+  ]
+ },
+ {
+  "id": "DS000",
+  "key": "cathaction",
+  "category": "C-CATH",
+  "names": [
+   "CathAction"
+  ],
+  "urls": [
+   "(named in gate \u00a73; dataset card read before freeze, \u00a70)"
+  ],
+  "titles": [
+   "CathAction"
+  ]
+ }
+]

@@ -1,0 +1,269 @@
+[
+ {
+  "id": "DS168",
+  "key": "surgt",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgT"
+  ],
+  "urls": [
+   "https://surgt.grand-challenge.org/"
+  ],
+  "titles": [
+   "SurgT: Surgical Tracking"
+  ]
+ },
+ {
+  "id": "DS169",
+  "key": "surgtoolloc2022",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgToolLoc 2022",
+   "SurgToolLoc 2023"
+  ],
+  "urls": [
+   "https://surgtoolloc.grand-challenge.org/",
+   "https://surgtoolloc23.grand-challenge.org/"
+  ],
+  "titles": [
+   "Endoscopic surgical tool localization using tool presence labels",
+   "Surgical Tool Localization in endoscopic videos"
+  ]
+ },
+ {
+  "id": "DS170",
+  "key": "surgvisdom",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgVisDom"
+  ],
+  "urls": [
+   "http://surgvisdom.grand-challenge.org",
+   "https://surgvisdom.grand-challenge.org/",
+   "https://www.synapse.org/#!Synapse:syn22083820"
+  ],
+  "titles": [
+   "SurgVisDom",
+   "SurgVisDom - Surgical Visual Domain Adaptation",
+   "surgvisdom"
+  ]
+ },
+ {
+  "id": "DS171",
+  "key": "surgvu24",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgVU24",
+   "SurgVU25",
+   "SurgVU26"
+  ],
+  "urls": [
+   "https://surgvu24.grand-challenge.org/",
+   "https://surgvu25.grand-challenge.org/",
+   "https://surgvu26.grand-challenge.org/"
+  ],
+  "titles": [
+   "Surgical Visual Understanding",
+   "Surgical Visual Understanding 2026"
+  ]
+ },
+ {
+  "id": "DS172",
+  "key": "trackves",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "TrackVes"
+  ],
+  "urls": [
+   "https://zenodo.org/records/822053"
+  ],
+  "titles": [
+   "TrackVes Dataset"
+  ]
+ },
+ {
+  "id": "DS173",
+  "key": "traumathompson",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Trauma THOMPSON",
+   "Trauma THOMPSON 2025"
+  ],
+  "urls": [
+   "https://t3challenge25.grand-challenge.org/",
+   "https://thompson-challenge.grand-challenge.org/"
+  ],
+  "titles": [
+   "The Trauma THOMPSON Challenge",
+   "The Trauma THOMPSON Challenge 2025"
+  ]
+ },
+ {
+  "id": "DS174",
+  "key": "url:https://doi.org/10.1007/978-3-030-59716-0_67",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Synthetic and Real Inputs for Tool Segmentation in Robotic Surgery"
+  ],
+  "urls": [
+   "https://doi.org/10.1007/978-3-030-59716-0_67"
+  ],
+  "titles": [
+   "Synthetic and Real Inputs for Tool Segmentation in Robotic Surgery"
+  ]
+ },
+ {
+  "id": "DS175",
+  "key": "url:https://doi.org/10.1007/s11042-017-4699-5",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Learning laparoscopic video shot classification for gynecological surgery"
+  ],
+  "urls": [
+   "https://doi.org/10.1007/s11042-017-4699-5"
+  ],
+  "titles": [
+   "Learning laparoscopic video shot classification for gynecological surgery"
+  ]
+ },
+ {
+  "id": "DS176",
+  "key": "url:https://doi.org/10.1016/j.compbiomed.2021.105121",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Automated tool detection with deep learning for monitoring kinematics and eye-hand coordination in microsurgery"
+  ],
+  "urls": [
+   "https://doi.org/10.1016/j.compbiomed.2021.105121"
+  ],
+  "titles": [
+   "Automated tool detection with deep learning for monitoring kinematics and eye-hand coordination in microsurgery"
+  ]
+ },
+ {
+  "id": "DS177",
+  "key": "url:https://doi.org/10.1109/cvpr46437.2021.00940",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Towards Unified Surgical Skill Assessment"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/cvpr46437.2021.00940"
+  ],
+  "titles": [
+   "Towards Unified Surgical Skill Assessment"
+  ]
+ },
+ {
+  "id": "DS178",
+  "key": "url:https://doi.org/10.1109/iceccme57830.2023.10253032",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "A surgical dataset from the da Vinci Research Kit for task automation and recognition"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/iceccme57830.2023.10253032"
+  ],
+  "titles": [
+   "A surgical dataset from the da Vinci Research Kit for task automation and recognition"
+  ]
+ },
+ {
+  "id": "DS179",
+  "key": "url:https://doi.org/10.1109/tmi.2014.2340473",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Real-Time Segmentation and Recognition of Surgical Tasks in Cataract Surgery Videos"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/tmi.2014.2340473"
+  ],
+  "titles": [
+   "Real-Time Segmentation and Recognition of Surgical Tasks in Cataract Surgery Videos"
+  ]
+ },
+ {
+  "id": "DS180",
+  "key": "url:https://doi.org/10.70675/767f12cazeacfz469bz8dc7z3678ac4ee7c6",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Vision-based approaches for surgical activity recognition using laparoscopic and RBGD videos"
+  ],
+  "urls": [
+   "https://doi.org/10.70675/767f12cazeacfz469bz8dc7z3678ac4ee7c6"
+  ],
+  "titles": [
+   "Vision-based approaches for surgical activity recognition using laparoscopic and RBGD videos"
+  ]
+ },
+ {
+  "id": "DS181",
+  "key": "url:https://figshare.com/articles/dataset/Artificial_intelligence-driven_phase_recognition_in_lung_surgery_a_single-center_pilot_study/29652218",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Artificial intelligence-driven phase recognition in lung surgery: a single-center pilot study"
+  ],
+  "urls": [
+   "https://figshare.com/articles/dataset/Artificial_intelligence-driven_phase_recognition_in_lung_surgery_a_single-center_pilot_study/29652218"
+  ],
+  "titles": [
+   "Artificial intelligence-driven phase recognition in lung surgery: a single-center pilot study"
+  ]
+ },
+ {
+  "id": "DS182",
+  "key": "url:https://www.synapse.org/#!Synapse:syn65669574",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Closing the data gap - leveraging pretrained neural networks for robotic surgical assessment on limited clinical data"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn65669574"
+  ],
+  "titles": [
+   "Closing the data gap - leveraging pretrained neural networks for robotic surgical assessment on limited clinical data"
+  ]
+ },
+ {
+  "id": "DS183",
+  "key": "url:https://zenodo.org/records/11479346",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Dataset and trained models for video denoising in fluorescence guided surgery"
+  ],
+  "urls": [
+   "https://zenodo.org/records/11479346"
+  ],
+  "titles": [
+   "Dataset and trained models for video denoising in fluorescence guided surgery"
+  ]
+ },
+ {
+  "id": "DS184",
+  "key": "url:https://zenodo.org/records/19370452",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Exploring video recognition models for force estimation in small bowel surgical retractions"
+  ],
+  "urls": [
+   "https://zenodo.org/records/19370452"
+  ],
+  "titles": [
+   "Exploring video recognition models for force estimation in small bowel surgical retractions"
+  ]
+ },
+ {
+  "id": "DS185",
+  "key": "videobasedactionrecognitionandskillsassessmentporcinemodels",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Video based Action Recognition and Skills Assessment - Porcine-Models"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn63852421"
+  ],
+  "titles": [
+   "Video based Action Recognition and Skills Assessment - Porcine-Models"
+  ]
+ }
+]

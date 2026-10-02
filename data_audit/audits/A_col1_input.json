@@ -1,0 +1,250 @@
+[
+ {
+  "id": "DS076",
+  "key": "c3vd",
+  "category": "DATASET-C-COL",
+  "names": [
+   "C3VD",
+   "C3VD-Raycasting-10k",
+   "C3VDv2"
+  ],
+  "urls": [
+   "https://doi.org/10.1016/j.media.2023.102956",
+   "https://doi.org/10.1038/s41597-026-07471-1",
+   "https://rdr.ucl.ac.uk/articles/dataset/C3VD-Raycasting-10k_A_Clinical_Point_Cloud_Registration_Dataset_for_Image-Guided_Colonoscopy/30640043"
+  ],
+  "titles": [
+   "C3VD-Raycasting-10k: A Clinical Point Cloud Registration Dataset for Image-Guided Colonoscopy",
+   "C3VDv2 - Colonoscopy 3D video dataset with enhanced realism",
+   "Colonoscopy 3D video dataset with paired depth from 2D-3D registration"
+  ]
+ },
+ {
+  "id": "DS077",
+  "key": "cascolon",
+  "category": "DATASET-C-COL",
+  "names": [
+   "CAS-Colon"
+  ],
+  "urls": [
+   "https://springernature.figshare.com/articles/dataset/CAS-Colon_A_Comprehensive_Colonoscopy_Anatomical_Segmentation_Dataset_for_Artificial_Intelligence_Development/28287929"
+  ],
+  "titles": [
+   "CAS-Colon: A Comprehensive Colonoscopy Anatomical Segmentation Dataset for Artificial Intelligence Development"
+  ]
+ },
+ {
+  "id": "DS078",
+  "key": "climb2026",
+  "category": "DATASET-C-COL",
+  "names": [
+   "CLiMB 2026"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn74370700"
+  ],
+  "titles": [
+   "CLiMB 2026 Challenge"
+  ]
+ },
+ {
+  "id": "DS079",
+  "key": "cltsganaugmentedpolypdataset",
+  "category": "DATASET-C-COL",
+  "names": [
+   "CLTS-GAN augmented polyp dataset"
+  ],
+  "urls": [
+   "https://zenodo.org/records/7036198"
+  ],
+  "titles": [
+   "CLTS-GAN: Color-Lighting-Texture-Specular Reflection Augmentation for Colonoscopy"
+  ]
+ },
+ {
+  "id": "DS080",
+  "key": "colonoscopyanonymizeddatauniversityhospitalofbern",
+  "category": "DATASET-C-COL",
+  "names": [
+   "Colonoscopy anonymized data, University Hospital of Bern"
+  ],
+  "urls": [
+   "https://zenodo.org/records/10964732"
+  ],
+  "titles": [
+   "Colonoscopy anonymized data, University Hospital of Bern, 2020-2021"
+  ]
+ },
+ {
+  "id": "DS081",
+  "key": "ead2019",
+  "category": "DATASET-C-COL",
+  "names": [
+   "EAD2019"
+  ],
+  "urls": [
+   "https://doi.org/10.1038/s41598-020-59413-5",
+   "https://ead2019.grand-challenge.org/"
+  ],
+  "titles": [
+   "An objective comparison of detection and segmentation algorithms for artefacts in clinical endoscopy",
+   "EAD2019"
+  ]
+ },
+ {
+  "id": "DS082",
+  "key": "endocv2020",
+  "category": "DATASET-C-COL",
+  "names": [
+   "EndoCV2020",
+   "EndoCV2020 (EAD2020/EDD2020)"
+  ],
+  "urls": [
+   "https://doi.org/10.1016/j.media.2021.102002",
+   "https://endocv.grand-challenge.org/"
+  ],
+  "titles": [
+   "Deep learning for detection and segmentation of artefact and disease instances in gastrointestinal endoscopy",
+   "EndoCV2020"
+  ]
+ },
+ {
+  "id": "DS083",
+  "key": "endocv2021",
+  "category": "DATASET-C-COL",
+  "names": [
+   "EndoCV2021"
+  ],
+  "urls": [
+   "https://endocv2021.grand-challenge.org/"
+  ],
+  "titles": [
+   "EndoCV2021"
+  ]
+ },
+ {
+  "id": "DS084",
+  "key": "endocv2022",
+  "category": "DATASET-C-COL",
+  "names": [
+   "EndoCV2022"
+  ],
+  "urls": [
+   "https://endocv2022.grand-challenge.org/"
+  ],
+  "titles": [
+   "EndoCV2022"
+  ]
+ },
+ {
+  "id": "DS085",
+  "key": "endomapper",
+  "category": "DATASET-C-COL",
+  "names": [
+   "EndoMapper"
+  ],
+  "urls": [
+   "https://doi.org/10.1038/s41597-023-02564-7",
+   "https://www.synapse.org/#!Synapse:syn26707219"
+  ],
+  "titles": [
+   "EndoMapper dataset of complete calibrated endoscopy procedures",
+   "Endomapper dataset of complete calibrated endoscopy procedures"
+  ]
+ },
+ {
+  "id": "DS086",
+  "key": "endotest",
+  "category": "DATASET-C-COL",
+  "names": [
+   "ENDOTEST"
+  ],
+  "urls": [
+   "https://tandf.figshare.com/articles/dataset/A_video_based_benchmark_data_set_ENDOTEST_to_evaluate_computer-aided_polyp_detection_systems/20069835"
+  ],
+  "titles": [
+   "A video based benchmark data set (ENDOTEST) to evaluate computer-aided polyp detection systems"
+  ]
+ },
+ {
+  "id": "DS087",
+  "key": "endovis2015polypdetection",
+  "category": "DATASET-C-COL",
+  "names": [
+   "EndoVis 2015 Polyp Detection"
+  ],
+  "urls": [
+   "http://polyp.grand-challenge.org"
+  ],
+  "titles": [
+   "polyp"
+  ]
+ },
+ {
+  "id": "DS088",
+  "key": "foldit",
+  "category": "DATASET-C-COL",
+  "names": [
+   "FoldIt"
+  ],
+  "urls": [
+   "https://zenodo.org/records/4993651"
+  ],
+  "titles": [
+   "FoldIt: Haustral Folds Detection and Segmentation in Colonoscopy Videos"
+  ]
+ },
+ {
+  "id": "DS089",
+  "key": "folditpublicdataset",
+  "category": "DATASET-C-COL",
+  "names": [
+   "FoldIt Public Dataset"
+  ],
+  "urls": [
+   "https://zenodo.org/records/5519974"
+  ],
+  "titles": [
+   "FoldIt Public Dataset"
+  ]
+ },
+ {
+  "id": "DS090",
+  "key": "giana",
+  "category": "DATASET-C-COL",
+  "names": [
+   "EndoVis abnormal sub-challenge",
+   "GIANA",
+   "GIANA 2017"
+  ],
+  "urls": [
+   "http://endovissub-abnormal.grand-challenge.org",
+   "http://endovissub2017-giana.grand-challenge.org",
+   "https://giana.grand-challenge.org"
+  ],
+  "titles": [
+   "endovissub-abnormal",
+   "endovissub2017-giana",
+   "giana"
+  ]
+ },
+ {
+  "id": "DS091",
+  "key": "hyperkvasir",
+  "category": "DATASET-C-COL",
+  "names": [
+   "HyperKvasir"
+  ],
+  "urls": [
+   "https://doi.org/10.1038/s41597-020-00622-y",
+   "https://doi.org/10.31219/osf.io/mkzcq",
+   "https://zenodo.org/records/7785986",
+   "https://zenodo.org/records/7785989"
+  ],
+  "titles": [
+   "13: The Hyper Kvasir Dataset Landmark Classification (Lower GI tract)",
+   "14: The Hyper Kvasir Dataset Landmark Classification (Upper GI tract)",
+   "HyperKvasir, A Comprehensive Multi-Class Image and Video Dataset for Gastrointestinal Endoscopy"
+  ]
+ }
+]

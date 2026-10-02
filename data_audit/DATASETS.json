@@ -3016,7 +3016,9 @@
  {
   "key": "url:https://doi.org/10.1007/978-3-030-59716-0_67",
   "category": "DATASET-C-SURG",
-  "names": [],
+  "names": [
+   "Synthetic and Real Inputs for Tool Segmentation in Robotic Surgery"
+  ],
   "uids": [
    "D0508"
   ],
@@ -3031,7 +3033,9 @@
  {
   "key": "url:https://doi.org/10.1007/s11042-017-4699-5",
   "category": "DATASET-C-SURG",
-  "names": [],
+  "names": [
+   "Learning laparoscopic video shot classification for gynecological surgery"
+  ],
   "uids": [
    "D0255",
    "D0357"
@@ -3047,7 +3051,9 @@
  {
   "key": "url:https://doi.org/10.1016/j.compbiomed.2021.105121",
   "category": "DATASET-C-SURG",
-  "names": [],
+  "names": [
+   "Automated tool detection with deep learning for monitoring kinematics and eye-hand coordination in microsurgery"
+  ],
   "uids": [
    "D0497"
   ],
@@ -3062,7 +3068,9 @@
  {
   "key": "url:https://doi.org/10.1109/cvpr46437.2021.00940",
   "category": "DATASET-C-SURG",
-  "names": [],
+  "names": [
+   "Towards Unified Surgical Skill Assessment"
+  ],
   "uids": [
    "D0375"
   ],
@@ -3077,7 +3085,9 @@
  {
   "key": "url:https://doi.org/10.1109/iceccme57830.2023.10253032",
   "category": "DATASET-C-SURG",
-  "names": [],
+  "names": [
+   "A surgical dataset from the da Vinci Research Kit for task automation and recognition"
+  ],
   "uids": [
    "D0513"
   ],
@@ -3092,7 +3102,9 @@
  {
   "key": "url:https://doi.org/10.1109/tmi.2014.2340473",
   "category": "DATASET-C-SURG",
-  "names": [],
+  "names": [
+   "Real-Time Segmentation and Recognition of Surgical Tasks in Cataract Surgery Videos"
+  ],
   "uids": [
    "D0369"
   ],
@@ -3107,7 +3119,9 @@
  {
   "key": "url:https://doi.org/10.70675/767f12cazeacfz469bz8dc7z3678ac4ee7c6",
   "category": "DATASET-C-SURG",
-  "names": [],
+  "names": [
+   "Vision-based approaches for surgical activity recognition using laparoscopic and RBGD videos"
+  ],
   "uids": [
    "D0518"
   ],
@@ -3122,7 +3136,9 @@
  {
   "key": "url:https://figshare.com/articles/dataset/Artificial_intelligence-driven_phase_recognition_in_lung_surgery_a_single-center_pilot_study/29652218",
   "category": "DATASET-C-SURG",
-  "names": [],
+  "names": [
+   "Artificial intelligence-driven phase recognition in lung surgery: a single-center pilot study"
+  ],
   "uids": [
    "D0458"
   ],
@@ -3137,7 +3153,9 @@
  {
   "key": "url:https://www.synapse.org/#!Synapse:syn65669574",
   "category": "DATASET-C-SURG",
-  "names": [],
+  "names": [
+   "Closing the data gap - leveraging pretrained neural networks for robotic surgical assessment on limited clinical data"
+  ],
   "uids": [
    "D0550"
   ],
@@ -3152,7 +3170,9 @@
  {
   "key": "url:https://zenodo.org/records/11479346",
   "category": "DATASET-C-SURG",
-  "names": [],
+  "names": [
+   "Dataset and trained models for video denoising in fluorescence guided surgery"
+  ],
   "uids": [
    "D1228",
    "D1338"
@@ -3168,7 +3188,9 @@
  {
   "key": "url:https://zenodo.org/records/19370452",
   "category": "DATASET-C-SURG",
-  "names": [],
+  "names": [
+   "Exploring video recognition models for force estimation in small bowel surgical retractions"
+  ],
   "uids": [
    "D1215",
    "D1322"

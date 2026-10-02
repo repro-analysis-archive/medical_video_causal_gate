@@ -1,0 +1,292 @@
+[
+ {
+  "id": "DS148",
+  "key": "pitvis",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "PitVis",
+   "PitVis-2023"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn51232283"
+  ],
+  "titles": [
+   "PitVis - Workflow Recognition in Endoscopic Pituitary Surgery"
+  ]
+ },
+ {
+  "id": "DS149",
+  "key": "pitvqa",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "PitVQA"
+  ],
+  "urls": [
+   "https://rdr.ucl.ac.uk/articles/dataset/PitVQA_A_Dataset_of_Visual_Question_Answering_in_Pituitary_Surgery/27004666"
+  ],
+  "titles": [
+   "PitVQA: A Dataset of Visual Question Answering in Pituitary Surgery"
+  ]
+ },
+ {
+  "id": "DS150",
+  "key": "pitvqaanticipation",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "PitVQA-Anticipation"
+  ],
+  "urls": [
+   "https://rdr.ucl.ac.uk/articles/dataset/PitVQA-Anticipation_dataset_with_images_and_question-answer_pairs/33436735"
+  ],
+  "titles": [
+   "PitVQA-Anticipation dataset with images and question-answer pairs"
+  ]
+ },
+ {
+  "id": "DS151",
+  "key": "rarp45",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "RARP-45"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/tmi.2022.3147640"
+  ],
+  "titles": [
+   "Gesture Recognition in Robotic Surgery With Multimodal Attention"
+  ]
+ },
+ {
+  "id": "DS152",
+  "key": "robotool",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "RoboTool",
+   "RoboTool / semi-synthetic surgical tool data"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn22398986"
+  ],
+  "titles": [
+   "Image Compositing for Segmentation of Surgical Tools without Manual Annotations"
+  ]
+ },
+ {
+  "id": "DS153",
+  "key": "robustmips",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "ROBUST-MIPS"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn64023381"
+  ],
+  "titles": [
+   "Robust Medical Instrument Pose and Segmentation (ROBUST-MIPS)"
+  ]
+ },
+ {
+  "id": "DS154",
+  "key": "robustmis2019",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "ROBUST-MIS 2019"
+  ],
+  "urls": [
+   "https://robustmis2019.grand-challenge.org"
+  ],
+  "titles": [
+   "robustmis2019"
+  ]
+ },
+ {
+  "id": "DS155",
+  "key": "sagescvschallenge",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SAGES CVS Challenge"
+  ],
+  "urls": [
+   "https://zenodo.org/records/10992104"
+  ],
+  "titles": [
+   "The SAGES Critical View of Safety Challenge"
+  ]
+ },
+ {
+  "id": "DS156",
+  "key": "sarrarp50",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SAR-RARP50"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn27618412"
+  ],
+  "titles": [
+   "SAR-RARP50"
+  ]
+ },
+ {
+  "id": "DS157",
+  "key": "scared",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SCARED"
+  ],
+  "urls": [
+   "https://endovissub2019-scared.grand-challenge.org",
+   "https://endovissub2019-scared.grand-challenge.org/"
+  ],
+  "titles": [
+   "Stereo Correspondence and Reconstruction of Endoscopic Data",
+   "endovissub2019-scared"
+  ]
+ },
+ {
+  "id": "DS158",
+  "key": "sics155",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SICS-155"
+  ],
+  "urls": [
+   "https://zenodo.org/records/15087692",
+   "https://zenodo.org/records/19482928"
+  ],
+  "titles": [
+   "Phase Recognition in Small Incision Cataract Surgery Videos",
+   "SICS-155: Phase Recognition in Small Incision Cataract Surgery Videos"
+  ]
+ },
+ {
+  "id": "DS159",
+  "key": "simsurgskill",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SimSurgSkill"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn25127311"
+  ],
+  "titles": [
+   "SimSurgSkill - Objective Surgical Skills Assessment in VR Simulation"
+  ]
+ },
+ {
+  "id": "DS160",
+  "key": "slam",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SLAM"
+  ],
+  "urls": [
+   "https://doi.org/10.1038/s41597-025-05093-7"
+  ],
+  "titles": [
+   "A Comprehensive Video Dataset for Surgical Laparoscopic Action Analysis"
+  ]
+ },
+ {
+  "id": "DS161",
+  "key": "stereoendoscopicdataset",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Stereo Endoscopic Dataset"
+  ],
+  "urls": [
+   "https://zenodo.org/records/7385603"
+  ],
+  "titles": [
+   "Stereo Endoscopic Dataset"
+  ]
+ },
+ {
+  "id": "DS162",
+  "key": "stereomis",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "StereoMIS"
+  ],
+  "urls": [
+   "https://doi.org/10.1007/s11548-023-02919-w",
+   "https://zenodo.org/records/8154924"
+  ],
+  "titles": [
+   "Learning how to robustly estimate camera pose in endoscopic videos",
+   "StereoMIS"
+  ]
+ },
+ {
+  "id": "DS163",
+  "key": "stir",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "STIR"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn65877821",
+   "https://www.synapse.org/#!Synapse:syn74381557"
+  ],
+  "titles": [
+   "2025 STIR Challenge",
+   "2026 STIR Challenge"
+  ]
+ },
+ {
+  "id": "DS164",
+  "key": "surghintannotations",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgHint Annotations (HeiCo, Surgical Gauze)"
+  ],
+  "urls": [
+   "https://zenodo.org/records/22769709"
+  ],
+  "titles": [
+   "SurgHint Annotations for ORena FOCUS Challenge"
+  ]
+ },
+ {
+  "id": "DS165",
+  "key": "surgicalinstrumentmultidomainsegmentation",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Surgical Instrument Multi-Domain Segmentation"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn47193563"
+  ],
+  "titles": [
+   "Surgical Instrument Multi-Domain Segmentation Challenge"
+  ]
+ },
+ {
+  "id": "DS166",
+  "key": "surgicalinstrumentmultidomainsegmentationchallenge",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Surgical Instrument Multi-Domain Segmentation Challenge"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn47193563"
+  ],
+  "titles": [
+   "Surgical Instrument Multi-Domain Segmentation Challenge"
+  ]
+ },
+ {
+  "id": "DS167",
+  "key": "surgripe",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgRIPE"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn51471789"
+  ],
+  "titles": [
+   "Surgical Robot Instrument Pose Estimation (SurgRIPE)"
+  ]
+ }
+]

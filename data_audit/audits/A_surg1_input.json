@@ -1,0 +1,302 @@
+[
+ {
+  "id": "DS108",
+  "key": "admlsir",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "ADM_LSIR"
+  ],
+  "urls": [
+   "https://zenodo.org/records/20470138"
+  ],
+  "titles": [
+   "ADM_LSIR: a physics-inspired laparoscopic aerosol degradation dataset"
+  ]
+ },
+ {
+  "id": "DS109",
+  "key": "ajuset",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "AJU-Set"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/access.2020.2969885"
+  ],
+  "titles": [
+   "Surgical Tools Detection Based on Modulated Anchoring Network in Laparoscopic Videos"
+  ]
+ },
+ {
+  "id": "DS110",
+  "key": "autolaparo",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "AutoLaparo"
+  ],
+  "urls": [
+   "https://doi.org/10.1007/978-3-031-16449-1_46"
+  ],
+  "titles": [
+   "AutoLaparo: A New Dataset of Integrated Multi-tasks for Image-guided Surgical Automation in Laparoscopic Hysterectomy"
+  ]
+ },
+ {
+  "id": "DS111",
+  "key": "bypass40",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Bypass40"
+  ],
+  "urls": [
+   "https://doi.org/10.1007/s11548-021-02388-z"
+  ],
+  "titles": [
+   "Multi-Task Temporal Convolutional Networks for Joint Recognition of Surgical Phases and Steps in Gastric Bypass Procedures"
+  ]
+ },
+ {
+  "id": "DS112",
+  "key": "cadis",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "CaDIS"
+  ],
+  "urls": [
+   "https://doi.org/10.1016/j.media.2021.102053"
+  ],
+  "titles": [
+   "CaDIS: Cataract dataset for surgical RGB-image segmentation"
+  ]
+ },
+ {
+  "id": "DS113",
+  "key": "cataract101",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Cataract-101 (extended labels)"
+  ],
+  "urls": [
+   "https://zenodo.org/records/4984167"
+  ],
+  "titles": [
+   "Cataract101-Extended labels"
+  ]
+ },
+ {
+  "id": "DS114",
+  "key": "cataracts",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "CATARACTS",
+   "CATARACTS 2018",
+   "CATARACTS 2020",
+   "CATARACTS Semantic Segmentation 2020"
+  ],
+  "urls": [
+   "https://cataracts-semantic-segmentation2020.grand-challenge.org",
+   "https://cataracts.grand-challenge.org/",
+   "https://cataracts2018.grand-challenge.org",
+   "https://cataracts2020.grand-challenge.org"
+  ],
+  "titles": [
+   "CATARACTS",
+   "cataracts-semantic-segmentation2020",
+   "cataracts2018",
+   "cataracts2020"
+  ]
+ },
+ {
+  "id": "DS115",
+  "key": "cdscosa",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "CDS-COSA"
+  ],
+  "urls": [
+   "https://zenodo.org/records/20627949"
+  ],
+  "titles": [
+   "CDS-COSA-Dataset-2026"
+  ]
+ },
+ {
+  "id": "DS116",
+  "key": "cholec80",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Cholec80",
+   "Cholec80-Boxes"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/tmi.2016.2593957",
+   "https://zenodo.org/records/13170928"
+  ],
+  "titles": [
+   "Cholec80-Boxes: Bounding-Box Labels for Surgical Tools in Five Cholecystectomy Videos",
+   "EndoNet: A Deep Architecture for Recognition Tasks on Laparoscopic Videos"
+  ]
+ },
+ {
+  "id": "DS117",
+  "key": "cholect50",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "CholecT50",
+   "CholecTriplet2021",
+   "CholecTriplet2022"
+  ],
+  "urls": [
+   "https://cholectriplet2021.grand-challenge.org",
+   "https://cholectriplet2021.grand-challenge.org/",
+   "https://cholectriplet2022.grand-challenge.org/",
+   "https://doi.org/10.1016/j.media.2022.102433"
+  ],
+  "titles": [
+   "CholecTriplet 2021",
+   "CholecTriplet2022: Surgical Action Triplet Detection",
+   "Rendezvous: Attention mechanisms for the recognition of surgical action triplets in endoscopic videos",
+   "cholectriplet2021"
+  ]
+ },
+ {
+  "id": "DS118",
+  "key": "cholectrack20",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "CholecTrack20"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn53182642"
+  ],
+  "titles": [
+   "CholecTrack20 Dataset for Multi-Class Multiple Tool Tracking in Laparoscopic Surgery"
+  ]
+ },
+ {
+  "id": "DS119",
+  "key": "dreaming",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "DREAMING"
+  ],
+  "urls": [
+   "https://dreaming.grand-challenge.org/"
+  ],
+  "titles": [
+   "Diminished Reality for Emerging Applications in Medicine"
+  ]
+ },
+ {
+  "id": "DS120",
+  "key": "drends",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "DRENDS"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn74545348"
+  ],
+  "titles": [
+   "RoDEO"
+  ]
+ },
+ {
+  "id": "DS121",
+  "key": "egosurgeryphase",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "EgoSurgery-Phase"
+  ],
+  "urls": [
+   "https://doi.org/10.1007/978-3-031-72089-5_18"
+  ],
+  "titles": [
+   "EgoSurgery-Phase: A Dataset of Surgical Phase Recognition from Egocentric Open Surgery Videos"
+  ]
+ },
+ {
+  "id": "DS122",
+  "key": "endoscopicpituitarysurgeryonahighfidelitybenchtopphantom",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Endoscopic Pituitary Surgery on a High-fidelity Bench-top Phantom"
+  ],
+  "urls": [
+   "https://rdr.ucl.ac.uk/articles/dataset/Endoscopic_Pituitary_Surgery_on_a_High-fidelity_Bench-top_Phantom/26511049"
+  ],
+  "titles": [
+   "Endoscopic Pituitary Surgery on a High-fidelity Bench-top Phantom"
+  ]
+ },
+ {
+  "id": "DS123",
+  "key": "endovis2015instrument",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "EndoVis 2015 Instrument"
+  ],
+  "urls": [
+   "http://endovissub-instrument.grand-challenge.org"
+  ],
+  "titles": [
+   "endovissub-instrument"
+  ]
+ },
+ {
+  "id": "DS124",
+  "key": "endovis2017kidneyboundarydetection",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "EndoVis 2017 Kidney Boundary Detection"
+  ],
+  "urls": [
+   "http://endovissub2017-kidneyboundarydetection.grand-challenge.org"
+  ],
+  "titles": [
+   "endovissub2017-kidneyboundarydetection"
+  ]
+ },
+ {
+  "id": "DS125",
+  "key": "endovis2017roboticinstrumentsegmentation",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "EndoVis 2017 Robotic Instrument Segmentation"
+  ],
+  "urls": [
+   "https://endovissub2017-roboticinstrumentsegmentation.grand-challenge.org"
+  ],
+  "titles": [
+   "endovissub2017-roboticinstrumentsegmentation"
+  ]
+ },
+ {
+  "id": "DS126",
+  "key": "endovis2017surgicalworkflow",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "EndoVis 2017 Surgical Workflow"
+  ],
+  "urls": [
+   "https://endovissub2017-workflow.grand-challenge.org"
+  ],
+  "titles": [
+   "endovissub2017-workflow"
+  ]
+ },
+ {
+  "id": "DS127",
+  "key": "endovis2018roboticscenesegmentation",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "EndoVis 2018 Robotic Scene Segmentation"
+  ],
+  "urls": [
+   "https://endovissub2018-roboticscenesegmentation.grand-challenge.org/home"
+  ],
+  "titles": [
+   "endovissub2018-roboticscenesegmentation"
+  ]
+ }
+]
