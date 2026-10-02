@@ -1,0 +1,24 @@
+entries 739 full-video mp4 403 compressed 0
+0 Full_Videos/Center5/Center5_34/Center5_034.mp4 1826.5 s 91323 frames req=9 bytes=0.8MB
+20 Full_Videos/Center5/Center5_98/Center5_098_v01.mp4 1823.3 s 91163 frames req=109 bytes=12.9MB
+40 Full_Videos/Center5/Center5_112/Center5_112_v01.mp4 1823.4 s 91171 frames req=203 bytes=22.7MB
+60 Full_Videos/Center5/Center5_123/Center5_123_v01.mp4 1824.9 s 91245 frames req=303 bytes=33.6MB
+80 Full_Videos/Center5/Center5_126/Center5_126_v02.mp4 749.5 s 37475 frames req=415 bytes=44.6MB
+100 Full_Videos/Center5/Center5_69/Center5_069.mp4 1826.1 s 91307 frames req=511 bytes=54.8MB
+120 Full_Videos/Center5/Center5_9/Center5_009.mp4 1822.6 s 91128 frames req=607 bytes=66.0MB
+140 Full_Videos/Center5/Center5_121/Center5_121_v02.mp4 743.2 s 37159 frames req=707 bytes=77.2MB
+160 Full_Videos/Center4/Center4_005/Center4_005.mp4 1660.6 s 83032 frames req=802 bytes=89.2MB
+180 Full_Videos/Center4/Center4_047/Center4_047.mp4 1874.7 s 93735 frames req=914 bytes=110.0MB
+200 Full_Videos/Center4/Center4_028/Center4_028.mp4 762.6 s 38130 frames req=1021 bytes=127.2MB
+220 Full_Videos/Center4/Center4_042/Center4_042.mp4 1729.2 s 86458 frames req=1131 bytes=144.3MB
+240 Full_Videos/Center1/Center1_042/Center1_042.mp4 299.7 s 8702 frames req=1221 bytes=151.0MB
+260 Full_Videos/Center1/Center1_031/Center1_031.mp4 300.3 s 8995 frames req=1312 bytes=152.5MB
+280 Full_Videos/Center3/Center3_8/Center3_008.mp4 1028.1 s 25702 frames req=1396 bytes=154.6MB
+300 Full_Videos/Center3/Center3_42/Center3_042.mp4 2578.4 s 64460 frames req=1493 bytes=170.8MB
+320 Full_Videos/Center3/Center3_21/Center3_021.mp4 2520.9 s 63023 frames req=1590 bytes=187.3MB
+340 Full_Videos/Center2/Center2_14/Center2_014.mp4 1805.4 s 45135 frames req=1689 bytes=193.8MB
+360 Full_Videos/Center2/Center2_13/Center2_013_v02.mp4 1600.8 s 40020 frames req=1796 bytes=202.0MB
+380 Full_Videos/Center2/Center2_38/Center2_038_v03.mp4 446.9 s 11172 frames req=1904 bytes=208.3MB
+400 Full_Videos/Center2/Center2_36/Center2_036_v04.mp4 900.2 s 22506 frames req=2007 bytes=213.3MB
+done 403 files requests=2016 bytes_read=213.9MB
+exit=0

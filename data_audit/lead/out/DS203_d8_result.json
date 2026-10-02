@@ -1,0 +1,154 @@
+{
+ "primary_counted_centres2to5": {
+  "V": 0.1545393503233757,
+  "trajectories": 278,
+  "table_weighted": {
+   "2": {
+    "before": 13.633,
+    "after": 35.367,
+    "n": 49
+   },
+   "3": {
+    "before": 11.059,
+    "after": 29.941,
+    "n": 41
+   },
+   "4": {
+    "before": 19.126,
+    "after": 51.874,
+    "n": 71
+   },
+   "5": {
+    "before": 16.742,
+    "after": 100.258,
+    "n": 117
+   }
+  }
+ },
+ "descriptive_strict_single_file": {
+  "V": 0.15142776260592855,
+  "trajectories": 226,
+  "table_weighted": {
+   "2": {
+    "before": 8.368,
+    "after": 22.632,
+    "n": 31
+   },
+   "3": {
+    "before": 11.059,
+    "after": 29.941,
+    "n": 41
+   },
+   "4": {
+    "before": 19.126,
+    "after": 51.874,
+    "n": 71
+   },
+   "5": {
+    "before": 11.547,
+    "after": 71.453,
+    "n": 83
+   }
+  }
+ },
+ "descriptive_all330": {
+  "V": 0.2284152469747712,
+  "trajectories": 329,
+  "table_weighted": {
+   "1": {
+    "before": 22.382,
+    "after": 28.618,
+    "n": 51
+   },
+   "2": {
+    "before": 13.633,
+    "after": 35.367,
+    "n": 49
+   },
+   "3": {
+    "before": 11.059,
+    "after": 29.941,
+    "n": 41
+   },
+   "4": {
+    "before": 19.126,
+    "after": 51.874,
+    "n": 71
+   },
+   "5": {
+    "before": 16.742,
+    "after": 100.258,
+    "n": 117
+   }
+  }
+ },
+ "D8_pass_primary": true,
+ "flags": [
+  {
+   "case": [
+    3,
+    20
+   ],
+   "issue": "timestamp 304.1s > duration 255.8s of Center3_020.mp4"
+  }
+ ],
+ "files_probed": 403,
+ "cases_with_files": 330,
+ "fps_distribution": [
+  [
+   50.0,
+   227
+  ],
+  [
+   25.0,
+   124
+  ],
+  [
+   29.95,
+   3
+  ],
+  [
+   29.53,
+   2
+  ],
+  [
+   29.32,
+   2
+  ],
+  [
+   29.25,
+   2
+  ],
+  [
+   29.47,
+   2
+  ],
+  [
+   29.28,
+   2
+  ]
+ ],
+ "total_frames_primary": 22008906,
+ "frac_before_by_center": {
+  "1": {
+   "mean": 0.439,
+   "median": 0.498
+  },
+  "2": {
+   "mean": 0.278,
+   "median": 0.221
+  },
+  "3": {
+   "mean": 0.27,
+   "median": 0.226
+  },
+  "4": {
+   "mean": 0.269,
+   "median": 0.221
+  },
+  "5": {
+   "mean": 0.143,
+   "median": 0.098
+  }
+ }
+}
