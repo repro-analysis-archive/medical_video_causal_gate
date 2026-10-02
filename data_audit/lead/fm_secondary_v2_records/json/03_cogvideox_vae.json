@@ -1,0 +1,842 @@
+{
+ "id": "03_cogvideox_vae",
+ "name": "CogVideoX 3D causal VAE (AutoencoderKLCogVideoX; shipped in CogVideoX-2b / CogVideoX-5b)",
+ "version": "zai-org/CogVideoX-2b vae/diffusion_pytorch_model.safetensors (HF repo sha 1137dacfc2c9c012bed6a0793f4ecf2ca8e7ba01, created 2024-08-05, last modified 2024-11-23); the CogVideoX-5b repo (sha 8fc5b281006c82b82d34fd2543d2f0ebb4e7e321) lists the same VAE file (identical LFS sha256 a410e48d...995e; vae config differs only in scaling_factor 1.15258426 vs 0.7)",
+ "paper": {
+  "title": "CogVideoX: Text-to-Video Diffusion Models with An Expert Transformer",
+  "year": 2024,
+  "arxiv": "2408.06072"
+ },
+ "weights_location": {
+  "urls": [
+   "https://huggingface.co/zai-org/CogVideoX-2b (formerly THUDM/CogVideoX-2b; subfolder vae/)",
+   "https://huggingface.co/zai-org/CogVideoX-5b"
+  ],
+  "files_listed": {
+   "CogVideoX-2b vae/diffusion_pytorch_model.safetensors": 862388596,
+   "CogVideoX-5b vae/diffusion_pytorch_model.safetensors": 862388596
+  },
+  "vae_lfs_sha256_both_repos": "a410e48d988c8224cef392b68db0654485cfd41f345f4a3a81d3e6b765bb995e",
+  "gated": false,
+  "private": false,
+  "verified_how": "HF API model listings (metadata only) saved as cogvideox_zai-org__CogVideoX-2b_hfapi.json, cogvideox_zai-org__CogVideoX-5b_hfapi.json; nothing downloaded",
+  "note": "THUDM/* redirects to zai-org/*. Same VAE file size in both repos. Not downloaded.",
+  "quote_ids": [
+   "w_vae2",
+   "w_lfs2",
+   "w_gated2",
+   "w_lfs5",
+   "w_gated5"
+  ],
+  "quotes": [
+   {
+    "id": "w_vae2",
+    "quote": "\"rfilename\": \"vae/diffusion_pytorch_model.safetensors\",",
+    "source_url": "https://huggingface.co/api/models/zai-org/CogVideoX-2b?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_zai-org__CogVideoX-2b_hfapi.json"
+   },
+   {
+    "id": "w_lfs2",
+    "quote": "\"sha256\": \"a410e48d988c8224cef392b68db0654485cfd41f345f4a3a81d3e6b765bb995e\",",
+    "source_url": "https://huggingface.co/api/models/zai-org/CogVideoX-2b?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_zai-org__CogVideoX-2b_hfapi.json"
+   },
+   {
+    "id": "w_gated2",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/zai-org/CogVideoX-2b?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_zai-org__CogVideoX-2b_hfapi.json"
+   },
+   {
+    "id": "w_lfs5",
+    "quote": "\"sha256\": \"a410e48d988c8224cef392b68db0654485cfd41f345f4a3a81d3e6b765bb995e\",",
+    "source_url": "https://huggingface.co/api/models/zai-org/CogVideoX-5b?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_zai-org__CogVideoX-5b_hfapi.json"
+   },
+   {
+    "id": "w_gated5",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/zai-org/CogVideoX-5b?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_zai-org__CogVideoX-5b_hfapi.json"
+   }
+  ]
+ },
+ "licence": {
+  "id": "Apache-2.0 (CogVideoX-2B incl. its VAE module); 'The CogVideoX License' (CogVideoX-5B transformer)",
+  "url": "https://huggingface.co/zai-org/CogVideoX-2b/blob/main/LICENSE ; https://huggingface.co/THUDM/CogVideoX-5b/blob/main/LICENSE",
+  "commercial": "Apache-2.0 for the 2B VAE; 5B licence requires registration for commercial use",
+  "non_commercial_only": false,
+  "restrictions": "5B licence: no military/illegal use, and a clause on China's national security; Apache-2.0 for the VAE as distributed with 2B",
+  "gating": "none",
+  "quote_ids": [
+   "lic_2b",
+   "lic_2b_text",
+   "lic_5b_research",
+   "lic_5b_restr"
+  ],
+  "quotes": [
+   {
+    "id": "lic_2b",
+    "quote": "The CogVideoX-2B model (including its corresponding Transformers module and VAE module) is released under the [Apache 2.0 License](LICENSE).",
+    "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_README.md"
+   },
+   {
+    "id": "lic_2b_text",
+    "quote": "Apache License",
+    "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/LICENSE",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_LICENSE.txt"
+   },
+   {
+    "id": "lic_5b_research",
+    "quote": "This license allows you to freely use all open-source models in this repository for academic research.",
+    "source_url": "https://huggingface.co/zai-org/CogVideoX-5b/raw/main/LICENSE",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-5b_LICENSE.txt"
+   },
+   {
+    "id": "lic_5b_restr",
+    "quote": "You will not use, copy, modify, merge, publish, distribute, reproduce, or create derivative works of the Software, in whole or in part, for any military, or illegal purposes.",
+    "source_url": "https://huggingface.co/zai-org/CogVideoX-5b/raw/main/LICENSE",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-5b_LICENSE.txt"
+   }
+  ]
+ },
+ "domain": {
+  "value": "3D causal video VAE of the CogVideoX text-to-video diffusion transformer; trained on general video (~35M filtered clips) with image data from LAION-5B / COYO-700M for the generative model",
+  "quote_ids": [
+   "arch_8x8x4",
+   "arch_vae_class",
+   "data_main"
+  ],
+  "quotes": [
+   {
+    "id": "arch_8x8x4",
+    "quote": "It comprises an encoder, a decoder and a latent space regularizer, achieving a 8 × \\times 8 × \\times 4 compression from pixels to the latents.",
+    "source_url": "https://arxiv.org/html/2408.06072",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt"
+   },
+   {
+    "id": "arch_vae_class",
+    "quote": "\"_class_name\": \"AutoencoderKLCogVideoX\",",
+    "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/vae/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_vae_config.json"
+   },
+   {
+    "id": "data_main",
+    "quote": "3.4 Data We construct a collection of relatively high-quality video clips with text descriptions with video filters and recaption models. After filtering, approximately 35M single-shot clips remain, with each clip averaging about 6 seconds. We additionally use 2B images filtered with aesthetics score from LAION-5B ( Schuhmann et al., 2022 ) and COYO-700M ( Byeon et al., 2022 ) datasets to assist training.",
+    "source_url": "https://arxiv.org/html/2408.06072",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt"
+   }
+  ]
+ },
+ "architecture": {
+  "type": "3D causal convolutional VAE (KL), temporally causal conv",
+  "representation": "VAE encoder latents (16 channels), 8x8 spatial x 4x temporal"
+ },
+ "pretraining_data": {
+  "summary": "~35M filtered single-shot video clips (source not named) + 2B images from LAION-5B and COYO-700M. VAE training data not separately stated beyond 256x256, 17-frame video training.",
+  "form": "described only for video (images: named datasets)"
+ },
+ "pretraining_data_quote": {
+  "quote_ids": [
+   "data_main",
+   "arch_vae_train",
+   "in_vae_fps"
+  ],
+  "quotes": [
+   {
+    "id": "data_main",
+    "quote": "3.4 Data We construct a collection of relatively high-quality video clips with text descriptions with video filters and recaption models. After filtering, approximately 35M single-shot clips remain, with each clip averaging about 6 seconds. We additionally use 2B images filtered with aesthetics score from LAION-5B ( Schuhmann et al., 2022 ) and COYO-700M ( Byeon et al., 2022 ) datasets to assist training.",
+    "source_url": "https://arxiv.org/html/2408.06072",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt"
+   },
+   {
+    "id": "arch_vae_train",
+    "quote": "During training, we first train a 3D VAE at 256 × 256 256\\times 256 resolution and 17 17 frames to save computation.",
+    "source_url": "https://arxiv.org/html/2408.06072",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt"
+   },
+   {
+    "id": "in_vae_fps",
+    "quote": "Randomly select 8 or 16 fps to enhance the model’s robustness.",
+    "source_url": "https://arxiv.org/html/2408.06072",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt"
+   }
+  ]
+ },
+ "medical_video_in_data": {
+  "answer": "NOT MENTIONED",
+  "basis": "Search of saved paper HTML full text for medic|surg|endoscop|laparoscop|clinic|hospital|health: no hits. Negative-label filters remove editing, lectures, text-dominated, screenshots.",
+  "term_search": {
+   "pattern": "medical|surgical|surgery|endoscop|laparoscop|clinical|health|hospital",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_README.md": []
+   }
+  }
+ },
+ "appendix300_possible": {
+  "answer": "UNKNOWN",
+  "basis_class": "undisclosed",
+  "basis": "video source of the 35M clips not disclosed. Context: paper v1 2024-08-12, weights 2024-08, before the OPARA issue 2026-04-29.",
+  "quote_ids": [
+   "data_main"
+  ],
+  "quotes": [
+   {
+    "id": "data_main",
+    "quote": "3.4 Data We construct a collection of relatively high-quality video clips with text descriptions with video filters and recaption models. After filtering, approximately 35M single-shot clips remain, with each clip averaging about 6 seconds. We additionally use 2B images filtered with aesthetics score from LAION-5B ( Schuhmann et al., 2022 ) and COYO-700M ( Byeon et al., 2022 ) datasets to assist training.",
+    "source_url": "https://arxiv.org/html/2408.06072",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt"
+   }
+  ]
+ },
+ "appendix300_check": {
+  "answer": "UNKNOWN",
+  "quote_or_statement": "the documented data list does not mention DS203/Appendix300",
+  "basis_class": "undisclosed",
+  "basis": "video source of the 35M clips not disclosed. Context: paper v1 2024-08-12, weights 2024-08, before the OPARA issue 2026-04-29.",
+  "term_search": {
+   "pattern": "appendix ?300|DS203|OPARA|appendectom|appendic",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_README.md": []
+   }
+  },
+  "quote_ids": [
+   "data_main"
+  ],
+  "quotes": [
+   {
+    "id": "data_main",
+    "quote": "3.4 Data We construct a collection of relatively high-quality video clips with text descriptions with video filters and recaption models. After filtering, approximately 35M single-shot clips remain, with each clip averaging about 6 seconds. We additionally use 2B images filtered with aesthetics score from LAION-5B ( Schuhmann et al., 2022 ) and COYO-700M ( Byeon et al., 2022 ) datasets to assist training.",
+    "source_url": "https://arxiv.org/html/2408.06072",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt"
+   }
+  ]
+ },
+ "input": {
+  "frame_size": {
+   "value": "720x480 for CogVideoX-2b/5b generation (vae config sample 480x720); VAE trained at 256x256 and encodes larger frames without retraining",
+   "quote_ids": [
+    "arch_res",
+    "in_sample_hw",
+    "arch_vae_train"
+   ],
+   "quotes": [
+    {
+     "id": "arch_res",
+     "quote": "720 x 480, no support for other resolutions (including fine-tuning)",
+     "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_README.md"
+    },
+    {
+     "id": "in_sample_hw",
+     "quote": "\"sample_height\": 480, \"sample_width\": 720,",
+     "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/vae/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_vae_config.json"
+    },
+    {
+     "id": "arch_vae_train",
+     "quote": "During training, we first train a 3D VAE at 256 × 256 256\\times 256 resolution and 17 17 frames to save computation.",
+     "source_url": "https://arxiv.org/html/2408.06072",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt"
+    }
+   ]
+  },
+  "frame_rate_or_sampling": {
+   "value": "VAE training: fps randomly 8 or 16; CogVideoX-2b/5b generation at 8 fps (49 frames = 6 s)",
+   "quote_ids": [
+    "in_vae_fps",
+    "in_fps_card",
+    "in_len_card"
+   ],
+   "quotes": [
+    {
+     "id": "in_vae_fps",
+     "quote": "Randomly select 8 or 16 fps to enhance the model’s robustness.",
+     "source_url": "https://arxiv.org/html/2408.06072",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt"
+    },
+    {
+     "id": "in_fps_card",
+     "quote": "<td style=\"text-align: center;\">Frame Rate</td> <td colspan=\"2\" style=\"text-align: center;\">8 Frames per Second</td>",
+     "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_README.md"
+    },
+    {
+     "id": "in_len_card",
+     "quote": "<td style=\"text-align: center;\">Video Length</td> <td colspan=\"2\" style=\"text-align: center;\">6 Seconds</td>",
+     "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_README.md"
+    }
+   ]
+  },
+  "clip_length_frames": {
+   "value": "49 frames for CogVideoX-2b/5b; VAE trained on 17-frame clips then finetuned on 161-frame videos (context parallel); causal, latent frames = (T-1)/4 + 1",
+   "quote_ids": [
+    "in_frames_card",
+    "in_sample_frames",
+    "arch_vae_train",
+    "in_vae_161"
+   ],
+   "quotes": [
+    {
+     "id": "in_frames_card",
+     "quote": "num_frames=49,",
+     "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_README.md"
+    },
+    {
+     "id": "in_sample_frames",
+     "quote": "\"sample_frames\": 49, \"sample_height\": 60, \"sample_width\": 90,",
+     "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/transformer/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_transformer_config.json"
+    },
+    {
+     "id": "arch_vae_train",
+     "quote": "During training, we first train a 3D VAE at 256 × 256 256\\times 256 resolution and 17 17 frames to save computation.",
+     "source_url": "https://arxiv.org/html/2408.06072",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt"
+    },
+    {
+     "id": "in_vae_161",
+     "quote": "Therefore, we conduct a two-stage training by first training on 17-frame videos and finetuning by context parallel on 161-frame videos.",
+     "source_url": "https://arxiv.org/html/2408.06072",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt"
+    }
+   ]
+  },
+  "temporal_compression": {
+   "value": "4x (causal; 49 frames -> 13 latent frames)",
+   "quote_ids": [
+    "arch_tcomp",
+    "arch_8x8x4",
+    "in_latent_t"
+   ],
+   "quotes": [
+    {
+     "id": "arch_tcomp",
+     "quote": "\"temporal_compression_ratio\": 4,",
+     "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/vae/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_vae_config.json"
+    },
+    {
+     "id": "arch_8x8x4",
+     "quote": "It comprises an encoder, a decoder and a latent space regularizer, achieving a 8 × \\times 8 × \\times 4 compression from pixels to the latents.",
+     "source_url": "https://arxiv.org/html/2408.06072",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt"
+    },
+    {
+     "id": "in_latent_t",
+     "quote": "(num_frames - 1) // self.vae_scale_factor_temporal + 1,",
+     "source_url": "https://raw.githubusercontent.com/huggingface/diffusers/v0.30.0/src/diffusers/pipelines/cogvideo/pipeline_cogvideox.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_diffusers_v0.30.0_pipeline_cogvideox.py.txt"
+    }
+   ]
+  },
+  "spatial_compression": {
+   "value": "8x8",
+   "quote_ids": [
+    "arch_8x8x4",
+    "in_latent_hw"
+   ],
+   "quotes": [
+    {
+     "id": "arch_8x8x4",
+     "quote": "It comprises an encoder, a decoder and a latent space regularizer, achieving a 8 × \\times 8 × \\times 4 compression from pixels to the latents.",
+     "source_url": "https://arxiv.org/html/2408.06072",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt"
+    },
+    {
+     "id": "in_latent_hw",
+     "quote": "height // self.vae_scale_factor_spatial, width // self.vae_scale_factor_spatial,",
+     "source_url": "https://raw.githubusercontent.com/huggingface/diffusers/v0.30.0/src/diffusers/pipelines/cogvideo/pipeline_cogvideox.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_diffusers_v0.30.0_pipeline_cogvideox.py.txt"
+    }
+   ]
+  }
+ },
+ "embedding_dim": {
+  "value": "49 frames x 480x720: 16 channels x 13 x 60 x 90 = 1,123,200 values; generally 16 x ((T-1)/4 + 1) x H/8 x W/8",
+  "derivation": "latent_channels 16; latent frames (num_frames - 1) // 4 + 1 (diffusers pipeline); transformer config sample_height 60 / sample_width 90 latent grid for 480x720",
+  "quote_ids": [
+   "arch_latent",
+   "in_latent_t",
+   "in_latent_hw",
+   "in_sample_frames"
+  ],
+  "quotes": [
+   {
+    "id": "arch_latent",
+    "quote": "\"latent_channels\": 16,",
+    "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/vae/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_vae_config.json"
+   },
+   {
+    "id": "in_latent_t",
+    "quote": "(num_frames - 1) // self.vae_scale_factor_temporal + 1,",
+    "source_url": "https://raw.githubusercontent.com/huggingface/diffusers/v0.30.0/src/diffusers/pipelines/cogvideo/pipeline_cogvideox.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_diffusers_v0.30.0_pipeline_cogvideox.py.txt"
+   },
+   {
+    "id": "in_latent_hw",
+    "quote": "height // self.vae_scale_factor_spatial, width // self.vae_scale_factor_spatial,",
+    "source_url": "https://raw.githubusercontent.com/huggingface/diffusers/v0.30.0/src/diffusers/pipelines/cogvideo/pipeline_cogvideox.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_diffusers_v0.30.0_pipeline_cogvideox.py.txt"
+   },
+   {
+    "id": "in_sample_frames",
+    "quote": "\"sample_frames\": 49, \"sample_height\": 60, \"sample_width\": 90,",
+    "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/transformer/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_transformer_config.json"
+   }
+  ]
+ },
+ "params": {
+  "value": "216M for the CogVideoX 4x8x8 tokenizer (whole VAE), documented only by NVIDIA's Cosmos card / paper runtime table (third-party); not stated by the CogVideoX authors. Encoder-only count not documented (vae fp32 file 862 MB is consistent with ~216M).",
+  "scope": "whole VAE (encoder + decoder), third-party documentation",
+  "quote_ids": [
+   "arch_params"
+  ],
+  "quotes": [
+   {
+    "id": "arch_params",
+    "quote": "| CogVideoX      | 720x1280   | 4×8×8            | 216M       | 414       |",
+    "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+   }
+  ]
+ },
+ "flops_per_input_if_documented": null,
+ "flops_note": "no FLOPs/MACs in the saved CogVideoX paper, card or configs. Third-party runtime proxy (Cosmos card): 414 ms per video frame for the CogVideoX 4x8x8 tokenizer at 720x1280 on one A100-80GB (encode+decode).",
+ "eligibility": {
+  "C1_open_weights": {
+   "status": "PASS",
+   "basis": "HF API lists vae/diffusion_pytorch_model.safetensors, gated=False",
+   "quote_ids": [
+    "w_vae2",
+    "w_gated2"
+   ],
+   "quotes": [
+    {
+     "id": "w_vae2",
+     "quote": "\"rfilename\": \"vae/diffusion_pytorch_model.safetensors\",",
+     "source_url": "https://huggingface.co/api/models/zai-org/CogVideoX-2b?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_zai-org__CogVideoX-2b_hfapi.json"
+    },
+    {
+     "id": "w_gated2",
+     "quote": "\"gated\": false,",
+     "source_url": "https://huggingface.co/api/models/zai-org/CogVideoX-2b?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_zai-org__CogVideoX-2b_hfapi.json"
+    }
+   ]
+  },
+  "C2_licence_research_use": {
+   "status": "PASS",
+   "basis": "Apache-2.0 for the 2B VAE; 5B licence explicitly allows academic research",
+   "quote_ids": [
+    "lic_2b",
+    "lic_5b_research"
+   ],
+   "quotes": [
+    {
+     "id": "lic_2b",
+     "quote": "The CogVideoX-2B model (including its corresponding Transformers module and VAE module) is released under the [Apache 2.0 License](LICENSE).",
+     "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_README.md"
+    },
+    {
+     "id": "lic_5b_research",
+     "quote": "This license allows you to freely use all open-source models in this repository for academic research.",
+     "source_url": "https://huggingface.co/zai-org/CogVideoX-5b/raw/main/LICENSE",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-5b_LICENSE.txt"
+    }
+   ]
+  },
+  "C3_domain_secondary": {
+   "status": "PASS",
+   "basis": "3D video VAE of a text-to-video diffusion model trained on general video",
+   "quote_ids": [
+    "arch_8x8x4",
+    "data_main"
+   ],
+   "quotes": [
+    {
+     "id": "arch_8x8x4",
+     "quote": "It comprises an encoder, a decoder and a latent space regularizer, achieving a 8 × \\times 8 × \\times 4 compression from pixels to the latents.",
+     "source_url": "https://arxiv.org/html/2408.06072",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt"
+    },
+    {
+     "id": "data_main",
+     "quote": "3.4 Data We construct a collection of relatively high-quality video clips with text descriptions with video filters and recaption models. After filtering, approximately 35M single-shot clips remain, with each clip averaging about 6 seconds. We additionally use 2B images filtered with aesthetics score from LAION-5B ( Schuhmann et al., 2022 ) and COYO-700M ( Byeon et al., 2022 ) datasets to assist training.",
+     "source_url": "https://arxiv.org/html/2408.06072",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt"
+    }
+   ]
+  },
+  "C4_documented_pretraining_data": {
+   "status": "FAIL",
+   "basis": "video data described only as a filtered collection of ~35M clips; only the image datasets (LAION-5B, COYO-700M) are named",
+   "quote_ids": [
+    "data_main"
+   ],
+   "quotes": [
+    {
+     "id": "data_main",
+     "quote": "3.4 Data We construct a collection of relatively high-quality video clips with text descriptions with video filters and recaption models. After filtering, approximately 35M single-shot clips remain, with each clip averaging about 6 seconds. We additionally use 2B images filtered with aesthetics score from LAION-5B ( Schuhmann et al., 2022 ) and COYO-700M ( Byeon et al., 2022 ) datasets to assist training.",
+     "source_url": "https://arxiv.org/html/2408.06072",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt"
+    }
+   ]
+  },
+  "eligible": "NO (fails C4 for the video data)"
+ },
+ "changes_vs_v1": [
+  "sources re-fetched into /home fm_sources/secondary (all raw sha256 equal to v1); added the CogVideoX-2b Apache-2.0 LICENSE text, CogVideoX-5b vae config, 2b transformer config and the diffusers v0.30.0 pipeline code",
+  "clarification (architecture.frames_per_clip): v1 said 'VAE first trained on 17 frames'; the paper adds that the VAE is then finetuned by context parallel on 161-frame videos and that VAE training randomly selects 8 or 16 fps. Recorded in input fields; eligibility unaffected.",
+  "clarification (params): the 216M figure is third-party (NVIDIA Cosmos card/paper), not a CogVideoX-authored statement; v1 already cited the Cosmos card, now stated explicitly",
+  "added: the VAE file is byte-identical (same LFS sha256) in the 2b and 5b repos, so the Apache-2.0 2B licence statement covers the same weights",
+  "no change to any eligibility status or Appendix300 answer"
+ ],
+ "quotes": [
+  {
+   "id": "lic_2b",
+   "quote": "The CogVideoX-2B model (including its corresponding Transformers module and VAE module) is released under the [Apache 2.0 License](LICENSE).",
+   "source_file": "cogvideox_CogVideoX-2b_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_README.md",
+   "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/README.md",
+   "final_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/README.md",
+   "raw_sha256": "63167d42d73fd434096761b693142a69a96275b367c6fda32347d4b9dbce262d",
+   "copy_sha256": "63167d42d73fd434096761b693142a69a96275b367c6fda32347d4b9dbce262d",
+   "retrieved_utc": "2026-10-02T09:33:47+00:00",
+   "v1_source_sha256": "63167d42d73fd434096761b693142a69a96275b367c6fda32347d4b9dbce262d",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "lic_5b_research",
+   "quote": "This license allows you to freely use all open-source models in this repository for academic research.",
+   "source_file": "cogvideox_CogVideoX-5b_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-5b_LICENSE.txt",
+   "source_url": "https://huggingface.co/zai-org/CogVideoX-5b/raw/main/LICENSE",
+   "final_url": "https://huggingface.co/zai-org/CogVideoX-5b/raw/main/LICENSE",
+   "raw_sha256": "f1702a540abe80caa3458a4eb539d8a138ffeab99d971d14a99083726814037e",
+   "copy_sha256": "f1702a540abe80caa3458a4eb539d8a138ffeab99d971d14a99083726814037e",
+   "retrieved_utc": "2026-10-02T09:33:49+00:00",
+   "v1_source_sha256": "f1702a540abe80caa3458a4eb539d8a138ffeab99d971d14a99083726814037e",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "lic_5b_restr",
+   "quote": "You will not use, copy, modify, merge, publish, distribute, reproduce, or create derivative works of the Software, in whole or in part, for any military, or illegal purposes.",
+   "source_file": "cogvideox_CogVideoX-5b_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-5b_LICENSE.txt",
+   "source_url": "https://huggingface.co/zai-org/CogVideoX-5b/raw/main/LICENSE",
+   "final_url": "https://huggingface.co/zai-org/CogVideoX-5b/raw/main/LICENSE",
+   "raw_sha256": "f1702a540abe80caa3458a4eb539d8a138ffeab99d971d14a99083726814037e",
+   "copy_sha256": "f1702a540abe80caa3458a4eb539d8a138ffeab99d971d14a99083726814037e",
+   "retrieved_utc": "2026-10-02T09:33:49+00:00",
+   "v1_source_sha256": "f1702a540abe80caa3458a4eb539d8a138ffeab99d971d14a99083726814037e",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_vae_class",
+   "quote": "\"_class_name\": \"AutoencoderKLCogVideoX\",",
+   "source_file": "cogvideox_CogVideoX-2b_vae_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_vae_config.json",
+   "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/vae/config.json",
+   "final_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/vae/config.json",
+   "raw_sha256": "fb212585242726f5d963271357731c78481da25cc29bdd5c2b9cb058c43f8688",
+   "copy_sha256": "fb212585242726f5d963271357731c78481da25cc29bdd5c2b9cb058c43f8688",
+   "retrieved_utc": "2026-10-02T09:33:49+00:00",
+   "v1_source_sha256": "fb212585242726f5d963271357731c78481da25cc29bdd5c2b9cb058c43f8688",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_latent",
+   "quote": "\"latent_channels\": 16,",
+   "source_file": "cogvideox_CogVideoX-2b_vae_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_vae_config.json",
+   "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/vae/config.json",
+   "final_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/vae/config.json",
+   "raw_sha256": "fb212585242726f5d963271357731c78481da25cc29bdd5c2b9cb058c43f8688",
+   "copy_sha256": "fb212585242726f5d963271357731c78481da25cc29bdd5c2b9cb058c43f8688",
+   "retrieved_utc": "2026-10-02T09:33:49+00:00",
+   "v1_source_sha256": "fb212585242726f5d963271357731c78481da25cc29bdd5c2b9cb058c43f8688",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_tcomp",
+   "quote": "\"temporal_compression_ratio\": 4,",
+   "source_file": "cogvideox_CogVideoX-2b_vae_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_vae_config.json",
+   "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/vae/config.json",
+   "final_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/vae/config.json",
+   "raw_sha256": "fb212585242726f5d963271357731c78481da25cc29bdd5c2b9cb058c43f8688",
+   "copy_sha256": "fb212585242726f5d963271357731c78481da25cc29bdd5c2b9cb058c43f8688",
+   "retrieved_utc": "2026-10-02T09:33:49+00:00",
+   "v1_source_sha256": "fb212585242726f5d963271357731c78481da25cc29bdd5c2b9cb058c43f8688",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_8x8x4",
+   "quote": "It comprises an encoder, a decoder and a latent space regularizer, achieving a 8 × \\times 8 × \\times 4 compression from pixels to the latents.",
+   "source_file": "cogvideox_arxiv_2408.06072_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2408.06072",
+   "final_url": "https://arxiv.org/html/2408.06072",
+   "raw_sha256": "fd64b3385df4ae4e5a3e91d01164fd25d56a87035511deeae9240128347a26d8",
+   "copy_sha256": "170a85292699111083fcefcdd40253bd3c5152364d7766de6a32a856319ccbdc",
+   "retrieved_utc": "2026-10-02T09:33:50+00:00",
+   "v1_source_sha256": "fd64b3385df4ae4e5a3e91d01164fd25d56a87035511deeae9240128347a26d8",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_res",
+   "quote": "720 x 480, no support for other resolutions (including fine-tuning)",
+   "source_file": "cogvideox_CogVideoX-2b_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_README.md",
+   "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/README.md",
+   "final_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/README.md",
+   "raw_sha256": "63167d42d73fd434096761b693142a69a96275b367c6fda32347d4b9dbce262d",
+   "copy_sha256": "63167d42d73fd434096761b693142a69a96275b367c6fda32347d4b9dbce262d",
+   "retrieved_utc": "2026-10-02T09:33:47+00:00",
+   "v1_source_sha256": "63167d42d73fd434096761b693142a69a96275b367c6fda32347d4b9dbce262d",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_vae_train",
+   "quote": "During training, we first train a 3D VAE at 256 × 256 256\\times 256 resolution and 17 17 frames to save computation.",
+   "source_file": "cogvideox_arxiv_2408.06072_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2408.06072",
+   "final_url": "https://arxiv.org/html/2408.06072",
+   "raw_sha256": "fd64b3385df4ae4e5a3e91d01164fd25d56a87035511deeae9240128347a26d8",
+   "copy_sha256": "170a85292699111083fcefcdd40253bd3c5152364d7766de6a32a856319ccbdc",
+   "retrieved_utc": "2026-10-02T09:33:50+00:00",
+   "v1_source_sha256": "fd64b3385df4ae4e5a3e91d01164fd25d56a87035511deeae9240128347a26d8",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_params",
+   "quote": "| CogVideoX      | 720x1280   | 4×8×8            | 216M       | 414       |",
+   "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "final_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "raw_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "copy_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "retrieved_utc": "2026-10-02T09:29:56+00:00",
+   "v1_source_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "data_main",
+   "quote": "3.4 Data We construct a collection of relatively high-quality video clips with text descriptions with video filters and recaption models. After filtering, approximately 35M single-shot clips remain, with each clip averaging about 6 seconds. We additionally use 2B images filtered with aesthetics score from LAION-5B ( Schuhmann et al., 2022 ) and COYO-700M ( Byeon et al., 2022 ) datasets to assist training.",
+   "source_file": "cogvideox_arxiv_2408.06072_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2408.06072",
+   "final_url": "https://arxiv.org/html/2408.06072",
+   "raw_sha256": "fd64b3385df4ae4e5a3e91d01164fd25d56a87035511deeae9240128347a26d8",
+   "copy_sha256": "170a85292699111083fcefcdd40253bd3c5152364d7766de6a32a856319ccbdc",
+   "retrieved_utc": "2026-10-02T09:33:50+00:00",
+   "v1_source_sha256": "fd64b3385df4ae4e5a3e91d01164fd25d56a87035511deeae9240128347a26d8",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "w_vae2",
+   "quote": "\"rfilename\": \"vae/diffusion_pytorch_model.safetensors\",",
+   "source_file": "cogvideox_zai-org__CogVideoX-2b_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_zai-org__CogVideoX-2b_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/zai-org/CogVideoX-2b?blobs=true",
+   "final_url": "https://huggingface.co/api/models/zai-org/CogVideoX-2b?blobs=true",
+   "raw_sha256": "a18743049af7ad4a0ec94848ce573a8641cbfe8cee16158c2449401c696a2d30",
+   "copy_sha256": "f68c62006f5d2da891f869e18145d509686e953dc57d3939d5a25206343ab54f",
+   "retrieved_utc": "2026-10-02T09:33:46+00:00"
+  },
+  {
+   "id": "w_lfs2",
+   "quote": "\"sha256\": \"a410e48d988c8224cef392b68db0654485cfd41f345f4a3a81d3e6b765bb995e\",",
+   "source_file": "cogvideox_zai-org__CogVideoX-2b_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_zai-org__CogVideoX-2b_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/zai-org/CogVideoX-2b?blobs=true",
+   "final_url": "https://huggingface.co/api/models/zai-org/CogVideoX-2b?blobs=true",
+   "raw_sha256": "a18743049af7ad4a0ec94848ce573a8641cbfe8cee16158c2449401c696a2d30",
+   "copy_sha256": "f68c62006f5d2da891f869e18145d509686e953dc57d3939d5a25206343ab54f",
+   "retrieved_utc": "2026-10-02T09:33:46+00:00"
+  },
+  {
+   "id": "w_gated2",
+   "quote": "\"gated\": false,",
+   "source_file": "cogvideox_zai-org__CogVideoX-2b_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_zai-org__CogVideoX-2b_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/zai-org/CogVideoX-2b?blobs=true",
+   "final_url": "https://huggingface.co/api/models/zai-org/CogVideoX-2b?blobs=true",
+   "raw_sha256": "a18743049af7ad4a0ec94848ce573a8641cbfe8cee16158c2449401c696a2d30",
+   "copy_sha256": "f68c62006f5d2da891f869e18145d509686e953dc57d3939d5a25206343ab54f",
+   "retrieved_utc": "2026-10-02T09:33:46+00:00"
+  },
+  {
+   "id": "w_lfs5",
+   "quote": "\"sha256\": \"a410e48d988c8224cef392b68db0654485cfd41f345f4a3a81d3e6b765bb995e\",",
+   "source_file": "cogvideox_zai-org__CogVideoX-5b_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_zai-org__CogVideoX-5b_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/zai-org/CogVideoX-5b?blobs=true",
+   "final_url": "https://huggingface.co/api/models/zai-org/CogVideoX-5b?blobs=true",
+   "raw_sha256": "db0394b7ab8d9196e4fcf8de7eda835ee7762aa495030f142c465c20285f5f29",
+   "copy_sha256": "838e4ddc03d2d1bc977a1a393925513bc21c7ae9c0b53134ee8b12a78d188e58",
+   "retrieved_utc": "2026-10-02T09:33:47+00:00"
+  },
+  {
+   "id": "w_gated5",
+   "quote": "\"gated\": false,",
+   "source_file": "cogvideox_zai-org__CogVideoX-5b_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_zai-org__CogVideoX-5b_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/zai-org/CogVideoX-5b?blobs=true",
+   "final_url": "https://huggingface.co/api/models/zai-org/CogVideoX-5b?blobs=true",
+   "raw_sha256": "db0394b7ab8d9196e4fcf8de7eda835ee7762aa495030f142c465c20285f5f29",
+   "copy_sha256": "838e4ddc03d2d1bc977a1a393925513bc21c7ae9c0b53134ee8b12a78d188e58",
+   "retrieved_utc": "2026-10-02T09:33:47+00:00"
+  },
+  {
+   "id": "lic_2b_text",
+   "quote": "Apache License",
+   "source_file": "cogvideox_CogVideoX-2b_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_LICENSE.txt",
+   "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/LICENSE",
+   "final_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/LICENSE",
+   "raw_sha256": "4c3f6aeb71e12415a59117dfd35cfc177514424f0356c81798fde1a239d0b6a8",
+   "copy_sha256": "4c3f6aeb71e12415a59117dfd35cfc177514424f0356c81798fde1a239d0b6a8",
+   "retrieved_utc": "2026-10-02T09:33:48+00:00"
+  },
+  {
+   "id": "in_sample_hw",
+   "quote": "\"sample_height\": 480, \"sample_width\": 720,",
+   "source_file": "cogvideox_CogVideoX-2b_vae_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_vae_config.json",
+   "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/vae/config.json",
+   "final_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/vae/config.json",
+   "raw_sha256": "fb212585242726f5d963271357731c78481da25cc29bdd5c2b9cb058c43f8688",
+   "copy_sha256": "fb212585242726f5d963271357731c78481da25cc29bdd5c2b9cb058c43f8688",
+   "retrieved_utc": "2026-10-02T09:33:49+00:00"
+  },
+  {
+   "id": "in_vae_fps",
+   "quote": "Randomly select 8 or 16 fps to enhance the model’s robustness.",
+   "source_file": "cogvideox_arxiv_2408.06072_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2408.06072",
+   "final_url": "https://arxiv.org/html/2408.06072",
+   "raw_sha256": "fd64b3385df4ae4e5a3e91d01164fd25d56a87035511deeae9240128347a26d8",
+   "copy_sha256": "170a85292699111083fcefcdd40253bd3c5152364d7766de6a32a856319ccbdc",
+   "retrieved_utc": "2026-10-02T09:33:50+00:00"
+  },
+  {
+   "id": "in_vae_161",
+   "quote": "Therefore, we conduct a two-stage training by first training on 17-frame videos and finetuning by context parallel on 161-frame videos.",
+   "source_file": "cogvideox_arxiv_2408.06072_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_arxiv_2408.06072_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2408.06072",
+   "final_url": "https://arxiv.org/html/2408.06072",
+   "raw_sha256": "fd64b3385df4ae4e5a3e91d01164fd25d56a87035511deeae9240128347a26d8",
+   "copy_sha256": "170a85292699111083fcefcdd40253bd3c5152364d7766de6a32a856319ccbdc",
+   "retrieved_utc": "2026-10-02T09:33:50+00:00"
+  },
+  {
+   "id": "in_fps_card",
+   "quote": "<td style=\"text-align: center;\">Frame Rate</td> <td colspan=\"2\" style=\"text-align: center;\">8 Frames per Second</td>",
+   "source_file": "cogvideox_CogVideoX-2b_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_README.md",
+   "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/README.md",
+   "final_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/README.md",
+   "raw_sha256": "63167d42d73fd434096761b693142a69a96275b367c6fda32347d4b9dbce262d",
+   "copy_sha256": "63167d42d73fd434096761b693142a69a96275b367c6fda32347d4b9dbce262d",
+   "retrieved_utc": "2026-10-02T09:33:47+00:00"
+  },
+  {
+   "id": "in_len_card",
+   "quote": "<td style=\"text-align: center;\">Video Length</td> <td colspan=\"2\" style=\"text-align: center;\">6 Seconds</td>",
+   "source_file": "cogvideox_CogVideoX-2b_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_README.md",
+   "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/README.md",
+   "final_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/README.md",
+   "raw_sha256": "63167d42d73fd434096761b693142a69a96275b367c6fda32347d4b9dbce262d",
+   "copy_sha256": "63167d42d73fd434096761b693142a69a96275b367c6fda32347d4b9dbce262d",
+   "retrieved_utc": "2026-10-02T09:33:47+00:00"
+  },
+  {
+   "id": "in_frames_card",
+   "quote": "num_frames=49,",
+   "source_file": "cogvideox_CogVideoX-2b_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_README.md",
+   "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/README.md",
+   "final_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/README.md",
+   "raw_sha256": "63167d42d73fd434096761b693142a69a96275b367c6fda32347d4b9dbce262d",
+   "copy_sha256": "63167d42d73fd434096761b693142a69a96275b367c6fda32347d4b9dbce262d",
+   "retrieved_utc": "2026-10-02T09:33:47+00:00"
+  },
+  {
+   "id": "in_sample_frames",
+   "quote": "\"sample_frames\": 49, \"sample_height\": 60, \"sample_width\": 90,",
+   "source_file": "cogvideox_CogVideoX-2b_transformer_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_CogVideoX-2b_transformer_config.json",
+   "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/transformer/config.json",
+   "final_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/transformer/config.json",
+   "raw_sha256": "4d93dcf9f9f526982c4cfcf98083c2da508bad8208f3abab07b70103a30925c0",
+   "copy_sha256": "4d93dcf9f9f526982c4cfcf98083c2da508bad8208f3abab07b70103a30925c0",
+   "retrieved_utc": "2026-10-02T09:34:11+00:00"
+  },
+  {
+   "id": "in_latent_t",
+   "quote": "(num_frames - 1) // self.vae_scale_factor_temporal + 1,",
+   "source_file": "cogvideox_diffusers_v0.30.0_pipeline_cogvideox.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_diffusers_v0.30.0_pipeline_cogvideox.py.txt",
+   "source_url": "https://raw.githubusercontent.com/huggingface/diffusers/v0.30.0/src/diffusers/pipelines/cogvideo/pipeline_cogvideox.py",
+   "final_url": "https://raw.githubusercontent.com/huggingface/diffusers/v0.30.0/src/diffusers/pipelines/cogvideo/pipeline_cogvideox.py",
+   "raw_sha256": "2ea63bca6dbf966cfedf7a6b3990645e5ad6dc772bbb49186d025fec96a19896",
+   "copy_sha256": "2ea63bca6dbf966cfedf7a6b3990645e5ad6dc772bbb49186d025fec96a19896",
+   "retrieved_utc": "2026-10-02T09:34:12+00:00"
+  },
+  {
+   "id": "in_latent_hw",
+   "quote": "height // self.vae_scale_factor_spatial, width // self.vae_scale_factor_spatial,",
+   "source_file": "cogvideox_diffusers_v0.30.0_pipeline_cogvideox.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cogvideox_diffusers_v0.30.0_pipeline_cogvideox.py.txt",
+   "source_url": "https://raw.githubusercontent.com/huggingface/diffusers/v0.30.0/src/diffusers/pipelines/cogvideo/pipeline_cogvideox.py",
+   "final_url": "https://raw.githubusercontent.com/huggingface/diffusers/v0.30.0/src/diffusers/pipelines/cogvideo/pipeline_cogvideox.py",
+   "raw_sha256": "2ea63bca6dbf966cfedf7a6b3990645e5ad6dc772bbb49186d025fec96a19896",
+   "copy_sha256": "2ea63bca6dbf966cfedf7a6b3990645e5ad6dc772bbb49186d025fec96a19896",
+   "retrieved_utc": "2026-10-02T09:34:12+00:00"
+  }
+ ],
+ "all_quotes_verified": true,
+ "record_written_utc": "2026-10-02T09:34:56+00:00"
+}

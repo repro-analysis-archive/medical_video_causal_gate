@@ -1,0 +1,105 @@
+{
+ "judging_conventions": {
+  "C1_open_weights": "PASS if the official weight files are listed publicly (HF API model listing 'siblings' or an official public download URL) without a manual-approval step; gated click-through repos (HF gated='auto') are PASS with a gating flag; manual approval or request form = UNKNOWN; no official weights = FAIL. No weights were downloaded and no terms were accepted; the HF API listing (metadata only) was saved as evidence.",
+  "C2_licence_research_use": "PASS if the licence text (quoted) grants use that covers non-commercial research (non-commercial licences PASS, with the restriction recorded); FAIL if research use is not permitted; UNKNOWN if no licence text found.",
+  "C3_domain_secondary": "PASS if the model is a video generative model, or the video tokenizer / video VAE / masked video autoencoder (pixel-reconstruction objective) of such a model, trained on general (non-surgical) video. Latent-space feature predictors without a decoder that their authors describe as non-generative (V-JEPA family) = FAIL, recorded with the authors' wording.",
+  "C4_documented_pretraining_data": "PASS if the model card or paper names the datasets or named sources (named public datasets or named providers) of the VIDEO pretraining data; FAIL if the video portion is described only generically (e.g. 'internal data', 'publicly available', 'web', 'licensed'), even when image datasets are named; the quote is recorded either way.",
+  "medical_video_in_data": "YES if a pretraining-data description mentions medical/surgical/endoscopic video; NO if the data are a closed list of named datasets none of which is medical, or the documented content categories exclude it; NOT MENTIONED if documentation is generic (searched terms: medical, surgical, surgery, endoscop, laparoscop, clinical, health, hospital).",
+  "appendix300_possible": "YES if DS203/Appendix300 or its source recordings are listed. NO only if the pretraining video data are a closed list of named curated research datasets whose documented content scope excludes surgical recordings (e.g. fixed action-class or crowd-sourced benchmarks). UNKNOWN if the video data are undisclosed (web-scale / internal / licensed) OR are named but open-ended web-scraped or stock-footage sources (e.g. YouTube-derived sets, Pexels/Pixabay), because DECISION_003 sec.2 requires UNKNOWN when the documentation does not allow the source recordings to be excluded. Each answer also records basis_class in {closed_curated_list, named_open_web_sources, undisclosed} and the timing context: the OPARA issue date 2026-04-29 is later than every candidate's release, so the OPARA release itself cannot be in any of them; the open question is only prior circulation of the source recordings.",
+  "quote_verification": "Every quote is checked as a whitespace-normalized substring of the saved text rendering (HTML->text via BeautifulSoup get_text; PDF via pdftotext with and without -layout; markdown/JSON as-is). Quotes are copied from the saved copies; PDF line-break hyphenation is not repaired."
+ },
+ "judging_conventions_note": "The v1 judging conventions are kept verbatim and applied unchanged to old and new entries. Clarifications (not changes) are in judging_conventions_clarifications_v2.",
+ "judging_conventions_clarifications_v2": {
+  "appendix300_kinetics_class": "Kinetics-400/600/700, UCF-101, HMDB-51 and Something-Something-v2 are treated as 'closed list of named curated research datasets whose documented content scope excludes surgical recordings' (fixed human-action class lists / crowd-sourced acted clips) -> NO, as the v1 convention's 'fixed action-class or crowd-sourced benchmarks' example states, even though Kinetics clips are taken from YouTube. If ANY open-ended source (e.g. WebVid/Shutterstock, HowTo100M, YT-Temporal, Instagram, self-collected, Pexels/Pixabay) is part of the video pretraining data, the answer is UNKNOWN (basis_class named_open_web_sources).",
+  "C4_mixed": "C4 PASS requires that the video pretraining data be named (datasets or named providers). Image-only naming does not pass (v1 rule). Where only the generative model's data are named but the tokenizer's own training data are not separately stated, the tokenizer is judged on the documented data of the release it ships with, and this is recorded as a caveat.",
+  "C3_image_vae": "A frame-wise image autoencoder shipped with a video generative model (e.g. SVD) is judged on the generative model (PASS, with the caveat recorded, as in v1). A tokenizer trained only on images (no video) is not a video model -> not added (screened_not_added).",
+  "C4_source_scope": "'model card or paper' is read as the model's own documentation: model card, paper, and the official technical report / repository docs that describe the released model (as v1 did with Open-Sora docs/report_03.md). A default data path in a training config or an example dataset in docs does not by itself pass C4 (06b stays FAIL, flagged borderline). A reproduce script for the released checkpoint is supporting evidence only (21 passes on its paper statement).",
+  "C4_partial_or_background": "If part of the video pretraining data is an unnamed private/internal set, C4 = FAIL, flagged borderline (26). Datasets cited only as background for the field, without a statement that the model was trained on them, do not count (09).",
+  "C1_dead_or_alternative_links": "Official weight links whose public page returns HTTP 404 on GET = FAIL (18; TATS screened). A Google Drive view page that resolves without login and names the file = PASS (26; primary-survey precedent). An extra request-form route does not negate an ungated official HF listing by the same organisation (12).",
+  "C2_project_licence": "A repository licence stated for 'this project' with no separate statement for the weights is taken to cover the released weights; the gap is flagged (15, 18, 21). Where card, repo and GitHub licence tags disagree, the most restrictive tag is assumed and recorded (12, 14); all such tags permit research use.",
+  "medical_indirect": "medical_video_in_data = 'YES (indirect)' when the documentation of a named pretraining dataset lists a health/medical content category (HowTo100M's WikiHow Health category -> 13, 14). Dataset papers were consulted only for this case; no surgical/endoscopic content is documented for any candidate. This field does not enter eligibility.",
+  "appendix300_paper_level": "When the closed data list is stated in the paper for the method rather than per released checkpoint, NO is kept and the caveat recorded (19b, 22). An unstated Kinetics version (VideoGPT) is still a closed action-class list -> NO (18)."
+ },
+ "structured_field_conventions": {
+  "version": "The exact released variant / checkpoint audited (repo id, file name and version string as published).",
+  "weights_location": "Official public URL(s) of the weight files, verified from the HF API model listing (?blobs=true, metadata only; the listing is saved as a copy) or from an official page that lists the files. Nothing was downloaded and no terms were accepted.",
+  "licence": "Licence id + URL + verbatim quotes (card licence line and/or licence text).",
+  "domain": "What the model is (generative model / video tokenizer / video VAE / masked video autoencoder / latent predictor) and what kind of video it was trained on, with quotes.",
+  "pretraining_data_quote": "Verbatim quotes of the pretraining-data description with source URL and copy path (resolved from quote ids).",
+  "appendix300_check": "answer = the appendix300_possible answer under the v1 convention (YES/NO/UNKNOWN). quote_or_statement = the passage naming DS203/Appendix300 or its source recordings if one exists; otherwise the statement 'the documented data list does not mention DS203/Appendix300'. term_search = automated regex search (appendix ?300|DS203|OPARA|appendectom|appendic) over the saved data-description copies.",
+  "input": "frame_size, frame_rate_or_sampling, clip_length_frames, temporal_compression, spatial_compression: the documented values (training and/or recommended inference) with quotes; 'not documented' when absent; anything derived is marked '(inferred: ...)'.",
+  "embedding_dim": "Tokenizers/VAEs: latent channels x latent grid for the stated reference input (causal: C x (1+(T-1)/t) x H/s x W/s; non-causal: C x T/t x H/s x W/s). Encoders (MAE/JEPA): per-token feature dim x token grid, and the pooled feature dim when documented.",
+  "params": "Encoder parameter count if documented; otherwise the documented scope (whole autoencoder / whole model) is stated as such. Counts inferred from file sizes are marked inferred and are not documentation.",
+  "flops_per_input_if_documented": "A quote stating FLOPs/MACs per input (with the input size) if a source documents it; else null.",
+  "eligibility": "C1-C4 each with status PASS/FAIL/UNKNOWN, basis and quote ids; eligible = YES only if all four PASS."
+ },
+ "revision_log": [
+  {
+   "revision": 1,
+   "generated_utc": "2026-10-02T09:14:48+00:00",
+   "n_candidates": 7,
+   "file_backup": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_secondary_v2_records/previous_output_v1.json (sha256 52408a01532e1fb5c15df99a7a3930292f2ae96811bf6719db573cdb9fcdd905)",
+   "source_copies": "/media/user/LaCie/medvideo_gate/fm_candidates/secondary (not accessed in revision 2)"
+  },
+  {
+   "revision": 2,
+   "date": "2026-10-02",
+   "sources": "every source re-fetched into fm_sources/secondary on /home as text renderings < 2 MB; v1 raw sha256 equal for every carried-over quote except the NVIDIA Open Model License page HTML (markup changed; all v1 licence quotes still verify)",
+   "structured_fields_added": [
+    "version",
+    "weights_location",
+    "licence (quoted)",
+    "domain",
+    "pretraining_data_quote",
+    "appendix300_check",
+    "input",
+    "embedding_dim",
+    "params",
+    "flops_per_input_if_documented",
+    "eligibility quote_ids"
+   ],
+   "entries_added": [
+    "07_ltx_video_vae",
+    "08_mochi_vae",
+    "09_allegro_vae",
+    "10_stepvideo_vae",
+    "11_videomae",
+    "12_videomae_v2",
+    "13_vjepa",
+    "14_vjepa2",
+    "15_omnitokenizer",
+    "16_vidtok",
+    "17_open_magvit2_video",
+    "18_videogpt_vqvae",
+    "19a_opensora_plan_v1_2_causalvideovae",
+    "19b_wf_vae_l_16chn",
+    "20_cv_vae",
+    "21_larp_tokenizer",
+    "22_leanvae",
+    "23_reducio_vae",
+    "24_magi1_vae",
+    "25_hunyuanvideo15_vae",
+    "26_videovae_plus"
+   ],
+   "screened_not_added": [
+    "MAGVIT v1 (no official weights)",
+    "MAGVIT-v2 (no official weights)",
+    "TATS VQGAN (official Drive links 404)",
+    "SkyReels-V2 (ships the Wan2.1 VAE file, duplicate of 05)"
+   ],
+   "not_checked_to_completion": [
+    "DC-AE-V / DC-VideoGen (no official HF repo found)",
+    "IV-VAE (no HF hit)"
+   ],
+   "corrections_to_v1": [
+    "01 Cosmos params: v1 '~105M (CV 4x8x8 variant)' -> 105M belongs to the first-generation Cosmos-0.1-Tokenizer-CV4x8x8 (paper Table 9); Cosmos-Tokenize1-CV8x8x8-720p params not documented",
+    "02 SVD params: v1 'not stated' -> paper states UNet 1521M (656M temporal); VAE still undocumented",
+    "03 CogVideoX: VAE also finetuned on 161-frame video, trained at 8 or 16 fps; 216M is a third-party (NVIDIA) figure; VAE file identical in 2b and 5b repos",
+    "05 Wan2.2-VAE latent dim: v1 'not quoted' -> z_dim 48 (official code), 2x2 patchify + 8x8; Wan2.2 HF repo has no LICENSE file -> licence quoted from card + GitHub",
+    "06b DC-AE latent channels: v1 '128 or 256, inferred from file name' -> 128, documented in official code, inference config and paper; C4 stays FAIL, now flagged borderline (training-config default Pexels-45k path)"
+   ],
+   "eligibility_changes_to_v1_entries": "none",
+   "judging_conventions": "v1 conventions kept verbatim; clarifications only (judging_conventions_clarifications_v2)"
+  }
+ ]
+}

@@ -1,0 +1,677 @@
+{
+ "id": "19b_wf_vae_l_16chn",
+ "name": "WF-VAE-L 16-channel (PKU-YuanGroup WF-VAE; HF chestnutlzj/WF-VAE-L-16Chn, WFVAEModel); the 8-channel WF-VAE-S ships as the Open-Sora-Plan v1.3.0 VAE",
+ "status_in_survey": "added in revision 2 (2026-10-02)",
+ "version": "chestnutlzj/WF-VAE-L-16Chn, diffusion_pytorch_model.safetensors + config.json (released 2024-11-25 per README; HF repo created 2024-11-24); paper arXiv:2411.17459v3 (CVPR 2025). Not separately recorded: Open-Sora-Plan v1.3.0 vae/merged.ckpt = 8-channel WF-VAE-S (latent_dim 8), 'a distilled form of OD-VAE ... its use is not recommended'",
+ "paper": {
+  "title": "WF-VAE: Enhancing Video VAE by Wavelet-Driven Energy Flow for Latent Video Diffusion Model",
+  "year": 2024,
+  "arxiv": "2411.17459"
+ },
+ "weights_location": {
+  "urls": [
+   "https://huggingface.co/chestnutlzj/WF-VAE-L-16Chn"
+  ],
+  "files_listed": {
+   "diffusion_pytorch_model.safetensors": 1268351816,
+   "config.json": 947
+  },
+  "gated": false,
+  "private": false,
+  "verified_how": "HF API model listing (metadata only) saved as osplan_chestnutlzj__WF-VAE-L-16Chn_hfapi.json; the official GitHub README links to this repo (first author's account); nothing downloaded",
+  "quote_ids": [
+   "w_file",
+   "w_gated",
+   "w_readme"
+  ],
+  "quotes": [
+   {
+    "id": "w_file",
+    "quote": "\"rfilename\": \"diffusion_pytorch_model.safetensors\",",
+    "source_url": "https://huggingface.co/api/models/chestnutlzj/WF-VAE-L-16Chn?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_chestnutlzj__WF-VAE-L-16Chn_hfapi.json"
+   },
+   {
+    "id": "w_gated",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/chestnutlzj/WF-VAE-L-16Chn?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_chestnutlzj__WF-VAE-L-16Chn_hfapi.json"
+   },
+   {
+    "id": "w_readme",
+    "quote": "We have released our **16-channel WF-VAE-L (316M)** model along with the training code. Welcome to download it from [Huggingface](https://huggingface.co/chestnutlzj/WF-VAE-L-16Chn).",
+    "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_README.md"
+   }
+  ]
+ },
+ "licence": {
+  "id": "Apache-2.0 (HF card; GitHub LICENSE)",
+  "url": "https://huggingface.co/chestnutlzj/WF-VAE-L-16Chn ; https://github.com/PKU-YuanGroup/WF-VAE/blob/main/LICENSE",
+  "commercial": "permitted",
+  "non_commercial_only": false,
+  "restrictions": "none beyond Apache-2.0",
+  "gating": "none",
+  "quote_ids": [
+   "lic_card",
+   "lic_text",
+   "lic_badge"
+  ],
+  "quotes": [
+   {
+    "id": "lic_card",
+    "quote": "license: apache-2.0",
+    "source_url": "https://huggingface.co/chestnutlzj/WF-VAE-L-16Chn/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_hf_WF-VAE-L-16Chn_README.md"
+   },
+   {
+    "id": "lic_text",
+    "quote": "Apache License Version 2.0, January 2004",
+    "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/LICENSE",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_LICENSE.txt"
+   },
+   {
+    "id": "lic_badge",
+    "quote": "[![License](https://img.shields.io/badge/Code%20License-Apache2.0-yellow)](https://github.com/PKU-YuanGroup/WF-VAE/blob/main/LICENSE)",
+    "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_README.md"
+   }
+  ]
+ },
+ "domain": {
+  "value": "wavelet-driven causal video VAE for latent video diffusion models (used by Open-Sora Plan v1.3); trained on Kinetics-400",
+  "quote_ids": [
+   "dom_title",
+   "data_k400"
+  ],
+  "quotes": [
+   {
+    "id": "dom_title",
+    "quote": "WF-VAE: Enhancing Video VAE by Wavelet-Driven Energy Flow for Latent Video Diffusion Model",
+    "source_url": "https://huggingface.co/chestnutlzj/WF-VAE-L-16Chn/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_hf_WF-VAE-L-16Chn_README.md"
+   },
+   {
+    "id": "data_k400",
+    "quote": "Dataset & Evaluation. We utilize the Kinetics-400 dataset [ 16 ] for both training and validation. For testing, we employ the Panda70M [ 7 ] and WebVid-10M [ 2 ] datasets.",
+    "source_url": "https://arxiv.org/html/2411.17459",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt"
+   }
+  ]
+ },
+ "architecture": {
+  "type": "causal 3D conv VAE with multi-level Haar wavelet energy-flow pathway; causal cache for lossless chunked inference",
+  "representation": "encoder latents, 16 channels, 4x temporal x 8x8 spatial compression"
+ },
+ "pretraining_data": {
+  "summary": "Kinetics-400 for training and validation (paper); stage I 25 frames at 256x256, stage II 49 frames with FPS halved. No other video data named. Evaluation on WebVid-10M / Panda-70M only.",
+  "form": "dataset list (named: Kinetics-400)"
+ },
+ "pretraining_data_quote": {
+  "quote_ids": [
+   "data_k400",
+   "data_stages"
+  ],
+  "quotes": [
+   {
+    "id": "data_k400",
+    "quote": "Dataset & Evaluation. We utilize the Kinetics-400 dataset [ 16 ] for both training and validation. For testing, we employ the Panda70M [ 7 ] and WebVid-10M [ 2 ] datasets.",
+    "source_url": "https://arxiv.org/html/2411.17459",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt"
+   },
+   {
+    "id": "data_stages",
+    "quote": "(I) the first stage aligns with [ 6 ] , where we preprocess videos to 25 frames with 256 × 256 256\\times 256 resolution, and a total batch size of 8. (II) we refresh the discriminator, increase the number of frames to 49, and reduce the FPS by half to enhance motion dynamics.",
+    "source_url": "https://arxiv.org/html/2411.17459",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt"
+   }
+  ]
+ },
+ "medical_video_in_data": {
+  "answer": "NO",
+  "basis": "closed named dataset (Kinetics-400, human-action classes) with no medical category; term search: hits only in reference titles (biomedical volume processing, U-Net/MICCAI), no data statement",
+  "term_search": {
+   "pattern": "medical|surgical|surgery|endoscop|laparoscop|clinical|health|hospital",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt": [
+     "a, and Neurocenter Caregroup. Three-dimensional wavelet transform in multi-dimensional biomedical volume processing. In Proc. of the IASTED International Conference on Graphics and Virtua",
+     " Olaf Ronneberger, Philipp Fischer, and Thomas Brox. U-net: Convolutional networks for biomedical image segmentation. In Medical image computing and computer-assisted intervention–MICCAI ",
+     "her, and Thomas Brox. U-net: Convolutional networks for biomedical image segmentation. In Medical image computing and computer-assisted intervention–MICCAI 2015: 18th international confer"
+    ],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_github_Report-v1.3.0.md": []
+   }
+  }
+ },
+ "appendix300_possible": {
+  "answer": "NO",
+  "basis_class": "closed_curated_list",
+  "basis": "training data = Kinetics-400 only (closed fixed action-class research dataset -> NO under conventions_v2). Caveat: the statement is the paper's; the README does not separately document the released 16-channel checkpoint's data. Timing: released 2024-11, before the OPARA issue 2026-04-29.",
+  "quote_ids": [
+   "data_k400"
+  ],
+  "quotes": [
+   {
+    "id": "data_k400",
+    "quote": "Dataset & Evaluation. We utilize the Kinetics-400 dataset [ 16 ] for both training and validation. For testing, we employ the Panda70M [ 7 ] and WebVid-10M [ 2 ] datasets.",
+    "source_url": "https://arxiv.org/html/2411.17459",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt"
+   }
+  ]
+ },
+ "appendix300_check": {
+  "answer": "NO",
+  "quote_or_statement": "the documented data list does not mention DS203/Appendix300",
+  "basis_class": "closed_curated_list",
+  "basis": "Kinetics-400 only",
+  "term_search": {
+   "pattern": "appendix ?300|DS203|OPARA|appendectom|appendic",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_github_Report-v1.3.0.md": []
+   }
+  },
+  "quote_ids": [
+   "data_k400"
+  ],
+  "quotes": [
+   {
+    "id": "data_k400",
+    "quote": "Dataset & Evaluation. We utilize the Kinetics-400 dataset [ 16 ] for both training and validation. For testing, we employ the Panda70M [ 7 ] and WebVid-10M [ 2 ] datasets.",
+    "source_url": "https://arxiv.org/html/2411.17459",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt"
+   }
+  ]
+ },
+ "input": {
+  "frame_size": {
+   "value": "trained at 256x256 (stage I); README inference example 512x512",
+   "quote_ids": [
+    "data_stages",
+    "in_recon_size"
+   ],
+   "quotes": [
+    {
+     "id": "data_stages",
+     "quote": "(I) the first stage aligns with [ 6 ] , where we preprocess videos to 25 frames with 256 × 256 256\\times 256 resolution, and a total batch size of 8. (II) we refresh the discriminator, increase the number of frames to 49, and reduce the FPS by half to enhance motion dynamics.",
+     "source_url": "https://arxiv.org/html/2411.17459",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt"
+    },
+    {
+     "id": "in_recon_size",
+     "quote": "--height 512",
+     "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_README.md"
+    }
+   ]
+  },
+  "frame_rate_or_sampling": {
+   "value": "stage I native frame rate (not stated); stage II 'reduce the FPS by half'; README reconstruction example --fps 30 --sample_rate 1",
+   "quote_ids": [
+    "data_stages",
+    "in_recon_fps",
+    "in_recon_sr"
+   ],
+   "quotes": [
+    {
+     "id": "data_stages",
+     "quote": "(I) the first stage aligns with [ 6 ] , where we preprocess videos to 25 frames with 256 × 256 256\\times 256 resolution, and a total batch size of 8. (II) we refresh the discriminator, increase the number of frames to 49, and reduce the FPS by half to enhance motion dynamics.",
+     "source_url": "https://arxiv.org/html/2411.17459",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt"
+    },
+    {
+     "id": "in_recon_fps",
+     "quote": "--fps 30",
+     "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_README.md"
+    },
+    {
+     "id": "in_recon_sr",
+     "quote": "--sample_rate 1",
+     "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_README.md"
+    }
+   ]
+  },
+  "clip_length_frames": {
+   "value": "25 frames (stage I), 49 frames (stage II); evaluation on 33 frames; README example 65 frames",
+   "quote_ids": [
+    "data_stages",
+    "in_eval33",
+    "in_recon_frames"
+   ],
+   "quotes": [
+    {
+     "id": "data_stages",
+     "quote": "(I) the first stage aligns with [ 6 ] , where we preprocess videos to 25 frames with 256 × 256 256\\times 256 resolution, and a total batch size of 8. (II) we refresh the discriminator, increase the number of frames to 49, and reduce the FPS by half to enhance motion dynamics.",
+     "source_url": "https://arxiv.org/html/2411.17459",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt"
+    },
+    {
+     "id": "in_eval33",
+     "quote": "All measurements are conducted on 33 frames with 256×256 resolution videos.",
+     "source_url": "https://arxiv.org/html/2411.17459",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt"
+    },
+    {
+     "id": "in_recon_frames",
+     "quote": "--num_frames 65",
+     "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_README.md"
+    }
+   ]
+  },
+  "temporal_compression": {
+   "value": "4x (causal; first frame kept)",
+   "quote_ids": [
+    "in_cr16",
+    "in_causal"
+   ],
+   "quotes": [
+    {
+     "id": "in_cr16",
+     "quote": "WF-VAE-L (Ours) 256 ​ ( 4 × 8 × 8 ) 256(4\\times 8\\times 8) 16 35.76",
+     "source_url": "https://arxiv.org/html/2411.17459",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt"
+    },
+    {
+     "id": "in_causal",
+     "quote": "For the first time chunk, we perform standard causal padding to support joint processing of graphs and videos.",
+     "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/Open-Sora-Plan/main/docs/Report-v1.3.0.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_github_Report-v1.3.0.md"
+    }
+   ]
+  },
+  "spatial_compression": {
+   "value": "8x8",
+   "quote_ids": [
+    "in_cr16"
+   ],
+   "quotes": [
+    {
+     "id": "in_cr16",
+     "quote": "WF-VAE-L (Ours) 256 ​ ( 4 × 8 × 8 ) 256(4\\times 8\\times 8) 16 35.76",
+     "source_url": "https://arxiv.org/html/2411.17459",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt"
+    }
+   ]
+  }
+ },
+ "embedding_dim": {
+  "value": "16 latent channels x (1 + (T-1)/4) x H/8 x W/8; e.g. 33 x 256 x 256 -> 16 x 9 x 32 x 32 = 147,456 values",
+  "derivation": "latent_dim 16 (config); 4x8x8 compression (paper Table 1, 16-channel row); causal first frame",
+  "quote_ids": [
+   "in_latent",
+   "in_cr16",
+   "in_causal"
+  ],
+  "quotes": [
+   {
+    "id": "in_latent",
+    "quote": "\"latent_dim\": 16,",
+    "source_url": "https://huggingface.co/chestnutlzj/WF-VAE-L-16Chn/raw/main/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_hf_WF-VAE-L-16Chn_config.json"
+   },
+   {
+    "id": "in_cr16",
+    "quote": "WF-VAE-L (Ours) 256 ​ ( 4 × 8 × 8 ) 256(4\\times 8\\times 8) 16 35.76",
+    "source_url": "https://arxiv.org/html/2411.17459",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt"
+   },
+   {
+    "id": "in_causal",
+    "quote": "For the first time chunk, we perform standard causal padding to support joint processing of graphs and videos.",
+    "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/Open-Sora-Plan/main/docs/Report-v1.3.0.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_github_Report-v1.3.0.md"
+   }
+  ]
+ },
+ "params": {
+  "value": "WF-VAE-L: encoder 84M, decoder 232M (paper Table 3); README: 16-channel WF-VAE-L 316M total",
+  "scope": "encoder 84M",
+  "quote_ids": [
+   "p_table3",
+   "w_readme"
+  ],
+  "quotes": [
+   {
+    "id": "p_table3",
+    "quote": "Model BC Params (M) Kinetics-400 Enc Dec PSNR ↑ \\uparrow LPIPS ↓ \\downarrow WF-VAE-S 128 38 108 28.21 0.0779 WF-VAE-M 160 58 164 28.44 0.0699 WF-VAE-L 192 84 232 28.66 0.0661",
+    "source_url": "https://arxiv.org/html/2411.17459",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt"
+   },
+   {
+    "id": "w_readme",
+    "quote": "We have released our **16-channel WF-VAE-L (316M)** model along with the training code. Welcome to download it from [Huggingface](https://huggingface.co/chestnutlzj/WF-VAE-L-16Chn).",
+    "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_README.md"
+   }
+  ]
+ },
+ "flops_per_input_if_documented": null,
+ "flops_note": "paper/README report encode/decode time and memory (33-frame videos, H100) but no FLOPs figure in the saved text",
+ "eligibility": {
+  "C1_open_weights": {
+   "status": "PASS",
+   "basis": "HF API lists diffusion_pytorch_model.safetensors, gated=False; official README links it",
+   "quote_ids": [
+    "w_file",
+    "w_gated",
+    "w_readme"
+   ],
+   "quotes": [
+    {
+     "id": "w_file",
+     "quote": "\"rfilename\": \"diffusion_pytorch_model.safetensors\",",
+     "source_url": "https://huggingface.co/api/models/chestnutlzj/WF-VAE-L-16Chn?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_chestnutlzj__WF-VAE-L-16Chn_hfapi.json"
+    },
+    {
+     "id": "w_gated",
+     "quote": "\"gated\": false,",
+     "source_url": "https://huggingface.co/api/models/chestnutlzj/WF-VAE-L-16Chn?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_chestnutlzj__WF-VAE-L-16Chn_hfapi.json"
+    },
+    {
+     "id": "w_readme",
+     "quote": "We have released our **16-channel WF-VAE-L (316M)** model along with the training code. Welcome to download it from [Huggingface](https://huggingface.co/chestnutlzj/WF-VAE-L-16Chn).",
+     "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_README.md"
+    }
+   ]
+  },
+  "C2_licence_research_use": {
+   "status": "PASS",
+   "basis": "Apache-2.0",
+   "quote_ids": [
+    "lic_card",
+    "lic_text"
+   ],
+   "quotes": [
+    {
+     "id": "lic_card",
+     "quote": "license: apache-2.0",
+     "source_url": "https://huggingface.co/chestnutlzj/WF-VAE-L-16Chn/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_hf_WF-VAE-L-16Chn_README.md"
+    },
+    {
+     "id": "lic_text",
+     "quote": "Apache License Version 2.0, January 2004",
+     "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/LICENSE",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_LICENSE.txt"
+    }
+   ]
+  },
+  "C3_domain_secondary": {
+   "status": "PASS",
+   "basis": "video VAE for latent video diffusion (generative) models, trained on general video",
+   "quote_ids": [
+    "dom_title",
+    "data_k400"
+   ],
+   "quotes": [
+    {
+     "id": "dom_title",
+     "quote": "WF-VAE: Enhancing Video VAE by Wavelet-Driven Energy Flow for Latent Video Diffusion Model",
+     "source_url": "https://huggingface.co/chestnutlzj/WF-VAE-L-16Chn/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_hf_WF-VAE-L-16Chn_README.md"
+    },
+    {
+     "id": "data_k400",
+     "quote": "Dataset & Evaluation. We utilize the Kinetics-400 dataset [ 16 ] for both training and validation. For testing, we employ the Panda70M [ 7 ] and WebVid-10M [ 2 ] datasets.",
+     "source_url": "https://arxiv.org/html/2411.17459",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt"
+    }
+   ]
+  },
+  "C4_documented_pretraining_data": {
+   "status": "PASS",
+   "basis": "paper names the training dataset (Kinetics-400)",
+   "quote_ids": [
+    "data_k400"
+   ],
+   "quotes": [
+    {
+     "id": "data_k400",
+     "quote": "Dataset & Evaluation. We utilize the Kinetics-400 dataset [ 16 ] for both training and validation. For testing, we employ the Panda70M [ 7 ] and WebVid-10M [ 2 ] datasets.",
+     "source_url": "https://arxiv.org/html/2411.17459",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt"
+    }
+   ]
+  },
+  "eligible": "YES (all four criteria PASS; Appendix300 NO; caveat: data statement is the paper's, not checkpoint-specific)"
+ },
+ "quotes": [
+  {
+   "id": "w_file",
+   "quote": "\"rfilename\": \"diffusion_pytorch_model.safetensors\",",
+   "source_file": "osplan_chestnutlzj__WF-VAE-L-16Chn_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_chestnutlzj__WF-VAE-L-16Chn_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/chestnutlzj/WF-VAE-L-16Chn?blobs=true",
+   "final_url": "https://huggingface.co/api/models/chestnutlzj/WF-VAE-L-16Chn?blobs=true",
+   "raw_sha256": "7ae9d08ed1c68ce6a55ea736a5510516db4613b5559e354950cf862d49cfcae9",
+   "copy_sha256": "8c9217ff678acf4d37344764d363641bbf0a4390f690cd8a62b8ca5fdb814a25",
+   "retrieved_utc": "2026-10-02T09:31:28+00:00"
+  },
+  {
+   "id": "w_gated",
+   "quote": "\"gated\": false,",
+   "source_file": "osplan_chestnutlzj__WF-VAE-L-16Chn_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_chestnutlzj__WF-VAE-L-16Chn_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/chestnutlzj/WF-VAE-L-16Chn?blobs=true",
+   "final_url": "https://huggingface.co/api/models/chestnutlzj/WF-VAE-L-16Chn?blobs=true",
+   "raw_sha256": "7ae9d08ed1c68ce6a55ea736a5510516db4613b5559e354950cf862d49cfcae9",
+   "copy_sha256": "8c9217ff678acf4d37344764d363641bbf0a4390f690cd8a62b8ca5fdb814a25",
+   "retrieved_utc": "2026-10-02T09:31:28+00:00"
+  },
+  {
+   "id": "w_readme",
+   "quote": "We have released our **16-channel WF-VAE-L (316M)** model along with the training code. Welcome to download it from [Huggingface](https://huggingface.co/chestnutlzj/WF-VAE-L-16Chn).",
+   "source_file": "wfvae_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+   "raw_sha256": "0f2fa9203d91ee3ea2349afd099342b4167c1d77a68610174c8a02058424dbae",
+   "copy_sha256": "0f2fa9203d91ee3ea2349afd099342b4167c1d77a68610174c8a02058424dbae",
+   "retrieved_utc": "2026-10-02T09:31:34+00:00"
+  },
+  {
+   "id": "w_v13_s",
+   "quote": "We have released the **8-channel WF-VAE-S (146M)** on Open-Sora Plan v1.3.",
+   "source_file": "wfvae_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+   "raw_sha256": "0f2fa9203d91ee3ea2349afd099342b4167c1d77a68610174c8a02058424dbae",
+   "copy_sha256": "0f2fa9203d91ee3ea2349afd099342b4167c1d77a68610174c8a02058424dbae",
+   "retrieved_utc": "2026-10-02T09:31:34+00:00"
+  },
+  {
+   "id": "lic_card",
+   "quote": "license: apache-2.0",
+   "source_file": "osplan_hf_WF-VAE-L-16Chn_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_hf_WF-VAE-L-16Chn_README.md",
+   "source_url": "https://huggingface.co/chestnutlzj/WF-VAE-L-16Chn/raw/main/README.md",
+   "final_url": "https://huggingface.co/chestnutlzj/WF-VAE-L-16Chn/raw/main/README.md",
+   "raw_sha256": "5d43f7c073fb39c0dd078d748181b0f09187b7f99a963292f4f5e08ab70ebfd1",
+   "copy_sha256": "5d43f7c073fb39c0dd078d748181b0f09187b7f99a963292f4f5e08ab70ebfd1",
+   "retrieved_utc": "2026-10-02T09:31:33+00:00"
+  },
+  {
+   "id": "lic_text",
+   "quote": "Apache License Version 2.0, January 2004",
+   "source_file": "wfvae_github_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_LICENSE.txt",
+   "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/LICENSE",
+   "final_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/LICENSE",
+   "raw_sha256": "c0e6863c0e0eb372b1b4ed713d96fc3c31d3b6754e070285ccc7ccb38fabda57",
+   "copy_sha256": "c0e6863c0e0eb372b1b4ed713d96fc3c31d3b6754e070285ccc7ccb38fabda57",
+   "retrieved_utc": "2026-10-02T09:31:35+00:00"
+  },
+  {
+   "id": "lic_badge",
+   "quote": "[![License](https://img.shields.io/badge/Code%20License-Apache2.0-yellow)](https://github.com/PKU-YuanGroup/WF-VAE/blob/main/LICENSE)",
+   "source_file": "wfvae_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+   "raw_sha256": "0f2fa9203d91ee3ea2349afd099342b4167c1d77a68610174c8a02058424dbae",
+   "copy_sha256": "0f2fa9203d91ee3ea2349afd099342b4167c1d77a68610174c8a02058424dbae",
+   "retrieved_utc": "2026-10-02T09:31:34+00:00"
+  },
+  {
+   "id": "dom_title",
+   "quote": "WF-VAE: Enhancing Video VAE by Wavelet-Driven Energy Flow for Latent Video Diffusion Model",
+   "source_file": "osplan_hf_WF-VAE-L-16Chn_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_hf_WF-VAE-L-16Chn_README.md",
+   "source_url": "https://huggingface.co/chestnutlzj/WF-VAE-L-16Chn/raw/main/README.md",
+   "final_url": "https://huggingface.co/chestnutlzj/WF-VAE-L-16Chn/raw/main/README.md",
+   "raw_sha256": "5d43f7c073fb39c0dd078d748181b0f09187b7f99a963292f4f5e08ab70ebfd1",
+   "copy_sha256": "5d43f7c073fb39c0dd078d748181b0f09187b7f99a963292f4f5e08ab70ebfd1",
+   "retrieved_utc": "2026-10-02T09:31:33+00:00"
+  },
+  {
+   "id": "data_k400",
+   "quote": "Dataset & Evaluation. We utilize the Kinetics-400 dataset [ 16 ] for both training and validation. For testing, we employ the Panda70M [ 7 ] and WebVid-10M [ 2 ] datasets.",
+   "source_file": "wfvae_arxiv_2411.17459_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2411.17459",
+   "final_url": "https://arxiv.org/html/2411.17459",
+   "raw_sha256": "fe602774f789077333a6824dd825b6b39b1de5d5ee7a547067196a67bbe43b64",
+   "copy_sha256": "1083ed2bb00fdb391eea60aafc1ae9a4bedb0b8207b9232554e2db89d30b498e",
+   "retrieved_utc": "2026-10-02T09:31:35+00:00"
+  },
+  {
+   "id": "data_stages",
+   "quote": "(I) the first stage aligns with [ 6 ] , where we preprocess videos to 25 frames with 256 × 256 256\\times 256 resolution, and a total batch size of 8. (II) we refresh the discriminator, increase the number of frames to 49, and reduce the FPS by half to enhance motion dynamics.",
+   "source_file": "wfvae_arxiv_2411.17459_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2411.17459",
+   "final_url": "https://arxiv.org/html/2411.17459",
+   "raw_sha256": "fe602774f789077333a6824dd825b6b39b1de5d5ee7a547067196a67bbe43b64",
+   "copy_sha256": "1083ed2bb00fdb391eea60aafc1ae9a4bedb0b8207b9232554e2db89d30b498e",
+   "retrieved_utc": "2026-10-02T09:31:35+00:00"
+  },
+  {
+   "id": "in_eval33",
+   "quote": "All measurements are conducted on 33 frames with 256×256 resolution videos.",
+   "source_file": "wfvae_arxiv_2411.17459_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2411.17459",
+   "final_url": "https://arxiv.org/html/2411.17459",
+   "raw_sha256": "fe602774f789077333a6824dd825b6b39b1de5d5ee7a547067196a67bbe43b64",
+   "copy_sha256": "1083ed2bb00fdb391eea60aafc1ae9a4bedb0b8207b9232554e2db89d30b498e",
+   "retrieved_utc": "2026-10-02T09:31:35+00:00"
+  },
+  {
+   "id": "in_recon_fps",
+   "quote": "--fps 30",
+   "source_file": "wfvae_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+   "raw_sha256": "0f2fa9203d91ee3ea2349afd099342b4167c1d77a68610174c8a02058424dbae",
+   "copy_sha256": "0f2fa9203d91ee3ea2349afd099342b4167c1d77a68610174c8a02058424dbae",
+   "retrieved_utc": "2026-10-02T09:31:34+00:00"
+  },
+  {
+   "id": "in_recon_sr",
+   "quote": "--sample_rate 1",
+   "source_file": "wfvae_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+   "raw_sha256": "0f2fa9203d91ee3ea2349afd099342b4167c1d77a68610174c8a02058424dbae",
+   "copy_sha256": "0f2fa9203d91ee3ea2349afd099342b4167c1d77a68610174c8a02058424dbae",
+   "retrieved_utc": "2026-10-02T09:31:34+00:00"
+  },
+  {
+   "id": "in_recon_frames",
+   "quote": "--num_frames 65",
+   "source_file": "wfvae_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+   "raw_sha256": "0f2fa9203d91ee3ea2349afd099342b4167c1d77a68610174c8a02058424dbae",
+   "copy_sha256": "0f2fa9203d91ee3ea2349afd099342b4167c1d77a68610174c8a02058424dbae",
+   "retrieved_utc": "2026-10-02T09:31:34+00:00"
+  },
+  {
+   "id": "in_recon_size",
+   "quote": "--height 512",
+   "source_file": "wfvae_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/PKU-YuanGroup/WF-VAE/main/README.md",
+   "raw_sha256": "0f2fa9203d91ee3ea2349afd099342b4167c1d77a68610174c8a02058424dbae",
+   "copy_sha256": "0f2fa9203d91ee3ea2349afd099342b4167c1d77a68610174c8a02058424dbae",
+   "retrieved_utc": "2026-10-02T09:31:34+00:00"
+  },
+  {
+   "id": "in_cr16",
+   "quote": "WF-VAE-L (Ours) 256 ​ ( 4 × 8 × 8 ) 256(4\\times 8\\times 8) 16 35.76",
+   "source_file": "wfvae_arxiv_2411.17459_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2411.17459",
+   "final_url": "https://arxiv.org/html/2411.17459",
+   "raw_sha256": "fe602774f789077333a6824dd825b6b39b1de5d5ee7a547067196a67bbe43b64",
+   "copy_sha256": "1083ed2bb00fdb391eea60aafc1ae9a4bedb0b8207b9232554e2db89d30b498e",
+   "retrieved_utc": "2026-10-02T09:31:35+00:00"
+  },
+  {
+   "id": "in_causal",
+   "quote": "For the first time chunk, we perform standard causal padding to support joint processing of graphs and videos.",
+   "source_file": "osplan_github_Report-v1.3.0.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_github_Report-v1.3.0.md",
+   "source_url": "https://raw.githubusercontent.com/PKU-YuanGroup/Open-Sora-Plan/main/docs/Report-v1.3.0.md",
+   "final_url": "https://raw.githubusercontent.com/PKU-YuanGroup/Open-Sora-Plan/main/docs/Report-v1.3.0.md",
+   "raw_sha256": "c2028295736a4fdd53da85110561ebd15f8d502eebae6c73b35c805a0b1c2dbb",
+   "copy_sha256": "c2028295736a4fdd53da85110561ebd15f8d502eebae6c73b35c805a0b1c2dbb",
+   "retrieved_utc": "2026-10-02T09:31:28+00:00"
+  },
+  {
+   "id": "in_latent",
+   "quote": "\"latent_dim\": 16,",
+   "source_file": "osplan_hf_WF-VAE-L-16Chn_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/osplan_hf_WF-VAE-L-16Chn_config.json",
+   "source_url": "https://huggingface.co/chestnutlzj/WF-VAE-L-16Chn/raw/main/config.json",
+   "final_url": "https://huggingface.co/chestnutlzj/WF-VAE-L-16Chn/raw/main/config.json",
+   "raw_sha256": "1ea43ffde899ebe4efa11644ce729b3082db12ec03204a0d612bd27c07b61156",
+   "copy_sha256": "1ea43ffde899ebe4efa11644ce729b3082db12ec03204a0d612bd27c07b61156",
+   "retrieved_utc": "2026-10-02T09:31:34+00:00"
+  },
+  {
+   "id": "p_table3",
+   "quote": "Model BC Params (M) Kinetics-400 Enc Dec PSNR ↑ \\uparrow LPIPS ↓ \\downarrow WF-VAE-S 128 38 108 28.21 0.0779 WF-VAE-M 160 58 164 28.44 0.0699 WF-VAE-L 192 84 232 28.66 0.0661",
+   "source_file": "wfvae_arxiv_2411.17459_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2411.17459",
+   "final_url": "https://arxiv.org/html/2411.17459",
+   "raw_sha256": "fe602774f789077333a6824dd825b6b39b1de5d5ee7a547067196a67bbe43b64",
+   "copy_sha256": "1083ed2bb00fdb391eea60aafc1ae9a4bedb0b8207b9232554e2db89d30b498e",
+   "retrieved_utc": "2026-10-02T09:31:35+00:00"
+  }
+ ],
+ "all_quotes_verified": true,
+ "record_written_utc": "2026-10-02T09:46:20+00:00"
+}

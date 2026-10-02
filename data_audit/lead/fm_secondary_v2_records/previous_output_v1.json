@@ -1,0 +1,1402 @@
+{
+ "task": "DECISION_003 sec.2 foundation-model selection rule -- SECONDARY candidates (generic video generative models / video tokenizers / video VAEs / masked video autoencoders)",
+ "rule_source": "/home/user/projects/medical_video_causal_gate/decisions/DECISION_003.md sec.2",
+ "rule_criteria": {
+  "C1_open_weights": "the weights are publicly downloadable",
+  "C2_licence_research_use": "Licence permits research use.",
+  "C3_domain_secondary": "a generic video generative model (a generative or tokenizer/autoencoder video model trained on general video)",
+  "C4_documented_pretraining_data": "a model card or paper lists the pretraining datasets or sources"
+ },
+ "judging_conventions": {
+  "C1_open_weights": "PASS if the official weight files are listed publicly (HF API model listing 'siblings' or an official public download URL) without a manual-approval step; gated click-through repos (HF gated='auto') are PASS with a gating flag; manual approval or request form = UNKNOWN; no official weights = FAIL. No weights were downloaded and no terms were accepted; the HF API listing (metadata only) was saved as evidence.",
+  "C2_licence_research_use": "PASS if the licence text (quoted) grants use that covers non-commercial research (non-commercial licences PASS, with the restriction recorded); FAIL if research use is not permitted; UNKNOWN if no licence text found.",
+  "C3_domain_secondary": "PASS if the model is a video generative model, or the video tokenizer / video VAE / masked video autoencoder (pixel-reconstruction objective) of such a model, trained on general (non-surgical) video. Latent-space feature predictors without a decoder that their authors describe as non-generative (V-JEPA family) = FAIL, recorded with the authors' wording.",
+  "C4_documented_pretraining_data": "PASS if the model card or paper names the datasets or named sources (named public datasets or named providers) of the VIDEO pretraining data; FAIL if the video portion is described only generically (e.g. 'internal data', 'publicly available', 'web', 'licensed'), even when image datasets are named; the quote is recorded either way.",
+  "medical_video_in_data": "YES if a pretraining-data description mentions medical/surgical/endoscopic video; NO if the data are a closed list of named datasets none of which is medical, or the documented content categories exclude it; NOT MENTIONED if documentation is generic (searched terms: medical, surgical, surgery, endoscop, laparoscop, clinical, health, hospital).",
+  "appendix300_possible": "YES if DS203/Appendix300 or its source recordings are listed. NO only if the pretraining video data are a closed list of named curated research datasets whose documented content scope excludes surgical recordings (e.g. fixed action-class or crowd-sourced benchmarks). UNKNOWN if the video data are undisclosed (web-scale / internal / licensed) OR are named but open-ended web-scraped or stock-footage sources (e.g. YouTube-derived sets, Pexels/Pixabay), because DECISION_003 sec.2 requires UNKNOWN when the documentation does not allow the source recordings to be excluded. Each answer also records basis_class in {closed_curated_list, named_open_web_sources, undisclosed} and the timing context: the OPARA issue date 2026-04-29 is later than every candidate's release, so the OPARA release itself cannot be in any of them; the open question is only prior circulation of the source recordings.",
+  "quote_verification": "Every quote is checked as a whitespace-normalized substring of the saved text rendering (HTML->text via BeautifulSoup get_text; PDF via pdftotext with and without -layout; markdown/JSON as-is). Quotes are copied from the saved copies; PDF line-break hyphenation is not repaired."
+ },
+ "ds203": {
+  "name": "Appendix300 (DS203)",
+  "doi": "10.25532/OPARA-1173",
+  "opara_dc_date_issued": "2026-04-29",
+  "opara_metadata_file": "/media/user/LaCie/medvideo_gate/DS203/opara_item.json"
+ },
+ "source_copies_dir": "/media/user/LaCie/medvideo_gate/fm_candidates/secondary",
+ "generated_utc": "2026-10-02T09:14:48+00:00",
+ "n_candidates": 7,
+ "all_quotes_verified": true,
+ "candidates": [
+  {
+   "id": "01_nvidia_cosmos_tokenize1",
+   "name": "NVIDIA Cosmos-Tokenize1 (Cosmos Tokenizer; CV8x8x8-720p primary variant; DV8x16x16-720p, CV4x8x8-360p also listed)",
+   "family_note": "Tokenizer of the Cosmos-Predict1 world foundation models. Cosmos-Predict1-7B-Text2World and Cosmos-Predict2-2B-Video2World (the generative models) are separate HF repos, both gated='auto' (click-through) -> not opened; the representation of interest is the tokenizer.",
+   "prior_work_K4": {
+    "ref": "Nakamura, Breuer, Crespin, Dietrich, Imai (2026) 'Causal Inference with Video Features as Treatments', arXiv:2607.06126 (v2 2026-09-15)",
+    "used": "NVIDIA Cosmos tokenizer (variant not named in the text searched); internal representations used as video summaries",
+    "quote_ids": [
+     "k4_use"
+    ]
+   },
+   "paper": {
+    "title": "Cosmos World Foundation Model Platform for Physical AI",
+    "year": 2025,
+    "arxiv": "2501.03575",
+    "versions": "v1 2025-01-07, v3 2025-07-09"
+   },
+   "weights": {
+    "urls": [
+     "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p",
+     "https://huggingface.co/nvidia/Cosmos-Tokenize1-DV8x16x16-720p",
+     "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV4x8x8-360p"
+    ],
+    "hf_api_evidence": [
+     "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_hfapi_blobs.json",
+     "cosmos_Cosmos-Tokenize1-DV8x16x16-720p_hfapi_blobs.json",
+     "cosmos_Cosmos-Tokenize1-CV4x8x8-360p_hfapi_blobs.json"
+    ],
+    "files_listed_CV8x8x8": {
+     "encoder.jit": 86272108,
+     "decoder.jit": 126022330,
+     "autoencoder.jit": 212300573,
+     "model.pt": 1479537453
+    },
+    "gated": false,
+    "private": false,
+    "note": "HF API: gated=False for all three tokenizer repos (the card carries extra_gated_prompt text but gating is off). Not downloaded."
+   },
+   "licence": {
+    "id": "NVIDIA Open Model License Agreement (HF license: other / nvidia-open-model-license)",
+    "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+    "version_note": "card embeds the 'Version Release Date: January 6, 2025' text; the live licence page saved 2026-10-02 shows 'Version Release Date: October 24, 2025' (NVIDIA may update the agreement).",
+    "commercial": "commercial use permitted",
+    "non_commercial_only": false,
+    "restrictions": "must be consistent with NVIDIA Trustworthy AI terms; rights terminate if guardrails/technical limitations are circumvented; 'Built on NVIDIA Cosmos' attribution when distributing or training on outputs (card text)",
+    "gating": "none (HF gated=False)",
+    "quote_ids": [
+     "lic_card",
+     "lic_commercial",
+     "lic_grant",
+     "lic_ethics",
+     "lic_terminate"
+    ]
+   },
+   "architecture": {
+    "type": "causal temporal conv + causal temporal attention autoencoder with 2-level Haar wavelet front end; vanilla AE (continuous) or FSQ (discrete)",
+    "params": "~105M (card/paper runtime table, CV 4x8x8 variant); CV8x8x8 not stated -- autoencoder.jit 212.3 MB (~106M params if bf16, inference only)",
+    "representation": "encoder output latent tokens: continuous 16-dim vectors per latent voxel (CV) or FSQ indices, vocabulary 64,000 (DV)",
+    "input_resolution": "min 256 px shorter side, up to 4K; CV8x8x8 tuned for 720p and above",
+    "frames_per_clip": "121-frame context (CV8x8x8-720p); 49 (CV4x8x8-360p, DV8x16x16-720p); causal, so 1+8k frames",
+    "temporal_compression": "8x (CV8x8x8, DV8x16x16); 4x (CV4x8x8)",
+    "spatial_compression": "8x8 (CV8x8x8, CV4x8x8); 16x16 (DV8x16x16)",
+    "quote_ids": [
+     "arch_variant",
+     "arch_input",
+     "arch_output",
+     "arch_params"
+    ]
+   },
+   "pretraining_data": {
+    "summary": "Tokenizers trained jointly on images and videos; the paper's training dataset = proprietary video datasets + publicly available open-domain Internet videos, ~20M h raw video, 9 content categories (driving, hand/object manipulation, human motion, navigation, first-person, nature, camera motion, synthetic, others 7%). No dataset names for training (TokenBench/DAVIS named only for evaluation).",
+    "form": "described only (sources characterised generically; no training-dataset list)",
+    "quote_ids": [
+     "data_sources",
+     "data_categories",
+     "data_hours",
+     "tok_train",
+     "tok_joint"
+    ]
+   },
+   "medical_video_in_data": {
+    "answer": "NOT MENTIONED",
+    "basis": "Search of saved paper full text and card for medical|surgical|surgery|endoscop|laparoscop|clinical|hospital|health: no hit in a data context (only 'healthy range' of gradient norms). Content categories listed contain no medical category; 'Others (7%)' is unspecified."
+   },
+   "appendix300_possible": {
+    "answer": "UNKNOWN",
+    "basis_class": "undisclosed",
+    "basis": "Undisclosed proprietary + open-domain Internet video. Context: paper v1 2025-01-07 / weights 2025-03 precede the OPARA issue date 2026-04-29, so the OPARA release itself cannot be in it, but the source recordings' prior circulation is not documented.",
+    "quote_ids": [
+     "data_sources"
+    ]
+   },
+   "eligibility": {
+    "C1_open_weights": {
+     "status": "PASS",
+     "basis": "HF API lists encoder.jit/decoder.jit/model.pt, gated=False"
+    },
+    "C2_licence_research_use": {
+     "status": "PASS",
+     "basis": "NVIDIA Open Model License grants use incl. commercial; ethics/guardrail conditions"
+    },
+    "C3_domain_secondary": {
+     "status": "PASS",
+     "basis": "video tokenizer (autoencoder) of a generative world model trained on general video"
+    },
+    "C4_documented_pretraining_data": {
+     "status": "FAIL",
+     "basis": "paper describes sources only generically ('proprietary video datasets and publicly available open-domain Internet videos') with category percentages; no training datasets or named sources listed"
+    },
+    "eligible": "NO (fails C4 under the frozen wording; borderline: sources are characterised but not listed)"
+   },
+   "quotes": [
+    {
+     "id": "k4_use",
+     "quote": "we first regenerate the video content using the NVIDIA Cosmos tokenizer ( Agarwal et al., 2025 ) and extract their internal representations.",
+     "source_file": "K4_arxiv_2607.06126v2_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2607.06126v2",
+     "source_sha256": "316b9467f5adddfc8f80a623e8edd11b5d6cca50208eef8edfc25306cce13fa6",
+     "retrieved_utc": "2026-10-02T09:04:54+00:00"
+    },
+    {
+     "id": "lic_card",
+     "quote": "This model is released under the  [NVIDIA Open Model License](https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license).",
+     "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+     "source_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+     "retrieved_utc": "2026-10-02T09:04:25+00:00"
+    },
+    {
+     "id": "lic_commercial",
+     "quote": "* Models are commercially usable.",
+     "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+     "source_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+     "retrieved_utc": "2026-10-02T09:04:25+00:00"
+    },
+    {
+     "id": "lic_grant",
+     "quote": "NVIDIA hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, revocable (as stated in Section 2.1) license to publicly perform, publicly display, reproduce, use, create derivative works of, make, have made, sell, offer for sale, distribute (through multiple tiers of distribution) and import the Model.",
+     "source_file": "license_nvidia_open_model_license.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+     "source_sha256": "1b386bb23d148c9dd2c2bb58fe3cbc78850bd730864c87edbc7afc73b0984418",
+     "retrieved_utc": "2026-10-02T09:05:38+00:00"
+    },
+    {
+     "id": "lic_ethics",
+     "quote": "Use of the Models under the Agreement must be consistent with NVIDIA’s Trustworthy AI terms",
+     "source_file": "license_nvidia_open_model_license.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+     "source_sha256": "1b386bb23d148c9dd2c2bb58fe3cbc78850bd730864c87edbc7afc73b0984418",
+     "retrieved_utc": "2026-10-02T09:05:38+00:00"
+    },
+    {
+     "id": "lic_terminate",
+     "quote": "If you bypass, disable, reduce the efficacy of, or circumvent any technical limitation, safety guardrail or",
+     "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+     "source_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+     "retrieved_utc": "2026-10-02T09:04:25+00:00"
+    },
+    {
+     "id": "arch_variant",
+     "quote": "[Cosmos-Tokenize1-CV8x8x8-720p](https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p) (8x temporal compression, 8x8 spatial compression, 720p and above, 121 frames context)",
+     "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+     "source_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+     "retrieved_utc": "2026-10-02T09:04:25+00:00"
+    },
+    {
+     "id": "arch_input",
+     "quote": "**Resolution:** Minimum: 256px (shorter side). Maximum: Up to 4K",
+     "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+     "source_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+     "retrieved_utc": "2026-10-02T09:04:25+00:00"
+    },
+    {
+     "id": "arch_output",
+     "quote": "Continuous-valued feature vectors with a dimensionality of 16",
+     "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+     "source_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+     "retrieved_utc": "2026-10-02T09:04:25+00:00"
+    },
+    {
+     "id": "arch_params",
+     "quote": "| Cosmos-Tokenizer-CV      | 720x1280   | 4×8×8            | 105M       | **34.8**  |",
+     "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+     "source_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+     "retrieved_utc": "2026-10-02T09:04:25+00:00"
+    },
+    {
+     "id": "data_sources",
+     "quote": "3.1 Dataset We use both proprietary video datasets and publicly available open-domain Internet videos to train our models.",
+     "source_file": "cosmos_arxiv_2501.03575_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2501.03575",
+     "source_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+     "retrieved_utc": "2026-10-02T09:05:12+00:00"
+    },
+    {
+     "id": "data_categories",
+     "quote": "1. Driving (11%), 2. Hand motion and object manipulation (16%), 3. Human motion and activity (10%), 4. Spatial awareness and navigation (16%), 5. First person point-of-view (8%), 6. Nature dynamics (20%), 7. Dynamic camera movements (8%), 8. Synthetically rendered (4%), and 9. Others (7%).",
+     "source_file": "cosmos_arxiv_2501.03575_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2501.03575",
+     "source_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+     "retrieved_utc": "2026-10-02T09:05:12+00:00"
+    },
+    {
+     "id": "data_hours",
+     "quote": "In total, we accumulate about 20M hours of raw videos with resolutions from 720p to 4k.",
+     "source_file": "cosmos_arxiv_2501.03575_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2501.03575",
+     "source_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+     "retrieved_utc": "2026-10-02T09:05:12+00:00"
+    },
+    {
+     "id": "tok_train",
+     "quote": "We train our tokenizers directly on high-resolution images and long-duration videos without limiting the categories or aspect ratios.",
+     "source_file": "cosmos_arxiv_2501.03575_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2501.03575",
+     "source_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+     "retrieved_utc": "2026-10-02T09:05:12+00:00"
+    },
+    {
+     "id": "tok_joint",
+     "quote": "4.2 Training Strategy We employ a joint training strategy by alternating mini-batches of images and videos at a preset frequency.",
+     "source_file": "cosmos_arxiv_2501.03575_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2501.03575",
+     "source_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+     "retrieved_utc": "2026-10-02T09:05:12+00:00"
+    }
+   ],
+   "record_written_utc": "2026-10-02T09:13:56+00:00"
+  },
+  {
+   "id": "02_stable_video_diffusion",
+   "name": "Stable Video Diffusion (SVD img2vid 14-frame, SVD-XT img2vid-xt 25-frame) and its VAE (AutoencoderKLTemporalDecoder)",
+   "paper": {
+    "title": "Stable Video Diffusion: Scaling Latent Video Diffusion Models to Large Datasets",
+    "year": 2023,
+    "arxiv": "2311.15127"
+   },
+   "weights": {
+    "urls": [
+     "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt",
+     "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid"
+    ],
+    "hf_api_evidence": [
+     "svd_stable-video-diffusion-img2vid-xt_hfapi_blobs.json",
+     "svd_stable-video-diffusion-img2vid_hfapi_blobs.json"
+    ],
+    "files_listed_xt": {
+     "vae/diffusion_pytorch_model.safetensors": 391017740,
+     "unet/diffusion_pytorch_model.fp16.safetensors": 3049435868,
+     "svd_xt.safetensors": 9559625980
+    },
+    "gated": false,
+    "private": false,
+    "note": "HF API gated=False on 2026-10-02 (raw README/LICENSE readable without login). Not downloaded."
+   },
+   "licence": {
+    "id": "Stability AI Community License Agreement (HF license_name: stable-video-diffusion-community; LICENSE.md 'Last Updated: July 5, 2024')",
+    "url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/blob/main/LICENSE.md",
+    "commercial": "free commercial use only below USD 1M annual revenue, with registration",
+    "non_commercial_only": false,
+    "restrictions": "Stability AI Acceptable Use Policy (https://stability.ai/use-policy); revocable",
+    "gating": "none at HF level (gated=False); licence text says acceptance by clicking or by use",
+    "quote_ids": [
+     "lic_research",
+     "lic_grant",
+     "lic_aup"
+    ]
+   },
+   "architecture": {
+    "type": "latent video diffusion UNet (SD 2.1 initialised, temporal layers) + KL image autoencoder with temporally fine-tuned decoder",
+    "params": "not stated in card/paper text searched; unet fp16 file 3.05 GB (~1.5B params, inferred); VAE fp32 file 391 MB (~98M params incl. temporal decoder, inferred)",
+    "representation": "VAE encoder latents: 4-channel, 1/8 spatial (f8), computed frame-wise (encoder is an image encoder; only the decoder is temporal); alternatively UNet intermediate features",
+    "input_resolution": "576x1024 (generation resolution)",
+    "frames_per_clip": "14 (SVD) / 25 (SVD-XT)",
+    "temporal_compression": "none (1x; frame-wise f8 autoencoder)",
+    "spatial_compression": "8x8",
+    "quote_ids": [
+     "arch_frames",
+     "arch_decoder",
+     "arch_vae_class",
+     "arch_vae_latent",
+     "arch_sd21"
+    ]
+   },
+   "pretraining_data": {
+    "summary": "Image stage: Stable Diffusion 2.1 initialisation. Video stage: in-house Large Video Dataset (LVD), 580M clips / 212 years, curated to LVD-F; high-res finetune on ~1M-sample 'high-quality video dataset'. Sources of LVD not named.",
+    "form": "described only (LVD is internal; no source list)",
+    "quote_ids": [
+     "data_collect",
+     "data_lvd",
+     "data_hq",
+     "data_appendix"
+    ]
+   },
+   "medical_video_in_data": {
+    "answer": "NOT MENTIONED",
+    "basis": "Search of saved paper PDF text and model card for medical|surgical|endoscop|laparoscop|clinic|hospital: only hit is the reference title 'U-Net: ... Biomedical Image Segmentation'."
+   },
+   "appendix300_possible": {
+    "answer": "UNKNOWN",
+    "basis_class": "undisclosed",
+    "basis": "LVD sources undisclosed ('We collect an initial dataset of long videos'). Context: paper 2023-11-25, weights 2023-11-20, before the OPARA issue 2026-04-29.",
+    "quote_ids": [
+     "data_collect"
+    ]
+   },
+   "eligibility": {
+    "C1_open_weights": {
+     "status": "PASS",
+     "basis": "HF API lists vae/unet safetensors, gated=False"
+    },
+    "C2_licence_research_use": {
+     "status": "PASS",
+     "basis": "Community License section 2 grants Research & Non-Commercial use; AUP applies"
+    },
+    "C3_domain_secondary": {
+     "status": "PASS",
+     "basis": "generative video (image-to-video latent diffusion) model on general video; note the VAE encoder itself is frame-wise (image) -- the video-specific part is the UNet/temporal decoder"
+    },
+    "C4_documented_pretraining_data": {
+     "status": "FAIL",
+     "basis": "video data = internal LVD described by size/curation only; no datasets or named sources"
+    },
+    "eligible": "NO (fails C4)"
+   },
+   "quotes": [
+    {
+     "id": "lic_research",
+     "quote": "You can use this model for non-commercial or research purposes under this [license](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/blob/main/LICENSE.md).",
+     "source_file": "svd_xt_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+     "source_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+     "retrieved_utc": "2026-10-02T09:07:47+00:00"
+    },
+    {
+     "id": "lic_grant",
+     "quote": "Stability AI grants You a non-exclusive, worldwide, non-transferable, non-sublicensable, revocable and royalty-free limited license under Stability AI’s intellectual property or other rights owned by Stability AI embodied in the Stability AI Materials to use, reproduce, distribute, and create Derivative Works of, and make modifications to, the Stability AI Materials for any Research or Non-Commercial Purpose.",
+     "source_file": "svd_xt_LICENSE.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/LICENSE.md",
+     "source_sha256": "d6f6b1a4dce5c852bd6d7d9482d002baf0ccdb71e662250b73be9eec8764ee8d",
+     "retrieved_utc": "2026-10-02T09:07:48+00:00"
+    },
+    {
+     "id": "lic_aup",
+     "quote": "The model should not be used in any way that violates Stability AI's [Acceptable Use Policy](https://stability.ai/use-policy).",
+     "source_file": "svd_xt_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+     "source_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+     "retrieved_utc": "2026-10-02T09:07:47+00:00"
+    },
+    {
+     "id": "arch_frames",
+     "quote": "This model was trained to generate 25 frames at resolution 576x1024 given a context frame of the same size, finetuned from [SVD Image-to-Video [14 frames]](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid).",
+     "source_file": "svd_xt_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+     "source_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+     "retrieved_utc": "2026-10-02T09:07:47+00:00"
+    },
+    {
+     "id": "arch_decoder",
+     "quote": "We also finetune the widely used [f8-decoder](https://huggingface.co/docs/diffusers/api/models/autoencoderkl#loading-from-the-original-format) for temporal consistency.",
+     "source_file": "svd_xt_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+     "source_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+     "retrieved_utc": "2026-10-02T09:07:47+00:00"
+    },
+    {
+     "id": "arch_vae_class",
+     "quote": "\"_class_name\": \"AutoencoderKLTemporalDecoder\",",
+     "source_file": "svd_xt_vae_config.json",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/vae/config.json",
+     "source_sha256": "8f34272db69f7e2c615da6142ca3f9fdcd7b682bcfd903ceb15035fea79a8303",
+     "retrieved_utc": "2026-10-02T09:07:49+00:00"
+    },
+    {
+     "id": "arch_vae_latent",
+     "quote": "\"latent_channels\": 4,",
+     "source_file": "svd_xt_vae_config.json",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/vae/config.json",
+     "source_sha256": "8f34272db69f7e2c615da6142ca3f9fdcd7b682bcfd903ceb15035fea79a8303",
+     "retrieved_utc": "2026-10-02T09:07:49+00:00"
+    },
+    {
+     "id": "arch_sd21",
+     "quote": "we ground our initial model on a pretrained image diffusion model - namely Stable Diffusion 2.1 [71] - to equip it with a strong visual representation.",
+     "source_file": "svd_arxiv_2311.15127.pdf",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/pdf/2311.15127",
+     "source_sha256": "654ef597e183c0544cd753494cb442125bc42b17dd2477481b6799114482a92e",
+     "retrieved_utc": "2026-10-02T09:07:51+00:00"
+    },
+    {
+     "id": "data_collect",
+     "quote": "We collect an initial dataset of long videos which forms the base data for our video pretraining stage.",
+     "source_file": "svd_arxiv_2311.15127.pdf",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/pdf/2311.15127",
+     "source_sha256": "654ef597e183c0544cd753494cb442125bc42b17dd2477481b6799114482a92e",
+     "retrieved_utc": "2026-10-02T09:07:51+00:00"
+    },
+    {
+     "id": "data_lvd",
+     "quote": "The resulting initial dataset, which we dub Large Video Dataset (LVD), consists of 580M annotated video clip pairs, forming 212 years of content.",
+     "source_file": "svd_arxiv_2311.15127.pdf",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/pdf/2311.15127",
+     "source_sha256": "654ef597e183c0544cd753494cb442125bc42b17dd2477481b6799114482a92e",
+     "retrieved_utc": "2026-10-02T09:07:51+00:00"
+    },
+    {
+     "id": "data_hq",
+     "quote": "We finetune the base text-to-video model on a high-quality video dataset of ∼ 1M samples.",
+     "source_file": "svd_arxiv_2311.15127.pdf",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/pdf/2311.15127",
+     "source_sha256": "654ef597e183c0544cd753494cb442125bc42b17dd2477481b6799114482a92e",
+     "retrieved_utc": "2026-10-02T09:07:51+00:00"
+    },
+    {
+     "id": "data_appendix",
+     "quote": "All considered potential data sources were included for final training, with none held out as the proposed data filtering methods described in the SVD paper handle the quality control/filtering of the dataset.",
+     "source_file": "svd_xt_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+     "source_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+     "retrieved_utc": "2026-10-02T09:07:47+00:00"
+    }
+   ],
+   "record_written_utc": "2026-10-02T09:13:57+00:00"
+  },
+  {
+   "id": "03_cogvideox_vae",
+   "name": "CogVideoX 3D causal VAE (AutoencoderKLCogVideoX; shipped in CogVideoX-2b / CogVideoX-5b)",
+   "paper": {
+    "title": "CogVideoX: Text-to-Video Diffusion Models with An Expert Transformer",
+    "year": 2024,
+    "arxiv": "2408.06072"
+   },
+   "weights": {
+    "urls": [
+     "https://huggingface.co/zai-org/CogVideoX-2b (formerly THUDM/CogVideoX-2b; subfolder vae/)",
+     "https://huggingface.co/zai-org/CogVideoX-5b"
+    ],
+    "hf_api_evidence": [
+     "cogvideox_CogVideoX-2b_hfapi_blobs.json",
+     "cogvideox_CogVideoX-5b_hfapi_blobs.json"
+    ],
+    "files_listed": {
+     "CogVideoX-2b vae/diffusion_pytorch_model.safetensors": 862388596,
+     "CogVideoX-5b vae/diffusion_pytorch_model.safetensors": 862388596
+    },
+    "gated": false,
+    "private": false,
+    "note": "THUDM/* redirects to zai-org/*. Same VAE file size in both repos. Not downloaded."
+   },
+   "licence": {
+    "id": "Apache-2.0 (CogVideoX-2B incl. its VAE module); 'The CogVideoX License' (CogVideoX-5B transformer)",
+    "url": "https://huggingface.co/zai-org/CogVideoX-2b/blob/main/LICENSE ; https://huggingface.co/THUDM/CogVideoX-5b/blob/main/LICENSE",
+    "commercial": "Apache-2.0 for the 2B VAE; 5B licence requires registration for commercial use",
+    "non_commercial_only": false,
+    "restrictions": "5B licence: no military/illegal use, and a clause on China's national security; Apache-2.0 for the VAE as distributed with 2B",
+    "gating": "none",
+    "quote_ids": [
+     "lic_2b",
+     "lic_5b_research",
+     "lic_5b_restr"
+    ]
+   },
+   "architecture": {
+    "type": "3D causal convolutional VAE (KL), temporally causal conv",
+    "params": "216M (Cosmos card runtime table, 'CogVideoX' 4x8x8 tokenizer); VAE fp32 file 862 MB is consistent (~216M)",
+    "representation": "VAE encoder latents (16 channels), 8x8 spatial x 4x temporal",
+    "input_resolution": "720x480 for CogVideoX-2b/5b generation (VAE trained at 256x256, encodes larger frames without retraining)",
+    "frames_per_clip": "49 frames (6 s @ 8 fps) for generation; VAE first trained on 17 frames",
+    "temporal_compression": "4x",
+    "spatial_compression": "8x8",
+    "quote_ids": [
+     "arch_vae_class",
+     "arch_latent",
+     "arch_tcomp",
+     "arch_8x8x4",
+     "arch_res",
+     "arch_vae_train",
+     "arch_params"
+    ]
+   },
+   "pretraining_data": {
+    "summary": "~35M filtered single-shot video clips (source not named) + 2B images from LAION-5B and COYO-700M. VAE training data not separately stated beyond 256x256, 17-frame video training.",
+    "form": "described only for video (images: named datasets)",
+    "quote_ids": [
+     "data_main"
+    ]
+   },
+   "medical_video_in_data": {
+    "answer": "NOT MENTIONED",
+    "basis": "Search of saved paper HTML full text for medic|surg|endoscop|laparoscop|clinic|hospital|health: no hits. Negative-label filters remove editing, lectures, text-dominated, screenshots."
+   },
+   "appendix300_possible": {
+    "answer": "UNKNOWN",
+    "basis_class": "undisclosed",
+    "basis": "video source of the 35M clips not disclosed. Context: paper v1 2024-08-12, weights 2024-08, before the OPARA issue 2026-04-29.",
+    "quote_ids": [
+     "data_main"
+    ]
+   },
+   "eligibility": {
+    "C1_open_weights": {
+     "status": "PASS",
+     "basis": "HF API lists vae/diffusion_pytorch_model.safetensors, gated=False"
+    },
+    "C2_licence_research_use": {
+     "status": "PASS",
+     "basis": "Apache-2.0 for the 2B VAE; 5B licence explicitly allows academic research"
+    },
+    "C3_domain_secondary": {
+     "status": "PASS",
+     "basis": "3D video VAE of a text-to-video diffusion model trained on general video"
+    },
+    "C4_documented_pretraining_data": {
+     "status": "FAIL",
+     "basis": "video data described only as a filtered collection of ~35M clips; only the image datasets (LAION-5B, COYO-700M) are named"
+    },
+    "eligible": "NO (fails C4 for the video data)"
+   },
+   "quotes": [
+    {
+     "id": "lic_2b",
+     "quote": "The CogVideoX-2B model (including its corresponding Transformers module and VAE module) is released under the [Apache 2.0 License](LICENSE).",
+     "source_file": "cogvideox_CogVideoX-2b_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/README.md",
+     "source_sha256": "63167d42d73fd434096761b693142a69a96275b367c6fda32347d4b9dbce262d",
+     "retrieved_utc": "2026-10-02T09:09:01+00:00"
+    },
+    {
+     "id": "lic_5b_research",
+     "quote": "This license allows you to freely use all open-source models in this repository for academic research.",
+     "source_file": "cogvideox_CogVideoX-5b_LICENSE",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/zai-org/CogVideoX-5b/raw/main/LICENSE",
+     "source_sha256": "f1702a540abe80caa3458a4eb539d8a138ffeab99d971d14a99083726814037e",
+     "retrieved_utc": "2026-10-02T09:09:04+00:00"
+    },
+    {
+     "id": "lic_5b_restr",
+     "quote": "You will not use, copy, modify, merge, publish, distribute, reproduce, or create derivative works of the Software, in whole or in part, for any military, or illegal purposes.",
+     "source_file": "cogvideox_CogVideoX-5b_LICENSE",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/zai-org/CogVideoX-5b/raw/main/LICENSE",
+     "source_sha256": "f1702a540abe80caa3458a4eb539d8a138ffeab99d971d14a99083726814037e",
+     "retrieved_utc": "2026-10-02T09:09:04+00:00"
+    },
+    {
+     "id": "arch_vae_class",
+     "quote": "\"_class_name\": \"AutoencoderKLCogVideoX\",",
+     "source_file": "cogvideox_CogVideoX-2b_vae_config.json",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/vae/config.json",
+     "source_sha256": "fb212585242726f5d963271357731c78481da25cc29bdd5c2b9cb058c43f8688",
+     "retrieved_utc": "2026-10-02T09:09:02+00:00"
+    },
+    {
+     "id": "arch_latent",
+     "quote": "\"latent_channels\": 16,",
+     "source_file": "cogvideox_CogVideoX-2b_vae_config.json",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/vae/config.json",
+     "source_sha256": "fb212585242726f5d963271357731c78481da25cc29bdd5c2b9cb058c43f8688",
+     "retrieved_utc": "2026-10-02T09:09:02+00:00"
+    },
+    {
+     "id": "arch_tcomp",
+     "quote": "\"temporal_compression_ratio\": 4,",
+     "source_file": "cogvideox_CogVideoX-2b_vae_config.json",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/vae/config.json",
+     "source_sha256": "fb212585242726f5d963271357731c78481da25cc29bdd5c2b9cb058c43f8688",
+     "retrieved_utc": "2026-10-02T09:09:02+00:00"
+    },
+    {
+     "id": "arch_8x8x4",
+     "quote": "It comprises an encoder, a decoder and a latent space regularizer, achieving a 8 × \\times 8 × \\times 4 compression from pixels to the latents.",
+     "source_file": "cogvideox_arxiv_2408.06072_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2408.06072",
+     "source_sha256": "fd64b3385df4ae4e5a3e91d01164fd25d56a87035511deeae9240128347a26d8",
+     "retrieved_utc": "2026-10-02T09:09:05+00:00"
+    },
+    {
+     "id": "arch_res",
+     "quote": "720 x 480, no support for other resolutions (including fine-tuning)",
+     "source_file": "cogvideox_CogVideoX-2b_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/zai-org/CogVideoX-2b/raw/main/README.md",
+     "source_sha256": "63167d42d73fd434096761b693142a69a96275b367c6fda32347d4b9dbce262d",
+     "retrieved_utc": "2026-10-02T09:09:01+00:00"
+    },
+    {
+     "id": "arch_vae_train",
+     "quote": "During training, we first train a 3D VAE at 256 × 256 256\\times 256 resolution and 17 17 frames to save computation.",
+     "source_file": "cogvideox_arxiv_2408.06072_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2408.06072",
+     "source_sha256": "fd64b3385df4ae4e5a3e91d01164fd25d56a87035511deeae9240128347a26d8",
+     "retrieved_utc": "2026-10-02T09:09:05+00:00"
+    },
+    {
+     "id": "arch_params",
+     "quote": "| CogVideoX      | 720x1280   | 4×8×8            | 216M       | 414       |",
+     "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+     "source_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+     "retrieved_utc": "2026-10-02T09:04:25+00:00"
+    },
+    {
+     "id": "data_main",
+     "quote": "3.4 Data We construct a collection of relatively high-quality video clips with text descriptions with video filters and recaption models. After filtering, approximately 35M single-shot clips remain, with each clip averaging about 6 seconds. We additionally use 2B images filtered with aesthetics score from LAION-5B ( Schuhmann et al., 2022 ) and COYO-700M ( Byeon et al., 2022 ) datasets to assist training.",
+     "source_file": "cogvideox_arxiv_2408.06072_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2408.06072",
+     "source_sha256": "fd64b3385df4ae4e5a3e91d01164fd25d56a87035511deeae9240128347a26d8",
+     "retrieved_utc": "2026-10-02T09:09:05+00:00"
+    }
+   ],
+   "record_written_utc": "2026-10-02T09:13:57+00:00"
+  },
+  {
+   "id": "04_hunyuanvideo_vae",
+   "name": "HunyuanVideo Causal 3D VAE (AutoencoderKLCausal3D; tencent/HunyuanVideo hunyuan-video-t2v-720p/vae)",
+   "paper": {
+    "title": "HunyuanVideo: A Systematic Framework For Large Video Generative Models",
+    "year": 2024,
+    "arxiv": "2412.03603"
+   },
+   "weights": {
+    "urls": [
+     "https://huggingface.co/tencent/HunyuanVideo/tree/main/hunyuan-video-t2v-720p/vae"
+    ],
+    "hf_api_evidence": [
+     "hunyuan_HunyuanVideo_hfapi_blobs.json"
+    ],
+    "files_listed": {
+     "hunyuan-video-t2v-720p/vae/pytorch_model.pt": 986000558
+    },
+    "gated": false,
+    "private": false,
+    "note": "Not downloaded."
+   },
+   "licence": {
+    "id": "Tencent Hunyuan Community License Agreement (HF license: other / tencent-hunyuan-community), with Acceptable Use Policy (Exhibit A, last modified 2024-11-05)",
+    "url": "https://huggingface.co/tencent/HunyuanVideo/blob/main/LICENSE",
+    "commercial": "permitted below 100M monthly active users",
+    "non_commercial_only": false,
+    "restrictions": "TERRITORY: licence does not apply in the EU, UK and South Korea, and use/display of works or outputs outside the Territory is unlicensed (relevant if any EU-based collaborator, e.g. German data holders, would run it); AUP bans high-stakes automated decisions in medicine/health and unlicensed medical practice",
+    "gating": "none (HF gated=False)",
+    "quote_ids": [
+     "lic_territory",
+     "lic_grant",
+     "lic_outside",
+     "lic_aup_med"
+    ]
+   },
+   "architecture": {
+    "type": "Causal 3D VAE (CausalConv3D), trained from scratch on video:image 4:1",
+    "params": "not stated in saved sources; VAE pytorch_model.pt 986 MB (~246M params if fp32, inferred)",
+    "representation": "VAE encoder latents, 16 channels, (T/4+1) x H/8 x W/8",
+    "input_resolution": "720x1280 (also 544x960) for generation",
+    "frames_per_clip": "129 frames (generation default)",
+    "temporal_compression": "4x",
+    "spatial_compression": "8x8",
+    "quote_ids": [
+     "arch_card",
+     "arch_vae_class",
+     "arch_tcomp",
+     "arch_res",
+     "arch_scratch"
+    ]
+   },
+   "pretraining_data": {
+    "summary": "Internal raw data pool spanning people, animals, plants, landscapes, vehicles, objects, buildings, animation; GDPR-governed acquisition; no datasets or providers named.",
+    "form": "described only",
+    "quote_ids": [
+     "data_pool",
+     "data_gdpr"
+    ]
+   },
+   "medical_video_in_data": {
+    "answer": "NOT MENTIONED",
+    "basis": "Search of saved paper HTML for medic|surg|endoscop|laparoscop|clinic|hospital|health: only 'healthy nodes' (training infrastructure). Listed domains contain no medical domain."
+   },
+   "appendix300_possible": {
+    "answer": "UNKNOWN",
+    "basis_class": "undisclosed",
+    "basis": "data pool sources undisclosed. Context: paper v1 2024-12-03, weights 2024-12, before the OPARA issue 2026-04-29.",
+    "quote_ids": [
+     "data_pool"
+    ]
+   },
+   "eligibility": {
+    "C1_open_weights": {
+     "status": "PASS",
+     "basis": "HF API lists vae/pytorch_model.pt, gated=False"
+    },
+    "C2_licence_research_use": {
+     "status": "PASS",
+     "basis": "community licence grants use in the Territory (worldwide excl. EU/UK/South Korea); research in Japan is inside the Territory -- flag: not usable by EU/UK-based parties"
+    },
+    "C3_domain_secondary": {
+     "status": "PASS",
+     "basis": "3D video VAE of a text-to-video diffusion model on general video"
+    },
+    "C4_documented_pretraining_data": {
+     "status": "FAIL",
+     "basis": "only domain categories of an internal data pool; no datasets or named sources"
+    },
+    "eligible": "NO (fails C4; licence territory flag)"
+   },
+   "quotes": [
+    {
+     "id": "lic_territory",
+     "quote": "THIS LICENSE AGREEMENT DOES NOT APPLY IN THE EUROPEAN UNION, UNITED KINGDOM AND SOUTH KOREA AND IS EXPRESSLY LIMITED TO THE TERRITORY, AS DEFINED BELOW.",
+     "source_file": "hunyuan_LICENSE",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+     "source_sha256": "6ba8ea0dc1c464c9ab549b281be5d3afcab93c3308a6967d22240150d844c54d",
+     "retrieved_utc": "2026-10-02T09:10:13+00:00"
+    },
+    {
+     "id": "lic_grant",
+     "quote": "We grant You, for the Territory only, a non-exclusive, non-transferable and royalty-free limited license under Tencent’s intellectual property or other rights owned by Us embodied in or utilized by the Materials to use, reproduce, distribute, create derivative works of (including Model Derivatives), and make modifications to the Materials, only in accordance with the terms of this Agreement and the Acceptable Use Policy",
+     "source_file": "hunyuan_LICENSE",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+     "source_sha256": "6ba8ea0dc1c464c9ab549b281be5d3afcab93c3308a6967d22240150d844c54d",
+     "retrieved_utc": "2026-10-02T09:10:13+00:00"
+    },
+    {
+     "id": "lic_outside",
+     "quote": "You must not use, reproduce, modify, distribute, or display the Tencent Hunyuan Works, Output or results of the Tencent Hunyuan Works outside the Territory.",
+     "source_file": "hunyuan_LICENSE",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+     "source_sha256": "6ba8ea0dc1c464c9ab549b281be5d3afcab93c3308a6967d22240150d844c54d",
+     "retrieved_utc": "2026-10-02T09:10:13+00:00"
+    },
+    {
+     "id": "lic_aup_med",
+     "quote": "To make high-stakes automated decisions in domains that affect an individual’s safety, rights or wellbeing (e.g., law enforcement, migration, medicine/health, management of critical infrastructure, safety components of products, essential services, credit, employment, housing, education, social scoring, or insurance);",
+     "source_file": "hunyuan_LICENSE",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+     "source_sha256": "6ba8ea0dc1c464c9ab549b281be5d3afcab93c3308a6967d22240150d844c54d",
+     "retrieved_utc": "2026-10-02T09:10:13+00:00"
+    },
+    {
+     "id": "arch_card",
+     "quote": "HunyuanVideo trains a 3D VAE with CausalConv3D to compress pixel-space videos and images into a compact latent space. We set the compression ratios of video length, space, and channel to 4, 8, and 16 respectively.",
+     "source_file": "hunyuan_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+     "source_sha256": "bd577981e8f4e2adc08bbbb8fb61d42045875c40d33f0c2a536cd73c3c82d829",
+     "retrieved_utc": "2026-10-02T09:10:12+00:00"
+    },
+    {
+     "id": "arch_vae_class",
+     "quote": "\"_class_name\": \"AutoencoderKLCausal3D\",",
+     "source_file": "hunyuan_hunyuan-video-t2v-720p_vae_config.json",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/hunyuan-video-t2v-720p/vae/config.json",
+     "source_sha256": "3e77776ccbc0e366f2987c6304c37b00696e4d8b2b1f0487cba8cbc93dc6abc4",
+     "retrieved_utc": "2026-10-02T09:10:14+00:00"
+    },
+    {
+     "id": "arch_tcomp",
+     "quote": "\"time_compression_ratio\": 4,",
+     "source_file": "hunyuan_hunyuan-video-t2v-720p_vae_config.json",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/hunyuan-video-t2v-720p/vae/config.json",
+     "source_sha256": "3e77776ccbc0e366f2987c6304c37b00696e4d8b2b1f0487cba8cbc93dc6abc4",
+     "retrieved_utc": "2026-10-02T09:10:14+00:00"
+    },
+    {
+     "id": "arch_res",
+     "quote": "* **Minimum**: The minimum GPU memory required is 60GB for 720px1280px129f and 45G for 544px960px129f.",
+     "source_file": "hunyuan_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+     "source_sha256": "bd577981e8f4e2adc08bbbb8fb61d42045875c40d33f0c2a536cd73c3c82d829",
+     "retrieved_utc": "2026-10-02T09:10:12+00:00"
+    },
+    {
+     "id": "arch_scratch",
+     "quote": "we do not rely on a pre-trained image VAE for parameter initialization; instead, we train our model from scratch. To balance the reconstruction quality of videos and images, we mix video and image data at a ratio of 4 : 1",
+     "source_file": "hunyuan_arxiv_2412.03603_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2412.03603",
+     "source_sha256": "a2eaa3bcc2d0b6b292627e8aee962a00071153fbccc8214093fab951171631f4",
+     "retrieved_utc": "2026-10-02T09:10:15+00:00"
+    },
+    {
+     "id": "data_pool",
+     "quote": "Our raw data pool initially comprised videos spanning a wide range of domains including people, animals, plants, landscapes, vehicles, objects, buildings, and animation.",
+     "source_file": "hunyuan_arxiv_2412.03603_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2412.03603",
+     "source_sha256": "a2eaa3bcc2d0b6b292627e8aee962a00071153fbccc8214093fab951171631f4",
+     "retrieved_utc": "2026-10-02T09:10:15+00:00"
+    },
+    {
+     "id": "data_gdpr",
+     "quote": "Our data acquisition process is rigorously governed by the principles outlined in the General Data Protection Regulation (GDPR) [ 39 ] framework.",
+     "source_file": "hunyuan_arxiv_2412.03603_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2412.03603",
+     "source_sha256": "a2eaa3bcc2d0b6b292627e8aee962a00071153fbccc8214093fab951171631f4",
+     "retrieved_utc": "2026-10-02T09:10:15+00:00"
+    }
+   ],
+   "record_written_utc": "2026-10-02T09:13:57+00:00"
+  },
+  {
+   "id": "05_wan_vae",
+   "name": "Wan-VAE (Wan2.1_VAE.pth, 4x8x8) and Wan2.2-VAE (Wan2.2_VAE.pth, 4x16x16)",
+   "paper": {
+    "title": "Wan: Open and Advanced Large-Scale Video Generative Models",
+    "year": 2025,
+    "arxiv": "2503.20314",
+    "note": "Wan2.2-VAE is documented only in the Wan2.2 model card (no separate paper found in this audit)"
+   },
+   "weights": {
+    "urls": [
+     "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B (Wan2.1_VAE.pth)",
+     "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B (Wan2.2_VAE.pth)"
+    ],
+    "hf_api_evidence": [
+     "wan_Wan2.1-T2V-1.3B_hfapi_blobs.json",
+     "wan_Wan2.2-TI2V-5B_hfapi_blobs.json"
+    ],
+    "files_listed": {
+     "Wan2.1_VAE.pth": 507609880,
+     "Wan2.2_VAE.pth": 2818839170
+    },
+    "gated": false,
+    "private": false,
+    "note": "Not downloaded."
+   },
+   "licence": {
+    "id": "Apache-2.0",
+    "url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/blob/main/LICENSE.txt",
+    "commercial": "permitted",
+    "non_commercial_only": false,
+    "restrictions": "card adds a usage statement (no sharing unlawful/harmful/misinformation content); no gating",
+    "gating": "none",
+    "quote_ids": [
+     "lic_card21",
+     "lic_text"
+    ]
+   },
+   "architecture": {
+    "type": "3D causal VAE (inflated from a 2D image VAE), feature-cache chunked causal encoding of arbitrary-length video",
+    "params": "Wan2.1-VAE 127M (paper); Wan2.2-VAE not stated (file 2.82 GB)",
+    "representation": "VAE encoder latents: Wan2.1 latent dim 16 at 4x8x8 compression; Wan2.2-VAE 4x16x16 (latent dim not quoted from saved sources)",
+    "input_resolution": "Wan2.1: 480P (832x480) recommended for 1.3B, VAE encodes up to 1080P; Wan2.2-TI2V-5B: 720P (1280x704)",
+    "frames_per_clip": "arbitrary length (causal chunks, 1 + 4k frames); generation ~5 s",
+    "temporal_compression": "4x",
+    "spatial_compression": "8x8 (Wan2.1) / 16x16 (Wan2.2)",
+    "quote_ids": [
+     "arch_448",
+     "arch_127m",
+     "arch_22",
+     "arch_latent16",
+     "arch_train",
+     "arch_res21"
+    ]
+   },
+   "pretraining_data": {
+    "summary": "Candidate dataset 'sourced from both internal copyrighted sources and publicly accessible data', billions of images and videos, curated by a four-step cleaning pipeline; VAE: 2D image VAE on image data, then 128x128 5-frame videos, then high-quality videos. Wan2.2: +65.6% images, +83.2% videos vs Wan2.1. No datasets named.",
+    "form": "described only",
+    "quote_ids": [
+     "data_src",
+     "data_billions",
+     "arch_train",
+     "data_22"
+    ]
+   },
+   "medical_video_in_data": {
+    "answer": "NOT MENTIONED",
+    "basis": "Search of saved paper HTML for medic|surg|endoscop|laparoscop|clinic|hospital|health: hits only 'healthy nodes', a reference title, and the limitations sentence that performance 'in specific localized scenarios, such as education and medicine, may be insufficient' (no data statement).",
+    "quote_ids": [
+     "lim_medicine"
+    ]
+   },
+   "appendix300_possible": {
+    "answer": "UNKNOWN",
+    "basis_class": "undisclosed",
+    "basis": "internal copyrighted + publicly accessible sources not itemised. Context: Wan2.1 2025-02/03, Wan2.2 2025-07, both before the OPARA issue 2026-04-29.",
+    "quote_ids": [
+     "data_src"
+    ]
+   },
+   "eligibility": {
+    "C1_open_weights": {
+     "status": "PASS",
+     "basis": "HF API lists Wan2.1_VAE.pth / Wan2.2_VAE.pth, gated=False"
+    },
+    "C2_licence_research_use": {
+     "status": "PASS",
+     "basis": "Apache-2.0"
+    },
+    "C3_domain_secondary": {
+     "status": "PASS",
+     "basis": "video VAE of a text/image-to-video diffusion model on general video"
+    },
+    "C4_documented_pretraining_data": {
+     "status": "FAIL",
+     "basis": "sources described only as 'internal copyrighted sources and publicly accessible data'"
+    },
+    "eligible": "NO (fails C4)"
+   },
+   "quotes": [
+    {
+     "id": "lic_card21",
+     "quote": "The models in this repository are licensed under the Apache 2.0 License.",
+     "source_file": "wan_Wan2.1-T2V-1.3B_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/README.md",
+     "source_sha256": "d19fb6c377090790940f64af3423c87d289abc9fdee4d45963018e18e5d84119",
+     "retrieved_utc": "2026-10-02T09:11:11+00:00"
+    },
+    {
+     "id": "lic_text",
+     "quote": "Apache License",
+     "source_file": "wan_Wan2.1-T2V-1.3B_LICENSE.txt",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/LICENSE.txt",
+     "source_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+     "retrieved_utc": "2026-10-02T09:11:12+00:00"
+    },
+    {
+     "id": "arch_448",
+     "quote": "Wan -VAE can compress the spatio-temporal dimension of a video by 4 × 8 × 8 4\\times 8\\times 8 times.",
+     "source_file": "wan_arxiv_2503.20314_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2503.20314",
+     "source_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+     "retrieved_utc": "2026-10-02T09:11:15+00:00"
+    },
+    {
+     "id": "arch_127m",
+     "quote": "Wan -VAE achieves a compact model size of only 127M parameters.",
+     "source_file": "wan_arxiv_2503.20314_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2503.20314",
+     "source_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+     "retrieved_utc": "2026-10-02T09:11:15+00:00"
+    },
+    {
+     "id": "arch_latent16",
+     "quote": "adopt the same compression rate and latent feature dimension as our approach, i.e., a compression rate of 4 × 8 × 8 4\\times 8\\times 8 with a latent dimension of 16.",
+     "source_file": "wan_arxiv_2503.20314_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2503.20314",
+     "source_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+     "retrieved_utc": "2026-10-02T09:11:15+00:00"
+    },
+    {
+     "id": "arch_22",
+     "quote": "It is supported by a high-compression Wan2.2-VAE, which achieves a $T\\times H\\times W$ compression ratio of $4\\times16\\times16$, increasing the overall compression rate to 64 while maintaining high-quality video reconstruction.",
+     "source_file": "wan_Wan2.2-TI2V-5B_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+     "source_sha256": "e357cb3ac077f8739755b0fb38fe8424c76534b19b4a84f6138856abb00abf69",
+     "retrieved_utc": "2026-10-02T09:11:13+00:00"
+    },
+    {
+     "id": "arch_train",
+     "quote": "First, we construct a 2D image VAE with the same structure and train it on image data. Then, we inflate the well-trained 2D image VAE into a 3D causal Wan -VAE to provide an initial spatial compression prior, which drastically improves the training speed compared to training a video VAE from scratch. At this stage, Wan -VAE is trained on the low-resolution (128 × \\times 128) and small frame number (5-frame) videos to accelerate convergence speed.",
+     "source_file": "wan_arxiv_2503.20314_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2503.20314",
+     "source_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+     "retrieved_utc": "2026-10-02T09:11:15+00:00"
+    },
+    {
+     "id": "arch_res21",
+     "quote": "For optimal performance, we recommend using 480P resolution.",
+     "source_file": "wan_Wan2.1-T2V-1.3B_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/README.md",
+     "source_sha256": "d19fb6c377090790940f64af3423c87d289abc9fdee4d45963018e18e5d84119",
+     "retrieved_utc": "2026-10-02T09:11:11+00:00"
+    },
+    {
+     "id": "data_src",
+     "quote": "3.1 Pre-training Data We curated and deduplicated a candidate dataset sourced from both internal copyrighted sources and publicly accessible data.",
+     "source_file": "wan_arxiv_2503.20314_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2503.20314",
+     "source_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+     "retrieved_utc": "2026-10-02T09:11:15+00:00"
+    },
+    {
+     "id": "data_billions",
+     "quote": "Following these principles, we curated a dataset comprising billions of videos and images.",
+     "source_file": "wan_arxiv_2503.20314_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2503.20314",
+     "source_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+     "retrieved_utc": "2026-10-02T09:11:15+00:00"
+    },
+    {
+     "id": "data_22",
+     "quote": "Compared to Wan2.1, Wan2.2 is trained on a significantly larger data, with +65.6% more images and +83.2% more videos.",
+     "source_file": "wan_Wan2.2-TI2V-5B_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+     "source_sha256": "e357cb3ac077f8739755b0fb38fe8424c76534b19b4a84f6138856abb00abf69",
+     "retrieved_utc": "2026-10-02T09:11:13+00:00"
+    },
+    {
+     "id": "lim_medicine",
+     "quote": "As a foundational video model, we are committed to enhancing Wan ’s general capabilities, yet performance in specific localized scenarios, such as education and medicine, may be insufficient.",
+     "source_file": "wan_arxiv_2503.20314_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2503.20314",
+     "source_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+     "retrieved_utc": "2026-10-02T09:11:15+00:00"
+    }
+   ],
+   "record_written_utc": "2026-10-02T09:13:57+00:00"
+  },
+  {
+   "id": "06a_opensora_vae_v1_2",
+   "name": "Open-Sora VAE v1.2 (hpcai-tech/OpenSora-VAE-v1.2; SDXL 2D VAE + MAGVIT-v2-style causal temporal VAE)",
+   "paper": {
+    "title": "Open-Sora: Democratizing Efficient Video Production for All",
+    "year": 2024,
+    "arxiv": "2412.20404",
+    "also": "Open-Sora 1.2 technical report, GitHub docs/report_03.md at tag v1.2.0"
+   },
+   "weights": {
+    "urls": [
+     "https://huggingface.co/hpcai-tech/OpenSora-VAE-v1.2"
+    ],
+    "hf_api_evidence": [
+     "opensora_OpenSora-VAE-v1.2_hfapi_blobs.json"
+    ],
+    "files_listed": {
+     "model.safetensors": 1573430548
+    },
+    "gated": false,
+    "private": false,
+    "note": "config pulls the 2D VAE from PixArt-alpha/pixart_sigma_sdxlvae_T5_diffusers (SDXL VAE). Not downloaded."
+   },
+   "licence": {
+    "id": "Apache-2.0",
+    "url": "https://huggingface.co/hpcai-tech/OpenSora-VAE-v1.2 ; https://github.com/hpcaitech/Open-Sora/blob/main/LICENSE",
+    "commercial": "permitted",
+    "non_commercial_only": false,
+    "restrictions": "none beyond Apache-2.0 (SDXL VAE component carries its own upstream licence, not audited here)",
+    "gating": "none",
+    "quote_ids": [
+     "lic_card",
+     "lic_text"
+    ]
+   },
+   "architecture": {
+    "type": "stacked video compression network: 2D VAE (SDXL, 83M) spatial 8x8 then causal 3D VAE (MAGVIT-v2 structure, 300M) temporal 4x",
+    "params": "384M total",
+    "representation": "4-channel latents after 8x8 spatial + 4x temporal compression (scale/shift per channel in config)",
+    "input_resolution": "trained mainly at 256x256; Open-Sora 1.2 generates 144p-720p",
+    "frames_per_clip": "17-frame micro-clips (micro_frame_size 17); stage 3 mixed lengths up to 34 frames",
+    "temporal_compression": "4x",
+    "spatial_compression": "8x8",
+    "quote_ids": [
+     "arch_384",
+     "arch_4x",
+     "arch_micro",
+     "arch_sdxl"
+    ]
+   },
+   "pretraining_data": {
+    "summary": "3D VAE trained on videos from Pexels and Pixabay (17-frame, 256x256 clips); 2D VAE initialised from SDXL VAE (image data, not documented here). Open-Sora 1.2 diffusion model data are a named list (Webvid-10M, Panda-70M, HD-VG-130M, MiraData, Vript, Inter4K, Pexels, Pixabay, Mixkit; images: Midjourney sets, Unsplash-lite, LAION-Aesthetics subset).",
+    "form": "dataset/source list (named)",
+    "quote_ids": [
+     "data_vae",
+     "data_vae_paper",
+     "data_open",
+     "data_list_intro"
+    ]
+   },
+   "medical_video_in_data": {
+    "answer": "NOT MENTIONED",
+    "basis": "Search of saved report_03.md, datasets.md and paper HTML for medic|surg|endoscop|laparoscop|clinic|hospital|health: no hits. Sources are free-licence stock-footage sites."
+   },
+   "appendix300_possible": {
+    "answer": "UNKNOWN",
+    "basis_class": "named_open_web_sources",
+    "basis": "VAE video data = Pexels + Pixabay stock-footage sites: named, but item-level content is open-ended, so the documentation does not exclude the source recordings. Context: VAE released 2024-06-17, before the OPARA issue 2026-04-29; nothing documented suggests surgical content.",
+    "quote_ids": [
+     "data_vae"
+    ]
+   },
+   "eligibility": {
+    "C1_open_weights": {
+     "status": "PASS",
+     "basis": "HF API lists model.safetensors, gated=False"
+    },
+    "C2_licence_research_use": {
+     "status": "PASS",
+     "basis": "Apache-2.0"
+    },
+    "C3_domain_secondary": {
+     "status": "PASS",
+     "basis": "video VAE of an open text-to-video model trained on general (stock) video"
+    },
+    "C4_documented_pretraining_data": {
+     "status": "PASS",
+     "basis": "technical report and paper name the VAE training sources (Pexels, Pixabay) and the full Open-Sora 1.2 dataset list; caveat: the initialising SDXL 2D VAE's image data are not documented in these sources"
+    },
+    "eligible": "YES (all four criteria PASS; caveat on the SDXL image-VAE initialisation)"
+   },
+   "quotes": [
+    {
+     "id": "lic_card",
+     "quote": "license: apache-2.0",
+     "source_file": "opensora_OpenSora-VAE-v1.2_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/hpcai-tech/OpenSora-VAE-v1.2/raw/main/README.md",
+     "source_sha256": "f73a8c6efd03f97db80c399c2ed3fdee40bb02c59fe4e86d581ceaf724b54dfc",
+     "retrieved_utc": "2026-10-02T09:12:34+00:00"
+    },
+    {
+     "id": "lic_text",
+     "quote": "Apache License Version 2.0, January 2004",
+     "source_file": "opensora_github_main_LICENSE",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/LICENSE",
+     "source_sha256": "6d9037ce1eadfa116e7daaf98bf95e2b176c993e1f5936e69170773c6011d68d",
+     "retrieved_utc": "2026-10-02T09:12:39+00:00"
+    },
+    {
+     "id": "arch_384",
+     "quote": "For the 3D VAE, we adopt the structure of VAE in [Magvit-v2](https://magvit.cs.cmu.edu/v2/), which contains 300M parameters. Along with 83M 2D VAE, the total parameters of the video compression network is 384M.",
+     "source_file": "opensora_github_v1.2.0_report_03.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/v1.2.0/docs/report_03.md",
+     "source_sha256": "ac1f6c9b09a7e228e6bbc88ca2c51d24dd0cbff6f904aecfdb1161b749379959",
+     "retrieved_utc": "2026-10-02T09:12:37+00:00"
+    },
+    {
+     "id": "arch_4x",
+     "quote": "we propose a simple video compression network, which first compress the video in the spatial dimension by 8x8 times, then compress the video in the temporal dimension by 4x times.",
+     "source_file": "opensora_github_v1.2.0_report_03.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/v1.2.0/docs/report_03.md",
+     "source_sha256": "ac1f6c9b09a7e228e6bbc88ca2c51d24dd0cbff6f904aecfdb1161b749379959",
+     "retrieved_utc": "2026-10-02T09:12:37+00:00"
+    },
+    {
+     "id": "arch_micro",
+     "quote": "\"micro_frame_size\": 17,",
+     "source_file": "opensora_OpenSora-VAE-v1.2_config.json",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/hpcai-tech/OpenSora-VAE-v1.2/raw/main/config.json",
+     "source_sha256": "bfa7fcdf0c64f093ee553ac5894946f6b80ba034452619c9f74f75099feeeecc",
+     "retrieved_utc": "2026-10-02T09:12:35+00:00"
+    },
+    {
+     "id": "arch_sdxl",
+     "quote": "We initialize the 2D VAE with [SDXL's VAE](https://huggingface.co/stabilityai/sdxl-vae), which is better than our previously used one.",
+     "source_file": "opensora_github_v1.2.0_report_03.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/v1.2.0/docs/report_03.md",
+     "source_sha256": "ac1f6c9b09a7e228e6bbc88ca2c51d24dd0cbff6f904aecfdb1161b749379959",
+     "retrieved_utc": "2026-10-02T09:12:37+00:00"
+    },
+    {
+     "id": "data_vae",
+     "quote": "The training data is videos from pixels and pixabay, and the training video size is mainly 17 frames, 256x256 resolution.",
+     "source_file": "opensora_github_v1.2.0_report_03.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/v1.2.0/docs/report_03.md",
+     "source_sha256": "ac1f6c9b09a7e228e6bbc88ca2c51d24dd0cbff6f904aecfdb1161b749379959",
+     "retrieved_utc": "2026-10-02T09:12:37+00:00"
+    },
+    {
+     "id": "data_vae_paper",
+     "quote": "The 3D VAE was trained for 1.2M steps with a local batch size of 1, using videos from Pexels and Pixabay. The training data primarily consisted of 17-frame clips at a resolution of 256×256.",
+     "source_file": "opensora_arxiv_2412.20404_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2412.20404",
+     "source_sha256": "f2aa056fd4b19c35645d4832071c6cda2202e3cde36d7a1f37f56466fefbd82a",
+     "retrieved_utc": "2026-10-02T09:12:40+00:00"
+    },
+    {
+     "id": "data_open",
+     "quote": "2.1 Data Source The dataset used is all open-sourced to make the model training fully reproducible.",
+     "source_file": "opensora_arxiv_2412.20404_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2412.20404",
+     "source_sha256": "f2aa056fd4b19c35645d4832071c6cda2202e3cde36d7a1f37f56466fefbd82a",
+     "retrieved_utc": "2026-10-02T09:12:40+00:00"
+    },
+    {
+     "id": "data_list_intro",
+     "quote": "For Open-Sora 1.2, we conduct mixed training with both images and videos. The main datasets we use are listed below.",
+     "source_file": "opensora_github_v1.2.0_datasets.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/v1.2.0/docs/datasets.md",
+     "source_sha256": "fb2240586de4971541dd0026c51fd4837e84e8c3688df8fdff000ed67f036917",
+     "retrieved_utc": "2026-10-02T09:12:38+00:00"
+    }
+   ],
+   "record_written_utc": "2026-10-02T09:14:48+00:00"
+  },
+  {
+   "id": "06b_opensora_v2_video_dc_ae",
+   "name": "Open-Sora 2.0 Video DC-AE (hpcai-tech/Open-Sora-v2-Video-DC-AE, F32T4C128_AE.safetensors); note Open-Sora-v2 main repo ships hunyuan_vae.safetensors (= HunyuanVideo VAE, see 04)",
+   "paper": {
+    "title": "Open-Sora 2.0: Training a Commercial-Level Video Generation Model in $200k",
+    "year": 2025,
+    "arxiv": "2503.09642"
+   },
+   "weights": {
+    "urls": [
+     "https://huggingface.co/hpcai-tech/Open-Sora-v2-Video-DC-AE"
+    ],
+    "hf_api_evidence": [
+     "opensora_Open-Sora-v2-Video-DC-AE_hfapi_blobs.json",
+     "opensora_Open-Sora-v2_hfapi_blobs.json"
+    ],
+    "files_listed": {
+     "F32T4C128_AE.safetensors": 918970214
+    },
+    "gated": false,
+    "private": false,
+    "note": "Not downloaded."
+   },
+   "licence": {
+    "id": "Apache-2.0 (HF card)",
+    "url": "https://huggingface.co/hpcai-tech/Open-Sora-v2-Video-DC-AE",
+    "commercial": "permitted",
+    "non_commercial_only": false,
+    "restrictions": "none beyond Apache-2.0",
+    "gating": "none",
+    "quote_ids": [
+     "lic_card2"
+    ]
+   },
+   "architecture": {
+    "type": "deep-compression video autoencoder (no KL), trained from scratch",
+    "params": "not stated in saved sources (file 919 MB)",
+    "representation": "latents at 4x32x32 compression; 128 or 256 channels trained (released file name F32T4C128 suggests 128 channels -- inferred from the file name only)",
+    "input_resolution": "trained on 256px 1:1 clips; generation up to 768px",
+    "frames_per_clip": "32-frame training clips",
+    "temporal_compression": "4x",
+    "spatial_compression": "32x32",
+    "quote_ids": [
+     "arch_dcae",
+     "arch_train"
+    ]
+   },
+   "pretraining_data": {
+    "summary": "AE training data described only as 32-frame 256px 1:1 videos; the paper's data section describes a filtering pyramid and statistics but does not name sources.",
+    "form": "described only",
+    "quote_ids": [
+     "arch_train",
+     "data_pyramid"
+    ]
+   },
+   "medical_video_in_data": {
+    "answer": "NOT MENTIONED",
+    "basis": "Search of saved paper HTML and card for medic|surg|endoscop|laparoscop|clinic|hospital|health: no hits."
+   },
+   "appendix300_possible": {
+    "answer": "UNKNOWN",
+    "basis_class": "undisclosed",
+    "basis": "sources not named. Context: released 2025-03, before the OPARA issue 2026-04-29.",
+    "quote_ids": [
+     "data_pyramid"
+    ]
+   },
+   "eligibility": {
+    "C1_open_weights": {
+     "status": "PASS",
+     "basis": "HF API lists F32T4C128_AE.safetensors, gated=False"
+    },
+    "C2_licence_research_use": {
+     "status": "PASS",
+     "basis": "Apache-2.0"
+    },
+    "C3_domain_secondary": {
+     "status": "PASS",
+     "basis": "video autoencoder of a text/image-to-video model"
+    },
+    "C4_documented_pretraining_data": {
+     "status": "FAIL",
+     "basis": "no datasets or named sources for the Open-Sora 2.0 / DC-AE training video"
+    },
+    "eligible": "NO (fails C4)"
+   },
+   "quotes": [
+    {
+     "id": "lic_card2",
+     "quote": "license: apache-2.0",
+     "source_file": "opensora_Open-Sora-v2-Video-DC-AE_README.md",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://huggingface.co/hpcai-tech/Open-Sora-v2-Video-DC-AE/raw/main/README.md",
+     "source_sha256": "4e169fe861bc8f83ecb0ae697548f5b55b792cb0282112ea7c84eb8ded6037e4",
+     "retrieved_utc": "2026-10-02T09:12:36+00:00"
+    },
+    {
+     "id": "arch_dcae",
+     "quote": "our Video DC-AE with a 4 × 32 × 32 4\\times 32\\times 32 compression ratio and a patch size of 1 × 1 × 1 1\\times 1\\times 1 enables training on 32-frame, 256px videos with a latent shape of 8 × 8 × 8 8\\times 8\\times 8 .",
+     "source_file": "opensora_arxiv_2503.09642_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2503.09642",
+     "source_sha256": "26048881bb90d6137b18adb8fc78199bd2d99bdf32bdbc227cd370cdce148e11",
+     "retrieved_utc": "2026-10-02T09:12:41+00:00"
+    },
+    {
+     "id": "arch_train",
+     "quote": "We train each AE model on 8 GPUs with a local batch size of 1. Our training data consists of 32 frames of 256px videos at an aspect ratio of 1:1.",
+     "source_file": "opensora_arxiv_2503.09642_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2503.09642",
+     "source_sha256": "26048881bb90d6137b18adb8fc78199bd2d99bdf32bdbc227cd370cdce148e11",
+     "retrieved_utc": "2026-10-02T09:12:41+00:00"
+    },
+    {
+     "id": "data_pyramid",
+     "quote": "2 Data Our goal for data is to build a hierarchical data pyramid, catering to the requirement of the progressive training process.",
+     "source_file": "opensora_arxiv_2503.09642_fulltext.html",
+     "verified_whitespace_normalized": true,
+     "source_url": "https://arxiv.org/html/2503.09642",
+     "source_sha256": "26048881bb90d6137b18adb8fc78199bd2d99bdf32bdbc227cd370cdce148e11",
+     "retrieved_utc": "2026-10-02T09:12:41+00:00"
+    }
+   ],
+   "record_written_utc": "2026-10-02T09:14:48+00:00"
+  }
+ ]
+}

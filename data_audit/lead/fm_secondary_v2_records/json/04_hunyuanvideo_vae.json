@@ -1,0 +1,860 @@
+{
+ "id": "04_hunyuanvideo_vae",
+ "name": "HunyuanVideo Causal 3D VAE (AutoencoderKLCausal3D; tencent/HunyuanVideo hunyuan-video-t2v-720p/vae)",
+ "version": "tencent/HunyuanVideo, hunyuan-video-t2v-720p/vae/pytorch_model.pt + vae/config.json (HF repo sha 6204ad6aea1a77ff5aba337c88278bb9500eb37d, repo created 2024-12-01, last modified 2025-03-06); VAE id in the official code: '884-16c-hy'",
+ "paper": {
+  "title": "HunyuanVideo: A Systematic Framework For Large Video Generative Models",
+  "year": 2024,
+  "arxiv": "2412.03603"
+ },
+ "weights_location": {
+  "urls": [
+   "https://huggingface.co/tencent/HunyuanVideo/tree/main/hunyuan-video-t2v-720p/vae"
+  ],
+  "files_listed": {
+   "hunyuan-video-t2v-720p/vae/pytorch_model.pt": 986000558,
+   "hunyuan-video-t2v-720p/vae/config.json": 785
+  },
+  "gated": false,
+  "private": false,
+  "verified_how": "HF API model listing (metadata only) saved as hunyuan_tencent__HunyuanVideo_hfapi.json; nothing downloaded",
+  "quote_ids": [
+   "w_file",
+   "w_gated"
+  ],
+  "quotes": [
+   {
+    "id": "w_file",
+    "quote": "\"rfilename\": \"hunyuan-video-t2v-720p/vae/pytorch_model.pt\",",
+    "source_url": "https://huggingface.co/api/models/tencent/HunyuanVideo?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_tencent__HunyuanVideo_hfapi.json"
+   },
+   {
+    "id": "w_gated",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/tencent/HunyuanVideo?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_tencent__HunyuanVideo_hfapi.json"
+   }
+  ]
+ },
+ "licence": {
+  "id": "Tencent Hunyuan Community License Agreement (HF license: other / tencent-hunyuan-community), with Acceptable Use Policy (Exhibit A, last modified 2024-11-05)",
+  "url": "https://huggingface.co/tencent/HunyuanVideo/blob/main/LICENSE",
+  "commercial": "permitted below 100M monthly active users",
+  "non_commercial_only": false,
+  "restrictions": "TERRITORY: licence does not apply in the EU, UK and South Korea, and use/display of works or outputs outside the Territory is unlicensed (relevant if any EU-based collaborator, e.g. German data holders, would run it); AUP bans high-stakes automated decisions in medicine/health and unlicensed medical practice",
+  "gating": "none (HF gated=False)",
+  "quote_ids": [
+   "lic_card",
+   "lic_territory",
+   "lic_grant",
+   "lic_outside",
+   "lic_mau",
+   "lic_aup_med"
+  ],
+  "quotes": [
+   {
+    "id": "lic_card",
+    "quote": "license_name: tencent-hunyuan-community",
+    "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_README.md"
+   },
+   {
+    "id": "lic_territory",
+    "quote": "THIS LICENSE AGREEMENT DOES NOT APPLY IN THE EUROPEAN UNION, UNITED KINGDOM AND SOUTH KOREA AND IS EXPRESSLY LIMITED TO THE TERRITORY, AS DEFINED BELOW.",
+    "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_LICENSE.txt"
+   },
+   {
+    "id": "lic_grant",
+    "quote": "We grant You, for the Territory only, a non-exclusive, non-transferable and royalty-free limited license under Tencent’s intellectual property or other rights owned by Us embodied in or utilized by the Materials to use, reproduce, distribute, create derivative works of (including Model Derivatives), and make modifications to the Materials, only in accordance with the terms of this Agreement and the Acceptable Use Policy",
+    "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_LICENSE.txt"
+   },
+   {
+    "id": "lic_outside",
+    "quote": "You must not use, reproduce, modify, distribute, or display the Tencent Hunyuan Works, Output or results of the Tencent Hunyuan Works outside the Territory.",
+    "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_LICENSE.txt"
+   },
+   {
+    "id": "lic_mau",
+    "quote": "greater than 100 million monthly active users in the preceding calendar month, You must request a license from Tencent",
+    "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_LICENSE.txt"
+   },
+   {
+    "id": "lic_aup_med",
+    "quote": "To make high-stakes automated decisions in domains that affect an individual’s safety, rights or wellbeing (e.g., law enforcement, migration, medicine/health, management of critical infrastructure, safety components of products, essential services, credit, employment, housing, education, social scoring, or insurance);",
+    "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_LICENSE.txt"
+   }
+  ]
+ },
+ "domain": {
+  "value": "causal 3D video VAE of the HunyuanVideo text-to-video diffusion model, trained from scratch on video:image 4:1 from an internal general-domain data pool (people, animals, plants, landscapes, vehicles, objects, buildings, animation)",
+  "quote_ids": [
+   "arch_card",
+   "arch_scratch",
+   "data_pool"
+  ],
+  "quotes": [
+   {
+    "id": "arch_card",
+    "quote": "HunyuanVideo trains a 3D VAE with CausalConv3D to compress pixel-space videos and images into a compact latent space. We set the compression ratios of video length, space, and channel to 4, 8, and 16 respectively.",
+    "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_README.md"
+   },
+   {
+    "id": "arch_scratch",
+    "quote": "we do not rely on a pre-trained image VAE for parameter initialization; instead, we train our model from scratch. To balance the reconstruction quality of videos and images, we mix video and image data at a ratio of 4 : 1",
+    "source_url": "https://arxiv.org/html/2412.03603",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+   },
+   {
+    "id": "data_pool",
+    "quote": "Our raw data pool initially comprised videos spanning a wide range of domains including people, animals, plants, landscapes, vehicles, objects, buildings, and animation.",
+    "source_url": "https://arxiv.org/html/2412.03603",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+   }
+  ]
+ },
+ "architecture": {
+  "type": "Causal 3D VAE (CausalConv3D), trained from scratch on video:image 4:1",
+  "representation": "VAE encoder latents, 16 channels, (T/4+1) x H/8 x W/8"
+ },
+ "pretraining_data": {
+  "summary": "Internal raw data pool spanning people, animals, plants, landscapes, vehicles, objects, buildings, animation; GDPR-governed acquisition; no datasets or providers named.",
+  "form": "described only"
+ },
+ "pretraining_data_quote": {
+  "quote_ids": [
+   "data_pool",
+   "data_sources",
+   "data_gdpr",
+   "arch_scratch"
+  ],
+  "quotes": [
+   {
+    "id": "data_pool",
+    "quote": "Our raw data pool initially comprised videos spanning a wide range of domains including people, animals, plants, landscapes, vehicles, objects, buildings, and animation.",
+    "source_url": "https://arxiv.org/html/2412.03603",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+   },
+   {
+    "id": "data_sources",
+    "quote": "Our raw data from different sources exhibits varying durations and levels of quality.",
+    "source_url": "https://arxiv.org/html/2412.03603",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+   },
+   {
+    "id": "data_gdpr",
+    "quote": "Our data acquisition process is rigorously governed by the principles outlined in the General Data Protection Regulation (GDPR) [ 39 ] framework.",
+    "source_url": "https://arxiv.org/html/2412.03603",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+   },
+   {
+    "id": "arch_scratch",
+    "quote": "we do not rely on a pre-trained image VAE for parameter initialization; instead, we train our model from scratch. To balance the reconstruction quality of videos and images, we mix video and image data at a ratio of 4 : 1",
+    "source_url": "https://arxiv.org/html/2412.03603",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+   }
+  ]
+ },
+ "medical_video_in_data": {
+  "answer": "NOT MENTIONED",
+  "basis": "Search of saved paper HTML for medic|surg|endoscop|laparoscop|clinic|hospital|health: only 'healthy nodes' (training infrastructure). Listed domains contain no medical domain.",
+  "term_search": {
+   "pattern": "medical|surgical|surgery|endoscop|laparoscop|clinical|health|hospital",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt": [
+     "anual recovery of training tasks. By automatically detecting errors and quickly replacing healthy nodes to pull up training tasks, the training stability is 99.5%. 6 Fundation Model Perf"
+    ],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_README.md": []
+   }
+  }
+ },
+ "appendix300_possible": {
+  "answer": "UNKNOWN",
+  "basis_class": "undisclosed",
+  "basis": "data pool sources undisclosed. Context: paper v1 2024-12-03, weights 2024-12, before the OPARA issue 2026-04-29.",
+  "quote_ids": [
+   "data_pool"
+  ],
+  "quotes": [
+   {
+    "id": "data_pool",
+    "quote": "Our raw data pool initially comprised videos spanning a wide range of domains including people, animals, plants, landscapes, vehicles, objects, buildings, and animation.",
+    "source_url": "https://arxiv.org/html/2412.03603",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+   }
+  ]
+ },
+ "appendix300_check": {
+  "answer": "UNKNOWN",
+  "quote_or_statement": "the documented data list does not mention DS203/Appendix300",
+  "basis_class": "undisclosed",
+  "basis": "the raw data pool is described only by content domains ('raw data from different sources'); no datasets or providers are named, so the documentation does not allow the Appendix300 source recordings to be excluded. Timing: paper v1 2024-12-03, weights 2024-12, before the OPARA issue 2026-04-29.",
+  "term_search": {
+   "pattern": "appendix ?300|DS203|OPARA|appendectom|appendic",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_README.md": []
+   }
+  },
+  "quote_ids": [
+   "data_pool",
+   "data_sources"
+  ],
+  "quotes": [
+   {
+    "id": "data_pool",
+    "quote": "Our raw data pool initially comprised videos spanning a wide range of domains including people, animals, plants, landscapes, vehicles, objects, buildings, and animation.",
+    "source_url": "https://arxiv.org/html/2412.03603",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+   },
+   {
+    "id": "data_sources",
+    "quote": "Our raw data from different sources exhibits varying durations and levels of quality.",
+    "source_url": "https://arxiv.org/html/2412.03603",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+   }
+  ]
+ },
+ "input": {
+  "frame_size": {
+   "value": "generation default 720x1280 (also 544x960); VAE trained by a curriculum from low-resolution short to high-resolution long video; spatial-temporal tiling encodes arbitrary resolutions",
+   "quote_ids": [
+    "in_size",
+    "arch_res",
+    "in_curriculum",
+    "in_tiling"
+   ],
+   "quotes": [
+    {
+     "id": "in_size",
+     "quote": "| `--video-size` | 720 1280 | The size of the generated video |",
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_README.md"
+    },
+    {
+     "id": "arch_res",
+     "quote": "* **Minimum**: The minimum GPU memory required is 60GB for 720px1280px129f and 45G for 544px960px129f.",
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_README.md"
+    },
+    {
+     "id": "in_curriculum",
+     "quote": "we employ a curriculum learning strategy, gradually training from low-resolution short video to high-resolution long video.",
+     "source_url": "https://arxiv.org/html/2412.03603",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+    },
+    {
+     "id": "in_tiling",
+     "quote": "This tiling strategy allows us to encode/decode videos in arbitrary resolutions and durations on a single GPU.",
+     "source_url": "https://arxiv.org/html/2412.03603",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+    }
+   ]
+  },
+  "frame_rate_or_sampling": {
+   "value": "VAE training: frames sampled evenly with a random sampling interval of 1-8; the DiT is trained at the original frame rate; official sampling script saves at 24 fps",
+   "quote_ids": [
+    "in_interval",
+    "in_orig_fps",
+    "in_fps_save"
+   ],
+   "quotes": [
+    {
+     "id": "in_interval",
+     "quote": "we randomly choose a sampling interval from the range 1 ∼ 8",
+     "source_url": "https://arxiv.org/html/2412.03603",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+    },
+    {
+     "id": "in_orig_fps",
+     "quote": "allowing us to train videos at the original resolution and frame rate.",
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_README.md"
+    },
+    {
+     "id": "in_fps_save",
+     "quote": "save_videos_grid(sample, cur_save_path, fps=24)",
+     "source_url": "https://raw.githubusercontent.com/Tencent/HunyuanVideo/main/sample_video.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_github_main_sample_video.py.txt"
+    }
+   ]
+  },
+  "clip_length_frames": {
+   "value": "causal (T+1)-frame input; generation default 129 frames (= 1 + 4x32); tiling allows arbitrary durations",
+   "quote_ids": [
+    "in_shape_in",
+    "in_len",
+    "in_tiling"
+   ],
+   "quotes": [
+    {
+     "id": "in_shape_in",
+     "quote": "For a video of shape ( T + 1 ) × 3 × H × W",
+     "source_url": "https://arxiv.org/html/2412.03603",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+    },
+    {
+     "id": "in_len",
+     "quote": "| `--video-length` | 129 | The length of the generated video |",
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_README.md"
+    },
+    {
+     "id": "in_tiling",
+     "quote": "This tiling strategy allows us to encode/decode videos in arbitrary resolutions and durations on a single GPU.",
+     "source_url": "https://arxiv.org/html/2412.03603",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+    }
+   ]
+  },
+  "temporal_compression": {
+   "value": "4x (latent frames T/4 + 1)",
+   "quote_ids": [
+    "arch_card",
+    "arch_tcomp",
+    "in_shape_out"
+   ],
+   "quotes": [
+    {
+     "id": "arch_card",
+     "quote": "HunyuanVideo trains a 3D VAE with CausalConv3D to compress pixel-space videos and images into a compact latent space. We set the compression ratios of video length, space, and channel to 4, 8, and 16 respectively.",
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_README.md"
+    },
+    {
+     "id": "arch_tcomp",
+     "quote": "\"time_compression_ratio\": 4,",
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/hunyuan-video-t2v-720p/vae/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_hunyuan-video-t2v-720p_vae_config.json"
+    },
+    {
+     "id": "in_shape_out",
+     "quote": "our 3DVAE compresses it into latent features with shape ( T c t + 1 ) × C × ( H c s ) × ( W c s )",
+     "source_url": "https://arxiv.org/html/2412.03603",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+    }
+   ]
+  },
+  "spatial_compression": {
+   "value": "8x8",
+   "quote_ids": [
+    "arch_card",
+    "in_shape_out"
+   ],
+   "quotes": [
+    {
+     "id": "arch_card",
+     "quote": "HunyuanVideo trains a 3D VAE with CausalConv3D to compress pixel-space videos and images into a compact latent space. We set the compression ratios of video length, space, and channel to 4, 8, and 16 respectively.",
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_README.md"
+    },
+    {
+     "id": "in_shape_out",
+     "quote": "our 3DVAE compresses it into latent features with shape ( T c t + 1 ) × C × ( H c s ) × ( W c s )",
+     "source_url": "https://arxiv.org/html/2412.03603",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+    }
+   ]
+  }
+ },
+ "embedding_dim": {
+  "value": "16 latent channels x 33 x 90 x 160 = 7,603,200 values for a 129-frame 720x1280 clip; generally 16 x (T/4 + 1) x H/8 x W/8 for a (T+1)-frame clip",
+  "derivation": "latent_channels 16 (config; card 'channel ... 16'); shape (T/c_t + 1) x C x H/c_s x W/c_s with c_t 4, c_s 8 (paper)",
+  "quote_ids": [
+   "arch_latent",
+   "arch_card",
+   "in_shape_in",
+   "in_shape_out"
+  ],
+  "quotes": [
+   {
+    "id": "arch_latent",
+    "quote": "\"latent_channels\": 16,",
+    "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/hunyuan-video-t2v-720p/vae/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_hunyuan-video-t2v-720p_vae_config.json"
+   },
+   {
+    "id": "arch_card",
+    "quote": "HunyuanVideo trains a 3D VAE with CausalConv3D to compress pixel-space videos and images into a compact latent space. We set the compression ratios of video length, space, and channel to 4, 8, and 16 respectively.",
+    "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_README.md"
+   },
+   {
+    "id": "in_shape_in",
+    "quote": "For a video of shape ( T + 1 ) × 3 × H × W",
+    "source_url": "https://arxiv.org/html/2412.03603",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+   },
+   {
+    "id": "in_shape_out",
+    "quote": "our 3DVAE compresses it into latent features with shape ( T c t + 1 ) × C × ( H c s ) × ( W c s )",
+    "source_url": "https://arxiv.org/html/2412.03603",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+   }
+  ]
+ },
+ "params": {
+  "value": "not documented in the saved card, config, paper or code; (inferred, not documentation: pytorch_model.pt 986,000,558 bytes ~ 246M params if fp32)",
+  "scope": "not documented",
+  "quote_ids": [
+   "w_file"
+  ],
+  "quotes": [
+   {
+    "id": "w_file",
+    "quote": "\"rfilename\": \"hunyuan-video-t2v-720p/vae/pytorch_model.pt\",",
+    "source_url": "https://huggingface.co/api/models/tencent/HunyuanVideo?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_tencent__HunyuanVideo_hfapi.json"
+   }
+  ]
+ },
+ "flops_per_input_if_documented": null,
+ "flops_note": "the paper's only FLOPs statement concerns DiT scaling-law compute ('C has a unit of Peta FLOPs'); no VAE FLOPs per input documented",
+ "eligibility": {
+  "C1_open_weights": {
+   "status": "PASS",
+   "basis": "HF API lists vae/pytorch_model.pt, gated=False",
+   "quote_ids": [
+    "w_file",
+    "w_gated"
+   ],
+   "quotes": [
+    {
+     "id": "w_file",
+     "quote": "\"rfilename\": \"hunyuan-video-t2v-720p/vae/pytorch_model.pt\",",
+     "source_url": "https://huggingface.co/api/models/tencent/HunyuanVideo?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_tencent__HunyuanVideo_hfapi.json"
+    },
+    {
+     "id": "w_gated",
+     "quote": "\"gated\": false,",
+     "source_url": "https://huggingface.co/api/models/tencent/HunyuanVideo?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_tencent__HunyuanVideo_hfapi.json"
+    }
+   ]
+  },
+  "C2_licence_research_use": {
+   "status": "PASS",
+   "basis": "community licence grants use in the Territory (worldwide excl. EU/UK/South Korea); research in Japan is inside the Territory -- flag: not usable by EU/UK-based parties",
+   "quote_ids": [
+    "lic_territory",
+    "lic_grant",
+    "lic_outside"
+   ],
+   "quotes": [
+    {
+     "id": "lic_territory",
+     "quote": "THIS LICENSE AGREEMENT DOES NOT APPLY IN THE EUROPEAN UNION, UNITED KINGDOM AND SOUTH KOREA AND IS EXPRESSLY LIMITED TO THE TERRITORY, AS DEFINED BELOW.",
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_LICENSE.txt"
+    },
+    {
+     "id": "lic_grant",
+     "quote": "We grant You, for the Territory only, a non-exclusive, non-transferable and royalty-free limited license under Tencent’s intellectual property or other rights owned by Us embodied in or utilized by the Materials to use, reproduce, distribute, create derivative works of (including Model Derivatives), and make modifications to the Materials, only in accordance with the terms of this Agreement and the Acceptable Use Policy",
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_LICENSE.txt"
+    },
+    {
+     "id": "lic_outside",
+     "quote": "You must not use, reproduce, modify, distribute, or display the Tencent Hunyuan Works, Output or results of the Tencent Hunyuan Works outside the Territory.",
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_LICENSE.txt"
+    }
+   ]
+  },
+  "C3_domain_secondary": {
+   "status": "PASS",
+   "basis": "3D video VAE of a text-to-video diffusion model on general video",
+   "quote_ids": [
+    "arch_card",
+    "data_pool"
+   ],
+   "quotes": [
+    {
+     "id": "arch_card",
+     "quote": "HunyuanVideo trains a 3D VAE with CausalConv3D to compress pixel-space videos and images into a compact latent space. We set the compression ratios of video length, space, and channel to 4, 8, and 16 respectively.",
+     "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_README.md"
+    },
+    {
+     "id": "data_pool",
+     "quote": "Our raw data pool initially comprised videos spanning a wide range of domains including people, animals, plants, landscapes, vehicles, objects, buildings, and animation.",
+     "source_url": "https://arxiv.org/html/2412.03603",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+    }
+   ]
+  },
+  "C4_documented_pretraining_data": {
+   "status": "FAIL",
+   "basis": "only domain categories of an internal data pool; no datasets or named sources",
+   "quote_ids": [
+    "data_pool",
+    "data_sources"
+   ],
+   "quotes": [
+    {
+     "id": "data_pool",
+     "quote": "Our raw data pool initially comprised videos spanning a wide range of domains including people, animals, plants, landscapes, vehicles, objects, buildings, and animation.",
+     "source_url": "https://arxiv.org/html/2412.03603",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+    },
+    {
+     "id": "data_sources",
+     "quote": "Our raw data from different sources exhibits varying durations and levels of quality.",
+     "source_url": "https://arxiv.org/html/2412.03603",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt"
+    }
+   ]
+  },
+  "eligible": "NO (fails C4; licence territory flag)"
+ },
+ "changes_vs_v1": [
+  "sources re-fetched into /home fm_sources/secondary (raw sha256 compared with v1 per quote)",
+  "added structured fields (version, weights_location, domain, pretraining_data_quote, appendix300_check, input, embedding_dim, params, flops) with new quotes from the card, VAE config, paper sec. 4.1 and the official sample_video.py",
+  "no change to any eligibility status or Appendix300 answer"
+ ],
+ "quotes": [
+  {
+   "id": "w_file",
+   "quote": "\"rfilename\": \"hunyuan-video-t2v-720p/vae/pytorch_model.pt\",",
+   "source_file": "hunyuan_tencent__HunyuanVideo_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_tencent__HunyuanVideo_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/tencent/HunyuanVideo?blobs=true",
+   "final_url": "https://huggingface.co/api/models/tencent/HunyuanVideo?blobs=true",
+   "raw_sha256": "b21b208ca28465b3e043873f79aa6507c62eb2c11c5e57eebf7dfd9f4ac4c9bd",
+   "copy_sha256": "467fae1cdeba626a1cad45c5ca8643a9d331443624b6f94f0c64f79964834d57",
+   "retrieved_utc": "2026-10-02T09:29:50+00:00"
+  },
+  {
+   "id": "w_gated",
+   "quote": "\"gated\": false,",
+   "source_file": "hunyuan_tencent__HunyuanVideo_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_tencent__HunyuanVideo_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/tencent/HunyuanVideo?blobs=true",
+   "final_url": "https://huggingface.co/api/models/tencent/HunyuanVideo?blobs=true",
+   "raw_sha256": "b21b208ca28465b3e043873f79aa6507c62eb2c11c5e57eebf7dfd9f4ac4c9bd",
+   "copy_sha256": "467fae1cdeba626a1cad45c5ca8643a9d331443624b6f94f0c64f79964834d57",
+   "retrieved_utc": "2026-10-02T09:29:50+00:00"
+  },
+  {
+   "id": "lic_card",
+   "quote": "license_name: tencent-hunyuan-community",
+   "source_file": "hunyuan_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_README.md",
+   "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+   "final_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+   "raw_sha256": "bd577981e8f4e2adc08bbbb8fb61d42045875c40d33f0c2a536cd73c3c82d829",
+   "copy_sha256": "bd577981e8f4e2adc08bbbb8fb61d42045875c40d33f0c2a536cd73c3c82d829",
+   "retrieved_utc": "2026-10-02T09:29:51+00:00"
+  },
+  {
+   "id": "lic_territory",
+   "quote": "THIS LICENSE AGREEMENT DOES NOT APPLY IN THE EUROPEAN UNION, UNITED KINGDOM AND SOUTH KOREA AND IS EXPRESSLY LIMITED TO THE TERRITORY, AS DEFINED BELOW.",
+   "source_file": "hunyuan_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_LICENSE.txt",
+   "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+   "final_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+   "raw_sha256": "6ba8ea0dc1c464c9ab549b281be5d3afcab93c3308a6967d22240150d844c54d",
+   "copy_sha256": "6ba8ea0dc1c464c9ab549b281be5d3afcab93c3308a6967d22240150d844c54d",
+   "retrieved_utc": "2026-10-02T09:29:51+00:00",
+   "v1_source_sha256": "6ba8ea0dc1c464c9ab549b281be5d3afcab93c3308a6967d22240150d844c54d",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "lic_grant",
+   "quote": "We grant You, for the Territory only, a non-exclusive, non-transferable and royalty-free limited license under Tencent’s intellectual property or other rights owned by Us embodied in or utilized by the Materials to use, reproduce, distribute, create derivative works of (including Model Derivatives), and make modifications to the Materials, only in accordance with the terms of this Agreement and the Acceptable Use Policy",
+   "source_file": "hunyuan_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_LICENSE.txt",
+   "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+   "final_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+   "raw_sha256": "6ba8ea0dc1c464c9ab549b281be5d3afcab93c3308a6967d22240150d844c54d",
+   "copy_sha256": "6ba8ea0dc1c464c9ab549b281be5d3afcab93c3308a6967d22240150d844c54d",
+   "retrieved_utc": "2026-10-02T09:29:51+00:00",
+   "v1_source_sha256": "6ba8ea0dc1c464c9ab549b281be5d3afcab93c3308a6967d22240150d844c54d",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "lic_outside",
+   "quote": "You must not use, reproduce, modify, distribute, or display the Tencent Hunyuan Works, Output or results of the Tencent Hunyuan Works outside the Territory.",
+   "source_file": "hunyuan_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_LICENSE.txt",
+   "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+   "final_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+   "raw_sha256": "6ba8ea0dc1c464c9ab549b281be5d3afcab93c3308a6967d22240150d844c54d",
+   "copy_sha256": "6ba8ea0dc1c464c9ab549b281be5d3afcab93c3308a6967d22240150d844c54d",
+   "retrieved_utc": "2026-10-02T09:29:51+00:00",
+   "v1_source_sha256": "6ba8ea0dc1c464c9ab549b281be5d3afcab93c3308a6967d22240150d844c54d",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "lic_mau",
+   "quote": "greater than 100 million monthly active users in the preceding calendar month, You must request a license from Tencent",
+   "source_file": "hunyuan_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_LICENSE.txt",
+   "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+   "final_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+   "raw_sha256": "6ba8ea0dc1c464c9ab549b281be5d3afcab93c3308a6967d22240150d844c54d",
+   "copy_sha256": "6ba8ea0dc1c464c9ab549b281be5d3afcab93c3308a6967d22240150d844c54d",
+   "retrieved_utc": "2026-10-02T09:29:51+00:00"
+  },
+  {
+   "id": "lic_aup_med",
+   "quote": "To make high-stakes automated decisions in domains that affect an individual’s safety, rights or wellbeing (e.g., law enforcement, migration, medicine/health, management of critical infrastructure, safety components of products, essential services, credit, employment, housing, education, social scoring, or insurance);",
+   "source_file": "hunyuan_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_LICENSE.txt",
+   "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+   "final_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/LICENSE",
+   "raw_sha256": "6ba8ea0dc1c464c9ab549b281be5d3afcab93c3308a6967d22240150d844c54d",
+   "copy_sha256": "6ba8ea0dc1c464c9ab549b281be5d3afcab93c3308a6967d22240150d844c54d",
+   "retrieved_utc": "2026-10-02T09:29:51+00:00",
+   "v1_source_sha256": "6ba8ea0dc1c464c9ab549b281be5d3afcab93c3308a6967d22240150d844c54d",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_card",
+   "quote": "HunyuanVideo trains a 3D VAE with CausalConv3D to compress pixel-space videos and images into a compact latent space. We set the compression ratios of video length, space, and channel to 4, 8, and 16 respectively.",
+   "source_file": "hunyuan_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_README.md",
+   "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+   "final_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+   "raw_sha256": "bd577981e8f4e2adc08bbbb8fb61d42045875c40d33f0c2a536cd73c3c82d829",
+   "copy_sha256": "bd577981e8f4e2adc08bbbb8fb61d42045875c40d33f0c2a536cd73c3c82d829",
+   "retrieved_utc": "2026-10-02T09:29:51+00:00",
+   "v1_source_sha256": "bd577981e8f4e2adc08bbbb8fb61d42045875c40d33f0c2a536cd73c3c82d829",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_vae_class",
+   "quote": "\"_class_name\": \"AutoencoderKLCausal3D\",",
+   "source_file": "hunyuan_hunyuan-video-t2v-720p_vae_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_hunyuan-video-t2v-720p_vae_config.json",
+   "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/hunyuan-video-t2v-720p/vae/config.json",
+   "final_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/hunyuan-video-t2v-720p/vae/config.json",
+   "raw_sha256": "3e77776ccbc0e366f2987c6304c37b00696e4d8b2b1f0487cba8cbc93dc6abc4",
+   "copy_sha256": "3e77776ccbc0e366f2987c6304c37b00696e4d8b2b1f0487cba8cbc93dc6abc4",
+   "retrieved_utc": "2026-10-02T09:29:52+00:00",
+   "v1_source_sha256": "3e77776ccbc0e366f2987c6304c37b00696e4d8b2b1f0487cba8cbc93dc6abc4",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_tcomp",
+   "quote": "\"time_compression_ratio\": 4,",
+   "source_file": "hunyuan_hunyuan-video-t2v-720p_vae_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_hunyuan-video-t2v-720p_vae_config.json",
+   "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/hunyuan-video-t2v-720p/vae/config.json",
+   "final_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/hunyuan-video-t2v-720p/vae/config.json",
+   "raw_sha256": "3e77776ccbc0e366f2987c6304c37b00696e4d8b2b1f0487cba8cbc93dc6abc4",
+   "copy_sha256": "3e77776ccbc0e366f2987c6304c37b00696e4d8b2b1f0487cba8cbc93dc6abc4",
+   "retrieved_utc": "2026-10-02T09:29:52+00:00",
+   "v1_source_sha256": "3e77776ccbc0e366f2987c6304c37b00696e4d8b2b1f0487cba8cbc93dc6abc4",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_latent",
+   "quote": "\"latent_channels\": 16,",
+   "source_file": "hunyuan_hunyuan-video-t2v-720p_vae_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_hunyuan-video-t2v-720p_vae_config.json",
+   "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/hunyuan-video-t2v-720p/vae/config.json",
+   "final_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/hunyuan-video-t2v-720p/vae/config.json",
+   "raw_sha256": "3e77776ccbc0e366f2987c6304c37b00696e4d8b2b1f0487cba8cbc93dc6abc4",
+   "copy_sha256": "3e77776ccbc0e366f2987c6304c37b00696e4d8b2b1f0487cba8cbc93dc6abc4",
+   "retrieved_utc": "2026-10-02T09:29:52+00:00"
+  },
+  {
+   "id": "arch_res",
+   "quote": "* **Minimum**: The minimum GPU memory required is 60GB for 720px1280px129f and 45G for 544px960px129f.",
+   "source_file": "hunyuan_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_README.md",
+   "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+   "final_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+   "raw_sha256": "bd577981e8f4e2adc08bbbb8fb61d42045875c40d33f0c2a536cd73c3c82d829",
+   "copy_sha256": "bd577981e8f4e2adc08bbbb8fb61d42045875c40d33f0c2a536cd73c3c82d829",
+   "retrieved_utc": "2026-10-02T09:29:51+00:00",
+   "v1_source_sha256": "bd577981e8f4e2adc08bbbb8fb61d42045875c40d33f0c2a536cd73c3c82d829",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_scratch",
+   "quote": "we do not rely on a pre-trained image VAE for parameter initialization; instead, we train our model from scratch. To balance the reconstruction quality of videos and images, we mix video and image data at a ratio of 4 : 1",
+   "source_file": "hunyuan_arxiv_2412.03603_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2412.03603",
+   "final_url": "https://arxiv.org/html/2412.03603",
+   "raw_sha256": "a2eaa3bcc2d0b6b292627e8aee962a00071153fbccc8214093fab951171631f4",
+   "copy_sha256": "80a91cbd9cffdb53363d318acc0addeac041b3732502a50bbe2ea21aacf49538",
+   "retrieved_utc": "2026-10-02T09:29:52+00:00",
+   "v1_source_sha256": "a2eaa3bcc2d0b6b292627e8aee962a00071153fbccc8214093fab951171631f4",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "in_shape_in",
+   "quote": "For a video of shape ( T + 1 ) × 3 × H × W",
+   "source_file": "hunyuan_arxiv_2412.03603_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2412.03603",
+   "final_url": "https://arxiv.org/html/2412.03603",
+   "raw_sha256": "a2eaa3bcc2d0b6b292627e8aee962a00071153fbccc8214093fab951171631f4",
+   "copy_sha256": "80a91cbd9cffdb53363d318acc0addeac041b3732502a50bbe2ea21aacf49538",
+   "retrieved_utc": "2026-10-02T09:29:52+00:00"
+  },
+  {
+   "id": "in_shape_out",
+   "quote": "our 3DVAE compresses it into latent features with shape ( T c t + 1 ) × C × ( H c s ) × ( W c s )",
+   "source_file": "hunyuan_arxiv_2412.03603_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2412.03603",
+   "final_url": "https://arxiv.org/html/2412.03603",
+   "raw_sha256": "a2eaa3bcc2d0b6b292627e8aee962a00071153fbccc8214093fab951171631f4",
+   "copy_sha256": "80a91cbd9cffdb53363d318acc0addeac041b3732502a50bbe2ea21aacf49538",
+   "retrieved_utc": "2026-10-02T09:29:52+00:00"
+  },
+  {
+   "id": "in_curriculum",
+   "quote": "we employ a curriculum learning strategy, gradually training from low-resolution short video to high-resolution long video.",
+   "source_file": "hunyuan_arxiv_2412.03603_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2412.03603",
+   "final_url": "https://arxiv.org/html/2412.03603",
+   "raw_sha256": "a2eaa3bcc2d0b6b292627e8aee962a00071153fbccc8214093fab951171631f4",
+   "copy_sha256": "80a91cbd9cffdb53363d318acc0addeac041b3732502a50bbe2ea21aacf49538",
+   "retrieved_utc": "2026-10-02T09:29:52+00:00"
+  },
+  {
+   "id": "in_interval",
+   "quote": "we randomly choose a sampling interval from the range 1 ∼ 8",
+   "source_file": "hunyuan_arxiv_2412.03603_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2412.03603",
+   "final_url": "https://arxiv.org/html/2412.03603",
+   "raw_sha256": "a2eaa3bcc2d0b6b292627e8aee962a00071153fbccc8214093fab951171631f4",
+   "copy_sha256": "80a91cbd9cffdb53363d318acc0addeac041b3732502a50bbe2ea21aacf49538",
+   "retrieved_utc": "2026-10-02T09:29:52+00:00"
+  },
+  {
+   "id": "in_tiling",
+   "quote": "This tiling strategy allows us to encode/decode videos in arbitrary resolutions and durations on a single GPU.",
+   "source_file": "hunyuan_arxiv_2412.03603_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2412.03603",
+   "final_url": "https://arxiv.org/html/2412.03603",
+   "raw_sha256": "a2eaa3bcc2d0b6b292627e8aee962a00071153fbccc8214093fab951171631f4",
+   "copy_sha256": "80a91cbd9cffdb53363d318acc0addeac041b3732502a50bbe2ea21aacf49538",
+   "retrieved_utc": "2026-10-02T09:29:52+00:00"
+  },
+  {
+   "id": "in_orig_fps",
+   "quote": "allowing us to train videos at the original resolution and frame rate.",
+   "source_file": "hunyuan_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_README.md",
+   "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+   "final_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+   "raw_sha256": "bd577981e8f4e2adc08bbbb8fb61d42045875c40d33f0c2a536cd73c3c82d829",
+   "copy_sha256": "bd577981e8f4e2adc08bbbb8fb61d42045875c40d33f0c2a536cd73c3c82d829",
+   "retrieved_utc": "2026-10-02T09:29:51+00:00"
+  },
+  {
+   "id": "in_size",
+   "quote": "| `--video-size` | 720 1280 | The size of the generated video |",
+   "source_file": "hunyuan_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_README.md",
+   "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+   "final_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+   "raw_sha256": "bd577981e8f4e2adc08bbbb8fb61d42045875c40d33f0c2a536cd73c3c82d829",
+   "copy_sha256": "bd577981e8f4e2adc08bbbb8fb61d42045875c40d33f0c2a536cd73c3c82d829",
+   "retrieved_utc": "2026-10-02T09:29:51+00:00"
+  },
+  {
+   "id": "in_len",
+   "quote": "| `--video-length` | 129 | The length of the generated video |",
+   "source_file": "hunyuan_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_README.md",
+   "source_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+   "final_url": "https://huggingface.co/tencent/HunyuanVideo/raw/main/README.md",
+   "raw_sha256": "bd577981e8f4e2adc08bbbb8fb61d42045875c40d33f0c2a536cd73c3c82d829",
+   "copy_sha256": "bd577981e8f4e2adc08bbbb8fb61d42045875c40d33f0c2a536cd73c3c82d829",
+   "retrieved_utc": "2026-10-02T09:29:51+00:00"
+  },
+  {
+   "id": "in_fps_save",
+   "quote": "save_videos_grid(sample, cur_save_path, fps=24)",
+   "source_file": "hunyuan_github_main_sample_video.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_github_main_sample_video.py.txt",
+   "source_url": "https://raw.githubusercontent.com/Tencent/HunyuanVideo/main/sample_video.py",
+   "final_url": "https://raw.githubusercontent.com/Tencent/HunyuanVideo/main/sample_video.py",
+   "raw_sha256": "2a395ee67c84d78df591af3df06f67cf0619be80a949bbdd2bb3a006cb1dd5f7",
+   "copy_sha256": "2a395ee67c84d78df591af3df06f67cf0619be80a949bbdd2bb3a006cb1dd5f7",
+   "retrieved_utc": "2026-10-02T09:30:36+00:00"
+  },
+  {
+   "id": "data_pool",
+   "quote": "Our raw data pool initially comprised videos spanning a wide range of domains including people, animals, plants, landscapes, vehicles, objects, buildings, and animation.",
+   "source_file": "hunyuan_arxiv_2412.03603_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2412.03603",
+   "final_url": "https://arxiv.org/html/2412.03603",
+   "raw_sha256": "a2eaa3bcc2d0b6b292627e8aee962a00071153fbccc8214093fab951171631f4",
+   "copy_sha256": "80a91cbd9cffdb53363d318acc0addeac041b3732502a50bbe2ea21aacf49538",
+   "retrieved_utc": "2026-10-02T09:29:52+00:00",
+   "v1_source_sha256": "a2eaa3bcc2d0b6b292627e8aee962a00071153fbccc8214093fab951171631f4",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "data_sources",
+   "quote": "Our raw data from different sources exhibits varying durations and levels of quality.",
+   "source_file": "hunyuan_arxiv_2412.03603_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2412.03603",
+   "final_url": "https://arxiv.org/html/2412.03603",
+   "raw_sha256": "a2eaa3bcc2d0b6b292627e8aee962a00071153fbccc8214093fab951171631f4",
+   "copy_sha256": "80a91cbd9cffdb53363d318acc0addeac041b3732502a50bbe2ea21aacf49538",
+   "retrieved_utc": "2026-10-02T09:29:52+00:00"
+  },
+  {
+   "id": "data_gdpr",
+   "quote": "Our data acquisition process is rigorously governed by the principles outlined in the General Data Protection Regulation (GDPR) [ 39 ] framework.",
+   "source_file": "hunyuan_arxiv_2412.03603_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/hunyuan_arxiv_2412.03603_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2412.03603",
+   "final_url": "https://arxiv.org/html/2412.03603",
+   "raw_sha256": "a2eaa3bcc2d0b6b292627e8aee962a00071153fbccc8214093fab951171631f4",
+   "copy_sha256": "80a91cbd9cffdb53363d318acc0addeac041b3732502a50bbe2ea21aacf49538",
+   "retrieved_utc": "2026-10-02T09:29:52+00:00",
+   "v1_source_sha256": "a2eaa3bcc2d0b6b292627e8aee962a00071153fbccc8214093fab951171631f4",
+   "raw_sha256_equals_v1": true
+  }
+ ],
+ "all_quotes_verified": true,
+ "record_written_utc": "2026-10-02T09:31:49+00:00"
+}

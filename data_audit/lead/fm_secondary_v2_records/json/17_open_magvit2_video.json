@@ -1,0 +1,783 @@
+{
+ "id": "17_open_magvit2_video",
+ "name": "Open-MAGVIT2 video tokenizer (TencentARC SEED-Voken; open re-implementation of the MAGVIT-v2 LFQ tokenizer; Open-MAGVIT2-V-UCF)",
+ "status_in_survey": "added in revision 2 (2026-10-02)",
+ "version": "TencentARC/Open-MAGVIT2-Tokenizer-262144-Video, video_128_262144.ckpt (Open-MAGVIT2 V1.2 release 2025-02-09, 'Open-MAGVIT2-V-UCF'); HF repo sha 3d904130dac29dab1df5b79cd490f530e75d5c4c; paper arXiv 2409.04410v3 (2025-02-09). The other Open-MAGVIT2 / IBQ releases are image tokenizers (not video) and are not part of this entry.",
+ "paper": {
+  "title": "Open-MAGVIT2: An Open-Source Project Toward Democratizing Auto-regressive Visual Generation",
+  "year": 2024,
+  "arxiv": "2409.04410",
+  "versions": "v3 2025-02-09 (HTML rendering saved; adds the video tokenizer)"
+ },
+ "weights_location": {
+  "urls": [
+   "https://huggingface.co/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video"
+  ],
+  "files_listed": {
+   "video_128_262144.ckpt": 2964564510
+  },
+  "gated": false,
+  "private": false,
+  "verified_how": "HF API model listing (metadata only) saved as openmagvit2_TencentARC__Open-MAGVIT2-Tokenizer-262144-Video_hfapi.json; linked from the official SEED-Voken docs; nothing downloaded",
+  "quote_ids": [
+   "w_file",
+   "w_gated",
+   "w_doc_link",
+   "w_news"
+  ],
+  "quotes": [
+   {
+    "id": "w_file",
+    "quote": "\"rfilename\": \"video_128_262144.ckpt\",",
+    "source_url": "https://huggingface.co/api/models/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_TencentARC__Open-MAGVIT2-Tokenizer-262144-Video_hfapi.json"
+   },
+   {
+    "id": "w_gated",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_TencentARC__Open-MAGVIT2-Tokenizer-262144-Video_hfapi.json"
+   },
+   {
+    "id": "w_doc_link",
+    "quote": "|Open-MAGVIT2 | 2D | 5 $\\times$ 16 $\\times$ 16 | 8 | 128 $\\times$ 128 |262144 | 16 | [Video_128_262144](https://huggingface.co/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video/blob/main/video_128_262144.ckpt) |",
+    "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/docs/Open-MAGVIT2.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_docs_Open-MAGVIT2.md"
+   },
+   {
+    "id": "w_news",
+    "quote": "* **[2025.02.09]** We release Open-MAGVIT2 Video tokenizers, which achieves SOTA performance compared to OmniTokenizer, LARP and SweetTokenizer.",
+    "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_github_README.md"
+   }
+  ]
+ },
+ "licence": {
+  "id": "Apache-2.0 (HF card licence: apache-2.0; SEED-Voken repository LICENSE)",
+  "url": "https://huggingface.co/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video ; https://github.com/TencentARC/SEED-Voken/blob/main/LICENSE",
+  "commercial": "permitted",
+  "non_commercial_only": false,
+  "restrictions": "none beyond Apache-2.0 (UCF-101 / ImageNet dataset terms not audited)",
+  "gating": "none",
+  "quote_ids": [
+   "lic_card",
+   "lic_text"
+  ],
+  "quotes": [
+   {
+    "id": "lic_card",
+    "quote": "license: apache-2.0",
+    "source_url": "https://huggingface.co/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_video_hf_README.md"
+   },
+   {
+    "id": "lic_text",
+    "quote": "Apache License Version 2.0, January 2004",
+    "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/LICENSE",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_LICENSE.txt"
+   }
+  ]
+ },
+ "domain": {
+  "value": "video tokenizer (causal 3D-conv VQGAN-style autoencoder with lookup-free quantization, 2^18 codebook) for auto-regressive video generation; trained on general video (UCF-101 human actions), inflated from an ImageNet image tokenizer",
+  "quote_ids": [
+   "dom_official",
+   "dom_features",
+   "dom_setup"
+  ],
+  "quotes": [
+   {
+    "id": "dom_official",
+    "quote": "This is the official repository for Open-MAGVIT2, an open-source project re-implementing Google's MAGVIT-v2 tokenizer and democratizing autoregressive visual generation with a super large vocabulary (i.e., 2^18).",
+    "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/docs/Open-MAGVIT2.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_docs_Open-MAGVIT2.md"
+   },
+   {
+    "id": "dom_features",
+    "quote": "(3) video tokenizer (2^18 codebook size with 4 $\\times$ 8 $\\times 8$ downsampling rate).",
+    "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/docs/Open-MAGVIT2.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_docs_Open-MAGVIT2.md"
+   },
+   {
+    "id": "dom_setup",
+    "quote": "Video Tokenizer Setup. We extend the image version of tokenizer following ( Yu et al., 2024a ) where the temporally casual 3D convolution serves as the main design.",
+    "source_url": "https://arxiv.org/html/2409.04410",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt"
+   }
+  ]
+ },
+ "architecture": {
+  "type": "MAGVIT-v2-style causal 3D convolutional encoder/decoder (ch 128, ch_mult [1,2,2,4], 4 res blocks), LFQ quantizer with 18-bit codes (n_embed 262144), 3D PatchGAN discriminator; inflated from the 128x128 ImageNet image tokenizer",
+  "representation": "encoder output: 18-dim (binary LFQ) code per token on a 5 x 16 x 16 grid for a 17-frame 128x128 clip (token index in 2^18 vocabulary)"
+ },
+ "pretraining_data": {
+  "summary": "Video tokenizer trained on UCF-101 (17-frame 128x128 clips), initialised by inflating the image tokenizer trained on 128x128 ImageNet(-1k).",
+  "form": "dataset list (named)"
+ },
+ "pretraining_data_quote": {
+  "quote_ids": [
+   "data_paper",
+   "data_inflate",
+   "data_readme",
+   "data_table",
+   "data_cfg_init",
+   "ucf_def"
+  ],
+  "quotes": [
+   {
+    "id": "data_paper",
+    "quote": "Following ( Yu et al., 2024a ) , we train our video tokenizer on UCF-101 ( Soomro, 2012 ) . We use 17-frame video clips with a spatial resolution of 128 × \\times 128 for both training and evaluation.",
+    "source_url": "https://arxiv.org/html/2409.04410",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt"
+   },
+   {
+    "id": "data_inflate",
+    "quote": "Simultaneously, we inflate the image tokenizer trained at 128 × \\times 128 imagenet for video modeling.",
+    "source_url": "https://arxiv.org/html/2409.04410",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt"
+   },
+   {
+    "id": "data_readme",
+    "quote": "We use UCF-101 as our Video Dataset",
+    "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_github_README.md"
+   },
+   {
+    "id": "data_table",
+    "quote": "Open-MAGVIT2-V-UCF UCF-101 262144 128 × 128 128\\times 128 4 8 × 8 8\\times 8",
+    "source_url": "https://arxiv.org/html/2409.04410",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt"
+   },
+   {
+    "id": "data_cfg_init",
+    "quote": "image_pretrain_path: ../upload_ckpts/Open-MAGVIT2/in1k_128_L/imagenet_128_L.ckpt",
+    "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/configs/Open-MAGVIT2/npu/ucf101_lfqgan_128_L.yaml",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_npu_ucf101_lfqgan_128_L.yaml.txt"
+   },
+   {
+    "id": "ucf_def",
+    "quote": "It consists of 101 action classes, over 13k clips and 27 hours of video data. The database consists of realistic user-uploaded videos containing camera motion and cluttered background.",
+    "source_url": "https://arxiv.org/pdf/1212.0402",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/ucf101_arxiv_1212.0402.txt"
+   }
+  ]
+ },
+ "medical_video_in_data": {
+  "answer": "NO",
+  "basis": "closed list of named datasets (UCF-101 video, ImageNet images) none of which is medical; the UCF-101 class list (saved paper) has no medical/surgical class.",
+  "term_search": {
+   "pattern": "medical|surgical|surgery|endoscop|laparoscop|clinical|health|hospital",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_github_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_docs_Open-MAGVIT2.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_video_hf_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/ucf101_arxiv_1212.0402.txt": []
+   }
+  }
+ },
+ "appendix300_possible": {
+  "answer": "NO",
+  "basis_class": "closed_curated_list",
+  "basis": "video data = UCF-101 (101 fixed human-action classes, YouTube-sourced, manually curated), image initialisation = ImageNet-1k; closed curated list whose content scope excludes surgical recordings (conventions_v2 clarification). Timing: released 2025-02-09, before the OPARA issue 2026-04-29.",
+  "quote_ids": [
+   "data_paper",
+   "ucf_def"
+  ],
+  "quotes": [
+   {
+    "id": "data_paper",
+    "quote": "Following ( Yu et al., 2024a ) , we train our video tokenizer on UCF-101 ( Soomro, 2012 ) . We use 17-frame video clips with a spatial resolution of 128 × \\times 128 for both training and evaluation.",
+    "source_url": "https://arxiv.org/html/2409.04410",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt"
+   },
+   {
+    "id": "ucf_def",
+    "quote": "It consists of 101 action classes, over 13k clips and 27 hours of video data. The database consists of realistic user-uploaded videos containing camera motion and cluttered background.",
+    "source_url": "https://arxiv.org/pdf/1212.0402",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/ucf101_arxiv_1212.0402.txt"
+   }
+  ]
+ },
+ "appendix300_check": {
+  "answer": "NO",
+  "quote_or_statement": "the documented data list does not mention DS203/Appendix300",
+  "basis_class": "closed_curated_list",
+  "basis": "UCF-101 + ImageNet-1k only.",
+  "term_search": {
+   "pattern": "appendix ?300|DS203|OPARA|appendectom|appendic",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_github_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_docs_Open-MAGVIT2.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_video_hf_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/ucf101_arxiv_1212.0402.txt": []
+   }
+  },
+  "quote_ids": [
+   "data_paper",
+   "data_inflate",
+   "ucf_def"
+  ],
+  "quotes": [
+   {
+    "id": "data_paper",
+    "quote": "Following ( Yu et al., 2024a ) , we train our video tokenizer on UCF-101 ( Soomro, 2012 ) . We use 17-frame video clips with a spatial resolution of 128 × \\times 128 for both training and evaluation.",
+    "source_url": "https://arxiv.org/html/2409.04410",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt"
+   },
+   {
+    "id": "data_inflate",
+    "quote": "Simultaneously, we inflate the image tokenizer trained at 128 × \\times 128 imagenet for video modeling.",
+    "source_url": "https://arxiv.org/html/2409.04410",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt"
+   },
+   {
+    "id": "ucf_def",
+    "quote": "It consists of 101 action classes, over 13k clips and 27 hours of video data. The database consists of realistic user-uploaded videos containing camera motion and cluttered background.",
+    "source_url": "https://arxiv.org/pdf/1212.0402",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/ucf101_arxiv_1212.0402.txt"
+   }
+  ]
+ },
+ "input": {
+  "frame_size": {
+   "value": "128x128 (training and evaluation)",
+   "quote_ids": [
+    "data_paper",
+    "in_cfg_size"
+   ],
+   "quotes": [
+    {
+     "id": "data_paper",
+     "quote": "Following ( Yu et al., 2024a ) , we train our video tokenizer on UCF-101 ( Soomro, 2012 ) . We use 17-frame video clips with a spatial resolution of 128 × \\times 128 for both training and evaluation.",
+     "source_url": "https://arxiv.org/html/2409.04410",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt"
+    },
+    {
+     "id": "in_cfg_size",
+     "quote": "data_folder: ../../data/UCF-101 size: 128 mode: train",
+     "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/configs/Open-MAGVIT2/npu/ucf101_lfqgan_128_L.yaml",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_npu_ucf101_lfqgan_128_L.yaml.txt"
+    }
+   ]
+  },
+  "frame_rate_or_sampling": {
+   "value": "17 consecutive frames at the native frame rate (no fps resampling when fps is unset; sample_every_n_frames 1); UCF-101 clips are 25 fps",
+   "quote_ids": [
+    "in_cfg_seq",
+    "in_loader_fps",
+    "in_loader_rand",
+    "ucf_fps"
+   ],
+   "quotes": [
+    {
+     "id": "in_cfg_seq",
+     "quote": "sequence_length: 17 sample_every_n_frames: 1",
+     "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/configs/Open-MAGVIT2/npu/ucf101_lfqgan_128_L.yaml",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_npu_ucf101_lfqgan_128_L.yaml.txt"
+    },
+    {
+     "id": "in_loader_fps",
+     "quote": "fps = self.fps if self.fps is not None else -1,",
+     "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/src/Open_MAGVIT2/data/ucf101.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_data_ucf101.py.txt"
+    },
+    {
+     "id": "in_loader_rand",
+     "quote": "frame_indices = np.array(range(rand_start, rand_start + num_frm)).astype(int)",
+     "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/src/Open_MAGVIT2/data/ucf101.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_data_ucf101.py.txt"
+    },
+    {
+     "id": "ucf_fps",
+     "quote": "All clips have fixed frame rate and resolution of 25 FPS and 320 × 240 respectively.",
+     "source_url": "https://arxiv.org/pdf/1212.0402",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/ucf101_arxiv_1212.0402.txt"
+    }
+   ]
+  },
+  "clip_length_frames": {
+   "value": "17 frames",
+   "quote_ids": [
+    "data_paper",
+    "in_cfg_seq"
+   ],
+   "quotes": [
+    {
+     "id": "data_paper",
+     "quote": "Following ( Yu et al., 2024a ) , we train our video tokenizer on UCF-101 ( Soomro, 2012 ) . We use 17-frame video clips with a spatial resolution of 128 × \\times 128 for both training and evaluation.",
+     "source_url": "https://arxiv.org/html/2409.04410",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt"
+    },
+    {
+     "id": "in_cfg_seq",
+     "quote": "sequence_length: 17 sample_every_n_frames: 1",
+     "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/configs/Open-MAGVIT2/npu/ucf101_lfqgan_128_L.yaml",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_npu_ucf101_lfqgan_128_L.yaml.txt"
+    }
+   ]
+  },
+  "temporal_compression": {
+   "value": "4x (causal; 17 frames -> 5 latent frames)",
+   "quote_ids": [
+    "data_table",
+    "w_doc_link",
+    "dom_features"
+   ],
+   "quotes": [
+    {
+     "id": "data_table",
+     "quote": "Open-MAGVIT2-V-UCF UCF-101 262144 128 × 128 128\\times 128 4 8 × 8 8\\times 8",
+     "source_url": "https://arxiv.org/html/2409.04410",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt"
+    },
+    {
+     "id": "w_doc_link",
+     "quote": "|Open-MAGVIT2 | 2D | 5 $\\times$ 16 $\\times$ 16 | 8 | 128 $\\times$ 128 |262144 | 16 | [Video_128_262144](https://huggingface.co/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video/blob/main/video_128_262144.ckpt) |",
+     "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/docs/Open-MAGVIT2.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_docs_Open-MAGVIT2.md"
+    },
+    {
+     "id": "dom_features",
+     "quote": "(3) video tokenizer (2^18 codebook size with 4 $\\times$ 8 $\\times 8$ downsampling rate).",
+     "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/docs/Open-MAGVIT2.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_docs_Open-MAGVIT2.md"
+    }
+   ]
+  },
+  "spatial_compression": {
+   "value": "8x8 (128x128 -> 16x16)",
+   "quote_ids": [
+    "data_table",
+    "w_doc_link"
+   ],
+   "quotes": [
+    {
+     "id": "data_table",
+     "quote": "Open-MAGVIT2-V-UCF UCF-101 262144 128 × 128 128\\times 128 4 8 × 8 8\\times 8",
+     "source_url": "https://arxiv.org/html/2409.04410",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt"
+    },
+    {
+     "id": "w_doc_link",
+     "quote": "|Open-MAGVIT2 | 2D | 5 $\\times$ 16 $\\times$ 16 | 8 | 128 $\\times$ 128 |262144 | 16 | [Video_128_262144](https://huggingface.co/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video/blob/main/video_128_262144.ckpt) |",
+     "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/docs/Open-MAGVIT2.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_docs_Open-MAGVIT2.md"
+    }
+   ]
+  }
+ },
+ "embedding_dim": {
+  "value": "18-dim LFQ code per token x 5 x 16 x 16 tokens = 23,040 binary values per 17-frame 128x128 clip (1,280 token indices into a 262,144 vocabulary)",
+  "derivation": "embed_dim 18 / z_channels 18, n_embed 262144 (config); token grid 5 x 16 x 16 (docs table)",
+  "quote_ids": [
+   "emb_cfg",
+   "w_doc_link"
+  ],
+  "quotes": [
+   {
+    "id": "emb_cfg",
+    "quote": "n_embed: 262144 embed_dim: 18",
+    "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/configs/Open-MAGVIT2/npu/ucf101_lfqgan_128_L.yaml",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_npu_ucf101_lfqgan_128_L.yaml.txt"
+   },
+   {
+    "id": "w_doc_link",
+    "quote": "|Open-MAGVIT2 | 2D | 5 $\\times$ 16 $\\times$ 16 | 8 | 128 $\\times$ 128 |262144 | 16 | [Video_128_262144](https://huggingface.co/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video/blob/main/video_128_262144.ckpt) |",
+    "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/docs/Open-MAGVIT2.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_docs_Open-MAGVIT2.md"
+   }
+  ]
+ },
+ "params": {
+  "value": "not documented for the video tokenizer (the paper's parameter counts are for the AR transformers 343M-1.5B); checkpoint file 2.96 GB (contents, e.g. EMA/discriminator, not documented)",
+  "scope": "not documented",
+  "quote_ids": [
+   "arch_cfg"
+  ],
+  "quotes": [
+   {
+    "id": "arch_cfg",
+    "quote": "double_z: False z_channels: 18 resolution: 128 in_channels: 3 out_ch: 3 ch: 128 ch_mult: [1,2,2,4] # num_down = len(ch_mult)-1 num_res_blocks: 4",
+    "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/configs/Open-MAGVIT2/npu/ucf101_lfqgan_128_L.yaml",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_npu_ucf101_lfqgan_128_L.yaml.txt"
+   }
+  ]
+ },
+ "flops_per_input_if_documented": null,
+ "flops_note": "no FLOPs/MACs statement in the saved paper, docs, README or card (searched FLOP)",
+ "eligibility": {
+  "C1_open_weights": {
+   "status": "PASS",
+   "basis": "HF API lists video_128_262144.ckpt, gated=False; linked from the official docs",
+   "quote_ids": [
+    "w_file",
+    "w_gated",
+    "w_doc_link"
+   ],
+   "quotes": [
+    {
+     "id": "w_file",
+     "quote": "\"rfilename\": \"video_128_262144.ckpt\",",
+     "source_url": "https://huggingface.co/api/models/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_TencentARC__Open-MAGVIT2-Tokenizer-262144-Video_hfapi.json"
+    },
+    {
+     "id": "w_gated",
+     "quote": "\"gated\": false,",
+     "source_url": "https://huggingface.co/api/models/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_TencentARC__Open-MAGVIT2-Tokenizer-262144-Video_hfapi.json"
+    },
+    {
+     "id": "w_doc_link",
+     "quote": "|Open-MAGVIT2 | 2D | 5 $\\times$ 16 $\\times$ 16 | 8 | 128 $\\times$ 128 |262144 | 16 | [Video_128_262144](https://huggingface.co/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video/blob/main/video_128_262144.ckpt) |",
+     "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/docs/Open-MAGVIT2.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_docs_Open-MAGVIT2.md"
+    }
+   ]
+  },
+  "C2_licence_research_use": {
+   "status": "PASS",
+   "basis": "Apache-2.0",
+   "quote_ids": [
+    "lic_card",
+    "lic_text"
+   ],
+   "quotes": [
+    {
+     "id": "lic_card",
+     "quote": "license: apache-2.0",
+     "source_url": "https://huggingface.co/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_video_hf_README.md"
+    },
+    {
+     "id": "lic_text",
+     "quote": "Apache License Version 2.0, January 2004",
+     "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/LICENSE",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_LICENSE.txt"
+    }
+   ]
+  },
+  "C3_domain_secondary": {
+   "status": "PASS",
+   "basis": "video tokenizer (pixel-reconstruction VQ autoencoder) for auto-regressive video generation, trained on general (UCF-101 action) video",
+   "quote_ids": [
+    "dom_features",
+    "dom_setup"
+   ],
+   "quotes": [
+    {
+     "id": "dom_features",
+     "quote": "(3) video tokenizer (2^18 codebook size with 4 $\\times$ 8 $\\times 8$ downsampling rate).",
+     "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/docs/Open-MAGVIT2.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_docs_Open-MAGVIT2.md"
+    },
+    {
+     "id": "dom_setup",
+     "quote": "Video Tokenizer Setup. We extend the image version of tokenizer following ( Yu et al., 2024a ) where the temporally casual 3D convolution serves as the main design.",
+     "source_url": "https://arxiv.org/html/2409.04410",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt"
+    }
+   ]
+  },
+  "C4_documented_pretraining_data": {
+   "status": "PASS",
+   "basis": "paper and README name the video training dataset (UCF-101) and the ImageNet image-tokenizer initialisation",
+   "quote_ids": [
+    "data_paper",
+    "data_inflate",
+    "data_readme"
+   ],
+   "quotes": [
+    {
+     "id": "data_paper",
+     "quote": "Following ( Yu et al., 2024a ) , we train our video tokenizer on UCF-101 ( Soomro, 2012 ) . We use 17-frame video clips with a spatial resolution of 128 × \\times 128 for both training and evaluation.",
+     "source_url": "https://arxiv.org/html/2409.04410",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt"
+    },
+    {
+     "id": "data_inflate",
+     "quote": "Simultaneously, we inflate the image tokenizer trained at 128 × \\times 128 imagenet for video modeling.",
+     "source_url": "https://arxiv.org/html/2409.04410",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt"
+    },
+    {
+     "id": "data_readme",
+     "quote": "We use UCF-101 as our Video Dataset",
+     "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_github_README.md"
+    }
+   ]
+  },
+  "eligible": "YES (all four criteria PASS; caveats: small training set (UCF-101, 13k clips) at 128x128; params not documented; this is a re-implementation, not Google's MAGVIT-v2)"
+ },
+ "quotes": [
+  {
+   "id": "w_file",
+   "quote": "\"rfilename\": \"video_128_262144.ckpt\",",
+   "source_file": "openmagvit2_TencentARC__Open-MAGVIT2-Tokenizer-262144-Video_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_TencentARC__Open-MAGVIT2-Tokenizer-262144-Video_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video?blobs=true",
+   "final_url": "https://huggingface.co/api/models/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video?blobs=true",
+   "raw_sha256": "098d670db6685ae0ad31e346adc27570a4991959d9bd81c616296904092c583a",
+   "copy_sha256": "a6d3994f8d2f51f3d15567e1d8e993a92a2929ef3f8e77c1d809c00057f84b73",
+   "retrieved_utc": "2026-10-02T09:30:11+00:00"
+  },
+  {
+   "id": "w_gated",
+   "quote": "\"gated\": false,",
+   "source_file": "openmagvit2_TencentARC__Open-MAGVIT2-Tokenizer-262144-Video_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_TencentARC__Open-MAGVIT2-Tokenizer-262144-Video_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video?blobs=true",
+   "final_url": "https://huggingface.co/api/models/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video?blobs=true",
+   "raw_sha256": "098d670db6685ae0ad31e346adc27570a4991959d9bd81c616296904092c583a",
+   "copy_sha256": "a6d3994f8d2f51f3d15567e1d8e993a92a2929ef3f8e77c1d809c00057f84b73",
+   "retrieved_utc": "2026-10-02T09:30:11+00:00"
+  },
+  {
+   "id": "w_doc_link",
+   "quote": "|Open-MAGVIT2 | 2D | 5 $\\times$ 16 $\\times$ 16 | 8 | 128 $\\times$ 128 |262144 | 16 | [Video_128_262144](https://huggingface.co/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video/blob/main/video_128_262144.ckpt) |",
+   "source_file": "openmagvit2_seedvoken_docs_Open-MAGVIT2.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_docs_Open-MAGVIT2.md",
+   "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/docs/Open-MAGVIT2.md",
+   "final_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/docs/Open-MAGVIT2.md",
+   "raw_sha256": "9c1cf85ffef0a1e852983ed35100099fa8834d368f826ce8dc48c2552b33d904",
+   "copy_sha256": "9c1cf85ffef0a1e852983ed35100099fa8834d368f826ce8dc48c2552b33d904",
+   "retrieved_utc": "2026-10-02T09:32:17+00:00"
+  },
+  {
+   "id": "w_news",
+   "quote": "* **[2025.02.09]** We release Open-MAGVIT2 Video tokenizers, which achieves SOTA performance compared to OmniTokenizer, LARP and SweetTokenizer.",
+   "source_file": "openmagvit2_seedvoken_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/README.md",
+   "raw_sha256": "f4cbd5bc2b9ed8c1316a644f5b46830d8540c1e89e3e3ca6b2c3c02ab2139556",
+   "copy_sha256": "f4cbd5bc2b9ed8c1316a644f5b46830d8540c1e89e3e3ca6b2c3c02ab2139556",
+   "retrieved_utc": "2026-10-02T09:30:16+00:00"
+  },
+  {
+   "id": "lic_card",
+   "quote": "license: apache-2.0",
+   "source_file": "openmagvit2_video_hf_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_video_hf_README.md",
+   "source_url": "https://huggingface.co/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video/raw/main/README.md",
+   "final_url": "https://huggingface.co/TencentARC/Open-MAGVIT2-Tokenizer-262144-Video/raw/main/README.md",
+   "raw_sha256": "9bb04fcb549a30d80639244f908faf69d21885e6da8305b0dc4d8ac02f6c4352",
+   "copy_sha256": "9bb04fcb549a30d80639244f908faf69d21885e6da8305b0dc4d8ac02f6c4352",
+   "retrieved_utc": "2026-10-02T09:30:15+00:00"
+  },
+  {
+   "id": "lic_text",
+   "quote": "Apache License Version 2.0, January 2004",
+   "source_file": "openmagvit2_seedvoken_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_LICENSE.txt",
+   "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/LICENSE",
+   "final_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/LICENSE",
+   "raw_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+   "copy_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+   "retrieved_utc": "2026-10-02T09:32:18+00:00"
+  },
+  {
+   "id": "dom_official",
+   "quote": "This is the official repository for Open-MAGVIT2, an open-source project re-implementing Google's MAGVIT-v2 tokenizer and democratizing autoregressive visual generation with a super large vocabulary (i.e., 2^18).",
+   "source_file": "openmagvit2_seedvoken_docs_Open-MAGVIT2.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_docs_Open-MAGVIT2.md",
+   "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/docs/Open-MAGVIT2.md",
+   "final_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/docs/Open-MAGVIT2.md",
+   "raw_sha256": "9c1cf85ffef0a1e852983ed35100099fa8834d368f826ce8dc48c2552b33d904",
+   "copy_sha256": "9c1cf85ffef0a1e852983ed35100099fa8834d368f826ce8dc48c2552b33d904",
+   "retrieved_utc": "2026-10-02T09:32:17+00:00"
+  },
+  {
+   "id": "dom_features",
+   "quote": "(3) video tokenizer (2^18 codebook size with 4 $\\times$ 8 $\\times 8$ downsampling rate).",
+   "source_file": "openmagvit2_seedvoken_docs_Open-MAGVIT2.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_docs_Open-MAGVIT2.md",
+   "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/docs/Open-MAGVIT2.md",
+   "final_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/docs/Open-MAGVIT2.md",
+   "raw_sha256": "9c1cf85ffef0a1e852983ed35100099fa8834d368f826ce8dc48c2552b33d904",
+   "copy_sha256": "9c1cf85ffef0a1e852983ed35100099fa8834d368f826ce8dc48c2552b33d904",
+   "retrieved_utc": "2026-10-02T09:32:17+00:00"
+  },
+  {
+   "id": "dom_setup",
+   "quote": "Video Tokenizer Setup. We extend the image version of tokenizer following ( Yu et al., 2024a ) where the temporally casual 3D convolution serves as the main design.",
+   "source_file": "openmagvit2_arxiv_2409.04410_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2409.04410",
+   "final_url": "https://arxiv.org/html/2409.04410",
+   "raw_sha256": "9747a55c945b57e7b7c6879f511d4a6ddb8549e9330e7048f26e5bda3486a683",
+   "copy_sha256": "ce2afb52b237c4b614532c38c3158a98adb6ce609849fa6023ce2d5b3373dc0d",
+   "retrieved_utc": "2026-10-02T09:30:17+00:00"
+  },
+  {
+   "id": "data_paper",
+   "quote": "Following ( Yu et al., 2024a ) , we train our video tokenizer on UCF-101 ( Soomro, 2012 ) . We use 17-frame video clips with a spatial resolution of 128 × \\times 128 for both training and evaluation.",
+   "source_file": "openmagvit2_arxiv_2409.04410_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2409.04410",
+   "final_url": "https://arxiv.org/html/2409.04410",
+   "raw_sha256": "9747a55c945b57e7b7c6879f511d4a6ddb8549e9330e7048f26e5bda3486a683",
+   "copy_sha256": "ce2afb52b237c4b614532c38c3158a98adb6ce609849fa6023ce2d5b3373dc0d",
+   "retrieved_utc": "2026-10-02T09:30:17+00:00"
+  },
+  {
+   "id": "data_inflate",
+   "quote": "Simultaneously, we inflate the image tokenizer trained at 128 × \\times 128 imagenet for video modeling.",
+   "source_file": "openmagvit2_arxiv_2409.04410_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2409.04410",
+   "final_url": "https://arxiv.org/html/2409.04410",
+   "raw_sha256": "9747a55c945b57e7b7c6879f511d4a6ddb8549e9330e7048f26e5bda3486a683",
+   "copy_sha256": "ce2afb52b237c4b614532c38c3158a98adb6ce609849fa6023ce2d5b3373dc0d",
+   "retrieved_utc": "2026-10-02T09:30:17+00:00"
+  },
+  {
+   "id": "data_readme",
+   "quote": "We use UCF-101 as our Video Dataset",
+   "source_file": "openmagvit2_seedvoken_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/README.md",
+   "raw_sha256": "f4cbd5bc2b9ed8c1316a644f5b46830d8540c1e89e3e3ca6b2c3c02ab2139556",
+   "copy_sha256": "f4cbd5bc2b9ed8c1316a644f5b46830d8540c1e89e3e3ca6b2c3c02ab2139556",
+   "retrieved_utc": "2026-10-02T09:30:16+00:00"
+  },
+  {
+   "id": "data_table",
+   "quote": "Open-MAGVIT2-V-UCF UCF-101 262144 128 × 128 128\\times 128 4 8 × 8 8\\times 8",
+   "source_file": "openmagvit2_arxiv_2409.04410_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2409.04410",
+   "final_url": "https://arxiv.org/html/2409.04410",
+   "raw_sha256": "9747a55c945b57e7b7c6879f511d4a6ddb8549e9330e7048f26e5bda3486a683",
+   "copy_sha256": "ce2afb52b237c4b614532c38c3158a98adb6ce609849fa6023ce2d5b3373dc0d",
+   "retrieved_utc": "2026-10-02T09:30:17+00:00"
+  },
+  {
+   "id": "data_cfg_init",
+   "quote": "image_pretrain_path: ../upload_ckpts/Open-MAGVIT2/in1k_128_L/imagenet_128_L.ckpt",
+   "source_file": "openmagvit2_seedvoken_npu_ucf101_lfqgan_128_L.yaml.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_npu_ucf101_lfqgan_128_L.yaml.txt",
+   "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/configs/Open-MAGVIT2/npu/ucf101_lfqgan_128_L.yaml",
+   "final_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/configs/Open-MAGVIT2/npu/ucf101_lfqgan_128_L.yaml",
+   "raw_sha256": "cc570dda41bbb68ede57e45ce33abf6e1d98867d5df1dbde4f3e494ea65d1295",
+   "copy_sha256": "cc570dda41bbb68ede57e45ce33abf6e1d98867d5df1dbde4f3e494ea65d1295",
+   "retrieved_utc": "2026-10-02T09:32:57+00:00"
+  },
+  {
+   "id": "ucf_def",
+   "quote": "It consists of 101 action classes, over 13k clips and 27 hours of video data. The database consists of realistic user-uploaded videos containing camera motion and cluttered background.",
+   "source_file": "ucf101_arxiv_1212.0402.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/ucf101_arxiv_1212.0402.txt",
+   "source_url": "https://arxiv.org/pdf/1212.0402",
+   "final_url": "https://arxiv.org/pdf/1212.0402",
+   "raw_sha256": "fbfc5ea03f30d8e2a1d885e108e3d529f77509b980f2726b340712f02f8a93d3",
+   "copy_sha256": "f9c37af16486c6510089532ec98f2c335918b2ec33ceac8a597418de766c4b1f",
+   "retrieved_utc": "2026-10-02T09:33:23+00:00"
+  },
+  {
+   "id": "ucf_fps",
+   "quote": "All clips have fixed frame rate and resolution of 25 FPS and 320 × 240 respectively.",
+   "source_file": "ucf101_arxiv_1212.0402.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/ucf101_arxiv_1212.0402.txt",
+   "source_url": "https://arxiv.org/pdf/1212.0402",
+   "final_url": "https://arxiv.org/pdf/1212.0402",
+   "raw_sha256": "fbfc5ea03f30d8e2a1d885e108e3d529f77509b980f2726b340712f02f8a93d3",
+   "copy_sha256": "f9c37af16486c6510089532ec98f2c335918b2ec33ceac8a597418de766c4b1f",
+   "retrieved_utc": "2026-10-02T09:33:23+00:00"
+  },
+  {
+   "id": "in_cfg_size",
+   "quote": "data_folder: ../../data/UCF-101 size: 128 mode: train",
+   "source_file": "openmagvit2_seedvoken_npu_ucf101_lfqgan_128_L.yaml.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_npu_ucf101_lfqgan_128_L.yaml.txt",
+   "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/configs/Open-MAGVIT2/npu/ucf101_lfqgan_128_L.yaml",
+   "final_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/configs/Open-MAGVIT2/npu/ucf101_lfqgan_128_L.yaml",
+   "raw_sha256": "cc570dda41bbb68ede57e45ce33abf6e1d98867d5df1dbde4f3e494ea65d1295",
+   "copy_sha256": "cc570dda41bbb68ede57e45ce33abf6e1d98867d5df1dbde4f3e494ea65d1295",
+   "retrieved_utc": "2026-10-02T09:32:57+00:00"
+  },
+  {
+   "id": "in_cfg_seq",
+   "quote": "sequence_length: 17 sample_every_n_frames: 1",
+   "source_file": "openmagvit2_seedvoken_npu_ucf101_lfqgan_128_L.yaml.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_npu_ucf101_lfqgan_128_L.yaml.txt",
+   "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/configs/Open-MAGVIT2/npu/ucf101_lfqgan_128_L.yaml",
+   "final_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/configs/Open-MAGVIT2/npu/ucf101_lfqgan_128_L.yaml",
+   "raw_sha256": "cc570dda41bbb68ede57e45ce33abf6e1d98867d5df1dbde4f3e494ea65d1295",
+   "copy_sha256": "cc570dda41bbb68ede57e45ce33abf6e1d98867d5df1dbde4f3e494ea65d1295",
+   "retrieved_utc": "2026-10-02T09:32:57+00:00"
+  },
+  {
+   "id": "in_loader_fps",
+   "quote": "fps = self.fps if self.fps is not None else -1,",
+   "source_file": "openmagvit2_seedvoken_data_ucf101.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_data_ucf101.py.txt",
+   "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/src/Open_MAGVIT2/data/ucf101.py",
+   "final_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/src/Open_MAGVIT2/data/ucf101.py",
+   "raw_sha256": "050100b5eaae76b6343a61ca8a65aabf3a2d284e388c20de9d709a1152315ed4",
+   "copy_sha256": "050100b5eaae76b6343a61ca8a65aabf3a2d284e388c20de9d709a1152315ed4",
+   "retrieved_utc": "2026-10-02T09:32:58+00:00"
+  },
+  {
+   "id": "in_loader_rand",
+   "quote": "frame_indices = np.array(range(rand_start, rand_start + num_frm)).astype(int)",
+   "source_file": "openmagvit2_seedvoken_data_ucf101.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_data_ucf101.py.txt",
+   "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/src/Open_MAGVIT2/data/ucf101.py",
+   "final_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/src/Open_MAGVIT2/data/ucf101.py",
+   "raw_sha256": "050100b5eaae76b6343a61ca8a65aabf3a2d284e388c20de9d709a1152315ed4",
+   "copy_sha256": "050100b5eaae76b6343a61ca8a65aabf3a2d284e388c20de9d709a1152315ed4",
+   "retrieved_utc": "2026-10-02T09:32:58+00:00"
+  },
+  {
+   "id": "emb_cfg",
+   "quote": "n_embed: 262144 embed_dim: 18",
+   "source_file": "openmagvit2_seedvoken_npu_ucf101_lfqgan_128_L.yaml.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_npu_ucf101_lfqgan_128_L.yaml.txt",
+   "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/configs/Open-MAGVIT2/npu/ucf101_lfqgan_128_L.yaml",
+   "final_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/configs/Open-MAGVIT2/npu/ucf101_lfqgan_128_L.yaml",
+   "raw_sha256": "cc570dda41bbb68ede57e45ce33abf6e1d98867d5df1dbde4f3e494ea65d1295",
+   "copy_sha256": "cc570dda41bbb68ede57e45ce33abf6e1d98867d5df1dbde4f3e494ea65d1295",
+   "retrieved_utc": "2026-10-02T09:32:57+00:00"
+  },
+  {
+   "id": "arch_cfg",
+   "quote": "double_z: False z_channels: 18 resolution: 128 in_channels: 3 out_ch: 3 ch: 128 ch_mult: [1,2,2,4] # num_down = len(ch_mult)-1 num_res_blocks: 4",
+   "source_file": "openmagvit2_seedvoken_npu_ucf101_lfqgan_128_L.yaml.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_npu_ucf101_lfqgan_128_L.yaml.txt",
+   "source_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/configs/Open-MAGVIT2/npu/ucf101_lfqgan_128_L.yaml",
+   "final_url": "https://raw.githubusercontent.com/TencentARC/SEED-Voken/main/configs/Open-MAGVIT2/npu/ucf101_lfqgan_128_L.yaml",
+   "raw_sha256": "cc570dda41bbb68ede57e45ce33abf6e1d98867d5df1dbde4f3e494ea65d1295",
+   "copy_sha256": "cc570dda41bbb68ede57e45ce33abf6e1d98867d5df1dbde4f3e494ea65d1295",
+   "retrieved_utc": "2026-10-02T09:32:57+00:00"
+  }
+ ],
+ "all_quotes_verified": true,
+ "record_written_utc": "2026-10-02T09:38:50+00:00"
+}

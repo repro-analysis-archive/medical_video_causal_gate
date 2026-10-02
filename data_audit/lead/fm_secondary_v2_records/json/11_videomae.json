@@ -1,0 +1,1100 @@
+{
+ "id": "11_videomae",
+ "name": "VideoMAE (MCG-NJU; masked video autoencoder, ViT + pixel-reconstruction decoder; pretrain-only checkpoints)",
+ "status_in_survey": "added in revision 2 (2026-10-02)",
+ "version": "Primary: HF MCG-NJU/videomae-base (ViT-B/16, Kinetics-400, 1600 epochs, pre-trained only; repo sha dc740ceda42fce44faed2ea03c6d447db72f6af9). Also pretrain-only on HF: MCG-NJU/videomae-large (ViT-L, K400, 1600 ep), MCG-NJU/videomae-base-short (ViT-B, K400, 800 ep), MCG-NJU/videomae-base-ssv2 (ViT-B, SSv2, 2400 ep). ViT-S/ViT-H and UCF101 pretrain checkpoints are linked from the GitHub MODEL_ZOO on Google Drive (not verified file-by-file).",
+ "paper": {
+  "title": "VideoMAE: Masked Autoencoders are Data-Efficient Learners for Self-Supervised Video Pre-Training",
+  "year": 2022,
+  "venue": "NeurIPS 2022",
+  "arxiv": "2203.12602 (v3 used)"
+ },
+ "weights_location": {
+  "urls": [
+   "https://huggingface.co/MCG-NJU/videomae-base",
+   "https://huggingface.co/MCG-NJU/videomae-large",
+   "https://huggingface.co/MCG-NJU/videomae-base-short",
+   "https://huggingface.co/MCG-NJU/videomae-base-ssv2",
+   "https://github.com/MCG-NJU/VideoMAE/blob/main/MODEL_ZOO.md (Google Drive links)"
+  ],
+  "files_listed": {
+   "videomae-base model.safetensors": 376873760,
+   "videomae-large model.safetensors": 1372055288,
+   "videomae-base-short model.safetensors": 376873760,
+   "videomae-base-ssv2 model.safetensors": 376873760
+  },
+  "gated": false,
+  "private": false,
+  "verified_how": "HF API model listings (metadata only) saved as videomae_MCG-NJU__videomae-base_hfapi.json, videomae_MCG-NJU__videomae-large_hfapi.json, videomae_MCG-NJU__videomae-base-short_hfapi.json, videomae_MCG-NJU__videomae-base-ssv2_hfapi.json; nothing downloaded",
+  "quote_ids": [
+   "w_file_b",
+   "w_gated_b",
+   "w_file_l",
+   "w_gated_l",
+   "w_file_s",
+   "w_gated_s",
+   "w_zoo"
+  ],
+  "quotes": [
+   {
+    "id": "w_file_b",
+    "quote": "\"rfilename\": \"model.safetensors\",",
+    "source_url": "https://huggingface.co/api/models/MCG-NJU/videomae-base?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_MCG-NJU__videomae-base_hfapi.json"
+   },
+   {
+    "id": "w_gated_b",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/MCG-NJU/videomae-base?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_MCG-NJU__videomae-base_hfapi.json"
+   },
+   {
+    "id": "w_file_l",
+    "quote": "\"rfilename\": \"model.safetensors\",",
+    "source_url": "https://huggingface.co/api/models/MCG-NJU/videomae-large?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_MCG-NJU__videomae-large_hfapi.json"
+   },
+   {
+    "id": "w_gated_l",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/MCG-NJU/videomae-large?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_MCG-NJU__videomae-large_hfapi.json"
+   },
+   {
+    "id": "w_file_s",
+    "quote": "\"rfilename\": \"model.safetensors\",",
+    "source_url": "https://huggingface.co/api/models/MCG-NJU/videomae-base-ssv2?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_MCG-NJU__videomae-base-ssv2_hfapi.json"
+   },
+   {
+    "id": "w_gated_s",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/MCG-NJU/videomae-base-ssv2?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_MCG-NJU__videomae-base-ssv2_hfapi.json"
+   },
+   {
+    "id": "w_zoo",
+    "quote": "# VideoMAE Model Zoo",
+    "source_url": "https://raw.githubusercontent.com/MCG-NJU/VideoMAE/main/MODEL_ZOO.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md"
+   }
+  ]
+ },
+ "licence": {
+  "id": "CC-BY-NC-4.0 (HF card licence tag; GitHub repo LICENSE = Attribution-NonCommercial 4.0 International)",
+  "url": "https://huggingface.co/MCG-NJU/videomae-base ; https://github.com/MCG-NJU/VideoMAE/blob/main/LICENSE",
+  "commercial": "not permitted (NonCommercial)",
+  "non_commercial_only": true,
+  "restrictions": "non-commercial use only; attribution required; portions of the code under Apache-2.0 / MIT",
+  "gating": "none",
+  "quote_ids": [
+   "lic_card",
+   "lic_readme",
+   "lic_text"
+  ],
+  "quotes": [
+   {
+    "id": "lic_card",
+    "quote": "license: \"cc-by-nc-4.0\"",
+    "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_README.md"
+   },
+   {
+    "id": "lic_readme",
+    "quote": "The majority of this project is released under the CC-BY-NC 4.0 license as found in the [LICENSE](https://github.com/MCG-NJU/VideoMAE/blob/main/LICENSE) file.",
+    "source_url": "https://raw.githubusercontent.com/MCG-NJU/VideoMAE/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_github_README.md"
+   },
+   {
+    "id": "lic_text",
+    "quote": "Attribution-NonCommercial 4.0 International",
+    "source_url": "https://raw.githubusercontent.com/MCG-NJU/VideoMAE/main/LICENSE",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_github_LICENSE.txt"
+   }
+  ]
+ },
+ "domain": {
+  "value": "masked video autoencoder (ViT encoder + shallow decoder predicting normalized pixels of masked space-time cubes; MSE in pixel space), self-supervised on general human-action video (Kinetics-400 / Something-Something V2)",
+  "quote_ids": [
+   "dom_card",
+   "dom_mse",
+   "dom_fig1",
+   "data_card_b"
+  ],
+  "quotes": [
+   {
+    "id": "dom_card",
+    "quote": "VideoMAE is an extension of [Masked Autoencoders (MAE)](https://arxiv.org/abs/2111.06377) to video. The architecture of the model is very similar to that of a standard Vision Transformer (ViT), with a decoder on top for predicting pixel values for masked patches.",
+    "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_README.md"
+   },
+   {
+    "id": "dom_mse",
+    "quote": "The loss function is mean squared error (MSE) loss between the normalized masked tokens and reconstructed ones in the pixel space",
+    "source_url": "https://arxiv.org/pdf/2203.12602v3",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+   },
+   {
+    "id": "dom_fig1",
+    "quote": "Figure 1: VideoMAE performs the task of masking random cubes and reconstructing the missing ones with an asymmetric encoder-decoder architecture.",
+    "source_url": "https://arxiv.org/pdf/2203.12602v3",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+   },
+   {
+    "id": "data_card_b",
+    "quote": "VideoMAE model pre-trained on Kinetics-400 for 1600 epochs in a self-supervised way.",
+    "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_README.md"
+   }
+  ]
+ },
+ "architecture": {
+  "type": "vanilla ViT (joint space-time attention) encoder on 2x16x16 cube tokens, tube masking 90%; 4-layer (ViT-B) / 12-layer (ViT-L) decoder for pixel reconstruction (pretraining only)",
+  "representation": "encoder output tokens (768-dim per cube for ViT-B, 1024 for ViT-L) or their mean / [CLS]-style pooled vector; decoder not needed for features"
+ },
+ "pretraining_data": {
+  "summary": "Each released checkpoint is pre-trained on ONE named public benchmark, without labels: Kinetics-400 (~240k 10-s YouTube clips, 400 human-action classes) for videomae-base/-large/-base-short; Something-Something V2 (~169k crowd-sourced clips, 174 motion-centric classes) for videomae-base-ssv2; UCF101 for one Google-Drive checkpoint. No extra data ('no external data').",
+  "form": "dataset list (named, closed)"
+ },
+ "pretraining_data_quote": {
+  "quote_ids": [
+   "data_card_b",
+   "data_card_l",
+   "data_card_s",
+   "data_t7",
+   "data_k400_ssv2",
+   "data_kin_abs",
+   "data_ssv2_abs"
+  ],
+  "quotes": [
+   {
+    "id": "data_card_b",
+    "quote": "VideoMAE model pre-trained on Kinetics-400 for 1600 epochs in a self-supervised way.",
+    "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_README.md"
+   },
+   {
+    "id": "data_card_l",
+    "quote": "VideoMAE model pre-trained on Kinetics-400 for 1600 epochs in a self-supervised way.",
+    "source_url": "https://huggingface.co/MCG-NJU/videomae-large/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-large_README.md"
+   },
+   {
+    "id": "data_card_s",
+    "quote": "VideoMAE model pre-trained on Something-Something-v2 for 2400 epochs in a self-supervised way.",
+    "source_url": "https://huggingface.co/MCG-NJU/videomae-base-ssv2/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base-ssv2_README.md"
+   },
+   {
+    "id": "data_t7",
+    "quote": "Here models are self-supervised pre-trained with a masking ratio of 90% for 1600 epochs on Kinetics-400.",
+    "source_url": "https://arxiv.org/pdf/2203.12602v3",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+   },
+   {
+    "id": "data_k400_ssv2",
+    "quote": "The Kinetics-400 contains around 240k training videos and 20k validation videos of 10s from 400 classes. The Something-Something V2 is another large-scale video dataset, having around 169k videos for training and 20k videos for validation. In contrast to Kinetics-400, this dataset contains 174 motion-centric action classes.",
+    "source_url": "https://arxiv.org/pdf/2203.12602v3",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+   },
+   {
+    "id": "data_kin_abs",
+    "quote": "The dataset contains 400 human action classes, with at least 400 video clips for each action. Each clip lasts around 10s and is taken from a different YouTube video.",
+    "source_url": "https://arxiv.org/abs/1705.06950",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/kinetics_arxiv_1705.06950_abs.txt"
+   },
+   {
+    "id": "data_ssv2_abs",
+    "quote": "The database currently contains more than 100,000 videos across 174 classes, which are defined as caption-templates. We also describe the challenges in crowd-sourcing this data at scale.",
+    "source_url": "https://arxiv.org/abs/1706.04261",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/ssv2_arxiv_1706.04261_abs.txt"
+   }
+  ]
+ },
+ "medical_video_in_data": {
+  "answer": "NO",
+  "basis": "Closed list of named non-medical datasets (Kinetics-400 human-action classes; SSv2 crowd-sourced everyday-object actions). Term search of the cards, paper, DATASET.md, dataset abstracts and the Kinetics-400 class list (mmaction2 label_map_k400.txt, 400 classes) found no medical/surgical term; the nearest classes are 'bandaging' (first aid), 'massaging ...', 'getting a tattoo', 'brushing teeth' (searched separately; none is surgical/endoscopic).",
+  "term_search": {
+   "pattern": "medical|surgical|surgery|endoscop|laparoscop|clinical|health|hospital",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-large_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base-ssv2_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base-short_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_github_DATASET.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/kinetics_arxiv_1705.06950_abs.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/ssv2_arxiv_1706.04261_abs.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/kinetics400_label_map_mmaction2.txt": []
+   }
+  },
+  "class_list_search": {
+   "pattern": "surg|medic|operat|endoscop|laparo|hospital|doctor|dentist|clinic|nurs|patient|health|appendi",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/kinetics400_label_map_mmaction2.txt": []
+   }
+  },
+  "quote_ids": [
+   "k400_bandaging"
+  ],
+  "quotes": [
+   {
+    "id": "k400_bandaging",
+    "quote": "bandaging",
+    "source_url": "https://raw.githubusercontent.com/open-mmlab/mmaction2/main/tools/data/kinetics/label_map_k400.txt",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/kinetics400_label_map_mmaction2.txt"
+   }
+  ]
+ },
+ "appendix300_possible": {
+  "answer": "NO",
+  "basis_class": "closed_curated_list",
+  "basis": "Pretraining video = Kinetics-400 or Something-Something V2 (or UCF101), closed named curated research benchmarks with fixed human-action / crowd-sourced class scopes that exclude surgical recordings (v1 convention example 'fixed action-class or crowd-sourced benchmarks'; conventions_v2 clarification: Kinetics treated as closed although its clips come from YouTube). Timing: paper 2022-03, HF weights 2022-07/08, before the OPARA issue 2026-04-29.",
+  "quote_ids": [
+   "data_k400_ssv2",
+   "data_kin_abs",
+   "data_ssv2_abs",
+   "data_t7"
+  ],
+  "quotes": [
+   {
+    "id": "data_k400_ssv2",
+    "quote": "The Kinetics-400 contains around 240k training videos and 20k validation videos of 10s from 400 classes. The Something-Something V2 is another large-scale video dataset, having around 169k videos for training and 20k videos for validation. In contrast to Kinetics-400, this dataset contains 174 motion-centric action classes.",
+    "source_url": "https://arxiv.org/pdf/2203.12602v3",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+   },
+   {
+    "id": "data_kin_abs",
+    "quote": "The dataset contains 400 human action classes, with at least 400 video clips for each action. Each clip lasts around 10s and is taken from a different YouTube video.",
+    "source_url": "https://arxiv.org/abs/1705.06950",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/kinetics_arxiv_1705.06950_abs.txt"
+   },
+   {
+    "id": "data_ssv2_abs",
+    "quote": "The database currently contains more than 100,000 videos across 174 classes, which are defined as caption-templates. We also describe the challenges in crowd-sourcing this data at scale.",
+    "source_url": "https://arxiv.org/abs/1706.04261",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/ssv2_arxiv_1706.04261_abs.txt"
+   },
+   {
+    "id": "data_t7",
+    "quote": "Here models are self-supervised pre-trained with a masking ratio of 90% for 1600 epochs on Kinetics-400.",
+    "source_url": "https://arxiv.org/pdf/2203.12602v3",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+   }
+  ]
+ },
+ "appendix300_check": {
+  "answer": "NO",
+  "quote_or_statement": "the documented data list does not mention DS203/Appendix300",
+  "basis_class": "closed_curated_list",
+  "basis": "closed list (K400 / SSv2 / UCF101 action benchmarks) whose documented class scope excludes surgical recordings; Kinetics-400 class list term-searched (no surgical/medical class).",
+  "term_search": {
+   "pattern": "appendix ?300|DS203|OPARA|appendectom|appendic",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-large_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base-ssv2_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base-short_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_github_DATASET.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/kinetics_arxiv_1705.06950_abs.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/ssv2_arxiv_1706.04261_abs.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/kinetics400_label_map_mmaction2.txt": []
+   }
+  },
+  "quote_ids": [
+   "data_k400_ssv2",
+   "data_kin_abs",
+   "data_ssv2_abs"
+  ],
+  "quotes": [
+   {
+    "id": "data_k400_ssv2",
+    "quote": "The Kinetics-400 contains around 240k training videos and 20k validation videos of 10s from 400 classes. The Something-Something V2 is another large-scale video dataset, having around 169k videos for training and 20k videos for validation. In contrast to Kinetics-400, this dataset contains 174 motion-centric action classes.",
+    "source_url": "https://arxiv.org/pdf/2203.12602v3",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+   },
+   {
+    "id": "data_kin_abs",
+    "quote": "The dataset contains 400 human action classes, with at least 400 video clips for each action. Each clip lasts around 10s and is taken from a different YouTube video.",
+    "source_url": "https://arxiv.org/abs/1705.06950",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/kinetics_arxiv_1705.06950_abs.txt"
+   },
+   {
+    "id": "data_ssv2_abs",
+    "quote": "The database currently contains more than 100,000 videos across 174 classes, which are defined as caption-templates. We also describe the challenges in crowd-sourcing this data at scale.",
+    "source_url": "https://arxiv.org/abs/1706.04261",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/ssv2_arxiv_1706.04261_abs.txt"
+   }
+  ]
+ },
+ "input": {
+  "frame_size": {
+   "value": "224x224 (config image_size 224; input 3x16x224x224)",
+   "quote_ids": [
+    "in_img",
+    "in_t8"
+   ],
+   "quotes": [
+    {
+     "id": "in_img",
+     "quote": "\"image_size\": 224,",
+     "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json"
+    },
+    {
+     "id": "in_t8",
+     "quote": "2×16×16, 768 cube 768×8×196",
+     "source_url": "https://arxiv.org/pdf/2203.12602v3",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+    }
+   ]
+  },
+  "frame_rate_or_sampling": {
+   "value": "16 frames sampled with temporal stride tau = 4 on Kinetics-400 and tau = 2 on SSv2 (source-video fps not fixed)",
+   "quote_ids": [
+    "in_stride",
+    "in_sr4"
+   ],
+   "quotes": [
+    {
+     "id": "in_stride",
+     "quote": "In experiments, the stride τ is set to 4 and 2 on Kinetics and Something-Something, respectively.",
+     "source_url": "https://arxiv.org/pdf/2203.12602v3",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+    },
+    {
+     "id": "in_sr4",
+     "quote": "--sampling_rate 4",
+     "source_url": "https://raw.githubusercontent.com/MCG-NJU/VideoMAE/main/PRETRAIN.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_github_PRETRAIN.md"
+    }
+   ]
+  },
+  "clip_length_frames": {
+   "value": "16 frames (config num_frames 16)",
+   "quote_ids": [
+    "in_nf"
+   ],
+   "quotes": [
+    {
+     "id": "in_nf",
+     "quote": "\"num_frames\": 16,",
+     "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json"
+    }
+   ]
+  },
+  "temporal_compression": {
+   "value": "tubelet 2 frames (16 frames -> 8 token slices)",
+   "quote_ids": [
+    "in_tub",
+    "in_cube"
+   ],
+   "quotes": [
+    {
+     "id": "in_tub",
+     "quote": "\"tubelet_size\": 2,",
+     "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json"
+    },
+    {
+     "id": "in_cube",
+     "quote": "Cube embedding. We adopt the joint space-time cube embedding [3, 22, 39] in our VideoMAE, where we treat each cube of size 2 × 16 × 16 as one token",
+     "source_url": "https://arxiv.org/pdf/2203.12602v3",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+    }
+   ]
+  },
+  "spatial_compression": {
+   "value": "16x16 patches (224x224 -> 14x14 = 196 tokens per slice)",
+   "quote_ids": [
+    "in_patch",
+    "in_cube"
+   ],
+   "quotes": [
+    {
+     "id": "in_patch",
+     "quote": "\"patch_size\": 16,",
+     "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json"
+    },
+    {
+     "id": "in_cube",
+     "quote": "Cube embedding. We adopt the joint space-time cube embedding [3, 22, 39] in our VideoMAE, where we treat each cube of size 2 × 16 × 16 as one token",
+     "source_url": "https://arxiv.org/pdf/2203.12602v3",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+    }
+   ]
+  }
+ },
+ "embedding_dim": {
+  "value": "ViT-B: 768 x (8 x 14 x 14) = 768 x 1568 tokens per 16-frame 224x224 clip; pooled clip vector 768. ViT-L: 1024 x 1568; pooled 1024.",
+  "derivation": "hidden_size 768 (ViT-B) / 1024 (ViT-L); Table 8 cube output 768x8x196; pooled dim = hidden size (card: last hidden state of the [CLS]-position token / mean pooling)",
+  "quote_ids": [
+   "in_hid_b",
+   "in_hid_l",
+   "in_t8",
+   "in_cube",
+   "dom_cls"
+  ],
+  "quotes": [
+   {
+    "id": "in_hid_b",
+    "quote": "\"hidden_size\": 768,",
+    "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json"
+   },
+   {
+    "id": "in_hid_l",
+    "quote": "\"hidden_size\": 1024,",
+    "source_url": "https://huggingface.co/MCG-NJU/videomae-large/raw/main/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-large_config.json"
+   },
+   {
+    "id": "in_t8",
+    "quote": "2×16×16, 768 cube 768×8×196",
+    "source_url": "https://arxiv.org/pdf/2203.12602v3",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+   },
+   {
+    "id": "in_cube",
+    "quote": "Cube embedding. We adopt the joint space-time cube embedding [3, 22, 39] in our VideoMAE, where we treat each cube of size 2 × 16 × 16 as one token",
+    "source_url": "https://arxiv.org/pdf/2203.12602v3",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+   },
+   {
+    "id": "dom_cls",
+    "quote": "One typically places a linear layer on top of the [CLS] token, as the last hidden state of this token can be seen as a representation of an entire video.",
+    "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_README.md"
+   }
+  ]
+ },
+ "params": {
+  "value": "ViT-B 87M, ViT-L 305M, ViT-H 633M, ViT-S 22M (paper Table 7 'Param', backbone as fine-tuned, i.e. encoder + classification head); encoder-only count of the pretrain checkpoint (with decoder) not separately documented; HF videomae-base model.safetensors 376.9 MB fp32 ~ 94M incl. decoder (inferred)",
+  "scope": "encoder (+ task head) as reported in the transfer tables",
+  "quote_ids": [
+   "fl_hdr",
+   "fl_b",
+   "fl_l",
+   "fl_h"
+  ],
+  "quotes": [
+   {
+    "id": "fl_hdr",
+    "quote": "Method Backbone Extra data Ex. labels Frames GFLOPs Param Top-1 Top-5",
+    "source_url": "https://arxiv.org/pdf/2203.12602v3",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+   },
+   {
+    "id": "fl_b",
+    "quote": "VideoMAE ViT-B 7 16 180×5×3 87 81.5 95.1",
+    "source_url": "https://arxiv.org/pdf/2203.12602v3",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+   },
+   {
+    "id": "fl_l",
+    "quote": "VideoMAE ViT-L 7 16 597×5×3 305 85.2 96.8",
+    "source_url": "https://arxiv.org/pdf/2203.12602v3",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+   },
+   {
+    "id": "fl_h",
+    "quote": "VideoMAE ViT-H 7 16 1192×5×3 633 86.6 97.1",
+    "source_url": "https://arxiv.org/pdf/2203.12602v3",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+   }
+  ]
+ },
+ "flops_per_input_if_documented": {
+  "value": "ViT-B 180 GFLOPs, ViT-L 597, ViT-H 1192, ViT-S 57 per view of 16 frames at 224x224 (Table 7; 'x5x3' = 5 clips x 3 crops at test time)",
+  "quote_ids": [
+   "fl_hdr",
+   "fl_b",
+   "fl_l",
+   "fl_h",
+   "fl_cap"
+  ],
+  "quotes": [
+   {
+    "id": "fl_hdr",
+    "quote": "Method Backbone Extra data Ex. labels Frames GFLOPs Param Top-1 Top-5",
+    "source_url": "https://arxiv.org/pdf/2203.12602v3",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+   },
+   {
+    "id": "fl_b",
+    "quote": "VideoMAE ViT-B 7 16 180×5×3 87 81.5 95.1",
+    "source_url": "https://arxiv.org/pdf/2203.12602v3",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+   },
+   {
+    "id": "fl_l",
+    "quote": "VideoMAE ViT-L 7 16 597×5×3 305 85.2 96.8",
+    "source_url": "https://arxiv.org/pdf/2203.12602v3",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+   },
+   {
+    "id": "fl_h",
+    "quote": "VideoMAE ViT-H 7 16 1192×5×3 633 86.6 97.1",
+    "source_url": "https://arxiv.org/pdf/2203.12602v3",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+   },
+   {
+    "id": "fl_cap",
+    "quote": "Table 7: Comparison with the state-of-the-art methods on Kinetics-400.",
+    "source_url": "https://arxiv.org/pdf/2203.12602v3",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+   }
+  ]
+ },
+ "eligibility": {
+  "C1_open_weights": {
+   "status": "PASS",
+   "basis": "HF API lists model.safetensors for videomae-base / -large / -base-ssv2, gated=False",
+   "quote_ids": [
+    "w_file_b",
+    "w_gated_b"
+   ],
+   "quotes": [
+    {
+     "id": "w_file_b",
+     "quote": "\"rfilename\": \"model.safetensors\",",
+     "source_url": "https://huggingface.co/api/models/MCG-NJU/videomae-base?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_MCG-NJU__videomae-base_hfapi.json"
+    },
+    {
+     "id": "w_gated_b",
+     "quote": "\"gated\": false,",
+     "source_url": "https://huggingface.co/api/models/MCG-NJU/videomae-base?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_MCG-NJU__videomae-base_hfapi.json"
+    }
+   ]
+  },
+  "C2_licence_research_use": {
+   "status": "PASS",
+   "basis": "CC-BY-NC-4.0: non-commercial research permitted (restriction recorded)",
+   "quote_ids": [
+    "lic_card",
+    "lic_text"
+   ],
+   "quotes": [
+    {
+     "id": "lic_card",
+     "quote": "license: \"cc-by-nc-4.0\"",
+     "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_README.md"
+    },
+    {
+     "id": "lic_text",
+     "quote": "Attribution-NonCommercial 4.0 International",
+     "source_url": "https://raw.githubusercontent.com/MCG-NJU/VideoMAE/main/LICENSE",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_github_LICENSE.txt"
+    }
+   ]
+  },
+  "C3_domain_secondary": {
+   "status": "PASS",
+   "basis": "masked video autoencoder with a pixel-reconstruction objective trained on general (non-surgical) video -> PASS under the v1 convention",
+   "quote_ids": [
+    "dom_card",
+    "dom_mse"
+   ],
+   "quotes": [
+    {
+     "id": "dom_card",
+     "quote": "VideoMAE is an extension of [Masked Autoencoders (MAE)](https://arxiv.org/abs/2111.06377) to video. The architecture of the model is very similar to that of a standard Vision Transformer (ViT), with a decoder on top for predicting pixel values for masked patches.",
+     "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_README.md"
+    },
+    {
+     "id": "dom_mse",
+     "quote": "The loss function is mean squared error (MSE) loss between the normalized masked tokens and reconstructed ones in the pixel space",
+     "source_url": "https://arxiv.org/pdf/2203.12602v3",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+    }
+   ]
+  },
+  "C4_documented_pretraining_data": {
+   "status": "PASS",
+   "basis": "card and paper name the single pretraining dataset of each checkpoint (Kinetics-400 / Something-Something V2)",
+   "quote_ids": [
+    "data_card_b",
+    "data_card_s",
+    "data_t7"
+   ],
+   "quotes": [
+    {
+     "id": "data_card_b",
+     "quote": "VideoMAE model pre-trained on Kinetics-400 for 1600 epochs in a self-supervised way.",
+     "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_README.md"
+    },
+    {
+     "id": "data_card_s",
+     "quote": "VideoMAE model pre-trained on Something-Something-v2 for 2400 epochs in a self-supervised way.",
+     "source_url": "https://huggingface.co/MCG-NJU/videomae-base-ssv2/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base-ssv2_README.md"
+    },
+    {
+     "id": "data_t7",
+     "quote": "Here models are self-supervised pre-trained with a masking ratio of 90% for 1600 epochs on Kinetics-400.",
+     "source_url": "https://arxiv.org/pdf/2203.12602v3",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt"
+    }
+   ]
+  },
+  "eligible": "YES (all four criteria PASS; non-commercial licence; Appendix300 NO)"
+ },
+ "quotes": [
+  {
+   "id": "w_file_b",
+   "quote": "\"rfilename\": \"model.safetensors\",",
+   "source_file": "videomae_MCG-NJU__videomae-base_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_MCG-NJU__videomae-base_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/MCG-NJU/videomae-base?blobs=true",
+   "final_url": "https://huggingface.co/api/models/MCG-NJU/videomae-base?blobs=true",
+   "raw_sha256": "862a3cf952be5be59b15819c603fceb3220b746f494c886151b239432dd55a31",
+   "copy_sha256": "fa9167d5b59f59db2188d89ed75ec0fd1dbc4963ac962b0d9b775edc54417098",
+   "retrieved_utc": "2026-10-02T09:29:57+00:00"
+  },
+  {
+   "id": "w_gated_b",
+   "quote": "\"gated\": false,",
+   "source_file": "videomae_MCG-NJU__videomae-base_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_MCG-NJU__videomae-base_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/MCG-NJU/videomae-base?blobs=true",
+   "final_url": "https://huggingface.co/api/models/MCG-NJU/videomae-base?blobs=true",
+   "raw_sha256": "862a3cf952be5be59b15819c603fceb3220b746f494c886151b239432dd55a31",
+   "copy_sha256": "fa9167d5b59f59db2188d89ed75ec0fd1dbc4963ac962b0d9b775edc54417098",
+   "retrieved_utc": "2026-10-02T09:29:57+00:00"
+  },
+  {
+   "id": "w_file_l",
+   "quote": "\"rfilename\": \"model.safetensors\",",
+   "source_file": "videomae_MCG-NJU__videomae-large_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_MCG-NJU__videomae-large_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/MCG-NJU/videomae-large?blobs=true",
+   "final_url": "https://huggingface.co/api/models/MCG-NJU/videomae-large?blobs=true",
+   "raw_sha256": "2b3f9fe644e7b802e58fe6e2b3f8953b90deb3f7702617b0c55b7873ab09e988",
+   "copy_sha256": "b19093dfba77c8399554f3314afff44e9fc650379ed48ac03a925f1187438a4e",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00"
+  },
+  {
+   "id": "w_gated_l",
+   "quote": "\"gated\": false,",
+   "source_file": "videomae_MCG-NJU__videomae-large_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_MCG-NJU__videomae-large_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/MCG-NJU/videomae-large?blobs=true",
+   "final_url": "https://huggingface.co/api/models/MCG-NJU/videomae-large?blobs=true",
+   "raw_sha256": "2b3f9fe644e7b802e58fe6e2b3f8953b90deb3f7702617b0c55b7873ab09e988",
+   "copy_sha256": "b19093dfba77c8399554f3314afff44e9fc650379ed48ac03a925f1187438a4e",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00"
+  },
+  {
+   "id": "w_file_s",
+   "quote": "\"rfilename\": \"model.safetensors\",",
+   "source_file": "videomae_MCG-NJU__videomae-base-ssv2_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_MCG-NJU__videomae-base-ssv2_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/MCG-NJU/videomae-base-ssv2?blobs=true",
+   "final_url": "https://huggingface.co/api/models/MCG-NJU/videomae-base-ssv2?blobs=true",
+   "raw_sha256": "38b1e7355486c71400efe638c9341ed80e7db6ed30e0868ba8bcb10be3aa0a8a",
+   "copy_sha256": "ca2c967c18454309bbaa77606e98a082924b21339399f62199b7d3836f63d9ce",
+   "retrieved_utc": "2026-10-02T09:30:00+00:00"
+  },
+  {
+   "id": "w_gated_s",
+   "quote": "\"gated\": false,",
+   "source_file": "videomae_MCG-NJU__videomae-base-ssv2_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_MCG-NJU__videomae-base-ssv2_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/MCG-NJU/videomae-base-ssv2?blobs=true",
+   "final_url": "https://huggingface.co/api/models/MCG-NJU/videomae-base-ssv2?blobs=true",
+   "raw_sha256": "38b1e7355486c71400efe638c9341ed80e7db6ed30e0868ba8bcb10be3aa0a8a",
+   "copy_sha256": "ca2c967c18454309bbaa77606e98a082924b21339399f62199b7d3836f63d9ce",
+   "retrieved_utc": "2026-10-02T09:30:00+00:00"
+  },
+  {
+   "id": "w_zoo",
+   "quote": "# VideoMAE Model Zoo",
+   "source_file": "videomae_github_MODEL_ZOO.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md",
+   "source_url": "https://raw.githubusercontent.com/MCG-NJU/VideoMAE/main/MODEL_ZOO.md",
+   "final_url": "https://raw.githubusercontent.com/MCG-NJU/VideoMAE/main/MODEL_ZOO.md",
+   "raw_sha256": "9f5898dc3a56158c9f7cd83e6f0f255c72b54a35e6a21cb1f60daa0cebf3f5d9",
+   "copy_sha256": "9f5898dc3a56158c9f7cd83e6f0f255c72b54a35e6a21cb1f60daa0cebf3f5d9",
+   "retrieved_utc": "2026-10-02T09:30:04+00:00"
+  },
+  {
+   "id": "lic_card",
+   "quote": "license: \"cc-by-nc-4.0\"",
+   "source_file": "videomae_videomae-base_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_README.md",
+   "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/README.md",
+   "final_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/README.md",
+   "raw_sha256": "1cfd632ad35d864085baeb8cc55168ee1b59592a3a92221c3f7d405374bd0376",
+   "copy_sha256": "1cfd632ad35d864085baeb8cc55168ee1b59592a3a92221c3f7d405374bd0376",
+   "retrieved_utc": "2026-10-02T09:29:57+00:00"
+  },
+  {
+   "id": "lic_readme",
+   "quote": "The majority of this project is released under the CC-BY-NC 4.0 license as found in the [LICENSE](https://github.com/MCG-NJU/VideoMAE/blob/main/LICENSE) file.",
+   "source_file": "videomae_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/MCG-NJU/VideoMAE/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/MCG-NJU/VideoMAE/main/README.md",
+   "raw_sha256": "126a5c3940706f0b56e04241892c84a5a42513d17f607716028a077ccf7ea364",
+   "copy_sha256": "126a5c3940706f0b56e04241892c84a5a42513d17f607716028a077ccf7ea364",
+   "retrieved_utc": "2026-10-02T09:30:03+00:00"
+  },
+  {
+   "id": "lic_text",
+   "quote": "Attribution-NonCommercial 4.0 International",
+   "source_file": "videomae_github_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_github_LICENSE.txt",
+   "source_url": "https://raw.githubusercontent.com/MCG-NJU/VideoMAE/main/LICENSE",
+   "final_url": "https://raw.githubusercontent.com/MCG-NJU/VideoMAE/main/LICENSE",
+   "raw_sha256": "bc8f60ee50544b2dd70b4bc90e22de503aa23b317d284046a479811f2e06f396",
+   "copy_sha256": "bc8f60ee50544b2dd70b4bc90e22de503aa23b317d284046a479811f2e06f396",
+   "retrieved_utc": "2026-10-02T09:30:04+00:00"
+  },
+  {
+   "id": "dom_card",
+   "quote": "VideoMAE is an extension of [Masked Autoencoders (MAE)](https://arxiv.org/abs/2111.06377) to video. The architecture of the model is very similar to that of a standard Vision Transformer (ViT), with a decoder on top for predicting pixel values for masked patches.",
+   "source_file": "videomae_videomae-base_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_README.md",
+   "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/README.md",
+   "final_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/README.md",
+   "raw_sha256": "1cfd632ad35d864085baeb8cc55168ee1b59592a3a92221c3f7d405374bd0376",
+   "copy_sha256": "1cfd632ad35d864085baeb8cc55168ee1b59592a3a92221c3f7d405374bd0376",
+   "retrieved_utc": "2026-10-02T09:29:57+00:00"
+  },
+  {
+   "id": "dom_cls",
+   "quote": "One typically places a linear layer on top of the [CLS] token, as the last hidden state of this token can be seen as a representation of an entire video.",
+   "source_file": "videomae_videomae-base_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_README.md",
+   "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/README.md",
+   "final_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/README.md",
+   "raw_sha256": "1cfd632ad35d864085baeb8cc55168ee1b59592a3a92221c3f7d405374bd0376",
+   "copy_sha256": "1cfd632ad35d864085baeb8cc55168ee1b59592a3a92221c3f7d405374bd0376",
+   "retrieved_utc": "2026-10-02T09:29:57+00:00"
+  },
+  {
+   "id": "dom_mse",
+   "quote": "The loss function is mean squared error (MSE) loss between the normalized masked tokens and reconstructed ones in the pixel space",
+   "source_file": "videomae_arxiv_2203.12602v3.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+   "source_url": "https://arxiv.org/pdf/2203.12602v3",
+   "final_url": "https://arxiv.org/pdf/2203.12602v3",
+   "raw_sha256": "0fff5bdfb88ff8c3dc7de45d5108faf4bd3aa50d287e332a43f5fd664eb427ae",
+   "copy_sha256": "f5a2a89ddf0474740a04159dc6c0c06faa8750ba8460c6c7dff35ace527001f4",
+   "retrieved_utc": "2026-10-02T09:30:29+00:00"
+  },
+  {
+   "id": "dom_fig1",
+   "quote": "Figure 1: VideoMAE performs the task of masking random cubes and reconstructing the missing ones with an asymmetric encoder-decoder architecture.",
+   "source_file": "videomae_arxiv_2203.12602v3.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+   "source_url": "https://arxiv.org/pdf/2203.12602v3",
+   "final_url": "https://arxiv.org/pdf/2203.12602v3",
+   "raw_sha256": "0fff5bdfb88ff8c3dc7de45d5108faf4bd3aa50d287e332a43f5fd664eb427ae",
+   "copy_sha256": "f5a2a89ddf0474740a04159dc6c0c06faa8750ba8460c6c7dff35ace527001f4",
+   "retrieved_utc": "2026-10-02T09:30:29+00:00"
+  },
+  {
+   "id": "data_card_b",
+   "quote": "VideoMAE model pre-trained on Kinetics-400 for 1600 epochs in a self-supervised way.",
+   "source_file": "videomae_videomae-base_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_README.md",
+   "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/README.md",
+   "final_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/README.md",
+   "raw_sha256": "1cfd632ad35d864085baeb8cc55168ee1b59592a3a92221c3f7d405374bd0376",
+   "copy_sha256": "1cfd632ad35d864085baeb8cc55168ee1b59592a3a92221c3f7d405374bd0376",
+   "retrieved_utc": "2026-10-02T09:29:57+00:00"
+  },
+  {
+   "id": "data_card_l",
+   "quote": "VideoMAE model pre-trained on Kinetics-400 for 1600 epochs in a self-supervised way.",
+   "source_file": "videomae_videomae-large_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-large_README.md",
+   "source_url": "https://huggingface.co/MCG-NJU/videomae-large/raw/main/README.md",
+   "final_url": "https://huggingface.co/MCG-NJU/videomae-large/raw/main/README.md",
+   "raw_sha256": "299d3f10089b85be2e9a91fa48891777377eaaf42302f384b50662863c8eba8a",
+   "copy_sha256": "299d3f10089b85be2e9a91fa48891777377eaaf42302f384b50662863c8eba8a",
+   "retrieved_utc": "2026-10-02T09:29:59+00:00"
+  },
+  {
+   "id": "data_card_s",
+   "quote": "VideoMAE model pre-trained on Something-Something-v2 for 2400 epochs in a self-supervised way.",
+   "source_file": "videomae_videomae-base-ssv2_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base-ssv2_README.md",
+   "source_url": "https://huggingface.co/MCG-NJU/videomae-base-ssv2/raw/main/README.md",
+   "final_url": "https://huggingface.co/MCG-NJU/videomae-base-ssv2/raw/main/README.md",
+   "raw_sha256": "bf0be474ac9e2ebbf4d77605a80b573ec9729d72e66bceee126bbf0d81e81a84",
+   "copy_sha256": "bf0be474ac9e2ebbf4d77605a80b573ec9729d72e66bceee126bbf0d81e81a84",
+   "retrieved_utc": "2026-10-02T09:30:00+00:00"
+  },
+  {
+   "id": "data_t7",
+   "quote": "Here models are self-supervised pre-trained with a masking ratio of 90% for 1600 epochs on Kinetics-400.",
+   "source_file": "videomae_arxiv_2203.12602v3.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+   "source_url": "https://arxiv.org/pdf/2203.12602v3",
+   "final_url": "https://arxiv.org/pdf/2203.12602v3",
+   "raw_sha256": "0fff5bdfb88ff8c3dc7de45d5108faf4bd3aa50d287e332a43f5fd664eb427ae",
+   "copy_sha256": "f5a2a89ddf0474740a04159dc6c0c06faa8750ba8460c6c7dff35ace527001f4",
+   "retrieved_utc": "2026-10-02T09:30:29+00:00"
+  },
+  {
+   "id": "data_k400_ssv2",
+   "quote": "The Kinetics-400 contains around 240k training videos and 20k validation videos of 10s from 400 classes. The Something-Something V2 is another large-scale video dataset, having around 169k videos for training and 20k videos for validation. In contrast to Kinetics-400, this dataset contains 174 motion-centric action classes.",
+   "source_file": "videomae_arxiv_2203.12602v3.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+   "source_url": "https://arxiv.org/pdf/2203.12602v3",
+   "final_url": "https://arxiv.org/pdf/2203.12602v3",
+   "raw_sha256": "0fff5bdfb88ff8c3dc7de45d5108faf4bd3aa50d287e332a43f5fd664eb427ae",
+   "copy_sha256": "f5a2a89ddf0474740a04159dc6c0c06faa8750ba8460c6c7dff35ace527001f4",
+   "retrieved_utc": "2026-10-02T09:30:29+00:00"
+  },
+  {
+   "id": "data_kin_abs",
+   "quote": "The dataset contains 400 human action classes, with at least 400 video clips for each action. Each clip lasts around 10s and is taken from a different YouTube video.",
+   "source_file": "kinetics_arxiv_1705.06950_abs.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/kinetics_arxiv_1705.06950_abs.txt",
+   "source_url": "https://arxiv.org/abs/1705.06950",
+   "final_url": "https://arxiv.org/abs/1705.06950",
+   "raw_sha256": "0b943134dccf902fb11e82a0cc4a983172aa3ca4fca0e72d3e78443ce7181f9d",
+   "copy_sha256": "71aa0733c2a828537a2cc7e05f2cfb1a35ab61373a96fe3809a349e987e7c97e",
+   "retrieved_utc": "2026-10-02T09:31:10+00:00"
+  },
+  {
+   "id": "data_ssv2_abs",
+   "quote": "The database currently contains more than 100,000 videos across 174 classes, which are defined as caption-templates. We also describe the challenges in crowd-sourcing this data at scale.",
+   "source_file": "ssv2_arxiv_1706.04261_abs.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/ssv2_arxiv_1706.04261_abs.txt",
+   "source_url": "https://arxiv.org/abs/1706.04261",
+   "final_url": "https://arxiv.org/abs/1706.04261",
+   "raw_sha256": "3f481642d882faabf8836a8601cc9fc72712e200f3bb6c076ea4b1ae67220c82",
+   "copy_sha256": "bbfe19c029195a62bf7a5e95b193fca441b9abddc143c3dee7e1fae012ba3aeb",
+   "retrieved_utc": "2026-10-02T09:31:10+00:00"
+  },
+  {
+   "id": "k400_bandaging",
+   "quote": "bandaging",
+   "source_file": "kinetics400_label_map_mmaction2.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/kinetics400_label_map_mmaction2.txt",
+   "source_url": "https://raw.githubusercontent.com/open-mmlab/mmaction2/main/tools/data/kinetics/label_map_k400.txt",
+   "final_url": "https://raw.githubusercontent.com/open-mmlab/mmaction2/main/tools/data/kinetics/label_map_k400.txt",
+   "raw_sha256": "e9f2806fe9109b851a80a74841244f6f8c9d10917fa0229cd82bab67f2f8e28f",
+   "copy_sha256": "e9f2806fe9109b851a80a74841244f6f8c9d10917fa0229cd82bab67f2f8e28f",
+   "retrieved_utc": "2026-10-02T09:31:08+00:00"
+  },
+  {
+   "id": "in_img",
+   "quote": "\"image_size\": 224,",
+   "source_file": "videomae_videomae-base_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json",
+   "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/config.json",
+   "final_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/config.json",
+   "raw_sha256": "5fbedfea3706bd9fe6c0dc706beeb501ae72e4954703e03bebe3406f046f8212",
+   "copy_sha256": "5fbedfea3706bd9fe6c0dc706beeb501ae72e4954703e03bebe3406f046f8212",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00"
+  },
+  {
+   "id": "in_nf",
+   "quote": "\"num_frames\": 16,",
+   "source_file": "videomae_videomae-base_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json",
+   "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/config.json",
+   "final_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/config.json",
+   "raw_sha256": "5fbedfea3706bd9fe6c0dc706beeb501ae72e4954703e03bebe3406f046f8212",
+   "copy_sha256": "5fbedfea3706bd9fe6c0dc706beeb501ae72e4954703e03bebe3406f046f8212",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00"
+  },
+  {
+   "id": "in_tub",
+   "quote": "\"tubelet_size\": 2,",
+   "source_file": "videomae_videomae-base_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json",
+   "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/config.json",
+   "final_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/config.json",
+   "raw_sha256": "5fbedfea3706bd9fe6c0dc706beeb501ae72e4954703e03bebe3406f046f8212",
+   "copy_sha256": "5fbedfea3706bd9fe6c0dc706beeb501ae72e4954703e03bebe3406f046f8212",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00"
+  },
+  {
+   "id": "in_patch",
+   "quote": "\"patch_size\": 16,",
+   "source_file": "videomae_videomae-base_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json",
+   "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/config.json",
+   "final_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/config.json",
+   "raw_sha256": "5fbedfea3706bd9fe6c0dc706beeb501ae72e4954703e03bebe3406f046f8212",
+   "copy_sha256": "5fbedfea3706bd9fe6c0dc706beeb501ae72e4954703e03bebe3406f046f8212",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00"
+  },
+  {
+   "id": "in_hid_b",
+   "quote": "\"hidden_size\": 768,",
+   "source_file": "videomae_videomae-base_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json",
+   "source_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/config.json",
+   "final_url": "https://huggingface.co/MCG-NJU/videomae-base/raw/main/config.json",
+   "raw_sha256": "5fbedfea3706bd9fe6c0dc706beeb501ae72e4954703e03bebe3406f046f8212",
+   "copy_sha256": "5fbedfea3706bd9fe6c0dc706beeb501ae72e4954703e03bebe3406f046f8212",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00"
+  },
+  {
+   "id": "in_hid_l",
+   "quote": "\"hidden_size\": 1024,",
+   "source_file": "videomae_videomae-large_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_videomae-large_config.json",
+   "source_url": "https://huggingface.co/MCG-NJU/videomae-large/raw/main/config.json",
+   "final_url": "https://huggingface.co/MCG-NJU/videomae-large/raw/main/config.json",
+   "raw_sha256": "1d5b73e8124685ac9fceeeae12e64deac01d6bac1444009ac25655f272510f4d",
+   "copy_sha256": "1d5b73e8124685ac9fceeeae12e64deac01d6bac1444009ac25655f272510f4d",
+   "retrieved_utc": "2026-10-02T09:29:59+00:00"
+  },
+  {
+   "id": "in_stride",
+   "quote": "In experiments, the stride τ is set to 4 and 2 on Kinetics and Something-Something, respectively.",
+   "source_file": "videomae_arxiv_2203.12602v3.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+   "source_url": "https://arxiv.org/pdf/2203.12602v3",
+   "final_url": "https://arxiv.org/pdf/2203.12602v3",
+   "raw_sha256": "0fff5bdfb88ff8c3dc7de45d5108faf4bd3aa50d287e332a43f5fd664eb427ae",
+   "copy_sha256": "f5a2a89ddf0474740a04159dc6c0c06faa8750ba8460c6c7dff35ace527001f4",
+   "retrieved_utc": "2026-10-02T09:30:29+00:00"
+  },
+  {
+   "id": "in_sr4",
+   "quote": "--sampling_rate 4",
+   "source_file": "videomae_github_PRETRAIN.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_github_PRETRAIN.md",
+   "source_url": "https://raw.githubusercontent.com/MCG-NJU/VideoMAE/main/PRETRAIN.md",
+   "final_url": "https://raw.githubusercontent.com/MCG-NJU/VideoMAE/main/PRETRAIN.md",
+   "raw_sha256": "c222006e2e5fdcc9242905dfce92a5336a7be83f2c74f2e657261fb72eff7a1a",
+   "copy_sha256": "c222006e2e5fdcc9242905dfce92a5336a7be83f2c74f2e657261fb72eff7a1a",
+   "retrieved_utc": "2026-10-02T09:30:05+00:00"
+  },
+  {
+   "id": "in_cube",
+   "quote": "Cube embedding. We adopt the joint space-time cube embedding [3, 22, 39] in our VideoMAE, where we treat each cube of size 2 × 16 × 16 as one token",
+   "source_file": "videomae_arxiv_2203.12602v3.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+   "source_url": "https://arxiv.org/pdf/2203.12602v3",
+   "final_url": "https://arxiv.org/pdf/2203.12602v3",
+   "raw_sha256": "0fff5bdfb88ff8c3dc7de45d5108faf4bd3aa50d287e332a43f5fd664eb427ae",
+   "copy_sha256": "f5a2a89ddf0474740a04159dc6c0c06faa8750ba8460c6c7dff35ace527001f4",
+   "retrieved_utc": "2026-10-02T09:30:29+00:00"
+  },
+  {
+   "id": "in_t8",
+   "quote": "2×16×16, 768 cube 768×8×196",
+   "source_file": "videomae_arxiv_2203.12602v3.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+   "source_url": "https://arxiv.org/pdf/2203.12602v3",
+   "final_url": "https://arxiv.org/pdf/2203.12602v3",
+   "raw_sha256": "0fff5bdfb88ff8c3dc7de45d5108faf4bd3aa50d287e332a43f5fd664eb427ae",
+   "copy_sha256": "f5a2a89ddf0474740a04159dc6c0c06faa8750ba8460c6c7dff35ace527001f4",
+   "retrieved_utc": "2026-10-02T09:30:29+00:00"
+  },
+  {
+   "id": "fl_hdr",
+   "quote": "Method Backbone Extra data Ex. labels Frames GFLOPs Param Top-1 Top-5",
+   "source_file": "videomae_arxiv_2203.12602v3.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+   "source_url": "https://arxiv.org/pdf/2203.12602v3",
+   "final_url": "https://arxiv.org/pdf/2203.12602v3",
+   "raw_sha256": "0fff5bdfb88ff8c3dc7de45d5108faf4bd3aa50d287e332a43f5fd664eb427ae",
+   "copy_sha256": "f5a2a89ddf0474740a04159dc6c0c06faa8750ba8460c6c7dff35ace527001f4",
+   "retrieved_utc": "2026-10-02T09:30:29+00:00"
+  },
+  {
+   "id": "fl_b",
+   "quote": "VideoMAE ViT-B 7 16 180×5×3 87 81.5 95.1",
+   "source_file": "videomae_arxiv_2203.12602v3.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+   "source_url": "https://arxiv.org/pdf/2203.12602v3",
+   "final_url": "https://arxiv.org/pdf/2203.12602v3",
+   "raw_sha256": "0fff5bdfb88ff8c3dc7de45d5108faf4bd3aa50d287e332a43f5fd664eb427ae",
+   "copy_sha256": "f5a2a89ddf0474740a04159dc6c0c06faa8750ba8460c6c7dff35ace527001f4",
+   "retrieved_utc": "2026-10-02T09:30:29+00:00"
+  },
+  {
+   "id": "fl_l",
+   "quote": "VideoMAE ViT-L 7 16 597×5×3 305 85.2 96.8",
+   "source_file": "videomae_arxiv_2203.12602v3.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+   "source_url": "https://arxiv.org/pdf/2203.12602v3",
+   "final_url": "https://arxiv.org/pdf/2203.12602v3",
+   "raw_sha256": "0fff5bdfb88ff8c3dc7de45d5108faf4bd3aa50d287e332a43f5fd664eb427ae",
+   "copy_sha256": "f5a2a89ddf0474740a04159dc6c0c06faa8750ba8460c6c7dff35ace527001f4",
+   "retrieved_utc": "2026-10-02T09:30:29+00:00"
+  },
+  {
+   "id": "fl_h",
+   "quote": "VideoMAE ViT-H 7 16 1192×5×3 633 86.6 97.1",
+   "source_file": "videomae_arxiv_2203.12602v3.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+   "source_url": "https://arxiv.org/pdf/2203.12602v3",
+   "final_url": "https://arxiv.org/pdf/2203.12602v3",
+   "raw_sha256": "0fff5bdfb88ff8c3dc7de45d5108faf4bd3aa50d287e332a43f5fd664eb427ae",
+   "copy_sha256": "f5a2a89ddf0474740a04159dc6c0c06faa8750ba8460c6c7dff35ace527001f4",
+   "retrieved_utc": "2026-10-02T09:30:29+00:00"
+  },
+  {
+   "id": "fl_cap",
+   "quote": "Table 7: Comparison with the state-of-the-art methods on Kinetics-400.",
+   "source_file": "videomae_arxiv_2203.12602v3.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+   "source_url": "https://arxiv.org/pdf/2203.12602v3",
+   "final_url": "https://arxiv.org/pdf/2203.12602v3",
+   "raw_sha256": "0fff5bdfb88ff8c3dc7de45d5108faf4bd3aa50d287e332a43f5fd664eb427ae",
+   "copy_sha256": "f5a2a89ddf0474740a04159dc6c0c06faa8750ba8460c6c7dff35ace527001f4",
+   "retrieved_utc": "2026-10-02T09:30:29+00:00"
+  }
+ ],
+ "all_quotes_verified": true,
+ "record_written_utc": "2026-10-02T09:32:50+00:00"
+}

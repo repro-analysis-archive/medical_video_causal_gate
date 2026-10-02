@@ -1,0 +1,902 @@
+{
+ "id": "02_stable_video_diffusion",
+ "name": "Stable Video Diffusion (SVD img2vid 14-frame, SVD-XT img2vid-xt 25-frame) and its VAE (AutoencoderKLTemporalDecoder)",
+ "version": "stabilityai/stable-video-diffusion-img2vid-xt (SVD-XT, 25 frames; HF repo sha 9e43909513c6714f1bc78bcb44d96e733cd242aa, created 2023-11-20, last modified 2024-07-10) and stabilityai/stable-video-diffusion-img2vid (SVD, 14 frames; sha 9cf024d5bfa8f56622af86c884f26a52f6676f2e); VAE = vae/diffusion_pytorch_model.safetensors (AutoencoderKLTemporalDecoder, identical file size in both repos)",
+ "paper": {
+  "title": "Stable Video Diffusion: Scaling Latent Video Diffusion Models to Large Datasets",
+  "year": 2023,
+  "arxiv": "2311.15127"
+ },
+ "weights_location": {
+  "urls": [
+   "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt",
+   "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid"
+  ],
+  "files_listed_xt": {
+   "vae/diffusion_pytorch_model.safetensors": 391017740,
+   "unet/diffusion_pytorch_model.fp16.safetensors": 3049435868,
+   "svd_xt.safetensors": 9559625980
+  },
+  "files_listed_14": {
+   "vae/diffusion_pytorch_model.safetensors": 391017740,
+   "unet/diffusion_pytorch_model.fp16.safetensors": 3049435868,
+   "svd.safetensors": 9559625980
+  },
+  "gated": false,
+  "private": false,
+  "verified_how": "HF API model listings (metadata only) saved as svd_stabilityai__stable-video-diffusion-img2vid-xt_hfapi.json, svd_stabilityai__stable-video-diffusion-img2vid_hfapi.json; nothing downloaded",
+  "note": "HF API gated=False on 2026-10-02 (raw README/LICENSE readable without login). Not downloaded.",
+  "quote_ids": [
+   "w_vae_xt",
+   "w_gated_xt",
+   "w_vae_14",
+   "w_gated_14"
+  ],
+  "quotes": [
+   {
+    "id": "w_vae_xt",
+    "quote": "\"rfilename\": \"vae/diffusion_pytorch_model.safetensors\",",
+    "source_url": "https://huggingface.co/api/models/stabilityai/stable-video-diffusion-img2vid-xt?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_stabilityai__stable-video-diffusion-img2vid-xt_hfapi.json"
+   },
+   {
+    "id": "w_gated_xt",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/stabilityai/stable-video-diffusion-img2vid-xt?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_stabilityai__stable-video-diffusion-img2vid-xt_hfapi.json"
+   },
+   {
+    "id": "w_vae_14",
+    "quote": "\"rfilename\": \"vae/diffusion_pytorch_model.safetensors\",",
+    "source_url": "https://huggingface.co/api/models/stabilityai/stable-video-diffusion-img2vid?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_stabilityai__stable-video-diffusion-img2vid_hfapi.json"
+   },
+   {
+    "id": "w_gated_14",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/stabilityai/stable-video-diffusion-img2vid?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_stabilityai__stable-video-diffusion-img2vid_hfapi.json"
+   }
+  ]
+ },
+ "licence": {
+  "id": "Stability AI Community License Agreement (HF license_name: stable-video-diffusion-community; LICENSE.md 'Last Updated: July 5, 2024')",
+  "url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/blob/main/LICENSE.md",
+  "commercial": "free commercial use only below USD 1M annual revenue, with registration",
+  "non_commercial_only": false,
+  "restrictions": "Stability AI Acceptable Use Policy (https://stability.ai/use-policy); revocable",
+  "gating": "none at HF level (gated=False); licence text says acceptance by clicking or by use",
+  "quote_ids": [
+   "lic_research",
+   "lic_grant",
+   "lic_aup"
+  ],
+  "quotes": [
+   {
+    "id": "lic_research",
+    "quote": "You can use this model for non-commercial or research purposes under this [license](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/blob/main/LICENSE.md).",
+    "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md"
+   },
+   {
+    "id": "lic_grant",
+    "quote": "Stability AI grants You a non-exclusive, worldwide, non-transferable, non-sublicensable, revocable and royalty-free limited license under Stability AI’s intellectual property or other rights owned by Stability AI embodied in the Stability AI Materials to use, reproduce, distribute, and create Derivative Works of, and make modifications to, the Stability AI Materials for any Research or Non-Commercial Purpose.",
+    "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/LICENSE.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_LICENSE.md"
+   },
+   {
+    "id": "lic_aup",
+    "quote": "The model should not be used in any way that violates Stability AI's [Acceptable Use Policy](https://stability.ai/use-policy).",
+    "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md"
+   }
+  ]
+ },
+ "domain": {
+  "value": "generative image-to-video latent diffusion model (UNet with temporal layers) trained on general web-scale video (internal LVD); its VAE encoder is frame-wise (image f8 KL encoder), only the decoder is temporal",
+  "quote_ids": [
+   "dom_type",
+   "arch_decoder",
+   "arch_vae_class",
+   "data_collect"
+  ],
+  "quotes": [
+   {
+    "id": "dom_type",
+    "quote": "- **Model type:** Generative image-to-video model",
+    "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md"
+   },
+   {
+    "id": "arch_decoder",
+    "quote": "We also finetune the widely used [f8-decoder](https://huggingface.co/docs/diffusers/api/models/autoencoderkl#loading-from-the-original-format) for temporal consistency.",
+    "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md"
+   },
+   {
+    "id": "arch_vae_class",
+    "quote": "\"_class_name\": \"AutoencoderKLTemporalDecoder\",",
+    "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/vae/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_vae_config.json"
+   },
+   {
+    "id": "data_collect",
+    "quote": "We collect an initial dataset of long videos which forms the base data for our video pretraining stage.",
+    "source_url": "https://arxiv.org/pdf/2311.15127",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt"
+   }
+  ]
+ },
+ "architecture": {
+  "type": "latent video diffusion UNet (SD 2.1 initialised, temporal layers) + KL image autoencoder with temporally fine-tuned decoder",
+  "representation": "VAE encoder latents: 4-channel, 1/8 spatial (f8), computed frame-wise (encoder is an image encoder; only the decoder is temporal); alternatively UNet intermediate features"
+ },
+ "pretraining_data": {
+  "summary": "Image stage: Stable Diffusion 2.1 initialisation. Video stage: in-house Large Video Dataset (LVD), 580M clips / 212 years, curated to LVD-F; high-res finetune on ~1M-sample 'high-quality video dataset'. Sources of LVD not named.",
+  "form": "described only (LVD is internal; no source list)"
+ },
+ "pretraining_data_quote": {
+  "quote_ids": [
+   "data_collect",
+   "data_lvd",
+   "data_hq",
+   "data_appendix",
+   "arch_sd21"
+  ],
+  "quotes": [
+   {
+    "id": "data_collect",
+    "quote": "We collect an initial dataset of long videos which forms the base data for our video pretraining stage.",
+    "source_url": "https://arxiv.org/pdf/2311.15127",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt"
+   },
+   {
+    "id": "data_lvd",
+    "quote": "The resulting initial dataset, which we dub Large Video Dataset (LVD), consists of 580M annotated video clip pairs, forming 212 years of content.",
+    "source_url": "https://arxiv.org/pdf/2311.15127",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt"
+   },
+   {
+    "id": "data_hq",
+    "quote": "We finetune the base text-to-video model on a high-quality video dataset of ∼ 1M samples.",
+    "source_url": "https://arxiv.org/pdf/2311.15127",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt"
+   },
+   {
+    "id": "data_appendix",
+    "quote": "All considered potential data sources were included for final training, with none held out as the proposed data filtering methods described in the SVD paper handle the quality control/filtering of the dataset.",
+    "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md"
+   },
+   {
+    "id": "arch_sd21",
+    "quote": "we ground our initial model on a pretrained image diffusion model - namely Stable Diffusion 2.1 [71] - to equip it with a strong visual representation.",
+    "source_url": "https://arxiv.org/pdf/2311.15127",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt"
+   }
+  ]
+ },
+ "medical_video_in_data": {
+  "answer": "NOT MENTIONED",
+  "basis": "Search of saved paper PDF text and model card for medical|surgical|endoscop|laparoscop|clinic|hospital: only hit is the reference title 'U-Net: ... Biomedical Image Segmentation'.",
+  "term_search": {
+   "pattern": "medical|surgical|surgery|endoscop|laparoscop|clinical|health|hospital",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt": [
+     "] Olaf Ronneberger, Philipp Fischer, and Thomas Brox. UNet: Convolutional Networks for Biomedical Image Segmentation. arXiv:1505.04597, 2015. 7, 20, 23 [74] RunwayML. Gen-2 by runway, htt"
+    ],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md": []
+   }
+  }
+ },
+ "appendix300_possible": {
+  "answer": "UNKNOWN",
+  "basis_class": "undisclosed",
+  "basis": "LVD sources undisclosed ('We collect an initial dataset of long videos'). Context: paper 2023-11-25, weights 2023-11-20, before the OPARA issue 2026-04-29.",
+  "quote_ids": [
+   "data_collect"
+  ],
+  "quotes": [
+   {
+    "id": "data_collect",
+    "quote": "We collect an initial dataset of long videos which forms the base data for our video pretraining stage.",
+    "source_url": "https://arxiv.org/pdf/2311.15127",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt"
+   }
+  ]
+ },
+ "appendix300_check": {
+  "answer": "UNKNOWN",
+  "quote_or_statement": "the documented data list does not mention DS203/Appendix300",
+  "basis_class": "undisclosed",
+  "basis": "LVD sources undisclosed ('We collect an initial dataset of long videos'). Context: paper 2023-11-25, weights 2023-11-20, before the OPARA issue 2026-04-29.",
+  "term_search": {
+   "pattern": "appendix ?300|DS203|OPARA|appendectom|appendic",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md": []
+   }
+  },
+  "quote_ids": [
+   "data_collect"
+  ],
+  "quotes": [
+   {
+    "id": "data_collect",
+    "quote": "We collect an initial dataset of long videos which forms the base data for our video pretraining stage.",
+    "source_url": "https://arxiv.org/pdf/2311.15127",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt"
+   }
+  ]
+ },
+ "input": {
+  "frame_size": {
+   "value": "576x1024 (generation / high-res finetune); base video pretraining 256x384 then 320x576; VAE config sample_size 768",
+   "quote_ids": [
+    "arch_frames",
+    "in_base_res",
+    "in_hires",
+    "in_vae_sample"
+   ],
+   "quotes": [
+    {
+     "id": "arch_frames",
+     "quote": "This model was trained to generate 25 frames at resolution 576x1024 given a context frame of the same size, finetuned from [SVD Image-to-Video [14 frames]](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid).",
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md"
+    },
+    {
+     "id": "in_base_res",
+     "quote": "After inserting temporal layers, we then train the model on LVD-F on 14 frames at resolution 256 × 384.",
+     "source_url": "https://arxiv.org/pdf/2311.15127",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt"
+    },
+    {
+     "id": "in_hires",
+     "quote": "Next, we finetune the model to generate 14 320 × 576 frames for 100k iterations using batch size 768.",
+     "source_url": "https://arxiv.org/pdf/2311.15127",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt"
+    },
+    {
+     "id": "in_vae_sample",
+     "quote": "\"sample_size\": 768,",
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/vae/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_vae_config.json"
+    }
+   ]
+  },
+  "frame_rate_or_sampling": {
+   "value": "frame rate is a conditioning input (micro-conditioning on the training video's frame rate and motion score); default inference conditioning fps = 7 (diffusers pipeline) / fps_id = 6 (Stability sampling script); training-clip fps not documented",
+   "quote_ids": [
+    "in_fps_cond",
+    "in_fps_cond_train",
+    "in_fps_diffusers",
+    "in_fps_gm"
+   ],
+   "quotes": [
+    {
+     "id": "in_fps_cond",
+     "quote": "Additionally, we introduce micro-conditioning [64] on frame rate.",
+     "source_url": "https://arxiv.org/pdf/2311.15127",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt"
+    },
+    {
+     "id": "in_fps_cond_train",
+     "quote": "During training, the base model and the high-resolution Text/Image-to-Video models are all conditioned on the input video’s frame rate and motion score.",
+     "source_url": "https://arxiv.org/pdf/2311.15127",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt"
+    },
+    {
+     "id": "in_fps_diffusers",
+     "quote": "fps: int = 7,",
+     "source_url": "https://raw.githubusercontent.com/huggingface/diffusers/v0.24.0/src/diffusers/pipelines/stable_video_diffusion/pipeline_stable_video_diffusion.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_diffusers_v0.24.0_pipeline_stable_video_diffusion.py.txt"
+    },
+    {
+     "id": "in_fps_gm",
+     "quote": "fps_id: int = 6,",
+     "source_url": "https://raw.githubusercontent.com/Stability-AI/generative-models/main/scripts/sampling/simple_video_sample.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_github_generative-models_simple_video_sample.py.txt"
+    }
+   ]
+  },
+  "clip_length_frames": {
+   "value": "25 frames (SVD-XT) / 14 frames (SVD); base model trained on 14 frames",
+   "quote_ids": [
+    "arch_frames",
+    "in_frames14",
+    "in_base_res"
+   ],
+   "quotes": [
+    {
+     "id": "arch_frames",
+     "quote": "This model was trained to generate 25 frames at resolution 576x1024 given a context frame of the same size, finetuned from [SVD Image-to-Video [14 frames]](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid).",
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md"
+    },
+    {
+     "id": "in_frames14",
+     "quote": "This model was trained to generate 14 frames at resolution 576x1024 given a context frame of the same size.",
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_14_README.md"
+    },
+    {
+     "id": "in_base_res",
+     "quote": "After inserting temporal layers, we then train the model on LVD-F on 14 frames at resolution 256 × 384.",
+     "source_url": "https://arxiv.org/pdf/2311.15127",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt"
+    }
+   ]
+  },
+  "temporal_compression": {
+   "value": "none (1x): the VAE encoder is frame-wise; only the decoder has temporal layers",
+   "quote_ids": [
+    "arch_decoder",
+    "arch_vae_class",
+    "in_framewise"
+   ],
+   "quotes": [
+    {
+     "id": "arch_decoder",
+     "quote": "We also finetune the widely used [f8-decoder](https://huggingface.co/docs/diffusers/api/models/autoencoderkl#loading-from-the-original-format) for temporal consistency.",
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md"
+    },
+    {
+     "id": "arch_vae_class",
+     "quote": "\"_class_name\": \"AutoencoderKLTemporalDecoder\",",
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/vae/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_vae_config.json"
+    },
+    {
+     "id": "in_framewise",
+     "quote": "For convenience, we additionally provide the model with the standard frame-wise decoder",
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md"
+    }
+   ]
+  },
+  "spatial_compression": {
+   "value": "8x8 (f8 KL autoencoder)",
+   "quote_ids": [
+    "arch_decoder",
+    "in_blocks"
+   ],
+   "quotes": [
+    {
+     "id": "arch_decoder",
+     "quote": "We also finetune the widely used [f8-decoder](https://huggingface.co/docs/diffusers/api/models/autoencoderkl#loading-from-the-original-format) for temporal consistency.",
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md"
+    },
+    {
+     "id": "in_blocks",
+     "quote": "\"down_block_types\": [ \"DownEncoderBlock2D\", \"DownEncoderBlock2D\", \"DownEncoderBlock2D\", \"DownEncoderBlock2D\" ],",
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/vae/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_vae_config.json"
+    }
+   ]
+  }
+ },
+ "embedding_dim": {
+  "value": "VAE latents: 4 channels x 72 x 128 per 576x1024 frame; 25-frame SVD-XT clip = 4 x 25 x 72 x 128 = 921,600 values (14-frame SVD: 516,096). Alternative representation = UNet intermediate features (dimension depends on the chosen block; not a single documented embedding).",
+  "derivation": "latent_channels 4; 4 encoder blocks (3 downsamplings -> f8); frame-wise encoder so latent frames = input frames",
+  "quote_ids": [
+   "arch_vae_latent",
+   "in_blocks",
+   "arch_decoder"
+  ],
+  "quotes": [
+   {
+    "id": "arch_vae_latent",
+    "quote": "\"latent_channels\": 4,",
+    "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/vae/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_vae_config.json"
+   },
+   {
+    "id": "in_blocks",
+    "quote": "\"down_block_types\": [ \"DownEncoderBlock2D\", \"DownEncoderBlock2D\", \"DownEncoderBlock2D\", \"DownEncoderBlock2D\" ],",
+    "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/vae/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_vae_config.json"
+   },
+   {
+    "id": "arch_decoder",
+    "quote": "We also finetune the widely used [f8-decoder](https://huggingface.co/docs/diffusers/api/models/autoencoderkl#loading-from-the-original-format) for temporal consistency.",
+    "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md"
+   }
+  ]
+ },
+ "params": {
+  "value": "UNet: 1521M (paper; 656M temporal parameters added to the SD2.1 UNet). VAE encoder/decoder parameters not documented (inferred only: vae fp32 safetensors 391,017,740 bytes ~ 97.8M parameters incl. temporal decoder).",
+  "scope": "UNet (generative backbone) documented; VAE not documented",
+  "quote_ids": [
+   "in_unet_params",
+   "w_vae_xt"
+  ],
+  "quotes": [
+   {
+    "id": "in_unet_params",
+    "quote": "inserting a total of 656M new parameters into the UNet bumping its total size (spatial and temporal layers) to 1521M parameters.",
+    "source_url": "https://arxiv.org/pdf/2311.15127",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt"
+   },
+   {
+    "id": "w_vae_xt",
+    "quote": "\"rfilename\": \"vae/diffusion_pytorch_model.safetensors\",",
+    "source_url": "https://huggingface.co/api/models/stabilityai/stable-video-diffusion-img2vid-xt?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_stabilityai__stable-video-diffusion-img2vid-xt_hfapi.json"
+   }
+  ]
+ },
+ "flops_per_input_if_documented": null,
+ "flops_note": "no FLOPs/MACs statement in the saved paper, cards, configs or sampling code (searched FLOP|MAC)",
+ "eligibility": {
+  "C1_open_weights": {
+   "status": "PASS",
+   "basis": "HF API lists vae/unet safetensors, gated=False",
+   "quote_ids": [
+    "w_vae_xt",
+    "w_gated_xt"
+   ],
+   "quotes": [
+    {
+     "id": "w_vae_xt",
+     "quote": "\"rfilename\": \"vae/diffusion_pytorch_model.safetensors\",",
+     "source_url": "https://huggingface.co/api/models/stabilityai/stable-video-diffusion-img2vid-xt?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_stabilityai__stable-video-diffusion-img2vid-xt_hfapi.json"
+    },
+    {
+     "id": "w_gated_xt",
+     "quote": "\"gated\": false,",
+     "source_url": "https://huggingface.co/api/models/stabilityai/stable-video-diffusion-img2vid-xt?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_stabilityai__stable-video-diffusion-img2vid-xt_hfapi.json"
+    }
+   ]
+  },
+  "C2_licence_research_use": {
+   "status": "PASS",
+   "basis": "Community License section 2 grants Research & Non-Commercial use; AUP applies",
+   "quote_ids": [
+    "lic_research",
+    "lic_grant",
+    "lic_aup"
+   ],
+   "quotes": [
+    {
+     "id": "lic_research",
+     "quote": "You can use this model for non-commercial or research purposes under this [license](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/blob/main/LICENSE.md).",
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md"
+    },
+    {
+     "id": "lic_grant",
+     "quote": "Stability AI grants You a non-exclusive, worldwide, non-transferable, non-sublicensable, revocable and royalty-free limited license under Stability AI’s intellectual property or other rights owned by Stability AI embodied in the Stability AI Materials to use, reproduce, distribute, and create Derivative Works of, and make modifications to, the Stability AI Materials for any Research or Non-Commercial Purpose.",
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/LICENSE.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_LICENSE.md"
+    },
+    {
+     "id": "lic_aup",
+     "quote": "The model should not be used in any way that violates Stability AI's [Acceptable Use Policy](https://stability.ai/use-policy).",
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md"
+    }
+   ]
+  },
+  "C3_domain_secondary": {
+   "status": "PASS",
+   "basis": "generative video (image-to-video latent diffusion) model on general video; note the VAE encoder itself is frame-wise (image) -- the video-specific part is the UNet/temporal decoder",
+   "quote_ids": [
+    "dom_type",
+    "arch_decoder"
+   ],
+   "quotes": [
+    {
+     "id": "dom_type",
+     "quote": "- **Model type:** Generative image-to-video model",
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md"
+    },
+    {
+     "id": "arch_decoder",
+     "quote": "We also finetune the widely used [f8-decoder](https://huggingface.co/docs/diffusers/api/models/autoencoderkl#loading-from-the-original-format) for temporal consistency.",
+     "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md"
+    }
+   ]
+  },
+  "C4_documented_pretraining_data": {
+   "status": "FAIL",
+   "basis": "video data = internal LVD described by size/curation only; no datasets or named sources",
+   "quote_ids": [
+    "data_collect",
+    "data_lvd"
+   ],
+   "quotes": [
+    {
+     "id": "data_collect",
+     "quote": "We collect an initial dataset of long videos which forms the base data for our video pretraining stage.",
+     "source_url": "https://arxiv.org/pdf/2311.15127",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt"
+    },
+    {
+     "id": "data_lvd",
+     "quote": "The resulting initial dataset, which we dub Large Video Dataset (LVD), consists of 580M annotated video clip pairs, forming 212 years of content.",
+     "source_url": "https://arxiv.org/pdf/2311.15127",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt"
+    }
+   ]
+  },
+  "eligible": "NO (fails C4)"
+ },
+ "changes_vs_v1": [
+  "sources re-fetched into /home fm_sources/secondary (all raw sha256 equal to v1)",
+  "correction (architecture.params): v1 said 'not stated in card/paper text searched; unet ... ~1.5B params, inferred'. The paper states the UNet size: 656M new temporal parameters bringing the total to 1521M parameters. New params field quotes it; VAE parameters remain undocumented (inferred ~98M). Eligibility unaffected.",
+  "added structured fields with new quotes (HF listings of both repos, model_index, frame-rate micro-conditioning, default fps in the official diffusers pipeline and Stability sampling script, base/hi-res training resolutions)",
+  "no change to any eligibility status or Appendix300 answer"
+ ],
+ "quotes": [
+  {
+   "id": "lic_research",
+   "quote": "You can use this model for non-commercial or research purposes under this [license](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/blob/main/LICENSE.md).",
+   "source_file": "svd_xt_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md",
+   "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+   "final_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+   "raw_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "copy_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "retrieved_utc": "2026-10-02T09:32:14+00:00",
+   "v1_source_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "lic_grant",
+   "quote": "Stability AI grants You a non-exclusive, worldwide, non-transferable, non-sublicensable, revocable and royalty-free limited license under Stability AI’s intellectual property or other rights owned by Stability AI embodied in the Stability AI Materials to use, reproduce, distribute, and create Derivative Works of, and make modifications to, the Stability AI Materials for any Research or Non-Commercial Purpose.",
+   "source_file": "svd_xt_LICENSE.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_LICENSE.md",
+   "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/LICENSE.md",
+   "final_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/LICENSE.md",
+   "raw_sha256": "d6f6b1a4dce5c852bd6d7d9482d002baf0ccdb71e662250b73be9eec8764ee8d",
+   "copy_sha256": "d6f6b1a4dce5c852bd6d7d9482d002baf0ccdb71e662250b73be9eec8764ee8d",
+   "retrieved_utc": "2026-10-02T09:32:15+00:00",
+   "v1_source_sha256": "d6f6b1a4dce5c852bd6d7d9482d002baf0ccdb71e662250b73be9eec8764ee8d",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "lic_aup",
+   "quote": "The model should not be used in any way that violates Stability AI's [Acceptable Use Policy](https://stability.ai/use-policy).",
+   "source_file": "svd_xt_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md",
+   "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+   "final_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+   "raw_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "copy_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "retrieved_utc": "2026-10-02T09:32:14+00:00",
+   "v1_source_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_frames",
+   "quote": "This model was trained to generate 25 frames at resolution 576x1024 given a context frame of the same size, finetuned from [SVD Image-to-Video [14 frames]](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid).",
+   "source_file": "svd_xt_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md",
+   "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+   "final_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+   "raw_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "copy_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "retrieved_utc": "2026-10-02T09:32:14+00:00",
+   "v1_source_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_decoder",
+   "quote": "We also finetune the widely used [f8-decoder](https://huggingface.co/docs/diffusers/api/models/autoencoderkl#loading-from-the-original-format) for temporal consistency.",
+   "source_file": "svd_xt_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md",
+   "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+   "final_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+   "raw_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "copy_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "retrieved_utc": "2026-10-02T09:32:14+00:00",
+   "v1_source_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_vae_class",
+   "quote": "\"_class_name\": \"AutoencoderKLTemporalDecoder\",",
+   "source_file": "svd_xt_vae_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_vae_config.json",
+   "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/vae/config.json",
+   "final_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/vae/config.json",
+   "raw_sha256": "8f34272db69f7e2c615da6142ca3f9fdcd7b682bcfd903ceb15035fea79a8303",
+   "copy_sha256": "8f34272db69f7e2c615da6142ca3f9fdcd7b682bcfd903ceb15035fea79a8303",
+   "retrieved_utc": "2026-10-02T09:32:15+00:00",
+   "v1_source_sha256": "8f34272db69f7e2c615da6142ca3f9fdcd7b682bcfd903ceb15035fea79a8303",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_vae_latent",
+   "quote": "\"latent_channels\": 4,",
+   "source_file": "svd_xt_vae_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_vae_config.json",
+   "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/vae/config.json",
+   "final_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/vae/config.json",
+   "raw_sha256": "8f34272db69f7e2c615da6142ca3f9fdcd7b682bcfd903ceb15035fea79a8303",
+   "copy_sha256": "8f34272db69f7e2c615da6142ca3f9fdcd7b682bcfd903ceb15035fea79a8303",
+   "retrieved_utc": "2026-10-02T09:32:15+00:00",
+   "v1_source_sha256": "8f34272db69f7e2c615da6142ca3f9fdcd7b682bcfd903ceb15035fea79a8303",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_sd21",
+   "quote": "we ground our initial model on a pretrained image diffusion model - namely Stable Diffusion 2.1 [71] - to equip it with a strong visual representation.",
+   "source_file": "svd_arxiv_2311.15127.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt",
+   "source_url": "https://arxiv.org/pdf/2311.15127",
+   "final_url": "https://arxiv.org/pdf/2311.15127",
+   "raw_sha256": "654ef597e183c0544cd753494cb442125bc42b17dd2477481b6799114482a92e",
+   "copy_sha256": "fa89e92b3b6754eb848939018ab7ef710ab7db6ea599df0588f31333f1e293d5",
+   "retrieved_utc": "2026-10-02T09:32:18+00:00",
+   "v1_source_sha256": "654ef597e183c0544cd753494cb442125bc42b17dd2477481b6799114482a92e",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "data_collect",
+   "quote": "We collect an initial dataset of long videos which forms the base data for our video pretraining stage.",
+   "source_file": "svd_arxiv_2311.15127.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt",
+   "source_url": "https://arxiv.org/pdf/2311.15127",
+   "final_url": "https://arxiv.org/pdf/2311.15127",
+   "raw_sha256": "654ef597e183c0544cd753494cb442125bc42b17dd2477481b6799114482a92e",
+   "copy_sha256": "fa89e92b3b6754eb848939018ab7ef710ab7db6ea599df0588f31333f1e293d5",
+   "retrieved_utc": "2026-10-02T09:32:18+00:00",
+   "v1_source_sha256": "654ef597e183c0544cd753494cb442125bc42b17dd2477481b6799114482a92e",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "data_lvd",
+   "quote": "The resulting initial dataset, which we dub Large Video Dataset (LVD), consists of 580M annotated video clip pairs, forming 212 years of content.",
+   "source_file": "svd_arxiv_2311.15127.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt",
+   "source_url": "https://arxiv.org/pdf/2311.15127",
+   "final_url": "https://arxiv.org/pdf/2311.15127",
+   "raw_sha256": "654ef597e183c0544cd753494cb442125bc42b17dd2477481b6799114482a92e",
+   "copy_sha256": "fa89e92b3b6754eb848939018ab7ef710ab7db6ea599df0588f31333f1e293d5",
+   "retrieved_utc": "2026-10-02T09:32:18+00:00",
+   "v1_source_sha256": "654ef597e183c0544cd753494cb442125bc42b17dd2477481b6799114482a92e",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "data_hq",
+   "quote": "We finetune the base text-to-video model on a high-quality video dataset of ∼ 1M samples.",
+   "source_file": "svd_arxiv_2311.15127.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt",
+   "source_url": "https://arxiv.org/pdf/2311.15127",
+   "final_url": "https://arxiv.org/pdf/2311.15127",
+   "raw_sha256": "654ef597e183c0544cd753494cb442125bc42b17dd2477481b6799114482a92e",
+   "copy_sha256": "fa89e92b3b6754eb848939018ab7ef710ab7db6ea599df0588f31333f1e293d5",
+   "retrieved_utc": "2026-10-02T09:32:18+00:00",
+   "v1_source_sha256": "654ef597e183c0544cd753494cb442125bc42b17dd2477481b6799114482a92e",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "data_appendix",
+   "quote": "All considered potential data sources were included for final training, with none held out as the proposed data filtering methods described in the SVD paper handle the quality control/filtering of the dataset.",
+   "source_file": "svd_xt_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md",
+   "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+   "final_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+   "raw_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "copy_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "retrieved_utc": "2026-10-02T09:32:14+00:00",
+   "v1_source_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "w_vae_xt",
+   "quote": "\"rfilename\": \"vae/diffusion_pytorch_model.safetensors\",",
+   "source_file": "svd_stabilityai__stable-video-diffusion-img2vid-xt_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_stabilityai__stable-video-diffusion-img2vid-xt_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/stabilityai/stable-video-diffusion-img2vid-xt?blobs=true",
+   "final_url": "https://huggingface.co/api/models/stabilityai/stable-video-diffusion-img2vid-xt?blobs=true",
+   "raw_sha256": "b2e3d125d0906abf1f17a2e99e4b24d385ec06ea4282dd204d7ef1b440d89684",
+   "copy_sha256": "23ebc36fa07193d1a8223bbea7a5310c9279fb5ba21f837db2a87af999916c0e",
+   "retrieved_utc": "2026-10-02T09:32:13+00:00"
+  },
+  {
+   "id": "w_gated_xt",
+   "quote": "\"gated\": false,",
+   "source_file": "svd_stabilityai__stable-video-diffusion-img2vid-xt_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_stabilityai__stable-video-diffusion-img2vid-xt_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/stabilityai/stable-video-diffusion-img2vid-xt?blobs=true",
+   "final_url": "https://huggingface.co/api/models/stabilityai/stable-video-diffusion-img2vid-xt?blobs=true",
+   "raw_sha256": "b2e3d125d0906abf1f17a2e99e4b24d385ec06ea4282dd204d7ef1b440d89684",
+   "copy_sha256": "23ebc36fa07193d1a8223bbea7a5310c9279fb5ba21f837db2a87af999916c0e",
+   "retrieved_utc": "2026-10-02T09:32:13+00:00"
+  },
+  {
+   "id": "w_vae_14",
+   "quote": "\"rfilename\": \"vae/diffusion_pytorch_model.safetensors\",",
+   "source_file": "svd_stabilityai__stable-video-diffusion-img2vid_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_stabilityai__stable-video-diffusion-img2vid_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/stabilityai/stable-video-diffusion-img2vid?blobs=true",
+   "final_url": "https://huggingface.co/api/models/stabilityai/stable-video-diffusion-img2vid?blobs=true",
+   "raw_sha256": "2238369a277fe40703fcaf185c2e63c9a9b7111f16a19c64caf8f284a3d49013",
+   "copy_sha256": "7953eb9b138d5898c8e0ba2b5a934d69eca38ce219916e74dd724bbc8a52c5c3",
+   "retrieved_utc": "2026-10-02T09:32:14+00:00"
+  },
+  {
+   "id": "w_gated_14",
+   "quote": "\"gated\": false,",
+   "source_file": "svd_stabilityai__stable-video-diffusion-img2vid_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_stabilityai__stable-video-diffusion-img2vid_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/stabilityai/stable-video-diffusion-img2vid?blobs=true",
+   "final_url": "https://huggingface.co/api/models/stabilityai/stable-video-diffusion-img2vid?blobs=true",
+   "raw_sha256": "2238369a277fe40703fcaf185c2e63c9a9b7111f16a19c64caf8f284a3d49013",
+   "copy_sha256": "7953eb9b138d5898c8e0ba2b5a934d69eca38ce219916e74dd724bbc8a52c5c3",
+   "retrieved_utc": "2026-10-02T09:32:14+00:00"
+  },
+  {
+   "id": "dom_type",
+   "quote": "- **Model type:** Generative image-to-video model",
+   "source_file": "svd_xt_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md",
+   "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+   "final_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+   "raw_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "copy_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "retrieved_utc": "2026-10-02T09:32:14+00:00"
+  },
+  {
+   "id": "in_frames14",
+   "quote": "This model was trained to generate 14 frames at resolution 576x1024 given a context frame of the same size.",
+   "source_file": "svd_14_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_14_README.md",
+   "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid/raw/main/README.md",
+   "final_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid/raw/main/README.md",
+   "raw_sha256": "82c5dbd2907c56e2991dde78bfb657c7e8414e47e611f14e516caf9c485081de",
+   "copy_sha256": "82c5dbd2907c56e2991dde78bfb657c7e8414e47e611f14e516caf9c485081de",
+   "retrieved_utc": "2026-10-02T09:32:17+00:00"
+  },
+  {
+   "id": "in_base_res",
+   "quote": "After inserting temporal layers, we then train the model on LVD-F on 14 frames at resolution 256 × 384.",
+   "source_file": "svd_arxiv_2311.15127.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt",
+   "source_url": "https://arxiv.org/pdf/2311.15127",
+   "final_url": "https://arxiv.org/pdf/2311.15127",
+   "raw_sha256": "654ef597e183c0544cd753494cb442125bc42b17dd2477481b6799114482a92e",
+   "copy_sha256": "fa89e92b3b6754eb848939018ab7ef710ab7db6ea599df0588f31333f1e293d5",
+   "retrieved_utc": "2026-10-02T09:32:18+00:00"
+  },
+  {
+   "id": "in_hires",
+   "quote": "Next, we finetune the model to generate 14 320 × 576 frames for 100k iterations using batch size 768.",
+   "source_file": "svd_arxiv_2311.15127.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt",
+   "source_url": "https://arxiv.org/pdf/2311.15127",
+   "final_url": "https://arxiv.org/pdf/2311.15127",
+   "raw_sha256": "654ef597e183c0544cd753494cb442125bc42b17dd2477481b6799114482a92e",
+   "copy_sha256": "fa89e92b3b6754eb848939018ab7ef710ab7db6ea599df0588f31333f1e293d5",
+   "retrieved_utc": "2026-10-02T09:32:18+00:00"
+  },
+  {
+   "id": "in_vae_sample",
+   "quote": "\"sample_size\": 768,",
+   "source_file": "svd_xt_vae_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_vae_config.json",
+   "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/vae/config.json",
+   "final_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/vae/config.json",
+   "raw_sha256": "8f34272db69f7e2c615da6142ca3f9fdcd7b682bcfd903ceb15035fea79a8303",
+   "copy_sha256": "8f34272db69f7e2c615da6142ca3f9fdcd7b682bcfd903ceb15035fea79a8303",
+   "retrieved_utc": "2026-10-02T09:32:15+00:00"
+  },
+  {
+   "id": "in_blocks",
+   "quote": "\"down_block_types\": [ \"DownEncoderBlock2D\", \"DownEncoderBlock2D\", \"DownEncoderBlock2D\", \"DownEncoderBlock2D\" ],",
+   "source_file": "svd_xt_vae_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_vae_config.json",
+   "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/vae/config.json",
+   "final_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/vae/config.json",
+   "raw_sha256": "8f34272db69f7e2c615da6142ca3f9fdcd7b682bcfd903ceb15035fea79a8303",
+   "copy_sha256": "8f34272db69f7e2c615da6142ca3f9fdcd7b682bcfd903ceb15035fea79a8303",
+   "retrieved_utc": "2026-10-02T09:32:15+00:00"
+  },
+  {
+   "id": "in_framewise",
+   "quote": "For convenience, we additionally provide the model with the standard frame-wise decoder",
+   "source_file": "svd_xt_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_xt_README.md",
+   "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+   "final_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/raw/main/README.md",
+   "raw_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "copy_sha256": "0513cc8b8da0aff30c91dbc899babe4d411e2d0ac68b8a0aff40103e1489c6b1",
+   "retrieved_utc": "2026-10-02T09:32:14+00:00"
+  },
+  {
+   "id": "in_fps_cond",
+   "quote": "Additionally, we introduce micro-conditioning [64] on frame rate.",
+   "source_file": "svd_arxiv_2311.15127.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt",
+   "source_url": "https://arxiv.org/pdf/2311.15127",
+   "final_url": "https://arxiv.org/pdf/2311.15127",
+   "raw_sha256": "654ef597e183c0544cd753494cb442125bc42b17dd2477481b6799114482a92e",
+   "copy_sha256": "fa89e92b3b6754eb848939018ab7ef710ab7db6ea599df0588f31333f1e293d5",
+   "retrieved_utc": "2026-10-02T09:32:18+00:00"
+  },
+  {
+   "id": "in_fps_cond_train",
+   "quote": "During training, the base model and the high-resolution Text/Image-to-Video models are all conditioned on the input video’s frame rate and motion score.",
+   "source_file": "svd_arxiv_2311.15127.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt",
+   "source_url": "https://arxiv.org/pdf/2311.15127",
+   "final_url": "https://arxiv.org/pdf/2311.15127",
+   "raw_sha256": "654ef597e183c0544cd753494cb442125bc42b17dd2477481b6799114482a92e",
+   "copy_sha256": "fa89e92b3b6754eb848939018ab7ef710ab7db6ea599df0588f31333f1e293d5",
+   "retrieved_utc": "2026-10-02T09:32:18+00:00"
+  },
+  {
+   "id": "in_fps_diffusers",
+   "quote": "fps: int = 7,",
+   "source_file": "svd_diffusers_v0.24.0_pipeline_stable_video_diffusion.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_diffusers_v0.24.0_pipeline_stable_video_diffusion.py.txt",
+   "source_url": "https://raw.githubusercontent.com/huggingface/diffusers/v0.24.0/src/diffusers/pipelines/stable_video_diffusion/pipeline_stable_video_diffusion.py",
+   "final_url": "https://raw.githubusercontent.com/huggingface/diffusers/v0.24.0/src/diffusers/pipelines/stable_video_diffusion/pipeline_stable_video_diffusion.py",
+   "raw_sha256": "cae751ea4e979756d7d8d8b34404d1f9a5fed806f09681f5b1afb69f03d7b345",
+   "copy_sha256": "cae751ea4e979756d7d8d8b34404d1f9a5fed806f09681f5b1afb69f03d7b345",
+   "retrieved_utc": "2026-10-02T09:32:46+00:00"
+  },
+  {
+   "id": "in_fps_gm",
+   "quote": "fps_id: int = 6,",
+   "source_file": "svd_github_generative-models_simple_video_sample.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_github_generative-models_simple_video_sample.py.txt",
+   "source_url": "https://raw.githubusercontent.com/Stability-AI/generative-models/main/scripts/sampling/simple_video_sample.py",
+   "final_url": "https://raw.githubusercontent.com/Stability-AI/generative-models/main/scripts/sampling/simple_video_sample.py",
+   "raw_sha256": "e3713d78b9aeeb3da411aa20a70322ded02622a3745b0f1c4ba2c2f13c0a4a52",
+   "copy_sha256": "e3713d78b9aeeb3da411aa20a70322ded02622a3745b0f1c4ba2c2f13c0a4a52",
+   "retrieved_utc": "2026-10-02T09:32:46+00:00"
+  },
+  {
+   "id": "in_unet_params",
+   "quote": "inserting a total of 656M new parameters into the UNet bumping its total size (spatial and temporal layers) to 1521M parameters.",
+   "source_file": "svd_arxiv_2311.15127.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/svd_arxiv_2311.15127.txt",
+   "source_url": "https://arxiv.org/pdf/2311.15127",
+   "final_url": "https://arxiv.org/pdf/2311.15127",
+   "raw_sha256": "654ef597e183c0544cd753494cb442125bc42b17dd2477481b6799114482a92e",
+   "copy_sha256": "fa89e92b3b6754eb848939018ab7ef710ab7db6ea599df0588f31333f1e293d5",
+   "retrieved_utc": "2026-10-02T09:32:18+00:00"
+  }
+ ],
+ "all_quotes_verified": true,
+ "record_written_utc": "2026-10-02T09:33:34+00:00"
+}

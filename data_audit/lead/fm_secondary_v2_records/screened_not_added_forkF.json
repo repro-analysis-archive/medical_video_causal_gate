@@ -1,0 +1,107 @@
+[
+ {
+  "name": "TATS 3D VQGAN (songweige/TATS; per-dataset VQGAN checkpoints for UCF-101, Sky-Timelapse, Taichi-HD, MUGEN, AudioSet-Drums)",
+  "paper": "Long Video Generation with Time-Agnostic VQGAN and Time-Sensitive Transformer (Ge et al., ECCV 2022, arXiv:2204.03638)",
+  "reason_not_added": "no publicly downloadable official weights: the README's Google Drive VQGAN links (checked UCF-101, Sky-Timelapse, Taichi-HD) return HTTP 404 on 2026-10-02 (view page and download endpoint); C1 would FAIL. Code licence MIT. Data would have been closed curated lists (UCF-101, Sky-Timelapse, Taichi-HD, MUGEN, AudioSet-Drums).",
+  "checked_utc": "2026-10-02",
+  "quotes": [
+   {
+    "id": "readme_ucf",
+    "quote": "UCF-101: [official data](https://www.crcv.ucf.edu/data/UCF101.php), [VQGAN](https://drive.google.com/file/d/15Otpyr7v6Wnyw2HfQr_cuaRsBiSMd7Rh/view?usp=sharing)",
+    "source_file": "tats_github_README.md",
+    "verified_whitespace_normalized": true,
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/tats_github_README.md",
+    "source_url": "https://raw.githubusercontent.com/songweige/TATS/main/README.md",
+    "raw_sha256": "80b8ef3ae9cc79e46c4e51cb66844dd2bf24b61a3705acd07838a8013e96f072",
+    "retrieved_utc": "2026-10-02T09:34:05+00:00"
+   },
+   {
+    "id": "drive_404_ucf",
+    "quote": "リクエストされたファイルは存在しません。",
+    "source_file": "tats_vqgan_ucf101_gdrive_view.txt",
+    "verified_whitespace_normalized": true,
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/tats_vqgan_ucf101_gdrive_view.txt",
+    "source_url": "https://drive.google.com/file/d/15Otpyr7v6Wnyw2HfQr_cuaRsBiSMd7Rh/view",
+    "raw_sha256": "e8b56bb68886adbbaceb69629f85249d7c2666bacd412053d2e99ccf8a88da48",
+    "retrieved_utc": "2026-10-02T09:34:36+00:00"
+   },
+   {
+    "id": "drive_404_sky",
+    "quote": "リクエストされたファイルは存在しません。",
+    "source_file": "tats_vqgan_sky_gdrive_view.txt",
+    "verified_whitespace_normalized": true,
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/tats_vqgan_sky_gdrive_view.txt",
+    "source_url": "https://drive.google.com/file/d/1ExV0XdJKlGP4lzn0X2W9307X-DE240iW/view",
+    "raw_sha256": "7549be7ef1929f70b9d62f5878eb2e1f69856a648a943883a6f75796e427902c",
+    "retrieved_utc": "2026-10-02T09:34:37+00:00"
+   },
+   {
+    "id": "drive_404_taichi",
+    "quote": "リクエストされたファイルは存在しません。",
+    "source_file": "tats_vqgan_taichi_gdrive_view.txt",
+    "verified_whitespace_normalized": true,
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/tats_vqgan_taichi_gdrive_view.txt",
+    "source_url": "https://drive.google.com/file/d/1hcWIADkDsm916Xkxfz1YbljHU2ZAQFpQ/view",
+    "raw_sha256": "af26686cbb96a53d197a14a69044c56945da8bcf8941baaf43415df1bd0ab8e3",
+    "retrieved_utc": "2026-10-02T09:34:38+00:00"
+   },
+   {
+    "id": "head_404_ucf",
+    "quote": "\"http_status\": 404,",
+    "source_file": "tats_vqgan_ucf101_uc_head.json",
+    "verified_whitespace_normalized": true,
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/tats_vqgan_ucf101_uc_head.json",
+    "source_url": "https://drive.google.com/uc?id=15Otpyr7v6Wnyw2HfQr_cuaRsBiSMd7Rh&export=download",
+    "raw_sha256": "f7745da4887bc3b72b1a6328e967e9b3773161ce77b6e69f284ed284db2dd045",
+    "retrieved_utc": "2026-10-02T09:46:32+00:00"
+   },
+   {
+    "id": "lic",
+    "quote": "TATS is licensed under the MIT license, as found in the LICENSE file.",
+    "source_file": "tats_github_README.md",
+    "verified_whitespace_normalized": true,
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/tats_github_README.md",
+    "source_url": "https://raw.githubusercontent.com/songweige/TATS/main/README.md",
+    "raw_sha256": "80b8ef3ae9cc79e46c4e51cb66844dd2bf24b61a3705acd07838a8013e96f072",
+    "retrieved_utc": "2026-10-02T09:34:05+00:00"
+   }
+  ]
+ },
+ {
+  "name": "SkyReels-V2 (Skywork/SkyReels-V2-*; checked Skywork/SkyReels-V2-T2V-14B-540P)",
+  "reason_not_added": "duplicate VAE: the repo ships Wan2.1_VAE.pth with the same size (507,609,880 bytes) and the same LFS sha256 as Wan-AI/Wan2.1-T2V-1.3B -> byte-identical to the Wan-VAE already recorded as entry 05; no separate tokenizer to audit",
+  "checked_utc": "2026-10-02",
+  "quotes": [
+   {
+    "id": "sky_file",
+    "quote": "\"rfilename\": \"Wan2.1_VAE.pth\",",
+    "source_file": "skyreels_Skywork__SkyReels-V2-T2V-14B-540P_hfapi.json",
+    "verified_whitespace_normalized": true,
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/skyreels_Skywork__SkyReels-V2-T2V-14B-540P_hfapi.json",
+    "source_url": "https://huggingface.co/api/models/Skywork/SkyReels-V2-T2V-14B-540P?blobs=true",
+    "raw_sha256": "d0780f9ad7989b73a5191e800a846261e07b2aa607be06b4bff5e3c5ed870eb6",
+    "retrieved_utc": "2026-10-02T09:34:01+00:00"
+   },
+   {
+    "id": "sky_sha",
+    "quote": "\"sha256\": \"38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981\",",
+    "source_file": "skyreels_Skywork__SkyReels-V2-T2V-14B-540P_hfapi.json",
+    "verified_whitespace_normalized": true,
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/skyreels_Skywork__SkyReels-V2-T2V-14B-540P_hfapi.json",
+    "source_url": "https://huggingface.co/api/models/Skywork/SkyReels-V2-T2V-14B-540P?blobs=true",
+    "raw_sha256": "d0780f9ad7989b73a5191e800a846261e07b2aa607be06b4bff5e3c5ed870eb6",
+    "retrieved_utc": "2026-10-02T09:34:01+00:00"
+   },
+   {
+    "id": "wan_sha",
+    "quote": "\"sha256\": \"38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981\",",
+    "source_file": "skyreelscmp_Wan-AI__Wan2.1-T2V-1.3B_hfapi.json",
+    "verified_whitespace_normalized": true,
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/skyreelscmp_Wan-AI__Wan2.1-T2V-1.3B_hfapi.json",
+    "source_url": "https://huggingface.co/api/models/Wan-AI/Wan2.1-T2V-1.3B?blobs=true",
+    "raw_sha256": "ff208797e9ddae03bab53667b42582e578535905fe11ba03b76a6d1ccb301328",
+    "retrieved_utc": "2026-10-02T09:46:40+00:00"
+   }
+  ]
+ }
+]

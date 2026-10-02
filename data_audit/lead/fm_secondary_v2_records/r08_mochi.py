@@ -1,0 +1,114 @@
+import sys; sys.path.insert(0, '/home/user/projects/medical_video_causal_gate/data_audit/lead')
+from fm_secondary_v2_lib import save_record, term_search, MED_TERMS, A300_TERMS
+
+API = "mochi_genmo__mochi-1-preview_hfapi.json"; CARD = "mochi_mochi-1-preview_README.md"
+VC = "mochi_mochi-1-preview_vae_config.json"; GH = "mochi_github_README.md"; LIC = "mochi_github_LICENSE.txt"
+BLOG = "mochi_genmo_blog_mochi-1.txt"
+DATA_FILES = [CARD, GH, BLOG]
+
+rec = {
+ "id": "08_mochi_vae",
+ "status_in_survey": "added in revision 2 (2026-10-02)",
+ "name": "Mochi 1 AsymmVAE (Genmo, genmo/mochi-1-preview; AutoencoderKLMochi, 8x8 spatial x 6x temporal, 12 channels)",
+ "version": "genmo/mochi-1-preview (HF repo sha 14be5fcea23095ed330cb214647916a451e38b6e, created 2024-10-22): encoder.safetensors + decoder.safetensors (native), vae/diffusion_pytorch_model(.bf16).safetensors (diffusers); 'Mochi 1 preview', 480p base model",
+ "paper": {"title": "Mochi 1 (no paper; GitHub repository genmoai/models / genmoai/mochi, model card and launch blog)", "year": 2024, "arxiv": None},
+ "weights_location": {
+  "urls": ["https://huggingface.co/genmo/mochi-1-preview/tree/main"],
+  "files_listed": {"encoder.safetensors": 388912864, "decoder.safetensors": 1450122828,
+                   "vae/diffusion_pytorch_model.safetensors": 1839047460, "vae/diffusion_pytorch_model.bf16.safetensors": 919549966},
+  "gated": False, "private": False,
+  "verified_how": "HF API model listing (metadata only) saved as " + API + "; also a direct zip and a magnet link on the card (not accessed); nothing downloaded",
+  "quote_ids": ["w_enc", "w_dec", "w_gated", "w_card_dl"]
+ },
+ "licence": {
+  "id": "Apache-2.0",
+  "url": "https://huggingface.co/genmo/mochi-1-preview ; https://github.com/genmoai/mochi/blob/main/LICENSE",
+  "commercial": "permitted", "non_commercial_only": False,
+  "restrictions": "none beyond Apache-2.0 (card safety note recommends extra safeguards for commercial deployment)",
+  "gating": "none",
+  "quote_ids": ["lic_card", "lic_overview", "lic_text"]
+ },
+ "domain": {
+  "value": "video VAE (asymmetric causal encoder-decoder) released alongside the Mochi 1 10B text-to-video diffusion model ('general text-to-video diffusion models'); training video not described",
+  "quote_ids": ["dom_vae", "dom_general"]
+ },
+ "architecture": {
+  "type": "causal asymmetric video VAE (AutoencoderKLMochi): encoder base 64 channels, decoder base 128 channels, attention blocks, 8x8 spatial / 6x temporal",
+  "representation": "encoder latents: 12 channels per latent voxel (6 frames x 8 x 8 pixels)"
+ },
+ "pretraining_data": {
+  "summary": "No description of the VAE or DiT training data in the card, GitHub README or launch blog beyond the safety note that the models 'reflect the biases and preconceptions found in their training data'.",
+  "form": "not described"
+ },
+ "pretraining_data_quote": {"quote_ids": ["data_none_card", "dom_general"]},
+ "medical_video_in_data": {
+  "answer": "NOT MENTIONED",
+  "basis": "Automated search of the saved card, GitHub README and launch blog for medical|surgical|surgery|endoscop|laparoscop|clinical|health|hospital: no hits; no data description exists.",
+  "term_search": {"pattern": MED_TERMS, "hits": term_search(DATA_FILES, MED_TERMS)}
+ },
+ "appendix300_possible": {
+  "answer": "UNKNOWN", "basis_class": "undisclosed",
+  "basis": "training data entirely undisclosed. Timing: released 2024-10-22, before the OPARA issue 2026-04-29.",
+  "quote_ids": ["data_none_card"]
+ },
+ "appendix300_check": {
+  "answer": "UNKNOWN",
+  "quote_or_statement": "the documented data list does not mention DS203/Appendix300",
+  "basis_class": "undisclosed",
+  "basis": "no data list is published at all (the only data mention is the safety note on 'their training data'), so the Appendix300 source recordings cannot be excluded.",
+  "term_search": {"pattern": A300_TERMS, "hits": term_search(DATA_FILES, A300_TERMS)},
+  "quote_ids": ["data_none_card"]
+ },
+ "input": {
+  "frame_size": {"value": "480p; reference 480x848 (card API example); 'initial release generates videos at 480p'", "quote_ids": ["in_480x848", "in_480p"]},
+  "frame_rate_or_sampling": {"value": "30 fps (generation; export fps 30); VAE itself has no fps parameter", "quote_ids": ["in_30fps", "in_export"]},
+  "clip_length_frames": {"value": "up to 5.4 s at 30 fps (~163 frames, inferred); examples use num_frames=31 and 84; causal 6x temporal compression implies 1+6k frames (inferred)", "quote_ids": ["in_30fps", "in_480x848", "in_84"]},
+  "temporal_compression": {"value": "6x (causal; temporal_expansions [1, 2, 3])", "quote_ids": ["arch_card", "arch_temporal"]},
+  "spatial_compression": {"value": "8x8 (spatial_expansions [2, 2, 2])", "quote_ids": ["arch_card", "arch_spatial"]}
+ },
+ "embedding_dim": {
+  "value": "12 latent channels x 6 x 60 x 106 = 457,920 values for the card's 31-frame 480x848 example; generally 12 x (1+(T-1)/6) x H/8 x W/8 (causal, inferred from 'causally compresses' + 6x)",
+  "derivation": "latent_channels 12; 8x8 spatial, 6x causal temporal compression; 31 frames -> 1 + 30/6 = 6 latent frames; 480/8 = 60, 848/8 = 106",
+  "quote_ids": ["arch_latent", "arch_card", "in_480x848"]
+ },
+ "params": {
+  "value": "362M for the whole AsymmVAE (encoder + decoder); encoder-only count not documented (inferred only: encoder.safetensors 388,912,864 bytes ~ 97M parameters if fp32)",
+  "scope": "whole autoencoder (encoder + decoder)",
+  "quote_ids": ["arch_specs", "w_enc"]
+ },
+ "flops_per_input_if_documented": None,
+ "flops_note": "no FLOPs/MACs statement in the saved card, GitHub README, blog or config",
+ "eligibility": {
+  "C1_open_weights": {"status": "PASS", "basis": "HF API lists encoder.safetensors / decoder.safetensors / vae/*.safetensors, gated=False", "quote_ids": ["w_enc", "w_gated"]},
+  "C2_licence_research_use": {"status": "PASS", "basis": "Apache-2.0", "quote_ids": ["lic_card", "lic_text"]},
+  "C3_domain_secondary": {"status": "PASS", "basis": "video VAE of a general text-to-video diffusion model", "quote_ids": ["dom_vae", "dom_general"]},
+  "C4_documented_pretraining_data": {"status": "FAIL", "basis": "no pretraining data description at all (no datasets, no sources)", "quote_ids": ["data_none_card"]},
+  "eligible": "NO (fails C4)"
+ },
+ "notes": "Card/GitHub say the VAE compresses '128x smaller'; the blog says '96x smaller' (8x8x6 x 3/12 channels = 96, i.e. the blog figure matches the stated factors).",
+ "quotes": [
+  {"id": "w_enc", "quote": "\"rfilename\": \"encoder.safetensors\",", "source_file": API},
+  {"id": "w_dec", "quote": "\"rfilename\": \"decoder.safetensors\",", "source_file": API},
+  {"id": "w_gated", "quote": "\"gated\": false,", "source_file": API},
+  {"id": "w_card_dl", "quote": "- [Hugging Face (recommended)](https://huggingface.co/genmo/mochi-1-preview/tree/main)", "source_file": CARD},
+  {"id": "lic_card", "quote": "license: apache-2.0", "source_file": CARD},
+  {"id": "lic_overview", "quote": "We’re releasing the model under a permissive Apache 2.0 license.", "source_file": CARD},
+  {"id": "lic_text", "quote": "Apache License Version 2.0, January 2004", "source_file": LIC},
+  {"id": "dom_vae", "quote": "Alongside Mochi, we are open-sourcing our video AsymmVAE. We use an asymmetric encoder-decoder structure to build an efficient high quality compression model.", "source_file": CARD},
+  {"id": "dom_general", "quote": "Genmo video models are general text-to-video diffusion models that inherently reflect the biases and preconceptions found in their training data.", "source_file": CARD},
+  {"id": "data_none_card", "quote": "Genmo video models are general text-to-video diffusion models that inherently reflect the biases and preconceptions found in their training data. While steps have been taken to limit NSFW content", "source_file": CARD},
+  {"id": "arch_card", "quote": "Our AsymmVAE causally compresses videos to a 128x smaller size, with an 8x8 spatial and a 6x temporal compression to a 12-channel latent space.", "source_file": CARD},
+  {"id": "arch_blog96", "quote": "Our VAE causally compresses videos to a 96x smaller size, with an 8x8 spatial and a 6x temporal compression to a 12-channel latent space.", "source_file": BLOG},
+  {"id": "arch_specs", "quote": "|362M | 64 | 128 | 12 | 8x8 | 6x |", "source_file": CARD},
+  {"id": "arch_class", "quote": "\"_class_name\": \"AutoencoderKLMochi\",", "source_file": VC},
+  {"id": "arch_latent", "quote": "\"latent_channels\": 12,", "source_file": VC},
+  {"id": "arch_spatial", "quote": "\"spatial_expansions\": [ 2, 2, 2 ],", "source_file": VC},
+  {"id": "arch_temporal", "quote": "\"temporal_expansions\": [ 1, 2, 3 ]", "source_file": VC},
+  {"id": "in_480x848", "quote": "height=480, width=848, num_frames=31,", "source_file": CARD},
+  {"id": "in_480p", "quote": "The initial release generates videos at 480p today.", "source_file": CARD},
+  {"id": "in_30fps", "quote": "Mochi 1 generates smooth videos at 30 frames per second for durations up to 5.4 seconds", "source_file": BLOG},
+  {"id": "in_export", "quote": "export_to_video(frames, \"mochi.mp4\", fps=30)", "source_file": CARD},
+  {"id": "in_84", "quote": "frames = pipe(prompt, num_frames=84).frames[0]", "source_file": CARD}
+ ]
+}
+save_record(rec)

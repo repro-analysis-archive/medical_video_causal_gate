@@ -1,0 +1,639 @@
+{
+ "id": "26_videovae_plus",
+ "name": "VideoVAE+ (HKUST VideoVerses/VideoVAEPlus; sota-4z, sota-16z, and text-guided variants)",
+ "status_in_survey": "added in revision 2 (2026-10-02)",
+ "version": "GitHub VideoVerses/VideoVAEPlus README 'Pretrained Models': sota-4z (sota-4-4z.ckpt), sota-4z-text (sota-4-4z-text-new.ckpt), sota-16z (sota-4-16z.ckpt), sota-16z-text (sota-4-16z-text.ckpt) on Google Drive; paper arXiv:2412.17805v1",
+ "paper": {
+  "title": "Large Motion Video Autoencoding with Cross-modal Video VAE",
+  "year": 2024,
+  "arxiv": "2412.17805"
+ },
+ "weights_location": {
+  "urls": [
+   "https://drive.google.com/file/d/1WEKBdRFjEUxwcBgX_thckXklD8s6dDTj/view",
+   "https://drive.google.com/file/d/13v2Pq6dG1jo7RNImxNOXr9-WizgMiJ7M/view",
+   "https://drive.google.com/file/d/1QfqrKIWu5zG10U-xRgeF8Dhp__njC8OH/view",
+   "https://drive.google.com/file/d/1iYCAtmdaOX0V41p0vbt_6g8kRS1EK56p/view"
+  ],
+  "files_listed": {
+   "sota-4-4z.ckpt": null,
+   "sota-4-16z.ckpt": null,
+   "sota-4-4z-text-new.ckpt": null,
+   "sota-4-16z-text.ckpt": null
+  },
+  "gated": false,
+  "private": false,
+  "verified_how": "the four public Google Drive view pages linked from the official README resolve without login (HTTP 200) and name the files; sizes not shown; nothing downloaded",
+  "quote_ids": [
+   "w_readme16",
+   "w_view4",
+   "w_view16",
+   "w_view4t",
+   "w_view16t"
+  ],
+  "quotes": [
+   {
+    "id": "w_readme16",
+    "quote": "| sota-16z | 16 | [Download](https://drive.google.com/file/d/13v2Pq6dG1jo7RNImxNOXr9-WizgMiJ7M/view?usp=sharing) |",
+    "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_README.md"
+   },
+   {
+    "id": "w_view4",
+    "quote": "sota-4-4z.ckpt - Google ドライブ",
+    "source_url": "https://drive.google.com/file/d/1WEKBdRFjEUxwcBgX_thckXklD8s6dDTj/view",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_sota-4z_gdrive_view.txt"
+   },
+   {
+    "id": "w_view16",
+    "quote": "sota-4-16z.ckpt - Google ドライブ",
+    "source_url": "https://drive.google.com/file/d/13v2Pq6dG1jo7RNImxNOXr9-WizgMiJ7M/view",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_sota-16z_gdrive_view.txt"
+   },
+   {
+    "id": "w_view4t",
+    "quote": "sota-4-4z-text-new.ckpt",
+    "source_url": "https://drive.google.com/file/d/1QfqrKIWu5zG10U-xRgeF8Dhp__njC8OH/view",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_sota-4z-text_gdrive_view.txt"
+   },
+   {
+    "id": "w_view16t",
+    "quote": "sota-4-16z-text.ckpt",
+    "source_url": "https://drive.google.com/file/d/1iYCAtmdaOX0V41p0vbt_6g8kRS1EK56p/view",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_sota-16z-text_gdrive_view.txt"
+   }
+  ]
+ },
+ "licence": {
+  "id": "CC BY-NC-ND 4.0 (repository LICENSE; README 'Please follow [CC-BY-NC-ND]')",
+  "url": "https://github.com/VideoVerses/VideoVAEPlus/blob/main/LICENSE",
+  "commercial": "not permitted",
+  "non_commercial_only": true,
+  "restrictions": "NonCommercial; NoDerivatives (sharing of adapted material not licensed); attribution",
+  "gating": "none",
+  "quote_ids": [
+   "lic_readme",
+   "lic_text"
+  ],
+  "quotes": [
+   {
+    "id": "lic_readme",
+    "quote": "Please follow [CC-BY-NC-ND](./LICENSE).",
+    "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_README.md"
+   },
+   {
+    "id": "lic_text",
+    "quote": "Attribution-NonCommercial-NoDerivatives 4.0 International",
+    "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/LICENSE",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_LICENSE.txt"
+   }
+  ]
+ },
+ "domain": {
+  "value": "video VAE (temporal-aware spatial compression + lightweight temporal autoencoder, optional text guidance) for latent video generation; trained on general text-video data",
+  "quote_ids": [
+   "dom_readme",
+   "data_sets"
+  ],
+  "quotes": [
+   {
+    "id": "dom_readme",
+    "quote": "A state-of-the-art **Video Variational Autoencoder (VAE)** designed for high-fidelity video reconstruction.",
+    "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_README.md"
+   },
+   {
+    "id": "data_sets",
+    "quote": "We conduct experiments on three datasets: the public Panda2M [ 10 ] and MMTrailer [ 11 ] datasets, and a private text-video dataset with over 6M pairs.",
+    "source_url": "https://arxiv.org/html/2412.17805",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt"
+   }
+  ]
+ },
+ "architecture": {
+  "type": "sequential spatiotemporal KL video VAE initialised from SD-1.4 (4-ch) / SD-3.5 (16-ch) image VAEs, with cross-modal (text) attention option",
+  "representation": "innermost latent Z2, 4 or 16 channels, T/4 x H/8 x W/8"
+ },
+ "pretraining_data": {
+  "summary": "Panda2M and MMTrailer (public) + a private text-video dataset with over 6M pairs; joint image-video training uses frames from Panda2M and the private set. Initialised from SD-1.4 / SD-3.5 VAEs.",
+  "form": "partly named (Panda2M, MMTrailer) + unnamed private dataset"
+ },
+ "pretraining_data_quote": {
+  "quote_ids": [
+   "data_sets",
+   "data_joint",
+   "data_init"
+  ],
+  "quotes": [
+   {
+    "id": "data_sets",
+    "quote": "We conduct experiments on three datasets: the public Panda2M [ 10 ] and MMTrailer [ 11 ] datasets, and a private text-video dataset with over 6M pairs.",
+    "source_url": "https://arxiv.org/html/2412.17805",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt"
+   },
+   {
+    "id": "data_joint",
+    "quote": "For each training step, we sample 16 videos from Panda2M and our private text-video dataset, concatenating their frames into a single image batch.",
+    "source_url": "https://arxiv.org/html/2412.17805",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt"
+   },
+   {
+    "id": "data_init",
+    "quote": "We initialize our 4-channel and 16-channel latent Video VAEs from SD-1.4 [ 25 ] and SD-3.5 [ 1 ] , respectively.",
+    "source_url": "https://arxiv.org/html/2412.17805",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt"
+   }
+  ]
+ },
+ "medical_video_in_data": {
+  "answer": "NOT MENTIONED",
+  "basis": "private dataset undisclosed; Panda2M/MMTrailer are open-web (YouTube-derived) sets; automated term search below",
+  "term_search": {
+   "pattern": "medical|surgical|surgery|endoscop|laparoscop|clinical|health|hospital",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_README.md": []
+   }
+  }
+ },
+ "appendix300_possible": {
+  "answer": "UNKNOWN",
+  "basis_class": "undisclosed",
+  "basis": "a private 6M-pair text-video dataset is part of the training data (undisclosed), and Panda2M / MMTrailer are YouTube-derived open-ended sets. Timing: 2024-12, before the OPARA issue 2026-04-29.",
+  "quote_ids": [
+   "data_sets"
+  ],
+  "quotes": [
+   {
+    "id": "data_sets",
+    "quote": "We conduct experiments on three datasets: the public Panda2M [ 10 ] and MMTrailer [ 11 ] datasets, and a private text-video dataset with over 6M pairs.",
+    "source_url": "https://arxiv.org/html/2412.17805",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt"
+   }
+  ]
+ },
+ "appendix300_check": {
+  "answer": "UNKNOWN",
+  "quote_or_statement": "the documented data list does not mention DS203/Appendix300",
+  "basis_class": "undisclosed",
+  "basis": "private dataset + open-web sets",
+  "term_search": {
+   "pattern": "appendix ?300|DS203|OPARA|appendectom|appendic",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_README.md": []
+   }
+  },
+  "quote_ids": [
+   "data_sets"
+  ],
+  "quotes": [
+   {
+    "id": "data_sets",
+    "quote": "We conduct experiments on three datasets: the public Panda2M [ 10 ] and MMTrailer [ 11 ] datasets, and a private text-video dataset with over 6M pairs.",
+    "source_url": "https://arxiv.org/html/2412.17805",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt"
+   }
+  ]
+ },
+ "input": {
+  "frame_size": {
+   "value": "evaluation 256x256 (WebVid) and 640x864 (Inter4K); README inference example 720x1280 (training resolution not stated)",
+   "quote_ids": [
+    "in_test",
+    "in_res"
+   ],
+   "quotes": [
+    {
+     "id": "in_test",
+     "quote": "The WebVid test set contains 1,000 256x256, 16-frame videos from the WebVid dataset [ 2 ] . The Inter4K test set consists of 500 640x864, 16-frame videos from the Inter4K dataset [ 26 ] .",
+     "source_url": "https://arxiv.org/html/2412.17805",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt"
+    },
+    {
+     "id": "in_res",
+     "quote": "--resolution 720 1280",
+     "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_README.md"
+    }
+   ]
+  },
+  "frame_rate_or_sampling": {
+   "value": "not documented in the saved sources",
+   "quote_ids": [],
+   "quotes": []
+  },
+  "clip_length_frames": {
+   "value": "evaluation 16-frame clips; inference chunk_size 8 (must be divisible by 4); training clip length not stated",
+   "quote_ids": [
+    "in_test",
+    "in_chunk",
+    "in_chunk_note"
+   ],
+   "quotes": [
+    {
+     "id": "in_test",
+     "quote": "The WebVid test set contains 1,000 256x256, 16-frame videos from the WebVid dataset [ 2 ] . The Inter4K test set consists of 500 640x864, 16-frame videos from the Inter4K dataset [ 26 ] .",
+     "source_url": "https://arxiv.org/html/2412.17805",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt"
+    },
+    {
+     "id": "in_chunk",
+     "quote": "--chunk_size 8",
+     "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_README.md"
+    },
+    {
+     "id": "in_chunk_note",
+     "quote": "Ensure the `chunk_size` is divisible by 4.",
+     "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_README.md"
+    }
+   ]
+  },
+  "temporal_compression": {
+   "value": "4x",
+   "quote_ids": [
+    "in_latent",
+    "in_cr4"
+   ],
+   "quotes": [
+    {
+     "id": "in_latent",
+     "quote": "we only regularize the innermost latent 𝐙 𝟐 \\mathbf{Z_{2}} , with dimensions T 4 × H 8 × W 8 \\frac{T}{4}\\times\\frac{H}{8}\\times\\frac{W}{8}",
+     "source_url": "https://arxiv.org/html/2412.17805",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt"
+    },
+    {
+     "id": "in_cr4",
+     "quote": "Video VAE (Ours) 4x8x8 4 30.3140",
+     "source_url": "https://arxiv.org/html/2412.17805",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt"
+    }
+   ]
+  },
+  "spatial_compression": {
+   "value": "8x8",
+   "quote_ids": [
+    "in_latent",
+    "in_cr4"
+   ],
+   "quotes": [
+    {
+     "id": "in_latent",
+     "quote": "we only regularize the innermost latent 𝐙 𝟐 \\mathbf{Z_{2}} , with dimensions T 4 × H 8 × W 8 \\frac{T}{4}\\times\\frac{H}{8}\\times\\frac{W}{8}",
+     "source_url": "https://arxiv.org/html/2412.17805",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt"
+    },
+    {
+     "id": "in_cr4",
+     "quote": "Video VAE (Ours) 4x8x8 4 30.3140",
+     "source_url": "https://arxiv.org/html/2412.17805",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt"
+    }
+   ]
+  }
+ },
+ "embedding_dim": {
+  "value": "C x T/4 x H/8 x W/8 with C = 4 (sota-4z) or 16 (sota-16z); e.g. 16 x 256 x 256 -> 16 x 4 x 32 x 32 = 65,536 values (16z)",
+  "derivation": "innermost latent dimensions T/4 x H/8 x W/8; channel counts from the README model table",
+  "quote_ids": [
+   "in_latent",
+   "w_readme16",
+   "in_cr4",
+   "in_cr16"
+  ],
+  "quotes": [
+   {
+    "id": "in_latent",
+    "quote": "we only regularize the innermost latent 𝐙 𝟐 \\mathbf{Z_{2}} , with dimensions T 4 × H 8 × W 8 \\frac{T}{4}\\times\\frac{H}{8}\\times\\frac{W}{8}",
+    "source_url": "https://arxiv.org/html/2412.17805",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt"
+   },
+   {
+    "id": "w_readme16",
+    "quote": "| sota-16z | 16 | [Download](https://drive.google.com/file/d/13v2Pq6dG1jo7RNImxNOXr9-WizgMiJ7M/view?usp=sharing) |",
+    "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_README.md"
+   },
+   {
+    "id": "in_cr4",
+    "quote": "Video VAE (Ours) 4x8x8 4 30.3140",
+    "source_url": "https://arxiv.org/html/2412.17805",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt"
+   },
+   {
+    "id": "in_cr16",
+    "quote": "4x8x8 16 31.2545",
+    "source_url": "https://arxiv.org/html/2412.17805",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt"
+   }
+  ]
+ },
+ "params": {
+  "value": "not documented in the saved paper/README",
+  "scope": "n/a",
+  "quote_ids": [],
+  "quotes": []
+ },
+ "flops_per_input_if_documented": null,
+ "flops_note": "no FLOPs statement (searched FLOP)",
+ "eligibility": {
+  "C1_open_weights": {
+   "status": "PASS",
+   "basis": "official README links public Google Drive files; view pages resolve without login and name the .ckpt files (same evidence standard as Google-Drive weights in the primary survey)",
+   "quote_ids": [
+    "w_readme16",
+    "w_view16"
+   ],
+   "quotes": [
+    {
+     "id": "w_readme16",
+     "quote": "| sota-16z | 16 | [Download](https://drive.google.com/file/d/13v2Pq6dG1jo7RNImxNOXr9-WizgMiJ7M/view?usp=sharing) |",
+     "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_README.md"
+    },
+    {
+     "id": "w_view16",
+     "quote": "sota-4-16z.ckpt - Google ドライブ",
+     "source_url": "https://drive.google.com/file/d/13v2Pq6dG1jo7RNImxNOXr9-WizgMiJ7M/view",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_sota-16z_gdrive_view.txt"
+    }
+   ]
+  },
+  "C2_licence_research_use": {
+   "status": "PASS",
+   "basis": "CC BY-NC-ND 4.0 permits non-commercial use (restriction recorded: NC, ND)",
+   "quote_ids": [
+    "lic_readme",
+    "lic_text"
+   ],
+   "quotes": [
+    {
+     "id": "lic_readme",
+     "quote": "Please follow [CC-BY-NC-ND](./LICENSE).",
+     "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_README.md"
+    },
+    {
+     "id": "lic_text",
+     "quote": "Attribution-NonCommercial-NoDerivatives 4.0 International",
+     "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/LICENSE",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_LICENSE.txt"
+    }
+   ]
+  },
+  "C3_domain_secondary": {
+   "status": "PASS",
+   "basis": "video VAE for latent video generation trained on general video",
+   "quote_ids": [
+    "dom_readme"
+   ],
+   "quotes": [
+    {
+     "id": "dom_readme",
+     "quote": "A state-of-the-art **Video Variational Autoencoder (VAE)** designed for high-fidelity video reconstruction.",
+     "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_README.md"
+    }
+   ]
+  },
+  "C4_documented_pretraining_data": {
+   "status": "FAIL",
+   "basis": "two public datasets are named, but part of the video training data is 'a private text-video dataset with over 6M pairs' with no named source, so the video pretraining sources are not fully listed (judged FAIL; borderline, see convention question in the fork report)",
+   "quote_ids": [
+    "data_sets"
+   ],
+   "quotes": [
+    {
+     "id": "data_sets",
+     "quote": "We conduct experiments on three datasets: the public Panda2M [ 10 ] and MMTrailer [ 11 ] datasets, and a private text-video dataset with over 6M pairs.",
+     "source_url": "https://arxiv.org/html/2412.17805",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt"
+    }
+   ]
+  },
+  "eligible": "NO (fails C4: unnamed private dataset in the video training data; borderline)"
+ },
+ "quotes": [
+  {
+   "id": "w_readme16",
+   "quote": "| sota-16z | 16 | [Download](https://drive.google.com/file/d/13v2Pq6dG1jo7RNImxNOXr9-WizgMiJ7M/view?usp=sharing) |",
+   "source_file": "videovaeplus_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+   "raw_sha256": "72ba364b139ba509481137ae686face0df94ecc2689bade8f5cf668f88c06e9e",
+   "copy_sha256": "72ba364b139ba509481137ae686face0df94ecc2689bade8f5cf668f88c06e9e",
+   "retrieved_utc": "2026-10-02T09:34:05+00:00"
+  },
+  {
+   "id": "w_view4",
+   "quote": "sota-4-4z.ckpt - Google ドライブ",
+   "source_file": "videovaeplus_sota-4z_gdrive_view.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_sota-4z_gdrive_view.txt",
+   "source_url": "https://drive.google.com/file/d/1WEKBdRFjEUxwcBgX_thckXklD8s6dDTj/view",
+   "final_url": "https://drive.google.com/file/d/1WEKBdRFjEUxwcBgX_thckXklD8s6dDTj/view",
+   "raw_sha256": "236bdb7bcf3c89d4af374b4ae25f4d51b607d980960bfa616d584ac5655f451b",
+   "copy_sha256": "2c96e6189313e32ad6b3d55184fe19e9792db9295120cfbdc0a6224964da08d2",
+   "retrieved_utc": "2026-10-02T09:34:35+00:00"
+  },
+  {
+   "id": "w_view16",
+   "quote": "sota-4-16z.ckpt - Google ドライブ",
+   "source_file": "videovaeplus_sota-16z_gdrive_view.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_sota-16z_gdrive_view.txt",
+   "source_url": "https://drive.google.com/file/d/13v2Pq6dG1jo7RNImxNOXr9-WizgMiJ7M/view",
+   "final_url": "https://drive.google.com/file/d/13v2Pq6dG1jo7RNImxNOXr9-WizgMiJ7M/view",
+   "raw_sha256": "a80148847644993188aaeea0a760bfedeedd6defae3c1b8ad2d56991c877f631",
+   "copy_sha256": "410236d3fa1c69d6cce2a1042dc1af1d28aae2d720ee9835b1f900063134290a",
+   "retrieved_utc": "2026-10-02T09:34:36+00:00"
+  },
+  {
+   "id": "w_view4t",
+   "quote": "sota-4-4z-text-new.ckpt",
+   "source_file": "videovaeplus_sota-4z-text_gdrive_view.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_sota-4z-text_gdrive_view.txt",
+   "source_url": "https://drive.google.com/file/d/1QfqrKIWu5zG10U-xRgeF8Dhp__njC8OH/view",
+   "final_url": "https://drive.google.com/file/d/1QfqrKIWu5zG10U-xRgeF8Dhp__njC8OH/view",
+   "raw_sha256": "0ecb49b42bc15585593d520f0f5195bc12ef093e56cedf9324350bd860fdb169",
+   "copy_sha256": "d05036d93f2d9b9b0dca1dc4239b3a21ca3abd28ec789dc3a439acb9781613ce",
+   "retrieved_utc": "2026-10-02T09:43:47+00:00"
+  },
+  {
+   "id": "w_view16t",
+   "quote": "sota-4-16z-text.ckpt",
+   "source_file": "videovaeplus_sota-16z-text_gdrive_view.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_sota-16z-text_gdrive_view.txt",
+   "source_url": "https://drive.google.com/file/d/1iYCAtmdaOX0V41p0vbt_6g8kRS1EK56p/view",
+   "final_url": "https://drive.google.com/file/d/1iYCAtmdaOX0V41p0vbt_6g8kRS1EK56p/view",
+   "raw_sha256": "f78ca8dfee4b328a15574212023e53b633ba93c8fc3c99306b75fa78d678235d",
+   "copy_sha256": "f0e5fdf3e78204395cb860cdf52b1812dc4ffbcf890879757fb193f70cbf40db",
+   "retrieved_utc": "2026-10-02T09:43:48+00:00"
+  },
+  {
+   "id": "lic_readme",
+   "quote": "Please follow [CC-BY-NC-ND](./LICENSE).",
+   "source_file": "videovaeplus_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+   "raw_sha256": "72ba364b139ba509481137ae686face0df94ecc2689bade8f5cf668f88c06e9e",
+   "copy_sha256": "72ba364b139ba509481137ae686face0df94ecc2689bade8f5cf668f88c06e9e",
+   "retrieved_utc": "2026-10-02T09:34:05+00:00"
+  },
+  {
+   "id": "lic_text",
+   "quote": "Attribution-NonCommercial-NoDerivatives 4.0 International",
+   "source_file": "videovaeplus_github_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_LICENSE.txt",
+   "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/LICENSE",
+   "final_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/LICENSE",
+   "raw_sha256": "0bb835f5ed7272947a23d92d0e74bbdadcbf0beb9235c0735c32d1310a4bceda",
+   "copy_sha256": "0bb835f5ed7272947a23d92d0e74bbdadcbf0beb9235c0735c32d1310a4bceda",
+   "retrieved_utc": "2026-10-02T09:36:35+00:00"
+  },
+  {
+   "id": "dom_readme",
+   "quote": "A state-of-the-art **Video Variational Autoencoder (VAE)** designed for high-fidelity video reconstruction.",
+   "source_file": "videovaeplus_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+   "raw_sha256": "72ba364b139ba509481137ae686face0df94ecc2689bade8f5cf668f88c06e9e",
+   "copy_sha256": "72ba364b139ba509481137ae686face0df94ecc2689bade8f5cf668f88c06e9e",
+   "retrieved_utc": "2026-10-02T09:34:05+00:00"
+  },
+  {
+   "id": "data_sets",
+   "quote": "We conduct experiments on three datasets: the public Panda2M [ 10 ] and MMTrailer [ 11 ] datasets, and a private text-video dataset with over 6M pairs.",
+   "source_file": "videovaeplus_arxiv_2412.17805_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2412.17805",
+   "final_url": "https://arxiv.org/html/2412.17805",
+   "raw_sha256": "e28fdaad260fa397409cce4c704fb5138d00ba6616f9dfe052ff9941f568af96",
+   "copy_sha256": "a46a7b6d4bf5e6cd358d8f688262749c3232b7ff7bc45c1fa8ab8ee00a17767a",
+   "retrieved_utc": "2026-10-02T09:34:50+00:00"
+  },
+  {
+   "id": "data_joint",
+   "quote": "For each training step, we sample 16 videos from Panda2M and our private text-video dataset, concatenating their frames into a single image batch.",
+   "source_file": "videovaeplus_arxiv_2412.17805_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2412.17805",
+   "final_url": "https://arxiv.org/html/2412.17805",
+   "raw_sha256": "e28fdaad260fa397409cce4c704fb5138d00ba6616f9dfe052ff9941f568af96",
+   "copy_sha256": "a46a7b6d4bf5e6cd358d8f688262749c3232b7ff7bc45c1fa8ab8ee00a17767a",
+   "retrieved_utc": "2026-10-02T09:34:50+00:00"
+  },
+  {
+   "id": "data_init",
+   "quote": "We initialize our 4-channel and 16-channel latent Video VAEs from SD-1.4 [ 25 ] and SD-3.5 [ 1 ] , respectively.",
+   "source_file": "videovaeplus_arxiv_2412.17805_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2412.17805",
+   "final_url": "https://arxiv.org/html/2412.17805",
+   "raw_sha256": "e28fdaad260fa397409cce4c704fb5138d00ba6616f9dfe052ff9941f568af96",
+   "copy_sha256": "a46a7b6d4bf5e6cd358d8f688262749c3232b7ff7bc45c1fa8ab8ee00a17767a",
+   "retrieved_utc": "2026-10-02T09:34:50+00:00"
+  },
+  {
+   "id": "in_test",
+   "quote": "The WebVid test set contains 1,000 256x256, 16-frame videos from the WebVid dataset [ 2 ] . The Inter4K test set consists of 500 640x864, 16-frame videos from the Inter4K dataset [ 26 ] .",
+   "source_file": "videovaeplus_arxiv_2412.17805_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2412.17805",
+   "final_url": "https://arxiv.org/html/2412.17805",
+   "raw_sha256": "e28fdaad260fa397409cce4c704fb5138d00ba6616f9dfe052ff9941f568af96",
+   "copy_sha256": "a46a7b6d4bf5e6cd358d8f688262749c3232b7ff7bc45c1fa8ab8ee00a17767a",
+   "retrieved_utc": "2026-10-02T09:34:50+00:00"
+  },
+  {
+   "id": "in_res",
+   "quote": "--resolution 720 1280",
+   "source_file": "videovaeplus_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+   "raw_sha256": "72ba364b139ba509481137ae686face0df94ecc2689bade8f5cf668f88c06e9e",
+   "copy_sha256": "72ba364b139ba509481137ae686face0df94ecc2689bade8f5cf668f88c06e9e",
+   "retrieved_utc": "2026-10-02T09:34:05+00:00"
+  },
+  {
+   "id": "in_chunk",
+   "quote": "--chunk_size 8",
+   "source_file": "videovaeplus_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+   "raw_sha256": "72ba364b139ba509481137ae686face0df94ecc2689bade8f5cf668f88c06e9e",
+   "copy_sha256": "72ba364b139ba509481137ae686face0df94ecc2689bade8f5cf668f88c06e9e",
+   "retrieved_utc": "2026-10-02T09:34:05+00:00"
+  },
+  {
+   "id": "in_chunk_note",
+   "quote": "Ensure the `chunk_size` is divisible by 4.",
+   "source_file": "videovaeplus_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/VideoVerses/VideoVAEPlus/main/README.md",
+   "raw_sha256": "72ba364b139ba509481137ae686face0df94ecc2689bade8f5cf668f88c06e9e",
+   "copy_sha256": "72ba364b139ba509481137ae686face0df94ecc2689bade8f5cf668f88c06e9e",
+   "retrieved_utc": "2026-10-02T09:34:05+00:00"
+  },
+  {
+   "id": "in_latent",
+   "quote": "we only regularize the innermost latent 𝐙 𝟐 \\mathbf{Z_{2}} , with dimensions T 4 × H 8 × W 8 \\frac{T}{4}\\times\\frac{H}{8}\\times\\frac{W}{8}",
+   "source_file": "videovaeplus_arxiv_2412.17805_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2412.17805",
+   "final_url": "https://arxiv.org/html/2412.17805",
+   "raw_sha256": "e28fdaad260fa397409cce4c704fb5138d00ba6616f9dfe052ff9941f568af96",
+   "copy_sha256": "a46a7b6d4bf5e6cd358d8f688262749c3232b7ff7bc45c1fa8ab8ee00a17767a",
+   "retrieved_utc": "2026-10-02T09:34:50+00:00"
+  },
+  {
+   "id": "in_cr4",
+   "quote": "Video VAE (Ours) 4x8x8 4 30.3140",
+   "source_file": "videovaeplus_arxiv_2412.17805_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2412.17805",
+   "final_url": "https://arxiv.org/html/2412.17805",
+   "raw_sha256": "e28fdaad260fa397409cce4c704fb5138d00ba6616f9dfe052ff9941f568af96",
+   "copy_sha256": "a46a7b6d4bf5e6cd358d8f688262749c3232b7ff7bc45c1fa8ab8ee00a17767a",
+   "retrieved_utc": "2026-10-02T09:34:50+00:00"
+  },
+  {
+   "id": "in_cr16",
+   "quote": "4x8x8 16 31.2545",
+   "source_file": "videovaeplus_arxiv_2412.17805_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videovaeplus_arxiv_2412.17805_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2412.17805",
+   "final_url": "https://arxiv.org/html/2412.17805",
+   "raw_sha256": "e28fdaad260fa397409cce4c704fb5138d00ba6616f9dfe052ff9941f568af96",
+   "copy_sha256": "a46a7b6d4bf5e6cd358d8f688262749c3232b7ff7bc45c1fa8ab8ee00a17767a",
+   "retrieved_utc": "2026-10-02T09:34:50+00:00"
+  }
+ ],
+ "all_quotes_verified": true,
+ "record_written_utc": "2026-10-02T09:46:01+00:00"
+}

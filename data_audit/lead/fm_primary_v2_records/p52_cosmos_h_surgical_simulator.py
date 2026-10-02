@@ -1,0 +1,86 @@
+"""Cosmos-H-Surgical-Simulator (action-conditioned surgical world model, Cosmos-Predict2.5-2B fine-tuned on Open-H)."""
+from ._common import A300, C, NOFLOPS, Q, elig
+
+REC = {
+    "name": "Cosmos-H-Surgical-Simulator (kinematics-action-conditioned surgical world model; Cosmos-Predict2.5-2B fine-tuned on Open-H)",
+    "aliases": ["Open-H 44D action-conditioned checkpoint"],
+    "group": "surgical video world / generative model",
+    "paper": {
+        "title": "no dedicated paper; model card + GitHub README (base: World Simulation with Video Foundation Models for Physical AI, arXiv 2511.00062)",
+        "year": 2026, "venue": "model release (GitHub 2026-03-13, HF 2026-03-15; updated checkpoint April 2026)", "arxiv": None,
+        "quotes": [Q("- **GitHub:** 3/13/2026 via https://github.com/NVIDIA-Medtech/Cosmos-H-Surgical-Simulator", "cosmoshsurgsim_hf_readme")],
+    },
+    "version": {
+        "value": "v1.0; checkpoint checkpoints/iter_000012000-v2/model_ema_bf16.pt (April 2026 post-fix '12k-v2'); HF sha 32be28bac3d47aff3ab7fc1ff2f021c8b31a2ef3",
+        "basis": "model card 'Model Version(s)' + Updates; HF API listing",
+        "quotes": [Q("**v1.0 (Finetuned on the Open-H Embodiment dataset, which includes clinical procedures data such as cholecystectomy, prostatectomy, inguinal hernia, and hysterectomy)**", "cosmoshsurgsim_hf_readme"),
+                   Q("| **Current (12k-v2, post-fix)**  | **0.184** | **0.472** | **67.03** |", "cosmoshsurgsim_hf_readme"),
+                   Q('"sha":"32be28bac3d47aff3ab7fc1ff2f021c8b31a2ef3"', "cosmoshsurgsim_hf_api")],
+    },
+    "weights_location": {
+        "url": "https://huggingface.co/nvidia/Cosmos-H-Surgical-Simulator/blob/main/checkpoints/iter_000012000-v2/model_ema_bf16.pt",
+        "exists": "YES - HF API lists checkpoints/iter_000012000-v2/model_ema_bf16.pt (4,258,611,590 B); gated=false (nothing downloaded)",
+        "access": "public, not gated",
+        "verification": "HF API listing ?blobs=true, 2026-10-02",
+        "quotes": [Q('"rfilename":"checkpoints/iter_000012000-v2/model_ema_bf16.pt","blobId":"74a1a4681d04ae2cac31c5c46f998632d9d8a01d","size":4258611590', "cosmoshsurgsim_hf_api"),
+                   Q('"gated":false', "cosmoshsurgsim_hf_api")],
+    },
+    "licence": {
+        "code": "Apache-2.0 (GitHub README licence table)",
+        "weights": "NVIDIA Open Model License Agreement (commercial use allowed; research covered)",
+        "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/ ; https://huggingface.co/nvidia/Cosmos-H-Surgical-Simulator/blob/main/LICENSE",
+        "code_and_weights_differ": "yes - code Apache-2.0, weights NVIDIA Open Model License",
+        "quotes": [Q("Use of this model is governed by the [NVIDIA Open Model License Agreement](https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/).", "cosmoshsurgsim_hf_readme"),
+                   Q("| Source code | [Apache 2.0](LICENSE) |", "cosmoshsurgsim_github_readme"),
+                   Q("NVIDIA hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, revocable (as stated in Section 2.1) license to publicly perform, publicly display, reproduce, use, create derivative works of, make, have made, sell, offer for sale, distribute (through multiple tiers of distribution) and import the Model.", "cosmoshsurgsim_hf_license")],
+    },
+    "domain": {
+        "value": "surgical robotics video (endoscopic views of clinical CMR Versius procedures, in vivo/ex vivo porcine and phantom tasks); action-conditioned video generation fine-tuned from general-domain Cosmos-Predict2.5-2B",
+        "quotes": [Q("Cosmos-H-Surgical-Simulator is a kinematic action-conditioned surgical world foundation model, built on the public NVIDIA [Cosmos-Predict2.5-2B](https://huggingface.co/nvidia/Cosmos-Predict2.5-2B) for physical AI and fine-tuned on the Open-H multi-embodiment surgical benchmark.", "cosmoshsurgsim_hf_readme"),
+                   Q("It covers CMR Surgical Versius clinical procedures (cholecystectomy, prostatectomy, inguinal hernia, hysterectomy) as well as dVRK, MITIC, and other surgical platforms across tasks such as suturing, tissue manipulation, and peg transfer.", "cosmoshsurgsim_hf_readme")],
+    },
+    "pretraining_data_quote": {
+        "summary": "Open-H Embodiment (32 datasets, 9 embodiments): CMR Versius clinical cholecystectomy/hysterectomy/inguinal hernia/prostatectomy (~17M frames, 50%), dVRK JHU, Stanford, Hamlyn, Turin MITIC, UCSD, UCB, USTC Torin, LSCR ARCADE, Moon Surgical. Base Cosmos-Predict2.5-2B (general domain).",
+        "datasets": ["CMR Versius clinical procedures (cholecystectomy, hysterectomy, inguinal hernia, prostatectomy)", "dVRK JHU (porcine chole, electrocautery, suturebot, tissue, needle, suturing)",
+                     "Stanford Real", "Hamlyn Centre", "Turin MITIC ex vivo", "UCSD", "UCB debridement", "USTC Torin", "LSCR ARCADE", "Moon Surgical", "Base: Cosmos-Predict2.5-2B"],
+        "quotes": [Q("Training uses **32 datasets across 9 embodiments** from the [Open-H](https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment) collection", "cosmoshsurgsim_github_readme"),
+                   Q("| CMR Versius | cholecystectomy, hysterectomy, inguinal hernia, prostatectomy | ~17M | 50% |", "cosmoshsurgsim_github_readme"),
+                   Q("| dVRK JHU | porcine chole, electrocautery, suturebot (x3), tissue, needle, suturing | ~2.8M | 25% |", "cosmoshsurgsim_github_readme"),
+                   Q("| LSCR ARCADE | Cholecystectomy, cautery | ~183K | 1.7% |", "cosmoshsurgsim_github_readme"),
+                   Q("| Moon Surgical | moon | ~12K | 0.1% |", "cosmoshsurgsim_github_readme")],
+    },
+    "appendix300_check": A300(
+        "UNKNOWN",
+        "Open-H contributors include 'TUD' (TUNDRA = TUD & NCT Dresden Robot Assistant: in vivo porcine laparoscopy, collected 2025-11-06 to 2025-12-04), but the Simulator's documented training mixture does not list TUD; the documented data list does not mention DS203/Appendix300.",
+        False,
+        "The documented training mixture is a closed list of Open-H groups with no appendectomy; CMR Versius clinical recordings come from unnamed hospitals but cover only cholecystectomy, hysterectomy, inguinal hernia and prostatectomy. "
+        "Not excludable: the base Cosmos-Predict2.5-2B general-domain pretraining video (web-scale/proprietary, not enumerated). The Open-H TUD (Dresden) subset is porcine in vivo robot-assistant data, not human appendectomy, and is not in the listed mixture.",
+        [Q("Balgrist, CMR, CUHK, GBU (China), HKBU, Hamlyn, ImFusion, JHU, Leeds, MBZUAI (UAE), Moon Surgical, NVIDIA, Northwell, Obuda, PolyU (HK), Qilu Hospital of Shandong University, Rob Surgical, Sanoscience, SDSC, Semaphor, Stanford, TUD, TUM", "openh_hf_dataset_readme"),
+         Q("TUNDRA (**TU**D & **N**CT **D**resden **R**obot **A**ssistant) Dataset", "openh_tud_endoguid_readme"),
+         Q("perform surgical assistance tasks (grasping, retraction and endoscope guidance) during laparoscopic surgeries on *in vivo* porcine models.", "openh_tud_endoguid_readme"),
+         Q("| **Collection Period** | From `2025-11-06` to `2025-12-04` |", "openh_tud_endoguid_readme")]),
+    "input": {
+        "frame_size": "512x288 (W x H; 16:9 recommended, frames auto-resized)",
+        "frame_rate_or_sampling": "per-embodiment control rate (e.g. hamlyn_30hz); not stated globally",
+        "clip_length_frames": "13 frames per training sample (1 context + 12 predicted); 12 action steps of 44-D vectors per chunk; autoregressive rollout",
+        "notes": "Inputs: one RGB context frame + sequence of 12 44-D kinematic action vectors.",
+        "quotes": [Q("The model operates at 512x288 resolution.", "cosmoshsurgsim_hf_readme"),
+                   Q("512x288 resolution, 13 video frames (1 context + 12 prediction), 12 action timesteps per sample.", "cosmoshsurgsim_github_readme"),
+                   Q("The model accepts a 44-dimensional action vector (22 dimensions per arm) alongside the current video frame, and predicts the subsequent 12 frames.", "cosmoshsurgsim_hf_readme")],
+    },
+    "embedding_dim": {
+        "value": "Base Cosmos-Predict2.5-2B latent: Wan2.1 tokenizer 16 channels at 8x spatial / 4x temporal compression; DiT hidden width 2048",
+        "basis": "base-model architecture as stated in NVIDIA's Cosmos-H-Dreams card (which extends the same base and is warm-started from this Simulator); not stated in the Simulator card",
+        "quotes": [Q("Cosmos-Predict2.5-2B-Video2World, a 2B-parameter diffusion transformer for video generation in latent space (Wan2.1 video tokenizer, spatial compression 8×, temporal compression 4×, 16 latent channels; hidden width 2048, 28 blocks, 16 heads", "cosmoshdreams_hf_readme")],
+    },
+    "params": {"value": "~2B (Cosmos-Predict2.5-2B base + action MLP); checkpoint file 4.26 GB bf16",
+               "quotes": [Q("--experiment cosmos_predict2p5_2B_action_conditioned_open_h-fixed_13frame_8nodes_release_oss", "cosmoshsurgsim_github_readme"),
+                          Q('"size":4258611590', "cosmoshsurgsim_hf_api")]},
+    "flops_per_input_if_documented": NOFLOPS("'FLOP', 'latency' in HF card and GitHub README"),
+    "eligibility": elig(
+        C("PASS", "HF API lists the 12k-v2 checkpoint; gated=false."),
+        C("PASS", "NVIDIA Open Model License grants use, reproduction and derivative works (commercial allowed); code Apache-2.0."),
+        C("PASS", "Fine-tuned on Open-H surgical robotics video (clinical Versius procedures + porcine/phantom robot tasks) from general-domain Cosmos-Predict2.5-2B."),
+        C("PASS", "GitHub README names the 32-dataset Open-H mixture by group/institution with frame counts and shares. Caveat: base Cosmos-Predict2.5 data not enumerated."),
+        "Action-conditioned world model; requires kinematic actions as input - unsuitable for unconditioned video embedding without actions."),
+}

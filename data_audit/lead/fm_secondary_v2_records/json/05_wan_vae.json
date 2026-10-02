@@ -1,0 +1,1073 @@
+{
+ "id": "05_wan_vae",
+ "name": "Wan-VAE (Wan2.1_VAE.pth, 4x8x8) and Wan2.2-VAE (Wan2.2_VAE.pth, 4x16x16)",
+ "version": "Wan2.1_VAE.pth in Wan-AI/Wan2.1-T2V-1.3B (HF repo sha 37ec512624d61f7aa208f7ea8140a131f93afc9a, created 2025-02-25) and Wan2.2_VAE.pth in Wan-AI/Wan2.2-TI2V-5B (HF repo sha 921dbaf3f1674a56f47e83fb80a34bac8a8f203e, created 2025-07-18); loader code: Wan-Video/Wan2.1 wan/modules/vae.py (WanVAE) and Wan-Video/Wan2.2 wan/modules/vae2_2.py (Wan2_2_VAE), main branch 2026-10-02",
+ "paper": {
+  "title": "Wan: Open and Advanced Large-Scale Video Generative Models",
+  "year": 2025,
+  "arxiv": "2503.20314",
+  "note": "Wan2.2-VAE is documented only in the Wan2.2 model card (no separate paper found in this audit)"
+ },
+ "weights_location": {
+  "urls": [
+   "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B (Wan2.1_VAE.pth)",
+   "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B (Wan2.2_VAE.pth)"
+  ],
+  "files_listed": {
+   "Wan2.1_VAE.pth": 507609880,
+   "Wan2.2_VAE.pth": 2818839170
+  },
+  "gated": false,
+  "private": false,
+  "verified_how": "HF API model listings (metadata only) saved as wan_Wan-AI__Wan2.1-T2V-1.3B_hfapi.json and wan_Wan-AI__Wan2.2-TI2V-5B_hfapi.json; nothing downloaded",
+  "quote_ids": [
+   "w_file21",
+   "w_gated21",
+   "w_file22",
+   "w_gated22"
+  ],
+  "quotes": [
+   {
+    "id": "w_file21",
+    "quote": "\"rfilename\": \"Wan2.1_VAE.pth\",",
+    "source_url": "https://huggingface.co/api/models/Wan-AI/Wan2.1-T2V-1.3B?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan-AI__Wan2.1-T2V-1.3B_hfapi.json"
+   },
+   {
+    "id": "w_gated21",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/Wan-AI/Wan2.1-T2V-1.3B?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan-AI__Wan2.1-T2V-1.3B_hfapi.json"
+   },
+   {
+    "id": "w_file22",
+    "quote": "\"rfilename\": \"Wan2.2_VAE.pth\",",
+    "source_url": "https://huggingface.co/api/models/Wan-AI/Wan2.2-TI2V-5B?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan-AI__Wan2.2-TI2V-5B_hfapi.json"
+   },
+   {
+    "id": "w_gated22",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/Wan-AI/Wan2.2-TI2V-5B?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan-AI__Wan2.2-TI2V-5B_hfapi.json"
+   }
+  ]
+ },
+ "licence": {
+  "id": "Apache-2.0",
+  "url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/blob/main/LICENSE.txt ; https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B (card) ; https://github.com/Wan-Video/Wan2.2/blob/main/LICENSE.txt",
+  "commercial": "permitted",
+  "non_commercial_only": false,
+  "restrictions": "card adds a usage statement (no sharing unlawful/harmful/misinformation content); no gating",
+  "gating": "none",
+  "quote_ids": [
+   "lic_card21",
+   "lic_text",
+   "lic_card22",
+   "lic_text22"
+  ],
+  "quotes": [
+   {
+    "id": "lic_card21",
+    "quote": "The models in this repository are licensed under the Apache 2.0 License.",
+    "source_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.1-T2V-1.3B_README.md"
+   },
+   {
+    "id": "lic_text",
+    "quote": "Apache License",
+    "source_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/LICENSE.txt",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.1-T2V-1.3B_LICENSE.txt"
+   },
+   {
+    "id": "lic_card22",
+    "quote": "The models in this repository are licensed under the Apache 2.0 License.",
+    "source_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.2-TI2V-5B_README.md"
+   },
+   {
+    "id": "lic_text22",
+    "quote": "Apache License Version 2.0, January 2004",
+    "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/LICENSE.txt",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.2_main_LICENSE.txt"
+   }
+  ]
+ },
+ "domain": {
+  "value": "3D causal video VAEs of the Wan2.1 / Wan2.2 text/image-to-video diffusion models; Wan2.1-VAE inflated from a 2D image VAE and trained on videos from a general-domain curated pool (internal copyrighted + publicly accessible sources)",
+  "quote_ids": [
+   "arch_448",
+   "arch_train",
+   "data_src"
+  ],
+  "quotes": [
+   {
+    "id": "arch_448",
+    "quote": "Wan -VAE can compress the spatio-temporal dimension of a video by 4 × 8 × 8 4\\times 8\\times 8 times.",
+    "source_url": "https://arxiv.org/html/2503.20314",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+   },
+   {
+    "id": "arch_train",
+    "quote": "First, we construct a 2D image VAE with the same structure and train it on image data. Then, we inflate the well-trained 2D image VAE into a 3D causal Wan -VAE to provide an initial spatial compression prior, which drastically improves the training speed compared to training a video VAE from scratch. At this stage, Wan -VAE is trained on the low-resolution (128 × \\times 128) and small frame number (5-frame) videos to accelerate convergence speed.",
+    "source_url": "https://arxiv.org/html/2503.20314",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+   },
+   {
+    "id": "data_src",
+    "quote": "3.1 Pre-training Data We curated and deduplicated a candidate dataset sourced from both internal copyrighted sources and publicly accessible data.",
+    "source_url": "https://arxiv.org/html/2503.20314",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+   }
+  ]
+ },
+ "architecture": {
+  "type": "3D causal VAE (inflated from a 2D image VAE), feature-cache chunked causal encoding of arbitrary-length video",
+  "representation": "VAE encoder latents: Wan2.1 latent dim 16 at 4x8x8 compression; Wan2.2-VAE 4x16x16 (latent dim not quoted from saved sources)"
+ },
+ "pretraining_data": {
+  "summary": "Candidate dataset 'sourced from both internal copyrighted sources and publicly accessible data', billions of images and videos, curated by a four-step cleaning pipeline; VAE: 2D image VAE on image data, then 128x128 5-frame videos, then high-quality videos. Wan2.2: +65.6% images, +83.2% videos vs Wan2.1. No datasets named.",
+  "form": "described only"
+ },
+ "pretraining_data_quote": {
+  "quote_ids": [
+   "data_src",
+   "data_billions",
+   "arch_train",
+   "vae_ft",
+   "data_22"
+  ],
+  "quotes": [
+   {
+    "id": "data_src",
+    "quote": "3.1 Pre-training Data We curated and deduplicated a candidate dataset sourced from both internal copyrighted sources and publicly accessible data.",
+    "source_url": "https://arxiv.org/html/2503.20314",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+   },
+   {
+    "id": "data_billions",
+    "quote": "Following these principles, we curated a dataset comprising billions of videos and images.",
+    "source_url": "https://arxiv.org/html/2503.20314",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+   },
+   {
+    "id": "arch_train",
+    "quote": "First, we construct a 2D image VAE with the same structure and train it on image data. Then, we inflate the well-trained 2D image VAE into a 3D causal Wan -VAE to provide an initial spatial compression prior, which drastically improves the training speed compared to training a video VAE from scratch. At this stage, Wan -VAE is trained on the low-resolution (128 × \\times 128) and small frame number (5-frame) videos to accelerate convergence speed.",
+    "source_url": "https://arxiv.org/html/2503.20314",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+   },
+   {
+    "id": "vae_ft",
+    "quote": "Finally, we fine-tune the model on high-quality videos with different resolutions and frame numbers, integrating the GAN loss ( Esser et al., 2021 ) from a 3D discriminator.",
+    "source_url": "https://arxiv.org/html/2503.20314",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+   },
+   {
+    "id": "data_22",
+    "quote": "Compared to Wan2.1, Wan2.2 is trained on a significantly larger data, with +65.6% more images and +83.2% more videos.",
+    "source_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.2-TI2V-5B_README.md"
+   }
+  ]
+ },
+ "medical_video_in_data": {
+  "answer": "NOT MENTIONED",
+  "basis": "Search of saved paper HTML for medic|surg|endoscop|laparoscop|clinic|hospital|health: hits only 'healthy nodes', a reference title, and the limitations sentence that performance 'in specific localized scenarios, such as education and medicine, may be insufficient' (no data statement).",
+  "quote_ids": [
+   "lim_medicine"
+  ],
+  "term_search": {
+   "pattern": "medical|surgical|surgery|endoscop|laparoscop|clinical|health|hospital",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt": [
+     " ensured. Hardware issues are identified during the job startup phase, ensuring that only healthy nodes are allocated to training tasks. Throughout training, any faulty nodes are promptl",
+     " Olaf Ronneberger, Philipp Fischer, and Thomas Brox. U-net: Convolutional networks for biomedical image segmentation. In Medical image computing and computer-assisted intervention–MICCAI ",
+     "her, and Thomas Brox. U-net: Convolutional networks for biomedical image segmentation. In Medical image computing and computer-assisted intervention–MICCAI 2015: 18th international confer"
+    ],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.1-T2V-1.3B_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.2-TI2V-5B_README.md": []
+   }
+  },
+  "quotes": [
+   {
+    "id": "lim_medicine",
+    "quote": "As a foundational video model, we are committed to enhancing Wan ’s general capabilities, yet performance in specific localized scenarios, such as education and medicine, may be insufficient.",
+    "source_url": "https://arxiv.org/html/2503.20314",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+   }
+  ]
+ },
+ "appendix300_possible": {
+  "answer": "UNKNOWN",
+  "basis_class": "undisclosed",
+  "basis": "internal copyrighted + publicly accessible sources not itemised. Context: Wan2.1 2025-02/03, Wan2.2 2025-07, both before the OPARA issue 2026-04-29.",
+  "quote_ids": [
+   "data_src"
+  ],
+  "quotes": [
+   {
+    "id": "data_src",
+    "quote": "3.1 Pre-training Data We curated and deduplicated a candidate dataset sourced from both internal copyrighted sources and publicly accessible data.",
+    "source_url": "https://arxiv.org/html/2503.20314",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+   }
+  ]
+ },
+ "appendix300_check": {
+  "answer": "UNKNOWN",
+  "quote_or_statement": "the documented data list does not mention DS203/Appendix300",
+  "basis_class": "undisclosed",
+  "basis": "pretraining data 'sourced from both internal copyrighted sources and publicly accessible data', not itemised; the documentation does not allow the Appendix300 source recordings to be excluded. Timing: Wan2.1 2025-02/03, Wan2.2 2025-07, both before the OPARA issue 2026-04-29.",
+  "term_search": {
+   "pattern": "appendix ?300|DS203|OPARA|appendectom|appendic",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.1-T2V-1.3B_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.2-TI2V-5B_README.md": []
+   }
+  },
+  "quote_ids": [
+   "data_src"
+  ],
+  "quotes": [
+   {
+    "id": "data_src",
+    "quote": "3.1 Pre-training Data We curated and deduplicated a candidate dataset sourced from both internal copyrighted sources and publicly accessible data.",
+    "source_url": "https://arxiv.org/html/2503.20314",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+   }
+  ]
+ },
+ "input": {
+  "frame_size": {
+   "value": "Wan2.1-VAE: trained first at 128x128 (5-frame), then fine-tuned on high-quality videos of different resolutions; card: encodes/decodes 1080P video of any length; Wan2.1-T2V-1.3B recommended 480P (832x480). Wan2.2-VAE: used at 720P (1280x704) in TI2V-5B",
+   "quote_ids": [
+    "arch_train",
+    "vae_ft",
+    "in_1080p",
+    "arch_res21",
+    "in_size21",
+    "in_size22"
+   ],
+   "quotes": [
+    {
+     "id": "arch_train",
+     "quote": "First, we construct a 2D image VAE with the same structure and train it on image data. Then, we inflate the well-trained 2D image VAE into a 3D causal Wan -VAE to provide an initial spatial compression prior, which drastically improves the training speed compared to training a video VAE from scratch. At this stage, Wan -VAE is trained on the low-resolution (128 × \\times 128) and small frame number (5-frame) videos to accelerate convergence speed.",
+     "source_url": "https://arxiv.org/html/2503.20314",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+    },
+    {
+     "id": "vae_ft",
+     "quote": "Finally, we fine-tune the model on high-quality videos with different resolutions and frame numbers, integrating the GAN loss ( Esser et al., 2021 ) from a 3D discriminator.",
+     "source_url": "https://arxiv.org/html/2503.20314",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+    },
+    {
+     "id": "in_1080p",
+     "quote": "encoding and decoding 1080P videos of any length while preserving temporal information",
+     "source_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.1-T2V-1.3B_README.md"
+    },
+    {
+     "id": "arch_res21",
+     "quote": "For optimal performance, we recommend using 480P resolution",
+     "source_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.1-T2V-1.3B_README.md"
+    },
+    {
+     "id": "in_size21",
+     "quote": "python generate.py --task t2v-1.3B --size 832*480 --ckpt_dir ./Wan2.1-T2V-1.3B",
+     "source_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.1-T2V-1.3B_README.md"
+    },
+    {
+     "id": "in_size22",
+     "quote": "python generate.py --task ti2v-5B --size 1280*704 --ckpt_dir ./Wan2.2-TI2V-5B",
+     "source_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.2-TI2V-5B_README.md"
+    }
+   ]
+  },
+  "frame_rate_or_sampling": {
+   "value": "VAE fps not documented; Wan2.1 DiT stage-1 video clips at 16 fps and default sample_fps = 16; Wan2.2 TI2V-5B: 720P at 24 fps (sample_fps = 24)",
+   "quote_ids": [
+    "in_fps_train21",
+    "in_fps21",
+    "in_fps22_card",
+    "in_fps22"
+   ],
+   "quotes": [
+    {
+     "id": "in_fps_train21",
+     "quote": "5-second video clips ( 192 ​ p ​ x 192\\penalty\\ px resolution, 16 16 fps)",
+     "source_url": "https://arxiv.org/html/2503.20314",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+    },
+    {
+     "id": "in_fps21",
+     "quote": "wan_shared_cfg.sample_fps = 16",
+     "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.1/main/wan/configs/shared_config.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.1_main_shared_config.py.txt"
+    },
+    {
+     "id": "in_fps22_card",
+     "quote": "This model supports both text-to-video and image-to-video generation at 720P resolution with 24fps",
+     "source_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.2-TI2V-5B_README.md"
+    },
+    {
+     "id": "in_fps22",
+     "quote": "ti2v_5B.sample_fps = 24",
+     "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/wan/configs/wan_ti2v_5B.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.2_main_wan_ti2v_5B.py.txt"
+    }
+   ]
+  },
+  "clip_length_frames": {
+   "value": "causal 1+T frames, encoded chunk-wise (at most 4 frames per chunk), any length; default generation 81 frames (Wan2.1) / 121 frames (Wan2.2 TI2V-5B)",
+   "quote_ids": [
+    "in_shape21",
+    "in_chunk",
+    "in_frames21",
+    "in_frames22"
+   ],
+   "quotes": [
+    {
+     "id": "in_shape21",
+     "quote": "Wan -VAE compresses its spatio-temporal dimensions to [ 1 + T / 4 , H / 8 , W / 8 ] [1+T/4,H/8,W/8] while expanding the number of channels C C to 16.",
+     "source_url": "https://arxiv.org/html/2503.20314",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+    },
+    {
+     "id": "in_chunk",
+     "quote": "the number of frames in each processing chunk is limited to at most 4, effectively preventing memory overflow.",
+     "source_url": "https://arxiv.org/html/2503.20314",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+    },
+    {
+     "id": "in_frames21",
+     "quote": "args.frame_num = 1 if \"t2i\" in args.task else 81",
+     "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.1/main/generate.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.1_main_generate.py.txt"
+    },
+    {
+     "id": "in_frames22",
+     "quote": "ti2v_5B.frame_num = 121",
+     "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/wan/configs/wan_ti2v_5B.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.2_main_wan_ti2v_5B.py.txt"
+    }
+   ]
+  },
+  "temporal_compression": {
+   "value": "4x (1 + T/4 latent frames) for both",
+   "quote_ids": [
+    "arch_448",
+    "in_shape21",
+    "in_stride21",
+    "in_stride22"
+   ],
+   "quotes": [
+    {
+     "id": "arch_448",
+     "quote": "Wan -VAE can compress the spatio-temporal dimension of a video by 4 × 8 × 8 4\\times 8\\times 8 times.",
+     "source_url": "https://arxiv.org/html/2503.20314",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+    },
+    {
+     "id": "in_shape21",
+     "quote": "Wan -VAE compresses its spatio-temporal dimensions to [ 1 + T / 4 , H / 8 , W / 8 ] [1+T/4,H/8,W/8] while expanding the number of channels C C to 16.",
+     "source_url": "https://arxiv.org/html/2503.20314",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+    },
+    {
+     "id": "in_stride21",
+     "quote": "t2v_1_3B.vae_stride = (4, 8, 8)",
+     "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.1/main/wan/configs/wan_t2v_1_3B.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.1_main_wan_t2v_1_3B.py.txt"
+    },
+    {
+     "id": "in_stride22",
+     "quote": "ti2v_5B.vae_stride = (4, 16, 16)",
+     "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/wan/configs/wan_ti2v_5B.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.2_main_wan_ti2v_5B.py.txt"
+    }
+   ]
+  },
+  "spatial_compression": {
+   "value": "8x8 (Wan2.1-VAE); 16x16 (Wan2.2-VAE: 2x2 patchify + 8x8)",
+   "quote_ids": [
+    "arch_448",
+    "arch_22",
+    "in_stride21",
+    "in_stride22",
+    "in_patchify22"
+   ],
+   "quotes": [
+    {
+     "id": "arch_448",
+     "quote": "Wan -VAE can compress the spatio-temporal dimension of a video by 4 × 8 × 8 4\\times 8\\times 8 times.",
+     "source_url": "https://arxiv.org/html/2503.20314",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+    },
+    {
+     "id": "arch_22",
+     "quote": "It is supported by a high-compression Wan2.2-VAE, which achieves a $T\\times H\\times W$ compression ratio of $4\\times16\\times16$, increasing the overall compression rate to 64 while maintaining high-quality video reconstruction.",
+     "source_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.2-TI2V-5B_README.md"
+    },
+    {
+     "id": "in_stride21",
+     "quote": "t2v_1_3B.vae_stride = (4, 8, 8)",
+     "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.1/main/wan/configs/wan_t2v_1_3B.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.1_main_wan_t2v_1_3B.py.txt"
+    },
+    {
+     "id": "in_stride22",
+     "quote": "ti2v_5B.vae_stride = (4, 16, 16)",
+     "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/wan/configs/wan_ti2v_5B.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.2_main_wan_ti2v_5B.py.txt"
+    },
+    {
+     "id": "in_patchify22",
+     "quote": "x = patchify(x, patch_size=2)",
+     "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/wan/modules/vae2_2.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.2_main_vae2_2.py.txt"
+    }
+   ]
+  }
+ },
+ "embedding_dim": {
+  "value": "Wan2.1-VAE: 16 x 21 x 60 x 104 = 2,096,640 values for an 81-frame 480x832 clip (16 x (1+T/4) x H/8 x W/8). Wan2.2-VAE: 48 x 31 x 44 x 80 = 5,237,760 values for a 121-frame 704x1280 clip (48 x (1+T/4) x H/16 x W/16)",
+  "derivation": "Wan2.1 latent channels 16 (paper; WanVAE z_dim=16); Wan2.2 latent channels 48 (Wan2_2_VAE z_dim=48, official code); strides from the official configs",
+  "quote_ids": [
+   "arch_latent16",
+   "in_shape21",
+   "in_zdim21",
+   "in_zdim22",
+   "in_stride21",
+   "in_stride22"
+  ],
+  "quotes": [
+   {
+    "id": "arch_latent16",
+    "quote": "adopt the same compression rate and latent feature dimension as our approach, i.e., a compression rate of 4 × 8 × 8 4\\times 8\\times 8 with a latent dimension of 16.",
+    "source_url": "https://arxiv.org/html/2503.20314",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+   },
+   {
+    "id": "in_shape21",
+    "quote": "Wan -VAE compresses its spatio-temporal dimensions to [ 1 + T / 4 , H / 8 , W / 8 ] [1+T/4,H/8,W/8] while expanding the number of channels C C to 16.",
+    "source_url": "https://arxiv.org/html/2503.20314",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+   },
+   {
+    "id": "in_zdim21",
+    "quote": "class WanVAE: def __init__(self, z_dim=16,",
+    "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.1/main/wan/modules/vae.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.1_main_vae.py.txt"
+   },
+   {
+    "id": "in_zdim22",
+    "quote": "class Wan2_2_VAE: def __init__( self, z_dim=48, c_dim=160,",
+    "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/wan/modules/vae2_2.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.2_main_vae2_2.py.txt"
+   },
+   {
+    "id": "in_stride21",
+    "quote": "t2v_1_3B.vae_stride = (4, 8, 8)",
+    "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.1/main/wan/configs/wan_t2v_1_3B.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.1_main_wan_t2v_1_3B.py.txt"
+   },
+   {
+    "id": "in_stride22",
+    "quote": "ti2v_5B.vae_stride = (4, 16, 16)",
+    "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/wan/configs/wan_ti2v_5B.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.2_main_wan_ti2v_5B.py.txt"
+   }
+  ]
+ },
+ "params": {
+  "value": "Wan2.1-VAE: 127M (whole VAE, paper); encoder-only not documented. Wan2.2-VAE: not documented (inferred, not documentation: Wan2.2_VAE.pth 2,818,839,170 bytes)",
+  "scope": "whole autoencoder (Wan2.1); not documented (Wan2.2)",
+  "quote_ids": [
+   "arch_127m",
+   "w_file22"
+  ],
+  "quotes": [
+   {
+    "id": "arch_127m",
+    "quote": "Wan -VAE achieves a compact model size of only 127M parameters.",
+    "source_url": "https://arxiv.org/html/2503.20314",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+   },
+   {
+    "id": "w_file22",
+    "quote": "\"rfilename\": \"Wan2.2_VAE.pth\",",
+    "source_url": "https://huggingface.co/api/models/Wan-AI/Wan2.2-TI2V-5B?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan-AI__Wan2.2-TI2V-5B_hfapi.json"
+   }
+  ]
+ },
+ "flops_per_input_if_documented": null,
+ "flops_note": "no FLOPs/MACs statement in the saved paper, cards or code (searched FLOP|TFLOP)",
+ "eligibility": {
+  "C1_open_weights": {
+   "status": "PASS",
+   "basis": "HF API lists Wan2.1_VAE.pth / Wan2.2_VAE.pth, gated=False",
+   "quote_ids": [
+    "w_file21",
+    "w_gated21",
+    "w_file22",
+    "w_gated22"
+   ],
+   "quotes": [
+    {
+     "id": "w_file21",
+     "quote": "\"rfilename\": \"Wan2.1_VAE.pth\",",
+     "source_url": "https://huggingface.co/api/models/Wan-AI/Wan2.1-T2V-1.3B?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan-AI__Wan2.1-T2V-1.3B_hfapi.json"
+    },
+    {
+     "id": "w_gated21",
+     "quote": "\"gated\": false,",
+     "source_url": "https://huggingface.co/api/models/Wan-AI/Wan2.1-T2V-1.3B?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan-AI__Wan2.1-T2V-1.3B_hfapi.json"
+    },
+    {
+     "id": "w_file22",
+     "quote": "\"rfilename\": \"Wan2.2_VAE.pth\",",
+     "source_url": "https://huggingface.co/api/models/Wan-AI/Wan2.2-TI2V-5B?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan-AI__Wan2.2-TI2V-5B_hfapi.json"
+    },
+    {
+     "id": "w_gated22",
+     "quote": "\"gated\": false,",
+     "source_url": "https://huggingface.co/api/models/Wan-AI/Wan2.2-TI2V-5B?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan-AI__Wan2.2-TI2V-5B_hfapi.json"
+    }
+   ]
+  },
+  "C2_licence_research_use": {
+   "status": "PASS",
+   "basis": "Apache-2.0",
+   "quote_ids": [
+    "lic_card21",
+    "lic_card22"
+   ],
+   "quotes": [
+    {
+     "id": "lic_card21",
+     "quote": "The models in this repository are licensed under the Apache 2.0 License.",
+     "source_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.1-T2V-1.3B_README.md"
+    },
+    {
+     "id": "lic_card22",
+     "quote": "The models in this repository are licensed under the Apache 2.0 License.",
+     "source_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.2-TI2V-5B_README.md"
+    }
+   ]
+  },
+  "C3_domain_secondary": {
+   "status": "PASS",
+   "basis": "video VAE of a text/image-to-video diffusion model on general video",
+   "quote_ids": [
+    "arch_448",
+    "arch_22"
+   ],
+   "quotes": [
+    {
+     "id": "arch_448",
+     "quote": "Wan -VAE can compress the spatio-temporal dimension of a video by 4 × 8 × 8 4\\times 8\\times 8 times.",
+     "source_url": "https://arxiv.org/html/2503.20314",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+    },
+    {
+     "id": "arch_22",
+     "quote": "It is supported by a high-compression Wan2.2-VAE, which achieves a $T\\times H\\times W$ compression ratio of $4\\times16\\times16$, increasing the overall compression rate to 64 while maintaining high-quality video reconstruction.",
+     "source_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.2-TI2V-5B_README.md"
+    }
+   ]
+  },
+  "C4_documented_pretraining_data": {
+   "status": "FAIL",
+   "basis": "sources described only as 'internal copyrighted sources and publicly accessible data'",
+   "quote_ids": [
+    "data_src",
+    "data_billions"
+   ],
+   "quotes": [
+    {
+     "id": "data_src",
+     "quote": "3.1 Pre-training Data We curated and deduplicated a candidate dataset sourced from both internal copyrighted sources and publicly accessible data.",
+     "source_url": "https://arxiv.org/html/2503.20314",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+    },
+    {
+     "id": "data_billions",
+     "quote": "Following these principles, we curated a dataset comprising billions of videos and images.",
+     "source_url": "https://arxiv.org/html/2503.20314",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt"
+    }
+   ]
+  },
+  "eligible": "NO (fails C4)"
+ },
+ "changes_vs_v1": [
+  "sources re-fetched into /home fm_sources/secondary (raw sha256 compared with v1 per quote)",
+  "v1 architecture.representation said the Wan2.2-VAE latent dim was 'not quoted from saved sources'; revision 2 documents it from the official Wan2.2 code: z_dim=48 (Wan2_2_VAE), with 2x2 patchify before the 8x8 encoder (16x16 total)",
+  "the HF repo Wan-AI/Wan2.2-TI2V-5B has no LICENSE file (raw LICENSE.txt returned 404); its licence is quoted from the card ('license: apache-2.0' and 'licensed under the Apache 2.0 License') and the GitHub Wan2.2 LICENSE.txt",
+  "added structured fields (version, weights_location, domain, pretraining_data_quote, appendix300_check, input, embedding_dim, params, flops)",
+  "no change to any eligibility status or Appendix300 answer"
+ ],
+ "quotes": [
+  {
+   "id": "w_file21",
+   "quote": "\"rfilename\": \"Wan2.1_VAE.pth\",",
+   "source_file": "wan_Wan-AI__Wan2.1-T2V-1.3B_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan-AI__Wan2.1-T2V-1.3B_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/Wan-AI/Wan2.1-T2V-1.3B?blobs=true",
+   "final_url": "https://huggingface.co/api/models/Wan-AI/Wan2.1-T2V-1.3B?blobs=true",
+   "raw_sha256": "b3f2190f38f7f9ee4f014d5d0c1a509ec14d2c541b923a785021bafb40461638",
+   "copy_sha256": "e7b984b78634896dca61a56b9300107e8725d64fd24e0b8f98d40836ea320bcf",
+   "retrieved_utc": "2026-10-02T09:32:07+00:00"
+  },
+  {
+   "id": "w_gated21",
+   "quote": "\"gated\": false,",
+   "source_file": "wan_Wan-AI__Wan2.1-T2V-1.3B_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan-AI__Wan2.1-T2V-1.3B_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/Wan-AI/Wan2.1-T2V-1.3B?blobs=true",
+   "final_url": "https://huggingface.co/api/models/Wan-AI/Wan2.1-T2V-1.3B?blobs=true",
+   "raw_sha256": "b3f2190f38f7f9ee4f014d5d0c1a509ec14d2c541b923a785021bafb40461638",
+   "copy_sha256": "e7b984b78634896dca61a56b9300107e8725d64fd24e0b8f98d40836ea320bcf",
+   "retrieved_utc": "2026-10-02T09:32:07+00:00"
+  },
+  {
+   "id": "w_file22",
+   "quote": "\"rfilename\": \"Wan2.2_VAE.pth\",",
+   "source_file": "wan_Wan-AI__Wan2.2-TI2V-5B_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan-AI__Wan2.2-TI2V-5B_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/Wan-AI/Wan2.2-TI2V-5B?blobs=true",
+   "final_url": "https://huggingface.co/api/models/Wan-AI/Wan2.2-TI2V-5B?blobs=true",
+   "raw_sha256": "ade6f13b24d5441a34c7aa6f7414c485b70859eb01729799ec9877f794ebd77d",
+   "copy_sha256": "7f408d8cec20fba7ded2293408f6d74335687813de6ea807e9f5921d008737f7",
+   "retrieved_utc": "2026-10-02T09:32:07+00:00"
+  },
+  {
+   "id": "w_gated22",
+   "quote": "\"gated\": false,",
+   "source_file": "wan_Wan-AI__Wan2.2-TI2V-5B_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan-AI__Wan2.2-TI2V-5B_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/Wan-AI/Wan2.2-TI2V-5B?blobs=true",
+   "final_url": "https://huggingface.co/api/models/Wan-AI/Wan2.2-TI2V-5B?blobs=true",
+   "raw_sha256": "ade6f13b24d5441a34c7aa6f7414c485b70859eb01729799ec9877f794ebd77d",
+   "copy_sha256": "7f408d8cec20fba7ded2293408f6d74335687813de6ea807e9f5921d008737f7",
+   "retrieved_utc": "2026-10-02T09:32:07+00:00"
+  },
+  {
+   "id": "lic_card21",
+   "quote": "The models in this repository are licensed under the Apache 2.0 License.",
+   "source_file": "wan_Wan2.1-T2V-1.3B_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.1-T2V-1.3B_README.md",
+   "source_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/README.md",
+   "final_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/README.md",
+   "raw_sha256": "d19fb6c377090790940f64af3423c87d289abc9fdee4d45963018e18e5d84119",
+   "copy_sha256": "d19fb6c377090790940f64af3423c87d289abc9fdee4d45963018e18e5d84119",
+   "retrieved_utc": "2026-10-02T09:32:08+00:00",
+   "v1_source_sha256": "d19fb6c377090790940f64af3423c87d289abc9fdee4d45963018e18e5d84119",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "lic_text",
+   "quote": "Apache License",
+   "source_file": "wan_Wan2.1-T2V-1.3B_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.1-T2V-1.3B_LICENSE.txt",
+   "source_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/LICENSE.txt",
+   "final_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/LICENSE.txt",
+   "raw_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+   "copy_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+   "retrieved_utc": "2026-10-02T09:32:08+00:00",
+   "v1_source_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "lic_card22",
+   "quote": "The models in this repository are licensed under the Apache 2.0 License.",
+   "source_file": "wan_Wan2.2-TI2V-5B_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.2-TI2V-5B_README.md",
+   "source_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+   "final_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+   "raw_sha256": "e357cb3ac077f8739755b0fb38fe8424c76534b19b4a84f6138856abb00abf69",
+   "copy_sha256": "e357cb3ac077f8739755b0fb38fe8424c76534b19b4a84f6138856abb00abf69",
+   "retrieved_utc": "2026-10-02T09:32:09+00:00"
+  },
+  {
+   "id": "lic_text22",
+   "quote": "Apache License Version 2.0, January 2004",
+   "source_file": "wan_github_Wan2.2_main_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.2_main_LICENSE.txt",
+   "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/LICENSE.txt",
+   "final_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/LICENSE.txt",
+   "raw_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+   "copy_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+   "retrieved_utc": "2026-10-02T09:32:34+00:00"
+  },
+  {
+   "id": "arch_448",
+   "quote": "Wan -VAE can compress the spatio-temporal dimension of a video by 4 × 8 × 8 4\\times 8\\times 8 times.",
+   "source_file": "wan_arxiv_2503.20314_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.20314",
+   "final_url": "https://arxiv.org/html/2503.20314",
+   "raw_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+   "copy_sha256": "0d40e2ced6ce281bf372dde924e59836f642f96dbaf4690872e988cd4efe6ed5",
+   "retrieved_utc": "2026-10-02T09:32:10+00:00",
+   "v1_source_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_127m",
+   "quote": "Wan -VAE achieves a compact model size of only 127M parameters.",
+   "source_file": "wan_arxiv_2503.20314_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.20314",
+   "final_url": "https://arxiv.org/html/2503.20314",
+   "raw_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+   "copy_sha256": "0d40e2ced6ce281bf372dde924e59836f642f96dbaf4690872e988cd4efe6ed5",
+   "retrieved_utc": "2026-10-02T09:32:10+00:00",
+   "v1_source_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_latent16",
+   "quote": "adopt the same compression rate and latent feature dimension as our approach, i.e., a compression rate of 4 × 8 × 8 4\\times 8\\times 8 with a latent dimension of 16.",
+   "source_file": "wan_arxiv_2503.20314_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.20314",
+   "final_url": "https://arxiv.org/html/2503.20314",
+   "raw_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+   "copy_sha256": "0d40e2ced6ce281bf372dde924e59836f642f96dbaf4690872e988cd4efe6ed5",
+   "retrieved_utc": "2026-10-02T09:32:10+00:00",
+   "v1_source_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_22",
+   "quote": "It is supported by a high-compression Wan2.2-VAE, which achieves a $T\\times H\\times W$ compression ratio of $4\\times16\\times16$, increasing the overall compression rate to 64 while maintaining high-quality video reconstruction.",
+   "source_file": "wan_Wan2.2-TI2V-5B_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.2-TI2V-5B_README.md",
+   "source_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+   "final_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+   "raw_sha256": "e357cb3ac077f8739755b0fb38fe8424c76534b19b4a84f6138856abb00abf69",
+   "copy_sha256": "e357cb3ac077f8739755b0fb38fe8424c76534b19b4a84f6138856abb00abf69",
+   "retrieved_utc": "2026-10-02T09:32:09+00:00",
+   "v1_source_sha256": "e357cb3ac077f8739755b0fb38fe8424c76534b19b4a84f6138856abb00abf69",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_train",
+   "quote": "First, we construct a 2D image VAE with the same structure and train it on image data. Then, we inflate the well-trained 2D image VAE into a 3D causal Wan -VAE to provide an initial spatial compression prior, which drastically improves the training speed compared to training a video VAE from scratch. At this stage, Wan -VAE is trained on the low-resolution (128 × \\times 128) and small frame number (5-frame) videos to accelerate convergence speed.",
+   "source_file": "wan_arxiv_2503.20314_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.20314",
+   "final_url": "https://arxiv.org/html/2503.20314",
+   "raw_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+   "copy_sha256": "0d40e2ced6ce281bf372dde924e59836f642f96dbaf4690872e988cd4efe6ed5",
+   "retrieved_utc": "2026-10-02T09:32:10+00:00",
+   "v1_source_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "vae_ft",
+   "quote": "Finally, we fine-tune the model on high-quality videos with different resolutions and frame numbers, integrating the GAN loss ( Esser et al., 2021 ) from a 3D discriminator.",
+   "source_file": "wan_arxiv_2503.20314_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.20314",
+   "final_url": "https://arxiv.org/html/2503.20314",
+   "raw_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+   "copy_sha256": "0d40e2ced6ce281bf372dde924e59836f642f96dbaf4690872e988cd4efe6ed5",
+   "retrieved_utc": "2026-10-02T09:32:10+00:00"
+  },
+  {
+   "id": "arch_res21",
+   "quote": "For optimal performance, we recommend using 480P resolution",
+   "source_file": "wan_Wan2.1-T2V-1.3B_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.1-T2V-1.3B_README.md",
+   "source_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/README.md",
+   "final_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/README.md",
+   "raw_sha256": "d19fb6c377090790940f64af3423c87d289abc9fdee4d45963018e18e5d84119",
+   "copy_sha256": "d19fb6c377090790940f64af3423c87d289abc9fdee4d45963018e18e5d84119",
+   "retrieved_utc": "2026-10-02T09:32:08+00:00",
+   "v1_source_sha256": "d19fb6c377090790940f64af3423c87d289abc9fdee4d45963018e18e5d84119",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "in_1080p",
+   "quote": "encoding and decoding 1080P videos of any length while preserving temporal information",
+   "source_file": "wan_Wan2.1-T2V-1.3B_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.1-T2V-1.3B_README.md",
+   "source_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/README.md",
+   "final_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/README.md",
+   "raw_sha256": "d19fb6c377090790940f64af3423c87d289abc9fdee4d45963018e18e5d84119",
+   "copy_sha256": "d19fb6c377090790940f64af3423c87d289abc9fdee4d45963018e18e5d84119",
+   "retrieved_utc": "2026-10-02T09:32:08+00:00"
+  },
+  {
+   "id": "in_size21",
+   "quote": "python generate.py --task t2v-1.3B --size 832*480 --ckpt_dir ./Wan2.1-T2V-1.3B",
+   "source_file": "wan_Wan2.1-T2V-1.3B_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.1-T2V-1.3B_README.md",
+   "source_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/README.md",
+   "final_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/raw/main/README.md",
+   "raw_sha256": "d19fb6c377090790940f64af3423c87d289abc9fdee4d45963018e18e5d84119",
+   "copy_sha256": "d19fb6c377090790940f64af3423c87d289abc9fdee4d45963018e18e5d84119",
+   "retrieved_utc": "2026-10-02T09:32:08+00:00"
+  },
+  {
+   "id": "in_size22",
+   "quote": "python generate.py --task ti2v-5B --size 1280*704 --ckpt_dir ./Wan2.2-TI2V-5B",
+   "source_file": "wan_Wan2.2-TI2V-5B_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.2-TI2V-5B_README.md",
+   "source_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+   "final_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+   "raw_sha256": "e357cb3ac077f8739755b0fb38fe8424c76534b19b4a84f6138856abb00abf69",
+   "copy_sha256": "e357cb3ac077f8739755b0fb38fe8424c76534b19b4a84f6138856abb00abf69",
+   "retrieved_utc": "2026-10-02T09:32:09+00:00"
+  },
+  {
+   "id": "in_fps_train21",
+   "quote": "5-second video clips ( 192 ​ p ​ x 192\\penalty\\ px resolution, 16 16 fps)",
+   "source_file": "wan_arxiv_2503.20314_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.20314",
+   "final_url": "https://arxiv.org/html/2503.20314",
+   "raw_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+   "copy_sha256": "0d40e2ced6ce281bf372dde924e59836f642f96dbaf4690872e988cd4efe6ed5",
+   "retrieved_utc": "2026-10-02T09:32:10+00:00"
+  },
+  {
+   "id": "in_fps21",
+   "quote": "wan_shared_cfg.sample_fps = 16",
+   "source_file": "wan_github_Wan2.1_main_shared_config.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.1_main_shared_config.py.txt",
+   "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.1/main/wan/configs/shared_config.py",
+   "final_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.1/main/wan/configs/shared_config.py",
+   "raw_sha256": "a942b6f0a1d1a4ec9a7893c17a6218651ce272953b90d012ce5cdd19d15e45f7",
+   "copy_sha256": "a942b6f0a1d1a4ec9a7893c17a6218651ce272953b90d012ce5cdd19d15e45f7",
+   "retrieved_utc": "2026-10-02T09:32:11+00:00"
+  },
+  {
+   "id": "in_fps22_card",
+   "quote": "This model supports both text-to-video and image-to-video generation at 720P resolution with 24fps",
+   "source_file": "wan_Wan2.2-TI2V-5B_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.2-TI2V-5B_README.md",
+   "source_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+   "final_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+   "raw_sha256": "e357cb3ac077f8739755b0fb38fe8424c76534b19b4a84f6138856abb00abf69",
+   "copy_sha256": "e357cb3ac077f8739755b0fb38fe8424c76534b19b4a84f6138856abb00abf69",
+   "retrieved_utc": "2026-10-02T09:32:09+00:00"
+  },
+  {
+   "id": "in_fps22",
+   "quote": "ti2v_5B.sample_fps = 24",
+   "source_file": "wan_github_Wan2.2_main_wan_ti2v_5B.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.2_main_wan_ti2v_5B.py.txt",
+   "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/wan/configs/wan_ti2v_5B.py",
+   "final_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/wan/configs/wan_ti2v_5B.py",
+   "raw_sha256": "26d9e7b9c555eb0900b13751267a596556f869e7aee2d1572afc2a0a4a76f4c7",
+   "copy_sha256": "26d9e7b9c555eb0900b13751267a596556f869e7aee2d1572afc2a0a4a76f4c7",
+   "retrieved_utc": "2026-10-02T09:32:13+00:00"
+  },
+  {
+   "id": "in_frames21",
+   "quote": "args.frame_num = 1 if \"t2i\" in args.task else 81",
+   "source_file": "wan_github_Wan2.1_main_generate.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.1_main_generate.py.txt",
+   "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.1/main/generate.py",
+   "final_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.1/main/generate.py",
+   "raw_sha256": "0b12bde63bb316a91ad1462a3db073db4388ec96c818f7548f4e6487939427a4",
+   "copy_sha256": "0b12bde63bb316a91ad1462a3db073db4388ec96c818f7548f4e6487939427a4",
+   "retrieved_utc": "2026-10-02T09:32:34+00:00"
+  },
+  {
+   "id": "in_frames22",
+   "quote": "ti2v_5B.frame_num = 121",
+   "source_file": "wan_github_Wan2.2_main_wan_ti2v_5B.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.2_main_wan_ti2v_5B.py.txt",
+   "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/wan/configs/wan_ti2v_5B.py",
+   "final_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/wan/configs/wan_ti2v_5B.py",
+   "raw_sha256": "26d9e7b9c555eb0900b13751267a596556f869e7aee2d1572afc2a0a4a76f4c7",
+   "copy_sha256": "26d9e7b9c555eb0900b13751267a596556f869e7aee2d1572afc2a0a4a76f4c7",
+   "retrieved_utc": "2026-10-02T09:32:13+00:00"
+  },
+  {
+   "id": "in_shape21",
+   "quote": "Wan -VAE compresses its spatio-temporal dimensions to [ 1 + T / 4 , H / 8 , W / 8 ] [1+T/4,H/8,W/8] while expanding the number of channels C C to 16.",
+   "source_file": "wan_arxiv_2503.20314_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.20314",
+   "final_url": "https://arxiv.org/html/2503.20314",
+   "raw_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+   "copy_sha256": "0d40e2ced6ce281bf372dde924e59836f642f96dbaf4690872e988cd4efe6ed5",
+   "retrieved_utc": "2026-10-02T09:32:10+00:00"
+  },
+  {
+   "id": "in_chunk",
+   "quote": "the number of frames in each processing chunk is limited to at most 4, effectively preventing memory overflow.",
+   "source_file": "wan_arxiv_2503.20314_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.20314",
+   "final_url": "https://arxiv.org/html/2503.20314",
+   "raw_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+   "copy_sha256": "0d40e2ced6ce281bf372dde924e59836f642f96dbaf4690872e988cd4efe6ed5",
+   "retrieved_utc": "2026-10-02T09:32:10+00:00"
+  },
+  {
+   "id": "in_stride21",
+   "quote": "t2v_1_3B.vae_stride = (4, 8, 8)",
+   "source_file": "wan_github_Wan2.1_main_wan_t2v_1_3B.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.1_main_wan_t2v_1_3B.py.txt",
+   "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.1/main/wan/configs/wan_t2v_1_3B.py",
+   "final_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.1/main/wan/configs/wan_t2v_1_3B.py",
+   "raw_sha256": "6976ec4c03f737b69ae17afe13339b32905739205d4c19f16c8b329f9f06e986",
+   "copy_sha256": "6976ec4c03f737b69ae17afe13339b32905739205d4c19f16c8b329f9f06e986",
+   "retrieved_utc": "2026-10-02T09:32:11+00:00"
+  },
+  {
+   "id": "in_stride22",
+   "quote": "ti2v_5B.vae_stride = (4, 16, 16)",
+   "source_file": "wan_github_Wan2.2_main_wan_ti2v_5B.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.2_main_wan_ti2v_5B.py.txt",
+   "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/wan/configs/wan_ti2v_5B.py",
+   "final_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/wan/configs/wan_ti2v_5B.py",
+   "raw_sha256": "26d9e7b9c555eb0900b13751267a596556f869e7aee2d1572afc2a0a4a76f4c7",
+   "copy_sha256": "26d9e7b9c555eb0900b13751267a596556f869e7aee2d1572afc2a0a4a76f4c7",
+   "retrieved_utc": "2026-10-02T09:32:13+00:00"
+  },
+  {
+   "id": "in_zdim21",
+   "quote": "class WanVAE: def __init__(self, z_dim=16,",
+   "source_file": "wan_github_Wan2.1_main_vae.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.1_main_vae.py.txt",
+   "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.1/main/wan/modules/vae.py",
+   "final_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.1/main/wan/modules/vae.py",
+   "raw_sha256": "4912ffd7a9fbb17ceef9a17d4a9c4b8aee36ec37c32594f54e57693b29909498",
+   "copy_sha256": "4912ffd7a9fbb17ceef9a17d4a9c4b8aee36ec37c32594f54e57693b29909498",
+   "retrieved_utc": "2026-10-02T09:32:10+00:00"
+  },
+  {
+   "id": "in_zdim22",
+   "quote": "class Wan2_2_VAE: def __init__( self, z_dim=48, c_dim=160,",
+   "source_file": "wan_github_Wan2.2_main_vae2_2.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.2_main_vae2_2.py.txt",
+   "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/wan/modules/vae2_2.py",
+   "final_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/wan/modules/vae2_2.py",
+   "raw_sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+   "copy_sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+   "retrieved_utc": "2026-10-02T09:32:12+00:00"
+  },
+  {
+   "id": "in_patchify22",
+   "quote": "x = patchify(x, patch_size=2)",
+   "source_file": "wan_github_Wan2.2_main_vae2_2.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_github_Wan2.2_main_vae2_2.py.txt",
+   "source_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/wan/modules/vae2_2.py",
+   "final_url": "https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/wan/modules/vae2_2.py",
+   "raw_sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+   "copy_sha256": "eab5ce4aa1ce03af2978f2a8e8364c419f5fbb8535d265ac86b0b02ddcf0c1f6",
+   "retrieved_utc": "2026-10-02T09:32:12+00:00"
+  },
+  {
+   "id": "data_src",
+   "quote": "3.1 Pre-training Data We curated and deduplicated a candidate dataset sourced from both internal copyrighted sources and publicly accessible data.",
+   "source_file": "wan_arxiv_2503.20314_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.20314",
+   "final_url": "https://arxiv.org/html/2503.20314",
+   "raw_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+   "copy_sha256": "0d40e2ced6ce281bf372dde924e59836f642f96dbaf4690872e988cd4efe6ed5",
+   "retrieved_utc": "2026-10-02T09:32:10+00:00",
+   "v1_source_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "data_billions",
+   "quote": "Following these principles, we curated a dataset comprising billions of videos and images.",
+   "source_file": "wan_arxiv_2503.20314_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.20314",
+   "final_url": "https://arxiv.org/html/2503.20314",
+   "raw_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+   "copy_sha256": "0d40e2ced6ce281bf372dde924e59836f642f96dbaf4690872e988cd4efe6ed5",
+   "retrieved_utc": "2026-10-02T09:32:10+00:00",
+   "v1_source_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "data_22",
+   "quote": "Compared to Wan2.1, Wan2.2 is trained on a significantly larger data, with +65.6% more images and +83.2% more videos.",
+   "source_file": "wan_Wan2.2-TI2V-5B_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_Wan2.2-TI2V-5B_README.md",
+   "source_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+   "final_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/raw/main/README.md",
+   "raw_sha256": "e357cb3ac077f8739755b0fb38fe8424c76534b19b4a84f6138856abb00abf69",
+   "copy_sha256": "e357cb3ac077f8739755b0fb38fe8424c76534b19b4a84f6138856abb00abf69",
+   "retrieved_utc": "2026-10-02T09:32:09+00:00",
+   "v1_source_sha256": "e357cb3ac077f8739755b0fb38fe8424c76534b19b4a84f6138856abb00abf69",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "lim_medicine",
+   "quote": "As a foundational video model, we are committed to enhancing Wan ’s general capabilities, yet performance in specific localized scenarios, such as education and medicine, may be insufficient.",
+   "source_file": "wan_arxiv_2503.20314_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/wan_arxiv_2503.20314_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.20314",
+   "final_url": "https://arxiv.org/html/2503.20314",
+   "raw_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+   "copy_sha256": "0d40e2ced6ce281bf372dde924e59836f642f96dbaf4690872e988cd4efe6ed5",
+   "retrieved_utc": "2026-10-02T09:32:10+00:00",
+   "v1_source_sha256": "30724caad99368774c89ceea6f927e34b25937c739a6357cbe9461c34cb9e078",
+   "raw_sha256_equals_v1": true
+  }
+ ],
+ "all_quotes_verified": true,
+ "record_written_utc": "2026-10-02T09:34:30+00:00"
+}

@@ -1,0 +1,993 @@
+{
+ "id": "14_vjepa2",
+ "name": "V-JEPA 2 (Meta FAIR; ViT-L/16, ViT-H/16, ViT-g/16, ViT-g/16-384 video encoders pretrained on VideoMix22M)",
+ "status_in_survey": "added in revision 2 (2026-10-02)",
+ "version": "HF facebook/vjepa2-vitg-fpc64-256 (primary; ViT-g/16, 64 frames per clip, 256 px; sha 875c192b7b704b87d1e1d99345769632dd5f739a), facebook/vjepa2-vitg-fpc64-384, facebook/vjepa2-vith-fpc64-256, facebook/vjepa2-vitl-fpc64-256 (all pretrained encoders, 2025); also dl.fbaipublicfiles.com/vjepa2/{vitl,vith,vitg,vitg-384}.pt. Out of scope: the -ssv2 / -diving48 fine-tuned classifier repos, V-JEPA 2-AC (action-conditioned predictor post-trained on Droid robot video) and V-JEPA 2.1 (listed separately in the README).",
+ "paper": {
+  "title": "V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning",
+  "year": 2025,
+  "arxiv": "2506.09985 (HTML)"
+ },
+ "weights_location": {
+  "urls": [
+   "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256",
+   "https://huggingface.co/facebook/vjepa2-vitg-fpc64-384",
+   "https://huggingface.co/facebook/vjepa2-vith-fpc64-256",
+   "https://huggingface.co/facebook/vjepa2-vitl-fpc64-256",
+   "https://dl.fbaipublicfiles.com/vjepa2/vitg.pt"
+  ],
+  "files_listed": {
+   "vjepa2-vitg-fpc64-256 model.safetensors": 4138311608,
+   "vjepa2-vitg-fpc64-384 model.safetensors": 4138311608,
+   "vjepa2-vith-fpc64-256 model.safetensors": 2615800136,
+   "vjepa2-vitl-fpc64-256 model.safetensors": 1303947864,
+   "dl.fbaipublicfiles vitg.pt (HEAD Content-Length)": 16464208210
+  },
+  "gated": false,
+  "private": false,
+  "verified_how": "HF API model listings (metadata only) vjepa2_facebook__vjepa2-vitg-fpc64-256_hfapi.json, vjepa2_facebook__vjepa2-vitg-fpc64-384_hfapi.json, vjepa2_facebook__vjepa2-vith-fpc64-256_hfapi.json, vjepa2_facebook__vjepa2-vitl-fpc64-256_hfapi.json and HTTP HEAD of vitg.pt (vjepa2_head_vitg.json); nothing downloaded",
+  "quote_ids": [
+   "w_file_g",
+   "w_gated_g",
+   "w_file_l",
+   "w_readme_g",
+   "w_head_g"
+  ],
+  "quotes": [
+   {
+    "id": "w_file_g",
+    "quote": "\"rfilename\": \"model.safetensors\",",
+    "source_url": "https://huggingface.co/api/models/facebook/vjepa2-vitg-fpc64-256?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_facebook__vjepa2-vitg-fpc64-256_hfapi.json"
+   },
+   {
+    "id": "w_gated_g",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/facebook/vjepa2-vitg-fpc64-256?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_facebook__vjepa2-vitg-fpc64-256_hfapi.json"
+   },
+   {
+    "id": "w_file_l",
+    "quote": "\"rfilename\": \"model.safetensors\",",
+    "source_url": "https://huggingface.co/api/models/facebook/vjepa2-vitl-fpc64-256?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_facebook__vjepa2-vitl-fpc64-256_hfapi.json"
+   },
+   {
+    "id": "w_readme_g",
+    "quote": "<td><a href=\"https://dl.fbaipublicfiles.com/vjepa2/vitg.pt\">checkpoint</a></td>",
+    "source_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_github_README.md"
+   },
+   {
+    "id": "w_head_g",
+    "quote": "\"Content-Length\": \"16464208210\",",
+    "source_url": "https://dl.fbaipublicfiles.com/vjepa2/vitg.pt",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_head_vitg.json"
+   }
+  ]
+ },
+ "licence": {
+  "id": "MIT (GitHub LICENSE; HF card tag for vitl/vith) / Apache-2.0 (HF card tag for vitg-256 and vitg-384)",
+  "url": "https://github.com/facebookresearch/vjepa2/blob/main/LICENSE ; https://huggingface.co/facebook/vjepa2-vitg-fpc64-256",
+  "commercial": "permitted (MIT / Apache-2.0)",
+  "non_commercial_only": false,
+  "restrictions": "none beyond MIT / Apache-2.0 notices (card tags differ between repos)",
+  "gating": "none",
+  "quote_ids": [
+   "lic_mit",
+   "lic_readme",
+   "lic_card_g",
+   "lic_card_l"
+  ],
+  "quotes": [
+   {
+    "id": "lic_mit",
+    "quote": "MIT License Copyright (c) Meta Platforms, Inc. and affiliates.",
+    "source_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/LICENSE",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_github_LICENSE.txt"
+   },
+   {
+    "id": "lic_readme",
+    "quote": "The majority of V-JEPA 2 is licensed under MIT, however portions of the project are available under separate license terms:",
+    "source_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_github_README.md"
+   },
+   {
+    "id": "lic_card_g",
+    "quote": "license: apache-2.0",
+    "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_README.md"
+   },
+   {
+    "id": "lic_card_l",
+    "quote": "license: mit",
+    "source_url": "https://huggingface.co/facebook/vjepa2-vitl-fpc64-256/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitl-fpc64-256_README.md"
+   }
+  ]
+ },
+ "domain": {
+  "value": "self-supervised video encoder trained by mask-denoising FEATURE PREDICTION in a learned representation space (predictor regresses EMA-encoder targets with an L1 loss; no pixel decoder), at scale on general internet video; the authors contrast it with video-generation approaches and call it a 'world model'.",
+  "authors_wording_generative_vs_not": [
+   "Paper: 'in contrast to approaches based on video generation, the JEPA approach focuses on learning representations for predictable aspects of a scene ... while ignoring unpredictable details that generative objectives emphasize, since they make pixel-level predictions'",
+   "Paper: 'we use a mask-denoising feature prediction objective ..., where the model predicts masked segments of a video in a learned representation space.'",
+   "Paper: 'The outputs of the predictor are then regressed to the prediction targets using an L1 loss.'",
+   "Meta blog: 'V-JEPA 2 is a world model that achieves state-of-the-art performance on visual understanding and prediction in the physical world.' (no use of the word 'generative'; the paper explicitly sets JEPA apart from generative/pixel-level objectives)"
+  ],
+  "quote_ids": [
+   "dom_contrast",
+   "dom_featpred",
+   "dom_l1",
+   "dom_blog_wm",
+   "dom_card_use"
+  ],
+  "quotes": [
+   {
+    "id": "dom_contrast",
+    "quote": "in contrast to approaches based on video generation, the JEPA approach focuses on learning representations for predictable aspects of a scene (e.g., the trajectory of an object in motion) while ignoring unpredictable details that generative objectives emphasize, since they make pixel-level predictions",
+    "source_url": "https://arxiv.org/html/2506.09985",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt"
+   },
+   {
+    "id": "dom_featpred",
+    "quote": "we use a mask-denoising feature prediction objective ( Assran et al., 2023 ; Bardes et al., 2024 ) , where the model predicts masked segments of a video in a learned representation space.",
+    "source_url": "https://arxiv.org/html/2506.09985",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt"
+   },
+   {
+    "id": "dom_l1",
+    "quote": "The outputs of the predictor are then regressed to the prediction targets using an L1 loss.",
+    "source_url": "https://arxiv.org/html/2506.09985",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt"
+   },
+   {
+    "id": "dom_blog_wm",
+    "quote": "Meta Video Joint Embedding Predictive Architecture 2 (V-JEPA 2) is a world model that achieves state-of-the-art performance on visual understanding and prediction in the physical world.",
+    "source_url": "https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_meta_blog.txt"
+   },
+   {
+    "id": "dom_card_use",
+    "quote": "V-JEPA 2 is intended to represent any video (and image) to perform video classification, retrieval, or as a video encoder for VLMs.",
+    "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_README.md"
+   }
+  ]
+ },
+ "architecture": {
+  "type": "ViT encoder on 2x16x16 tubelets + 12-layer 384-dim predictor (pretraining); EMA target encoder",
+  "representation": "frozen encoder output tokens (1408-dim ViT-g, 1280 ViT-H, 1024 ViT-L), pooled downstream by an attentive probe; HF get_vision_features returns the token sequence"
+ },
+ "pretraining_data": {
+  "summary": "VideoMix22M (22M samples): SSv2 168K, Kinetics-400/600/700 733K, HowTo100M 1.1M, YT-Temporal-1B 19M (retrieval-curated general YouTube), plus ImageNet 1M images (duplicated into 16-frame clips). All named public sources.",
+  "form": "dataset list (named; HowTo100M and YT-Temporal-1B are open-ended YouTube-derived sets)"
+ },
+ "pretraining_data_quote": {
+  "quote_ids": [
+   "data_t1",
+   "data_rows",
+   "data_sources",
+   "ht_youtube",
+   "ht_health"
+  ],
+  "quotes": [
+   {
+    "id": "data_t1",
+    "quote": "Table 1: VideoMix22M (VM22M) Pretraining Dataset. To build our observation pretraining dataset, we combined four different video sources and one image dataset.",
+    "source_url": "https://arxiv.org/html/2506.09985",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt"
+   },
+   {
+    "id": "data_rows",
+    "quote": "SSv2 ( Goyal et al., 2017 ) 168K EgoVideo 168 No 0.056 Kinetics ( Carreira et al., 2019 ) 733K ExoVideo 614 No 0.188 Howto100M ( Miech et al., 2019 ) 1.1M ExoVideo 134K No 0.318 YT-Temporal-1B ( Zellers et al., 2022 ) 19M ExoVideo 1.6M Yes 0.188 ImageNet ( Deng et al., 2009 ) 1M Images n/a No 0.250",
+    "source_url": "https://arxiv.org/html/2506.09985",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt"
+   },
+   {
+    "id": "data_sources",
+    "quote": "YouTube tutorial videos from HowTo100M ( Miech et al., 2019 ) , and general YouTube videos from YT-Temporal-1B ( Zellers et al., 2022 ) , which we refer to as YT1B.",
+    "source_url": "https://arxiv.org/html/2506.09985",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt"
+   },
+   {
+    "id": "ht_youtube",
+    "quote": "HowTo100M features 1.22 million videos from YouTube, with activities from domains such as cooking, hand crafting, personal care, gardening, etc.",
+    "source_url": "https://arxiv.org/pdf/1906.03327v2",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt"
+   },
+   {
+    "id": "ht_health",
+    "quote": "Health 172 1.7M Emotional Health 63 853k Conditions and Treatments 35 271k Injury and Accidents 22 147k Medication and Equipment 20 138k",
+    "source_url": "https://arxiv.org/pdf/1906.03327v2",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt"
+   }
+  ]
+ },
+ "medical_video_in_data": {
+  "answer": "YES (indirect, health-category instructional video via HowTo100M; no surgical/endoscopic content documented)",
+  "basis": "VideoMix22M includes HowTo100M (weight 0.318), whose paper lists a WikiHow 'Health' category (172 tasks, 1.7M clips, incl. 'Conditions and Treatments', 'Medication and Equipment', 'Medical Information'). The V-JEPA 2 paper/README/blog contain no medical/surgical term in a data context (term search below); YT-Temporal-1B content is undocumented general YouTube.",
+  "term_search": {
+   "pattern": "medical|surgical|surgery|endoscop|laparoscop|clinical|health|hospital",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_github_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_meta_blog.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt": [
+     "nimals 552 Holidays and Traditions 411 Personal Care and Style 181 Sports and Fitness 205 Health 172 Education and Communications 239 Arts and Entertainment 138 Computers and Electronics",
+     "d Slugs 3 13k Animal Welfare Activism 1 10k Animal Rescue 2 9k Amphibian 1 7k General Pet Health 1 3k Crafts 3135 20670k Games 200 2058k Woodworking 183 1446k Toys 171 1254k Tricks and P",
+     " Home Audio 9 68k Phones and Gadgets 9 96k Hardware 11 95k Laptops 4 43k Networking 1 12k Health 172 1.7M Emotional Health 63 853k Conditions and Treatments 35 271k Injury and Accidents ",
+     "nd Gadgets 9 96k Hardware 11 95k Laptops 4 43k Networking 1 12k Health 172 1.7M Emotional Health 63 853k Conditions and Treatments 35 271k Injury and Accidents 22 147k Medication and Equ",
+     "atments 35 271k Injury and Accidents 22 147k Medication and Equipment 20 138k Alternative Health 10 75k Recreational Drug Use 9 69k Diet & Lifestyle 3 44k Health Hygiene 3 32k Medical In",
+     "ment 20 138k Alternative Health 10 75k Recreational Drug Use 9 69k Diet & Lifestyle 3 44k Health Hygiene 3 32k Medical Information 3 31k Women’s Health 2 25k Reproductive Health 1 23k Me"
+    ]
+   }
+  },
+  "quote_ids": [
+   "ht_health"
+  ],
+  "quotes": [
+   {
+    "id": "ht_health",
+    "quote": "Health 172 1.7M Emotional Health 63 853k Conditions and Treatments 35 271k Injury and Accidents 22 147k Medication and Equipment 20 138k",
+    "source_url": "https://arxiv.org/pdf/1906.03327v2",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt"
+   }
+  ]
+ },
+ "appendix300_possible": {
+  "answer": "UNKNOWN",
+  "basis_class": "named_open_web_sources",
+  "basis": "YT-Temporal-1B ('general YouTube videos', 19M, curated only against cartoon/clipart-style noise) and HowTo100M are named but open-ended YouTube-derived sources, so the documentation does not allow the Appendix300 source recordings to be excluded. Timing: release 2025-06, before the OPARA issue 2026-04-29.",
+  "quote_ids": [
+   "data_sources",
+   "data_t1"
+  ],
+  "quotes": [
+   {
+    "id": "data_sources",
+    "quote": "YouTube tutorial videos from HowTo100M ( Miech et al., 2019 ) , and general YouTube videos from YT-Temporal-1B ( Zellers et al., 2022 ) , which we refer to as YT1B.",
+    "source_url": "https://arxiv.org/html/2506.09985",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt"
+   },
+   {
+    "id": "data_t1",
+    "quote": "Table 1: VideoMix22M (VM22M) Pretraining Dataset. To build our observation pretraining dataset, we combined four different video sources and one image dataset.",
+    "source_url": "https://arxiv.org/html/2506.09985",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt"
+   }
+  ]
+ },
+ "appendix300_check": {
+  "answer": "UNKNOWN",
+  "quote_or_statement": "the documented data list does not mention DS203/Appendix300",
+  "basis_class": "named_open_web_sources",
+  "basis": "open-ended YT-Temporal-1B and HowTo100M components; see appendix300_possible",
+  "term_search": {
+   "pattern": "appendix ?300|DS203|OPARA|appendectom|appendic",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_github_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_meta_blog.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt": []
+   }
+  },
+  "quote_ids": [
+   "data_sources"
+  ],
+  "quotes": [
+   {
+    "id": "data_sources",
+    "quote": "YouTube tutorial videos from HowTo100M ( Miech et al., 2019 ) , and general YouTube videos from YT-Temporal-1B ( Zellers et al., 2022 ) , which we refer to as YT1B.",
+    "source_url": "https://arxiv.org/html/2506.09985",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt"
+   }
+  ]
+ },
+ "input": {
+  "frame_size": {
+   "value": "256x256 (fpc64-256 repos); 384x384 (vitg-fpc64-384); primary pretraining at 256, cooldown crops 256/384/512",
+   "quote_ids": [
+    "in_crop_g",
+    "in_crop_384",
+    "in_hparams"
+   ],
+   "quotes": [
+    {
+     "id": "in_crop_g",
+     "quote": "\"crop_size\": 256,",
+     "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_config.json"
+    },
+    {
+     "id": "in_crop_384",
+     "quote": "\"crop_size\": 384,",
+     "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-384/raw/main/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-384_config.json"
+    },
+    {
+     "id": "in_hparams",
+     "quote": "Parameter Primary Phase Cooldown Phase Number of frames 16 64 Frames per Second 4.0 4.0 Crop Size 256 [256, 384, 512]",
+     "source_url": "https://arxiv.org/html/2506.09985",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt"
+    }
+   ]
+  },
+  "frame_rate_or_sampling": {
+   "value": "4 fps in both pretraining phases (primary 16 frames = 4 s; cooldown 64 frames = 16 s)",
+   "quote_ids": [
+    "in_hparams",
+    "in_64_16s"
+   ],
+   "quotes": [
+    {
+     "id": "in_hparams",
+     "quote": "Parameter Primary Phase Cooldown Phase Number of frames 16 64 Frames per Second 4.0 4.0 Crop Size 256 [256, 384, 512]",
+     "source_url": "https://arxiv.org/html/2506.09985",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt"
+    },
+    {
+     "id": "in_64_16s",
+     "quote": "we explore training with longer clips of up to 64 frames (16 seconds) at higher spatial resolutions.",
+     "source_url": "https://arxiv.org/html/2506.09985",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt"
+    }
+   ]
+  },
+  "clip_length_frames": {
+   "value": "64 frames for the released fpc64 checkpoints (config frames_per_clip 64); primary pretraining used 16",
+   "quote_ids": [
+    "in_fpc",
+    "in_card_64",
+    "in_hparams"
+   ],
+   "quotes": [
+    {
+     "id": "in_fpc",
+     "quote": "\"frames_per_clip\": 64,",
+     "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_config.json"
+    },
+    {
+     "id": "in_card_64",
+     "quote": "To load a video, sample the number of frames according to the model. For this model, we use 64.",
+     "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_README.md"
+    },
+    {
+     "id": "in_hparams",
+     "quote": "Parameter Primary Phase Cooldown Phase Number of frames 16 64 Frames per Second 4.0 4.0 Crop Size 256 [256, 384, 512]",
+     "source_url": "https://arxiv.org/html/2506.09985",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt"
+    }
+   ]
+  },
+  "temporal_compression": {
+   "value": "tubelet 2 frames (64 -> 32 token slices)",
+   "quote_ids": [
+    "in_tub"
+   ],
+   "quotes": [
+    {
+     "id": "in_tub",
+     "quote": "\"tubelet_size\": 2,",
+     "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_config.json"
+    }
+   ]
+  },
+  "spatial_compression": {
+   "value": "16x16 patches (256 -> 16x16 = 256 tokens per slice; 384 -> 24x24)",
+   "quote_ids": [
+    "in_patch"
+   ],
+   "quotes": [
+    {
+     "id": "in_patch",
+     "quote": "\"patch_size\": 16,",
+     "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_config.json"
+    }
+   ]
+  }
+ },
+ "embedding_dim": {
+  "value": "ViT-g/16 @64x256: 1408 x (32 x 16 x 16) = 1408 x 8192 tokens; ViT-g/16-384: 1408 x (32 x 24 x 24) = 1408 x 18432; ViT-H: 1280 x 8192; ViT-L: 1024 x 8192. Pooled dim = hidden size when an attentive / mean pool is applied (no fixed pooled output).",
+  "derivation": "hidden_size from HF configs; grid from frames_per_clip 64 / tubelet 2 and crop / patch 16",
+  "quote_ids": [
+   "in_hid_g",
+   "in_hid_h",
+   "in_hid_l",
+   "in_fpc",
+   "in_tub",
+   "in_patch"
+  ],
+  "quotes": [
+   {
+    "id": "in_hid_g",
+    "quote": "\"hidden_size\": 1408,",
+    "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_config.json"
+   },
+   {
+    "id": "in_hid_h",
+    "quote": "\"hidden_size\": 1280,",
+    "source_url": "https://huggingface.co/facebook/vjepa2-vith-fpc64-256/raw/main/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vith-fpc64-256_config.json"
+   },
+   {
+    "id": "in_hid_l",
+    "quote": "\"hidden_size\": 1024,",
+    "source_url": "https://huggingface.co/facebook/vjepa2-vitl-fpc64-256/raw/main/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitl-fpc64-256_config.json"
+   },
+   {
+    "id": "in_fpc",
+    "quote": "\"frames_per_clip\": 64,",
+    "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_config.json"
+   },
+   {
+    "id": "in_tub",
+    "quote": "\"tubelet_size\": 2,",
+    "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_config.json"
+   },
+   {
+    "id": "in_patch",
+    "quote": "\"patch_size\": 16,",
+    "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_config.json"
+   }
+  ]
+ },
+ "params": {
+  "value": "ViT-L/16 300M, ViT-H/16 600M, ViT-g/16 1B, ViT-g/16-384 1B (encoder; README '#Parameters')",
+  "scope": "encoder",
+  "quote_ids": [
+   "par_hdr",
+   "par_l",
+   "par_h",
+   "par_g"
+  ],
+  "quotes": [
+   {
+    "id": "par_hdr",
+    "quote": "<th colspan=\"1\">#Parameters</th>",
+    "source_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_github_README.md"
+   },
+   {
+    "id": "par_l",
+    "quote": "<td>ViT-L/16</td> <td>300M</td> <td>256</td> <td><a href=\"https://dl.fbaipublicfiles.com/vjepa2/vitl.pt\">checkpoint</a></td>",
+    "source_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_github_README.md"
+   },
+   {
+    "id": "par_h",
+    "quote": "<td>ViT-H/16</td> <td>600M</td> <td>256</td>",
+    "source_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_github_README.md"
+   },
+   {
+    "id": "par_g",
+    "quote": "<td>ViT-g/16</td> <td>1B</td> <td>256</td> <td><a href=\"https://dl.fbaipublicfiles.com/vjepa2/vitg.pt\">checkpoint</a></td>",
+    "source_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_github_README.md"
+   }
+  ]
+ },
+ "flops_per_input_if_documented": null,
+ "flops_note": "no FLOPs/MACs per input stated in the saved paper, README, card or blog (searched FLOP)",
+ "eligibility": {
+  "C1_open_weights": {
+   "status": "PASS",
+   "basis": "HF API lists model.safetensors for the four encoder repos, gated=False; README also links public dl.fbaipublicfiles checkpoints (HEAD 200)",
+   "quote_ids": [
+    "w_file_g",
+    "w_gated_g",
+    "w_head_g"
+   ],
+   "quotes": [
+    {
+     "id": "w_file_g",
+     "quote": "\"rfilename\": \"model.safetensors\",",
+     "source_url": "https://huggingface.co/api/models/facebook/vjepa2-vitg-fpc64-256?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_facebook__vjepa2-vitg-fpc64-256_hfapi.json"
+    },
+    {
+     "id": "w_gated_g",
+     "quote": "\"gated\": false,",
+     "source_url": "https://huggingface.co/api/models/facebook/vjepa2-vitg-fpc64-256?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_facebook__vjepa2-vitg-fpc64-256_hfapi.json"
+    },
+    {
+     "id": "w_head_g",
+     "quote": "\"Content-Length\": \"16464208210\",",
+     "source_url": "https://dl.fbaipublicfiles.com/vjepa2/vitg.pt",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_head_vitg.json"
+    }
+   ]
+  },
+  "C2_licence_research_use": {
+   "status": "PASS",
+   "basis": "MIT (repo) / Apache-2.0 (vitg card tags)",
+   "quote_ids": [
+    "lic_mit",
+    "lic_card_g"
+   ],
+   "quotes": [
+    {
+     "id": "lic_mit",
+     "quote": "MIT License Copyright (c) Meta Platforms, Inc. and affiliates.",
+     "source_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/LICENSE",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_github_LICENSE.txt"
+    },
+    {
+     "id": "lic_card_g",
+     "quote": "license: apache-2.0",
+     "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_README.md"
+    }
+   ]
+  },
+  "C3_domain_secondary": {
+   "status": "FAIL",
+   "basis": "latent-space feature predictor without a pixel decoder; the authors set the JEPA approach apart from 'approaches based on video generation' and 'generative objectives' that 'make pixel-level predictions' -> FAIL under the v1 convention (V-JEPA family)",
+   "quote_ids": [
+    "dom_contrast",
+    "dom_featpred"
+   ],
+   "quotes": [
+    {
+     "id": "dom_contrast",
+     "quote": "in contrast to approaches based on video generation, the JEPA approach focuses on learning representations for predictable aspects of a scene (e.g., the trajectory of an object in motion) while ignoring unpredictable details that generative objectives emphasize, since they make pixel-level predictions",
+     "source_url": "https://arxiv.org/html/2506.09985",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt"
+    },
+    {
+     "id": "dom_featpred",
+     "quote": "we use a mask-denoising feature prediction objective ( Assran et al., 2023 ; Bardes et al., 2024 ) , where the model predicts masked segments of a video in a learned representation space.",
+     "source_url": "https://arxiv.org/html/2506.09985",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt"
+    }
+   ]
+  },
+  "C4_documented_pretraining_data": {
+   "status": "PASS",
+   "basis": "paper Table 1 lists every VideoMix22M source with sample counts and hours",
+   "quote_ids": [
+    "data_t1",
+    "data_rows"
+   ],
+   "quotes": [
+    {
+     "id": "data_t1",
+     "quote": "Table 1: VideoMix22M (VM22M) Pretraining Dataset. To build our observation pretraining dataset, we combined four different video sources and one image dataset.",
+     "source_url": "https://arxiv.org/html/2506.09985",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt"
+    },
+    {
+     "id": "data_rows",
+     "quote": "SSv2 ( Goyal et al., 2017 ) 168K EgoVideo 168 No 0.056 Kinetics ( Carreira et al., 2019 ) 733K ExoVideo 614 No 0.188 Howto100M ( Miech et al., 2019 ) 1.1M ExoVideo 134K No 0.318 YT-Temporal-1B ( Zellers et al., 2022 ) 19M ExoVideo 1.6M Yes 0.188 ImageNet ( Deng et al., 2009 ) 1M Images n/a No 0.250",
+     "source_url": "https://arxiv.org/html/2506.09985",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt"
+    }
+   ]
+  },
+  "eligible": "NO (fails C3: feature-prediction model explicitly contrasted with generative objectives by its authors)"
+ },
+ "quotes": [
+  {
+   "id": "w_file_g",
+   "quote": "\"rfilename\": \"model.safetensors\",",
+   "source_file": "vjepa2_facebook__vjepa2-vitg-fpc64-256_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_facebook__vjepa2-vitg-fpc64-256_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/facebook/vjepa2-vitg-fpc64-256?blobs=true",
+   "final_url": "https://huggingface.co/api/models/facebook/vjepa2-vitg-fpc64-256?blobs=true",
+   "raw_sha256": "7c4454fb9272df8c00e0b482bd7114e0ec76d963bd206c6a9c88ac51de6d1bf7",
+   "copy_sha256": "350ebb90b5546b35064c97f31d2369488bd7aacf9be4ef8289d56078baa87eb4",
+   "retrieved_utc": "2026-10-02T09:38:50+00:00"
+  },
+  {
+   "id": "w_gated_g",
+   "quote": "\"gated\": false,",
+   "source_file": "vjepa2_facebook__vjepa2-vitg-fpc64-256_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_facebook__vjepa2-vitg-fpc64-256_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/facebook/vjepa2-vitg-fpc64-256?blobs=true",
+   "final_url": "https://huggingface.co/api/models/facebook/vjepa2-vitg-fpc64-256?blobs=true",
+   "raw_sha256": "7c4454fb9272df8c00e0b482bd7114e0ec76d963bd206c6a9c88ac51de6d1bf7",
+   "copy_sha256": "350ebb90b5546b35064c97f31d2369488bd7aacf9be4ef8289d56078baa87eb4",
+   "retrieved_utc": "2026-10-02T09:38:50+00:00"
+  },
+  {
+   "id": "w_file_l",
+   "quote": "\"rfilename\": \"model.safetensors\",",
+   "source_file": "vjepa2_facebook__vjepa2-vitl-fpc64-256_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_facebook__vjepa2-vitl-fpc64-256_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/facebook/vjepa2-vitl-fpc64-256?blobs=true",
+   "final_url": "https://huggingface.co/api/models/facebook/vjepa2-vitl-fpc64-256?blobs=true",
+   "raw_sha256": "ed961ff7eccf360f7a62f9bd9200082915bdf4d29aafcf53ce6df4f1ea1aaac0",
+   "copy_sha256": "ae149cf9ad71a765824df22da5ba4269053c323a461055f4136406bea8b07987",
+   "retrieved_utc": "2026-10-02T09:38:47+00:00"
+  },
+  {
+   "id": "w_readme_g",
+   "quote": "<td><a href=\"https://dl.fbaipublicfiles.com/vjepa2/vitg.pt\">checkpoint</a></td>",
+   "source_file": "vjepa2_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/README.md",
+   "raw_sha256": "55f8485d734a08d23170322cd13ad5ac2f4d63b3d1fd542b10ec0907042c5bb6",
+   "copy_sha256": "55f8485d734a08d23170322cd13ad5ac2f4d63b3d1fd542b10ec0907042c5bb6",
+   "retrieved_utc": "2026-10-02T09:38:53+00:00"
+  },
+  {
+   "id": "w_head_g",
+   "quote": "\"Content-Length\": \"16464208210\",",
+   "source_file": "vjepa2_head_vitg.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_head_vitg.json",
+   "source_url": "https://dl.fbaipublicfiles.com/vjepa2/vitg.pt",
+   "final_url": "https://dl.fbaipublicfiles.com/vjepa2/vitg.pt",
+   "raw_sha256": "367b532c53f9dcd030392e19ffeb4021a8c4fd77a76b5bfae54a37c60f0a2811",
+   "copy_sha256": "367b532c53f9dcd030392e19ffeb4021a8c4fd77a76b5bfae54a37c60f0a2811",
+   "retrieved_utc": "2026-10-02T09:39:29+00:00"
+  },
+  {
+   "id": "lic_mit",
+   "quote": "MIT License Copyright (c) Meta Platforms, Inc. and affiliates.",
+   "source_file": "vjepa2_github_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_github_LICENSE.txt",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/LICENSE",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/LICENSE",
+   "raw_sha256": "cf9b17822d1fcd4ff32ccbe14183386fb3adf6f2ff92dc184130823f7fc28173",
+   "copy_sha256": "cf9b17822d1fcd4ff32ccbe14183386fb3adf6f2ff92dc184130823f7fc28173",
+   "retrieved_utc": "2026-10-02T09:38:53+00:00"
+  },
+  {
+   "id": "lic_readme",
+   "quote": "The majority of V-JEPA 2 is licensed under MIT, however portions of the project are available under separate license terms:",
+   "source_file": "vjepa2_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/README.md",
+   "raw_sha256": "55f8485d734a08d23170322cd13ad5ac2f4d63b3d1fd542b10ec0907042c5bb6",
+   "copy_sha256": "55f8485d734a08d23170322cd13ad5ac2f4d63b3d1fd542b10ec0907042c5bb6",
+   "retrieved_utc": "2026-10-02T09:38:53+00:00"
+  },
+  {
+   "id": "lic_card_g",
+   "quote": "license: apache-2.0",
+   "source_file": "vjepa2_vjepa2-vitg-fpc64-256_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_README.md",
+   "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/README.md",
+   "final_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/README.md",
+   "raw_sha256": "78416c6e9a8d37dc16a8e631b03c53ebd260c903e83ed062d905d1a3e1c5db0e",
+   "copy_sha256": "78416c6e9a8d37dc16a8e631b03c53ebd260c903e83ed062d905d1a3e1c5db0e",
+   "retrieved_utc": "2026-10-02T09:38:50+00:00"
+  },
+  {
+   "id": "lic_card_l",
+   "quote": "license: mit",
+   "source_file": "vjepa2_vjepa2-vitl-fpc64-256_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitl-fpc64-256_README.md",
+   "source_url": "https://huggingface.co/facebook/vjepa2-vitl-fpc64-256/raw/main/README.md",
+   "final_url": "https://huggingface.co/facebook/vjepa2-vitl-fpc64-256/raw/main/README.md",
+   "raw_sha256": "65f3dde72ddc07cf28e25cf11680626bf9e7fbf1d3a8b20695f878c070555212",
+   "copy_sha256": "65f3dde72ddc07cf28e25cf11680626bf9e7fbf1d3a8b20695f878c070555212",
+   "retrieved_utc": "2026-10-02T09:38:47+00:00"
+  },
+  {
+   "id": "dom_contrast",
+   "quote": "in contrast to approaches based on video generation, the JEPA approach focuses on learning representations for predictable aspects of a scene (e.g., the trajectory of an object in motion) while ignoring unpredictable details that generative objectives emphasize, since they make pixel-level predictions",
+   "source_file": "vjepa2_arxiv_2506.09985_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2506.09985",
+   "final_url": "https://arxiv.org/html/2506.09985",
+   "raw_sha256": "7aae72a658ea1d1e14b4b61d3825dd79c41c55f80e9ac129a5367b00bbe854da",
+   "copy_sha256": "668a5e6df490cec1da7589761712948530a6331910360ea71c6583ffe544a5c1",
+   "retrieved_utc": "2026-10-02T09:38:54+00:00"
+  },
+  {
+   "id": "dom_featpred",
+   "quote": "we use a mask-denoising feature prediction objective ( Assran et al., 2023 ; Bardes et al., 2024 ) , where the model predicts masked segments of a video in a learned representation space.",
+   "source_file": "vjepa2_arxiv_2506.09985_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2506.09985",
+   "final_url": "https://arxiv.org/html/2506.09985",
+   "raw_sha256": "7aae72a658ea1d1e14b4b61d3825dd79c41c55f80e9ac129a5367b00bbe854da",
+   "copy_sha256": "668a5e6df490cec1da7589761712948530a6331910360ea71c6583ffe544a5c1",
+   "retrieved_utc": "2026-10-02T09:38:54+00:00"
+  },
+  {
+   "id": "dom_l1",
+   "quote": "The outputs of the predictor are then regressed to the prediction targets using an L1 loss.",
+   "source_file": "vjepa2_arxiv_2506.09985_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2506.09985",
+   "final_url": "https://arxiv.org/html/2506.09985",
+   "raw_sha256": "7aae72a658ea1d1e14b4b61d3825dd79c41c55f80e9ac129a5367b00bbe854da",
+   "copy_sha256": "668a5e6df490cec1da7589761712948530a6331910360ea71c6583ffe544a5c1",
+   "retrieved_utc": "2026-10-02T09:38:54+00:00"
+  },
+  {
+   "id": "dom_blog_wm",
+   "quote": "Meta Video Joint Embedding Predictive Architecture 2 (V-JEPA 2) is a world model that achieves state-of-the-art performance on visual understanding and prediction in the physical world.",
+   "source_file": "vjepa2_meta_blog.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_meta_blog.txt",
+   "source_url": "https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/",
+   "final_url": "https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/",
+   "raw_sha256": "314535174c673c1bed53df07536194acb3515ace83f43ca74c4bfccd1b7faab3",
+   "copy_sha256": "335986c029c61fda29311dece67204eea3911c08807b4a9113e7a49d75145f71",
+   "retrieved_utc": "2026-10-02T09:38:56+00:00"
+  },
+  {
+   "id": "dom_card_use",
+   "quote": "V-JEPA 2 is intended to represent any video (and image) to perform video classification, retrieval, or as a video encoder for VLMs.",
+   "source_file": "vjepa2_vjepa2-vitg-fpc64-256_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_README.md",
+   "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/README.md",
+   "final_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/README.md",
+   "raw_sha256": "78416c6e9a8d37dc16a8e631b03c53ebd260c903e83ed062d905d1a3e1c5db0e",
+   "copy_sha256": "78416c6e9a8d37dc16a8e631b03c53ebd260c903e83ed062d905d1a3e1c5db0e",
+   "retrieved_utc": "2026-10-02T09:38:50+00:00"
+  },
+  {
+   "id": "data_t1",
+   "quote": "Table 1: VideoMix22M (VM22M) Pretraining Dataset. To build our observation pretraining dataset, we combined four different video sources and one image dataset.",
+   "source_file": "vjepa2_arxiv_2506.09985_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2506.09985",
+   "final_url": "https://arxiv.org/html/2506.09985",
+   "raw_sha256": "7aae72a658ea1d1e14b4b61d3825dd79c41c55f80e9ac129a5367b00bbe854da",
+   "copy_sha256": "668a5e6df490cec1da7589761712948530a6331910360ea71c6583ffe544a5c1",
+   "retrieved_utc": "2026-10-02T09:38:54+00:00"
+  },
+  {
+   "id": "data_rows",
+   "quote": "SSv2 ( Goyal et al., 2017 ) 168K EgoVideo 168 No 0.056 Kinetics ( Carreira et al., 2019 ) 733K ExoVideo 614 No 0.188 Howto100M ( Miech et al., 2019 ) 1.1M ExoVideo 134K No 0.318 YT-Temporal-1B ( Zellers et al., 2022 ) 19M ExoVideo 1.6M Yes 0.188 ImageNet ( Deng et al., 2009 ) 1M Images n/a No 0.250",
+   "source_file": "vjepa2_arxiv_2506.09985_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2506.09985",
+   "final_url": "https://arxiv.org/html/2506.09985",
+   "raw_sha256": "7aae72a658ea1d1e14b4b61d3825dd79c41c55f80e9ac129a5367b00bbe854da",
+   "copy_sha256": "668a5e6df490cec1da7589761712948530a6331910360ea71c6583ffe544a5c1",
+   "retrieved_utc": "2026-10-02T09:38:54+00:00"
+  },
+  {
+   "id": "data_sources",
+   "quote": "YouTube tutorial videos from HowTo100M ( Miech et al., 2019 ) , and general YouTube videos from YT-Temporal-1B ( Zellers et al., 2022 ) , which we refer to as YT1B.",
+   "source_file": "vjepa2_arxiv_2506.09985_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2506.09985",
+   "final_url": "https://arxiv.org/html/2506.09985",
+   "raw_sha256": "7aae72a658ea1d1e14b4b61d3825dd79c41c55f80e9ac129a5367b00bbe854da",
+   "copy_sha256": "668a5e6df490cec1da7589761712948530a6331910360ea71c6583ffe544a5c1",
+   "retrieved_utc": "2026-10-02T09:38:54+00:00"
+  },
+  {
+   "id": "ht_youtube",
+   "quote": "HowTo100M features 1.22 million videos from YouTube, with activities from domains such as cooking, hand crafting, personal care, gardening, etc.",
+   "source_file": "howto100m_arxiv_1906.03327v2.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt",
+   "source_url": "https://arxiv.org/pdf/1906.03327v2",
+   "final_url": "https://arxiv.org/pdf/1906.03327v2",
+   "raw_sha256": "f55dbcb6598acecdedd0178243457eed6daf14626744e9bc50b0622cdbf58894",
+   "copy_sha256": "42b4b6318cb2c87d2fdd18562e3d20f837b0e8c21159dfe1edfae58406a460ab",
+   "retrieved_utc": "2026-10-02T09:36:51+00:00"
+  },
+  {
+   "id": "ht_health",
+   "quote": "Health 172 1.7M Emotional Health 63 853k Conditions and Treatments 35 271k Injury and Accidents 22 147k Medication and Equipment 20 138k",
+   "source_file": "howto100m_arxiv_1906.03327v2.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt",
+   "source_url": "https://arxiv.org/pdf/1906.03327v2",
+   "final_url": "https://arxiv.org/pdf/1906.03327v2",
+   "raw_sha256": "f55dbcb6598acecdedd0178243457eed6daf14626744e9bc50b0622cdbf58894",
+   "copy_sha256": "42b4b6318cb2c87d2fdd18562e3d20f837b0e8c21159dfe1edfae58406a460ab",
+   "retrieved_utc": "2026-10-02T09:36:51+00:00"
+  },
+  {
+   "id": "in_crop_g",
+   "quote": "\"crop_size\": 256,",
+   "source_file": "vjepa2_vjepa2-vitg-fpc64-256_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_config.json",
+   "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/config.json",
+   "final_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/config.json",
+   "raw_sha256": "d76799e52c1a5cf6b1e9204857232dd8047b034a9538e89e0c215df6859210c2",
+   "copy_sha256": "d76799e52c1a5cf6b1e9204857232dd8047b034a9538e89e0c215df6859210c2",
+   "retrieved_utc": "2026-10-02T09:38:51+00:00"
+  },
+  {
+   "id": "in_crop_384",
+   "quote": "\"crop_size\": 384,",
+   "source_file": "vjepa2_vjepa2-vitg-fpc64-384_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-384_config.json",
+   "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-384/raw/main/config.json",
+   "final_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-384/raw/main/config.json",
+   "raw_sha256": "f61323b6d7d671e8d591c54cc1d7a518cfcde1281c4d9543069e04abd18d63c4",
+   "copy_sha256": "f61323b6d7d671e8d591c54cc1d7a518cfcde1281c4d9543069e04abd18d63c4",
+   "retrieved_utc": "2026-10-02T09:38:52+00:00"
+  },
+  {
+   "id": "in_fpc",
+   "quote": "\"frames_per_clip\": 64,",
+   "source_file": "vjepa2_vjepa2-vitg-fpc64-256_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_config.json",
+   "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/config.json",
+   "final_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/config.json",
+   "raw_sha256": "d76799e52c1a5cf6b1e9204857232dd8047b034a9538e89e0c215df6859210c2",
+   "copy_sha256": "d76799e52c1a5cf6b1e9204857232dd8047b034a9538e89e0c215df6859210c2",
+   "retrieved_utc": "2026-10-02T09:38:51+00:00"
+  },
+  {
+   "id": "in_card_64",
+   "quote": "To load a video, sample the number of frames according to the model. For this model, we use 64.",
+   "source_file": "vjepa2_vjepa2-vitg-fpc64-256_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_README.md",
+   "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/README.md",
+   "final_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/README.md",
+   "raw_sha256": "78416c6e9a8d37dc16a8e631b03c53ebd260c903e83ed062d905d1a3e1c5db0e",
+   "copy_sha256": "78416c6e9a8d37dc16a8e631b03c53ebd260c903e83ed062d905d1a3e1c5db0e",
+   "retrieved_utc": "2026-10-02T09:38:50+00:00"
+  },
+  {
+   "id": "in_tub",
+   "quote": "\"tubelet_size\": 2,",
+   "source_file": "vjepa2_vjepa2-vitg-fpc64-256_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_config.json",
+   "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/config.json",
+   "final_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/config.json",
+   "raw_sha256": "d76799e52c1a5cf6b1e9204857232dd8047b034a9538e89e0c215df6859210c2",
+   "copy_sha256": "d76799e52c1a5cf6b1e9204857232dd8047b034a9538e89e0c215df6859210c2",
+   "retrieved_utc": "2026-10-02T09:38:51+00:00"
+  },
+  {
+   "id": "in_patch",
+   "quote": "\"patch_size\": 16,",
+   "source_file": "vjepa2_vjepa2-vitg-fpc64-256_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_config.json",
+   "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/config.json",
+   "final_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/config.json",
+   "raw_sha256": "d76799e52c1a5cf6b1e9204857232dd8047b034a9538e89e0c215df6859210c2",
+   "copy_sha256": "d76799e52c1a5cf6b1e9204857232dd8047b034a9538e89e0c215df6859210c2",
+   "retrieved_utc": "2026-10-02T09:38:51+00:00"
+  },
+  {
+   "id": "in_hid_g",
+   "quote": "\"hidden_size\": 1408,",
+   "source_file": "vjepa2_vjepa2-vitg-fpc64-256_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitg-fpc64-256_config.json",
+   "source_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/config.json",
+   "final_url": "https://huggingface.co/facebook/vjepa2-vitg-fpc64-256/raw/main/config.json",
+   "raw_sha256": "d76799e52c1a5cf6b1e9204857232dd8047b034a9538e89e0c215df6859210c2",
+   "copy_sha256": "d76799e52c1a5cf6b1e9204857232dd8047b034a9538e89e0c215df6859210c2",
+   "retrieved_utc": "2026-10-02T09:38:51+00:00"
+  },
+  {
+   "id": "in_hid_h",
+   "quote": "\"hidden_size\": 1280,",
+   "source_file": "vjepa2_vjepa2-vith-fpc64-256_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vith-fpc64-256_config.json",
+   "source_url": "https://huggingface.co/facebook/vjepa2-vith-fpc64-256/raw/main/config.json",
+   "final_url": "https://huggingface.co/facebook/vjepa2-vith-fpc64-256/raw/main/config.json",
+   "raw_sha256": "8009232ce1da31a4aa0788fe018da56bff719eee11c8ec61989060b8e787b7f4",
+   "copy_sha256": "8009232ce1da31a4aa0788fe018da56bff719eee11c8ec61989060b8e787b7f4",
+   "retrieved_utc": "2026-10-02T09:38:49+00:00"
+  },
+  {
+   "id": "in_hid_l",
+   "quote": "\"hidden_size\": 1024,",
+   "source_file": "vjepa2_vjepa2-vitl-fpc64-256_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_vjepa2-vitl-fpc64-256_config.json",
+   "source_url": "https://huggingface.co/facebook/vjepa2-vitl-fpc64-256/raw/main/config.json",
+   "final_url": "https://huggingface.co/facebook/vjepa2-vitl-fpc64-256/raw/main/config.json",
+   "raw_sha256": "3dec96fe962e94e569182d3a7b9ef0dd74b6b8c89c337a428e43e10d593e70c9",
+   "copy_sha256": "3dec96fe962e94e569182d3a7b9ef0dd74b6b8c89c337a428e43e10d593e70c9",
+   "retrieved_utc": "2026-10-02T09:38:48+00:00"
+  },
+  {
+   "id": "in_hparams",
+   "quote": "Parameter Primary Phase Cooldown Phase Number of frames 16 64 Frames per Second 4.0 4.0 Crop Size 256 [256, 384, 512]",
+   "source_file": "vjepa2_arxiv_2506.09985_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2506.09985",
+   "final_url": "https://arxiv.org/html/2506.09985",
+   "raw_sha256": "7aae72a658ea1d1e14b4b61d3825dd79c41c55f80e9ac129a5367b00bbe854da",
+   "copy_sha256": "668a5e6df490cec1da7589761712948530a6331910360ea71c6583ffe544a5c1",
+   "retrieved_utc": "2026-10-02T09:38:54+00:00"
+  },
+  {
+   "id": "in_64_16s",
+   "quote": "we explore training with longer clips of up to 64 frames (16 seconds) at higher spatial resolutions.",
+   "source_file": "vjepa2_arxiv_2506.09985_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_arxiv_2506.09985_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2506.09985",
+   "final_url": "https://arxiv.org/html/2506.09985",
+   "raw_sha256": "7aae72a658ea1d1e14b4b61d3825dd79c41c55f80e9ac129a5367b00bbe854da",
+   "copy_sha256": "668a5e6df490cec1da7589761712948530a6331910360ea71c6583ffe544a5c1",
+   "retrieved_utc": "2026-10-02T09:38:54+00:00"
+  },
+  {
+   "id": "par_hdr",
+   "quote": "<th colspan=\"1\">#Parameters</th>",
+   "source_file": "vjepa2_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/README.md",
+   "raw_sha256": "55f8485d734a08d23170322cd13ad5ac2f4d63b3d1fd542b10ec0907042c5bb6",
+   "copy_sha256": "55f8485d734a08d23170322cd13ad5ac2f4d63b3d1fd542b10ec0907042c5bb6",
+   "retrieved_utc": "2026-10-02T09:38:53+00:00"
+  },
+  {
+   "id": "par_l",
+   "quote": "<td>ViT-L/16</td> <td>300M</td> <td>256</td> <td><a href=\"https://dl.fbaipublicfiles.com/vjepa2/vitl.pt\">checkpoint</a></td>",
+   "source_file": "vjepa2_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/README.md",
+   "raw_sha256": "55f8485d734a08d23170322cd13ad5ac2f4d63b3d1fd542b10ec0907042c5bb6",
+   "copy_sha256": "55f8485d734a08d23170322cd13ad5ac2f4d63b3d1fd542b10ec0907042c5bb6",
+   "retrieved_utc": "2026-10-02T09:38:53+00:00"
+  },
+  {
+   "id": "par_h",
+   "quote": "<td>ViT-H/16</td> <td>600M</td> <td>256</td>",
+   "source_file": "vjepa2_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/README.md",
+   "raw_sha256": "55f8485d734a08d23170322cd13ad5ac2f4d63b3d1fd542b10ec0907042c5bb6",
+   "copy_sha256": "55f8485d734a08d23170322cd13ad5ac2f4d63b3d1fd542b10ec0907042c5bb6",
+   "retrieved_utc": "2026-10-02T09:38:53+00:00"
+  },
+  {
+   "id": "par_g",
+   "quote": "<td>ViT-g/16</td> <td>1B</td> <td>256</td> <td><a href=\"https://dl.fbaipublicfiles.com/vjepa2/vitg.pt\">checkpoint</a></td>",
+   "source_file": "vjepa2_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa2_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/vjepa2/main/README.md",
+   "raw_sha256": "55f8485d734a08d23170322cd13ad5ac2f4d63b3d1fd542b10ec0907042c5bb6",
+   "copy_sha256": "55f8485d734a08d23170322cd13ad5ac2f4d63b3d1fd542b10ec0907042c5bb6",
+   "retrieved_utc": "2026-10-02T09:38:53+00:00"
+  }
+ ],
+ "all_quotes_verified": true,
+ "record_written_utc": "2026-10-02T09:40:48+00:00"
+}

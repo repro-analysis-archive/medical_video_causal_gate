@@ -396,3 +396,63 @@ RECORDS.append({
     },
     "extra_sources": ["gsvit_arxiv_abs", "gsvit_download_videos"],
 })
+
+# ---------------------------------------------------------------------------------------------
+RECORDS.append({
+    "name": "SurgVLP / HecVL / PeskaVLP (CAMMA surgical video-language models)",
+    "paper": {
+        "title": "SurgVLP: Learning Multi-modal Representations by Watching Hundreds of Surgical Video Lectures (MedIA 2025, arXiv 2307.15220); HecVL: Hierarchical Video-Language Pretraining for Zero-shot Surgical Phase Recognition (MICCAI 2024, arXiv 2405.10075); PeskaVLP: Procedure-Aware Surgical Video-language Pretraining with Hierarchical Knowledge Augmentation (NeurIPS 2024, arXiv 2410.00263)",
+        "year": "2024-2025", "venue": "Medical Image Analysis 2025 / MICCAI 2024 / NeurIPS 2024",
+        "arxiv": "2307.15220; 2405.10075; 2410.00263",
+        "quotes": [Q("This repository provides the Surgical Vision-Language Pretraining Model (SurgVLP) and its variants: HecVL [2] (MICCAI 2024), and PeskaVLP [3] (NeurIPS 2024).", "surgvlp_github_readme")],
+    },
+    "weights": {
+        "url": "SurgVLP https://seafile.unistra.fr/f/93757ace1bfc47248e1e/?dl=1 ; HecVL https://seafile.unistra.fr/f/3b9b9207068a4b03bc2a/?dl=1 ; PeskaVLP https://seafile.unistra.fr/f/65a2b1bf113e428280d0/?dl=1",
+        "exists": "YES - HEAD requests resolve to SurgVLP.zip (495,063,240 B), HecVL.zip (495,069,659 B), PeskaVLP.zip (495,071,118 B) on seafile.unistra.fr (not downloaded); no login",
+        "request_or_registration_required": False,
+        "quotes": [Q("- SurgVLP [1]: https://seafile.unistra.fr/f/93757ace1bfc47248e1e/?dl=1", "surgvlp_github_readme"),
+                   Q('"content_length": "495063240"', "surgvlp_weights_check"),
+                   Q('"final_url": "https://seafile.unistra.fr/seafhttp/files/7e7b5df7-9153-475c-9f8c-9b8885725f54/PeskaVLP.zip"', "peskavlp_weights_check"),
+                   Q('"final_url": "https://seafile.unistra.fr/seafhttp/files/a6b845c2-d22e-42bf-9487-63392ac1bdeb/HecVL.zip"', "hecvl_weights_check")],
+    },
+    "licence": {
+        "code": "CC BY-NC-SA 4.0 (README statement covers code and models; the referenced LICENSE file is not present in the repo root)",
+        "weights": "CC BY-NC-SA 4.0 - non-commercial scientific research",
+        "url": "https://github.com/CAMMA-public/SurgVLP#license",
+        "code_and_weights_differ": "no - same statement for code and models",
+        "quotes": [Q("The code and the models are available for non-commercial scientific research purposes as defined in the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).", "surgvlp_github_readme")],
+    },
+    "architecture": {
+        "description": "Dual encoder CLIP-style: ResNet-50 visual encoder (ImageNet-initialised) + BioClinicalBERT text encoder; clip embedding = average of per-frame embeddings",
+        "params": "not stated (ResNet-50 ~25M + BioClinicalBERT ~110M standard figures; each weight zip ~495 MB)",
+        "input": "frames (or clips as sets of frames, average-pooled); preprocessing resize 360x640 then centre crop 224",
+        "quotes": [Q("We employ the ResNet-50 model (He et al., 2016) pretrained on ImageNet as the base architecture for the visual encoder F .", "surgvlp_arxiv_pdf"),
+                   Q("For a given video clip v, we first sample a fixed number of frames {z0 , ..., zT } and then feed them through F", "surgvlp_arxiv_pdf"),
+                   Q("We utilize the dual-encoder architecture with ResNet50 [21] as visual encoder and ClinicalBert [22] as textual encoder, respectively.", "peskavlp_arxiv_pdf"),
+                   Q("transforms.Resize((360, 640)), transforms.CenterCrop(224),", "surgvlp_config_peskavlp"),
+                   Q("text_bert_type='emilyalsentzer/Bio_ClinicalBERT'", "surgvlp_config_peskavlp")],
+    },
+    "pretraining_data": {
+        "summary": "SVL: 1,326 surgical video lectures (~300 h) crawled from WebSurg (1,124 via keywords) and EAES + YouTube (202), with ASR narration; HecVL/PeskaVLP reuse SVL with metadata-derived hierarchical / LLM-augmented texts",
+        "datasets": ["SVL-Pretrain: WebSurg lectures (1,124)", "SVL-Pretrain: EAES + YouTube lectures (202)", "ImageNet (ResNet-50 init)", "BioClinicalBERT (text init)"],
+        "documented_list_complete": False,
+        "youtube_derived": "YES - partly (EAES and YouTube lectures); WebSurg lectures are web-crawled from the IRCAD e-learning platform",
+        "quotes": [Q("we query the videos based on keywords from three online platforms, i.e., Websurg (Websurg, 2023), EAES (EAES, 2023), and YouTube (YouTube, 2023).", "surgvlp_arxiv_pdf"),
+                   Q("For Websurg, we use “intervention” and “laparoscopic” as keywords to crawl 1, 124 surgical lectures.", "surgvlp_arxiv_pdf"),
+                   Q("For EAES and YouTube, we manually collect 202 surgical video lectures using manually designed keywords.", "surgvlp_arxiv_pdf"),
+                   Q("In total, we collect 1, 326 le", "surgvlp_arxiv_pdf"),
+                   Q("Pretraining dataset: we use the surgical lecture videos from the Surgical Video Lecture dataset (SVL) for the pretraining, which was proposed by the SurgVLP [22].", "hecvl_arxiv_pdf"),
+                   Q("In this work, we use this hierarchical video-language pretraining dataset and perform hierarchical knowledge augmentation to improve the textual quality.", "peskavlp_arxiv_pdf")],
+    },
+    "appendix300_in_pretraining": {
+        "answer": "UNKNOWN",
+        "reason": "Pretraining videos are keyword-crawled lectures from WebSurg/EAES/YouTube; individual videos and their originating hospitals are not listed, so inclusion of a Dresden-area appendectomy recording cannot be excluded (WebSurg 'General and digestive surgery' lectures are in scope).",
+        "quotes": [Q("They cover the five main categories, “Hepatobiliary and pancreatic surgery”, “General and digestive surgery”, “Bariatric surgery”, “Hernia surgery” and “Colorectal, transanal and proctological surgery”.", "surgvlp_arxiv_pdf")],
+    },
+    "eligibility": {
+        "open_weights": "PASS", "licence_research_use": "PASS (non-commercial)", "domain_primary": "PASS",
+        "documented_pretraining_data": "PASS", "eligible": "PASS",
+        "notes": "Documented at the level of sources/platforms and counts (not a per-video list). Visual encoder is a frame-level ResNet-50.",
+    },
+    "extra_sources": ["surgvlp_github_api_repo", "surgvlp_config_surgvlp", "surgvlp_config_hecvl"],
+})

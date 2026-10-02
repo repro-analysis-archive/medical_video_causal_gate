@@ -1,0 +1,642 @@
+{
+ "id": "20_cv_vae",
+ "name": "CV-VAE (AILab-CVC / Tencent AI Lab; HF AILab-CVC/CV-VAE: vae3d, vae3d_v1-1, vae3d_sd3)",
+ "status_in_survey": "added in revision 2 (2026-10-02)",
+ "version": "AILab-CVC/CV-VAE vae3d/ (original 4-channel CV-VAE, released 2024-06-03; diffusion_pytorch_model.safetensors + cv_vae.ckpt); also vae3d_v1-1/ ('updated ... with better performance', 2024-10-14) and vae3d_sd3/ (16-channel, SD3-compatible); paper arXiv:2405.20279 (NeurIPS 2024)",
+ "paper": {
+  "title": "CV-VAE: A Compatible Video VAE for Latent Generative Video Models",
+  "year": 2024,
+  "arxiv": "2405.20279"
+ },
+ "weights_location": {
+  "urls": [
+   "https://huggingface.co/AILab-CVC/CV-VAE/tree/main/vae3d",
+   "https://huggingface.co/AILab-CVC/CV-VAE/tree/main/vae3d_v1-1",
+   "https://huggingface.co/AILab-CVC/CV-VAE/tree/main/vae3d_sd3"
+  ],
+  "files_listed": {
+   "vae3d/diffusion_pytorch_model.safetensors": 729812244,
+   "vae3d/cv_vae.ckpt": 904840525,
+   "vae3d_v1-1/diffusion_pytorch_model.safetensors": 364919214,
+   "vae3d_sd3/diffusion_pytorch_model.safetensors": 727597660
+  },
+  "gated": false,
+  "private": false,
+  "verified_how": "HF API model listing (metadata only) saved as cvvae_AILab-CVC__CV-VAE_hfapi.json; nothing downloaded",
+  "quote_ids": [
+   "w_file",
+   "w_gated",
+   "w_release",
+   "w_v11"
+  ],
+  "quotes": [
+   {
+    "id": "w_file",
+    "quote": "\"rfilename\": \"vae3d/diffusion_pytorch_model.safetensors\",",
+    "source_url": "https://huggingface.co/api/models/AILab-CVC/CV-VAE?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_AILab-CVC__CV-VAE_hfapi.json"
+   },
+   {
+    "id": "w_gated",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/AILab-CVC/CV-VAE?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_AILab-CVC__CV-VAE_hfapi.json"
+   },
+   {
+    "id": "w_release",
+    "quote": "We have released the [inference code](cvvae_inference_video.py) and [model weights](https://huggingface.co/AILab-CVC/CV-VAE/tree/main/vae3d) of CV-VAE.",
+    "source_url": "https://raw.githubusercontent.com/AILab-CVC/CV-VAE/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_github_README.md"
+   },
+   {
+    "id": "w_v11",
+    "quote": "We have updated the CV-VAE with better performance, please check [cv-vae-v1-1](https://huggingface.co/AILab-CVC/CV-VAE/tree/main/vae3d_v1-1).",
+    "source_url": "https://raw.githubusercontent.com/AILab-CVC/CV-VAE/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_github_README.md"
+   }
+  ]
+ },
+ "licence": {
+  "id": "Apache-2.0 (HF card); the GitHub repository has no LICENSE file (GitHub API license: null)",
+  "url": "https://huggingface.co/AILab-CVC/CV-VAE",
+  "commercial": "permitted (Apache-2.0)",
+  "non_commercial_only": false,
+  "restrictions": "none beyond Apache-2.0 (derived from the SD image VAE, upstream licence not audited)",
+  "gating": "none",
+  "quote_ids": [
+   "lic_card"
+  ],
+  "quotes": [
+   {
+    "id": "lic_card",
+    "quote": "license: apache-2.0",
+    "source_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_hf_README.md"
+   }
+  ]
+ },
+ "domain": {
+  "value": "3D (2D+3D) causal-encoder video VAE whose latent space is compatible with SD2.1 / SVD, for latent generative video models; trained on WebVid-10M video + LAION-COCO / Unsplash images",
+  "quote_ids": [
+   "dom_tldr",
+   "data_train"
+  ],
+  "quotes": [
+   {
+    "id": "dom_tldr",
+    "quote": "A video VAE for latent generative video models, which is compatible with pretrained image and video models, e.g., SD 2.1 and SVD",
+    "source_url": "https://raw.githubusercontent.com/AILab-CVC/CV-VAE/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_github_README.md"
+   },
+   {
+    "id": "data_train",
+    "quote": "Training Details. We train our CV-VAE model using image datasets including LAION-COCO [ 9 ] and Unsplash [ 23 ] , as well as the video dataset Webvid-10M [ 3 ] .",
+    "source_url": "https://arxiv.org/html/2405.20279",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt"
+   }
+  ]
+ },
+ "architecture": {
+  "type": "KL video VAE inflated from the Stable Diffusion image VAE (half 2D, half 3D convolutions), temporal downsampling by strides, latent-space regularisation to the SD image VAE",
+  "representation": "encoder latents, 4 channels (z_channels 4), 4x temporal x 8x8 spatial; vae3d_sd3 variant 16 channels"
+ },
+ "pretraining_data": {
+  "summary": "Images: LAION-COCO, Unsplash; video: WebVid-10M (9x256x256 and 17x192x192 clips). Initialised from the SD image VAE. The v1-1 and SD3 variants' data are not separately documented.",
+  "form": "dataset list (named)"
+ },
+ "pretraining_data_quote": {
+  "quote_ids": [
+   "data_train",
+   "data_video",
+   "data_init"
+  ],
+  "quotes": [
+   {
+    "id": "data_train",
+    "quote": "Training Details. We train our CV-VAE model using image datasets including LAION-COCO [ 9 ] and Unsplash [ 23 ] , as well as the video dataset Webvid-10M [ 3 ] .",
+    "source_url": "https://arxiv.org/html/2405.20279",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt"
+   },
+   {
+    "id": "data_video",
+    "quote": "In the case of video datasets, we use two settings of frames and resolutions: 9 × 256 × 256 9 256 256 9\\times 256\\times 256 9 × 256 × 256 and 17 × 192 × 192 17 192 192 17\\times 192\\times 192 17 × 192 × 192 .",
+    "source_url": "https://arxiv.org/html/2405.20279",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt"
+   },
+   {
+    "id": "data_init",
+    "quote": "The architecture of CV-VAE is primarily derived from the VAE in Stable Diffusion [ 28 ] , with several notable differences: (1) Some or all 2D convolutions within the network are transformed into 3D convolutions, while retaining their weights.",
+    "source_url": "https://arxiv.org/html/2405.20279",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt"
+   }
+  ]
+ },
+ "medical_video_in_data": {
+  "answer": "NOT MENTIONED",
+  "basis": "WebVid-10M is scraped stock footage (Shutterstock), open-ended content; term search of the paper and README finds no medical/surgical data statement",
+  "term_search": {
+   "pattern": "medical|surgical|surgery|endoscop|laparoscop|clinical|health|hospital",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_github_README.md": []
+   }
+  }
+ },
+ "appendix300_possible": {
+  "answer": "UNKNOWN",
+  "basis_class": "named_open_web_sources",
+  "basis": "video data = WebVid-10M (named, but scraped from stock-footage sites, open-ended at item level), so the documentation does not allow the Appendix300 source recordings to be excluded. Timing: 2024-06 / 2024-10, before the OPARA issue 2026-04-29.",
+  "quote_ids": [
+   "data_train"
+  ],
+  "quotes": [
+   {
+    "id": "data_train",
+    "quote": "Training Details. We train our CV-VAE model using image datasets including LAION-COCO [ 9 ] and Unsplash [ 23 ] , as well as the video dataset Webvid-10M [ 3 ] .",
+    "source_url": "https://arxiv.org/html/2405.20279",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt"
+   }
+  ]
+ },
+ "appendix300_check": {
+  "answer": "UNKNOWN",
+  "quote_or_statement": "the documented data list does not mention DS203/Appendix300",
+  "basis_class": "named_open_web_sources",
+  "basis": "WebVid-10M (stock footage, open-ended)",
+  "term_search": {
+   "pattern": "appendix ?300|DS203|OPARA|appendectom|appendic",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_github_README.md": []
+   }
+  },
+  "quote_ids": [
+   "data_train"
+  ],
+  "quotes": [
+   {
+    "id": "data_train",
+    "quote": "Training Details. We train our CV-VAE model using image datasets including LAION-COCO [ 9 ] and Unsplash [ 23 ] , as well as the video dataset Webvid-10M [ 3 ] .",
+    "source_url": "https://arxiv.org/html/2405.20279",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt"
+   }
+  ]
+ },
+ "input": {
+  "frame_size": {
+   "value": "video training 256x256 (9 frames) and 192x192 (17 frames); images 256 and 512; tiled encoding (tile_spatial_size 576) for larger inputs",
+   "quote_ids": [
+    "data_video",
+    "in_tile"
+   ],
+   "quotes": [
+    {
+     "id": "data_video",
+     "quote": "In the case of video datasets, we use two settings of frames and resolutions: 9 × 256 × 256 9 256 256 9\\times 256\\times 256 9 × 256 × 256 and 17 × 192 × 192 17 192 192 17\\times 192\\times 192 17 × 192 × 192 .",
+     "source_url": "https://arxiv.org/html/2405.20279",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt"
+    },
+    {
+     "id": "in_tile",
+     "quote": "\"tile_spatial_size\": 576,",
+     "source_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_hf_vae3d_config.json"
+    }
+   ]
+  },
+  "frame_rate_or_sampling": {
+   "value": "training fps/stride not stated; evaluation clips sampled with a frame stride of 3",
+   "quote_ids": [
+    "in_eval"
+   ],
+   "quotes": [
+    {
+     "id": "in_eval",
+     "quote": "Each video is sampled with 33 frames and a frame stride of 3.",
+     "source_url": "https://arxiv.org/html/2405.20279",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt"
+    }
+   ]
+  },
+  "clip_length_frames": {
+   "value": "9 or 17 training frames (causal 1 + 4k); evaluation 33 frames; temporal tiling encodes 16 frames at a time",
+   "quote_ids": [
+    "data_video",
+    "in_eval",
+    "in_nframes"
+   ],
+   "quotes": [
+    {
+     "id": "data_video",
+     "quote": "In the case of video datasets, we use two settings of frames and resolutions: 9 × 256 × 256 9 256 256 9\\times 256\\times 256 9 × 256 × 256 and 17 × 192 × 192 17 192 192 17\\times 192\\times 192 17 × 192 × 192 .",
+     "source_url": "https://arxiv.org/html/2405.20279",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt"
+    },
+    {
+     "id": "in_eval",
+     "quote": "Each video is sampled with 33 frames and a frame stride of 3.",
+     "source_url": "https://arxiv.org/html/2405.20279",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt"
+    },
+    {
+     "id": "in_nframes",
+     "quote": "\"en_de_n_frames_a_time\": 16,",
+     "source_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_hf_vae3d_config.json"
+    }
+   ]
+  },
+  "temporal_compression": {
+   "value": "4x (causal encoder)",
+   "quote_ids": [
+    "in_tc",
+    "in_causal"
+   ],
+   "quotes": [
+    {
+     "id": "in_tc",
+     "quote": "\"time_n_compress\": 4,",
+     "source_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_hf_vae3d_config.json"
+    },
+    {
+     "id": "in_causal",
+     "quote": "\"causal_encoder\": true,",
+     "source_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_hf_vae3d_config.json"
+    }
+   ]
+  },
+  "spatial_compression": {
+   "value": "8x8",
+   "quote_ids": [
+    "in_sc"
+   ],
+   "quotes": [
+    {
+     "id": "in_sc",
+     "quote": "\"spatial_n_compress\": 8,",
+     "source_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_hf_vae3d_config.json"
+    }
+   ]
+  }
+ },
+ "embedding_dim": {
+  "value": "4 latent channels x (1 + (T-1)/4) x H/8 x W/8; e.g. 17 x 192 x 192 -> 4 x 5 x 24 x 24 = 11,520; 33 x 256 x 256 -> 4 x 9 x 32 x 32 = 36,864 values (vae3d_sd3: 16 channels)",
+  "derivation": "z_channels 4, time_n_compress 4, spatial_n_compress 8, causal encoder",
+  "quote_ids": [
+   "in_z",
+   "in_tc",
+   "in_sc",
+   "in_causal",
+   "p_sd3"
+  ],
+  "quotes": [
+   {
+    "id": "in_z",
+    "quote": "\"z_channels\": 4",
+    "source_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_hf_vae3d_config.json"
+   },
+   {
+    "id": "in_tc",
+    "quote": "\"time_n_compress\": 4,",
+    "source_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_hf_vae3d_config.json"
+   },
+   {
+    "id": "in_sc",
+    "quote": "\"spatial_n_compress\": 8,",
+    "source_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_hf_vae3d_config.json"
+   },
+   {
+    "id": "in_causal",
+    "quote": "\"causal_encoder\": true,",
+    "source_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_hf_vae3d_config.json"
+   },
+   {
+    "id": "p_sd3",
+    "quote": "CVVAE-SD3 68M + 114M 4x",
+    "source_url": "https://arxiv.org/html/2405.20279",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt"
+   }
+  ]
+ },
+ "params": {
+  "value": "encoder 68M + decoder 114M (CV-VAE 2D+3D, paper Table 1); CVVAE-SD3 also 68M + 114M",
+  "scope": "encoder 68M",
+  "quote_ids": [
+   "p_main",
+   "p_sd3"
+  ],
+  "quotes": [
+   {
+    "id": "p_main",
+    "quote": "Ours(2D+3D) 68M + 114M 4x",
+    "source_url": "https://arxiv.org/html/2405.20279",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt"
+   },
+   {
+    "id": "p_sd3",
+    "quote": "CVVAE-SD3 68M + 114M 4x",
+    "source_url": "https://arxiv.org/html/2405.20279",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt"
+   }
+  ]
+ },
+ "flops_per_input_if_documented": null,
+ "flops_note": "paper says the 2D+3D design reduces parameters and computation by ~30% vs full 3D, but gives no FLOPs per input (searched FLOP)",
+ "eligibility": {
+  "C1_open_weights": {
+   "status": "PASS",
+   "basis": "HF API lists vae3d/diffusion_pytorch_model.safetensors, gated=False",
+   "quote_ids": [
+    "w_file",
+    "w_gated"
+   ],
+   "quotes": [
+    {
+     "id": "w_file",
+     "quote": "\"rfilename\": \"vae3d/diffusion_pytorch_model.safetensors\",",
+     "source_url": "https://huggingface.co/api/models/AILab-CVC/CV-VAE?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_AILab-CVC__CV-VAE_hfapi.json"
+    },
+    {
+     "id": "w_gated",
+     "quote": "\"gated\": false,",
+     "source_url": "https://huggingface.co/api/models/AILab-CVC/CV-VAE?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_AILab-CVC__CV-VAE_hfapi.json"
+    }
+   ]
+  },
+  "C2_licence_research_use": {
+   "status": "PASS",
+   "basis": "Apache-2.0 on the HF card (no LICENSE file in the GitHub repo)",
+   "quote_ids": [
+    "lic_card"
+   ],
+   "quotes": [
+    {
+     "id": "lic_card",
+     "quote": "license: apache-2.0",
+     "source_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_hf_README.md"
+    }
+   ]
+  },
+  "C3_domain_secondary": {
+   "status": "PASS",
+   "basis": "video VAE for latent generative video models, trained on general video",
+   "quote_ids": [
+    "dom_tldr"
+   ],
+   "quotes": [
+    {
+     "id": "dom_tldr",
+     "quote": "A video VAE for latent generative video models, which is compatible with pretrained image and video models, e.g., SD 2.1 and SVD",
+     "source_url": "https://raw.githubusercontent.com/AILab-CVC/CV-VAE/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_github_README.md"
+    }
+   ]
+  },
+  "C4_documented_pretraining_data": {
+   "status": "PASS",
+   "basis": "paper names the training datasets (WebVid-10M video; LAION-COCO, Unsplash images); caveat: v1-1 / SD3 variants' data not separately documented; SD image-VAE initialisation",
+   "quote_ids": [
+    "data_train"
+   ],
+   "quotes": [
+    {
+     "id": "data_train",
+     "quote": "Training Details. We train our CV-VAE model using image datasets including LAION-COCO [ 9 ] and Unsplash [ 23 ] , as well as the video dataset Webvid-10M [ 3 ] .",
+     "source_url": "https://arxiv.org/html/2405.20279",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt"
+    }
+   ]
+  },
+  "eligible": "YES (all four criteria PASS for vae3d; Appendix300 UNKNOWN; caveats on variant data and SD initialisation)"
+ },
+ "quotes": [
+  {
+   "id": "w_file",
+   "quote": "\"rfilename\": \"vae3d/diffusion_pytorch_model.safetensors\",",
+   "source_file": "cvvae_AILab-CVC__CV-VAE_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_AILab-CVC__CV-VAE_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/AILab-CVC/CV-VAE?blobs=true",
+   "final_url": "https://huggingface.co/api/models/AILab-CVC/CV-VAE?blobs=true",
+   "raw_sha256": "2bf438506c5c8951ca52f3e592d9618311069cd6aebe97c6c406204a32815c48",
+   "copy_sha256": "cf8824fd06e747199f739ff2b9a36edc78c89bcc4ff8a152a8687fe9435ba518",
+   "retrieved_utc": "2026-10-02T09:32:48+00:00"
+  },
+  {
+   "id": "w_gated",
+   "quote": "\"gated\": false,",
+   "source_file": "cvvae_AILab-CVC__CV-VAE_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_AILab-CVC__CV-VAE_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/AILab-CVC/CV-VAE?blobs=true",
+   "final_url": "https://huggingface.co/api/models/AILab-CVC/CV-VAE?blobs=true",
+   "raw_sha256": "2bf438506c5c8951ca52f3e592d9618311069cd6aebe97c6c406204a32815c48",
+   "copy_sha256": "cf8824fd06e747199f739ff2b9a36edc78c89bcc4ff8a152a8687fe9435ba518",
+   "retrieved_utc": "2026-10-02T09:32:48+00:00"
+  },
+  {
+   "id": "w_release",
+   "quote": "We have released the [inference code](cvvae_inference_video.py) and [model weights](https://huggingface.co/AILab-CVC/CV-VAE/tree/main/vae3d) of CV-VAE.",
+   "source_file": "cvvae_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/AILab-CVC/CV-VAE/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/AILab-CVC/CV-VAE/main/README.md",
+   "raw_sha256": "b6bcf6cf4ec944f1454335919356434f526404726cd0d7dafc20f617e8b69422",
+   "copy_sha256": "b6bcf6cf4ec944f1454335919356434f526404726cd0d7dafc20f617e8b69422",
+   "retrieved_utc": "2026-10-02T09:32:39+00:00"
+  },
+  {
+   "id": "w_v11",
+   "quote": "We have updated the CV-VAE with better performance, please check [cv-vae-v1-1](https://huggingface.co/AILab-CVC/CV-VAE/tree/main/vae3d_v1-1).",
+   "source_file": "cvvae_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/AILab-CVC/CV-VAE/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/AILab-CVC/CV-VAE/main/README.md",
+   "raw_sha256": "b6bcf6cf4ec944f1454335919356434f526404726cd0d7dafc20f617e8b69422",
+   "copy_sha256": "b6bcf6cf4ec944f1454335919356434f526404726cd0d7dafc20f617e8b69422",
+   "retrieved_utc": "2026-10-02T09:32:39+00:00"
+  },
+  {
+   "id": "lic_card",
+   "quote": "license: apache-2.0",
+   "source_file": "cvvae_hf_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_hf_README.md",
+   "source_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/README.md",
+   "final_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/README.md",
+   "raw_sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+   "copy_sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+   "retrieved_utc": "2026-10-02T09:32:49+00:00"
+  },
+  {
+   "id": "dom_tldr",
+   "quote": "A video VAE for latent generative video models, which is compatible with pretrained image and video models, e.g., SD 2.1 and SVD",
+   "source_file": "cvvae_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/AILab-CVC/CV-VAE/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/AILab-CVC/CV-VAE/main/README.md",
+   "raw_sha256": "b6bcf6cf4ec944f1454335919356434f526404726cd0d7dafc20f617e8b69422",
+   "copy_sha256": "b6bcf6cf4ec944f1454335919356434f526404726cd0d7dafc20f617e8b69422",
+   "retrieved_utc": "2026-10-02T09:32:39+00:00"
+  },
+  {
+   "id": "data_train",
+   "quote": "Training Details. We train our CV-VAE model using image datasets including LAION-COCO [ 9 ] and Unsplash [ 23 ] , as well as the video dataset Webvid-10M [ 3 ] .",
+   "source_file": "cvvae_arxiv_2405.20279_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2405.20279",
+   "final_url": "https://arxiv.org/html/2405.20279",
+   "raw_sha256": "14172c960bc5d71bc1463a39ed0a8c35af7cf6f2f4d1dd9a7cda2a0a98c5d61f",
+   "copy_sha256": "64c463a7abedf0c7b921cacfe9663be1e2e8c6115bf7dade5adc870a5f3839bb",
+   "retrieved_utc": "2026-10-02T09:32:40+00:00"
+  },
+  {
+   "id": "data_video",
+   "quote": "In the case of video datasets, we use two settings of frames and resolutions: 9 × 256 × 256 9 256 256 9\\times 256\\times 256 9 × 256 × 256 and 17 × 192 × 192 17 192 192 17\\times 192\\times 192 17 × 192 × 192 .",
+   "source_file": "cvvae_arxiv_2405.20279_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2405.20279",
+   "final_url": "https://arxiv.org/html/2405.20279",
+   "raw_sha256": "14172c960bc5d71bc1463a39ed0a8c35af7cf6f2f4d1dd9a7cda2a0a98c5d61f",
+   "copy_sha256": "64c463a7abedf0c7b921cacfe9663be1e2e8c6115bf7dade5adc870a5f3839bb",
+   "retrieved_utc": "2026-10-02T09:32:40+00:00"
+  },
+  {
+   "id": "data_init",
+   "quote": "The architecture of CV-VAE is primarily derived from the VAE in Stable Diffusion [ 28 ] , with several notable differences: (1) Some or all 2D convolutions within the network are transformed into 3D convolutions, while retaining their weights.",
+   "source_file": "cvvae_arxiv_2405.20279_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2405.20279",
+   "final_url": "https://arxiv.org/html/2405.20279",
+   "raw_sha256": "14172c960bc5d71bc1463a39ed0a8c35af7cf6f2f4d1dd9a7cda2a0a98c5d61f",
+   "copy_sha256": "64c463a7abedf0c7b921cacfe9663be1e2e8c6115bf7dade5adc870a5f3839bb",
+   "retrieved_utc": "2026-10-02T09:32:40+00:00"
+  },
+  {
+   "id": "in_eval",
+   "quote": "Each video is sampled with 33 frames and a frame stride of 3.",
+   "source_file": "cvvae_arxiv_2405.20279_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2405.20279",
+   "final_url": "https://arxiv.org/html/2405.20279",
+   "raw_sha256": "14172c960bc5d71bc1463a39ed0a8c35af7cf6f2f4d1dd9a7cda2a0a98c5d61f",
+   "copy_sha256": "64c463a7abedf0c7b921cacfe9663be1e2e8c6115bf7dade5adc870a5f3839bb",
+   "retrieved_utc": "2026-10-02T09:32:40+00:00"
+  },
+  {
+   "id": "in_tile",
+   "quote": "\"tile_spatial_size\": 576,",
+   "source_file": "cvvae_hf_vae3d_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_hf_vae3d_config.json",
+   "source_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+   "final_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+   "raw_sha256": "5fbad86c71b98af2bde94da2653809e29c9ba365ec6980051f9666a12b296b1d",
+   "copy_sha256": "5fbad86c71b98af2bde94da2653809e29c9ba365ec6980051f9666a12b296b1d",
+   "retrieved_utc": "2026-10-02T09:32:49+00:00"
+  },
+  {
+   "id": "in_nframes",
+   "quote": "\"en_de_n_frames_a_time\": 16,",
+   "source_file": "cvvae_hf_vae3d_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_hf_vae3d_config.json",
+   "source_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+   "final_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+   "raw_sha256": "5fbad86c71b98af2bde94da2653809e29c9ba365ec6980051f9666a12b296b1d",
+   "copy_sha256": "5fbad86c71b98af2bde94da2653809e29c9ba365ec6980051f9666a12b296b1d",
+   "retrieved_utc": "2026-10-02T09:32:49+00:00"
+  },
+  {
+   "id": "in_tc",
+   "quote": "\"time_n_compress\": 4,",
+   "source_file": "cvvae_hf_vae3d_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_hf_vae3d_config.json",
+   "source_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+   "final_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+   "raw_sha256": "5fbad86c71b98af2bde94da2653809e29c9ba365ec6980051f9666a12b296b1d",
+   "copy_sha256": "5fbad86c71b98af2bde94da2653809e29c9ba365ec6980051f9666a12b296b1d",
+   "retrieved_utc": "2026-10-02T09:32:49+00:00"
+  },
+  {
+   "id": "in_sc",
+   "quote": "\"spatial_n_compress\": 8,",
+   "source_file": "cvvae_hf_vae3d_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_hf_vae3d_config.json",
+   "source_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+   "final_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+   "raw_sha256": "5fbad86c71b98af2bde94da2653809e29c9ba365ec6980051f9666a12b296b1d",
+   "copy_sha256": "5fbad86c71b98af2bde94da2653809e29c9ba365ec6980051f9666a12b296b1d",
+   "retrieved_utc": "2026-10-02T09:32:49+00:00"
+  },
+  {
+   "id": "in_causal",
+   "quote": "\"causal_encoder\": true,",
+   "source_file": "cvvae_hf_vae3d_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_hf_vae3d_config.json",
+   "source_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+   "final_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+   "raw_sha256": "5fbad86c71b98af2bde94da2653809e29c9ba365ec6980051f9666a12b296b1d",
+   "copy_sha256": "5fbad86c71b98af2bde94da2653809e29c9ba365ec6980051f9666a12b296b1d",
+   "retrieved_utc": "2026-10-02T09:32:49+00:00"
+  },
+  {
+   "id": "in_z",
+   "quote": "\"z_channels\": 4",
+   "source_file": "cvvae_hf_vae3d_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_hf_vae3d_config.json",
+   "source_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+   "final_url": "https://huggingface.co/AILab-CVC/CV-VAE/raw/main/vae3d/config.json",
+   "raw_sha256": "5fbad86c71b98af2bde94da2653809e29c9ba365ec6980051f9666a12b296b1d",
+   "copy_sha256": "5fbad86c71b98af2bde94da2653809e29c9ba365ec6980051f9666a12b296b1d",
+   "retrieved_utc": "2026-10-02T09:32:49+00:00"
+  },
+  {
+   "id": "p_main",
+   "quote": "Ours(2D+3D) 68M + 114M 4x",
+   "source_file": "cvvae_arxiv_2405.20279_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2405.20279",
+   "final_url": "https://arxiv.org/html/2405.20279",
+   "raw_sha256": "14172c960bc5d71bc1463a39ed0a8c35af7cf6f2f4d1dd9a7cda2a0a98c5d61f",
+   "copy_sha256": "64c463a7abedf0c7b921cacfe9663be1e2e8c6115bf7dade5adc870a5f3839bb",
+   "retrieved_utc": "2026-10-02T09:32:40+00:00"
+  },
+  {
+   "id": "p_sd3",
+   "quote": "CVVAE-SD3 68M + 114M 4x",
+   "source_file": "cvvae_arxiv_2405.20279_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2405.20279",
+   "final_url": "https://arxiv.org/html/2405.20279",
+   "raw_sha256": "14172c960bc5d71bc1463a39ed0a8c35af7cf6f2f4d1dd9a7cda2a0a98c5d61f",
+   "copy_sha256": "64c463a7abedf0c7b921cacfe9663be1e2e8c6115bf7dade5adc870a5f3839bb",
+   "retrieved_utc": "2026-10-02T09:32:40+00:00"
+  }
+ ],
+ "all_quotes_verified": true,
+ "record_written_utc": "2026-10-02T09:41:07+00:00"
+}

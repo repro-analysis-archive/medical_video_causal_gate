@@ -1,0 +1,835 @@
+{
+ "id": "09_allegro_vae",
+ "status_in_survey": "added in revision 2 (2026-10-02)",
+ "name": "Allegro VideoVAE (Rhymes AI, rhymes-ai/Allegro vae/; AutoencoderKLAllegro, 4x8x8, 4 channels)",
+ "version": "rhymes-ai/Allegro vae/diffusion_pytorch_model.safetensors (HF repo sha c1b9207bb5cb79e2aa08f3d139c17d26c0de55b6, created 2024-10-16); paper arXiv 2410.15458v1",
+ "paper": {
+  "title": "Allegro: Open the Black Box of Commercial-Level Video Generation Model",
+  "year": 2024,
+  "arxiv": "2410.15458",
+  "version_read": "arXiv HTML v1 (2024-10-20)"
+ },
+ "weights_location": {
+  "urls": [
+   "https://huggingface.co/rhymes-ai/Allegro/tree/main/vae"
+  ],
+  "files_listed": {
+   "vae/diffusion_pytorch_model.safetensors": 699904972,
+   "vae/config.json": 803
+  },
+  "gated": false,
+  "private": false,
+  "verified_how": "HF API model listing (metadata only) saved as allegro_rhymes-ai__Allegro_hfapi.json; nothing downloaded",
+  "quote_ids": [
+   "w_file",
+   "w_gated",
+   "w_card"
+  ],
+  "quotes": [
+   {
+    "id": "w_file",
+    "quote": "\"rfilename\": \"vae/diffusion_pytorch_model.safetensors\",",
+    "source_url": "https://huggingface.co/api/models/rhymes-ai/Allegro?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_rhymes-ai__Allegro_hfapi.json"
+   },
+   {
+    "id": "w_gated",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/rhymes-ai/Allegro?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_rhymes-ai__Allegro_hfapi.json"
+   },
+   {
+    "id": "w_card",
+    "quote": "**Open Source**: Full [model weights](https://huggingface.co/rhymes-ai/Allegro) and [code](https://github.com/rhymes-ai/Allegro) available to the community, Apache 2.0!",
+    "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_README.md"
+   }
+  ]
+ },
+ "licence": {
+  "id": "Apache-2.0",
+  "url": "https://huggingface.co/rhymes-ai/Allegro ; https://github.com/rhymes-ai/Allegro/blob/main/LICENSE.txt",
+  "commercial": "permitted",
+  "non_commercial_only": false,
+  "restrictions": "none beyond Apache-2.0 (spatial layers initialised from the Playground v2.5 image VAE, whose upstream licence is not audited here)",
+  "gating": "none",
+  "quote_ids": [
+   "lic_card",
+   "lic_paper",
+   "lic_text"
+  ],
+  "quotes": [
+   {
+    "id": "lic_card",
+    "quote": "license: apache-2.0",
+    "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_README.md"
+   },
+   {
+    "id": "lic_paper",
+    "quote": "We release Allegro under the Apache 2.0 license, free for both academic and commercial use.",
+    "source_url": "https://arxiv.org/html/2410.15458",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+   },
+   {
+    "id": "lic_text",
+    "quote": "Apache License Version 2.0, January 2004",
+    "source_url": "https://raw.githubusercontent.com/rhymes-ai/Allegro/main/LICENSE.txt",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_github_LICENSE.txt"
+   }
+  ]
+ },
+ "domain": {
+  "value": "video VAE of the Allegro text-to-video diffusion model (Playground v2.5 image VAE + added temporal 3D-CNN layers); trained on 54.7K videos and 3.73M images from the authors' filtered general text-video dataset",
+  "quote_ids": [
+   "dom_card",
+   "arch_playground",
+   "data_vae"
+  ],
+  "quotes": [
+   {
+    "id": "dom_card",
+    "quote": "**Versatile Content Creation**: Capable of generating a wide range of content, from close-ups of humans and animals to diverse dynamic scenes.",
+    "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_README.md"
+   },
+   {
+    "id": "arch_playground",
+    "quote": "We first adopt the architecture and weights of the image VAE from Playground v2.5 ( Li et al., 2024a ) to model spatial information.",
+    "source_url": "https://arxiv.org/html/2410.15458",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+   },
+   {
+    "id": "data_vae",
+    "quote": "We ultimately select 54.7K videos and 3.73M images from our filtered dataset to train VideoVAE.",
+    "source_url": "https://arxiv.org/html/2410.15458",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+   }
+  ]
+ },
+ "architecture": {
+  "type": "image VAE (Playground v2.5) inflated with 1D/3D temporal CNN layers; non-causal strided temporal downsampling (stride 2, twice); KL latent",
+  "representation": "encoder latents: 4 channels per latent voxel (4 frames x 8 x 8 pixels)"
+ },
+ "pretraining_data": {
+  "summary": "Allegro dataset: 106M images + 48M videos built from 'a large pool of raw images and videos' by a filtering pipeline (>= 360p, >= 2 s, >= 23 FPS, scene split, aesthetics, artifacts, captioning); VAE trained on 54.7K videos and 3.73M images (shortest side > 720 px) from this filtered dataset. Sources of the raw pool are not named; WebVid, Panda-70M, HD-VILA, HD-VG and OpenVid-1M are named only as existing public datasets that 'have provided solid foundation for data sourcing' in the field, not as the Allegro training sources.",
+  "form": "described only (pipeline and counts; no source list)"
+ },
+ "pretraining_data_quote": {
+  "quote_ids": [
+   "data_total",
+   "data_vae",
+   "data_pool",
+   "data_public_context",
+   "data_fps30"
+  ],
+  "quotes": [
+   {
+    "id": "data_total",
+    "quote": "With this pipeline, we build our dataset containing 106M images and 48M videos, with highly associated text captions.",
+    "source_url": "https://arxiv.org/html/2410.15458",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+   },
+   {
+    "id": "data_vae",
+    "quote": "We ultimately select 54.7K videos and 3.73M images from our filtered dataset to train VideoVAE.",
+    "source_url": "https://arxiv.org/html/2410.15458",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+   },
+   {
+    "id": "data_pool",
+    "quote": "Figure 2: Allegro data filtering pipeline. A large pool of raw images and videos is fed into this pipeline to get a training set of high visual quality with associated text captions.",
+    "source_url": "https://arxiv.org/html/2410.15458",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+   },
+   {
+    "id": "data_public_context",
+    "quote": "Existing publicly available datasets, such as WebVid ( Bain et al., 2021 ) , Panda-70M ( Chen et al., 2024b ) , HD-VILA ( Xue et al., 2022 ) , HD-VG ( Wang et al., 2023 ) and OpenVid-1M ( Nan et al., 2024 ) , have provided solid foundation for data sourcing and acquisition, offering diverse and extensive video data.",
+    "source_url": "https://arxiv.org/html/2410.15458",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+   },
+   {
+    "id": "data_fps30",
+    "quote": "To facilitate the usability of the data, all video clips are uniformly re-encoded using H.264, and the frame rate is fixed at 30 FPS.",
+    "source_url": "https://arxiv.org/html/2410.15458",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+   }
+  ]
+ },
+ "medical_video_in_data": {
+  "answer": "NOT MENTIONED",
+  "basis": "Automated search of the saved paper text, HF card and GitHub README for medical|surgical|surgery|endoscop|laparoscop|clinical|health|hospital: no hits.",
+  "term_search": {
+   "pattern": "medical|surgical|surgery|endoscop|laparoscop|clinical|health|hospital",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_github_README.md": []
+   }
+  }
+ },
+ "appendix300_possible": {
+  "answer": "UNKNOWN",
+  "basis_class": "undisclosed",
+  "basis": "raw pool sources undisclosed. Timing: released 2024-10-16/20, before the OPARA issue 2026-04-29; prior circulation of the source recordings not documented.",
+  "quote_ids": [
+   "data_pool"
+  ],
+  "quotes": [
+   {
+    "id": "data_pool",
+    "quote": "Figure 2: Allegro data filtering pipeline. A large pool of raw images and videos is fed into this pipeline to get a training set of high visual quality with associated text captions.",
+    "source_url": "https://arxiv.org/html/2410.15458",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+   }
+  ]
+ },
+ "appendix300_check": {
+  "answer": "UNKNOWN",
+  "quote_or_statement": "the documented data list does not mention DS203/Appendix300",
+  "basis_class": "undisclosed",
+  "basis": "no source list for the 48M videos / 54.7K VAE videos exists (only a filtering pipeline and counts), so the Appendix300 source recordings cannot be excluded.",
+  "term_search": {
+   "pattern": "appendix ?300|DS203|OPARA|appendectom|appendic",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_github_README.md": []
+   }
+  },
+  "quote_ids": [
+   "data_pool",
+   "data_vae"
+  ],
+  "quotes": [
+   {
+    "id": "data_pool",
+    "quote": "Figure 2: Allegro data filtering pipeline. A large pool of raw images and videos is fed into this pipeline to get a training set of high visual quality with associated text captions.",
+    "source_url": "https://arxiv.org/html/2410.15458",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+   },
+   {
+    "id": "data_vae",
+    "quote": "We ultimately select 54.7K videos and 3.73M images from our filtered dataset to train VideoVAE.",
+    "source_url": "https://arxiv.org/html/2410.15458",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+   }
+  ]
+ },
+ "input": {
+  "frame_size": {
+   "value": "VAE trained at 256x256 crops (stage 1: 16-frame videos + images; stage 2: 24-frame videos); inference tiled with 256 or 320 px tiles; model generates 720x1280",
+   "quote_ids": [
+    "in_stage1",
+    "in_stage2",
+    "in_tile",
+    "in_card_res"
+   ],
+   "quotes": [
+    {
+     "id": "in_stage1",
+     "quote": "utilizing a batch composition of one 16-frame video and four images, all with a spatial resolution of 256 × 256 256\\times 256 .",
+     "source_url": "https://arxiv.org/html/2410.15458",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+    },
+    {
+     "id": "in_stage2",
+     "quote": "fine-tune the temporal layers using 24-frame 256 × 256 256\\times 256 resolution videos",
+     "source_url": "https://arxiv.org/html/2410.15458",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+    },
+    {
+     "id": "in_tile",
+     "quote": "In practice, we employ a tile size of 24 × p × p 24\\times p\\times p (time, height, width) in Encoder",
+     "source_url": "https://arxiv.org/html/2410.15458",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+    },
+    {
+     "id": "in_card_res",
+     "quote": "**High-Quality Output**: Generate detailed 6-second videos at 15 FPS with 720x1280 resolution",
+     "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_README.md"
+    }
+   ]
+  },
+  "frame_rate_or_sampling": {
+   "value": "VAE training: frames sampled with a random interval from {1, 3, 5, 10}; data clips re-encoded at 30 FPS; DiT trained/generates at 15 FPS",
+   "quote_ids": [
+    "in_interval",
+    "data_fps30",
+    "in_15fps"
+   ],
+   "quotes": [
+    {
+     "id": "in_interval",
+     "quote": "For temporal data augmentation in videos, we randomly choose a sampling interval from the set [1, 3, 5, 10] to sample frames evenly across video clips.",
+     "source_url": "https://arxiv.org/html/2410.15458",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+    },
+    {
+     "id": "data_fps30",
+     "quote": "To facilitate the usability of the data, all video clips are uniformly re-encoded using H.264, and the frame rate is fixed at 30 FPS.",
+     "source_url": "https://arxiv.org/html/2410.15458",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+    },
+    {
+     "id": "in_15fps",
+     "quote": "All videos across the three sub-stages are sampled at 15 FPS, enabling the model to generate 6-second videos at 720 × 1280 720\\times 1280 resolution.",
+     "source_url": "https://arxiv.org/html/2410.15458",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+    }
+   ]
+  },
+  "clip_length_frames": {
+   "value": "VAE training 16 frames (stage 1) and 24 frames (stage 2); encoder tile 24 frames; generation 88 frames",
+   "quote_ids": [
+    "in_stage1",
+    "in_stage2",
+    "in_tile",
+    "in_card_frames"
+   ],
+   "quotes": [
+    {
+     "id": "in_stage1",
+     "quote": "utilizing a batch composition of one 16-frame video and four images, all with a spatial resolution of 256 × 256 256\\times 256 .",
+     "source_url": "https://arxiv.org/html/2410.15458",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+    },
+    {
+     "id": "in_stage2",
+     "quote": "fine-tune the temporal layers using 24-frame 256 × 256 256\\times 256 resolution videos",
+     "source_url": "https://arxiv.org/html/2410.15458",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+    },
+    {
+     "id": "in_tile",
+     "quote": "In practice, we employ a tile size of 24 × p × p 24\\times p\\times p (time, height, width) in Encoder",
+     "source_url": "https://arxiv.org/html/2410.15458",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+    },
+    {
+     "id": "in_card_frames",
+     "quote": "Context length is 79.2K, equivalent to 88 frames.",
+     "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_README.md"
+    }
+   ]
+  },
+  "temporal_compression": {
+   "value": "4x (non-causal strided conv; T' = T/4)",
+   "quote_ids": [
+    "arch_latent_paper",
+    "arch_tcomp"
+   ],
+   "quotes": [
+    {
+     "id": "arch_latent_paper",
+     "quote": "We continue to use the latent channel C l = 4 C_{l}=4 from image VAE without any expansion and have compression stride S T × S H × S W = 4 × 8 × 8 S_{T}\\times S_{H}\\times S_{W}=4\\times 8\\times 8 in temporal, height and width dimension respectively.",
+     "source_url": "https://arxiv.org/html/2410.15458",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+    },
+    {
+     "id": "arch_tcomp",
+     "quote": "\"temporal_compression_ratio\": 4,",
+     "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/vae/config.json",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_vae_config.json"
+    }
+   ]
+  },
+  "spatial_compression": {
+   "value": "8x8",
+   "quote_ids": [
+    "arch_latent_paper"
+   ],
+   "quotes": [
+    {
+     "id": "arch_latent_paper",
+     "quote": "We continue to use the latent channel C l = 4 C_{l}=4 from image VAE without any expansion and have compression stride S T × S H × S W = 4 × 8 × 8 S_{T}\\times S_{H}\\times S_{W}=4\\times 8\\times 8 in temporal, height and width dimension respectively.",
+     "source_url": "https://arxiv.org/html/2410.15458",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+    }
+   ]
+  }
+ },
+ "embedding_dim": {
+  "value": "4 latent channels x 22 x 90 x 160 = 1,267,200 values for an 88-frame 720x1280 clip; generally 4 x T/4 x H/8 x W/8 (per 24-frame encoder tile: 4 x 6 x p/8 x p/8)",
+  "derivation": "C_l = 4, S_T x S_H x S_W = 4 x 8 x 8, latent shape T/S_T x C_l x H/S_H x W/S_W; reference input = the model's 88 frames at 720x1280",
+  "quote_ids": [
+   "arch_latent_paper",
+   "arch_cfg_latent",
+   "in_card_frames",
+   "in_card_res"
+  ],
+  "quotes": [
+   {
+    "id": "arch_latent_paper",
+    "quote": "We continue to use the latent channel C l = 4 C_{l}=4 from image VAE without any expansion and have compression stride S T × S H × S W = 4 × 8 × 8 S_{T}\\times S_{H}\\times S_{W}=4\\times 8\\times 8 in temporal, height and width dimension respectively.",
+    "source_url": "https://arxiv.org/html/2410.15458",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+   },
+   {
+    "id": "arch_cfg_latent",
+    "quote": "\"latent_channels\": 4,",
+    "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/vae/config.json",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_vae_config.json"
+   },
+   {
+    "id": "in_card_frames",
+    "quote": "Context length is 79.2K, equivalent to 88 frames.",
+    "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_README.md"
+   },
+   {
+    "id": "in_card_res",
+    "quote": "**High-Quality Output**: Generate detailed 6-second videos at 15 FPS with 720x1280 resolution",
+    "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_README.md"
+   }
+  ]
+ },
+ "params": {
+  "value": "174.96M (~175M) for the whole VideoVAE (encoder + decoder); encoder-only count not documented",
+  "scope": "whole autoencoder (encoder + decoder)",
+  "quote_ids": [
+   "arch_params",
+   "arch_params_card"
+  ],
+  "quotes": [
+   {
+    "id": "arch_params",
+    "quote": "After incorporating these temporal layers, the parameter count of our VideoVAE has reached 174.96M.",
+    "source_url": "https://arxiv.org/html/2410.15458",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+   },
+   {
+    "id": "arch_params_card",
+    "quote": "**Small and Efficient**: Features a 175M parameter VideoVAE and a 2.8B parameter VideoDiT model.",
+    "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_README.md"
+   }
+  ]
+ },
+ "flops_per_input_if_documented": null,
+ "flops_note": "no FLOPs/MACs statement in the saved paper text, card or config (FLOP|MAC hits are only commercial-system names)",
+ "eligibility": {
+  "C1_open_weights": {
+   "status": "PASS",
+   "basis": "HF API lists vae/diffusion_pytorch_model.safetensors, gated=False",
+   "quote_ids": [
+    "w_file",
+    "w_gated"
+   ],
+   "quotes": [
+    {
+     "id": "w_file",
+     "quote": "\"rfilename\": \"vae/diffusion_pytorch_model.safetensors\",",
+     "source_url": "https://huggingface.co/api/models/rhymes-ai/Allegro?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_rhymes-ai__Allegro_hfapi.json"
+    },
+    {
+     "id": "w_gated",
+     "quote": "\"gated\": false,",
+     "source_url": "https://huggingface.co/api/models/rhymes-ai/Allegro?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_rhymes-ai__Allegro_hfapi.json"
+    }
+   ]
+  },
+  "C2_licence_research_use": {
+   "status": "PASS",
+   "basis": "Apache-2.0, 'free for both academic and commercial use'",
+   "quote_ids": [
+    "lic_card",
+    "lic_paper",
+    "lic_text"
+   ],
+   "quotes": [
+    {
+     "id": "lic_card",
+     "quote": "license: apache-2.0",
+     "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_README.md"
+    },
+    {
+     "id": "lic_paper",
+     "quote": "We release Allegro under the Apache 2.0 license, free for both academic and commercial use.",
+     "source_url": "https://arxiv.org/html/2410.15458",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+    },
+    {
+     "id": "lic_text",
+     "quote": "Apache License Version 2.0, January 2004",
+     "source_url": "https://raw.githubusercontent.com/rhymes-ai/Allegro/main/LICENSE.txt",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_github_LICENSE.txt"
+    }
+   ]
+  },
+  "C3_domain_secondary": {
+   "status": "PASS",
+   "basis": "video VAE of a general text-to-video diffusion model, trained on general video",
+   "quote_ids": [
+    "dom_card",
+    "data_vae"
+   ],
+   "quotes": [
+    {
+     "id": "dom_card",
+     "quote": "**Versatile Content Creation**: Capable of generating a wide range of content, from close-ups of humans and animals to diverse dynamic scenes.",
+     "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_README.md"
+    },
+    {
+     "id": "data_vae",
+     "quote": "We ultimately select 54.7K videos and 3.73M images from our filtered dataset to train VideoVAE.",
+     "source_url": "https://arxiv.org/html/2410.15458",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+    }
+   ]
+  },
+  "C4_documented_pretraining_data": {
+   "status": "FAIL",
+   "basis": "the training videos are described by pipeline and counts only ('a large pool of raw images and videos'); the named public datasets appear only as background on the field, not as Allegro's sources -> no datasets or named sources listed (borderline wording, recorded)",
+   "quote_ids": [
+    "data_pool",
+    "data_total",
+    "data_public_context"
+   ],
+   "quotes": [
+    {
+     "id": "data_pool",
+     "quote": "Figure 2: Allegro data filtering pipeline. A large pool of raw images and videos is fed into this pipeline to get a training set of high visual quality with associated text captions.",
+     "source_url": "https://arxiv.org/html/2410.15458",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+    },
+    {
+     "id": "data_total",
+     "quote": "With this pipeline, we build our dataset containing 106M images and 48M videos, with highly associated text captions.",
+     "source_url": "https://arxiv.org/html/2410.15458",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+    },
+    {
+     "id": "data_public_context",
+     "quote": "Existing publicly available datasets, such as WebVid ( Bain et al., 2021 ) , Panda-70M ( Chen et al., 2024b ) , HD-VILA ( Xue et al., 2022 ) , HD-VG ( Wang et al., 2023 ) and OpenVid-1M ( Nan et al., 2024 ) , have provided solid foundation for data sourcing and acquisition, offering diverse and extensive video data.",
+     "source_url": "https://arxiv.org/html/2410.15458",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt"
+    }
+   ]
+  },
+  "eligible": "NO (fails C4)"
+ },
+ "quotes": [
+  {
+   "id": "w_file",
+   "quote": "\"rfilename\": \"vae/diffusion_pytorch_model.safetensors\",",
+   "source_file": "allegro_rhymes-ai__Allegro_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_rhymes-ai__Allegro_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/rhymes-ai/Allegro?blobs=true",
+   "final_url": "https://huggingface.co/api/models/rhymes-ai/Allegro?blobs=true",
+   "raw_sha256": "facf8dabec2c49d222bd7ed2f02904d2b0cf803f80551f935d668c8003f6112c",
+   "copy_sha256": "76b04cc2556966876d92a59206b65160c67594eae630a3c7ce0687ac5e0ece42",
+   "retrieved_utc": "2026-10-02T09:34:30+00:00"
+  },
+  {
+   "id": "w_gated",
+   "quote": "\"gated\": false,",
+   "source_file": "allegro_rhymes-ai__Allegro_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_rhymes-ai__Allegro_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/rhymes-ai/Allegro?blobs=true",
+   "final_url": "https://huggingface.co/api/models/rhymes-ai/Allegro?blobs=true",
+   "raw_sha256": "facf8dabec2c49d222bd7ed2f02904d2b0cf803f80551f935d668c8003f6112c",
+   "copy_sha256": "76b04cc2556966876d92a59206b65160c67594eae630a3c7ce0687ac5e0ece42",
+   "retrieved_utc": "2026-10-02T09:34:30+00:00"
+  },
+  {
+   "id": "w_card",
+   "quote": "**Open Source**: Full [model weights](https://huggingface.co/rhymes-ai/Allegro) and [code](https://github.com/rhymes-ai/Allegro) available to the community, Apache 2.0!",
+   "source_file": "allegro_Allegro_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_README.md",
+   "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+   "final_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+   "raw_sha256": "b480bf5e524d72c8aefac97986e49171cb4f391dc24ff3a25ce04e0328c52f45",
+   "copy_sha256": "b480bf5e524d72c8aefac97986e49171cb4f391dc24ff3a25ce04e0328c52f45",
+   "retrieved_utc": "2026-10-02T09:34:30+00:00"
+  },
+  {
+   "id": "lic_card",
+   "quote": "license: apache-2.0",
+   "source_file": "allegro_Allegro_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_README.md",
+   "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+   "final_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+   "raw_sha256": "b480bf5e524d72c8aefac97986e49171cb4f391dc24ff3a25ce04e0328c52f45",
+   "copy_sha256": "b480bf5e524d72c8aefac97986e49171cb4f391dc24ff3a25ce04e0328c52f45",
+   "retrieved_utc": "2026-10-02T09:34:30+00:00"
+  },
+  {
+   "id": "lic_paper",
+   "quote": "We release Allegro under the Apache 2.0 license, free for both academic and commercial use.",
+   "source_file": "allegro_arxiv_2410.15458_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2410.15458",
+   "final_url": "https://arxiv.org/html/2410.15458",
+   "raw_sha256": "18c90c65de71a34aa0463b058c68327c868963a87a2b4184980d06b400626679",
+   "copy_sha256": "6b935c039cdeaa8d4d4e623ffd24836e6ea2e8ee70ce9916364edece9d3f0456",
+   "retrieved_utc": "2026-10-02T09:34:32+00:00"
+  },
+  {
+   "id": "lic_text",
+   "quote": "Apache License Version 2.0, January 2004",
+   "source_file": "allegro_github_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_github_LICENSE.txt",
+   "source_url": "https://raw.githubusercontent.com/rhymes-ai/Allegro/main/LICENSE.txt",
+   "final_url": "https://raw.githubusercontent.com/rhymes-ai/Allegro/main/LICENSE.txt",
+   "raw_sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+   "copy_sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+   "retrieved_utc": "2026-10-02T09:34:46+00:00"
+  },
+  {
+   "id": "dom_card",
+   "quote": "**Versatile Content Creation**: Capable of generating a wide range of content, from close-ups of humans and animals to diverse dynamic scenes.",
+   "source_file": "allegro_Allegro_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_README.md",
+   "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+   "final_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+   "raw_sha256": "b480bf5e524d72c8aefac97986e49171cb4f391dc24ff3a25ce04e0328c52f45",
+   "copy_sha256": "b480bf5e524d72c8aefac97986e49171cb4f391dc24ff3a25ce04e0328c52f45",
+   "retrieved_utc": "2026-10-02T09:34:30+00:00"
+  },
+  {
+   "id": "arch_playground",
+   "quote": "We first adopt the architecture and weights of the image VAE from Playground v2.5 ( Li et al., 2024a ) to model spatial information.",
+   "source_file": "allegro_arxiv_2410.15458_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2410.15458",
+   "final_url": "https://arxiv.org/html/2410.15458",
+   "raw_sha256": "18c90c65de71a34aa0463b058c68327c868963a87a2b4184980d06b400626679",
+   "copy_sha256": "6b935c039cdeaa8d4d4e623ffd24836e6ea2e8ee70ce9916364edece9d3f0456",
+   "retrieved_utc": "2026-10-02T09:34:32+00:00"
+  },
+  {
+   "id": "arch_params",
+   "quote": "After incorporating these temporal layers, the parameter count of our VideoVAE has reached 174.96M.",
+   "source_file": "allegro_arxiv_2410.15458_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2410.15458",
+   "final_url": "https://arxiv.org/html/2410.15458",
+   "raw_sha256": "18c90c65de71a34aa0463b058c68327c868963a87a2b4184980d06b400626679",
+   "copy_sha256": "6b935c039cdeaa8d4d4e623ffd24836e6ea2e8ee70ce9916364edece9d3f0456",
+   "retrieved_utc": "2026-10-02T09:34:32+00:00"
+  },
+  {
+   "id": "arch_params_card",
+   "quote": "**Small and Efficient**: Features a 175M parameter VideoVAE and a 2.8B parameter VideoDiT model.",
+   "source_file": "allegro_Allegro_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_README.md",
+   "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+   "final_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+   "raw_sha256": "b480bf5e524d72c8aefac97986e49171cb4f391dc24ff3a25ce04e0328c52f45",
+   "copy_sha256": "b480bf5e524d72c8aefac97986e49171cb4f391dc24ff3a25ce04e0328c52f45",
+   "retrieved_utc": "2026-10-02T09:34:30+00:00"
+  },
+  {
+   "id": "arch_latent_paper",
+   "quote": "We continue to use the latent channel C l = 4 C_{l}=4 from image VAE without any expansion and have compression stride S T × S H × S W = 4 × 8 × 8 S_{T}\\times S_{H}\\times S_{W}=4\\times 8\\times 8 in temporal, height and width dimension respectively.",
+   "source_file": "allegro_arxiv_2410.15458_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2410.15458",
+   "final_url": "https://arxiv.org/html/2410.15458",
+   "raw_sha256": "18c90c65de71a34aa0463b058c68327c868963a87a2b4184980d06b400626679",
+   "copy_sha256": "6b935c039cdeaa8d4d4e623ffd24836e6ea2e8ee70ce9916364edece9d3f0456",
+   "retrieved_utc": "2026-10-02T09:34:32+00:00"
+  },
+  {
+   "id": "arch_cfg_latent",
+   "quote": "\"latent_channels\": 4,",
+   "source_file": "allegro_Allegro_vae_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_vae_config.json",
+   "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/vae/config.json",
+   "final_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/vae/config.json",
+   "raw_sha256": "032bf14c52d750184e15233e3f10c6638f9513c09e13016b25b5486a4203e1dc",
+   "copy_sha256": "032bf14c52d750184e15233e3f10c6638f9513c09e13016b25b5486a4203e1dc",
+   "retrieved_utc": "2026-10-02T09:34:31+00:00"
+  },
+  {
+   "id": "arch_tcomp",
+   "quote": "\"temporal_compression_ratio\": 4,",
+   "source_file": "allegro_Allegro_vae_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_vae_config.json",
+   "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/vae/config.json",
+   "final_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/vae/config.json",
+   "raw_sha256": "032bf14c52d750184e15233e3f10c6638f9513c09e13016b25b5486a4203e1dc",
+   "copy_sha256": "032bf14c52d750184e15233e3f10c6638f9513c09e13016b25b5486a4203e1dc",
+   "retrieved_utc": "2026-10-02T09:34:31+00:00"
+  },
+  {
+   "id": "arch_class",
+   "quote": "\"_class_name\": \"AutoencoderKLAllegro\",",
+   "source_file": "allegro_Allegro_vae_config.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_vae_config.json",
+   "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/vae/config.json",
+   "final_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/vae/config.json",
+   "raw_sha256": "032bf14c52d750184e15233e3f10c6638f9513c09e13016b25b5486a4203e1dc",
+   "copy_sha256": "032bf14c52d750184e15233e3f10c6638f9513c09e13016b25b5486a4203e1dc",
+   "retrieved_utc": "2026-10-02T09:34:31+00:00"
+  },
+  {
+   "id": "in_stage1",
+   "quote": "utilizing a batch composition of one 16-frame video and four images, all with a spatial resolution of 256 × 256 256\\times 256 .",
+   "source_file": "allegro_arxiv_2410.15458_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2410.15458",
+   "final_url": "https://arxiv.org/html/2410.15458",
+   "raw_sha256": "18c90c65de71a34aa0463b058c68327c868963a87a2b4184980d06b400626679",
+   "copy_sha256": "6b935c039cdeaa8d4d4e623ffd24836e6ea2e8ee70ce9916364edece9d3f0456",
+   "retrieved_utc": "2026-10-02T09:34:32+00:00"
+  },
+  {
+   "id": "in_stage2",
+   "quote": "fine-tune the temporal layers using 24-frame 256 × 256 256\\times 256 resolution videos",
+   "source_file": "allegro_arxiv_2410.15458_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2410.15458",
+   "final_url": "https://arxiv.org/html/2410.15458",
+   "raw_sha256": "18c90c65de71a34aa0463b058c68327c868963a87a2b4184980d06b400626679",
+   "copy_sha256": "6b935c039cdeaa8d4d4e623ffd24836e6ea2e8ee70ce9916364edece9d3f0456",
+   "retrieved_utc": "2026-10-02T09:34:32+00:00"
+  },
+  {
+   "id": "in_tile",
+   "quote": "In practice, we employ a tile size of 24 × p × p 24\\times p\\times p (time, height, width) in Encoder",
+   "source_file": "allegro_arxiv_2410.15458_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2410.15458",
+   "final_url": "https://arxiv.org/html/2410.15458",
+   "raw_sha256": "18c90c65de71a34aa0463b058c68327c868963a87a2b4184980d06b400626679",
+   "copy_sha256": "6b935c039cdeaa8d4d4e623ffd24836e6ea2e8ee70ce9916364edece9d3f0456",
+   "retrieved_utc": "2026-10-02T09:34:32+00:00"
+  },
+  {
+   "id": "in_interval",
+   "quote": "For temporal data augmentation in videos, we randomly choose a sampling interval from the set [1, 3, 5, 10] to sample frames evenly across video clips.",
+   "source_file": "allegro_arxiv_2410.15458_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2410.15458",
+   "final_url": "https://arxiv.org/html/2410.15458",
+   "raw_sha256": "18c90c65de71a34aa0463b058c68327c868963a87a2b4184980d06b400626679",
+   "copy_sha256": "6b935c039cdeaa8d4d4e623ffd24836e6ea2e8ee70ce9916364edece9d3f0456",
+   "retrieved_utc": "2026-10-02T09:34:32+00:00"
+  },
+  {
+   "id": "in_15fps",
+   "quote": "All videos across the three sub-stages are sampled at 15 FPS, enabling the model to generate 6-second videos at 720 × 1280 720\\times 1280 resolution.",
+   "source_file": "allegro_arxiv_2410.15458_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2410.15458",
+   "final_url": "https://arxiv.org/html/2410.15458",
+   "raw_sha256": "18c90c65de71a34aa0463b058c68327c868963a87a2b4184980d06b400626679",
+   "copy_sha256": "6b935c039cdeaa8d4d4e623ffd24836e6ea2e8ee70ce9916364edece9d3f0456",
+   "retrieved_utc": "2026-10-02T09:34:32+00:00"
+  },
+  {
+   "id": "in_card_res",
+   "quote": "**High-Quality Output**: Generate detailed 6-second videos at 15 FPS with 720x1280 resolution",
+   "source_file": "allegro_Allegro_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_README.md",
+   "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+   "final_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+   "raw_sha256": "b480bf5e524d72c8aefac97986e49171cb4f391dc24ff3a25ce04e0328c52f45",
+   "copy_sha256": "b480bf5e524d72c8aefac97986e49171cb4f391dc24ff3a25ce04e0328c52f45",
+   "retrieved_utc": "2026-10-02T09:34:30+00:00"
+  },
+  {
+   "id": "in_card_frames",
+   "quote": "Context length is 79.2K, equivalent to 88 frames.",
+   "source_file": "allegro_Allegro_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_Allegro_README.md",
+   "source_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+   "final_url": "https://huggingface.co/rhymes-ai/Allegro/raw/main/README.md",
+   "raw_sha256": "b480bf5e524d72c8aefac97986e49171cb4f391dc24ff3a25ce04e0328c52f45",
+   "copy_sha256": "b480bf5e524d72c8aefac97986e49171cb4f391dc24ff3a25ce04e0328c52f45",
+   "retrieved_utc": "2026-10-02T09:34:30+00:00"
+  },
+  {
+   "id": "data_total",
+   "quote": "With this pipeline, we build our dataset containing 106M images and 48M videos, with highly associated text captions.",
+   "source_file": "allegro_arxiv_2410.15458_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2410.15458",
+   "final_url": "https://arxiv.org/html/2410.15458",
+   "raw_sha256": "18c90c65de71a34aa0463b058c68327c868963a87a2b4184980d06b400626679",
+   "copy_sha256": "6b935c039cdeaa8d4d4e623ffd24836e6ea2e8ee70ce9916364edece9d3f0456",
+   "retrieved_utc": "2026-10-02T09:34:32+00:00"
+  },
+  {
+   "id": "data_vae",
+   "quote": "We ultimately select 54.7K videos and 3.73M images from our filtered dataset to train VideoVAE.",
+   "source_file": "allegro_arxiv_2410.15458_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2410.15458",
+   "final_url": "https://arxiv.org/html/2410.15458",
+   "raw_sha256": "18c90c65de71a34aa0463b058c68327c868963a87a2b4184980d06b400626679",
+   "copy_sha256": "6b935c039cdeaa8d4d4e623ffd24836e6ea2e8ee70ce9916364edece9d3f0456",
+   "retrieved_utc": "2026-10-02T09:34:32+00:00"
+  },
+  {
+   "id": "data_pool",
+   "quote": "Figure 2: Allegro data filtering pipeline. A large pool of raw images and videos is fed into this pipeline to get a training set of high visual quality with associated text captions.",
+   "source_file": "allegro_arxiv_2410.15458_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2410.15458",
+   "final_url": "https://arxiv.org/html/2410.15458",
+   "raw_sha256": "18c90c65de71a34aa0463b058c68327c868963a87a2b4184980d06b400626679",
+   "copy_sha256": "6b935c039cdeaa8d4d4e623ffd24836e6ea2e8ee70ce9916364edece9d3f0456",
+   "retrieved_utc": "2026-10-02T09:34:32+00:00"
+  },
+  {
+   "id": "data_public_context",
+   "quote": "Existing publicly available datasets, such as WebVid ( Bain et al., 2021 ) , Panda-70M ( Chen et al., 2024b ) , HD-VILA ( Xue et al., 2022 ) , HD-VG ( Wang et al., 2023 ) and OpenVid-1M ( Nan et al., 2024 ) , have provided solid foundation for data sourcing and acquisition, offering diverse and extensive video data.",
+   "source_file": "allegro_arxiv_2410.15458_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2410.15458",
+   "final_url": "https://arxiv.org/html/2410.15458",
+   "raw_sha256": "18c90c65de71a34aa0463b058c68327c868963a87a2b4184980d06b400626679",
+   "copy_sha256": "6b935c039cdeaa8d4d4e623ffd24836e6ea2e8ee70ce9916364edece9d3f0456",
+   "retrieved_utc": "2026-10-02T09:34:32+00:00"
+  },
+  {
+   "id": "data_fps30",
+   "quote": "To facilitate the usability of the data, all video clips are uniformly re-encoded using H.264, and the frame rate is fixed at 30 FPS.",
+   "source_file": "allegro_arxiv_2410.15458_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/allegro_arxiv_2410.15458_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2410.15458",
+   "final_url": "https://arxiv.org/html/2410.15458",
+   "raw_sha256": "18c90c65de71a34aa0463b058c68327c868963a87a2b4184980d06b400626679",
+   "copy_sha256": "6b935c039cdeaa8d4d4e623ffd24836e6ea2e8ee70ce9916364edece9d3f0456",
+   "retrieved_utc": "2026-10-02T09:34:32+00:00"
+  }
+ ],
+ "all_quotes_verified": true,
+ "record_written_utc": "2026-10-02T09:36:11+00:00"
+}

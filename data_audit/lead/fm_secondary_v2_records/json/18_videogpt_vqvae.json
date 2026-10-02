@@ -1,0 +1,868 @@
+{
+ "id": "18_videogpt_vqvae",
+ "name": "VideoGPT VQ-VAE (wilson1yan/VideoGPT; checkpoints bair_stride4x2x2, ucf101_stride4x4x4, kinetics_stride4x4x4, kinetics_stride2x4x4)",
+ "status_in_survey": "added in revision 2 (2026-10-02)",
+ "version": "VQ-VAE checkpoints listed in videogpt/download.py on GitHub master (bair_stride4x2x2, ucf101_stride4x4x4, kinetics_stride4x4x4, kinetics_stride2x4x4); paper arXiv:2104.10157v2 (2021-09-14)",
+ "paper": {
+  "title": "VideoGPT: Video Generation using VQ-VAE and Transformers",
+  "year": 2021,
+  "arxiv": "2104.10157"
+ },
+ "weights_location": {
+  "urls": [
+   "https://drive.google.com/file/d/1iIAYJ2Qqrx5Q94s5eIXQYJgAydzvT_8L/view",
+   "https://drive.google.com/file/d/1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5/view",
+   "https://drive.google.com/file/d/1DOvOZnFAIQmux6hG7pN_HkyJZy3lXbCB/view",
+   "https://drive.google.com/file/d/1jvtjjtrtE4cy6pl7DK_zWFEPY3RZt2pB/view"
+  ],
+  "files_listed": {},
+  "gated": null,
+  "private": null,
+  "verified_how": "Official links = Google Drive file ids hard-coded in videogpt/download.py (downloaded via gdown). The public Drive view page of each id was saved (HTTP 404, 'the requested file does not exist') and a HEAD request to the drive.google.com/uc download endpoint returned 404 for all four ids (2026-10-02). No HF repo by the authors was found. Nothing downloaded.",
+  "status": "NOT AVAILABLE: all four official checkpoint links return HTTP 404 on 2026-10-02",
+  "quote_ids": [
+   "w_bair",
+   "w_ucf",
+   "w_kin444",
+   "w_kin244",
+   "w_gdown",
+   "w_404_bair",
+   "w_404_ucf",
+   "w_404_kin444",
+   "w_404_kin244",
+   "w_head_bair",
+   "w_head_ucf",
+   "w_head_kin444",
+   "w_head_kin244"
+  ],
+  "quotes": [
+   {
+    "id": "w_bair",
+    "quote": "'bair_stride4x2x2': '1iIAYJ2Qqrx5Q94s5eIXQYJgAydzvT_8L', # trained on 16 frames of 64 x 64 images",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+   },
+   {
+    "id": "w_ucf",
+    "quote": "'ucf101_stride4x4x4': '1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5', # trained on 16 frames of 128 x 128 images",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+   },
+   {
+    "id": "w_kin444",
+    "quote": "'kinetics_stride4x4x4': '1DOvOZnFAIQmux6hG7pN_HkyJZy3lXbCB', # trained on 16 frames of 128 x 128 images",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+   },
+   {
+    "id": "w_kin244",
+    "quote": "'kinetics_stride2x4x4': '1jvtjjtrtE4cy6pl7DK_zWFEPY3RZt2pB' # trained on 16 frames of 128 x 128 images",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+   },
+   {
+    "id": "w_gdown",
+    "quote": "gdown.download(id=id, output=destination, quiet=False)",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+   },
+   {
+    "id": "w_404_bair",
+    "quote": "リクエストされたファイルは存在しません。",
+    "source_url": "https://drive.google.com/file/d/1iIAYJ2Qqrx5Q94s5eIXQYJgAydzvT_8L/view",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_gdrive_bair_stride4x2x2_view.txt"
+   },
+   {
+    "id": "w_404_ucf",
+    "quote": "リクエストされたファイルは存在しません。",
+    "source_url": "https://drive.google.com/file/d/1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5/view",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_gdrive_ucf101_stride4x4x4_view.txt"
+   },
+   {
+    "id": "w_404_kin444",
+    "quote": "リクエストされたファイルは存在しません。",
+    "source_url": "https://drive.google.com/file/d/1DOvOZnFAIQmux6hG7pN_HkyJZy3lXbCB/view",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_gdrive_kinetics_stride4x4x4_view.txt"
+   },
+   {
+    "id": "w_404_kin244",
+    "quote": "リクエストされたファイルは存在しません。",
+    "source_url": "https://drive.google.com/file/d/1jvtjjtrtE4cy6pl7DK_zWFEPY3RZt2pB/view",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_gdrive_kinetics_stride2x4x4_view.txt"
+   },
+   {
+    "id": "w_head_bair",
+    "quote": "\"http_status\": 404,",
+    "source_url": "https://drive.google.com/uc?id=1iIAYJ2Qqrx5Q94s5eIXQYJgAydzvT_8L&export=download",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_gdrive_bair_stride4x2x2_uc_head.json"
+   },
+   {
+    "id": "w_head_ucf",
+    "quote": "\"http_status\": 404,",
+    "source_url": "https://drive.google.com/uc?id=1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5&export=download",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_gdrive_ucf101_stride4x4x4_uc_head.json"
+   },
+   {
+    "id": "w_head_kin444",
+    "quote": "\"http_status\": 404,",
+    "source_url": "https://drive.google.com/uc?id=1DOvOZnFAIQmux6hG7pN_HkyJZy3lXbCB&export=download",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_gdrive_kinetics_stride4x4x4_uc_head.json"
+   },
+   {
+    "id": "w_head_kin244",
+    "quote": "\"http_status\": 404,",
+    "source_url": "https://drive.google.com/uc?id=1jvtjjtrtE4cy6pl7DK_zWFEPY3RZt2pB&export=download",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_gdrive_kinetics_stride2x4x4_uc_head.json"
+   }
+  ]
+ },
+ "licence": {
+  "id": "MIT (GitHub repository LICENSE; no separate weights licence stated)",
+  "url": "https://github.com/wilson1yan/VideoGPT/blob/master/LICENSE",
+  "commercial": "permitted",
+  "non_commercial_only": false,
+  "restrictions": "none beyond MIT",
+  "gating": "n/a (weights not reachable)",
+  "quote_ids": [
+   "lic_mit",
+   "lic_copy"
+  ],
+  "quotes": [
+   {
+    "id": "lic_mit",
+    "quote": "MIT License",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/LICENSE",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_LICENSE.txt"
+   },
+   {
+    "id": "lic_copy",
+    "quote": "Copyright (c) 2021 Wilson Yan",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/LICENSE",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_LICENSE.txt"
+   }
+  ]
+ },
+ "domain": {
+  "value": "VQ-VAE video tokenizer (3D conv + axial attention) of the likelihood-based video generative model VideoGPT; trained on general research video datasets (BAIR robot pushing, UCF-101, Kinetics)",
+  "quote_ids": [
+   "dom_readme",
+   "w_ucf",
+   "w_kin444"
+  ],
+  "quotes": [
+   {
+    "id": "dom_readme",
+    "quote": "VideoGPT uses VQ-VAE that learns downsampled discrete latent representations of a raw video by employing 3D convolutions and axial self-attention.",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_README.md"
+   },
+   {
+    "id": "w_ucf",
+    "quote": "'ucf101_stride4x4x4': '1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5', # trained on 16 frames of 128 x 128 images",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+   },
+   {
+    "id": "w_kin444",
+    "quote": "'kinetics_stride4x4x4': '1DOvOZnFAIQmux6hG7pN_HkyJZy3lXbCB', # trained on 16 frames of 128 x 128 images",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+   }
+  ]
+ },
+ "architecture": {
+  "type": "VQ-VAE: 3D convolutional encoder/decoder with axial self-attention residual blocks, single codebook",
+  "representation": "discrete latent code grid (T/st x H/sh x W/sw), each code an embedding vector (default embedding_dim 256, default n_codes 2048 in code; paper BAIR: 256-dim, 1024 codes)"
+ },
+ "pretraining_data": {
+  "summary": "Per checkpoint (download.py comments + checkpoint names): BAIR robot pushing, 16 frames of 64x64; UCF-101, 16 frames of 128x128; Kinetics (version not stated anywhere in the saved sources), 16 frames of 128x128. The paper names BAIR, UCF-101, TGIF, Moving MNIST, ViZDoom/RoboNet for its experiments; Kinetics is not mentioned in the paper.",
+  "form": "dataset list (named, per checkpoint; Kinetics version unspecified)"
+ },
+ "pretraining_data_quote": {
+  "quote_ids": [
+   "w_bair",
+   "w_ucf",
+   "w_kin444",
+   "w_kin244",
+   "data_ucf",
+   "data_bair"
+  ],
+  "quotes": [
+   {
+    "id": "w_bair",
+    "quote": "'bair_stride4x2x2': '1iIAYJ2Qqrx5Q94s5eIXQYJgAydzvT_8L', # trained on 16 frames of 64 x 64 images",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+   },
+   {
+    "id": "w_ucf",
+    "quote": "'ucf101_stride4x4x4': '1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5', # trained on 16 frames of 128 x 128 images",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+   },
+   {
+    "id": "w_kin444",
+    "quote": "'kinetics_stride4x4x4': '1DOvOZnFAIQmux6hG7pN_HkyJZy3lXbCB', # trained on 16 frames of 128 x 128 images",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+   },
+   {
+    "id": "w_kin244",
+    "quote": "'kinetics_stride2x4x4': '1jvtjjtrtE4cy6pl7DK_zWFEPY3RZt2pB' # trained on 16 frames of 128 x 128 images",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+   },
+   {
+    "id": "data_ucf",
+    "quote": "UCF-101 (Soomro et al., 2012) is an action classification dataset with 13,320 videos from 101 different classes. We train unconditional VideoGPT models on 16 frame 64 × 64 and 128 × 128 videos, where the original videos have their shorter side scaled to 128 pixels, and then center cropped.",
+    "source_url": "https://arxiv.org/pdf/2104.10157",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_arxiv_2104.10157.txt"
+   },
+   {
+    "id": "data_bair",
+    "quote": "For BAIR, VQ-VAE downsamples the inputs by a factor of 2x over each of height, width and time dimensions. The embedding in the latent space is a 256-dimensional vector, which is discretized through a codebook with 1024 codes.",
+    "source_url": "https://arxiv.org/pdf/2104.10157",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_arxiv_2104.10157.txt"
+   }
+  ]
+ },
+ "medical_video_in_data": {
+  "answer": "NO",
+  "basis": "the checkpoint data are a closed list of named research datasets (BAIR robot pushing, UCF-101, Kinetics human-action classes), none medical; term search of paper/README/download.py: hits only for the ViZDoom 'Health Gathering' game environment (not medical data)",
+  "term_search": {
+   "pattern": "medical|surgical|surgery|endoscop|laparoscop|clinical|health|hospital",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_arxiv_2104.10157.txt": [
+     " trajectories, split into an 8:1:1 train / validataion / test ratio. We experiment on the Health Gathering Supreme and Battle2 ViZDoom environments, training both unconditional and actio",
+     "24 4096 n/a n/a 0.2 200K / 600K VideoGPT B. ViZDoom Samples Figure 9. Samples for ViZDoom health gathering supreme environment. (Top) shows unconditionally generated samples. (Bottom) sh"
+    ],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt": []
+   }
+  }
+ },
+ "appendix300_possible": {
+  "answer": "NO",
+  "basis_class": "closed_curated_list",
+  "basis": "BAIR robot pushing, UCF-101 and Kinetics are closed curated research datasets with fixed robot-pushing / human-action content scope (conventions_v2 clarification: Kinetics/UCF-101 -> NO). Caveat: the Kinetics version of the kinetics_* checkpoints is not stated. Timing: 2021, before the OPARA issue 2026-04-29.",
+  "quote_ids": [
+   "w_bair",
+   "w_ucf",
+   "w_kin444"
+  ],
+  "quotes": [
+   {
+    "id": "w_bair",
+    "quote": "'bair_stride4x2x2': '1iIAYJ2Qqrx5Q94s5eIXQYJgAydzvT_8L', # trained on 16 frames of 64 x 64 images",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+   },
+   {
+    "id": "w_ucf",
+    "quote": "'ucf101_stride4x4x4': '1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5', # trained on 16 frames of 128 x 128 images",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+   },
+   {
+    "id": "w_kin444",
+    "quote": "'kinetics_stride4x4x4': '1DOvOZnFAIQmux6hG7pN_HkyJZy3lXbCB', # trained on 16 frames of 128 x 128 images",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+   }
+  ]
+ },
+ "appendix300_check": {
+  "answer": "NO",
+  "quote_or_statement": "the documented data list does not mention DS203/Appendix300",
+  "basis_class": "closed_curated_list",
+  "basis": "closed list of named curated datasets (BAIR, UCF-101, Kinetics) whose content scope excludes surgical recordings; Kinetics version unspecified",
+  "term_search": {
+   "pattern": "appendix ?300|DS203|OPARA|appendectom|appendic",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_arxiv_2104.10157.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt": []
+   }
+  },
+  "quote_ids": [
+   "w_bair",
+   "w_ucf",
+   "w_kin444"
+  ],
+  "quotes": [
+   {
+    "id": "w_bair",
+    "quote": "'bair_stride4x2x2': '1iIAYJ2Qqrx5Q94s5eIXQYJgAydzvT_8L', # trained on 16 frames of 64 x 64 images",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+   },
+   {
+    "id": "w_ucf",
+    "quote": "'ucf101_stride4x4x4': '1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5', # trained on 16 frames of 128 x 128 images",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+   },
+   {
+    "id": "w_kin444",
+    "quote": "'kinetics_stride4x4x4': '1DOvOZnFAIQmux6hG7pN_HkyJZy3lXbCB', # trained on 16 frames of 128 x 128 images",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+   }
+  ]
+ },
+ "input": {
+  "frame_size": {
+   "value": "64x64 (bair_stride4x2x2); 128x128 (ucf101 / kinetics checkpoints); preprocessing scales the shorter side to the resolution and center-crops",
+   "quote_ids": [
+    "w_bair",
+    "w_ucf",
+    "data_ucf"
+   ],
+   "quotes": [
+    {
+     "id": "w_bair",
+     "quote": "'bair_stride4x2x2': '1iIAYJ2Qqrx5Q94s5eIXQYJgAydzvT_8L', # trained on 16 frames of 64 x 64 images",
+     "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+    },
+    {
+     "id": "w_ucf",
+     "quote": "'ucf101_stride4x4x4': '1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5', # trained on 16 frames of 128 x 128 images",
+     "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+    },
+    {
+     "id": "data_ucf",
+     "quote": "UCF-101 (Soomro et al., 2012) is an action classification dataset with 13,320 videos from 101 different classes. We train unconditional VideoGPT models on 16 frame 64 × 64 and 128 × 128 videos, where the original videos have their shorter side scaled to 128 pixels, and then center cropped.",
+     "source_url": "https://arxiv.org/pdf/2104.10157",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_arxiv_2104.10157.txt"
+    }
+   ]
+  },
+  "frame_rate_or_sampling": {
+   "value": "consecutive frames at the source frame rate (torchvision VideoClips with no frame_rate argument; preprocess takes the first sequence_length frames of a clip); no fps stated",
+   "quote_ids": [
+    "in_crop",
+    "in_clips"
+   ],
+   "quotes": [
+    {
+     "id": "in_crop",
+     "quote": "# temporal crop if sequence_length is not None: assert sequence_length <= t video = video[:sequence_length]",
+     "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/data.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_data.py.txt"
+    },
+    {
+     "id": "in_clips",
+     "quote": "clips = VideoClips(files, sequence_length, num_workers=32)",
+     "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/data.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_data.py.txt"
+    }
+   ]
+  },
+  "clip_length_frames": {
+   "value": "16",
+   "quote_ids": [
+    "w_ucf",
+    "in_seq"
+   ],
+   "quotes": [
+    {
+     "id": "w_ucf",
+     "quote": "'ucf101_stride4x4x4': '1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5', # trained on 16 frames of 128 x 128 images",
+     "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+    },
+    {
+     "id": "in_seq",
+     "quote": "* `--sequence_length 16`: temporal resolution, or video clip length",
+     "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_README.md"
+    }
+   ]
+  },
+  "temporal_compression": {
+   "value": "4x (bair_stride4x2x2, ucf101_stride4x4x4, kinetics_stride4x4x4) or 2x (kinetics_stride2x4x4), per checkpoint name = T H W stride; note the paper states 2x for its BAIR model while the released BAIR checkpoint is named stride4x2x2",
+   "quote_ids": [
+    "in_down",
+    "w_bair",
+    "data_bair"
+   ],
+   "quotes": [
+    {
+     "id": "in_down",
+     "quote": "* `--downsample 4 4 4`: T H W downsampling stride of the encoder",
+     "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_README.md"
+    },
+    {
+     "id": "w_bair",
+     "quote": "'bair_stride4x2x2': '1iIAYJ2Qqrx5Q94s5eIXQYJgAydzvT_8L', # trained on 16 frames of 64 x 64 images",
+     "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+    },
+    {
+     "id": "data_bair",
+     "quote": "For BAIR, VQ-VAE downsamples the inputs by a factor of 2x over each of height, width and time dimensions. The embedding in the latent space is a 256-dimensional vector, which is discretized through a codebook with 1024 codes.",
+     "source_url": "https://arxiv.org/pdf/2104.10157",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_arxiv_2104.10157.txt"
+    }
+   ]
+  },
+  "spatial_compression": {
+   "value": "4x4 (ucf101 / kinetics checkpoints); 2x2 (bair_stride4x2x2)",
+   "quote_ids": [
+    "in_down",
+    "w_ucf"
+   ],
+   "quotes": [
+    {
+     "id": "in_down",
+     "quote": "* `--downsample 4 4 4`: T H W downsampling stride of the encoder",
+     "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_README.md"
+    },
+    {
+     "id": "w_ucf",
+     "quote": "'ucf101_stride4x4x4': '1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5', # trained on 16 frames of 128 x 128 images",
+     "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+    }
+   ]
+  }
+ },
+ "embedding_dim": {
+  "value": "kinetics_stride4x4x4 / ucf101_stride4x4x4 at 16x128x128: 4 x 32 x 32 = 4,096 discrete codes, each mapped to a codebook vector (default 256-dim) -> 4,096 x 256; kinetics_stride2x4x4: 8 x 32 x 32 codes; bair_stride4x2x2 at 16x64x64: 4 x 32 x 32 codes",
+  "derivation": "grid = (16/st) x (H/sh) x (W/sw) from the checkpoint stride names; code vector dim = argparse default --embedding_dim 256 (the released checkpoints' hyper-parameters are not documented outside the checkpoint files, which were not opened)",
+  "quote_ids": [
+   "in_embdim",
+   "in_ncodes",
+   "w_kin444",
+   "data_bair"
+  ],
+  "quotes": [
+   {
+    "id": "in_embdim",
+    "quote": "parser.add_argument('--embedding_dim', type=int, default=256)",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/vqvae.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_vqvae.py.txt"
+   },
+   {
+    "id": "in_ncodes",
+    "quote": "parser.add_argument('--n_codes', type=int, default=2048)",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/vqvae.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_vqvae.py.txt"
+   },
+   {
+    "id": "w_kin444",
+    "quote": "'kinetics_stride4x4x4': '1DOvOZnFAIQmux6hG7pN_HkyJZy3lXbCB', # trained on 16 frames of 128 x 128 images",
+    "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+   },
+   {
+    "id": "data_bair",
+    "quote": "For BAIR, VQ-VAE downsamples the inputs by a factor of 2x over each of height, width and time dimensions. The embedding in the latent space is a 256-dimensional vector, which is discretized through a codebook with 1024 codes.",
+    "source_url": "https://arxiv.org/pdf/2104.10157",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_arxiv_2104.10157.txt"
+   }
+  ]
+ },
+ "params": {
+  "value": "not documented (no parameter count for the VQ-VAEs in the saved paper, README or code)",
+  "scope": "n/a",
+  "quote_ids": [],
+  "quotes": []
+ },
+ "flops_per_input_if_documented": null,
+ "flops_note": "no FLOPs/MACs statement in the saved paper, README or code (searched FLOP)",
+ "eligibility": {
+  "C1_open_weights": {
+   "status": "FAIL",
+   "basis": "the only official weight links (Google Drive ids in download.py) return HTTP 404 (view page and download endpoint) on 2026-10-02; no other official host found -> weights not publicly downloadable now",
+   "quote_ids": [
+    "w_gdown",
+    "w_404_ucf",
+    "w_head_ucf"
+   ],
+   "quotes": [
+    {
+     "id": "w_gdown",
+     "quote": "gdown.download(id=id, output=destination, quiet=False)",
+     "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+    },
+    {
+     "id": "w_404_ucf",
+     "quote": "リクエストされたファイルは存在しません。",
+     "source_url": "https://drive.google.com/file/d/1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5/view",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_gdrive_ucf101_stride4x4x4_view.txt"
+    },
+    {
+     "id": "w_head_ucf",
+     "quote": "\"http_status\": 404,",
+     "source_url": "https://drive.google.com/uc?id=1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5&export=download",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_gdrive_ucf101_stride4x4x4_uc_head.json"
+    }
+   ]
+  },
+  "C2_licence_research_use": {
+   "status": "PASS",
+   "basis": "MIT licence on the repository",
+   "quote_ids": [
+    "lic_mit"
+   ],
+   "quotes": [
+    {
+     "id": "lic_mit",
+     "quote": "MIT License",
+     "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/LICENSE",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_LICENSE.txt"
+    }
+   ]
+  },
+  "C3_domain_secondary": {
+   "status": "PASS",
+   "basis": "video VQ-VAE tokenizer of a video generative model trained on general (non-surgical) video",
+   "quote_ids": [
+    "dom_readme"
+   ],
+   "quotes": [
+    {
+     "id": "dom_readme",
+     "quote": "VideoGPT uses VQ-VAE that learns downsampled discrete latent representations of a raw video by employing 3D convolutions and axial self-attention.",
+     "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_README.md"
+    }
+   ]
+  },
+  "C4_documented_pretraining_data": {
+   "status": "PASS",
+   "basis": "per-checkpoint datasets are named (BAIR, UCF-101, Kinetics) in the official download code and the paper; caveat: the Kinetics version is unspecified",
+   "quote_ids": [
+    "w_bair",
+    "w_ucf",
+    "w_kin444",
+    "data_ucf"
+   ],
+   "quotes": [
+    {
+     "id": "w_bair",
+     "quote": "'bair_stride4x2x2': '1iIAYJ2Qqrx5Q94s5eIXQYJgAydzvT_8L', # trained on 16 frames of 64 x 64 images",
+     "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+    },
+    {
+     "id": "w_ucf",
+     "quote": "'ucf101_stride4x4x4': '1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5', # trained on 16 frames of 128 x 128 images",
+     "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+    },
+    {
+     "id": "w_kin444",
+     "quote": "'kinetics_stride4x4x4': '1DOvOZnFAIQmux6hG7pN_HkyJZy3lXbCB', # trained on 16 frames of 128 x 128 images",
+     "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt"
+    },
+    {
+     "id": "data_ucf",
+     "quote": "UCF-101 (Soomro et al., 2012) is an action classification dataset with 13,320 videos from 101 different classes. We train unconditional VideoGPT models on 16 frame 64 × 64 and 128 × 128 videos, where the original videos have their shorter side scaled to 128 pixels, and then center cropped.",
+     "source_url": "https://arxiv.org/pdf/2104.10157",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_arxiv_2104.10157.txt"
+    }
+   ]
+  },
+  "eligible": "NO (fails C1: official checkpoint links are dead)"
+ },
+ "quotes": [
+  {
+   "id": "w_bair",
+   "quote": "'bair_stride4x2x2': '1iIAYJ2Qqrx5Q94s5eIXQYJgAydzvT_8L', # trained on 16 frames of 64 x 64 images",
+   "source_file": "videogpt_github_download.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt",
+   "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+   "final_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+   "raw_sha256": "a1d35826e66a31dff6f95e66bda2e199d278931788462be5ee28595211f05e61",
+   "copy_sha256": "a1d35826e66a31dff6f95e66bda2e199d278931788462be5ee28595211f05e61",
+   "retrieved_utc": "2026-10-02T09:29:51+00:00"
+  },
+  {
+   "id": "w_ucf",
+   "quote": "'ucf101_stride4x4x4': '1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5', # trained on 16 frames of 128 x 128 images",
+   "source_file": "videogpt_github_download.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt",
+   "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+   "final_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+   "raw_sha256": "a1d35826e66a31dff6f95e66bda2e199d278931788462be5ee28595211f05e61",
+   "copy_sha256": "a1d35826e66a31dff6f95e66bda2e199d278931788462be5ee28595211f05e61",
+   "retrieved_utc": "2026-10-02T09:29:51+00:00"
+  },
+  {
+   "id": "w_kin444",
+   "quote": "'kinetics_stride4x4x4': '1DOvOZnFAIQmux6hG7pN_HkyJZy3lXbCB', # trained on 16 frames of 128 x 128 images",
+   "source_file": "videogpt_github_download.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt",
+   "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+   "final_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+   "raw_sha256": "a1d35826e66a31dff6f95e66bda2e199d278931788462be5ee28595211f05e61",
+   "copy_sha256": "a1d35826e66a31dff6f95e66bda2e199d278931788462be5ee28595211f05e61",
+   "retrieved_utc": "2026-10-02T09:29:51+00:00"
+  },
+  {
+   "id": "w_kin244",
+   "quote": "'kinetics_stride2x4x4': '1jvtjjtrtE4cy6pl7DK_zWFEPY3RZt2pB' # trained on 16 frames of 128 x 128 images",
+   "source_file": "videogpt_github_download.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt",
+   "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+   "final_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+   "raw_sha256": "a1d35826e66a31dff6f95e66bda2e199d278931788462be5ee28595211f05e61",
+   "copy_sha256": "a1d35826e66a31dff6f95e66bda2e199d278931788462be5ee28595211f05e61",
+   "retrieved_utc": "2026-10-02T09:29:51+00:00"
+  },
+  {
+   "id": "w_gdown",
+   "quote": "gdown.download(id=id, output=destination, quiet=False)",
+   "source_file": "videogpt_github_download.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_download.py.txt",
+   "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+   "final_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/download.py",
+   "raw_sha256": "a1d35826e66a31dff6f95e66bda2e199d278931788462be5ee28595211f05e61",
+   "copy_sha256": "a1d35826e66a31dff6f95e66bda2e199d278931788462be5ee28595211f05e61",
+   "retrieved_utc": "2026-10-02T09:29:51+00:00"
+  },
+  {
+   "id": "w_404_bair",
+   "quote": "リクエストされたファイルは存在しません。",
+   "source_file": "videogpt_gdrive_bair_stride4x2x2_view.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_gdrive_bair_stride4x2x2_view.txt",
+   "source_url": "https://drive.google.com/file/d/1iIAYJ2Qqrx5Q94s5eIXQYJgAydzvT_8L/view",
+   "final_url": "https://drive.google.com/file/d/1iIAYJ2Qqrx5Q94s5eIXQYJgAydzvT_8L/view",
+   "raw_sha256": "784149607000be6be502f54d395eb2687051a3ce6657ca0ebe69dd5e144d086c",
+   "copy_sha256": "b4a5d4ebfc21f8c110b853b085da57754eed403a4684d731993317a3d5d19ca6",
+   "retrieved_utc": "2026-10-02T09:30:04+00:00"
+  },
+  {
+   "id": "w_404_ucf",
+   "quote": "リクエストされたファイルは存在しません。",
+   "source_file": "videogpt_gdrive_ucf101_stride4x4x4_view.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_gdrive_ucf101_stride4x4x4_view.txt",
+   "source_url": "https://drive.google.com/file/d/1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5/view",
+   "final_url": "https://drive.google.com/file/d/1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5/view",
+   "raw_sha256": "46205ceddc5d4bfe22bde85b2e4815b858751d5e9de6685f3c5f4e6949ba1dad",
+   "copy_sha256": "b4a5d4ebfc21f8c110b853b085da57754eed403a4684d731993317a3d5d19ca6",
+   "retrieved_utc": "2026-10-02T09:30:07+00:00"
+  },
+  {
+   "id": "w_404_kin444",
+   "quote": "リクエストされたファイルは存在しません。",
+   "source_file": "videogpt_gdrive_kinetics_stride4x4x4_view.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_gdrive_kinetics_stride4x4x4_view.txt",
+   "source_url": "https://drive.google.com/file/d/1DOvOZnFAIQmux6hG7pN_HkyJZy3lXbCB/view",
+   "final_url": "https://drive.google.com/file/d/1DOvOZnFAIQmux6hG7pN_HkyJZy3lXbCB/view",
+   "raw_sha256": "f38189c555ab17bc61d6ccdb86226717230852a0560fdbb7d4b7911e93dfb8fc",
+   "copy_sha256": "b4a5d4ebfc21f8c110b853b085da57754eed403a4684d731993317a3d5d19ca6",
+   "retrieved_utc": "2026-10-02T09:30:08+00:00"
+  },
+  {
+   "id": "w_404_kin244",
+   "quote": "リクエストされたファイルは存在しません。",
+   "source_file": "videogpt_gdrive_kinetics_stride2x4x4_view.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_gdrive_kinetics_stride2x4x4_view.txt",
+   "source_url": "https://drive.google.com/file/d/1jvtjjtrtE4cy6pl7DK_zWFEPY3RZt2pB/view",
+   "final_url": "https://drive.google.com/file/d/1jvtjjtrtE4cy6pl7DK_zWFEPY3RZt2pB/view",
+   "raw_sha256": "093a3b69bb9846f93694eb6340e928d16a8dc13f8acb0fc70bb3d7ad14e5b2b0",
+   "copy_sha256": "b4a5d4ebfc21f8c110b853b085da57754eed403a4684d731993317a3d5d19ca6",
+   "retrieved_utc": "2026-10-02T09:30:09+00:00"
+  },
+  {
+   "id": "w_head_bair",
+   "quote": "\"http_status\": 404,",
+   "source_file": "videogpt_gdrive_bair_stride4x2x2_uc_head.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_gdrive_bair_stride4x2x2_uc_head.json",
+   "source_url": "https://drive.google.com/uc?id=1iIAYJ2Qqrx5Q94s5eIXQYJgAydzvT_8L&export=download",
+   "final_url": "https://drive.usercontent.google.com/download?id=1iIAYJ2Qqrx5Q94s5eIXQYJgAydzvT_8L&export=download",
+   "raw_sha256": "a22558661cebb2176c8a7902618d5b39a6ebdf0d6b8291f32e8465a5148615f9",
+   "copy_sha256": "a22558661cebb2176c8a7902618d5b39a6ebdf0d6b8291f32e8465a5148615f9",
+   "retrieved_utc": "2026-10-02T09:30:23+00:00"
+  },
+  {
+   "id": "w_head_ucf",
+   "quote": "\"http_status\": 404,",
+   "source_file": "videogpt_gdrive_ucf101_stride4x4x4_uc_head.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_gdrive_ucf101_stride4x4x4_uc_head.json",
+   "source_url": "https://drive.google.com/uc?id=1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5&export=download",
+   "final_url": "https://drive.usercontent.google.com/download?id=1uuB_8WzHP_bbBmfuaIV7PK_Itl3DyHY5&export=download",
+   "raw_sha256": "d89c75ad27d7c95686d85fa9b50da2aff593a164b3bcf6fb571f7abf16cac67e",
+   "copy_sha256": "d89c75ad27d7c95686d85fa9b50da2aff593a164b3bcf6fb571f7abf16cac67e",
+   "retrieved_utc": "2026-10-02T09:30:24+00:00"
+  },
+  {
+   "id": "w_head_kin444",
+   "quote": "\"http_status\": 404,",
+   "source_file": "videogpt_gdrive_kinetics_stride4x4x4_uc_head.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_gdrive_kinetics_stride4x4x4_uc_head.json",
+   "source_url": "https://drive.google.com/uc?id=1DOvOZnFAIQmux6hG7pN_HkyJZy3lXbCB&export=download",
+   "final_url": "https://drive.usercontent.google.com/download?id=1DOvOZnFAIQmux6hG7pN_HkyJZy3lXbCB&export=download",
+   "raw_sha256": "a45b67bd398fee5de2918a2c7085b9bbf4c598d34259c7d4ff0af0ab6baaee38",
+   "copy_sha256": "a45b67bd398fee5de2918a2c7085b9bbf4c598d34259c7d4ff0af0ab6baaee38",
+   "retrieved_utc": "2026-10-02T09:30:25+00:00"
+  },
+  {
+   "id": "w_head_kin244",
+   "quote": "\"http_status\": 404,",
+   "source_file": "videogpt_gdrive_kinetics_stride2x4x4_uc_head.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_gdrive_kinetics_stride2x4x4_uc_head.json",
+   "source_url": "https://drive.google.com/uc?id=1jvtjjtrtE4cy6pl7DK_zWFEPY3RZt2pB&export=download",
+   "final_url": "https://drive.usercontent.google.com/download?id=1jvtjjtrtE4cy6pl7DK_zWFEPY3RZt2pB&export=download",
+   "raw_sha256": "f4ac226b32a65374528dc90eb89a8699d0ebc23cab5da53978312f2b93a7eb57",
+   "copy_sha256": "f4ac226b32a65374528dc90eb89a8699d0ebc23cab5da53978312f2b93a7eb57",
+   "retrieved_utc": "2026-10-02T09:30:25+00:00"
+  },
+  {
+   "id": "lic_mit",
+   "quote": "MIT License",
+   "source_file": "videogpt_github_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_LICENSE.txt",
+   "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/LICENSE",
+   "final_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/LICENSE",
+   "raw_sha256": "2d0c77bcb58cb7c8a698d9b48b1be1f7a4505e892e5e7cd660c7faa68b19f5e4",
+   "copy_sha256": "2d0c77bcb58cb7c8a698d9b48b1be1f7a4505e892e5e7cd660c7faa68b19f5e4",
+   "retrieved_utc": "2026-10-02T09:29:51+00:00"
+  },
+  {
+   "id": "lic_copy",
+   "quote": "Copyright (c) 2021 Wilson Yan",
+   "source_file": "videogpt_github_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_LICENSE.txt",
+   "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/LICENSE",
+   "final_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/LICENSE",
+   "raw_sha256": "2d0c77bcb58cb7c8a698d9b48b1be1f7a4505e892e5e7cd660c7faa68b19f5e4",
+   "copy_sha256": "2d0c77bcb58cb7c8a698d9b48b1be1f7a4505e892e5e7cd660c7faa68b19f5e4",
+   "retrieved_utc": "2026-10-02T09:29:51+00:00"
+  },
+  {
+   "id": "dom_readme",
+   "quote": "VideoGPT uses VQ-VAE that learns downsampled discrete latent representations of a raw video by employing 3D convolutions and axial self-attention.",
+   "source_file": "videogpt_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/README.md",
+   "raw_sha256": "01064bcb804578b2ab20ff0dca09ccc50ec4ff3b82f7eb49d0e49cfd574bfd93",
+   "copy_sha256": "01064bcb804578b2ab20ff0dca09ccc50ec4ff3b82f7eb49d0e49cfd574bfd93",
+   "retrieved_utc": "2026-10-02T09:29:50+00:00"
+  },
+  {
+   "id": "data_ucf",
+   "quote": "UCF-101 (Soomro et al., 2012) is an action classification dataset with 13,320 videos from 101 different classes. We train unconditional VideoGPT models on 16 frame 64 × 64 and 128 × 128 videos, where the original videos have their shorter side scaled to 128 pixels, and then center cropped.",
+   "source_file": "videogpt_arxiv_2104.10157.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_arxiv_2104.10157.txt",
+   "source_url": "https://arxiv.org/pdf/2104.10157",
+   "final_url": "https://arxiv.org/pdf/2104.10157",
+   "raw_sha256": "3a147d1eab9be34b892ce279ecf817370742cc9db3c43af6a7a7496f4825dc25",
+   "copy_sha256": "03db8b4cc74b1ada6389649b1f3f2a212c309ff36878b4665591290b28960683",
+   "retrieved_utc": "2026-10-02T09:29:52+00:00"
+  },
+  {
+   "id": "data_bair",
+   "quote": "For BAIR, VQ-VAE downsamples the inputs by a factor of 2x over each of height, width and time dimensions. The embedding in the latent space is a 256-dimensional vector, which is discretized through a codebook with 1024 codes.",
+   "source_file": "videogpt_arxiv_2104.10157.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_arxiv_2104.10157.txt",
+   "source_url": "https://arxiv.org/pdf/2104.10157",
+   "final_url": "https://arxiv.org/pdf/2104.10157",
+   "raw_sha256": "3a147d1eab9be34b892ce279ecf817370742cc9db3c43af6a7a7496f4825dc25",
+   "copy_sha256": "03db8b4cc74b1ada6389649b1f3f2a212c309ff36878b4665591290b28960683",
+   "retrieved_utc": "2026-10-02T09:29:52+00:00"
+  },
+  {
+   "id": "in_crop",
+   "quote": "# temporal crop if sequence_length is not None: assert sequence_length <= t video = video[:sequence_length]",
+   "source_file": "videogpt_github_data.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_data.py.txt",
+   "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/data.py",
+   "final_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/data.py",
+   "raw_sha256": "55ba00e9efd10af1dd77cb89f5077e0bf43ccc4e0398f85dc3ebb9a64d20d2b6",
+   "copy_sha256": "55ba00e9efd10af1dd77cb89f5077e0bf43ccc4e0398f85dc3ebb9a64d20d2b6",
+   "retrieved_utc": "2026-10-02T09:30:45+00:00"
+  },
+  {
+   "id": "in_clips",
+   "quote": "clips = VideoClips(files, sequence_length, num_workers=32)",
+   "source_file": "videogpt_github_data.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_data.py.txt",
+   "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/data.py",
+   "final_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/data.py",
+   "raw_sha256": "55ba00e9efd10af1dd77cb89f5077e0bf43ccc4e0398f85dc3ebb9a64d20d2b6",
+   "copy_sha256": "55ba00e9efd10af1dd77cb89f5077e0bf43ccc4e0398f85dc3ebb9a64d20d2b6",
+   "retrieved_utc": "2026-10-02T09:30:45+00:00"
+  },
+  {
+   "id": "in_seq",
+   "quote": "* `--sequence_length 16`: temporal resolution, or video clip length",
+   "source_file": "videogpt_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/README.md",
+   "raw_sha256": "01064bcb804578b2ab20ff0dca09ccc50ec4ff3b82f7eb49d0e49cfd574bfd93",
+   "copy_sha256": "01064bcb804578b2ab20ff0dca09ccc50ec4ff3b82f7eb49d0e49cfd574bfd93",
+   "retrieved_utc": "2026-10-02T09:29:50+00:00"
+  },
+  {
+   "id": "in_down",
+   "quote": "* `--downsample 4 4 4`: T H W downsampling stride of the encoder",
+   "source_file": "videogpt_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/README.md",
+   "raw_sha256": "01064bcb804578b2ab20ff0dca09ccc50ec4ff3b82f7eb49d0e49cfd574bfd93",
+   "copy_sha256": "01064bcb804578b2ab20ff0dca09ccc50ec4ff3b82f7eb49d0e49cfd574bfd93",
+   "retrieved_utc": "2026-10-02T09:29:50+00:00"
+  },
+  {
+   "id": "in_embdim",
+   "quote": "parser.add_argument('--embedding_dim', type=int, default=256)",
+   "source_file": "videogpt_github_vqvae.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_vqvae.py.txt",
+   "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/vqvae.py",
+   "final_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/vqvae.py",
+   "raw_sha256": "32fb5616314b87d7546f2eb83ee95bf1ab060de9de963d213a9f02b7fb875a70",
+   "copy_sha256": "32fb5616314b87d7546f2eb83ee95bf1ab060de9de963d213a9f02b7fb875a70",
+   "retrieved_utc": "2026-10-02T09:30:44+00:00"
+  },
+  {
+   "id": "in_ncodes",
+   "quote": "parser.add_argument('--n_codes', type=int, default=2048)",
+   "source_file": "videogpt_github_vqvae.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/videogpt_github_vqvae.py.txt",
+   "source_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/vqvae.py",
+   "final_url": "https://raw.githubusercontent.com/wilson1yan/VideoGPT/master/videogpt/vqvae.py",
+   "raw_sha256": "32fb5616314b87d7546f2eb83ee95bf1ab060de9de963d213a9f02b7fb875a70",
+   "copy_sha256": "32fb5616314b87d7546f2eb83ee95bf1ab060de9de963d213a9f02b7fb875a70",
+   "retrieved_utc": "2026-10-02T09:30:44+00:00"
+  }
+ ],
+ "all_quotes_verified": true,
+ "record_written_utc": "2026-10-02T09:46:18+00:00"
+}

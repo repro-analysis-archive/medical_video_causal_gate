@@ -1,0 +1,1970 @@
+[
+ {
+  "name": "Endo-FM",
+  "paper": {
+   "title": "Foundation Model for Endoscopy Video Analysis via Large-scale Self-supervised Pre-train",
+   "year": 2023,
+   "venue": "MICCAI 2023 (LNCS, pp. 101-111)",
+   "arxiv": "2306.16741",
+   "quotes": [
+    {
+     "quote": "Foundation Model for Endoscopy Video Analysis via Large-scale Self-supervised Pre-train",
+     "file": "endofm_arxiv_abs",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/abs/2306.16741",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_arxiv_abs.html"
+    }
+   ]
+  },
+  "weights": {
+   "url": "https://drive.google.com/file/d/1H7B91Ewm4QkZRsnUk1Bn0IQch5P8C7Xl/view?usp=sharing",
+   "exists": "YES - public Google Drive file page resolves without login and names the file endo_fm.pth (file not downloaded)",
+   "request_or_registration_required": false,
+   "quotes": [
+    {
+     "quote": "You can directly download our pre-trained Endo-FM via this [link](https://drive.google.com/file/d/1H7B91Ewm4QkZRsnUk1Bn0IQch5P8C7Xl/view?usp=sharing)",
+     "file": "endofm_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/med-air/Endo-FM/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_github_readme.raw"
+    },
+    {
+     "quote": "endo_fm.pth - Google",
+     "file": "endofm_weights_gdrive_view",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://drive.google.com/file/d/1H7B91Ewm4QkZRsnUk1Bn0IQch5P8C7Xl/view?usp=sharing",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_weights_gdrive_view.html"
+    }
+   ]
+  },
+  "licence": {
+   "code": "Apache-2.0",
+   "weights": "not separately stated; the README places 'This project' under Apache-2.0",
+   "url": "https://github.com/med-air/Endo-FM/blob/main/LICENSE",
+   "code_and_weights_differ": "no separate weights licence stated",
+   "quotes": [
+    {
+     "quote": "This project is under the Apache License 2.0 license.",
+     "file": "endofm_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/med-air/Endo-FM/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_github_readme.raw"
+    },
+    {
+     "quote": "Apache License Version 2.0, January 2004",
+     "file": "endofm_github_license",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/med-air/Endo-FM/main/LICENSE",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_github_license.raw"
+    }
+   ]
+  },
+  "architecture": {
+   "description": "Video transformer based on ViT-B/16 (TimeSformer-style divided space-time attention; SVT/DINO-style self-distillation); initialised from the SVT Kinetics-400 ViT-B checkpoint",
+   "params": "not stated in paper or README (ViT-B/16 video transformer; ~121M for a TimeSformer-B is an outside estimate, unverified)",
+   "input": "video clips; pretraining global views 224x224 with 8-16 frames, local views 96x96 with 2-16 frames; clips 30 fps, ~5 s; downstream classification 8 frames at 224x224",
+   "quotes": [
+    {
+     "quote": "we develop a video transformer, based on ViT B/16 [8]",
+     "file": "endofm_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2306.16741",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "where Tg ∈ [8, 16] and Tl ∈ [2, 4, 8, 16]. The spatial sizes of global and local views are 224×224 and 96×96, respectively.",
+     "file": "endofm_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2306.16741",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "We process the original videos into 30fps short clips with a duration of 5s on average.",
+     "file": "endofm_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2306.16741",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "sample 8 frames with spatial size 224 × 224 for every video as the input",
+     "file": "endofm_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2306.16741",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "wget -P checkpoints/ https://github.com/kahnchana/svt/releases/download/v1.0/kinetics400_vitb_ssl.pth",
+     "file": "endofm_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/med-air/Endo-FM/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_github_readme.raw"
+    }
+   ]
+  },
+  "pretraining_data": {
+   "summary": "6 public endoscopy video datasets (Colonoscopic, SUN & SUN-SEG, LDPolypVideo, Hyper-Kvasir, Kvasir-Capsule, CholecTriplet) + 1 private colonoscopy/gastroscopy set from Baoshan Branch of Renji Hospital, Shanghai; 32,896 clips / 5.02M frames; initialisation from SVT Kinetics-400 (general YouTube action video)",
+   "datasets": [
+    "Colonoscopic (CNRS)",
+    "SUN & SUN-SEG",
+    "LDPolypVideo",
+    "Hyper-Kvasir",
+    "Kvasir-Capsule",
+    "CholecTriplet (cholecystectomy, laparoscope)",
+    "Private: Baoshan Branch of Renji Hospital, Shanghai (colonoscope 16,494 clips; gastroscope 7,653 clips)",
+    "Initialisation only: SVT self-supervised ViT-B on Kinetics-400"
+   ],
+   "documented_list_complete": true,
+   "youtube_derived": "Only via the Kinetics-400 initialisation checkpoint (Kinetics clips are taken from YouTube); the endoscopy pretraining data are not YouTube-derived",
+   "notes": "Abstract says '9 publicly available datasets' but README and Table 1 list 6 public pretraining datasets (the 9 count appears to include the 3 downstream sets).",
+   "quotes": [
+    {
+     "quote": "We utilize 6 public and 1 private datasets for pre-training and 3 datasets as the downstream tasks.",
+     "file": "endofm_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/med-air/Endo-FM/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_github_readme.raw"
+    },
+    {
+     "quote": "#### Pre-training Data (6 public + 1 private)",
+     "file": "endofm_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/med-air/Endo-FM/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_github_readme.raw"
+    },
+    {
+     "quote": "Colonoscopic [19] SUN [20] & SUN-SEG [13] LDPolypVideo [18] Hyper-Kvasir [5] Kvasir-Capsule [31] CholecTriplet [24]",
+     "file": "endofm_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2306.16741",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "Baoshan Branch 16494 of Renji Hospital 7653 2491952 colonoscope 1170753 gastroscope polyp, erosion, etc.",
+     "file": "endofm_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2306.16741",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "We collect all possible public endoscope video datasets and a new one from Baoshan Branch of Renji Hospital for pre-training.",
+     "file": "endofm_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2306.16741",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "combining 9 publicly available datasets and a privately collected dataset from Baoshan Branch of Renji Hospital in Shanghai, China.",
+     "file": "endofm_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2306.16741",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "taken from a different YouTube video",
+     "file": "kinetics_arxiv_abs",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/abs/1705.06950",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/kinetics_arxiv_abs.html"
+    }
+   ]
+  },
+  "appendix300_in_pretraining": {
+   "answer": "NO",
+   "reason": "All pretraining sources are named; the only surgical (laparoscopic) set is CholecTriplet (cholecystectomy) and the only private set is colonoscopy/gastroscopy from Renji Hospital, Shanghai. No appendectomy data and no Dresden-area centre appear. Kinetics-400 initialisation is general human-action video.",
+   "quotes": [
+    {
+     "quote": "We utilize 6 public and 1 private datasets for pre-training and 3 datasets as the downstream tasks.",
+     "file": "endofm_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/med-air/Endo-FM/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_github_readme.raw"
+    },
+    {
+     "quote": "covering 3 endoscopy protocols and 10+ types of diseases",
+     "file": "endofm_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2306.16741",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_arxiv_pdf.pdf"
+    }
+   ]
+  },
+  "eligibility": {
+   "open_weights": "PASS",
+   "licence_research_use": "PASS",
+   "domain_primary": "PASS",
+   "documented_pretraining_data": "PASS",
+   "eligible": "PASS",
+   "notes": "Domain: endoscopy video (mostly GI flexible endoscopy; one laparoscopic cholecystectomy set). Weights licence inferred from project-wide Apache-2.0 statement."
+  },
+  "sources": [
+   {
+    "url": "https://arxiv.org/abs/2306.16741",
+    "final_url": "https://arxiv.org/abs/2306.16741",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_arxiv_abs.html",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_arxiv_abs.txt",
+    "sha256": "8d0c46dca6610dd468b3325f2fd3b795c872611d6adfadf30c563204371f4dd6",
+    "fetched_utc": "2026-10-02T09:04:29+00:00"
+   },
+   {
+    "url": "https://arxiv.org/pdf/2306.16741",
+    "final_url": "https://arxiv.org/pdf/2306.16741",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_arxiv_pdf.pdf",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_arxiv_pdf.txt",
+    "sha256": "26b3496090b003306df811892b133646f40a0b08a917300f055b57380d7e350e",
+    "fetched_utc": "2026-10-02T09:04:29+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/med-air/Endo-FM/main/LICENSE",
+    "final_url": "https://raw.githubusercontent.com/med-air/Endo-FM/main/LICENSE",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_github_license.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_github_license.txt",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "fetched_utc": "2026-10-02T09:04:29+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/med-air/Endo-FM/main/README.md",
+    "final_url": "https://raw.githubusercontent.com/med-air/Endo-FM/main/README.md",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_github_readme.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_github_readme.txt",
+    "sha256": "c5dc10aaa7a35b425d549893e4ccb542960ac4886253ece9767bfd391773d62c",
+    "fetched_utc": "2026-10-02T09:04:29+00:00"
+   },
+   {
+    "url": "https://drive.google.com/file/d/1H7B91Ewm4QkZRsnUk1Bn0IQch5P8C7Xl/view?usp=sharing",
+    "final_url": "https://drive.google.com/file/d/1H7B91Ewm4QkZRsnUk1Bn0IQch5P8C7Xl/view?usp=sharing",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_weights_gdrive_view.html",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofm_weights_gdrive_view.txt",
+    "sha256": "9467655cd638583a26a6d3b4b7a8ea3d4dd931f73d70d94778dbdab81f3cdea3",
+    "fetched_utc": "2026-10-02T09:05:01+00:00"
+   },
+   {
+    "url": "https://arxiv.org/abs/1705.06950",
+    "final_url": "https://arxiv.org/abs/1705.06950",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/kinetics_arxiv_abs.html",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/kinetics_arxiv_abs.txt",
+    "sha256": "0b943134dccf902fb11e82a0cc4a983172aa3ca4fca0e72d3e78443ce7181f9d",
+    "fetched_utc": "2026-10-02T09:05:52+00:00"
+   }
+  ]
+ },
+ {
+  "name": "EndoFM-LV",
+  "paper": {
+   "title": "Improving Foundation Model for Endoscopy Video Analysis via Representation Learning on Long Sequences",
+   "year": 2025,
+   "venue": "IEEE Journal of Biomedical and Health Informatics 29(5):3526-3536 (doi 10.1109/JBHI.2025.3532311; closed access)",
+   "arxiv": null,
+   "quotes": [
+    {
+     "quote": "Improving Foundation Model for Endoscopy Video Analysis via Representation Learning on Long Sequences.",
+     "file": "endofmlv_pubmed_efetch",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40031835&rettype=abstract&retmode=text",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_pubmed_efetch.raw"
+    },
+    {
+     "quote": "IEEE J Biomed Health Inform. 2025 May;29(5):3526-3536.",
+     "file": "endofmlv_pubmed_efetch",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40031835&rettype=abstract&retmode=text",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_pubmed_efetch.raw"
+    }
+   ]
+  },
+  "weights": {
+   "url": "https://mycuhk-my.sharepoint.com/:u:/g/personal/1155167044_link_cuhk_edu_hk/EauTiGd9hg9Lu_7JED3v1E0BwCZ2ZQTsdBfiFo58ADtrmg?e=AZAsP4",
+   "exists": "NO (at check 2026-10-02) - the only pretrained-weights link (CUHK SharePoint) returns HTTP 404 '404 FILE NOT FOUND'; open GitHub issue #5 (2026-07-28) reports the same, no reply; no Hugging Face copy found",
+   "request_or_registration_required": null,
+   "quotes": [
+    {
+     "quote": "You can directly download our pre-trained Endo-FM via this [link](https://mycuhk-my.sharepoint.com/:u:/g/personal/1155167044_link_cuhk_edu_hk/EauTiGd9hg9Lu_7JED3v1E0BwCZ2ZQTsdBfiFo58ADtrmg?e=AZAsP4)",
+     "file": "endofmlv_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/med-air/EndoFM-LV/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_github_readme.raw"
+    },
+    {
+     "quote": "\"status\": 404",
+     "file": "endofmlv_weights_sharepoint_check",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://mycuhk-my.sharepoint.com/:u:/g/personal/1155167044_link_cuhk_edu_hk/EauTiGd9hg9Lu_7JED3v1E0BwCZ2ZQTsdBfiFo58ADtrmg?e=AZAsP4",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_weights_sharepoint_check.json"
+    },
+    {
+     "quote": "The model download links provided in the repository are not working. When I try to access them, I receive a 404 File Not Found error.",
+     "file": "endofmlv_issue5",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://api.github.com/repos/med-air/EndoFM-LV/issues/5",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_issue5.json"
+    }
+   ]
+  },
+  "licence": {
+   "code": "Apache-2.0",
+   "weights": "not separately stated (project-wide Apache-2.0)",
+   "url": "https://github.com/med-air/EndoFM-LV/blob/main/LICENSE",
+   "code_and_weights_differ": "no separate weights licence stated",
+   "quotes": [
+    {
+     "quote": "This project is under the Apache License 2.0 license.",
+     "file": "endofmlv_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/med-air/EndoFM-LV/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_github_readme.raw"
+    },
+    {
+     "quote": "Apache License Version 2.0, January 2004",
+     "file": "endofmlv_github_license",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/med-air/EndoFM-LV/main/LICENSE",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_github_license.raw"
+    }
+   ]
+  },
+  "architecture": {
+   "description": "TimeSformer video transformer, teacher-student masked-token self-distillation on minute-level sequences",
+   "params": "not stated in accessible sources",
+   "input": "long clips; pretraining script sets 32 frames (DATA.NUM_FRAMES 32); spatial size not stated in accessible sources (config file is TimeSformer_divST_8x32_224)",
+   "quotes": [
+    {
+     "quote": "--arch \"timesformer\"",
+     "file": "endofmlv_scripts_train",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/med-air/EndoFM-LV/main/scripts/train_endofm_lv.sh",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_scripts_train.raw"
+    },
+    {
+     "quote": "DATA.NUM_FRAMES 32",
+     "file": "endofmlv_scripts_train",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/med-air/EndoFM-LV/main/scripts/train_endofm_lv.sh",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_scripts_train.raw"
+    }
+   ]
+  },
+  "pretraining_data": {
+   "summary": "6,469 long endoscopy videos (>1 min, 13.2M frames) from '4 public and 1 private' datasets; the datasets are NOT named in README/abstract (full paper closed access); repo figure lists domain 'colonoscopy, gastroscopy'; data-prep script globs private2/, private_new/, private_batch3/ and public/*/ folders",
+   "datasets": [
+    "4 unnamed public datasets",
+    "1 unnamed private dataset (folders private2, private_new, private_batch3)"
+   ],
+   "documented_list_complete": false,
+   "youtube_derived": "not stated",
+   "notes": "Figure assets/dataset.png (saved as endofmlv_github_assets_dataset.png; image, not text-verifiable) gives 'EndoFM-LV (Ours) | 6469 | 13,224,974 | 68.1 | colonoscopy, gastroscopy'. Full JBHI text not accessible (Semantic Scholar openAccessPdf status CLOSED).",
+   "quotes": [
+    {
+     "quote": "We utilize 4 public and 1 private datasets for pre-training and 4 datasets as the downstream tasks.",
+     "file": "endofmlv_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/med-air/EndoFM-LV/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_github_readme.raw"
+    },
+    {
+     "quote": "For pre-training, we construct a large-scale long endoscopy video dataset comprising 6,469 long endoscopic video samples, each longer than 1 minute and totaling over 13 million frames.",
+     "file": "endofmlv_pubmed_efetch",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40031835&rettype=abstract&retmode=text",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_pubmed_efetch.raw"
+    },
+    {
+     "quote": "videolist = glob.glob(f'{datadir}/private2/*.mp4') videolist.extend(glob.glob(f'{datadir}/public/*/*.mp4')) videolist.extend(glob.glob(f'{datadir}/private_new/*.mp4')) videolist.extend(glob.glob(f'{datadir}/private_batch3/*.mp4'))",
+     "file": "endofmlv_data_gencsv",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/med-air/EndoFM-LV/main/data/gencsv.py",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_data_gencsv.raw"
+    }
+   ]
+  },
+  "appendix300_in_pretraining": {
+   "answer": "UNKNOWN",
+   "reason": "Public datasets are unnamed in accessible documentation and one private dataset is undisclosed; cannot be decided (domain stated as colonoscopy/gastroscopy, which makes laparoscopic appendectomy unlikely but is not a complete source list).",
+   "quotes": [
+    {
+     "quote": "We utilize 4 public and 1 private datasets for pre-training",
+     "file": "endofmlv_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/med-air/EndoFM-LV/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_github_readme.raw"
+    }
+   ]
+  },
+  "eligibility": {
+   "open_weights": "FAIL",
+   "licence_research_use": "PASS",
+   "domain_primary": "PASS",
+   "documented_pretraining_data": "UNKNOWN",
+   "eligible": "FAIL",
+   "notes": "Fails open weights at check time (link 404). Documented-data criterion UNKNOWN: dataset names may be in the closed-access JBHI paper, not verifiable here."
+  },
+  "sources": [
+   {
+    "url": "https://raw.githubusercontent.com/med-air/EndoFM-LV/main/data/gencsv.py",
+    "final_url": "https://raw.githubusercontent.com/med-air/EndoFM-LV/main/data/gencsv.py",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_data_gencsv.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_data_gencsv.txt",
+    "sha256": "90bafc487eedc446fc51fabc2e5ebd639802c5df0e1e627a94085dfb69b079bc",
+    "fetched_utc": "2026-10-02T09:07:36+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/med-air/EndoFM-LV/main/data/trans_videos_pretrain.py",
+    "final_url": "https://raw.githubusercontent.com/med-air/EndoFM-LV/main/data/trans_videos_pretrain.py",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_data_trans_videos_pretrain.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_data_trans_videos_pretrain.txt",
+    "sha256": "775374d0ee1b3227498712830b855ea2e187403f8a127274e636ac59fd7b24aa",
+    "fetched_utc": "2026-10-02T09:07:36+00:00"
+   },
+   {
+    "url": "https://api.github.com/repos/med-air/EndoFM-LV",
+    "final_url": "https://api.github.com/repos/med-air/EndoFM-LV",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_github_api_repo.json",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_github_api_repo.txt",
+    "sha256": "984066d4a473ebcb0b1cc1660c432c822662be065c3d9875c2ea49bbac2302bb",
+    "fetched_utc": "2026-10-02T09:06:34+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/med-air/EndoFM-LV/main/LICENSE",
+    "final_url": "https://raw.githubusercontent.com/med-air/EndoFM-LV/main/LICENSE",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_github_license.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_github_license.txt",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "fetched_utc": "2026-10-02T09:06:34+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/med-air/EndoFM-LV/main/README.md",
+    "final_url": "https://raw.githubusercontent.com/med-air/EndoFM-LV/main/README.md",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_github_readme.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_github_readme.txt",
+    "sha256": "c0a2ca26cad5a4cc4fd91eed76d3ae95cfa9ef02dea1027d810f9916894ae1df",
+    "fetched_utc": "2026-10-02T09:06:34+00:00"
+   },
+   {
+    "url": "https://doi.org/10.1109/jbhi.2025.3532311",
+    "final_url": "https://ieeexplore.ieee.org/document/10885043/",
+    "http_status": 202,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_ieee_doi.html",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_ieee_doi.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fetched_utc": "2026-10-02T09:07:09+00:00"
+   },
+   {
+    "url": "https://api.github.com/repos/med-air/EndoFM-LV/issues/5",
+    "final_url": "https://api.github.com/repos/med-air/EndoFM-LV/issues/5",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_issue5.json",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_issue5.txt",
+    "sha256": "eaaac631326729ada647fcdf73bddc6f19ea88a229d520a266450d02252cd717",
+    "fetched_utc": "2026-10-02T09:08:32+00:00"
+   },
+   {
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40031835&rettype=abstract&retmode=text",
+    "final_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40031835&rettype=abstract&retmode=text",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_pubmed_efetch.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_pubmed_efetch.txt",
+    "sha256": "4c683a2a753e51b32b83e9470d0c435c9f8ebf0f0b85b0fdf1a171f51a09c00f",
+    "fetched_utc": "2026-10-02T09:07:19+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/med-air/EndoFM-LV/main/scripts/train_endofm_lv.sh",
+    "final_url": "https://raw.githubusercontent.com/med-air/EndoFM-LV/main/scripts/train_endofm_lv.sh",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_scripts_train.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_scripts_train.txt",
+    "sha256": "2c9d0045dd0592303386bee4e4d127baaacc2b56110e4b7b513e674eb4dba980",
+    "fetched_utc": "2026-10-02T09:07:37+00:00"
+   },
+   {
+    "url": "https://mycuhk-my.sharepoint.com/:u:/g/personal/1155167044_link_cuhk_edu_hk/EauTiGd9hg9Lu_7JED3v1E0BwCZ2ZQTsdBfiFo58ADtrmg?e=AZAsP4",
+    "final_url": "https://mycuhk-my.sharepoint.com/:u:/g/personal/1155167044_link_cuhk_edu_hk/EauTiGd9hg9Lu_7JED3v1E0BwCZ2ZQTsdBfiFo58ADtrmg?e=AZAsP4",
+    "http_status": 404,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_weights_sharepoint_check.json",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endofmlv_weights_sharepoint_check.txt",
+    "sha256": "d7e41658ad04137be2cb928535c8dda78175d1dbcf202b970e0b43fc532c5740",
+    "fetched_utc": "2026-10-02T09:07:57+00:00"
+   }
+  ]
+ },
+ {
+  "name": "EndoViT",
+  "paper": {
+   "title": "EndoViT: pretraining vision transformers on a large collection of endoscopic images",
+   "year": 2024,
+   "venue": "International Journal of Computer Assisted Radiology and Surgery (IJCARS) 2024; doi 10.1007/s11548-024-03091-5; PMC11178556",
+   "arxiv": "2303.17636 (earlier version: 'Whether and When does Endoscopy Domain Pretraining Make Sense?')",
+   "quotes": [
+    {
+     "quote": "Official codebase of the paper: [EndoViT: pretraining vision transformers on a large collection of endoscopic images]",
+     "file": "endovit_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/DominikBatic/EndoViT/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_github_readme.raw"
+    },
+    {
+     "quote": "Earlier arXiv version (without semantic-segmentation) can be found here: [Whether and When does Endoscopy Domain Pretraining Make Sense?](https://arxiv.org/abs/2303.17636)",
+     "file": "endovit_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/DominikBatic/EndoViT/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_github_readme.raw"
+    }
+   ]
+  },
+  "weights": {
+   "url": "https://huggingface.co/egeozsoy/EndoViT (also Google Drive per-task variants EndoViT_Seg / EndoViT_ATD / EndoViT_SPR linked in GitHub README)",
+   "exists": "YES - HF API lists pytorch_model.bin (1,341,188,699 bytes), gated=false, private=false",
+   "request_or_registration_required": false,
+   "quotes": [
+    {
+     "quote": "\"rfilename\":\"pytorch_model.bin\",\"blobId\":\"003e961b635141dd163fd12e15550d18c908d60e\",\"size\":1341188699",
+     "file": "endovit_hf_api_blobs",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://huggingface.co/api/models/egeozsoy/EndoViT?blobs=true",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_hf_api_blobs.json"
+    },
+    {
+     "quote": "\"gated\":false",
+     "file": "endovit_hf_api_blobs",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://huggingface.co/api/models/egeozsoy/EndoViT?blobs=true",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_hf_api_blobs.json"
+    },
+    {
+     "quote": "| CholecSeg8k (Segmentation)                 | [EndoViT_Seg](https://drive.google.com/file/d/1NJ-4ZL40kHA_WZ1NylahaS84FcvnigjF/view?usp=share_link)",
+     "file": "endovit_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/DominikBatic/EndoViT/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_github_readme.raw"
+    }
+   ]
+  },
+  "licence": {
+   "code": "none declared (GitHub repo DominikBatic/EndoViT has no LICENSE file; GitHub API license = null)",
+   "weights": "Apache-2.0 (Hugging Face model card metadata)",
+   "url": "https://huggingface.co/egeozsoy/EndoViT",
+   "code_and_weights_differ": "yes - weights repo declares apache-2.0; code repo declares no licence",
+   "quotes": [
+    {
+     "quote": "license: apache-2.0",
+     "file": "endovit_hf_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://huggingface.co/egeozsoy/EndoViT/raw/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_hf_readme.raw"
+    },
+    {
+     "quote": "\"license\":null",
+     "file": "endovit_github_api_repo",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://api.github.com/repos/DominikBatic/EndoViT",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_github_api_repo.json"
+    }
+   ]
+  },
+  "architecture": {
+   "description": "ViT-Base/16 image encoder pretrained with MAE (75% masking), initialised from ImageNet MAE weights",
+   "params": "ViT-B/16 (embed 768, depth 12, 12 heads) ~86M encoder parameters (standard ViT-B figure; count not stated in the sources)",
+   "input": "single frames (images) 224x224; Endo700k frames extracted at 1 FPS",
+   "quotes": [
+    {
+     "quote": "VisionTransformer(patch_size=16, embed_dim=768, depth=12, num_heads=12, mlp_ratio=4",
+     "file": "endovit_hf_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://huggingface.co/egeozsoy/EndoViT/raw/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_hf_readme.raw"
+    },
+    {
+     "quote": "The results are reported both for EndoViT’s pretraining resolution of 224 x 224 (Low Res)",
+     "file": "endovit_pmc_fulltext",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11178556/fullTextXML",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_pmc_fulltext.xml"
+    },
+    {
+     "quote": "For consistency, we always downsample to 1 FPS.",
+     "file": "endovit_pmc_fulltext",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11178556/fullTextXML",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_pmc_fulltext.xml"
+    },
+    {
+     "quote": "Consequently, our pre-training uses ImageNet weights as a starting point.",
+     "file": "endovit_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/DominikBatic/EndoViT/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_github_readme.raw"
+    }
+   ]
+  },
+  "pretraining_data": {
+   "summary": "Endo700k = 9 public MIS datasets (743,724 frames at 1 FPS): HeiCo, Cholec80, PSI-AVA, ESAD, LapGyn4 v1.2, hSDB-instrument, DSAD, GLENDA v1.0, SurgicalActions160; plus ImageNet MAE initialisation",
+   "datasets": [
+    "HeiCo (Heidelberg colorectal: proctocolectomy, rectal resection, sigmoid resection)",
+    "Cholec80 (cholecystectomy)",
+    "PSI-AVA (robot-assisted radical prostatectomy)",
+    "ESAD (robot-assisted radical prostatectomy)",
+    "LapGyn4 v1.2 (gynecologic laparoscopy)",
+    "hSDB-instrument (lap. cholecystectomy, robotic gastrectomy)",
+    "DSAD - Dresden Surgical Anatomy Dataset (32 robot-assisted rectal resections, University Hospital Carl Gustav Carus Dresden)",
+    "GLENDA v1.0 (gynecologic laparoscopy)",
+    "SurgicalActions160 (gynecologic laparoscopy)",
+    "Initialisation: ImageNet MAE ViT-B"
+   ],
+   "documented_list_complete": true,
+   "youtube_derived": "no (all named curated datasets)",
+   "quotes": [
+    {
+     "quote": "we introduce Endo700k, a collection of 9 publicly available endoscopic datasets comprising more than 700,000 unlabelled images.",
+     "file": "endovit_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/DominikBatic/EndoViT/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_github_readme.raw"
+    },
+    {
+     "quote": "Table 1 An overview of the individual datasets that form the Endo700k dataset Dataset Surgery type # Surg. # Unique images ESAD [ 3 ] Robot-assisted radical prostatectomy 4 49,544 LapGyn4 (v1.2) [ 15 ] Gynecologic laparoscopy >500 38,192 Surgical Actions160 [ 23 ] Gynecologic laparoscopy 59 761 GLENDA (v1.0) [ 14 ] Gynecologic laparoscopy >400 1,083 hSDB instrument [ 30 ] Laparoscopic cholecystectomy 24 35,576 Robotic gastrectomy 24 HeiCo [ 18 ] Laparoscopic proctocolectomy 10 347,257 Laparoscopic rectal resection 10 Laparoscopic sigmoid resection 10 PSI-AVA [ 27 ] Robot-assisted radical prostatectomy 8 73,618 DSAD [ 4 ] Robot-assisted rectal resection 32 13,195 Cholec80 [ 26 ] Laparoscopic cholecystectomy 80 184,498",
+     "file": "endovit_pmc_fulltext",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11178556/fullTextXML",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_pmc_fulltext.xml"
+    },
+    {
+     "quote": "Outside the previously mentioned exceptions, we use all of the images from the nine datasets.",
+     "file": "endovit_pmc_fulltext",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11178556/fullTextXML",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_pmc_fulltext.xml"
+    },
+    {
+     "quote": "video data from a total of 32 robot-assisted anterior rectal resections or rectal extirpations performed at the University Hospital Carl Gustav Carus Dresden was gathered",
+     "file": "dsad_scidata",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://www.nature.com/articles/s41597-022-01719-2",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/dsad_scidata.html"
+    }
+   ]
+  },
+  "appendix300_in_pretraining": {
+   "answer": "NO",
+   "reason": "Complete list of 9 named public datasets; none contains appendectomy. Note: DSAD comes from University Hospital Carl Gustav Carus Dresden (an Appendix300 centre) but consists of robot-assisted rectal resections/extirpations recorded 2019-2021, not appendectomy recordings.",
+   "quotes": [
+    {
+     "quote": "Endo700k contains a diverse set of endoscopic procedures, both manual and robot-assisted, with several surgery types such as prostatectomy, cholecystectomy, gastrectomy, proctocolectomy, rectal resection, and sigmoid resection.",
+     "file": "endovit_pmc_fulltext",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11178556/fullTextXML",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_pmc_fulltext.xml"
+    },
+    {
+     "quote": "Between February 2019 and February 2021, video data from a total of 32 robot-assisted anterior rectal resections or rectal extirpations performed at the University Hospital Carl Gustav Carus Dresden",
+     "file": "dsad_scidata",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://www.nature.com/articles/s41597-022-01719-2",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/dsad_scidata.html"
+    }
+   ]
+  },
+  "eligibility": {
+   "open_weights": "PASS",
+   "licence_research_use": "PASS",
+   "domain_primary": "PASS",
+   "documented_pretraining_data": "PASS",
+   "eligible": "PASS",
+   "notes": "Frame-level (image) encoder trained on frames of surgical videos at 1 FPS. Licence PASS rests on the HF weights card (apache-2.0); the GitHub code has no licence. Same-institution overlap (Carus Dresden, via DSAD rectal surgery) should be disclosed even though it is not Appendix300 data."
+  },
+  "sources": [
+   {
+    "url": "https://www.nature.com/articles/s41597-022-01719-2",
+    "final_url": "https://www.nature.com/articles/s41597-022-01719-2",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/dsad_scidata.html",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/dsad_scidata.txt",
+    "sha256": "2ce151a852f3aa6af8f0e76f4c78916f18f4381dd14adff688554235d1a1457d",
+    "fetched_utc": "2026-10-02T09:09:37+00:00"
+   },
+   {
+    "url": "https://arxiv.org/abs/2303.17636",
+    "final_url": "https://arxiv.org/abs/2303.17636",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_arxiv_abs.html",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_arxiv_abs.txt",
+    "sha256": "1c618452ace98451f3ca7f2228833246268bd492c44e43ff13f0458172b1c986",
+    "fetched_utc": "2026-10-02T09:09:18+00:00"
+   },
+   {
+    "url": "https://api.github.com/repos/DominikBatic/EndoViT",
+    "final_url": "https://api.github.com/repos/DominikBatic/EndoViT",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_github_api_repo.json",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_github_api_repo.txt",
+    "sha256": "dac6d8cb38ffe03a83a8951278d3d3a1be1e2165c61cc9f739198876cb3d43e8",
+    "fetched_utc": "2026-10-02T09:09:11+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/DominikBatic/EndoViT/main/README.md",
+    "final_url": "https://raw.githubusercontent.com/DominikBatic/EndoViT/main/README.md",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_github_readme.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_github_readme.txt",
+    "sha256": "252e5f3a90bcdd8c1a976f1b77ea8dc263956072e3e64d6f050295ebc5b27ad3",
+    "fetched_utc": "2026-10-02T09:09:10+00:00"
+   },
+   {
+    "url": "https://huggingface.co/api/models/egeozsoy/EndoViT",
+    "final_url": "https://huggingface.co/api/models/egeozsoy/EndoViT",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_hf_api.json",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_hf_api.txt",
+    "sha256": "f99077786ed648f87fed2cfac82f83fcb76f3d39cb586613be768f5072f2a9af",
+    "fetched_utc": "2026-10-02T09:09:18+00:00"
+   },
+   {
+    "url": "https://huggingface.co/api/models/egeozsoy/EndoViT?blobs=true",
+    "final_url": "https://huggingface.co/api/models/egeozsoy/EndoViT?blobs=true",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_hf_api_blobs.json",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_hf_api_blobs.txt",
+    "sha256": "0d48223c1161267bd403be16687d37239d90cf66e68c7722863698754cc413cd",
+    "fetched_utc": "2026-10-02T09:10:41+00:00"
+   },
+   {
+    "url": "https://huggingface.co/egeozsoy/EndoViT/raw/main/README.md",
+    "final_url": "https://huggingface.co/egeozsoy/EndoViT/raw/main/README.md",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_hf_readme.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_hf_readme.txt",
+    "sha256": "c5695c8c3f698af9ddc94e03c11130e8210a1f408ba337ae650dcdfa51746de3",
+    "fetched_utc": "2026-10-02T09:09:18+00:00"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11178556/fullTextXML",
+    "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11178556/fullTextXML",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_pmc_fulltext.xml",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/endovit_pmc_fulltext.txt",
+    "sha256": "f8da83884649de6f649617e1e6ab11d1bf1cd9819e10686de00072e840728995",
+    "fetched_utc": "2026-10-02T09:10:02+00:00"
+   }
+  ]
+ },
+ {
+  "name": "SurgeNetXL (CAFormer-S18; plus SurgeNetXL-pretrained DINOv1/v2/v3 ViT-S/B/L from SurgeNetDINO)",
+  "paper": {
+   "title": "Scaling up self-supervised learning for improved surgical foundation models",
+   "year": 2026,
+   "venue": "Medical Image Analysis 108:103873 (2026; arXiv Jan 2025); DINO variants: 'Towards Effective Surgical Representation Learning with DINO Models', MIDL 2026 (OpenReview 6FoIDPKzRV)",
+   "arxiv": "2501.09436",
+   "quotes": [
+    {
+     "quote": "title = {Scaling up self-supervised learning for improved surgical foundation models}, journal = {Medical Image Analysis}, volume = {108}, pages = {103873}, year = {2026},",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "**(Accepted for Medical Imaging with Deep Learning (MIDL) 2026)**",
+     "file": "surgenetdino_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/rlpddejong/SurgeNetDINO/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetdino_github_readme.raw"
+    }
+   ]
+  },
+  "weights": {
+   "url": "https://huggingface.co/TimJaspersTue/SurgeNetModels (SurgeNetXL_checkpoint_epoch0050_teacher.pth); https://huggingface.co/rlpddejong/SurgeNetXL_DINOv1-v3",
+   "exists": "YES - HF API lists SurgeNetXL_checkpoint_epoch0050_teacher.pth (93,022,798 B) and DINOv1/v2/v3 ViT .pth files; both repos gated=false",
+   "request_or_registration_required": false,
+   "quotes": [
+    {
+     "quote": "\"rfilename\":\"SurgeNetXL_checkpoint_epoch0050_teacher.pth\",\"blobId\":\"621550d8b69a4a9605721d5875c510047c7dd07f\",\"size\":93022798",
+     "file": "surgenet_hf_api_blobs",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://huggingface.co/api/models/TimJaspersTue/SurgeNetModels?blobs=true",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_hf_api_blobs.json"
+    },
+    {
+     "quote": "\"gated\":false",
+     "file": "surgenet_hf_api_blobs",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://huggingface.co/api/models/TimJaspersTue/SurgeNetModels?blobs=true",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_hf_api_blobs.json"
+    },
+    {
+     "quote": "\"rfilename\":\"DINOv2_ViTb14_size336_SurgeNetXL.pth\",\"blobId\":\"f894e7a078bcf9caa62eeb49546cda978e9162a3\",\"size\":343942415",
+     "file": "surgenetdino_hf_api_blobs",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://huggingface.co/api/models/rlpddejong/SurgeNetXL_DINOv1-v3?blobs=true",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetdino_hf_api_blobs.json"
+    },
+    {
+     "quote": "\"gated\":false",
+     "file": "surgenetdino_hf_api_blobs",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://huggingface.co/api/models/rlpddejong/SurgeNetXL_DINOv1-v3?blobs=true",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetdino_hf_api_blobs.json"
+    }
+   ]
+  },
+  "licence": {
+   "code": "MIT (GitHub TimJaspers0801/SurgeNet LICENSE.txt; SurgeNetDINO repo also MIT)",
+   "weights": "CC BY-NC-SA 4.0 per GitHub README/LICENSE_MODELS.txt; the Hugging Face repos' metadata say cc-by-nc-4.0 (inconsistent; both non-commercial, research use permitted)",
+   "url": "https://github.com/TimJaspers0801/SurgeNet/blob/main/LICENSE_MODELS.txt",
+   "code_and_weights_differ": "yes - code MIT, weights non-commercial (CC BY-NC-SA 4.0 / CC BY-NC 4.0)",
+   "quotes": [
+    {
+     "quote": "- Code: MIT — see LICENSE (permissive; commercial use permitted).",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "- Pretrained model weights: CC-BY-NC-SA — non-commercial share-alike. The weights and any derivative models that include these weights are NOT cleared for commercial use.",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "Attribution-NonCommercial-ShareAlike 4.0 International",
+     "file": "surgenet_github_license_models",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/LICENSE_MODELS.txt",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_license_models.raw"
+    },
+    {
+     "quote": "\"cardData\":{\"license\":\"cc-by-nc-4.0\"}",
+     "file": "surgenet_hf_api_blobs",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://huggingface.co/api/models/TimJaspersTue/SurgeNetModels?blobs=true",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_hf_api_blobs.json"
+    },
+    {
+     "quote": "MIT License",
+     "file": "surgenet_github_license",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/LICENSE.txt",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_license.raw"
+    },
+    {
+     "quote": "\"cardData\":{\"license\":\"cc-by-nc-4.0\"}",
+     "file": "surgenetdino_hf_api_blobs",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://huggingface.co/api/models/rlpddejong/SurgeNetXL_DINOv1-v3?blobs=true",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetdino_hf_api_blobs.json"
+    }
+   ]
+  },
+  "architecture": {
+   "description": "Frame encoder. Main model CAFormer-S18 (MetaFormer) pretrained with DINO from ImageNet-1k initialisation; ConvNeXtV2-tiny / PVTv2-B2 variants trained on SurgeNet (no YouTube); SurgeNetDINO: DINOv1 ViT-S/16, ViT-B/16 (224), DINOv2 ViT-S/B/L-14 (336), DINOv3 ViT-S/B/L-16 (336) pretrained on SurgeNetXL",
+   "params": "CAFormer-S18 24.3M; SurgeNetDINO segmentation models ViT-S 23M, ViT-B 90-92M, ViT-L 311-314M (segmentation-model parameters as reported)",
+   "input": "single frames; downstream frames resized to 224x399; DINO ViTs at 224 (v1) or 336 (v2/v3)",
+   "quotes": [
+    {
+     "quote": "Backbone CaFormerS18 Number of parameters 24.3M",
+     "file": "surgenetxl_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2501.09436",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetxl_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "We initiate pretraining from ImageNet-initialized weights as recommended by Ramesh et al. (2023)",
+     "file": "surgenetxl_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2501.09436",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetxl_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "Input frames are resized to a resolution of 224×399 pixels using bicubic interpolation.",
+     "file": "surgenetxl_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2501.09436",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetxl_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "| **DINOv2** | ViT-b | [Download](https://huggingface.co/rlpddejong/SurgeNetXL_DINOv1-v3/resolve/main/DINOv2_ViTb14_size336_SurgeNetXL.pth?download=true) |",
+     "file": "surgenetdino_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/rlpddejong/SurgeNetDINO/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetdino_github_readme.raw"
+    }
+   ]
+  },
+  "pretraining_data": {
+   "summary": "SurgeNetXL = 4,711,024 frames: 11 public datasets + 2 private (RAMIE-UMCU esophagectomy, RARP-AvL prostatectomy) + Surgical YouTube dataset (3,253 YouTube videos, 2,074,234 frames, 23 procedures incl. an 'appendectomy' subset); ImageNet-1k initialisation",
+   "datasets": [
+    "Cholec80",
+    "HeiChole",
+    "hSDB-Chole",
+    "RAMIE-UMCU (private; UMC Utrecht robot-assisted esophagectomy)",
+    "ESAD",
+    "PSI-AVA",
+    "RARP-AvL (private; robot-assisted prostatectomy)",
+    "DSAD (Carus Dresden robot-assisted rectal resection/extirpation)",
+    "GLENDA",
+    "LapGyn4",
+    "MultiBypass140",
+    "hSDB-Gastric",
+    "SurgToolLoc2022 (porcine)",
+    "Surgical YouTube dataset (3,253 videos, 23 procedures; obtained with GSViT/Schmidgall et al. code, curated)"
+   ],
+   "documented_list_complete": false,
+   "youtube_derived": "YES - 2,074,234 of 4,711,024 frames from 3,253 YouTube videos; the released dataset contains an appendectomy folder (7 zip batches); individual video sources/uploaders not enumerated in the documentation (URL list provided via SharePoint text file, not inspected)",
+   "quotes": [
+    {
+     "quote": "| **SurgeNetCholec** | Cholec80 ([Twinnanda et al., 2017b](https://arxiv.org/abs/1602.03012)) | Laparoscopic Cholecystectomy | 76 | 179,164 | Yes |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "| | HeiChole ([Maier-Hein et al., 2021](https://www.synapse.org/Synapse:syn25101790/wiki/608802)) | Laparoscopic Cholecystectomy | 30 | 53,427 | Yes |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "| **SurgeNetRAMIE** | RAMIE-UMCU | RA Esophagectomy | 28 | 377,287 | No |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "| | RARP-AvL | RA Prostatectomy | 8 | 261,516 | No |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "| **Others** | DSAD ([Carstens et al., 2023](https://www.nature.com/articles/s41597-022-01719-2)) | RA Rectal Resection/Extirpation | 32 | 14,623 | Yes |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "| | MultiBypass140 ([Lavanchy et al., 2024](https://github.com/CAMMA-public/MultiBypass140)) | Laparoscopic Gastric Bypass Surgery | 140 | 749,419 | Yes |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "| | SurgToolLoc2022 ([Zia et al., 2023](https://arxiv.org/abs/2305.07152)) | 11 different RA porcine procedures | N/A | 741,516 | Yes |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "| | YouTube [ours](https://huggingface.co/datasets/TimJaspersTue/SurgeNetYoutube) | 23 identified procedures | 3,253 | 2,074,234 | Yes |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "| **SurgeNetXL** | All of the above | All of the above | \\>4598 | 4,711,024 | Partly |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "This curated dataset contains 2,074,234 frames sampled from 23 distinct surgical procedures and is available upon request at [huggingface datasets](https://huggingface.co/datasets/TimJaspersTue/SurgeNetYoutube).",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "The original dataset was created by Schmidgall et al. (2024) and manually curated in our work.",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "\"rfilename\":\"appendectomy/yt_appendectomy_Batch0.zip\"",
+     "file": "surgenetyt_hf_dataset_api",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://huggingface.co/api/datasets/TimJaspersTue/SurgeNetYoutube",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetyt_hf_dataset_api.json"
+    }
+   ]
+  },
+  "appendix300_in_pretraining": {
+   "answer": "UNKNOWN",
+   "reason": "Pretraining includes 3,253 web-crawled YouTube surgical videos with an explicit appendectomy subset whose recording centres are not documented; whether any Dresden-area appendectomy recording is among them cannot be decided. All non-YouTube sources are named and none is Appendix300 (DSAD is Carus Dresden rectal surgery).",
+   "quotes": [
+    {
+     "quote": "\"rfilename\":\"appendectomy/yt_appendectomy_Batch0.zip\"",
+     "file": "surgenetyt_hf_dataset_api",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://huggingface.co/api/datasets/TimJaspersTue/SurgeNetYoutube",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetyt_hf_dataset_api.json"
+    },
+    {
+     "quote": "| | YouTube [ours](https://huggingface.co/datasets/TimJaspersTue/SurgeNetYoutube) | 23 identified procedures | 3,253 | 2,074,234 | Yes |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    }
+   ]
+  },
+  "eligibility": {
+   "open_weights": "PASS",
+   "licence_research_use": "PASS (non-commercial)",
+   "domain_primary": "PASS",
+   "documented_pretraining_data": "PASS",
+   "eligible": "PASS",
+   "notes": "Eligible under the rule (all four criteria hold); Appendix300 contamination is UNKNOWN because of the YouTube appendectomy subset. Non-commercial weights licence."
+  },
+  "sources": [
+   {
+    "url": "https://api.github.com/repos/TimJaspers0801/SurgeNet",
+    "final_url": "https://api.github.com/repos/TimJaspers0801/SurgeNet",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_api_repo.json",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_api_repo.txt",
+    "sha256": "5b4836a9819afcb55e062b2c8a88d8be9c27a4642e0887f5beea1a58288f733e",
+    "fetched_utc": "2026-10-02T09:11:28+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/LICENSE.txt",
+    "final_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/LICENSE.txt",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_license.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_license.txt",
+    "sha256": "d6925e5549081022eb0a938524af279aea63e6ccef75bfc3b91a1ca6a99b1949",
+    "fetched_utc": "2026-10-02T09:11:47+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/LICENSE_MODELS.txt",
+    "final_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/LICENSE_MODELS.txt",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_license_models.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_license_models.txt",
+    "sha256": "9e502ba75fd0fd30cea5497b438a4bc12f07f02bc932a7a6041fd6a18b8f46a0",
+    "fetched_utc": "2026-10-02T09:11:47+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+    "final_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.txt",
+    "sha256": "fd4257440794cfea7c3222c0051241ace7791bb357c2e0be05e811dbfb9226ae",
+    "fetched_utc": "2026-10-02T09:11:27+00:00"
+   },
+   {
+    "url": "https://huggingface.co/api/models/TimJaspersTue/SurgeNetModels?blobs=true",
+    "final_url": "https://huggingface.co/api/models/TimJaspersTue/SurgeNetModels?blobs=true",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_hf_api_blobs.json",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_hf_api_blobs.txt",
+    "sha256": "01ebbf07e5bb493357675e814bea973da51982cd50e6dbb7ac47dbf49ea9b674",
+    "fetched_utc": "2026-10-02T09:11:47+00:00"
+   },
+   {
+    "url": "https://huggingface.co/TimJaspersTue/SurgeNetModels/raw/main/README.md",
+    "final_url": "https://huggingface.co/TimJaspersTue/SurgeNetModels/raw/main/README.md",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_hf_readme.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_hf_readme.txt",
+    "sha256": "44aecd28e219bd7028bbaa36cdde2e38dda6da29d7f7a6f59a63aee90c89943e",
+    "fetched_utc": "2026-10-02T09:11:48+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/rlpddejong/SurgeNetDINO/main/README.md",
+    "final_url": "https://raw.githubusercontent.com/rlpddejong/SurgeNetDINO/main/README.md",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetdino_github_readme.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetdino_github_readme.txt",
+    "sha256": "d4a571ad4d48d0ed5dda51ccee253a1ef7b4616155fd8b4ace365bcc94a4ebc8",
+    "fetched_utc": "2026-10-02T09:12:18+00:00"
+   },
+   {
+    "url": "https://huggingface.co/api/models/rlpddejong/SurgeNetXL_DINOv1-v3?blobs=true",
+    "final_url": "https://huggingface.co/api/models/rlpddejong/SurgeNetXL_DINOv1-v3?blobs=true",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetdino_hf_api_blobs.json",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetdino_hf_api_blobs.txt",
+    "sha256": "867f50896f554811e5b427fd01e7a451b6809837d09d6488aa08e7d23625eabe",
+    "fetched_utc": "2026-10-02T09:11:48+00:00"
+   },
+   {
+    "url": "https://huggingface.co/rlpddejong/SurgeNetXL_DINOv1-v3/raw/main/README.md",
+    "final_url": "https://huggingface.co/rlpddejong/SurgeNetXL_DINOv1-v3/raw/main/README.md",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetdino_hf_readme.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetdino_hf_readme.txt",
+    "sha256": "0fe92c060b0e91cc5ae9a31bd3c2b9ec42c17d43f10bff14278d86ab0ca1338f",
+    "fetched_utc": "2026-10-02T09:11:48+00:00"
+   },
+   {
+    "url": "https://arxiv.org/abs/2501.09436",
+    "final_url": "https://arxiv.org/abs/2501.09436",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetxl_arxiv_abs.html",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetxl_arxiv_abs.txt",
+    "sha256": "8d352276f9e160dee447abf2eb7663bc13bd58e60aa5791f82aefdc421622bc0",
+    "fetched_utc": "2026-10-02T09:11:48+00:00"
+   },
+   {
+    "url": "https://arxiv.org/pdf/2501.09436",
+    "final_url": "https://arxiv.org/pdf/2501.09436",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetxl_arxiv_pdf.pdf",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetxl_arxiv_pdf.txt",
+    "sha256": "70eb9886a785697528bddc88290148dfb82b37beeb0bdd1f4a0fcbd4ddee6df5",
+    "fetched_utc": "2026-10-02T09:11:49+00:00"
+   },
+   {
+    "url": "https://huggingface.co/api/datasets/TimJaspersTue/SurgeNetYoutube",
+    "final_url": "https://huggingface.co/api/datasets/TimJaspersTue/SurgeNetYoutube",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetyt_hf_dataset_api.json",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetyt_hf_dataset_api.txt",
+    "sha256": "903782af6cc01bdc7c46843c56c8c32e7e62f41c05975834ad755a98c2766357",
+    "fetched_utc": "2026-10-02T09:11:48+00:00"
+   },
+   {
+    "url": "https://huggingface.co/datasets/TimJaspersTue/SurgeNetYoutube/raw/main/README.md",
+    "final_url": "https://huggingface.co/datasets/TimJaspersTue/SurgeNetYoutube/raw/main/README.md",
+    "http_status": 401,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetyt_hf_dataset_readme.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetyt_hf_dataset_readme.txt",
+    "sha256": "9e99180180563576b2ad446723c4fa25aeb0492ce5f126c540403d08b173537d",
+    "fetched_utc": "2026-10-02T09:12:03+00:00"
+   }
+  ]
+ },
+ {
+  "name": "SurgeNet / SurgeNetPublic / procedure-specific SurgeNet variants (no YouTube data)",
+  "paper": {
+   "title": "Exploring the Effect of Dataset Diversity in Self-Supervised Learning for Surgical Computer Vision (SurgeNet); variants reported in 'Scaling up self-supervised learning for improved surgical foundation models'",
+   "year": 2024,
+   "venue": "MICCAI 2024 DEMI workshop (LNCS, doi 10.1007/978-3-031-73748-0_5); Medical Image Analysis 2026",
+   "arxiv": "2407.17904 (SurgeNet; not fetched) / 2501.09436",
+   "quotes": [
+    {
+     "quote": "title={Exploring the Effect of Dataset Diversity in Self-supervised Learning for Surgical Computer Vision},",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    }
+   ]
+  },
+  "weights": {
+   "url": "https://huggingface.co/TimJaspersTue/SurgeNetModels (SurgeNet_checkpoint_epoch0050_teacher.pth, Public_checkpoint_epoch0050_teacher.pth, CHOLEC_/RAMIE_/RARP_ ..., SurgeNet_ConvNextv2_..., SurgeNet_PVTv2_...)",
+   "exists": "YES - listed in HF API, gated=false",
+   "request_or_registration_required": false,
+   "quotes": [
+    {
+     "quote": "\"rfilename\":\"SurgeNet_checkpoint_epoch0050_teacher.pth\"",
+     "file": "surgenet_hf_api_blobs",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://huggingface.co/api/models/TimJaspersTue/SurgeNetModels?blobs=true",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_hf_api_blobs.json"
+    },
+    {
+     "quote": "\"rfilename\":\"Public_checkpoint_epoch0050_teacher.pth\"",
+     "file": "surgenet_hf_api_blobs",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://huggingface.co/api/models/TimJaspersTue/SurgeNetModels?blobs=true",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_hf_api_blobs.json"
+    },
+    {
+     "quote": "\"gated\":false",
+     "file": "surgenet_hf_api_blobs",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://huggingface.co/api/models/TimJaspersTue/SurgeNetModels?blobs=true",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_hf_api_blobs.json"
+    }
+   ]
+  },
+  "licence": {
+   "code": "MIT (GitHub TimJaspers0801/SurgeNet LICENSE.txt; SurgeNetDINO repo also MIT)",
+   "weights": "CC BY-NC-SA 4.0 per GitHub README/LICENSE_MODELS.txt; the Hugging Face repos' metadata say cc-by-nc-4.0 (inconsistent; both non-commercial, research use permitted)",
+   "url": "https://github.com/TimJaspers0801/SurgeNet/blob/main/LICENSE_MODELS.txt",
+   "code_and_weights_differ": "yes - code MIT, weights non-commercial (CC BY-NC-SA 4.0 / CC BY-NC 4.0)",
+   "quotes": [
+    {
+     "quote": "- Code: MIT — see LICENSE (permissive; commercial use permitted).",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "- Pretrained model weights: CC-BY-NC-SA — non-commercial share-alike. The weights and any derivative models that include these weights are NOT cleared for commercial use.",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "Attribution-NonCommercial-ShareAlike 4.0 International",
+     "file": "surgenet_github_license_models",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/LICENSE_MODELS.txt",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_license_models.raw"
+    },
+    {
+     "quote": "\"cardData\":{\"license\":\"cc-by-nc-4.0\"}",
+     "file": "surgenet_hf_api_blobs",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://huggingface.co/api/models/TimJaspersTue/SurgeNetModels?blobs=true",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_hf_api_blobs.json"
+    },
+    {
+     "quote": "MIT License",
+     "file": "surgenet_github_license",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/LICENSE.txt",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_license.raw"
+    }
+   ]
+  },
+  "architecture": {
+   "description": "Frame encoders CAFormer-S18 (also ConvNeXtV2-tiny, PVTv2-B2) pretrained with DINO from ImageNet-1k initialisation",
+   "params": "CAFormer-S18 24.3M (ConvNeXtV2-tiny / PVTv2-B2 counts not stated in sources)",
+   "input": "single frames (downstream 224x399)",
+   "quotes": [
+    {
+     "quote": "The specific variants of these models are PVTv2-B2, ConvNeXtV2-tiny, and CAFormer-S18.",
+     "file": "surgenetxl_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2501.09436",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetxl_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "Backbone CaFormerS18 Number of parameters 24.3M",
+     "file": "surgenetxl_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2501.09436",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetxl_arxiv_pdf.pdf"
+    }
+   ]
+  },
+  "pretraining_data": {
+   "summary": "SurgeNet = all SurgeNetXL datasets excluding YouTube (2,636,790 frames: 11 public + 2 named private); SurgeNetPublic = public only (1,997,987 frames); SurgeNetCholec/RAMIE/RARP = procedure subsets; ImageNet-1k initialisation",
+   "datasets": [
+    "Cholec80",
+    "HeiChole",
+    "hSDB-Chole",
+    "RAMIE-UMCU (private; UMC Utrecht robot-assisted esophagectomy)",
+    "ESAD",
+    "PSI-AVA",
+    "RARP-AvL (private; robot-assisted prostatectomy)",
+    "DSAD (Carus Dresden robot-assisted rectal resection/extirpation)",
+    "GLENDA",
+    "LapGyn4",
+    "MultiBypass140",
+    "hSDB-Gastric",
+    "SurgToolLoc2022 (porcine)"
+   ],
+   "documented_list_complete": true,
+   "youtube_derived": "no",
+   "notes": "README table labels ESAD as 'RA Esophagectomy' (ESAD is prostatectomy; apparent typo). Private sets are identified by institution and procedure.",
+   "quotes": [
+    {
+     "quote": "| **SurgeNetCholec** | Cholec80 ([Twinnanda et al., 2017b](https://arxiv.org/abs/1602.03012)) | Laparoscopic Cholecystectomy | 76 | 179,164 | Yes |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "| | HeiChole ([Maier-Hein et al., 2021](https://www.synapse.org/Synapse:syn25101790/wiki/608802)) | Laparoscopic Cholecystectomy | 30 | 53,427 | Yes |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "| **SurgeNetRAMIE** | RAMIE-UMCU | RA Esophagectomy | 28 | 377,287 | No |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "| | RARP-AvL | RA Prostatectomy | 8 | 261,516 | No |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "| **Others** | DSAD ([Carstens et al., 2023](https://www.nature.com/articles/s41597-022-01719-2)) | RA Rectal Resection/Extirpation | 32 | 14,623 | Yes |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "| | MultiBypass140 ([Lavanchy et al., 2024](https://github.com/CAMMA-public/MultiBypass140)) | Laparoscopic Gastric Bypass Surgery | 140 | 749,419 | Yes |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "| | SurgToolLoc2022 ([Zia et al., 2023](https://arxiv.org/abs/2305.07152)) | 11 different RA porcine procedures | N/A | 741,516 | Yes |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "| **SurgeNetPublic** | All public datasets (excluding YouTube & private datasets) | All of the above (excluding YouTube & RA Esophagectomy) | \\>1238 | 1,997,987 | Yes |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    },
+    {
+     "quote": "| **SurgeNet** | All of the above (excluding YouTube) | All of the above (excluding YouTube) | \\>1345 | 2,636,790 | Partly |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    }
+   ]
+  },
+  "appendix300_in_pretraining": {
+   "answer": "NO",
+   "reason": "All sources named (11 public + RAMIE-UMCU esophagectomy + RARP-AvL prostatectomy); no appendectomy data and no Appendix300 centre recordings. DSAD is from Carus Dresden but is robot-assisted rectal surgery.",
+   "quotes": [
+    {
+     "quote": "| **SurgeNet** | All of the above (excluding YouTube) | All of the above (excluding YouTube) | \\>1345 | 2,636,790 | Partly |",
+     "file": "surgenet_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw"
+    }
+   ]
+  },
+  "eligibility": {
+   "open_weights": "PASS",
+   "licence_research_use": "PASS (non-commercial)",
+   "domain_primary": "PASS",
+   "documented_pretraining_data": "PASS",
+   "eligible": "PASS",
+   "notes": "Non-commercial weights licence. SurgeNetPublic contains public data only."
+  },
+  "sources": [
+   {
+    "url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/LICENSE.txt",
+    "final_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/LICENSE.txt",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_license.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_license.txt",
+    "sha256": "d6925e5549081022eb0a938524af279aea63e6ccef75bfc3b91a1ca6a99b1949",
+    "fetched_utc": "2026-10-02T09:11:47+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/LICENSE_MODELS.txt",
+    "final_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/LICENSE_MODELS.txt",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_license_models.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_license_models.txt",
+    "sha256": "9e502ba75fd0fd30cea5497b438a4bc12f07f02bc932a7a6041fd6a18b8f46a0",
+    "fetched_utc": "2026-10-02T09:11:47+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+    "final_url": "https://raw.githubusercontent.com/TimJaspers0801/SurgeNet/main/README.md",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_github_readme.txt",
+    "sha256": "fd4257440794cfea7c3222c0051241ace7791bb357c2e0be05e811dbfb9226ae",
+    "fetched_utc": "2026-10-02T09:11:27+00:00"
+   },
+   {
+    "url": "https://huggingface.co/api/models/TimJaspersTue/SurgeNetModels?blobs=true",
+    "final_url": "https://huggingface.co/api/models/TimJaspersTue/SurgeNetModels?blobs=true",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_hf_api_blobs.json",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenet_hf_api_blobs.txt",
+    "sha256": "01ebbf07e5bb493357675e814bea973da51982cd50e6dbb7ac47dbf49ea9b674",
+    "fetched_utc": "2026-10-02T09:11:47+00:00"
+   },
+   {
+    "url": "https://arxiv.org/pdf/2501.09436",
+    "final_url": "https://arxiv.org/pdf/2501.09436",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetxl_arxiv_pdf.pdf",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgenetxl_arxiv_pdf.txt",
+    "sha256": "70eb9886a785697528bddc88290148dfb82b37beeb0bdd1f4a0fcbd4ddee6df5",
+    "fetched_utc": "2026-10-02T09:11:49+00:00"
+   }
+  ]
+ },
+ {
+  "name": "GSViT (General Surgery Vision Transformer)",
+  "paper": {
+   "title": "General surgery vision transformer: A video pre-trained foundation model for general surgery",
+   "year": 2024,
+   "venue": "arXiv preprint",
+   "arxiv": "2403.05949",
+   "quotes": [
+    {
+     "quote": "Code repository for paper: \"General surgery vision transformer: A video pre-trained foundation model for general surgery\"",
+     "file": "gsvit_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/SamuelSchmidgall/GSViT/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_github_readme.raw"
+    }
+   ]
+  },
+  "weights": {
+   "url": "https://livejohnshopkins-my.sharepoint.com/:u:/g/personal/sschmi46_jh_edu/ERwRJGVUHRtKqvnSabuyKPgBfM8Hhe_Ks0EPTXg97nZ1Qw?e=hh02un",
+   "exists": "YES - the Johns Hopkins OneDrive share link resolves (HTTP 200, no login redirect) to the viewer for Documents/GSViT_Models/GSViT.pkl (file not downloaded)",
+   "request_or_registration_required": false,
+   "quotes": [
+    {
+     "quote": "Please download the GSViT model from here: https://livejohnshopkins-my.sharepoint.com/:u:/g/personal/sschmi46_jh_edu/ERwRJGVUHRtKqvnSabuyKPgBfM8Hhe_Ks0EPTXg97nZ1Qw?e=hh02un",
+     "file": "gsvit_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/SamuelSchmidgall/GSViT/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_github_readme.raw"
+    },
+    {
+     "quote": "GSViT_Models%2FGSViT.pkl",
+     "file": "gsvit_weights_sharepoint_check",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://livejohnshopkins-my.sharepoint.com/:u:/g/personal/sschmi46_jh_edu/ERwRJGVUHRtKqvnSabuyKPgBfM8Hhe_Ks0EPTXg97nZ1Qw?e=hh02un",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_weights_sharepoint_check.json"
+    },
+    {
+     "quote": "We open-source the code and weights for GSViT as well as finetuned versions for 10 different procedures.",
+     "file": "gsvit_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2403.05949",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_arxiv_pdf.pdf"
+    }
+   ]
+  },
+  "licence": {
+   "code": "none declared (no LICENSE file; GitHub API license = null; README has no licence statement)",
+   "weights": "none declared",
+   "url": "https://github.com/SamuelSchmidgall/GSViT",
+   "code_and_weights_differ": "no licence for either",
+   "quotes": [
+    {
+     "quote": "\"license\":null",
+     "file": "gsvit_github_api_repo",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://api.github.com/repos/SamuelSchmidgall/GSViT",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_github_api_repo.json"
+    }
+   ]
+  },
+  "architecture": {
+   "description": "EfficientViT-M5 encoder (ImageNet-initialised, 'efficientvit_m5') + asymmetric convolutional decoder, pretrained by next-frame prediction on surgical video",
+   "params": "12.4M (foundation-model encoder; 26.1M incl. 13.7M classifier head in the Cholec80 experiment); SurgeNetXL paper lists GSViT EfficientViT-M5 12.1M",
+   "input": "single frames (next-frame prediction from the current frame); input resolution not stated (decoder reshape 384*4*4 implies 256x256 for EfficientViT-M5 - inference, unverified)",
+   "quotes": [
+    {
+     "quote": "The total number of parameters is 26.1M, with 13.7M tuneable parameters and an additional 12.4M non-tuneable parameters for the foundation model",
+     "file": "gsvit_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2403.05949",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "self.evit = EfficientViT_M5(pretrained='efficientvit_m5')",
+     "file": "gsvit_load_gsvit",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/SamuelSchmidgall/GSViT/main/load_gsvit.py",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_load_gsvit.raw"
+    },
+    {
+     "quote": "opted for the next-frame reconstruct as demonstrated in [Gao+22].",
+     "file": "gsvit_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2403.05949",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "x = self.fc(x.reshape(self.in_size, 384*4*4))",
+     "file": "gsvit_pretrain_model",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/SamuelSchmidgall/GSViT/main/pretrain_model.py",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_pretrain_model.raw"
+    }
+   ]
+  },
+  "pretraining_data": {
+   "summary": "GenSurgery: 680 h of public YouTube laparoscopic/robotic general-surgery videos, 28 procedures; per-procedure YouTube URL lists in repo videos_to_download/ (incl. appendectomy.txt, 98 URLs) + unsorted.txt",
+   "datasets": [
+    "GenSurgery (YouTube; URL lists per procedure incl. appendectomy, cholecystectomy, colectomy, hernia, ... and unsorted)",
+    "Initialisation: ImageNet EfficientViT-M5"
+   ],
+   "documented_list_complete": "URL lists published (sources enumerated as YouTube URLs), but the recording institution of each video is not documented",
+   "youtube_derived": "YES - entirely",
+   "notes": "oEmbed metadata check (titles/channels only, no video downloaded) of the 98 appendectomy URLs: all resolve; channels = Dr. Daniel A. Popowich (40), IgorTFerreira (29), Dr Tayyab Riaz Ch (24), ashwin thangavelu (3), Colorectal Disease Journal (1), Dr. R. K. Mishra (1); no title/channel mentions Dresden, Radeberg, Ravensburg, Asklepios, Elisabethen, Diakonissen, Friedrichstadt, St. Joseph-Stift, Carus or Germany. unsorted.txt (~68 kB of URLs) was not checked.",
+   "quotes": [
+    {
+     "quote": "we open-source the largest dataset of general surgery videos to-date, consisting of 680 hours of surgical videos, including data from robotic and laparoscopic techniques across 28 procedures",
+     "file": "gsvit_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2403.05949",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "For the data collection process, a selection of videos was curated from specific playlists of surgical demonstrations on YouTube using surgery related keywords.",
+     "file": "gsvit_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2403.05949",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "We avoid issues with confidentiality by curating our dataset from public sources",
+     "file": "gsvit_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2403.05949",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "https://youtu.be/x8sUeH5M5Q0",
+     "file": "gsvit_videos_appendectomy",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/SamuelSchmidgall/GSViT/main/videos_to_download/appendectomy.txt",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_videos_appendectomy.raw"
+    },
+    {
+     "quote": "\"author_name\": \"Dr. Daniel A. Popowich @ Minimally Invasive Surgeon\"",
+     "file": "gsvit_appendectomy_oembed",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://www.youtube.com/oembed?url=<each URL in videos_to_download/appendectomy.txt>",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_appendectomy_oembed.json"
+    }
+   ]
+  },
+  "appendix300_in_pretraining": {
+   "answer": "UNKNOWN",
+   "reason": "Pretraining data are YouTube videos including an explicit appendectomy list; video origin (hospital) is not documented. The appendectomy-list channels checked show no Dresden-area link, but the unsorted list and origin of re-uploaded recordings cannot be excluded.",
+   "quotes": [
+    {
+     "quote": "a selection of videos was curated from specific playlists of surgical demonstrations on YouTube",
+     "file": "gsvit_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2403.05949",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "https://youtu.be/4CoA4bUl7G0",
+     "file": "gsvit_videos_appendectomy",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/SamuelSchmidgall/GSViT/main/videos_to_download/appendectomy.txt",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_videos_appendectomy.raw"
+    }
+   ]
+  },
+  "eligibility": {
+   "open_weights": "PASS",
+   "licence_research_use": "UNKNOWN",
+   "domain_primary": "PASS",
+   "documented_pretraining_data": "PASS",
+   "eligible": "UNKNOWN",
+   "notes": "No licence is declared for code or weights (default copyright; 'open-source' wording only) -> research-use permission not established. Pretrained on YouTube video with no licence clearance stated."
+  },
+  "sources": [
+   {
+    "url": "https://www.youtube.com/oembed?url=<each URL in videos_to_download/appendectomy.txt>",
+    "final_url": null,
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_appendectomy_oembed.json",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_appendectomy_oembed.txt",
+    "sha256": "a3110a3b15bea1e8862800912e7fcc1e40cb305f6038592f2cc609f8736f6b28",
+    "fetched_utc": "2026-10-02T09:14:39+00:00"
+   },
+   {
+    "url": "https://arxiv.org/abs/2403.05949",
+    "final_url": "https://arxiv.org/abs/2403.05949",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_arxiv_abs.html",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_arxiv_abs.txt",
+    "sha256": "ce3eb5bad5f1f79ae5b678137abc9e5ae1ac17526682825f56e28fd23eee6e9d",
+    "fetched_utc": "2026-10-02T09:13:42+00:00"
+   },
+   {
+    "url": "https://arxiv.org/pdf/2403.05949",
+    "final_url": "https://arxiv.org/pdf/2403.05949",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_arxiv_pdf.pdf",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_arxiv_pdf.txt",
+    "sha256": "df9e194ea2baa7545f8d3b94b365fe81c3b932d36307d95878e8f79120a4cc20",
+    "fetched_utc": "2026-10-02T09:13:42+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/SamuelSchmidgall/GSViT/main/download_videos.py",
+    "final_url": "https://raw.githubusercontent.com/SamuelSchmidgall/GSViT/main/download_videos.py",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_download_videos.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_download_videos.txt",
+    "sha256": "c948a9f13baf0296ff10cb8aa1eda61c407d7e9790ea120f4a55f15140eb6c20",
+    "fetched_utc": "2026-10-02T09:14:14+00:00"
+   },
+   {
+    "url": "https://api.github.com/repos/SamuelSchmidgall/GSViT",
+    "final_url": "https://api.github.com/repos/SamuelSchmidgall/GSViT",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_github_api_repo.json",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_github_api_repo.txt",
+    "sha256": "a1e8820cf818c27cbe3aa8d22add8269aa4a74eca775e8b9d1354b07ae740b70",
+    "fetched_utc": "2026-10-02T09:13:41+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/SamuelSchmidgall/GSViT/main/README.md",
+    "final_url": "https://raw.githubusercontent.com/SamuelSchmidgall/GSViT/main/README.md",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_github_readme.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_github_readme.txt",
+    "sha256": "9f4af4f07b1b10952e8e2ad7e55a72216526472133be56f7c444d76aff7f8406",
+    "fetched_utc": "2026-10-02T09:13:41+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/SamuelSchmidgall/GSViT/main/load_gsvit.py",
+    "final_url": "https://raw.githubusercontent.com/SamuelSchmidgall/GSViT/main/load_gsvit.py",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_load_gsvit.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_load_gsvit.txt",
+    "sha256": "75f3ef728f5c9294c07129eac45f01eebe26c36e16be82201ed1f1fe1d350798",
+    "fetched_utc": "2026-10-02T09:14:13+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/SamuelSchmidgall/GSViT/main/pretrain_model.py",
+    "final_url": "https://raw.githubusercontent.com/SamuelSchmidgall/GSViT/main/pretrain_model.py",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_pretrain_model.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_pretrain_model.txt",
+    "sha256": "c22e28a1d8dd7a503d289dd24ba26b712336a3380cb80b99fe519a74fe3ab319",
+    "fetched_utc": "2026-10-02T09:14:13+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/SamuelSchmidgall/GSViT/main/videos_to_download/appendectomy.txt",
+    "final_url": "https://raw.githubusercontent.com/SamuelSchmidgall/GSViT/main/videos_to_download/appendectomy.txt",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_videos_appendectomy.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_videos_appendectomy.txt",
+    "sha256": "b83b55de48e357279850a761bbcea48f66519105c614811b6f56e7b312e29d3c",
+    "fetched_utc": "2026-10-02T09:14:14+00:00"
+   },
+   {
+    "url": "https://livejohnshopkins-my.sharepoint.com/:u:/g/personal/sschmi46_jh_edu/ERwRJGVUHRtKqvnSabuyKPgBfM8Hhe_Ks0EPTXg97nZ1Qw?e=hh02un",
+    "final_url": "https://livejohnshopkins-my.sharepoint.com/personal/sschmi46_jh_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsschmi46_jh_edu%2FDocuments%2FGSViT_Models%2FGSViT.pkl&parent=%2Fpersonal%2Fsschmi46_jh_edu%2FDocuments%2FGSViT_Models&ga=1",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_weights_sharepoint_check.json",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/gsvit_weights_sharepoint_check.txt",
+    "sha256": "2a2150f450cd56584613a2054026148158cde0640f77d0c5b779344168cf216a",
+    "fetched_utc": "2026-10-02T09:13:52+00:00"
+   }
+  ]
+ },
+ {
+  "name": "SurgVLP / HecVL / PeskaVLP (CAMMA surgical video-language models)",
+  "paper": {
+   "title": "SurgVLP: Learning Multi-modal Representations by Watching Hundreds of Surgical Video Lectures (MedIA 2025, arXiv 2307.15220); HecVL: Hierarchical Video-Language Pretraining for Zero-shot Surgical Phase Recognition (MICCAI 2024, arXiv 2405.10075); PeskaVLP: Procedure-Aware Surgical Video-language Pretraining with Hierarchical Knowledge Augmentation (NeurIPS 2024, arXiv 2410.00263)",
+   "year": "2024-2025",
+   "venue": "Medical Image Analysis 2025 / MICCAI 2024 / NeurIPS 2024",
+   "arxiv": "2307.15220; 2405.10075; 2410.00263",
+   "quotes": [
+    {
+     "quote": "This repository provides the Surgical Vision-Language Pretraining Model (SurgVLP) and its variants: HecVL [2] (MICCAI 2024), and PeskaVLP [3] (NeurIPS 2024).",
+     "file": "surgvlp_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/CAMMA-public/SurgVLP/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_github_readme.raw"
+    }
+   ]
+  },
+  "weights": {
+   "url": "SurgVLP https://seafile.unistra.fr/f/93757ace1bfc47248e1e/?dl=1 ; HecVL https://seafile.unistra.fr/f/3b9b9207068a4b03bc2a/?dl=1 ; PeskaVLP https://seafile.unistra.fr/f/65a2b1bf113e428280d0/?dl=1",
+   "exists": "YES - HEAD requests resolve to SurgVLP.zip (495,063,240 B), HecVL.zip (495,069,659 B), PeskaVLP.zip (495,071,118 B) on seafile.unistra.fr (not downloaded); no login",
+   "request_or_registration_required": false,
+   "quotes": [
+    {
+     "quote": "- SurgVLP [1]: https://seafile.unistra.fr/f/93757ace1bfc47248e1e/?dl=1",
+     "file": "surgvlp_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/CAMMA-public/SurgVLP/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_github_readme.raw"
+    },
+    {
+     "quote": "\"content_length\": \"495063240\"",
+     "file": "surgvlp_weights_check",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://seafile.unistra.fr/f/93757ace1bfc47248e1e/?dl=1",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_weights_check.json"
+    },
+    {
+     "quote": "\"final_url\": \"https://seafile.unistra.fr/seafhttp/files/7e7b5df7-9153-475c-9f8c-9b8885725f54/PeskaVLP.zip\"",
+     "file": "peskavlp_weights_check",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://seafile.unistra.fr/f/65a2b1bf113e428280d0/?dl=1",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/peskavlp_weights_check.json"
+    },
+    {
+     "quote": "\"final_url\": \"https://seafile.unistra.fr/seafhttp/files/a6b845c2-d22e-42bf-9487-63392ac1bdeb/HecVL.zip\"",
+     "file": "hecvl_weights_check",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://seafile.unistra.fr/f/3b9b9207068a4b03bc2a/?dl=1",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/hecvl_weights_check.json"
+    }
+   ]
+  },
+  "licence": {
+   "code": "CC BY-NC-SA 4.0 (README statement covers code and models; the referenced LICENSE file is not present in the repo root)",
+   "weights": "CC BY-NC-SA 4.0 - non-commercial scientific research",
+   "url": "https://github.com/CAMMA-public/SurgVLP#license",
+   "code_and_weights_differ": "no - same statement for code and models",
+   "quotes": [
+    {
+     "quote": "The code and the models are available for non-commercial scientific research purposes as defined in the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).",
+     "file": "surgvlp_github_readme",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/CAMMA-public/SurgVLP/main/README.md",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_github_readme.raw"
+    }
+   ]
+  },
+  "architecture": {
+   "description": "Dual encoder CLIP-style: ResNet-50 visual encoder (ImageNet-initialised) + BioClinicalBERT text encoder; clip embedding = average of per-frame embeddings",
+   "params": "not stated (ResNet-50 ~25M + BioClinicalBERT ~110M standard figures; each weight zip ~495 MB)",
+   "input": "frames (or clips as sets of frames, average-pooled); preprocessing resize 360x640 then centre crop 224",
+   "quotes": [
+    {
+     "quote": "We employ the ResNet-50 model (He et al., 2016) pretrained on ImageNet as the base architecture for the visual encoder F .",
+     "file": "surgvlp_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2307.15220",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "For a given video clip v, we first sample a fixed number of frames {z0 , ..., zT } and then feed them through F",
+     "file": "surgvlp_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2307.15220",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "We utilize the dual-encoder architecture with ResNet50 [21] as visual encoder and ClinicalBert [22] as textual encoder, respectively.",
+     "file": "peskavlp_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2410.00263",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/peskavlp_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "transforms.Resize((360, 640)), transforms.CenterCrop(224),",
+     "file": "surgvlp_config_peskavlp",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/CAMMA-public/SurgVLP/main/tests/config_peskavlp.py",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_config_peskavlp.raw"
+    },
+    {
+     "quote": "text_bert_type='emilyalsentzer/Bio_ClinicalBERT'",
+     "file": "surgvlp_config_peskavlp",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://raw.githubusercontent.com/CAMMA-public/SurgVLP/main/tests/config_peskavlp.py",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_config_peskavlp.raw"
+    }
+   ]
+  },
+  "pretraining_data": {
+   "summary": "SVL: 1,326 surgical video lectures (~300 h) crawled from WebSurg (1,124 via keywords) and EAES + YouTube (202), with ASR narration; HecVL/PeskaVLP reuse SVL with metadata-derived hierarchical / LLM-augmented texts",
+   "datasets": [
+    "SVL-Pretrain: WebSurg lectures (1,124)",
+    "SVL-Pretrain: EAES + YouTube lectures (202)",
+    "ImageNet (ResNet-50 init)",
+    "BioClinicalBERT (text init)"
+   ],
+   "documented_list_complete": false,
+   "youtube_derived": "YES - partly (EAES and YouTube lectures); WebSurg lectures are web-crawled from the IRCAD e-learning platform",
+   "quotes": [
+    {
+     "quote": "we query the videos based on keywords from three online platforms, i.e., Websurg (Websurg, 2023), EAES (EAES, 2023), and YouTube (YouTube, 2023).",
+     "file": "surgvlp_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2307.15220",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "For Websurg, we use “intervention” and “laparoscopic” as keywords to crawl 1, 124 surgical lectures.",
+     "file": "surgvlp_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2307.15220",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "For EAES and YouTube, we manually collect 202 surgical video lectures using manually designed keywords.",
+     "file": "surgvlp_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2307.15220",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "In total, we collect 1, 326 le",
+     "file": "surgvlp_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2307.15220",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "Pretraining dataset: we use the surgical lecture videos from the Surgical Video Lecture dataset (SVL) for the pretraining, which was proposed by the SurgVLP [22].",
+     "file": "hecvl_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2405.10075",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/hecvl_arxiv_pdf.pdf"
+    },
+    {
+     "quote": "In this work, we use this hierarchical video-language pretraining dataset and perform hierarchical knowledge augmentation to improve the textual quality.",
+     "file": "peskavlp_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2410.00263",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/peskavlp_arxiv_pdf.pdf"
+    }
+   ]
+  },
+  "appendix300_in_pretraining": {
+   "answer": "UNKNOWN",
+   "reason": "Pretraining videos are keyword-crawled lectures from WebSurg/EAES/YouTube; individual videos and their originating hospitals are not listed, so inclusion of a Dresden-area appendectomy recording cannot be excluded (WebSurg 'General and digestive surgery' lectures are in scope).",
+   "quotes": [
+    {
+     "quote": "They cover the five main categories, “Hepatobiliary and pancreatic surgery”, “General and digestive surgery”, “Bariatric surgery”, “Hernia surgery” and “Colorectal, transanal and proctological surgery”.",
+     "file": "surgvlp_arxiv_pdf",
+     "verified_verbatim_ws_normalised": true,
+     "source_url": "https://arxiv.org/pdf/2307.15220",
+     "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_arxiv_pdf.pdf"
+    }
+   ]
+  },
+  "eligibility": {
+   "open_weights": "PASS",
+   "licence_research_use": "PASS (non-commercial)",
+   "domain_primary": "PASS",
+   "documented_pretraining_data": "PASS",
+   "eligible": "PASS",
+   "notes": "Documented at the level of sources/platforms and counts (not a per-video list). Visual encoder is a frame-level ResNet-50."
+  },
+  "sources": [
+   {
+    "url": "https://arxiv.org/pdf/2405.10075",
+    "final_url": "https://arxiv.org/pdf/2405.10075",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/hecvl_arxiv_pdf.pdf",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/hecvl_arxiv_pdf.txt",
+    "sha256": "86f74a6d17fd8778f37024d5106c643ffec0d5543ae5900fcbde08ff048c8eb2",
+    "fetched_utc": "2026-10-02T09:15:27+00:00"
+   },
+   {
+    "url": "https://seafile.unistra.fr/f/3b9b9207068a4b03bc2a/?dl=1",
+    "final_url": "https://seafile.unistra.fr/seafhttp/files/a6b845c2-d22e-42bf-9487-63392ac1bdeb/HecVL.zip",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/hecvl_weights_check.json",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/hecvl_weights_check.txt",
+    "sha256": "bb4ce83c2c7449970122766372c6b0964d5502c65e1315a2125c8530ed151103",
+    "fetched_utc": "2026-10-02T09:15:32+00:00"
+   },
+   {
+    "url": "https://arxiv.org/pdf/2410.00263",
+    "final_url": "https://arxiv.org/pdf/2410.00263",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/peskavlp_arxiv_pdf.pdf",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/peskavlp_arxiv_pdf.txt",
+    "sha256": "b4a1e6c89f290e4a485e4713f8b5b3eb03f46a43ee9da3abacf0b8ec10384d1f",
+    "fetched_utc": "2026-10-02T09:15:27+00:00"
+   },
+   {
+    "url": "https://seafile.unistra.fr/f/65a2b1bf113e428280d0/?dl=1",
+    "final_url": "https://seafile.unistra.fr/seafhttp/files/7e7b5df7-9153-475c-9f8c-9b8885725f54/PeskaVLP.zip",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/peskavlp_weights_check.json",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/peskavlp_weights_check.txt",
+    "sha256": "e7d5f9340092e424a14899c5de4b2dd5eb5fe6ad0aef47f3040af5a6d1a7e56d",
+    "fetched_utc": "2026-10-02T09:15:34+00:00"
+   },
+   {
+    "url": "https://arxiv.org/pdf/2307.15220",
+    "final_url": "https://arxiv.org/pdf/2307.15220",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_arxiv_pdf.pdf",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_arxiv_pdf.txt",
+    "sha256": "b83065cbdc8a21c1f7ce3d829a3be4dc2f2ecc70559a8077874d9e5e767c2e1b",
+    "fetched_utc": "2026-10-02T09:15:27+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/CAMMA-public/SurgVLP/main/tests/config_hecvl.py",
+    "final_url": "https://raw.githubusercontent.com/CAMMA-public/SurgVLP/main/tests/config_hecvl.py",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_config_hecvl.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_config_hecvl.txt",
+    "sha256": "d69b0f75449390a787a309a1269496245740a3df9cfb35e0c15f5c3e502f39dd",
+    "fetched_utc": "2026-10-02T09:15:27+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/CAMMA-public/SurgVLP/main/tests/config_peskavlp.py",
+    "final_url": "https://raw.githubusercontent.com/CAMMA-public/SurgVLP/main/tests/config_peskavlp.py",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_config_peskavlp.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_config_peskavlp.txt",
+    "sha256": "df77bd2a01effe5a7752d43e5564d1894eee0774764e5b9e33f6a8ae76c42251",
+    "fetched_utc": "2026-10-02T09:15:28+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/CAMMA-public/SurgVLP/main/tests/config_surgvlp.py",
+    "final_url": "https://raw.githubusercontent.com/CAMMA-public/SurgVLP/main/tests/config_surgvlp.py",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_config_surgvlp.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_config_surgvlp.txt",
+    "sha256": "f19fe0b81c67d8edc932384b8ec53eaf24a8b7aa48ee47324bdd8440163dd619",
+    "fetched_utc": "2026-10-02T09:15:27+00:00"
+   },
+   {
+    "url": "https://api.github.com/repos/CAMMA-public/SurgVLP",
+    "final_url": "https://api.github.com/repos/CAMMA-public/SurgVLP",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_github_api_repo.json",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_github_api_repo.txt",
+    "sha256": "5e778699b3900dfc020a8936ee636839117d2769f75caea0e3f621b9d007a80a",
+    "fetched_utc": "2026-10-02T09:15:17+00:00"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/CAMMA-public/SurgVLP/main/README.md",
+    "final_url": "https://raw.githubusercontent.com/CAMMA-public/SurgVLP/main/README.md",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_github_readme.raw",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_github_readme.txt",
+    "sha256": "ae96860dc17255d473d9c7d5f206f499cf72e468acf0e4d3bd4d882782b0e32a",
+    "fetched_utc": "2026-10-02T09:15:16+00:00"
+   },
+   {
+    "url": "https://seafile.unistra.fr/f/93757ace1bfc47248e1e/?dl=1",
+    "final_url": "https://seafile.unistra.fr/seafhttp/files/0a481e72-ef96-47d1-85b7-bf320bc89079/SurgVLP.zip",
+    "http_status": 200,
+    "saved_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_weights_check.json",
+    "text_copy": "/media/user/LaCie/medvideo_gate/fm_candidates/primary/surgvlp_weights_check.txt",
+    "sha256": "350f8a3513cb1e4df256c05ccc932c16dfa491533e9e3f6065a4dca85b9cf1de",
+    "fetched_utc": "2026-10-02T09:15:30+00:00"
+   }
+  ]
+ }
+]

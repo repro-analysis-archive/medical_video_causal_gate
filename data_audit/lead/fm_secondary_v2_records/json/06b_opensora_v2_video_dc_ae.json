@@ -1,0 +1,819 @@
+{
+ "id": "06b_opensora_v2_video_dc_ae",
+ "name": "Open-Sora 2.0 Video DC-AE (hpcai-tech/Open-Sora-v2-Video-DC-AE, F32T4C128_AE.safetensors); note Open-Sora-v2 main repo ships hunyuan_vae.safetensors (= HunyuanVideo VAE, see 04)",
+ "version": "hpcai-tech/Open-Sora-v2-Video-DC-AE, F32T4C128_AE.safetensors (HF repo sha 36059624245459163efecfdb89eb08e01ee32fbf, created 2025-03-10); model_name 'dc-ae-f32t4c128' in the official Open-Sora main code (the same repo also holds Open_Sora_v2_Video_DC_AE.safetensors = the DiT adapted to this AE, not the AE)",
+ "paper": {
+  "title": "Open-Sora 2.0: Training a Commercial-Level Video Generation Model in $200k",
+  "year": 2025,
+  "arxiv": "2503.09642"
+ },
+ "weights_location": {
+  "urls": [
+   "https://huggingface.co/hpcai-tech/Open-Sora-v2-Video-DC-AE"
+  ],
+  "files_listed": {
+   "F32T4C128_AE.safetensors": 918970214,
+   "Open_Sora_v2_Video_DC_AE.safetensors (DiT, not the AE)": 23784062736
+  },
+  "gated": false,
+  "private": false,
+  "verified_how": "HF API model listings (metadata only) saved as opensora_hpcai-tech__Open-Sora-v2-Video-DC-AE_hfapi.json and opensora_hpcai-tech__Open-Sora-v2_hfapi.json; nothing downloaded",
+  "quote_ids": [
+   "w_file",
+   "w_gated",
+   "w_cfg_ckpt"
+  ],
+  "quotes": [
+   {
+    "id": "w_file",
+    "quote": "\"rfilename\": \"F32T4C128_AE.safetensors\",",
+    "source_url": "https://huggingface.co/api/models/hpcai-tech/Open-Sora-v2-Video-DC-AE?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_hpcai-tech__Open-Sora-v2-Video-DC-AE_hfapi.json"
+   },
+   {
+    "id": "w_gated",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/hpcai-tech/Open-Sora-v2-Video-DC-AE?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_hpcai-tech__Open-Sora-v2-Video-DC-AE_hfapi.json"
+   },
+   {
+    "id": "w_cfg_ckpt",
+    "quote": "model_name=\"dc-ae-f32t4c128\", from_pretrained=\"./ckpts/F32T4C128_AE.safetensors\",",
+    "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/configs/diffusion/inference/high_compression.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_configs_diffusion_inference_high_compression.py.txt"
+   }
+  ]
+ },
+ "licence": {
+  "id": "Apache-2.0 (HF card)",
+  "url": "https://huggingface.co/hpcai-tech/Open-Sora-v2-Video-DC-AE ; https://github.com/hpcaitech/Open-Sora/blob/main/LICENSE",
+  "commercial": "permitted",
+  "non_commercial_only": false,
+  "restrictions": "none beyond Apache-2.0",
+  "gating": "none",
+  "quote_ids": [
+   "lic_card2",
+   "lic_text"
+  ],
+  "quotes": [
+   {
+    "id": "lic_card2",
+    "quote": "license: apache-2.0",
+    "source_url": "https://huggingface.co/hpcai-tech/Open-Sora-v2-Video-DC-AE/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_Open-Sora-v2-Video-DC-AE_README.md"
+   },
+   {
+    "id": "lic_text",
+    "quote": "Apache License Version 2.0, January 2004",
+    "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/LICENSE",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_LICENSE.txt"
+   }
+  ]
+ },
+ "domain": {
+  "value": "deep-compression video autoencoder (no KL) of the Open-Sora 2.0 text/image-to-video model (used for its high-compression variant), trained from scratch on general video",
+  "quote_ids": [
+   "dom_ae",
+   "dom_scratch",
+   "arch_dcae"
+  ],
+  "quotes": [
+   {
+    "id": "dom_ae",
+    "quote": "We propose a video autoencoder architecture based on [DC-AE](https://github.com/mit-han-lab/efficientvit), the __Video DC-AE__, which compression the video by 4x in the temporal dimension and 32x32 in the spatial dimension.",
+    "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/ae.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_ae.md"
+   },
+   {
+    "id": "dom_scratch",
+    "quote": "We train our __Video DC-AE__ from scratch on 8xGPUs for 3 weeks.",
+    "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/ae.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_ae.md"
+   },
+   {
+    "id": "arch_dcae",
+    "quote": "our Video DC-AE with a 4 × 32 × 32 4\\times 32\\times 32 compression ratio and a patch size of 1 × 1 × 1 1\\times 1\\times 1 enables training on 32-frame, 256px videos with a latent shape of 8 × 8 × 8 8\\times 8\\times 8 .",
+    "source_url": "https://arxiv.org/html/2503.09642",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+   }
+  ]
+ },
+ "architecture": {
+  "type": "deep-compression video autoencoder (no KL), trained from scratch",
+  "representation": "latents at 4x32x32 compression with 128 channels (released dc-ae-f32t4c128; a 256-channel variant was trained but not released in this repo)"
+ },
+ "pretraining_data": {
+  "summary": "AE training data described only as 32-frame 256px 1:1 videos; the paper's data section describes a filtering pyramid and statistics but does not name sources. The official AE training config defaults to datasets/pexels_45k_necessary.csv, which the training guide presents only as an example dataset; neither the paper nor the card states the released AE's training sources.",
+  "form": "described only"
+ },
+ "pretraining_data_quote": {
+  "quote_ids": [
+   "arch_train",
+   "data_pyramid",
+   "data_fps_filter",
+   "data_ae_docs",
+   "data_example",
+   "data_cfg"
+  ],
+  "quotes": [
+   {
+    "id": "arch_train",
+    "quote": "We train each AE model on 8 GPUs with a local batch size of 1. Our training data consists of 32 frames of 256px videos at an aspect ratio of 1:1.",
+    "source_url": "https://arxiv.org/html/2503.09642",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+   },
+   {
+    "id": "data_pyramid",
+    "quote": "2 Data Our goal for data is to build a hierarchical data pyramid, catering to the requirement of the progressive training process.",
+    "source_url": "https://arxiv.org/html/2503.09642",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+   },
+   {
+    "id": "data_fps_filter",
+    "quote": "we filter out videos with a duration of less than 2 seconds, a bit per pixel (bpp) below 0.02, a frame rate (fps) under 16, and an aspect ratio outside the range [1/3, 3]",
+    "source_url": "https://arxiv.org/html/2503.09642",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+   },
+   {
+    "id": "data_ae_docs",
+    "quote": "Follow this [guide](./train.md#prepare-dataset) to prepare the __DATASET__ for training and inference. You may use our provided dataset or custom ones.",
+    "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/ae.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_ae.md"
+   },
+   {
+    "id": "data_example",
+    "quote": "To better illustrate the process, we will use a 45k [pexels dataset](https://huggingface.co/datasets/hpcai-tech/open-sora-pexels-45k) as an example. This dataset contains clipped, score filtered high-quality videos from [Pexels](https://www.pexels.com/).",
+    "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/train.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_train.md"
+   },
+   {
+    "id": "data_cfg",
+    "quote": "data_path=\"datasets/pexels_45k_necessary.csv\",",
+    "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/configs/vae/train/video_dc_ae.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_configs_vae_train_video_dc_ae.py.txt"
+   }
+  ]
+ },
+ "medical_video_in_data": {
+  "answer": "NOT MENTIONED",
+  "basis": "Search of saved paper HTML and card for medic|surg|endoscop|laparoscop|clinic|hospital|health: no hits.",
+  "term_search": {
+   "pattern": "medical|surgical|surgery|endoscop|laparoscop|clinical|health|hospital",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_Open-Sora-v2-Video-DC-AE_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_ae.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_train.md": []
+   }
+  }
+ },
+ "appendix300_possible": {
+  "answer": "UNKNOWN",
+  "basis_class": "undisclosed",
+  "basis": "sources not named. Context: released 2025-03, before the OPARA issue 2026-04-29.",
+  "quote_ids": [
+   "data_pyramid"
+  ],
+  "quotes": [
+   {
+    "id": "data_pyramid",
+    "quote": "2 Data Our goal for data is to build a hierarchical data pyramid, catering to the requirement of the progressive training process.",
+    "source_url": "https://arxiv.org/html/2503.09642",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+   }
+  ]
+ },
+ "appendix300_check": {
+  "answer": "UNKNOWN",
+  "quote_or_statement": "the documented data list does not mention DS203/Appendix300",
+  "basis_class": "undisclosed",
+  "basis": "the paper describes only a filtering pyramid and statistics of 'the collected video data'; no sources named. Even if the AE was trained on the Pexels-45k example set referenced by the training config, that is an open-ended stock-footage source (would be named_open_web_sources -> still UNKNOWN). Timing: released 2025-03, before the OPARA issue 2026-04-29.",
+  "term_search": {
+   "pattern": "appendix ?300|DS203|OPARA|appendectom|appendic",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_Open-Sora-v2-Video-DC-AE_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_ae.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_train.md": []
+   }
+  },
+  "quote_ids": [
+   "data_pyramid",
+   "data_example"
+  ],
+  "quotes": [
+   {
+    "id": "data_pyramid",
+    "quote": "2 Data Our goal for data is to build a hierarchical data pyramid, catering to the requirement of the progressive training process.",
+    "source_url": "https://arxiv.org/html/2503.09642",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+   },
+   {
+    "id": "data_example",
+    "quote": "To better illustrate the process, we will use a 45k [pexels dataset](https://huggingface.co/datasets/hpcai-tech/open-sora-pexels-45k) as an example. This dataset contains clipped, score filtered high-quality videos from [Pexels](https://www.pexels.com/).",
+    "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/train.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_train.md"
+   }
+  ]
+ },
+ "input": {
+  "frame_size": {
+   "value": "trained on 256px 1:1 clips (spatial tile 256 at inference); Open-Sora 2.0 generates 256px and 768px",
+   "quote_ids": [
+    "arch_train",
+    "in_tile_doc",
+    "in_gen"
+   ],
+   "quotes": [
+    {
+     "id": "arch_train",
+     "quote": "We train each AE model on 8 GPUs with a local batch size of 1. Our training data consists of 32 frames of 256px videos at an aspect ratio of 1:1.",
+     "source_url": "https://arxiv.org/html/2503.09642",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+    },
+    {
+     "id": "in_tile_doc",
+     "quote": "Since our Video DC-AE is trained on 256px videos of 32 frames only, `spatial_tile_size` should be set to 256 and `temporal_tile_size` should be set to 32.",
+     "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/ae.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_ae.md"
+    },
+    {
+     "id": "in_gen",
+     "quote": "Our model supports both T2V and I2V generation at 256×256px and 768×768px resolutions (hereafter referred to as 256px and 768px), generating videos up to 128 frames long. At 24 FPS, this corresponds to a 5-second duration.",
+     "source_url": "https://arxiv.org/html/2503.09642",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+    }
+   ]
+  },
+  "frame_rate_or_sampling": {
+   "value": "AE training config fps_max=24; training data filtered to 16 <= fps < 30; generation at 24 FPS",
+   "quote_ids": [
+    "in_fps_cfg",
+    "data_fps_filter",
+    "data_fps_out",
+    "in_gen"
+   ],
+   "quotes": [
+    {
+     "id": "in_fps_cfg",
+     "quote": "fps_max=24,",
+     "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/configs/vae/train/video_dc_ae.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_configs_vae_train_video_dc_ae.py.txt"
+    },
+    {
+     "id": "data_fps_filter",
+     "quote": "we filter out videos with a duration of less than 2 seconds, a bit per pixel (bpp) below 0.02, a frame rate (fps) under 16, and an aspect ratio outside the range [1/3, 3]",
+     "source_url": "https://arxiv.org/html/2503.09642",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+    },
+    {
+     "id": "data_fps_out",
+     "quote": "frame rate (fps) below 30, longer dimension not exceeding 1080 pixels, and H.264 codec.",
+     "source_url": "https://arxiv.org/html/2503.09642",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+    },
+    {
+     "id": "in_gen",
+     "quote": "Our model supports both T2V and I2V generation at 256×256px and 768×768px resolutions (hereafter referred to as 256px and 768px), generating videos up to 128 frames long. At 24 FPS, this corresponds to a 5-second duration.",
+     "source_url": "https://arxiv.org/html/2503.09642",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+    }
+   ]
+  },
+  "clip_length_frames": {
+   "value": "32-frame training clips (temporal tile 32 at inference; multiples of 4 work, multiples of 32 recommended); generation up to 128 frames",
+   "quote_ids": [
+    "arch_train",
+    "in_tile_doc",
+    "in_mult",
+    "in_gen"
+   ],
+   "quotes": [
+    {
+     "id": "arch_train",
+     "quote": "We train each AE model on 8 GPUs with a local batch size of 1. Our training data consists of 32 frames of 256px videos at an aspect ratio of 1:1.",
+     "source_url": "https://arxiv.org/html/2503.09642",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+    },
+    {
+     "id": "in_tile_doc",
+     "quote": "Since our Video DC-AE is trained on 256px videos of 32 frames only, `spatial_tile_size` should be set to 256 and `temporal_tile_size` should be set to 32.",
+     "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/ae.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_ae.md"
+    },
+    {
+     "id": "in_mult",
+     "quote": "although multiples of 4 works, we generally recommend to use frame numbers of multiples of 32",
+     "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/ae.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_ae.md"
+    },
+    {
+     "id": "in_gen",
+     "quote": "Our model supports both T2V and I2V generation at 256×256px and 768×768px resolutions (hereafter referred to as 256px and 768px), generating videos up to 128 frames long. At 24 FPS, this corresponds to a 5-second duration.",
+     "source_url": "https://arxiv.org/html/2503.09642",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+    }
+   ]
+  },
+  "temporal_compression": {
+   "value": "4x (non-causal)",
+   "quote_ids": [
+    "arch_dcae",
+    "in_cfg_tc",
+    "in_table"
+   ],
+   "quotes": [
+    {
+     "id": "arch_dcae",
+     "quote": "our Video DC-AE with a 4 × 32 × 32 4\\times 32\\times 32 compression ratio and a patch size of 1 × 1 × 1 1\\times 1\\times 1 enables training on 32-frame, 256px videos with a latent shape of 8 × 8 × 8 8\\times 8\\times 8 .",
+     "source_url": "https://arxiv.org/html/2503.09642",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+    },
+    {
+     "id": "in_cfg_tc",
+     "quote": "\"time_compression_ratio=4 \"",
+     "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/opensora/models/dc_ae/models/dc_ae.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_dc_ae_models_dc_ae.py.txt"
+    },
+    {
+     "id": "in_table",
+     "quote": "Video DC-AE 4 × 32 × 32 4\\times 32\\times 32 96 128 × \\times 0.051 30.538 0.863",
+     "source_url": "https://arxiv.org/html/2503.09642",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+    }
+   ]
+  },
+  "spatial_compression": {
+   "value": "32x32",
+   "quote_ids": [
+    "arch_dcae",
+    "in_cfg_sc"
+   ],
+   "quotes": [
+    {
+     "id": "arch_dcae",
+     "quote": "our Video DC-AE with a 4 × 32 × 32 4\\times 32\\times 32 compression ratio and a patch size of 1 × 1 × 1 1\\times 1\\times 1 enables training on 32-frame, 256px videos with a latent shape of 8 × 8 × 8 8\\times 8\\times 8 .",
+     "source_url": "https://arxiv.org/html/2503.09642",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+    },
+    {
+     "id": "in_cfg_sc",
+     "quote": "\"spatial_compression_ratio=32 \"",
+     "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/opensora/models/dc_ae/models/dc_ae.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_dc_ae_models_dc_ae.py.txt"
+    }
+   ]
+  }
+ },
+ "embedding_dim": {
+  "value": "128 latent channels x 8 x 8 x 8 = 65,536 values per 32-frame 256x256 clip (128 x T/4 x H/32 x W/32)",
+  "derivation": "latent_channels=128 (official dc-ae-f32t4c128 config; paper: 128-channel variant used in the generation model); latent shape 8x8x8 for 32-frame 256px (paper)",
+  "quote_ids": [
+   "in_cfg_lc",
+   "in_128",
+   "arch_dcae",
+   "w_cfg_ckpt"
+  ],
+  "quotes": [
+   {
+    "id": "in_cfg_lc",
+    "quote": "\"latent_channels=128\"",
+    "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/opensora/models/dc_ae/models/dc_ae.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_dc_ae_models_dc_ae.py.txt"
+   },
+   {
+    "id": "in_128",
+    "quote": "we opt for the 128-channel variant in the video generation model to enable faster adaptation due to its reduced channel size",
+    "source_url": "https://arxiv.org/html/2503.09642",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+   },
+   {
+    "id": "arch_dcae",
+    "quote": "our Video DC-AE with a 4 × 32 × 32 4\\times 32\\times 32 compression ratio and a patch size of 1 × 1 × 1 1\\times 1\\times 1 enables training on 32-frame, 256px videos with a latent shape of 8 × 8 × 8 8\\times 8\\times 8 .",
+    "source_url": "https://arxiv.org/html/2503.09642",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+   },
+   {
+    "id": "w_cfg_ckpt",
+    "quote": "model_name=\"dc-ae-f32t4c128\", from_pretrained=\"./ckpts/F32T4C128_AE.safetensors\",",
+    "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/configs/diffusion/inference/high_compression.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_configs_diffusion_inference_high_compression.py.txt"
+   }
+  ]
+ },
+ "params": {
+  "value": "not documented in the saved paper, card, docs or code; (inferred, not documentation: F32T4C128_AE.safetensors 918,970,214 bytes)",
+  "scope": "not documented",
+  "quote_ids": [
+   "w_file"
+  ],
+  "quotes": [
+   {
+    "id": "w_file",
+    "quote": "\"rfilename\": \"F32T4C128_AE.safetensors\",",
+    "source_url": "https://huggingface.co/api/models/hpcai-tech/Open-Sora-v2-Video-DC-AE?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_hpcai-tech__Open-Sora-v2-Video-DC-AE_hfapi.json"
+   }
+  ]
+ },
+ "flops_per_input_if_documented": null,
+ "flops_note": "the paper's only FLOPs statement is training MFU ('maximum FLOPs utilization (MFU) of 38.19%'); no AE FLOPs per input documented",
+ "eligibility": {
+  "C1_open_weights": {
+   "status": "PASS",
+   "basis": "HF API lists F32T4C128_AE.safetensors, gated=False",
+   "quote_ids": [
+    "w_file",
+    "w_gated"
+   ],
+   "quotes": [
+    {
+     "id": "w_file",
+     "quote": "\"rfilename\": \"F32T4C128_AE.safetensors\",",
+     "source_url": "https://huggingface.co/api/models/hpcai-tech/Open-Sora-v2-Video-DC-AE?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_hpcai-tech__Open-Sora-v2-Video-DC-AE_hfapi.json"
+    },
+    {
+     "id": "w_gated",
+     "quote": "\"gated\": false,",
+     "source_url": "https://huggingface.co/api/models/hpcai-tech/Open-Sora-v2-Video-DC-AE?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_hpcai-tech__Open-Sora-v2-Video-DC-AE_hfapi.json"
+    }
+   ]
+  },
+  "C2_licence_research_use": {
+   "status": "PASS",
+   "basis": "Apache-2.0",
+   "quote_ids": [
+    "lic_card2"
+   ],
+   "quotes": [
+    {
+     "id": "lic_card2",
+     "quote": "license: apache-2.0",
+     "source_url": "https://huggingface.co/hpcai-tech/Open-Sora-v2-Video-DC-AE/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_Open-Sora-v2-Video-DC-AE_README.md"
+    }
+   ]
+  },
+  "C3_domain_secondary": {
+   "status": "PASS",
+   "basis": "video autoencoder of a text/image-to-video model",
+   "quote_ids": [
+    "dom_ae",
+    "arch_dcae"
+   ],
+   "quotes": [
+    {
+     "id": "dom_ae",
+     "quote": "We propose a video autoencoder architecture based on [DC-AE](https://github.com/mit-han-lab/efficientvit), the __Video DC-AE__, which compression the video by 4x in the temporal dimension and 32x32 in the spatial dimension.",
+     "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/ae.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_ae.md"
+    },
+    {
+     "id": "arch_dcae",
+     "quote": "our Video DC-AE with a 4 × 32 × 32 4\\times 32\\times 32 compression ratio and a patch size of 1 × 1 × 1 1\\times 1\\times 1 enables training on 32-frame, 256px videos with a latent shape of 8 × 8 × 8 8\\times 8\\times 8 .",
+     "source_url": "https://arxiv.org/html/2503.09642",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+    }
+   ]
+  },
+  "C4_documented_pretraining_data": {
+   "status": "FAIL",
+   "basis": "no datasets or named sources for the Open-Sora 2.0 / DC-AE training video; borderline caveat: the official AE training config's default data_path is the Pexels-45k set, but the training guide calls it 'an example' and neither the model card nor the paper lists the AE training data, so under the frozen wording ('a model card or paper lists ...') C4 stays FAIL",
+   "quote_ids": [
+    "data_pyramid",
+    "data_example",
+    "data_cfg"
+   ],
+   "quotes": [
+    {
+     "id": "data_pyramid",
+     "quote": "2 Data Our goal for data is to build a hierarchical data pyramid, catering to the requirement of the progressive training process.",
+     "source_url": "https://arxiv.org/html/2503.09642",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt"
+    },
+    {
+     "id": "data_example",
+     "quote": "To better illustrate the process, we will use a 45k [pexels dataset](https://huggingface.co/datasets/hpcai-tech/open-sora-pexels-45k) as an example. This dataset contains clipped, score filtered high-quality videos from [Pexels](https://www.pexels.com/).",
+     "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/train.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_train.md"
+    },
+    {
+     "id": "data_cfg",
+     "quote": "data_path=\"datasets/pexels_45k_necessary.csv\",",
+     "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/configs/vae/train/video_dc_ae.py",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_configs_vae_train_video_dc_ae.py.txt"
+    }
+   ]
+  },
+  "eligible": "NO (fails C4) -- borderline (see C4 caveat)"
+ },
+ "changes_vs_v1": [
+  "sources re-fetched into /home fm_sources/secondary (raw sha256 compared with v1 per quote)",
+  "CORRECTION architecture.representation: v1 '128 or 256 channels trained (released file name F32T4C128 suggests 128 channels -- inferred from the file name only)' -> '128 channels', now documented by the official code (dc_ae_f32: latent_channels=128 for 'dc-ae-f32t4c128'), by the official high-compression inference config (loads F32T4C128_AE.safetensors as dc-ae-f32t4c128, DiT in_channels=128) and by the paper ('we opt for the 128-channel variant')",
+  "NEW caveat on C4 (status unchanged FAIL): official AE training config data_path = datasets/pexels_45k_necessary.csv, presented in docs/train.md as an example dataset; recorded as borderline, not a pass, because neither card nor paper lists the AE training data",
+  "added structured fields (version, weights_location, domain, pretraining_data_quote, appendix300_check, input, embedding_dim, params, flops)",
+  "no change to any eligibility status or Appendix300 answer"
+ ],
+ "quotes": [
+  {
+   "id": "w_file",
+   "quote": "\"rfilename\": \"F32T4C128_AE.safetensors\",",
+   "source_file": "opensora_hpcai-tech__Open-Sora-v2-Video-DC-AE_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_hpcai-tech__Open-Sora-v2-Video-DC-AE_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/hpcai-tech/Open-Sora-v2-Video-DC-AE?blobs=true",
+   "final_url": "https://huggingface.co/api/models/hpcai-tech/Open-Sora-v2-Video-DC-AE?blobs=true",
+   "raw_sha256": "966a9812c49dc3325bacafea510bf9374e9121e40e23a120c4a4b93cd9a6fa81",
+   "copy_sha256": "96d617fa287f5bf5b7c4a0232f60f89a3da0dfeed8c5ce7e199074e921f30c6d",
+   "retrieved_utc": "2026-10-02T09:34:50+00:00"
+  },
+  {
+   "id": "w_gated",
+   "quote": "\"gated\": false,",
+   "source_file": "opensora_hpcai-tech__Open-Sora-v2-Video-DC-AE_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_hpcai-tech__Open-Sora-v2-Video-DC-AE_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/hpcai-tech/Open-Sora-v2-Video-DC-AE?blobs=true",
+   "final_url": "https://huggingface.co/api/models/hpcai-tech/Open-Sora-v2-Video-DC-AE?blobs=true",
+   "raw_sha256": "966a9812c49dc3325bacafea510bf9374e9121e40e23a120c4a4b93cd9a6fa81",
+   "copy_sha256": "96d617fa287f5bf5b7c4a0232f60f89a3da0dfeed8c5ce7e199074e921f30c6d",
+   "retrieved_utc": "2026-10-02T09:34:50+00:00"
+  },
+  {
+   "id": "w_cfg_ckpt",
+   "quote": "model_name=\"dc-ae-f32t4c128\", from_pretrained=\"./ckpts/F32T4C128_AE.safetensors\",",
+   "source_file": "opensora_github_main_configs_diffusion_inference_high_compression.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_configs_diffusion_inference_high_compression.py.txt",
+   "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/configs/diffusion/inference/high_compression.py",
+   "final_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/configs/diffusion/inference/high_compression.py",
+   "raw_sha256": "49dc631a2ffc3e2dab116155074bd792fdbfd3113b4f6d9b7ec74c93e15fc770",
+   "copy_sha256": "49dc631a2ffc3e2dab116155074bd792fdbfd3113b4f6d9b7ec74c93e15fc770",
+   "retrieved_utc": "2026-10-02T09:34:54+00:00"
+  },
+  {
+   "id": "lic_card2",
+   "quote": "license: apache-2.0",
+   "source_file": "opensora_Open-Sora-v2-Video-DC-AE_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_Open-Sora-v2-Video-DC-AE_README.md",
+   "source_url": "https://huggingface.co/hpcai-tech/Open-Sora-v2-Video-DC-AE/raw/main/README.md",
+   "final_url": "https://huggingface.co/hpcai-tech/Open-Sora-v2-Video-DC-AE/raw/main/README.md",
+   "raw_sha256": "4e169fe861bc8f83ecb0ae697548f5b55b792cb0282112ea7c84eb8ded6037e4",
+   "copy_sha256": "4e169fe861bc8f83ecb0ae697548f5b55b792cb0282112ea7c84eb8ded6037e4",
+   "retrieved_utc": "2026-10-02T09:34:51+00:00",
+   "v1_source_sha256": "4e169fe861bc8f83ecb0ae697548f5b55b792cb0282112ea7c84eb8ded6037e4",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "lic_text",
+   "quote": "Apache License Version 2.0, January 2004",
+   "source_file": "opensora_github_main_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_LICENSE.txt",
+   "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/LICENSE",
+   "final_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/LICENSE",
+   "raw_sha256": "6d9037ce1eadfa116e7daaf98bf95e2b176c993e1f5936e69170773c6011d68d",
+   "copy_sha256": "6d9037ce1eadfa116e7daaf98bf95e2b176c993e1f5936e69170773c6011d68d",
+   "retrieved_utc": "2026-10-02T09:26:10+00:00"
+  },
+  {
+   "id": "dom_ae",
+   "quote": "We propose a video autoencoder architecture based on [DC-AE](https://github.com/mit-han-lab/efficientvit), the __Video DC-AE__, which compression the video by 4x in the temporal dimension and 32x32 in the spatial dimension.",
+   "source_file": "opensora_github_main_docs_ae.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_ae.md",
+   "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/ae.md",
+   "final_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/ae.md",
+   "raw_sha256": "d8551b4ab735e38736cdaf9ec0a88631a4d832dafdaf809dab958aa8417a2799",
+   "copy_sha256": "d8551b4ab735e38736cdaf9ec0a88631a4d832dafdaf809dab958aa8417a2799",
+   "retrieved_utc": "2026-10-02T09:35:06+00:00"
+  },
+  {
+   "id": "dom_scratch",
+   "quote": "We train our __Video DC-AE__ from scratch on 8xGPUs for 3 weeks.",
+   "source_file": "opensora_github_main_docs_ae.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_ae.md",
+   "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/ae.md",
+   "final_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/ae.md",
+   "raw_sha256": "d8551b4ab735e38736cdaf9ec0a88631a4d832dafdaf809dab958aa8417a2799",
+   "copy_sha256": "d8551b4ab735e38736cdaf9ec0a88631a4d832dafdaf809dab958aa8417a2799",
+   "retrieved_utc": "2026-10-02T09:35:06+00:00"
+  },
+  {
+   "id": "arch_dcae",
+   "quote": "our Video DC-AE with a 4 × 32 × 32 4\\times 32\\times 32 compression ratio and a patch size of 1 × 1 × 1 1\\times 1\\times 1 enables training on 32-frame, 256px videos with a latent shape of 8 × 8 × 8 8\\times 8\\times 8 .",
+   "source_file": "opensora_arxiv_2503.09642_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.09642",
+   "final_url": "https://arxiv.org/html/2503.09642",
+   "raw_sha256": "26048881bb90d6137b18adb8fc78199bd2d99bdf32bdbc227cd370cdce148e11",
+   "copy_sha256": "30b618873db6c65169644b874a5fe1fe67a55f6f424ab1d23be12e0053927ef1",
+   "retrieved_utc": "2026-10-02T09:34:52+00:00",
+   "v1_source_sha256": "26048881bb90d6137b18adb8fc78199bd2d99bdf32bdbc227cd370cdce148e11",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_train",
+   "quote": "We train each AE model on 8 GPUs with a local batch size of 1. Our training data consists of 32 frames of 256px videos at an aspect ratio of 1:1.",
+   "source_file": "opensora_arxiv_2503.09642_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.09642",
+   "final_url": "https://arxiv.org/html/2503.09642",
+   "raw_sha256": "26048881bb90d6137b18adb8fc78199bd2d99bdf32bdbc227cd370cdce148e11",
+   "copy_sha256": "30b618873db6c65169644b874a5fe1fe67a55f6f424ab1d23be12e0053927ef1",
+   "retrieved_utc": "2026-10-02T09:34:52+00:00",
+   "v1_source_sha256": "26048881bb90d6137b18adb8fc78199bd2d99bdf32bdbc227cd370cdce148e11",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "in_table",
+   "quote": "Video DC-AE 4 × 32 × 32 4\\times 32\\times 32 96 128 × \\times 0.051 30.538 0.863",
+   "source_file": "opensora_arxiv_2503.09642_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.09642",
+   "final_url": "https://arxiv.org/html/2503.09642",
+   "raw_sha256": "26048881bb90d6137b18adb8fc78199bd2d99bdf32bdbc227cd370cdce148e11",
+   "copy_sha256": "30b618873db6c65169644b874a5fe1fe67a55f6f424ab1d23be12e0053927ef1",
+   "retrieved_utc": "2026-10-02T09:34:52+00:00"
+  },
+  {
+   "id": "in_128",
+   "quote": "we opt for the 128-channel variant in the video generation model to enable faster adaptation due to its reduced channel size",
+   "source_file": "opensora_arxiv_2503.09642_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.09642",
+   "final_url": "https://arxiv.org/html/2503.09642",
+   "raw_sha256": "26048881bb90d6137b18adb8fc78199bd2d99bdf32bdbc227cd370cdce148e11",
+   "copy_sha256": "30b618873db6c65169644b874a5fe1fe67a55f6f424ab1d23be12e0053927ef1",
+   "retrieved_utc": "2026-10-02T09:34:52+00:00"
+  },
+  {
+   "id": "in_cfg_lc",
+   "quote": "\"latent_channels=128\"",
+   "source_file": "opensora_github_main_dc_ae_models_dc_ae.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_dc_ae_models_dc_ae.py.txt",
+   "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/opensora/models/dc_ae/models/dc_ae.py",
+   "final_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/opensora/models/dc_ae/models/dc_ae.py",
+   "raw_sha256": "2cbe576b6459701047789e92a64fbf0b1c86d67c0623db3f6e7b46639dbe5b2b",
+   "copy_sha256": "2cbe576b6459701047789e92a64fbf0b1c86d67c0623db3f6e7b46639dbe5b2b",
+   "retrieved_utc": "2026-10-02T09:35:40+00:00"
+  },
+  {
+   "id": "in_cfg_tc",
+   "quote": "\"time_compression_ratio=4 \"",
+   "source_file": "opensora_github_main_dc_ae_models_dc_ae.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_dc_ae_models_dc_ae.py.txt",
+   "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/opensora/models/dc_ae/models/dc_ae.py",
+   "final_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/opensora/models/dc_ae/models/dc_ae.py",
+   "raw_sha256": "2cbe576b6459701047789e92a64fbf0b1c86d67c0623db3f6e7b46639dbe5b2b",
+   "copy_sha256": "2cbe576b6459701047789e92a64fbf0b1c86d67c0623db3f6e7b46639dbe5b2b",
+   "retrieved_utc": "2026-10-02T09:35:40+00:00"
+  },
+  {
+   "id": "in_cfg_sc",
+   "quote": "\"spatial_compression_ratio=32 \"",
+   "source_file": "opensora_github_main_dc_ae_models_dc_ae.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_dc_ae_models_dc_ae.py.txt",
+   "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/opensora/models/dc_ae/models/dc_ae.py",
+   "final_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/opensora/models/dc_ae/models/dc_ae.py",
+   "raw_sha256": "2cbe576b6459701047789e92a64fbf0b1c86d67c0623db3f6e7b46639dbe5b2b",
+   "copy_sha256": "2cbe576b6459701047789e92a64fbf0b1c86d67c0623db3f6e7b46639dbe5b2b",
+   "retrieved_utc": "2026-10-02T09:35:40+00:00"
+  },
+  {
+   "id": "in_tile_doc",
+   "quote": "Since our Video DC-AE is trained on 256px videos of 32 frames only, `spatial_tile_size` should be set to 256 and `temporal_tile_size` should be set to 32.",
+   "source_file": "opensora_github_main_docs_ae.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_ae.md",
+   "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/ae.md",
+   "final_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/ae.md",
+   "raw_sha256": "d8551b4ab735e38736cdaf9ec0a88631a4d832dafdaf809dab958aa8417a2799",
+   "copy_sha256": "d8551b4ab735e38736cdaf9ec0a88631a4d832dafdaf809dab958aa8417a2799",
+   "retrieved_utc": "2026-10-02T09:35:06+00:00"
+  },
+  {
+   "id": "in_mult",
+   "quote": "although multiples of 4 works, we generally recommend to use frame numbers of multiples of 32",
+   "source_file": "opensora_github_main_docs_ae.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_ae.md",
+   "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/ae.md",
+   "final_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/ae.md",
+   "raw_sha256": "d8551b4ab735e38736cdaf9ec0a88631a4d832dafdaf809dab958aa8417a2799",
+   "copy_sha256": "d8551b4ab735e38736cdaf9ec0a88631a4d832dafdaf809dab958aa8417a2799",
+   "retrieved_utc": "2026-10-02T09:35:06+00:00"
+  },
+  {
+   "id": "in_gen",
+   "quote": "Our model supports both T2V and I2V generation at 256×256px and 768×768px resolutions (hereafter referred to as 256px and 768px), generating videos up to 128 frames long. At 24 FPS, this corresponds to a 5-second duration.",
+   "source_file": "opensora_arxiv_2503.09642_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.09642",
+   "final_url": "https://arxiv.org/html/2503.09642",
+   "raw_sha256": "26048881bb90d6137b18adb8fc78199bd2d99bdf32bdbc227cd370cdce148e11",
+   "copy_sha256": "30b618873db6c65169644b874a5fe1fe67a55f6f424ab1d23be12e0053927ef1",
+   "retrieved_utc": "2026-10-02T09:34:52+00:00"
+  },
+  {
+   "id": "in_fps_cfg",
+   "quote": "fps_max=24,",
+   "source_file": "opensora_github_main_configs_vae_train_video_dc_ae.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_configs_vae_train_video_dc_ae.py.txt",
+   "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/configs/vae/train/video_dc_ae.py",
+   "final_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/configs/vae/train/video_dc_ae.py",
+   "raw_sha256": "e7a24c59e7ea7426d47079663d5326275306eeefcdbb44395df49f921ab05b11",
+   "copy_sha256": "e7a24c59e7ea7426d47079663d5326275306eeefcdbb44395df49f921ab05b11",
+   "retrieved_utc": "2026-10-02T09:34:53+00:00"
+  },
+  {
+   "id": "data_pyramid",
+   "quote": "2 Data Our goal for data is to build a hierarchical data pyramid, catering to the requirement of the progressive training process.",
+   "source_file": "opensora_arxiv_2503.09642_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.09642",
+   "final_url": "https://arxiv.org/html/2503.09642",
+   "raw_sha256": "26048881bb90d6137b18adb8fc78199bd2d99bdf32bdbc227cd370cdce148e11",
+   "copy_sha256": "30b618873db6c65169644b874a5fe1fe67a55f6f424ab1d23be12e0053927ef1",
+   "retrieved_utc": "2026-10-02T09:34:52+00:00",
+   "v1_source_sha256": "26048881bb90d6137b18adb8fc78199bd2d99bdf32bdbc227cd370cdce148e11",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "data_fps_filter",
+   "quote": "we filter out videos with a duration of less than 2 seconds, a bit per pixel (bpp) below 0.02, a frame rate (fps) under 16, and an aspect ratio outside the range [1/3, 3]",
+   "source_file": "opensora_arxiv_2503.09642_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.09642",
+   "final_url": "https://arxiv.org/html/2503.09642",
+   "raw_sha256": "26048881bb90d6137b18adb8fc78199bd2d99bdf32bdbc227cd370cdce148e11",
+   "copy_sha256": "30b618873db6c65169644b874a5fe1fe67a55f6f424ab1d23be12e0053927ef1",
+   "retrieved_utc": "2026-10-02T09:34:52+00:00"
+  },
+  {
+   "id": "data_fps_out",
+   "quote": "frame rate (fps) below 30, longer dimension not exceeding 1080 pixels, and H.264 codec.",
+   "source_file": "opensora_arxiv_2503.09642_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_arxiv_2503.09642_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2503.09642",
+   "final_url": "https://arxiv.org/html/2503.09642",
+   "raw_sha256": "26048881bb90d6137b18adb8fc78199bd2d99bdf32bdbc227cd370cdce148e11",
+   "copy_sha256": "30b618873db6c65169644b874a5fe1fe67a55f6f424ab1d23be12e0053927ef1",
+   "retrieved_utc": "2026-10-02T09:34:52+00:00"
+  },
+  {
+   "id": "data_ae_docs",
+   "quote": "Follow this [guide](./train.md#prepare-dataset) to prepare the __DATASET__ for training and inference. You may use our provided dataset or custom ones.",
+   "source_file": "opensora_github_main_docs_ae.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_ae.md",
+   "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/ae.md",
+   "final_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/ae.md",
+   "raw_sha256": "d8551b4ab735e38736cdaf9ec0a88631a4d832dafdaf809dab958aa8417a2799",
+   "copy_sha256": "d8551b4ab735e38736cdaf9ec0a88631a4d832dafdaf809dab958aa8417a2799",
+   "retrieved_utc": "2026-10-02T09:35:06+00:00"
+  },
+  {
+   "id": "data_example",
+   "quote": "To better illustrate the process, we will use a 45k [pexels dataset](https://huggingface.co/datasets/hpcai-tech/open-sora-pexels-45k) as an example. This dataset contains clipped, score filtered high-quality videos from [Pexels](https://www.pexels.com/).",
+   "source_file": "opensora_github_main_docs_train.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_docs_train.md",
+   "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/train.md",
+   "final_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/docs/train.md",
+   "raw_sha256": "665398313bbf6b0e83c11c2e5e9538ee7649721ab6f43bb35ec65ca02b2d143f",
+   "copy_sha256": "665398313bbf6b0e83c11c2e5e9538ee7649721ab6f43bb35ec65ca02b2d143f",
+   "retrieved_utc": "2026-10-02T09:35:24+00:00"
+  },
+  {
+   "id": "data_cfg",
+   "quote": "data_path=\"datasets/pexels_45k_necessary.csv\",",
+   "source_file": "opensora_github_main_configs_vae_train_video_dc_ae.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/opensora_github_main_configs_vae_train_video_dc_ae.py.txt",
+   "source_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/configs/vae/train/video_dc_ae.py",
+   "final_url": "https://raw.githubusercontent.com/hpcaitech/Open-Sora/main/configs/vae/train/video_dc_ae.py",
+   "raw_sha256": "e7a24c59e7ea7426d47079663d5326275306eeefcdbb44395df49f921ab05b11",
+   "copy_sha256": "e7a24c59e7ea7426d47079663d5326275306eeefcdbb44395df49f921ab05b11",
+   "retrieved_utc": "2026-10-02T09:34:53+00:00"
+  }
+ ],
+ "all_quotes_verified": true,
+ "record_written_utc": "2026-10-02T09:36:55+00:00"
+}

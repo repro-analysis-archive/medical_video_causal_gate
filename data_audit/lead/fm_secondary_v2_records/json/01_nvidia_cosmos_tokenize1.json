@@ -1,0 +1,980 @@
+{
+ "id": "01_nvidia_cosmos_tokenize1",
+ "name": "NVIDIA Cosmos-Tokenize1 (Cosmos Tokenizer; CV8x8x8-720p primary variant; DV8x16x16-720p, CV4x8x8-360p also listed)",
+ "family_note": "Tokenizer of the Cosmos-Predict1 world foundation models. Cosmos-Predict1-7B-Text2World and Cosmos-Predict2-2B-Video2World (the generative models) are separate HF repos, both gated='auto' (click-through) -> not opened; the representation of interest is the tokenizer.",
+ "prior_work_K4": {
+  "ref": "Nakamura, Breuer, Crespin, Dietrich, Imai (2026) 'Causal Inference with Video Features as Treatments', arXiv:2607.06126 (v2 2026-09-15)",
+  "used": "NVIDIA Cosmos tokenizer (variant not named in the text searched); internal representations used as video summaries",
+  "quote_ids": [
+   "k4_use"
+  ],
+  "quotes": [
+   {
+    "id": "k4_use",
+    "quote": "we first regenerate the video content using the NVIDIA Cosmos tokenizer ( Agarwal et al., 2025 ) and extract their internal representations.",
+    "source_url": "https://arxiv.org/html/2607.06126v2",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/K4_arxiv_2607.06126v2_fulltext.txt"
+   }
+  ]
+ },
+ "version": "nvidia/Cosmos-Tokenize1-CV8x8x8-720p (primary; HF repo sha b6af495317c76f287a4131e9299936b1533f5f9f, created 2025-03-14, last modified 2025-04-23; files encoder.jit / decoder.jit / autoencoder.jit / model.pt); also listed: Cosmos-Tokenize1-DV8x16x16-720p (sha 017d82884b28491c191f9ea9107d1a6dcc20e725), Cosmos-Tokenize1-CV4x8x8-360p (sha d82fab12c9fe1fc579d05f082d94d35c5962bf06). Paper arXiv 2501.03575 (Cosmos-Tokenize1 = the second-generation tokenizer release; Cosmos-0.1-Tokenizer = the first).",
+ "paper": {
+  "title": "Cosmos World Foundation Model Platform for Physical AI",
+  "year": 2025,
+  "arxiv": "2501.03575",
+  "versions": "v1 2025-01-07, v3 2025-07-09"
+ },
+ "weights_location": {
+  "urls": [
+   "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p",
+   "https://huggingface.co/nvidia/Cosmos-Tokenize1-DV8x16x16-720p",
+   "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV4x8x8-360p"
+  ],
+  "files_listed_CV8x8x8": {
+   "encoder.jit": 86272108,
+   "decoder.jit": 126022330,
+   "autoencoder.jit": 212300573,
+   "model.pt": 1479537453
+  },
+  "files_listed_DV8x16x16": {
+   "encoder.jit": 92292848,
+   "decoder.jit": 132042180,
+   "autoencoder.jit": 223576773,
+   "model.pt": 1912566352
+  },
+  "files_listed_CV4x8x8": {
+   "encoder.jit": 91128212,
+   "decoder.jit": 130271330,
+   "autoencoder.jit": 221415661,
+   "model.pt": 1543318925
+  },
+  "gated": false,
+  "private": false,
+  "verified_how": "HF API model listings (metadata only) saved as cosmos_nvidia__Cosmos-Tokenize1-CV8x8x8-720p_hfapi.json, cosmos_nvidia__Cosmos-Tokenize1-DV8x16x16-720p_hfapi.json, cosmos_nvidia__Cosmos-Tokenize1-CV4x8x8-360p_hfapi.json; nothing downloaded",
+  "note": "HF API: gated=False for all three tokenizer repos (the card carries extra_gated_prompt text but gating is off). Not downloaded.",
+  "quote_ids": [
+   "w_enc",
+   "w_gated8",
+   "w_gateddv",
+   "w_gated4"
+  ],
+  "quotes": [
+   {
+    "id": "w_enc",
+    "quote": "\"rfilename\": \"encoder.jit\",",
+    "source_url": "https://huggingface.co/api/models/nvidia/Cosmos-Tokenize1-CV8x8x8-720p?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_nvidia__Cosmos-Tokenize1-CV8x8x8-720p_hfapi.json"
+   },
+   {
+    "id": "w_gated8",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/nvidia/Cosmos-Tokenize1-CV8x8x8-720p?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_nvidia__Cosmos-Tokenize1-CV8x8x8-720p_hfapi.json"
+   },
+   {
+    "id": "w_gateddv",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/nvidia/Cosmos-Tokenize1-DV8x16x16-720p?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_nvidia__Cosmos-Tokenize1-DV8x16x16-720p_hfapi.json"
+   },
+   {
+    "id": "w_gated4",
+    "quote": "\"gated\": false,",
+    "source_url": "https://huggingface.co/api/models/nvidia/Cosmos-Tokenize1-CV4x8x8-360p?blobs=true",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_nvidia__Cosmos-Tokenize1-CV4x8x8-360p_hfapi.json"
+   }
+  ]
+ },
+ "licence": {
+  "id": "NVIDIA Open Model License Agreement (HF license: other / nvidia-open-model-license)",
+  "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+  "version_note": "card embeds the 'Version Release Date: January 6, 2025' text; the live licence page saved 2026-10-02 shows 'Version Release Date: October 24, 2025' (NVIDIA may update the agreement).",
+  "commercial": "commercial use permitted",
+  "non_commercial_only": false,
+  "restrictions": "must be consistent with NVIDIA Trustworthy AI terms; rights terminate if guardrails/technical limitations are circumvented; 'Built on NVIDIA Cosmos' attribution when distributing or training on outputs (card text)",
+  "gating": "none (HF gated=False)",
+  "quote_ids": [
+   "lic_card",
+   "lic_commercial",
+   "lic_grant",
+   "lic_ethics",
+   "lic_terminate",
+   "lic_version_live"
+  ],
+  "quotes": [
+   {
+    "id": "lic_card",
+    "quote": "This model is released under the  [NVIDIA Open Model License](https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license).",
+    "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+   },
+   {
+    "id": "lic_commercial",
+    "quote": "* Models are commercially usable.",
+    "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+   },
+   {
+    "id": "lic_grant",
+    "quote": "NVIDIA hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, revocable (as stated in Section 2.1) license to publicly perform, publicly display, reproduce, use, create derivative works of, make, have made, sell, offer for sale, distribute (through multiple tiers of distribution) and import the Model.",
+    "source_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/license_nvidia_open_model_license.txt"
+   },
+   {
+    "id": "lic_ethics",
+    "quote": "Use of the Models under the Agreement must be consistent with NVIDIA’s Trustworthy AI terms",
+    "source_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/license_nvidia_open_model_license.txt"
+   },
+   {
+    "id": "lic_terminate",
+    "quote": "If you bypass, disable, reduce the efficacy of, or circumvent any technical limitation, safety guardrail or",
+    "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+   },
+   {
+    "id": "lic_version_live",
+    "quote": "Version Release Date: October 24, 2025",
+    "source_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/license_nvidia_open_model_license.txt"
+   }
+  ]
+ },
+ "domain": {
+  "value": "video tokenizer (causal wavelet-space autoencoder; continuous AE or discrete FSQ) of the Cosmos-Predict1 generative world foundation models; trained jointly on images and general video (proprietary + open-domain Internet video, 9 content categories)",
+  "quote_ids": [
+   "dom_desc",
+   "dom_type",
+   "tok_train",
+   "data_sources"
+  ],
+  "quotes": [
+   {
+    "id": "dom_desc",
+    "quote": "Cosmos Tokenizer can serve as an effective and efficient building block in both diffusion-based and autoregressive models for image and video generation.",
+    "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+   },
+   {
+    "id": "dom_type",
+    "quote": "Model Type: | Auto-Encoder",
+    "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+   },
+   {
+    "id": "tok_train",
+    "quote": "We train our tokenizers directly on high-resolution images and long-duration videos without limiting the categories or aspect ratios.",
+    "source_url": "https://arxiv.org/html/2501.03575",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+   },
+   {
+    "id": "data_sources",
+    "quote": "3.1 Dataset We use both proprietary video datasets and publicly available open-domain Internet videos to train our models.",
+    "source_url": "https://arxiv.org/html/2501.03575",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+   }
+  ]
+ },
+ "architecture": {
+  "type": "causal temporal conv + causal temporal attention autoencoder with 2-level Haar wavelet front end; vanilla AE (continuous) or FSQ (discrete)",
+  "representation": "encoder output latent tokens: continuous 16-dim vectors per latent voxel (CV) or FSQ indices, vocabulary 64,000 (DV)"
+ },
+ "pretraining_data": {
+  "summary": "Tokenizers trained jointly on images and videos; the paper's training dataset = proprietary video datasets + publicly available open-domain Internet videos, ~20M h raw video, 9 content categories (driving, hand/object manipulation, human motion, navigation, first-person, nature, camera motion, synthetic, others 7%). No dataset names for training (TokenBench/DAVIS named only for evaluation).",
+  "form": "described only (sources characterised generically; no training-dataset list)"
+ },
+ "pretraining_data_quote": {
+  "quote_ids": [
+   "data_sources",
+   "data_categories",
+   "data_hours",
+   "tok_train",
+   "tok_joint"
+  ],
+  "quotes": [
+   {
+    "id": "data_sources",
+    "quote": "3.1 Dataset We use both proprietary video datasets and publicly available open-domain Internet videos to train our models.",
+    "source_url": "https://arxiv.org/html/2501.03575",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+   },
+   {
+    "id": "data_categories",
+    "quote": "1. Driving (11%), 2. Hand motion and object manipulation (16%), 3. Human motion and activity (10%), 4. Spatial awareness and navigation (16%), 5. First person point-of-view (8%), 6. Nature dynamics (20%), 7. Dynamic camera movements (8%), 8. Synthetically rendered (4%), and 9. Others (7%).",
+    "source_url": "https://arxiv.org/html/2501.03575",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+   },
+   {
+    "id": "data_hours",
+    "quote": "In total, we accumulate about 20M hours of raw videos with resolutions from 720p to 4k.",
+    "source_url": "https://arxiv.org/html/2501.03575",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+   },
+   {
+    "id": "tok_train",
+    "quote": "We train our tokenizers directly on high-resolution images and long-duration videos without limiting the categories or aspect ratios.",
+    "source_url": "https://arxiv.org/html/2501.03575",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+   },
+   {
+    "id": "tok_joint",
+    "quote": "4.2 Training Strategy We employ a joint training strategy by alternating mini-batches of images and videos at a preset frequency.",
+    "source_url": "https://arxiv.org/html/2501.03575",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+   }
+  ]
+ },
+ "medical_video_in_data": {
+  "answer": "NOT MENTIONED",
+  "basis": "Search of saved paper full text and card for medical|surgical|surgery|endoscop|laparoscop|clinical|hospital|health: no hit in a data context (only 'healthy range' of gradient norms). Content categories listed contain no medical category; 'Others (7%)' is unspecified.",
+  "term_search": {
+   "pattern": "medical|surgical|surgery|endoscop|laparoscop|clinical|health|hospital",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt": [
+     "cdot\\sum_{i}z_{i}^{2} . We found z-loss to be critical in maintaining gradient norms to a healthy range, especially when scaling the training to a large number of GPU nodes. Empirically,"
+    ],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md": []
+   }
+  }
+ },
+ "appendix300_possible": {
+  "answer": "UNKNOWN",
+  "basis_class": "undisclosed",
+  "basis": "Undisclosed proprietary + open-domain Internet video. Context: paper v1 2025-01-07 / weights 2025-03 precede the OPARA issue date 2026-04-29, so the OPARA release itself cannot be in it, but the source recordings' prior circulation is not documented.",
+  "quote_ids": [
+   "data_sources"
+  ],
+  "quotes": [
+   {
+    "id": "data_sources",
+    "quote": "3.1 Dataset We use both proprietary video datasets and publicly available open-domain Internet videos to train our models.",
+    "source_url": "https://arxiv.org/html/2501.03575",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+   }
+  ]
+ },
+ "appendix300_check": {
+  "answer": "UNKNOWN",
+  "quote_or_statement": "the documented data list does not mention DS203/Appendix300",
+  "basis_class": "undisclosed",
+  "basis": "Undisclosed proprietary + open-domain Internet video. Context: paper v1 2025-01-07 / weights 2025-03 precede the OPARA issue date 2026-04-29, so the OPARA release itself cannot be in it, but the source recordings' prior circulation is not documented.",
+  "term_search": {
+   "pattern": "appendix ?300|DS203|OPARA|appendectom|appendic",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md": []
+   }
+  },
+  "quote_ids": [
+   "data_sources"
+  ],
+  "quotes": [
+   {
+    "id": "data_sources",
+    "quote": "3.1 Dataset We use both proprietary video datasets and publicly available open-domain Internet videos to train our models.",
+    "source_url": "https://arxiv.org/html/2501.03575",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+   }
+  ]
+ },
+ "input": {
+  "frame_size": {
+   "value": "min 256 px shorter side, up to 4K; CV8x8x8 variant for 720p and above (trained on 360p/720p frames); up to 8 s of 1080p per pass on an A100-80GB",
+   "quote_ids": [
+    "arch_input",
+    "arch_variant",
+    "in_train_frames",
+    "in_len"
+   ],
+   "quotes": [
+    {
+     "id": "arch_input",
+     "quote": "**Resolution:** Minimum: 256px (shorter side). Maximum: Up to 4K",
+     "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+    },
+    {
+     "id": "arch_variant",
+     "quote": "[Cosmos-Tokenize1-CV8x8x8-720p](https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p) (8x temporal compression, 8x8 spatial compression, 720p and above, 121 frames context)",
+     "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+    },
+    {
+     "id": "in_train_frames",
+     "quote": "2. Cosmos-Tokenize1 : Trained using mini-batches sampling a larger number of 360p or 720p video frames (121 frames for CV and 49 frames for DV ).",
+     "source_url": "https://arxiv.org/html/2501.03575",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+    },
+    {
+     "id": "in_len",
+     "quote": "**Video Length:** Up to 8 seconds for 1080p videos (bounded by A100 80G GPU memory; higher resolutions will have shorter supported durations)",
+     "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+    }
+   ]
+  },
+  "frame_rate_or_sampling": {
+   "value": "not documented for the tokenizer (consecutive frames are encoded causally; no frame-rate requirement stated); the paper's FPS-aware RoPE concerns the diffusion WFM, not the tokenizer",
+   "quote_ids": [
+    "in_first_frame"
+   ],
+   "quotes": [
+    {
+     "id": "in_first_frame",
+     "quote": "The first temporal token represents the first input frame, enabling joint image ( T = 0 T=0 ) and video ( T > 0 T>0 ) tokenization in a shared latent space.",
+     "source_url": "https://arxiv.org/html/2501.03575",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+    }
+   ]
+  },
+  "clip_length_frames": {
+   "value": "121-frame context for CV8x8x8-720p (trained on 121-frame mini-batches); 49 for CV4x8x8-360p and DV8x16x16-720p; causal 1+T frame layout",
+   "quote_ids": [
+    "arch_variant",
+    "in_train_frames",
+    "in_first_frame"
+   ],
+   "quotes": [
+    {
+     "id": "arch_variant",
+     "quote": "[Cosmos-Tokenize1-CV8x8x8-720p](https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p) (8x temporal compression, 8x8 spatial compression, 720p and above, 121 frames context)",
+     "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+    },
+    {
+     "id": "in_train_frames",
+     "quote": "2. Cosmos-Tokenize1 : Trained using mini-batches sampling a larger number of 360p or 720p video frames (121 frames for CV and 49 frames for DV ).",
+     "source_url": "https://arxiv.org/html/2501.03575",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+    },
+    {
+     "id": "in_first_frame",
+     "quote": "The first temporal token represents the first input frame, enabling joint image ( T = 0 T=0 ) and video ( T > 0 T>0 ) tokenization in a shared latent space.",
+     "source_url": "https://arxiv.org/html/2501.03575",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+    }
+   ]
+  },
+  "temporal_compression": {
+   "value": "8x for CV8x8x8 (1 + T/8 latent frames; first frame kept as its own latent frame); 4x for CV4x8x8; 8x for DV8x16x16",
+   "quote_ids": [
+    "arch_variant",
+    "in_first_frame",
+    "in_wavelet"
+   ],
+   "quotes": [
+    {
+     "id": "arch_variant",
+     "quote": "[Cosmos-Tokenize1-CV8x8x8-720p](https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p) (8x temporal compression, 8x8 spatial compression, 720p and above, 121 frames context)",
+     "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+    },
+    {
+     "id": "in_first_frame",
+     "quote": "The first temporal token represents the first input frame, enabling joint image ( T = 0 T=0 ) and video ( T > 0 T>0 ) tokenization in a shared latent space.",
+     "source_url": "https://arxiv.org/html/2501.03575",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+    },
+    {
+     "id": "in_wavelet",
+     "quote": "The encoder starts with a 2-level [Haar wavelet](https://link.springer.com/book/10.1007/978-3-319-04295-4) transform layer, which down-samples inputs by a factor of 4 in both spatial and temporal dimensions.",
+     "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+    }
+   ]
+  },
+  "spatial_compression": {
+   "value": "8x8 for CV8x8x8 and CV4x8x8; 16x16 for DV8x16x16",
+   "quote_ids": [
+    "arch_variant",
+    "in_wavelet"
+   ],
+   "quotes": [
+    {
+     "id": "arch_variant",
+     "quote": "[Cosmos-Tokenize1-CV8x8x8-720p](https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p) (8x temporal compression, 8x8 spatial compression, 720p and above, 121 frames context)",
+     "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+    },
+    {
+     "id": "in_wavelet",
+     "quote": "The encoder starts with a 2-level [Haar wavelet](https://link.springer.com/book/10.1007/978-3-319-04295-4) transform layer, which down-samples inputs by a factor of 4 in both spatial and temporal dimensions.",
+     "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+    }
+   ]
+  }
+ },
+ "embedding_dim": {
+  "value": "CV8x8x8-720p, 121 frames x 720x1280 input: 16 channels x (1+120/8 = 16) x 90 x 160 = 3,686,400 values; generally 16 x (1 + T/8) x H/8 x W/8 for 1+T input frames. DV variants: FSQ indices (6-dim latent, vocabulary 64,000) instead of 16-dim vectors.",
+  "derivation": "latent dimension 16 for continuous tokenizers (card + paper); temporal token count 1 + T/s_T (paper Fig. 7); s_T = 8, s_HW = 8 for CV8x8x8",
+  "quote_ids": [
+   "arch_output",
+   "in_latent16",
+   "in_first_frame",
+   "arch_variant",
+   "in_vocab"
+  ],
+  "quotes": [
+   {
+    "id": "arch_output",
+    "quote": "Continuous-valued feature vectors with a dimensionality of 16",
+    "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+   },
+   {
+    "id": "in_latent16",
+    "quote": "The latent dimension for the continuous tokenizers is 16 16 , whereas for the discrete tokenizers, it is 6 6 , which represents the number of the FSQ levels",
+    "source_url": "https://arxiv.org/html/2501.03575",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+   },
+   {
+    "id": "in_first_frame",
+    "quote": "The first temporal token represents the first input frame, enabling joint image ( T = 0 T=0 ) and video ( T > 0 T>0 ) tokenization in a shared latent space.",
+    "source_url": "https://arxiv.org/html/2501.03575",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+   },
+   {
+    "id": "arch_variant",
+    "quote": "[Cosmos-Tokenize1-CV8x8x8-720p](https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p) (8x temporal compression, 8x8 spatial compression, 720p and above, 121 frames context)",
+    "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+   },
+   {
+    "id": "in_vocab",
+    "quote": "This configuration corresponds to a vocabulary size of 64,000 64{,}000 .",
+    "source_url": "https://arxiv.org/html/2501.03575",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+   }
+  ]
+ },
+ "params": {
+  "value": "not documented for Cosmos-Tokenize1-CV8x8x8-720p. The only documented count is 105M for the 4x8x8 continuous video tokenizer (paper Table 9: 'Cosmos-0.1-Tokenizer-CV4x8x8', i.e. the first-generation release; the card's runtime table labels the same row 'Cosmos-Tokenizer-CV'), whole encoder+decoder. Inferred only: autoencoder.jit 212.3 MB, encoder.jit 86.3 MB (dtype not documented).",
+  "scope": "whole autoencoder of the 4x8x8 variant (encoder-only count not documented)",
+  "quote_ids": [
+   "arch_params",
+   "in_params_paper",
+   "in_runtime_def"
+  ],
+  "quotes": [
+   {
+    "id": "arch_params",
+    "quote": "| Cosmos-Tokenizer-CV      | 720x1280   | 4×8×8            | 105M       | **34.8**  |",
+    "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+   },
+   {
+    "id": "in_params_paper",
+    "quote": "Cosmos-0.1-Tokenizer-CV4 × \\times 8 × \\times 8 Continuous-Video 720 × 1280 720\\times 1280 49 105M 34.8",
+    "source_url": "https://arxiv.org/html/2501.03575",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+   },
+   {
+    "id": "in_runtime_def",
+    "quote": "Table 9: Runtime performance comparison of tokenizers. Time is reported per image or per video frame.",
+    "source_url": "https://arxiv.org/html/2501.03575",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+   }
+  ]
+ },
+ "flops_per_input_if_documented": null,
+ "flops_note": "no FLOPs/MACs statement for the tokenizer (paper FLOPs table 13 concerns the diffusion transformer). Documented proxy: 34.8 ms per video frame for the 4x8x8 continuous tokenizer (encode+decode) at 720x1280 on one A100-80GB; runtime of CV8x8x8 not documented.",
+ "eligibility": {
+  "C1_open_weights": {
+   "status": "PASS",
+   "basis": "HF API lists encoder.jit/decoder.jit/model.pt, gated=False",
+   "quote_ids": [
+    "w_enc",
+    "w_gated8"
+   ],
+   "quotes": [
+    {
+     "id": "w_enc",
+     "quote": "\"rfilename\": \"encoder.jit\",",
+     "source_url": "https://huggingface.co/api/models/nvidia/Cosmos-Tokenize1-CV8x8x8-720p?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_nvidia__Cosmos-Tokenize1-CV8x8x8-720p_hfapi.json"
+    },
+    {
+     "id": "w_gated8",
+     "quote": "\"gated\": false,",
+     "source_url": "https://huggingface.co/api/models/nvidia/Cosmos-Tokenize1-CV8x8x8-720p?blobs=true",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_nvidia__Cosmos-Tokenize1-CV8x8x8-720p_hfapi.json"
+    }
+   ]
+  },
+  "C2_licence_research_use": {
+   "status": "PASS",
+   "basis": "NVIDIA Open Model License grants use incl. commercial; ethics/guardrail conditions",
+   "quote_ids": [
+    "lic_card",
+    "lic_grant",
+    "lic_ethics"
+   ],
+   "quotes": [
+    {
+     "id": "lic_card",
+     "quote": "This model is released under the  [NVIDIA Open Model License](https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license).",
+     "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+    },
+    {
+     "id": "lic_grant",
+     "quote": "NVIDIA hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, revocable (as stated in Section 2.1) license to publicly perform, publicly display, reproduce, use, create derivative works of, make, have made, sell, offer for sale, distribute (through multiple tiers of distribution) and import the Model.",
+     "source_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/license_nvidia_open_model_license.txt"
+    },
+    {
+     "id": "lic_ethics",
+     "quote": "Use of the Models under the Agreement must be consistent with NVIDIA’s Trustworthy AI terms",
+     "source_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/license_nvidia_open_model_license.txt"
+    }
+   ]
+  },
+  "C3_domain_secondary": {
+   "status": "PASS",
+   "basis": "video tokenizer (autoencoder) of a generative world model trained on general video",
+   "quote_ids": [
+    "dom_desc",
+    "tok_train"
+   ],
+   "quotes": [
+    {
+     "id": "dom_desc",
+     "quote": "Cosmos Tokenizer can serve as an effective and efficient building block in both diffusion-based and autoregressive models for image and video generation.",
+     "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md"
+    },
+    {
+     "id": "tok_train",
+     "quote": "We train our tokenizers directly on high-resolution images and long-duration videos without limiting the categories or aspect ratios.",
+     "source_url": "https://arxiv.org/html/2501.03575",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+    }
+   ]
+  },
+  "C4_documented_pretraining_data": {
+   "status": "FAIL",
+   "basis": "paper describes sources only generically ('proprietary video datasets and publicly available open-domain Internet videos') with category percentages; no training datasets or named sources listed",
+   "quote_ids": [
+    "data_sources",
+    "data_categories"
+   ],
+   "quotes": [
+    {
+     "id": "data_sources",
+     "quote": "3.1 Dataset We use both proprietary video datasets and publicly available open-domain Internet videos to train our models.",
+     "source_url": "https://arxiv.org/html/2501.03575",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+    },
+    {
+     "id": "data_categories",
+     "quote": "1. Driving (11%), 2. Hand motion and object manipulation (16%), 3. Human motion and activity (10%), 4. Spatial awareness and navigation (16%), 5. First person point-of-view (8%), 6. Nature dynamics (20%), 7. Dynamic camera movements (8%), 8. Synthetically rendered (4%), and 9. Others (7%).",
+     "source_url": "https://arxiv.org/html/2501.03575",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt"
+    }
+   ]
+  },
+  "eligible": "NO (fails C4 under the frozen wording; borderline: sources are characterised but not listed)"
+ },
+ "changes_vs_v1": [
+  "sources re-fetched into /home fm_sources/secondary (raw sha256 compared with v1 per quote); the NVIDIA licence page raw HTML differs from the v1 copy (site markup) but every v1 licence quote still verifies; live page still shows 'Version Release Date: October 24, 2025'",
+  "clarification (architecture.params wording): v1 said '~105M (card/paper runtime table, CV 4x8x8 variant)'. The paper's Table 9 attributes 105M to 'Cosmos-0.1-Tokenizer-CV4x8x8' (first-generation tokenizer, 49 frames), not to a Cosmos-Tokenize1 checkpoint; params of the audited CV8x8x8-720p are not documented. Recorded in the new params field; eligibility unaffected.",
+  "added structured fields with new quotes (HF listings of all three repos, latent shape 1+T/s_T, training frame counts, vocabulary)",
+  "no change to any eligibility status or Appendix300 answer"
+ ],
+ "quotes": [
+  {
+   "id": "k4_use",
+   "quote": "we first regenerate the video content using the NVIDIA Cosmos tokenizer ( Agarwal et al., 2025 ) and extract their internal representations.",
+   "source_file": "K4_arxiv_2607.06126v2_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/K4_arxiv_2607.06126v2_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2607.06126v2",
+   "final_url": "https://arxiv.org/html/2607.06126v2",
+   "raw_sha256": "316b9467f5adddfc8f80a623e8edd11b5d6cca50208eef8edfc25306cce13fa6",
+   "copy_sha256": "ea77e3361765b40d33f4a3ea7d0b2391b17ec876ab5c47a869fa0414771904c6",
+   "retrieved_utc": "2026-10-02T09:29:59+00:00",
+   "v1_source_sha256": "316b9467f5adddfc8f80a623e8edd11b5d6cca50208eef8edfc25306cce13fa6",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "lic_card",
+   "quote": "This model is released under the  [NVIDIA Open Model License](https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license).",
+   "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "final_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "raw_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "copy_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "retrieved_utc": "2026-10-02T09:29:56+00:00",
+   "v1_source_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "lic_commercial",
+   "quote": "* Models are commercially usable.",
+   "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "final_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "raw_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "copy_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "retrieved_utc": "2026-10-02T09:29:56+00:00",
+   "v1_source_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "lic_grant",
+   "quote": "NVIDIA hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, revocable (as stated in Section 2.1) license to publicly perform, publicly display, reproduce, use, create derivative works of, make, have made, sell, offer for sale, distribute (through multiple tiers of distribution) and import the Model.",
+   "source_file": "license_nvidia_open_model_license.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/license_nvidia_open_model_license.txt",
+   "source_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+   "final_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+   "raw_sha256": "a34fba82c33916aae14e46ef5d6d7e19352e2c09b61b31ef42cf58b3a030bceb",
+   "copy_sha256": "b89091bd4a9df6a8f3be99a188ab26fdc2d18712dda3d45084f9d7204382eeef",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00",
+   "v1_source_sha256": "1b386bb23d148c9dd2c2bb58fe3cbc78850bd730864c87edbc7afc73b0984418",
+   "raw_sha256_equals_v1": false
+  },
+  {
+   "id": "lic_ethics",
+   "quote": "Use of the Models under the Agreement must be consistent with NVIDIA’s Trustworthy AI terms",
+   "source_file": "license_nvidia_open_model_license.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/license_nvidia_open_model_license.txt",
+   "source_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+   "final_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+   "raw_sha256": "a34fba82c33916aae14e46ef5d6d7e19352e2c09b61b31ef42cf58b3a030bceb",
+   "copy_sha256": "b89091bd4a9df6a8f3be99a188ab26fdc2d18712dda3d45084f9d7204382eeef",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00",
+   "v1_source_sha256": "1b386bb23d148c9dd2c2bb58fe3cbc78850bd730864c87edbc7afc73b0984418",
+   "raw_sha256_equals_v1": false
+  },
+  {
+   "id": "lic_terminate",
+   "quote": "If you bypass, disable, reduce the efficacy of, or circumvent any technical limitation, safety guardrail or",
+   "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "final_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "raw_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "copy_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "retrieved_utc": "2026-10-02T09:29:56+00:00",
+   "v1_source_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_variant",
+   "quote": "[Cosmos-Tokenize1-CV8x8x8-720p](https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p) (8x temporal compression, 8x8 spatial compression, 720p and above, 121 frames context)",
+   "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "final_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "raw_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "copy_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "retrieved_utc": "2026-10-02T09:29:56+00:00",
+   "v1_source_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_input",
+   "quote": "**Resolution:** Minimum: 256px (shorter side). Maximum: Up to 4K",
+   "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "final_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "raw_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "copy_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "retrieved_utc": "2026-10-02T09:29:56+00:00",
+   "v1_source_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_output",
+   "quote": "Continuous-valued feature vectors with a dimensionality of 16",
+   "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "final_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "raw_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "copy_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "retrieved_utc": "2026-10-02T09:29:56+00:00",
+   "v1_source_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "arch_params",
+   "quote": "| Cosmos-Tokenizer-CV      | 720x1280   | 4×8×8            | 105M       | **34.8**  |",
+   "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "final_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "raw_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "copy_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "retrieved_utc": "2026-10-02T09:29:56+00:00",
+   "v1_source_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "data_sources",
+   "quote": "3.1 Dataset We use both proprietary video datasets and publicly available open-domain Internet videos to train our models.",
+   "source_file": "cosmos_arxiv_2501.03575_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2501.03575",
+   "final_url": "https://arxiv.org/html/2501.03575",
+   "raw_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+   "copy_sha256": "009010c33a87823a19b101e92addb0835c12a6787f18f35fba2f9e808b43d9e2",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00",
+   "v1_source_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "data_categories",
+   "quote": "1. Driving (11%), 2. Hand motion and object manipulation (16%), 3. Human motion and activity (10%), 4. Spatial awareness and navigation (16%), 5. First person point-of-view (8%), 6. Nature dynamics (20%), 7. Dynamic camera movements (8%), 8. Synthetically rendered (4%), and 9. Others (7%).",
+   "source_file": "cosmos_arxiv_2501.03575_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2501.03575",
+   "final_url": "https://arxiv.org/html/2501.03575",
+   "raw_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+   "copy_sha256": "009010c33a87823a19b101e92addb0835c12a6787f18f35fba2f9e808b43d9e2",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00",
+   "v1_source_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "data_hours",
+   "quote": "In total, we accumulate about 20M hours of raw videos with resolutions from 720p to 4k.",
+   "source_file": "cosmos_arxiv_2501.03575_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2501.03575",
+   "final_url": "https://arxiv.org/html/2501.03575",
+   "raw_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+   "copy_sha256": "009010c33a87823a19b101e92addb0835c12a6787f18f35fba2f9e808b43d9e2",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00",
+   "v1_source_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "tok_train",
+   "quote": "We train our tokenizers directly on high-resolution images and long-duration videos without limiting the categories or aspect ratios.",
+   "source_file": "cosmos_arxiv_2501.03575_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2501.03575",
+   "final_url": "https://arxiv.org/html/2501.03575",
+   "raw_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+   "copy_sha256": "009010c33a87823a19b101e92addb0835c12a6787f18f35fba2f9e808b43d9e2",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00",
+   "v1_source_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "tok_joint",
+   "quote": "4.2 Training Strategy We employ a joint training strategy by alternating mini-batches of images and videos at a preset frequency.",
+   "source_file": "cosmos_arxiv_2501.03575_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2501.03575",
+   "final_url": "https://arxiv.org/html/2501.03575",
+   "raw_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+   "copy_sha256": "009010c33a87823a19b101e92addb0835c12a6787f18f35fba2f9e808b43d9e2",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00",
+   "v1_source_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+   "raw_sha256_equals_v1": true
+  },
+  {
+   "id": "w_enc",
+   "quote": "\"rfilename\": \"encoder.jit\",",
+   "source_file": "cosmos_nvidia__Cosmos-Tokenize1-CV8x8x8-720p_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_nvidia__Cosmos-Tokenize1-CV8x8x8-720p_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/nvidia/Cosmos-Tokenize1-CV8x8x8-720p?blobs=true",
+   "final_url": "https://huggingface.co/api/models/nvidia/Cosmos-Tokenize1-CV8x8x8-720p?blobs=true",
+   "raw_sha256": "1a12ed2233c069869ab8719e5e7033a03fdb72ac533327f8c919a6844c58573a",
+   "copy_sha256": "50c91daf63c9282195de9b73b67fdc0ecfabbf9714c3159e10aa5d0136d847e8",
+   "retrieved_utc": "2026-10-02T09:29:55+00:00"
+  },
+  {
+   "id": "w_gated8",
+   "quote": "\"gated\": false,",
+   "source_file": "cosmos_nvidia__Cosmos-Tokenize1-CV8x8x8-720p_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_nvidia__Cosmos-Tokenize1-CV8x8x8-720p_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/nvidia/Cosmos-Tokenize1-CV8x8x8-720p?blobs=true",
+   "final_url": "https://huggingface.co/api/models/nvidia/Cosmos-Tokenize1-CV8x8x8-720p?blobs=true",
+   "raw_sha256": "1a12ed2233c069869ab8719e5e7033a03fdb72ac533327f8c919a6844c58573a",
+   "copy_sha256": "50c91daf63c9282195de9b73b67fdc0ecfabbf9714c3159e10aa5d0136d847e8",
+   "retrieved_utc": "2026-10-02T09:29:55+00:00"
+  },
+  {
+   "id": "w_gateddv",
+   "quote": "\"gated\": false,",
+   "source_file": "cosmos_nvidia__Cosmos-Tokenize1-DV8x16x16-720p_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_nvidia__Cosmos-Tokenize1-DV8x16x16-720p_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/nvidia/Cosmos-Tokenize1-DV8x16x16-720p?blobs=true",
+   "final_url": "https://huggingface.co/api/models/nvidia/Cosmos-Tokenize1-DV8x16x16-720p?blobs=true",
+   "raw_sha256": "612e2f98b2f5e62fe047aeec72edda28ca2dd9b86919f685d90be28222c13cc3",
+   "copy_sha256": "16ec3c3708c0b0b9f7e94ad440daa020548bd3ff9d6d07324503190ac8e5ae15",
+   "retrieved_utc": "2026-10-02T09:29:55+00:00"
+  },
+  {
+   "id": "w_gated4",
+   "quote": "\"gated\": false,",
+   "source_file": "cosmos_nvidia__Cosmos-Tokenize1-CV4x8x8-360p_hfapi.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_nvidia__Cosmos-Tokenize1-CV4x8x8-360p_hfapi.json",
+   "source_url": "https://huggingface.co/api/models/nvidia/Cosmos-Tokenize1-CV4x8x8-360p?blobs=true",
+   "final_url": "https://huggingface.co/api/models/nvidia/Cosmos-Tokenize1-CV4x8x8-360p?blobs=true",
+   "raw_sha256": "555d622170355b357aded0620a42fe721e365e998af5d4c7ca051db11ae11c19",
+   "copy_sha256": "106cc6745d6858c347612dcd565b1735a65c5bbddbd1649bf50c726f8ca9ec55",
+   "retrieved_utc": "2026-10-02T09:29:56+00:00"
+  },
+  {
+   "id": "lic_version_live",
+   "quote": "Version Release Date: October 24, 2025",
+   "source_file": "license_nvidia_open_model_license.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/license_nvidia_open_model_license.txt",
+   "source_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+   "final_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+   "raw_sha256": "a34fba82c33916aae14e46ef5d6d7e19352e2c09b61b31ef42cf58b3a030bceb",
+   "copy_sha256": "b89091bd4a9df6a8f3be99a188ab26fdc2d18712dda3d45084f9d7204382eeef",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00"
+  },
+  {
+   "id": "dom_desc",
+   "quote": "Cosmos Tokenizer can serve as an effective and efficient building block in both diffusion-based and autoregressive models for image and video generation.",
+   "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "final_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "raw_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "copy_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "retrieved_utc": "2026-10-02T09:29:56+00:00"
+  },
+  {
+   "id": "dom_type",
+   "quote": "Model Type: | Auto-Encoder",
+   "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "final_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "raw_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "copy_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "retrieved_utc": "2026-10-02T09:29:56+00:00"
+  },
+  {
+   "id": "in_len",
+   "quote": "**Video Length:** Up to 8 seconds for 1080p videos (bounded by A100 80G GPU memory; higher resolutions will have shorter supported durations)",
+   "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "final_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "raw_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "copy_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "retrieved_utc": "2026-10-02T09:29:56+00:00"
+  },
+  {
+   "id": "in_wavelet",
+   "quote": "The encoder starts with a 2-level [Haar wavelet](https://link.springer.com/book/10.1007/978-3-319-04295-4) transform layer, which down-samples inputs by a factor of 4 in both spatial and temporal dimensions.",
+   "source_file": "cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_Cosmos-Tokenize1-CV8x8x8-720p_README.md",
+   "source_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "final_url": "https://huggingface.co/nvidia/Cosmos-Tokenize1-CV8x8x8-720p/raw/main/README.md",
+   "raw_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "copy_sha256": "f626791ed996d37d3bb845089827026ed6654a8715704563f5ef2ef3896302b5",
+   "retrieved_utc": "2026-10-02T09:29:56+00:00"
+  },
+  {
+   "id": "in_train_frames",
+   "quote": "2. Cosmos-Tokenize1 : Trained using mini-batches sampling a larger number of 360p or 720p video frames (121 frames for CV and 49 frames for DV ).",
+   "source_file": "cosmos_arxiv_2501.03575_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2501.03575",
+   "final_url": "https://arxiv.org/html/2501.03575",
+   "raw_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+   "copy_sha256": "009010c33a87823a19b101e92addb0835c12a6787f18f35fba2f9e808b43d9e2",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00"
+  },
+  {
+   "id": "in_first_frame",
+   "quote": "The first temporal token represents the first input frame, enabling joint image ( T = 0 T=0 ) and video ( T > 0 T>0 ) tokenization in a shared latent space.",
+   "source_file": "cosmos_arxiv_2501.03575_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2501.03575",
+   "final_url": "https://arxiv.org/html/2501.03575",
+   "raw_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+   "copy_sha256": "009010c33a87823a19b101e92addb0835c12a6787f18f35fba2f9e808b43d9e2",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00"
+  },
+  {
+   "id": "in_latent16",
+   "quote": "The latent dimension for the continuous tokenizers is 16 16 , whereas for the discrete tokenizers, it is 6 6 , which represents the number of the FSQ levels",
+   "source_file": "cosmos_arxiv_2501.03575_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2501.03575",
+   "final_url": "https://arxiv.org/html/2501.03575",
+   "raw_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+   "copy_sha256": "009010c33a87823a19b101e92addb0835c12a6787f18f35fba2f9e808b43d9e2",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00"
+  },
+  {
+   "id": "in_vocab",
+   "quote": "This configuration corresponds to a vocabulary size of 64,000 64{,}000 .",
+   "source_file": "cosmos_arxiv_2501.03575_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2501.03575",
+   "final_url": "https://arxiv.org/html/2501.03575",
+   "raw_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+   "copy_sha256": "009010c33a87823a19b101e92addb0835c12a6787f18f35fba2f9e808b43d9e2",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00"
+  },
+  {
+   "id": "in_params_paper",
+   "quote": "Cosmos-0.1-Tokenizer-CV4 × \\times 8 × \\times 8 Continuous-Video 720 × 1280 720\\times 1280 49 105M 34.8",
+   "source_file": "cosmos_arxiv_2501.03575_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2501.03575",
+   "final_url": "https://arxiv.org/html/2501.03575",
+   "raw_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+   "copy_sha256": "009010c33a87823a19b101e92addb0835c12a6787f18f35fba2f9e808b43d9e2",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00"
+  },
+  {
+   "id": "in_runtime_def",
+   "quote": "Table 9: Runtime performance comparison of tokenizers. Time is reported per image or per video frame.",
+   "source_file": "cosmos_arxiv_2501.03575_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2501.03575",
+   "final_url": "https://arxiv.org/html/2501.03575",
+   "raw_sha256": "8bfc20a2c758ed200d06dbff6015aa88ab14b831b685ac044162d364d99a2d60",
+   "copy_sha256": "009010c33a87823a19b101e92addb0835c12a6787f18f35fba2f9e808b43d9e2",
+   "retrieved_utc": "2026-10-02T09:29:58+00:00"
+  }
+ ],
+ "all_quotes_verified": true,
+ "record_written_utc": "2026-10-02T09:32:01+00:00"
+}

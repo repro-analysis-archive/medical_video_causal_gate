@@ -1,0 +1,979 @@
+{
+ "id": "13_vjepa",
+ "name": "V-JEPA (Meta FAIR; video joint-embedding predictive architecture; ViT-L/16, ViT-H/16, ViT-H/16-384 pretrained on VideoMix2M)",
+ "status_in_survey": "added in revision 2 (2026-10-02)",
+ "version": "facebookresearch/jepa release (2024-02): pretrained checkpoints vitl16.pth.tar (ViT-L/16, 224), vith16.pth.tar (ViT-H/16, 224), vith16-384.pth.tar (ViT-H/16, 384) on dl.fbaipublicfiles.com; no official HF repo found for V-JEPA (v1) (HF search author=facebook 'jepa' lists only 3d-jepa and jepa-wms)",
+ "paper": {
+  "title": "Revisiting Feature Prediction for Learning Visual Representations from Video",
+  "year": 2024,
+  "arxiv": "2404.08471 (HTML, v1 rendering)",
+  "venue": "TMLR 2024"
+ },
+ "weights_location": {
+  "urls": [
+   "https://dl.fbaipublicfiles.com/jepa/vitl16/vitl16.pth.tar",
+   "https://dl.fbaipublicfiles.com/jepa/vith16/vith16.pth.tar",
+   "https://dl.fbaipublicfiles.com/jepa/vith16-384/vith16-384.pth.tar"
+  ],
+  "files_listed": {
+   "vitl16.pth.tar": 5143105394,
+   "vith16.pth.tar": 10393043714,
+   "vith16-384.pth.tar": 10428847322
+  },
+  "gated": false,
+  "private": false,
+  "verified_how": "official GitHub README model-zoo links + HTTP HEAD (status 200, Content-Length; no body transferred) saved as vjepa_head_vitl16.json, vjepa_head_vith16.json, vjepa_head_vith16-384.json",
+  "quote_ids": [
+   "w_readme_l",
+   "w_head_l",
+   "w_head_h",
+   "w_head_h384"
+  ],
+  "quotes": [
+   {
+    "id": "w_readme_l",
+    "quote": "<td><a href=\"https://dl.fbaipublicfiles.com/jepa/vitl16/vitl16.pth.tar\">checkpoint</a></td>",
+    "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md"
+   },
+   {
+    "id": "w_head_l",
+    "quote": "\"Content-Length\": \"5143105394\",",
+    "source_url": "https://dl.fbaipublicfiles.com/jepa/vitl16/vitl16.pth.tar",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_head_vitl16.json"
+   },
+   {
+    "id": "w_head_h",
+    "quote": "\"Content-Length\": \"10393043714\",",
+    "source_url": "https://dl.fbaipublicfiles.com/jepa/vith16/vith16.pth.tar",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_head_vith16.json"
+   },
+   {
+    "id": "w_head_h384",
+    "quote": "\"Content-Length\": \"10428847322\",",
+    "source_url": "https://dl.fbaipublicfiles.com/jepa/vith16-384/vith16-384.pth.tar",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_head_vith16-384.json"
+   }
+  ]
+ },
+ "licence": {
+  "id": "CC-BY-NC-4.0 (repository LICENSE: Attribution-NonCommercial 4.0 International)",
+  "url": "https://github.com/facebookresearch/jepa/blob/main/LICENSE",
+  "commercial": "not permitted",
+  "non_commercial_only": true,
+  "restrictions": "non-commercial use only; attribution",
+  "gating": "none",
+  "quote_ids": [
+   "lic_readme",
+   "lic_text"
+  ],
+  "quotes": [
+   {
+    "id": "lic_readme",
+    "quote": "See the [LICENSE](./LICENSE) file for details about the license under which this code is made available.",
+    "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md"
+   },
+   {
+    "id": "lic_text",
+    "quote": "Attribution-NonCommercial 4.0 International",
+    "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/LICENSE",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_LICENSE.txt"
+   }
+  ]
+ },
+ "domain": {
+  "value": "self-supervised video encoder trained by FEATURE PREDICTION in latent space (x-encoder + predictor regress EMA target-encoder features of masked spatio-temporal regions with an L1 loss); no pixel decoder; described by its authors as non-generative. Trained on general video (VideoMix2M).",
+  "authors_wording_generative_vs_not": [
+   "Meta blog: 'V-JEPA is a non-generative model that learns by predicting missing or masked parts of a video in an abstract representation space.'",
+   "Meta blog: 'Unlike generative approaches that try to fill in every missing pixel, V-JEPA has the flexibility to discard unpredictable information'",
+   "GitHub README: 'As opposed to generative methods that have a pixel decoder, V-JEPA has a predictor that makes predictions in latent space.'",
+   "GitHub README / paper: pretraining 'does not utilize ... pixel-level reconstruction'; paper abstract: 'trained solely using a feature prediction objective, without the use of pretrained image encoders, text, negative examples, reconstruction, or other sources of supervision.'",
+   "Note: the README also reports a separately trained conditional diffusion model used only to visualise the frozen predictor's feature-space predictions as pixels; the V-JEPA encoder/predictor themselves stay frozen and are not generative."
+  ],
+  "quote_ids": [
+   "dom_blog_nongen",
+   "dom_blog_unlike",
+   "dom_readme_pixdec",
+   "dom_readme_noreco",
+   "dom_abs",
+   "dom_diffusion",
+   "dom_l1"
+  ],
+  "quotes": [
+   {
+    "id": "dom_blog_nongen",
+    "quote": "V-JEPA is a non-generative model that learns by predicting missing or masked parts of a video in an abstract representation space.",
+    "source_url": "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_meta_blog.txt"
+   },
+   {
+    "id": "dom_blog_unlike",
+    "quote": "Unlike generative approaches that try to fill in every missing pixel, V-JEPA has the flexibility to discard unpredictable information, which leads to improved training and sample efficiency by a factor between 1.5x and 6x.",
+    "source_url": "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_meta_blog.txt"
+   },
+   {
+    "id": "dom_readme_pixdec",
+    "quote": "As opposed to generative methods that have a pixel decoder, V-JEPA has a predictor that makes predictions in latent space.",
+    "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md"
+   },
+   {
+    "id": "dom_readme_noreco",
+    "quote": "V-JEPA pretraining is based solely on an unsupervised feature prediction objective, and does not utilize pretrained image encoders, text, negative examples, human annotations, or pixel-level reconstruction.",
+    "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md"
+   },
+   {
+    "id": "dom_abs",
+    "quote": "a collection of vision models trained solely using a feature prediction objective, without the use of pretrained image encoders, text, negative examples, reconstruction, or other sources of supervision.",
+    "source_url": "https://arxiv.org/html/2404.08471",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt"
+   },
+   {
+    "id": "dom_diffusion",
+    "quote": "We train a conditional diffusion model to decode the V-JEPA feature-space predictions to interpretable pixels; the pretrained V-JEPA encoder and predictor networks are kept frozen in this process.",
+    "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md"
+   },
+   {
+    "id": "dom_l1",
+    "quote": "The outputs of the predictor are then regressed to the prediction targets using an L 1 L_{1} loss.",
+    "source_url": "https://arxiv.org/html/2404.08471",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt"
+   }
+  ]
+ },
+ "architecture": {
+  "type": "ViT x-encoder on 2x16x16 tubelets + narrow ViT predictor (12 blocks, 384-dim); EMA y-encoder supplies targets; multi-block masking",
+  "representation": "frozen encoder output tokens (1024-dim ViT-L, 1280-dim ViT-H), pooled downstream by a learned attentive probe"
+ },
+ "pretraining_data": {
+  "summary": "VideoMix2M (~2M videos) = HowTo100M (1.22M narrated instructional YouTube videos, WikiHow task categories incl. 'Health') + Kinetics-400/600/700 (K710) + Something-Something-v2, minus validation overlap. Named public datasets.",
+  "form": "dataset list (named; HowTo100M is an open-ended YouTube-search-derived set)"
+ },
+ "pretraining_data_quote": {
+  "quote_ids": [
+   "data_mix",
+   "data_readme",
+   "data_cfg_ht",
+   "ht_youtube",
+   "ht_health",
+   "data_kin_abs",
+   "data_ssv2_abs"
+  ],
+  "quotes": [
+   {
+    "id": "data_mix",
+    "quote": "We combine several public datasets to construct an unsupervised video pretraining dataset, which we refer to as VideoMix2M. Specifically, we combine the videos from HowTo100M (HT) ( Miech et al., 2019 ) , Kinetics-400/600/700 (K710) ( Kay et al., 2017 ) , and Something-Something-v2 (SSv2) ( Goyal et al., 2017 ) , and remove any overlap with the validation sets of Kinetics-400/600/700 and Something-Something-v2, resulting in approximately 2 million videos.",
+    "source_url": "https://arxiv.org/html/2404.08471",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt"
+   },
+   {
+    "id": "data_readme",
+    "quote": "V-JEPA models are trained by passively watching video pixels from the VideoMix2M dataset",
+    "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md"
+   },
+   {
+    "id": "data_cfg_ht",
+    "quote": "- /your_path_to_howto100m_csv_file_index.csv",
+    "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/configs/pretrain/vitl16.yaml",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_pretrain_vitl16.yaml.txt"
+   },
+   {
+    "id": "ht_youtube",
+    "quote": "HowTo100M features 1.22 million videos from YouTube, with activities from domains such as cooking, hand crafting, personal care, gardening, etc.",
+    "source_url": "https://arxiv.org/pdf/1906.03327v2",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt"
+   },
+   {
+    "id": "ht_health",
+    "quote": "Health 172 1.7M Emotional Health 63 853k Conditions and Treatments 35 271k Injury and Accidents 22 147k Medication and Equipment 20 138k",
+    "source_url": "https://arxiv.org/pdf/1906.03327v2",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt"
+   },
+   {
+    "id": "data_kin_abs",
+    "quote": "The dataset contains 400 human action classes, with at least 400 video clips for each action. Each clip lasts around 10s and is taken from a different YouTube video.",
+    "source_url": "https://arxiv.org/abs/1705.06950",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/kinetics_arxiv_1705.06950_abs.txt"
+   },
+   {
+    "id": "data_ssv2_abs",
+    "quote": "We also describe the challenges in crowd-sourcing this data at scale.",
+    "source_url": "https://arxiv.org/abs/1706.04261",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/ssv2_arxiv_1706.04261_abs.txt"
+   }
+  ]
+ },
+ "medical_video_in_data": {
+  "answer": "YES (indirect, health-category instructional video via HowTo100M; no surgical/endoscopic content documented)",
+  "basis": "VideoMix2M includes HowTo100M, whose paper lists a WikiHow 'Health' category (172 tasks, 1.7M clips; subcategories include 'Conditions and Treatments', 'Injury and Accidents', 'Medication and Equipment', 'Medical Information'). The V-JEPA paper/README/blog themselves contain no medical/surgical term (term search below).",
+  "term_search": {
+   "pattern": "medical|surgical|surgery|endoscop|laparoscop|clinical|health|hospital",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_meta_blog.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt": [
+     "nimals 552 Holidays and Traditions 411 Personal Care and Style 181 Sports and Fitness 205 Health 172 Education and Communications 239 Arts and Entertainment 138 Computers and Electronics",
+     "d Slugs 3 13k Animal Welfare Activism 1 10k Animal Rescue 2 9k Amphibian 1 7k General Pet Health 1 3k Crafts 3135 20670k Games 200 2058k Woodworking 183 1446k Toys 171 1254k Tricks and P",
+     " Home Audio 9 68k Phones and Gadgets 9 96k Hardware 11 95k Laptops 4 43k Networking 1 12k Health 172 1.7M Emotional Health 63 853k Conditions and Treatments 35 271k Injury and Accidents ",
+     "nd Gadgets 9 96k Hardware 11 95k Laptops 4 43k Networking 1 12k Health 172 1.7M Emotional Health 63 853k Conditions and Treatments 35 271k Injury and Accidents 22 147k Medication and Equ",
+     "atments 35 271k Injury and Accidents 22 147k Medication and Equipment 20 138k Alternative Health 10 75k Recreational Drug Use 9 69k Diet & Lifestyle 3 44k Health Hygiene 3 32k Medical In",
+     "ment 20 138k Alternative Health 10 75k Recreational Drug Use 9 69k Diet & Lifestyle 3 44k Health Hygiene 3 32k Medical Information 3 31k Women’s Health 2 25k Reproductive Health 1 23k Me"
+    ],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/kinetics_arxiv_1705.06950_abs.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/ssv2_arxiv_1706.04261_abs.txt": []
+   }
+  },
+  "quote_ids": [
+   "ht_health",
+   "ht_medinfo"
+  ],
+  "quotes": [
+   {
+    "id": "ht_health",
+    "quote": "Health 172 1.7M Emotional Health 63 853k Conditions and Treatments 35 271k Injury and Accidents 22 147k Medication and Equipment 20 138k",
+    "source_url": "https://arxiv.org/pdf/1906.03327v2",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt"
+   },
+   {
+    "id": "ht_medinfo",
+    "quote": "Medical Information 3 31k",
+    "source_url": "https://arxiv.org/pdf/1906.03327v2",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt"
+   }
+  ]
+ },
+ "appendix300_possible": {
+  "answer": "UNKNOWN",
+  "basis_class": "named_open_web_sources",
+  "basis": "HowTo100M is a named but open-ended YouTube-search-derived set (1.22M videos, incl. health/medical-information instructional videos), so the documentation does not allow the Appendix300 source recordings to be excluded. Timing: release 2024-02, before the OPARA issue 2026-04-29.",
+  "quote_ids": [
+   "data_mix",
+   "ht_youtube",
+   "ht_health"
+  ],
+  "quotes": [
+   {
+    "id": "data_mix",
+    "quote": "We combine several public datasets to construct an unsupervised video pretraining dataset, which we refer to as VideoMix2M. Specifically, we combine the videos from HowTo100M (HT) ( Miech et al., 2019 ) , Kinetics-400/600/700 (K710) ( Kay et al., 2017 ) , and Something-Something-v2 (SSv2) ( Goyal et al., 2017 ) , and remove any overlap with the validation sets of Kinetics-400/600/700 and Something-Something-v2, resulting in approximately 2 million videos.",
+    "source_url": "https://arxiv.org/html/2404.08471",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt"
+   },
+   {
+    "id": "ht_youtube",
+    "quote": "HowTo100M features 1.22 million videos from YouTube, with activities from domains such as cooking, hand crafting, personal care, gardening, etc.",
+    "source_url": "https://arxiv.org/pdf/1906.03327v2",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt"
+   },
+   {
+    "id": "ht_health",
+    "quote": "Health 172 1.7M Emotional Health 63 853k Conditions and Treatments 35 271k Injury and Accidents 22 147k Medication and Equipment 20 138k",
+    "source_url": "https://arxiv.org/pdf/1906.03327v2",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt"
+   }
+  ]
+ },
+ "appendix300_check": {
+  "answer": "UNKNOWN",
+  "quote_or_statement": "the documented data list does not mention DS203/Appendix300",
+  "basis_class": "named_open_web_sources",
+  "basis": "HowTo100M component is open-ended YouTube content; see appendix300_possible",
+  "term_search": {
+   "pattern": "appendix ?300|DS203|OPARA|appendectom|appendic",
+   "hits": {
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_meta_blog.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/kinetics_arxiv_1705.06950_abs.txt": [],
+    "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/ssv2_arxiv_1706.04261_abs.txt": []
+   }
+  },
+  "quote_ids": [
+   "data_mix",
+   "ht_youtube"
+  ],
+  "quotes": [
+   {
+    "id": "data_mix",
+    "quote": "We combine several public datasets to construct an unsupervised video pretraining dataset, which we refer to as VideoMix2M. Specifically, we combine the videos from HowTo100M (HT) ( Miech et al., 2019 ) , Kinetics-400/600/700 (K710) ( Kay et al., 2017 ) , and Something-Something-v2 (SSv2) ( Goyal et al., 2017 ) , and remove any overlap with the validation sets of Kinetics-400/600/700 and Something-Something-v2, resulting in approximately 2 million videos.",
+    "source_url": "https://arxiv.org/html/2404.08471",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt"
+   },
+   {
+    "id": "ht_youtube",
+    "quote": "HowTo100M features 1.22 million videos from YouTube, with activities from domains such as cooking, hand crafting, personal care, gardening, etc.",
+    "source_url": "https://arxiv.org/pdf/1906.03327v2",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt"
+   }
+  ]
+ },
+ "input": {
+  "frame_size": {
+   "value": "224x224 (ViT-L/16, ViT-H/16); 384x384 (ViT-H/16-384)",
+   "quote_ids": [
+    "in_res",
+    "in_cfg_crop"
+   ],
+   "quotes": [
+    {
+     "id": "in_res",
+     "quote": "The ViT-L/16 and ViT-H/16 process the video at a spatial resolution of 224, while the ViT-H/16 384 uses an input resolution of 384",
+     "source_url": "https://arxiv.org/html/2404.08471",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt"
+    },
+    {
+     "id": "in_cfg_crop",
+     "quote": "crop_size: 224",
+     "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/configs/pretrain/vitl16.yaml",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_pretrain_vitl16.yaml.txt"
+    }
+   ]
+  },
+  "frame_rate_or_sampling": {
+   "value": "16 frames with temporal stride 4 (64 raw frames, ~2 s at 30 fps)",
+   "quote_ids": [
+    "in_stride",
+    "in_cfg_sr"
+   ],
+   "quotes": [
+    {
+     "id": "in_stride",
+     "quote": "during pretraining, we always randomly sample a clip of 16 frames from each input video with a temporal stride of 4 between sampled frames. An input video clip therefore covers 64 frames in total, or roughly 2 seconds of a given video running at 30 frames per second.",
+     "source_url": "https://arxiv.org/html/2404.08471",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt"
+    },
+    {
+     "id": "in_cfg_sr",
+     "quote": "sampling_rate: 4",
+     "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/configs/pretrain/vitl16.yaml",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_pretrain_vitl16.yaml.txt"
+    }
+   ]
+  },
+  "clip_length_frames": {
+   "value": "16 frames",
+   "quote_ids": [
+    "in_stride",
+    "in_cfg_nf"
+   ],
+   "quotes": [
+    {
+     "id": "in_stride",
+     "quote": "during pretraining, we always randomly sample a clip of 16 frames from each input video with a temporal stride of 4 between sampled frames. An input video clip therefore covers 64 frames in total, or roughly 2 seconds of a given video running at 30 frames per second.",
+     "source_url": "https://arxiv.org/html/2404.08471",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt"
+    },
+    {
+     "id": "in_cfg_nf",
+     "quote": "num_frames: 16",
+     "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/configs/pretrain/vitl16.yaml",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_pretrain_vitl16.yaml.txt"
+    }
+   ]
+  },
+  "temporal_compression": {
+   "value": "tubelet 2 frames (16 -> 8 token slices)",
+   "quote_ids": [
+    "in_patch",
+    "in_cfg_tub"
+   ],
+   "quotes": [
+    {
+     "id": "in_patch",
+     "quote": "V-JEPA flattens the video clip into a sequence of non-overlapping spatio-temporal patches of size 16 × 16 × 2 16\\times 16\\times 2",
+     "source_url": "https://arxiv.org/html/2404.08471",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt"
+    },
+    {
+     "id": "in_cfg_tub",
+     "quote": "tubelet_size: 2",
+     "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/configs/pretrain/vitl16.yaml",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_pretrain_vitl16.yaml.txt"
+    }
+   ]
+  },
+  "spatial_compression": {
+   "value": "16x16 patches (224 -> 14x14; 384 -> 24x24)",
+   "quote_ids": [
+    "in_patch",
+    "in_cfg_ps"
+   ],
+   "quotes": [
+    {
+     "id": "in_patch",
+     "quote": "V-JEPA flattens the video clip into a sequence of non-overlapping spatio-temporal patches of size 16 × 16 × 2 16\\times 16\\times 2",
+     "source_url": "https://arxiv.org/html/2404.08471",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt"
+    },
+    {
+     "id": "in_cfg_ps",
+     "quote": "patch_size: 16",
+     "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/configs/pretrain/vitl16.yaml",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_pretrain_vitl16.yaml.txt"
+    }
+   ]
+  }
+ },
+ "embedding_dim": {
+  "value": "ViT-L/16: 1024 x (8 x 14 x 14) = 1024 x 1568 tokens per 16-frame 224 clip; ViT-H/16: 1280 x 1568; ViT-H/16-384: 1280 x (8 x 24 x 24) = 1280 x 4608. No fixed pooled vector: the authors pool with a learned attentive probe (pooled dim = embed dim).",
+  "derivation": "embed_dim from src/models/vision_transformer.py (vit_large 1024, vit_huge 1280); token grid from 16 frames / tubelet 2 and 224/16 or 384/16",
+  "quote_ids": [
+   "in_vitl",
+   "in_vith",
+   "in_patch",
+   "dom_probe"
+  ],
+  "quotes": [
+   {
+    "id": "in_vitl",
+    "quote": "def vit_large(patch_size=16, **kwargs): model = VisionTransformer( patch_size=patch_size, embed_dim=1024, depth=24,",
+    "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/src/models/vision_transformer.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_vision_transformer.py.txt"
+   },
+   {
+    "id": "in_vith",
+    "quote": "def vit_huge(patch_size=16, **kwargs): model = VisionTransformer( patch_size=patch_size, embed_dim=1280, depth=32,",
+    "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/src/models/vision_transformer.py",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_vision_transformer.py.txt"
+   },
+   {
+    "id": "in_patch",
+    "quote": "V-JEPA flattens the video clip into a sequence of non-overlapping spatio-temporal patches of size 16 × 16 × 2 16\\times 16\\times 2",
+    "source_url": "https://arxiv.org/html/2404.08471",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt"
+   },
+   {
+    "id": "dom_probe",
+    "quote": "e.g., using a frozen backbone and only a light-weight task-specific attentive probe.",
+    "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md"
+   }
+  ]
+ },
+ "params": {
+  "value": "paper Table 6 'Params.': ViT-L/16 200M (as printed), ViT-H/16 630M, ViT-H/16-384 630M (encoder); note a 24-layer 1024-dim ViT-L has ~300M parameters by the standard 12*d^2*depth count (inferred), so the printed 200M looks inconsistent; checkpoint .pth.tar sizes (5.1 / 10.4 GB) include target encoder, predictor and optimizer state (inferred)",
+  "scope": "encoder",
+  "quote_ids": [
+   "par_hdr",
+   "par_row"
+  ],
+  "quotes": [
+   {
+    "id": "par_hdr",
+    "quote": "Method Arch. Params. Data",
+    "source_url": "https://arxiv.org/html/2404.08471",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt"
+   },
+   {
+    "id": "par_row",
+    "quote": "V-JEPA ViT-L/16 200M VideoMix2M 80.8 69.5 25.6 74.8 60.3 67.8 ViT-H/16 630M 82.0 71.4 25.8 75.9 61.7 67.9 ViT-H/16 384 630M",
+    "source_url": "https://arxiv.org/html/2404.08471",
+    "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt"
+   }
+  ]
+ },
+ "flops_per_input_if_documented": null,
+ "flops_note": "no FLOPs/MACs per input stated in the saved paper, README or blog (searched FLOP)",
+ "eligibility": {
+  "C1_open_weights": {
+   "status": "PASS",
+   "basis": "official README links public checkpoints on dl.fbaipublicfiles.com; HEAD 200 with Content-Length, no login or form",
+   "quote_ids": [
+    "w_readme_l",
+    "w_head_l"
+   ],
+   "quotes": [
+    {
+     "id": "w_readme_l",
+     "quote": "<td><a href=\"https://dl.fbaipublicfiles.com/jepa/vitl16/vitl16.pth.tar\">checkpoint</a></td>",
+     "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md"
+    },
+    {
+     "id": "w_head_l",
+     "quote": "\"Content-Length\": \"5143105394\",",
+     "source_url": "https://dl.fbaipublicfiles.com/jepa/vitl16/vitl16.pth.tar",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_head_vitl16.json"
+    }
+   ]
+  },
+  "C2_licence_research_use": {
+   "status": "PASS",
+   "basis": "CC-BY-NC-4.0 permits non-commercial research",
+   "quote_ids": [
+    "lic_text"
+   ],
+   "quotes": [
+    {
+     "id": "lic_text",
+     "quote": "Attribution-NonCommercial 4.0 International",
+     "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/LICENSE",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_LICENSE.txt"
+    }
+   ]
+  },
+  "C3_domain_secondary": {
+   "status": "FAIL",
+   "basis": "latent-space feature predictor without a pixel decoder, described by its authors as 'a non-generative model' (blog) and 'as opposed to generative methods that have a pixel decoder' (README) -> FAIL under the v1 convention (V-JEPA family)",
+   "quote_ids": [
+    "dom_blog_nongen",
+    "dom_readme_pixdec",
+    "dom_readme_noreco"
+   ],
+   "quotes": [
+    {
+     "id": "dom_blog_nongen",
+     "quote": "V-JEPA is a non-generative model that learns by predicting missing or masked parts of a video in an abstract representation space.",
+     "source_url": "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_meta_blog.txt"
+    },
+    {
+     "id": "dom_readme_pixdec",
+     "quote": "As opposed to generative methods that have a pixel decoder, V-JEPA has a predictor that makes predictions in latent space.",
+     "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md"
+    },
+    {
+     "id": "dom_readme_noreco",
+     "quote": "V-JEPA pretraining is based solely on an unsupervised feature prediction objective, and does not utilize pretrained image encoders, text, negative examples, human annotations, or pixel-level reconstruction.",
+     "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md"
+    }
+   ]
+  },
+  "C4_documented_pretraining_data": {
+   "status": "PASS",
+   "basis": "paper names VideoMix2M components (HowTo100M, K400/600/700, SSv2)",
+   "quote_ids": [
+    "data_mix"
+   ],
+   "quotes": [
+    {
+     "id": "data_mix",
+     "quote": "We combine several public datasets to construct an unsupervised video pretraining dataset, which we refer to as VideoMix2M. Specifically, we combine the videos from HowTo100M (HT) ( Miech et al., 2019 ) , Kinetics-400/600/700 (K710) ( Kay et al., 2017 ) , and Something-Something-v2 (SSv2) ( Goyal et al., 2017 ) , and remove any overlap with the validation sets of Kinetics-400/600/700 and Something-Something-v2, resulting in approximately 2 million videos.",
+     "source_url": "https://arxiv.org/html/2404.08471",
+     "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt"
+    }
+   ]
+  },
+  "eligible": "NO (fails C3: non-generative feature-prediction model per the authors' own wording)"
+ },
+ "quotes": [
+  {
+   "id": "w_readme_l",
+   "quote": "<td><a href=\"https://dl.fbaipublicfiles.com/jepa/vitl16/vitl16.pth.tar\">checkpoint</a></td>",
+   "source_file": "vjepa_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+   "raw_sha256": "99a43a94be906ebba79a570d993a38213cbc62082eeec9c914ec5aa829074da5",
+   "copy_sha256": "99a43a94be906ebba79a570d993a38213cbc62082eeec9c914ec5aa829074da5",
+   "retrieved_utc": "2026-10-02T09:36:00+00:00"
+  },
+  {
+   "id": "w_head_l",
+   "quote": "\"Content-Length\": \"5143105394\",",
+   "source_file": "vjepa_head_vitl16.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_head_vitl16.json",
+   "source_url": "https://dl.fbaipublicfiles.com/jepa/vitl16/vitl16.pth.tar",
+   "final_url": "https://dl.fbaipublicfiles.com/jepa/vitl16/vitl16.pth.tar",
+   "raw_sha256": "4c2ddb8aacf1988b8d489a6b25011d6eb1dc74b59e2488d064e8fbc8444aeb47",
+   "copy_sha256": "4c2ddb8aacf1988b8d489a6b25011d6eb1dc74b59e2488d064e8fbc8444aeb47",
+   "retrieved_utc": "2026-10-02T09:36:29+00:00"
+  },
+  {
+   "id": "w_head_h",
+   "quote": "\"Content-Length\": \"10393043714\",",
+   "source_file": "vjepa_head_vith16.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_head_vith16.json",
+   "source_url": "https://dl.fbaipublicfiles.com/jepa/vith16/vith16.pth.tar",
+   "final_url": "https://dl.fbaipublicfiles.com/jepa/vith16/vith16.pth.tar",
+   "raw_sha256": "1c60bf16396884b88e8d01551b4049e3ec796c07d64da6eec07c073ed087fdb5",
+   "copy_sha256": "1c60bf16396884b88e8d01551b4049e3ec796c07d64da6eec07c073ed087fdb5",
+   "retrieved_utc": "2026-10-02T09:36:29+00:00"
+  },
+  {
+   "id": "w_head_h384",
+   "quote": "\"Content-Length\": \"10428847322\",",
+   "source_file": "vjepa_head_vith16-384.json",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_head_vith16-384.json",
+   "source_url": "https://dl.fbaipublicfiles.com/jepa/vith16-384/vith16-384.pth.tar",
+   "final_url": "https://dl.fbaipublicfiles.com/jepa/vith16-384/vith16-384.pth.tar",
+   "raw_sha256": "2dd702bac7ee6b4d0c889f1dc8b26f7fc88a0550b5c08bceff2e2bbc3a5fbc19",
+   "copy_sha256": "2dd702bac7ee6b4d0c889f1dc8b26f7fc88a0550b5c08bceff2e2bbc3a5fbc19",
+   "retrieved_utc": "2026-10-02T09:36:29+00:00"
+  },
+  {
+   "id": "lic_readme",
+   "quote": "See the [LICENSE](./LICENSE) file for details about the license under which this code is made available.",
+   "source_file": "vjepa_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+   "raw_sha256": "99a43a94be906ebba79a570d993a38213cbc62082eeec9c914ec5aa829074da5",
+   "copy_sha256": "99a43a94be906ebba79a570d993a38213cbc62082eeec9c914ec5aa829074da5",
+   "retrieved_utc": "2026-10-02T09:36:00+00:00"
+  },
+  {
+   "id": "lic_text",
+   "quote": "Attribution-NonCommercial 4.0 International",
+   "source_file": "vjepa_github_LICENSE.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_LICENSE.txt",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/LICENSE",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/LICENSE",
+   "raw_sha256": "1b0556efdc7e72b17b706c041002c6cdc1e0aa257f5e5676ea0f887b2f0854ec",
+   "copy_sha256": "1b0556efdc7e72b17b706c041002c6cdc1e0aa257f5e5676ea0f887b2f0854ec",
+   "retrieved_utc": "2026-10-02T09:36:00+00:00"
+  },
+  {
+   "id": "dom_blog_nongen",
+   "quote": "V-JEPA is a non-generative model that learns by predicting missing or masked parts of a video in an abstract representation space.",
+   "source_file": "vjepa_meta_blog.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_meta_blog.txt",
+   "source_url": "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/",
+   "final_url": "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/",
+   "raw_sha256": "3ba065886f1ed63edace4f43d17b62b4ad37e634160142e40f63c8bcbbc5cfb8",
+   "copy_sha256": "4d676fff03810b078491758f5e61eb1bbcbfe92b7feaf2fe0797265c942ca839",
+   "retrieved_utc": "2026-10-02T09:36:03+00:00"
+  },
+  {
+   "id": "dom_blog_unlike",
+   "quote": "Unlike generative approaches that try to fill in every missing pixel, V-JEPA has the flexibility to discard unpredictable information, which leads to improved training and sample efficiency by a factor between 1.5x and 6x.",
+   "source_file": "vjepa_meta_blog.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_meta_blog.txt",
+   "source_url": "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/",
+   "final_url": "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/",
+   "raw_sha256": "3ba065886f1ed63edace4f43d17b62b4ad37e634160142e40f63c8bcbbc5cfb8",
+   "copy_sha256": "4d676fff03810b078491758f5e61eb1bbcbfe92b7feaf2fe0797265c942ca839",
+   "retrieved_utc": "2026-10-02T09:36:03+00:00"
+  },
+  {
+   "id": "dom_readme_pixdec",
+   "quote": "As opposed to generative methods that have a pixel decoder, V-JEPA has a predictor that makes predictions in latent space.",
+   "source_file": "vjepa_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+   "raw_sha256": "99a43a94be906ebba79a570d993a38213cbc62082eeec9c914ec5aa829074da5",
+   "copy_sha256": "99a43a94be906ebba79a570d993a38213cbc62082eeec9c914ec5aa829074da5",
+   "retrieved_utc": "2026-10-02T09:36:00+00:00"
+  },
+  {
+   "id": "dom_readme_noreco",
+   "quote": "V-JEPA pretraining is based solely on an unsupervised feature prediction objective, and does not utilize pretrained image encoders, text, negative examples, human annotations, or pixel-level reconstruction.",
+   "source_file": "vjepa_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+   "raw_sha256": "99a43a94be906ebba79a570d993a38213cbc62082eeec9c914ec5aa829074da5",
+   "copy_sha256": "99a43a94be906ebba79a570d993a38213cbc62082eeec9c914ec5aa829074da5",
+   "retrieved_utc": "2026-10-02T09:36:00+00:00"
+  },
+  {
+   "id": "dom_abs",
+   "quote": "a collection of vision models trained solely using a feature prediction objective, without the use of pretrained image encoders, text, negative examples, reconstruction, or other sources of supervision.",
+   "source_file": "vjepa_arxiv_2404.08471_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2404.08471",
+   "final_url": "https://arxiv.org/html/2404.08471",
+   "raw_sha256": "8b3191eaed02c645704ea6f104baaac20c674c6837e18e9537ce6ce88db9edb5",
+   "copy_sha256": "bb09f3b692125314e1ace0be70e9df5cb2b63d4ea1b9ad3b7561b5f1bbd4005e",
+   "retrieved_utc": "2026-10-02T09:36:01+00:00"
+  },
+  {
+   "id": "dom_diffusion",
+   "quote": "We train a conditional diffusion model to decode the V-JEPA feature-space predictions to interpretable pixels; the pretrained V-JEPA encoder and predictor networks are kept frozen in this process.",
+   "source_file": "vjepa_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+   "raw_sha256": "99a43a94be906ebba79a570d993a38213cbc62082eeec9c914ec5aa829074da5",
+   "copy_sha256": "99a43a94be906ebba79a570d993a38213cbc62082eeec9c914ec5aa829074da5",
+   "retrieved_utc": "2026-10-02T09:36:00+00:00"
+  },
+  {
+   "id": "dom_l1",
+   "quote": "The outputs of the predictor are then regressed to the prediction targets using an L 1 L_{1} loss.",
+   "source_file": "vjepa_arxiv_2404.08471_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2404.08471",
+   "final_url": "https://arxiv.org/html/2404.08471",
+   "raw_sha256": "8b3191eaed02c645704ea6f104baaac20c674c6837e18e9537ce6ce88db9edb5",
+   "copy_sha256": "bb09f3b692125314e1ace0be70e9df5cb2b63d4ea1b9ad3b7561b5f1bbd4005e",
+   "retrieved_utc": "2026-10-02T09:36:01+00:00"
+  },
+  {
+   "id": "dom_probe",
+   "quote": "e.g., using a frozen backbone and only a light-weight task-specific attentive probe.",
+   "source_file": "vjepa_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+   "raw_sha256": "99a43a94be906ebba79a570d993a38213cbc62082eeec9c914ec5aa829074da5",
+   "copy_sha256": "99a43a94be906ebba79a570d993a38213cbc62082eeec9c914ec5aa829074da5",
+   "retrieved_utc": "2026-10-02T09:36:00+00:00"
+  },
+  {
+   "id": "data_mix",
+   "quote": "We combine several public datasets to construct an unsupervised video pretraining dataset, which we refer to as VideoMix2M. Specifically, we combine the videos from HowTo100M (HT) ( Miech et al., 2019 ) , Kinetics-400/600/700 (K710) ( Kay et al., 2017 ) , and Something-Something-v2 (SSv2) ( Goyal et al., 2017 ) , and remove any overlap with the validation sets of Kinetics-400/600/700 and Something-Something-v2, resulting in approximately 2 million videos.",
+   "source_file": "vjepa_arxiv_2404.08471_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2404.08471",
+   "final_url": "https://arxiv.org/html/2404.08471",
+   "raw_sha256": "8b3191eaed02c645704ea6f104baaac20c674c6837e18e9537ce6ce88db9edb5",
+   "copy_sha256": "bb09f3b692125314e1ace0be70e9df5cb2b63d4ea1b9ad3b7561b5f1bbd4005e",
+   "retrieved_utc": "2026-10-02T09:36:01+00:00"
+  },
+  {
+   "id": "data_readme",
+   "quote": "V-JEPA models are trained by passively watching video pixels from the VideoMix2M dataset",
+   "source_file": "vjepa_github_README.md",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_README.md",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
+   "raw_sha256": "99a43a94be906ebba79a570d993a38213cbc62082eeec9c914ec5aa829074da5",
+   "copy_sha256": "99a43a94be906ebba79a570d993a38213cbc62082eeec9c914ec5aa829074da5",
+   "retrieved_utc": "2026-10-02T09:36:00+00:00"
+  },
+  {
+   "id": "data_cfg_ht",
+   "quote": "- /your_path_to_howto100m_csv_file_index.csv",
+   "source_file": "vjepa_github_pretrain_vitl16.yaml.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_pretrain_vitl16.yaml.txt",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/configs/pretrain/vitl16.yaml",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/configs/pretrain/vitl16.yaml",
+   "raw_sha256": "9efa267a0c355e6bca7201b229350b2d25574597765cfbb3335da51824cefb65",
+   "copy_sha256": "9efa267a0c355e6bca7201b229350b2d25574597765cfbb3335da51824cefb65",
+   "retrieved_utc": "2026-10-02T09:37:16+00:00"
+  },
+  {
+   "id": "ht_youtube",
+   "quote": "HowTo100M features 1.22 million videos from YouTube, with activities from domains such as cooking, hand crafting, personal care, gardening, etc.",
+   "source_file": "howto100m_arxiv_1906.03327v2.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt",
+   "source_url": "https://arxiv.org/pdf/1906.03327v2",
+   "final_url": "https://arxiv.org/pdf/1906.03327v2",
+   "raw_sha256": "f55dbcb6598acecdedd0178243457eed6daf14626744e9bc50b0622cdbf58894",
+   "copy_sha256": "42b4b6318cb2c87d2fdd18562e3d20f837b0e8c21159dfe1edfae58406a460ab",
+   "retrieved_utc": "2026-10-02T09:36:51+00:00"
+  },
+  {
+   "id": "ht_health",
+   "quote": "Health 172 1.7M Emotional Health 63 853k Conditions and Treatments 35 271k Injury and Accidents 22 147k Medication and Equipment 20 138k",
+   "source_file": "howto100m_arxiv_1906.03327v2.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt",
+   "source_url": "https://arxiv.org/pdf/1906.03327v2",
+   "final_url": "https://arxiv.org/pdf/1906.03327v2",
+   "raw_sha256": "f55dbcb6598acecdedd0178243457eed6daf14626744e9bc50b0622cdbf58894",
+   "copy_sha256": "42b4b6318cb2c87d2fdd18562e3d20f837b0e8c21159dfe1edfae58406a460ab",
+   "retrieved_utc": "2026-10-02T09:36:51+00:00"
+  },
+  {
+   "id": "ht_medinfo",
+   "quote": "Medical Information 3 31k",
+   "source_file": "howto100m_arxiv_1906.03327v2.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/howto100m_arxiv_1906.03327v2.txt",
+   "source_url": "https://arxiv.org/pdf/1906.03327v2",
+   "final_url": "https://arxiv.org/pdf/1906.03327v2",
+   "raw_sha256": "f55dbcb6598acecdedd0178243457eed6daf14626744e9bc50b0622cdbf58894",
+   "copy_sha256": "42b4b6318cb2c87d2fdd18562e3d20f837b0e8c21159dfe1edfae58406a460ab",
+   "retrieved_utc": "2026-10-02T09:36:51+00:00"
+  },
+  {
+   "id": "data_kin_abs",
+   "quote": "The dataset contains 400 human action classes, with at least 400 video clips for each action. Each clip lasts around 10s and is taken from a different YouTube video.",
+   "source_file": "kinetics_arxiv_1705.06950_abs.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/kinetics_arxiv_1705.06950_abs.txt",
+   "source_url": "https://arxiv.org/abs/1705.06950",
+   "final_url": "https://arxiv.org/abs/1705.06950",
+   "raw_sha256": "0b943134dccf902fb11e82a0cc4a983172aa3ca4fca0e72d3e78443ce7181f9d",
+   "copy_sha256": "71aa0733c2a828537a2cc7e05f2cfb1a35ab61373a96fe3809a349e987e7c97e",
+   "retrieved_utc": "2026-10-02T09:31:10+00:00"
+  },
+  {
+   "id": "data_ssv2_abs",
+   "quote": "We also describe the challenges in crowd-sourcing this data at scale.",
+   "source_file": "ssv2_arxiv_1706.04261_abs.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/ssv2_arxiv_1706.04261_abs.txt",
+   "source_url": "https://arxiv.org/abs/1706.04261",
+   "final_url": "https://arxiv.org/abs/1706.04261",
+   "raw_sha256": "3f481642d882faabf8836a8601cc9fc72712e200f3bb6c076ea4b1ae67220c82",
+   "copy_sha256": "bbfe19c029195a62bf7a5e95b193fca441b9abddc143c3dee7e1fae012ba3aeb",
+   "retrieved_utc": "2026-10-02T09:31:10+00:00"
+  },
+  {
+   "id": "in_res",
+   "quote": "The ViT-L/16 and ViT-H/16 process the video at a spatial resolution of 224, while the ViT-H/16 384 uses an input resolution of 384",
+   "source_file": "vjepa_arxiv_2404.08471_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2404.08471",
+   "final_url": "https://arxiv.org/html/2404.08471",
+   "raw_sha256": "8b3191eaed02c645704ea6f104baaac20c674c6837e18e9537ce6ce88db9edb5",
+   "copy_sha256": "bb09f3b692125314e1ace0be70e9df5cb2b63d4ea1b9ad3b7561b5f1bbd4005e",
+   "retrieved_utc": "2026-10-02T09:36:01+00:00"
+  },
+  {
+   "id": "in_stride",
+   "quote": "during pretraining, we always randomly sample a clip of 16 frames from each input video with a temporal stride of 4 between sampled frames. An input video clip therefore covers 64 frames in total, or roughly 2 seconds of a given video running at 30 frames per second.",
+   "source_file": "vjepa_arxiv_2404.08471_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2404.08471",
+   "final_url": "https://arxiv.org/html/2404.08471",
+   "raw_sha256": "8b3191eaed02c645704ea6f104baaac20c674c6837e18e9537ce6ce88db9edb5",
+   "copy_sha256": "bb09f3b692125314e1ace0be70e9df5cb2b63d4ea1b9ad3b7561b5f1bbd4005e",
+   "retrieved_utc": "2026-10-02T09:36:01+00:00"
+  },
+  {
+   "id": "in_patch",
+   "quote": "V-JEPA flattens the video clip into a sequence of non-overlapping spatio-temporal patches of size 16 × 16 × 2 16\\times 16\\times 2",
+   "source_file": "vjepa_arxiv_2404.08471_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2404.08471",
+   "final_url": "https://arxiv.org/html/2404.08471",
+   "raw_sha256": "8b3191eaed02c645704ea6f104baaac20c674c6837e18e9537ce6ce88db9edb5",
+   "copy_sha256": "bb09f3b692125314e1ace0be70e9df5cb2b63d4ea1b9ad3b7561b5f1bbd4005e",
+   "retrieved_utc": "2026-10-02T09:36:01+00:00"
+  },
+  {
+   "id": "in_cfg_nf",
+   "quote": "num_frames: 16",
+   "source_file": "vjepa_github_pretrain_vitl16.yaml.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_pretrain_vitl16.yaml.txt",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/configs/pretrain/vitl16.yaml",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/configs/pretrain/vitl16.yaml",
+   "raw_sha256": "9efa267a0c355e6bca7201b229350b2d25574597765cfbb3335da51824cefb65",
+   "copy_sha256": "9efa267a0c355e6bca7201b229350b2d25574597765cfbb3335da51824cefb65",
+   "retrieved_utc": "2026-10-02T09:37:16+00:00"
+  },
+  {
+   "id": "in_cfg_tub",
+   "quote": "tubelet_size: 2",
+   "source_file": "vjepa_github_pretrain_vitl16.yaml.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_pretrain_vitl16.yaml.txt",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/configs/pretrain/vitl16.yaml",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/configs/pretrain/vitl16.yaml",
+   "raw_sha256": "9efa267a0c355e6bca7201b229350b2d25574597765cfbb3335da51824cefb65",
+   "copy_sha256": "9efa267a0c355e6bca7201b229350b2d25574597765cfbb3335da51824cefb65",
+   "retrieved_utc": "2026-10-02T09:37:16+00:00"
+  },
+  {
+   "id": "in_cfg_sr",
+   "quote": "sampling_rate: 4",
+   "source_file": "vjepa_github_pretrain_vitl16.yaml.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_pretrain_vitl16.yaml.txt",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/configs/pretrain/vitl16.yaml",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/configs/pretrain/vitl16.yaml",
+   "raw_sha256": "9efa267a0c355e6bca7201b229350b2d25574597765cfbb3335da51824cefb65",
+   "copy_sha256": "9efa267a0c355e6bca7201b229350b2d25574597765cfbb3335da51824cefb65",
+   "retrieved_utc": "2026-10-02T09:37:16+00:00"
+  },
+  {
+   "id": "in_cfg_crop",
+   "quote": "crop_size: 224",
+   "source_file": "vjepa_github_pretrain_vitl16.yaml.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_pretrain_vitl16.yaml.txt",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/configs/pretrain/vitl16.yaml",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/configs/pretrain/vitl16.yaml",
+   "raw_sha256": "9efa267a0c355e6bca7201b229350b2d25574597765cfbb3335da51824cefb65",
+   "copy_sha256": "9efa267a0c355e6bca7201b229350b2d25574597765cfbb3335da51824cefb65",
+   "retrieved_utc": "2026-10-02T09:37:16+00:00"
+  },
+  {
+   "id": "in_cfg_ps",
+   "quote": "patch_size: 16",
+   "source_file": "vjepa_github_pretrain_vitl16.yaml.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_pretrain_vitl16.yaml.txt",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/configs/pretrain/vitl16.yaml",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/configs/pretrain/vitl16.yaml",
+   "raw_sha256": "9efa267a0c355e6bca7201b229350b2d25574597765cfbb3335da51824cefb65",
+   "copy_sha256": "9efa267a0c355e6bca7201b229350b2d25574597765cfbb3335da51824cefb65",
+   "retrieved_utc": "2026-10-02T09:37:16+00:00"
+  },
+  {
+   "id": "in_vitl",
+   "quote": "def vit_large(patch_size=16, **kwargs): model = VisionTransformer( patch_size=patch_size, embed_dim=1024, depth=24,",
+   "source_file": "vjepa_github_vision_transformer.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_vision_transformer.py.txt",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/src/models/vision_transformer.py",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/src/models/vision_transformer.py",
+   "raw_sha256": "3d2dd861d535434c4202c1b488436433fc545d558899a48c392c240b4afe8abf",
+   "copy_sha256": "3d2dd861d535434c4202c1b488436433fc545d558899a48c392c240b4afe8abf",
+   "retrieved_utc": "2026-10-02T09:37:16+00:00"
+  },
+  {
+   "id": "in_vith",
+   "quote": "def vit_huge(patch_size=16, **kwargs): model = VisionTransformer( patch_size=patch_size, embed_dim=1280, depth=32,",
+   "source_file": "vjepa_github_vision_transformer.py.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_github_vision_transformer.py.txt",
+   "source_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/src/models/vision_transformer.py",
+   "final_url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/src/models/vision_transformer.py",
+   "raw_sha256": "3d2dd861d535434c4202c1b488436433fc545d558899a48c392c240b4afe8abf",
+   "copy_sha256": "3d2dd861d535434c4202c1b488436433fc545d558899a48c392c240b4afe8abf",
+   "retrieved_utc": "2026-10-02T09:37:16+00:00"
+  },
+  {
+   "id": "par_hdr",
+   "quote": "Method Arch. Params. Data",
+   "source_file": "vjepa_arxiv_2404.08471_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2404.08471",
+   "final_url": "https://arxiv.org/html/2404.08471",
+   "raw_sha256": "8b3191eaed02c645704ea6f104baaac20c674c6837e18e9537ce6ce88db9edb5",
+   "copy_sha256": "bb09f3b692125314e1ace0be70e9df5cb2b63d4ea1b9ad3b7561b5f1bbd4005e",
+   "retrieved_utc": "2026-10-02T09:36:01+00:00"
+  },
+  {
+   "id": "par_row",
+   "quote": "V-JEPA ViT-L/16 200M VideoMix2M 80.8 69.5 25.6 74.8 60.3 67.8 ViT-H/16 630M 82.0 71.4 25.8 75.9 61.7 67.9 ViT-H/16 384 630M",
+   "source_file": "vjepa_arxiv_2404.08471_fulltext.txt",
+   "verified_whitespace_normalized": true,
+   "copy_path": "/home/user/projects/medical_video_causal_gate/data_audit/lead/fm_sources/secondary/vjepa_arxiv_2404.08471_fulltext.txt",
+   "source_url": "https://arxiv.org/html/2404.08471",
+   "final_url": "https://arxiv.org/html/2404.08471",
+   "raw_sha256": "8b3191eaed02c645704ea6f104baaac20c674c6837e18e9537ce6ce88db9edb5",
+   "copy_sha256": "bb09f3b692125314e1ace0be70e9df5cb2b63d4ea1b9ad3b7561b5f1bbd4005e",
+   "retrieved_utc": "2026-10-02T09:36:01+00:00"
+  }
+ ],
+ "all_quotes_verified": true,
+ "record_written_utc": "2026-10-02T09:38:30+00:00"
+}
