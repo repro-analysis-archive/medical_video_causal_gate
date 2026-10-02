@@ -1,0 +1,2714 @@
+[
+ {
+  "uid": "D0908",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-ECHO-Ext-LVVOLUMES-A4C-ROI",
+  "reason": "Echocardiography (ultrasound) subset; not colonoscopy/surgical."
+ },
+ {
+  "uid": "D0909",
+  "category": "DATASET-OTHER",
+  "dataset_name": "VitalDB Arrhythmia Database",
+  "reason": "Intraoperative ECG arrhythmia dataset; no surgical video."
+ },
+ {
+  "uid": "D0910",
+  "category": "DATASET-C-COL",
+  "dataset_name": "RT-GAN colonoscopy temporal dataset",
+  "reason": "Releases temporal colonoscopy video data (fold segmentation, simulator video) with RT-GAN."
+ },
+ {
+  "uid": "D0911",
+  "category": "DATASET-C-COL",
+  "dataset_name": "FoldIt Public Dataset",
+  "reason": "Optical colonoscopy frames (from OC videos) with haustral fold annotations; image-vs-video doubt."
+ },
+ {
+  "uid": "D0912",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical trial on video education for colonoscopy anxiety."
+ },
+ {
+  "uid": "D0913",
+  "category": "DATASET-C-COL",
+  "dataset_name": "Colonoscopy anonymized data, University Hospital of Bern",
+  "reason": "Hosts anonymized colonoscopy video, Bern 2020-2021."
+ },
+ {
+  "uid": "D0914",
+  "category": "DATASET-C-COL",
+  "dataset_name": "XDCycleGAN VC Dataset",
+  "reason": "Optical colonoscopy frames from OC video sequences plus VC images; doubt rule."
+ },
+ {
+  "uid": "D0915",
+  "category": "DATASET-C-COL",
+  "dataset_name": "POCACO",
+  "reason": "54 colonoscopy clips with polyp bounding-box annotations."
+ },
+ {
+  "uid": "D0916",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Method paper using CVC-ClinicDB images."
+ },
+ {
+  "uid": "D0917",
+  "category": "DATASET-C-COL",
+  "dataset_name": "XDCycleGAN Depth Dataset",
+  "reason": "Optical colonoscopy frames from OC video sequences plus depth images; doubt rule."
+ },
+ {
+  "uid": "D0918",
+  "category": "DATASET-OTHER",
+  "dataset_name": "EndoScene",
+  "reason": "Colonoscopy still-image segmentation benchmark; static images only."
+ },
+ {
+  "uid": "D0919",
+  "category": "DATASET-C-COL",
+  "dataset_name": "CLTS-GAN augmented polyp dataset",
+  "reason": "Augmented optical colonoscopy video-frame polyp data; image-vs-video doubt."
+ },
+ {
+  "uid": "D0920",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "XDCycleGAN method paper; dataset released in separate records."
+ },
+ {
+  "uid": "D0921",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Method paper on colonoscopy video frame restoration."
+ },
+ {
+  "uid": "D0922",
+  "category": "DATASET-OTHER",
+  "dataset_name": "DowPK",
+  "reason": "841 static endoscopy/colonoscopy images; no video."
+ },
+ {
+  "uid": "D0923",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Nursing review on colonoscopy."
+ },
+ {
+  "uid": "D0924",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Supplementary videos for a pig pharmacology paper."
+ },
+ {
+  "uid": "D0925",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical study of colonoscopy withdrawal time."
+ },
+ {
+  "uid": "D0926",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical colorectal cancer screening study."
+ },
+ {
+  "uid": "D0927",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Questionnaire validation study."
+ },
+ {
+  "uid": "D0928",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Qualitative interview study."
+ },
+ {
+  "uid": "D0929",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PhagoStat",
+  "reason": "Time-lapse microscopy dataset; not medical procedure video."
+ },
+ {
+  "uid": "D0930",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Knowledge-Type-Sensitive Video Analytics Dataset",
+  "reason": "Educational video-interaction dataset; non-medical."
+ },
+ {
+  "uid": "D0931",
+  "category": "DATASET-C-COL",
+  "dataset_name": "FoldIt",
+  "reason": "Paper record also releasing colonoscopy test video frames and models."
+ },
+ {
+  "uid": "D0932",
+  "category": "DATASET-OTHER",
+  "dataset_name": "AVTrack360",
+  "reason": "Head-rotation dataset for 360-degree videos; non-medical."
+ },
+ {
+  "uid": "D0933",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Software repository release."
+ },
+ {
+  "uid": "D0934",
+  "category": "DATASET-OTHER",
+  "dataset_name": "All Countries' Dataset",
+  "reason": "Undescribed dataset record; nothing indicates colonoscopy/surgical video."
+ },
+ {
+  "uid": "D0935",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Dataset of code metrics",
+  "reason": "Software code-metrics dataset; non-medical."
+ },
+ {
+  "uid": "D0936",
+  "category": "DATASET-OTHER",
+  "dataset_name": "COLSCREEN",
+  "reason": "16S fecal microbiota sequencing data."
+ },
+ {
+  "uid": "D0937",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Survey paper on video game market."
+ },
+ {
+  "uid": "D0938",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical abstract on post-colonoscopy neoplasia."
+ },
+ {
+  "uid": "D0939",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Self-described dataset with no description; no colonoscopy/surgical video evident."
+ },
+ {
+  "uid": "D0940",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Self-described dataset with no description; no colonoscopy/surgical video evident."
+ },
+ {
+  "uid": "D0941",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Dataset of code metrics - Extension",
+  "reason": "Software code-metrics dataset; non-medical."
+ },
+ {
+  "uid": "D0942",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "16S and WGS sequencing data from colonoscopy biopsies; no video."
+ },
+ {
+  "uid": "D0943",
+  "category": "DATASET-OTHER",
+  "dataset_name": "FIVR-200K",
+  "reason": "Non-medical video retrieval dataset."
+ },
+ {
+  "uid": "D0944",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Method paper on colonoscopy camera tracking."
+ },
+ {
+  "uid": "D0945",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical study of colonoscopy findings."
+ },
+ {
+  "uid": "D0946",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical study on ulcerative colitis."
+ },
+ {
+  "uid": "D0947",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Review of CRC screening guidelines."
+ },
+ {
+  "uid": "D0948",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Media studies article."
+ },
+ {
+  "uid": "D0949",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Taxonomic species description."
+ },
+ {
+  "uid": "D0950",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical commentary on colonoscopy perforation."
+ },
+ {
+  "uid": "D0951",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical abstract on colonoscopy in elderly."
+ },
+ {
+  "uid": "D0952",
+  "category": "DATASET-C-COL",
+  "dataset_name": "RealSynCol",
+  "reason": "Synthetic colonoscopy frame sequences with depth, flow and camera trajectories; doubt rule."
+ },
+ {
+  "uid": "D0953",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical study of endoscopy findings in anemia."
+ },
+ {
+  "uid": "D0954",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Automotive (JetRacer) video dataset; non-medical."
+ },
+ {
+  "uid": "D0955",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Music video emotion dataset; non-medical."
+ },
+ {
+  "uid": "D0956",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Randomized trial of screening uptake."
+ },
+ {
+  "uid": "D0957",
+  "category": "DATASET-OTHER",
+  "dataset_name": "VDVC survey results",
+  "reason": "Survey raw data; non-medical."
+ },
+ {
+  "uid": "D0958",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Epidemiological cohort comparison paper."
+ },
+ {
+  "uid": "D0959",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Questionnaire development study."
+ },
+ {
+  "uid": "D0960",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-CXR-Ext-MIMIC-CXR-DB",
+  "reason": "Chest radiograph linkage dataset; static images."
+ },
+ {
+  "uid": "D0961",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CardioWave-Portable",
+  "reason": "ECG/PPG dataset; not video."
+ },
+ {
+  "uid": "D0962",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Heart rate/accelerometry sleep dataset; not video."
+ },
+ {
+  "uid": "D0963",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-EntityCoding",
+  "reason": "Clinical NER text dataset; not video."
+ },
+ {
+  "uid": "D0964",
+  "category": "DATASET-OTHER",
+  "dataset_name": "JSMF ACCESS",
+  "reason": "Intraoperative EEG dataset; no surgical video."
+ },
+ {
+  "uid": "D0965",
+  "category": "DATASET-OTHER",
+  "dataset_name": "InReDD-PAN924-Ext-BoneLoss-769",
+  "reason": "Dental panoramic radiograph dataset; static images."
+ },
+ {
+  "uid": "D0966",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "PhysioNet hearing-loss data project; not video."
+ },
+ {
+  "uid": "D0967",
+  "category": "DATASET-OTHER",
+  "dataset_name": "EHR-ReasonCon",
+  "reason": "EHR text/table dataset; not video."
+ },
+ {
+  "uid": "D0968",
+  "category": "DATASET-OTHER",
+  "dataset_name": "VTaC",
+  "reason": "ICU VT alarm waveform dataset; not video."
+ },
+ {
+  "uid": "D0969",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-MIMIC-Patient",
+  "reason": "Structured patient records; not video."
+ },
+ {
+  "uid": "D0970",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CheXmask-U",
+  "reason": "Chest X-ray segmentation masks; static images."
+ },
+ {
+  "uid": "D0971",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-SBDH",
+  "reason": "Annotated clinical text dataset; not video."
+ },
+ {
+  "uid": "D0972",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-VeriFact-BHC",
+  "reason": "Clinical text propositions dataset; not video."
+ },
+ {
+  "uid": "D0973",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-Ext-CXR-QBA",
+  "reason": "Chest X-ray VQA dataset; static images."
+ },
+ {
+  "uid": "D0974",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Echo",
+  "reason": "Echocardiogram (ultrasound) dataset; not colonoscopy/surgical."
+ },
+ {
+  "uid": "D0975",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SCRIPT CarpeDiem",
+  "reason": "ICU pneumonia clinical dataset; not video."
+ },
+ {
+  "uid": "D0976",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-BR",
+  "reason": "Hospital/ICU clinical dataset; not video."
+ },
+ {
+  "uid": "D0977",
+  "category": "DATASET-OTHER",
+  "dataset_name": "BIDMC Metabolomic MASLD Cohort",
+  "reason": "Metabolomic cohort dataset; not video."
+ },
+ {
+  "uid": "D0978",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "NHANES step-count dataset; not video."
+ },
+ {
+  "uid": "D0979",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Kingston ICU AF",
+  "reason": "ICU atrial fibrillation dataset; not video."
+ },
+ {
+  "uid": "D0980",
+  "category": "DATASET-OTHER",
+  "dataset_name": "BRSET",
+  "reason": "Fundus image dataset; static images, not endoscopy video."
+ },
+ {
+  "uid": "D0981",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ARGO",
+  "reason": "Ventricular tachycardia electrogram dataset; not video."
+ },
+ {
+  "uid": "D0982",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Insulin4RL",
+  "reason": "ICU insulin infusion dataset; not video."
+ },
+ {
+  "uid": "D0983",
+  "category": "DATASET-OTHER",
+  "dataset_name": "INSPIRE",
+  "reason": "Perioperative clinical/vital-sign dataset; no surgical video."
+ },
+ {
+  "uid": "D0984",
+  "category": "DATASET-OTHER",
+  "dataset_name": "DREAMT",
+  "reason": "Wearable sleep-staging dataset; not video."
+ },
+ {
+  "uid": "D0985",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Bridge2AI-Voice",
+  "reason": "Voice recording dataset linked to health data; not video."
+ },
+ {
+  "uid": "D0986",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Bridge2AI-Voice Pediatric",
+  "reason": "Voice recording dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0987",
+  "category": "DATASET-OTHER",
+  "dataset_name": "EchoNext",
+  "reason": "ECG dataset with echo labels; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0988",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Human gait kinematics/EEG/EMG dataset; not surgical."
+ },
+ {
+  "uid": "D0989",
+  "category": "DATASET-OTHER",
+  "dataset_name": "KI EndoLIST",
+  "reason": "Endometriosis symptom-tracking dataset; not video."
+ },
+ {
+  "uid": "D0990",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Title describes an ECG artifact-removal method/software; no dataset evident."
+ },
+ {
+  "uid": "D0991",
+  "category": "DATASET-OTHER",
+  "dataset_name": "GRABMyoFlow",
+  "reason": "EMG dataset extension; not video."
+ },
+ {
+  "uid": "D0992",
+  "category": "DATASET-OTHER",
+  "dataset_name": "BIG IDEAs Lab Glycemic Variability",
+  "reason": "Wearable glycemic dataset; not video."
+ },
+ {
+  "uid": "D0993",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Embeddings derived from fundus image datasets; not video."
+ },
+ {
+  "uid": "D0994",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-CXR-Ext-ILS",
+  "reason": "Chest X-ray masks and QA pairs; static images."
+ },
+ {
+  "uid": "D0995",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Software utility for data ingestion, not a dataset."
+ },
+ {
+  "uid": "D0996",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "ICU clinical time-series datasets; not video."
+ },
+ {
+  "uid": "D0997",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-CLIF",
+  "reason": "ICU data in CLIF format; not video."
+ },
+ {
+  "uid": "D0998",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-PE",
+  "reason": "Radiology report labels; not video."
+ },
+ {
+  "uid": "D0999",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-MedicalBench",
+  "reason": "Clinical text benchmark; not video."
+ },
+ {
+  "uid": "D1000",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ECHOVIEW",
+  "reason": "Echocardiography view annotations; ultrasound, not colonoscopy/surgical."
+ },
+ {
+  "uid": "D1001",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-PPG",
+  "reason": "PPG benchmark dataset; not video."
+ },
+ {
+  "uid": "D1002",
+  "category": "DATASET-OTHER",
+  "dataset_name": "HYGD",
+  "reason": "Fundus image dataset; static images."
+ },
+ {
+  "uid": "D1003",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-CA",
+  "reason": "PPG cardiac-arrest dataset; not video."
+ },
+ {
+  "uid": "D1004",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Mouse behavioral dataset; not colonoscopy/surgical video."
+ },
+ {
+  "uid": "D1005",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Respiratory/oximetry waveform dataset; not video."
+ },
+ {
+  "uid": "D1006",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-Notes",
+  "reason": "Clinical notes dataset; not video."
+ },
+ {
+  "uid": "D1007",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Neurophysiological stress dataset; not video."
+ },
+ {
+  "uid": "D1008",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-ECHO-Ext-LVVOLUMES-A4C-ROI",
+  "reason": "Echocardiography (ultrasound) subset; not colonoscopy/surgical."
+ },
+ {
+  "uid": "D1009",
+  "category": "DATASET-OTHER",
+  "dataset_name": "VitalDB Arrhythmia Database",
+  "reason": "Intraoperative ECG arrhythmia dataset; no surgical video."
+ },
+ {
+  "uid": "D1010",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Taxonomic species account."
+ },
+ {
+  "uid": "D1011",
+  "category": "DATASET-C-COL",
+  "dataset_name": "FoldIt Public Dataset",
+  "reason": "Optical colonoscopy frames (from OC videos) with haustral fold annotations; image-vs-video doubt."
+ },
+ {
+  "uid": "D1012",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Nursing review on colonoscopy."
+ },
+ {
+  "uid": "D1013",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical study of colonoscopy withdrawal time."
+ },
+ {
+  "uid": "D1014",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical colorectal cancer screening study."
+ },
+ {
+  "uid": "D1015",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Questionnaire validation study."
+ },
+ {
+  "uid": "D1016",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical trial on video education for colonoscopy anxiety."
+ },
+ {
+  "uid": "D1017",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Qualitative interview study."
+ },
+ {
+  "uid": "D1018",
+  "category": "DATASET-C-COL",
+  "dataset_name": "FoldIt",
+  "reason": "Paper record also releasing colonoscopy test video frames and models."
+ },
+ {
+  "uid": "D1019",
+  "category": "DATASET-C-COL",
+  "dataset_name": "RT-GAN colonoscopy temporal dataset",
+  "reason": "Releases temporal colonoscopy video data (fold segmentation, simulator video) with RT-GAN."
+ },
+ {
+  "uid": "D1020",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Method paper using CVC-ClinicDB images."
+ },
+ {
+  "uid": "D1021",
+  "category": "DATASET-OTHER",
+  "dataset_name": "COLSCREEN",
+  "reason": "16S fecal microbiota sequencing data."
+ },
+ {
+  "uid": "D1022",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical abstract on post-colonoscopy neoplasia."
+ },
+ {
+  "uid": "D1023",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "16S and WGS sequencing data from colonoscopy biopsies; no video."
+ },
+ {
+  "uid": "D1024",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical study of colonoscopy findings."
+ },
+ {
+  "uid": "D1025",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical study on ulcerative colitis."
+ },
+ {
+  "uid": "D1026",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Review of CRC screening guidelines."
+ },
+ {
+  "uid": "D1027",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical commentary on colonoscopy perforation."
+ },
+ {
+  "uid": "D1028",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical abstract on colonoscopy in elderly."
+ },
+ {
+  "uid": "D1029",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical study of endoscopy findings in anemia."
+ },
+ {
+  "uid": "D1030",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Randomized trial of screening uptake."
+ },
+ {
+  "uid": "D1031",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Epidemiological cohort comparison paper."
+ },
+ {
+  "uid": "D1032",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Questionnaire development study."
+ },
+ {
+  "uid": "D1033",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical study of perforation risk."
+ },
+ {
+  "uid": "D1034",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Market research report, not a research dataset."
+ },
+ {
+  "uid": "D1035",
+  "category": "DATASET-C-COL",
+  "dataset_name": "Colonoscopy anonymized data, University Hospital of Bern",
+  "reason": "Hosts anonymized colonoscopy video, Bern 2020-2021."
+ },
+ {
+  "uid": "D1036",
+  "category": "DATASET-OTHER",
+  "dataset_name": "EndoScene",
+  "reason": "Colonoscopy still-image segmentation benchmark; static images only."
+ },
+ {
+  "uid": "D1037",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Software/model of a colonoscopy robot design."
+ },
+ {
+  "uid": "D1038",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Narrative review on colonoscopy."
+ },
+ {
+  "uid": "D1039",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Review on simethicone."
+ },
+ {
+  "uid": "D1040",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Article on endoscopy simulator teaching."
+ },
+ {
+  "uid": "D1041",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Case report/review."
+ },
+ {
+  "uid": "D1042",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Narrative review on colorectal cancer."
+ },
+ {
+  "uid": "D1043",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical anesthesia study."
+ },
+ {
+  "uid": "D1044",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical study of polyp treatment."
+ },
+ {
+  "uid": "D1045",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Retrospective clinical review."
+ },
+ {
+  "uid": "D1046",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Method paper on colonoscopy frame analysis."
+ },
+ {
+  "uid": "D1047",
+  "category": "DATASET-OTHER",
+  "dataset_name": "DowPK",
+  "reason": "841 static endoscopy/colonoscopy images; no video."
+ },
+ {
+  "uid": "D1048",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "XDCycleGAN method paper; dataset released in separate records."
+ },
+ {
+  "uid": "D1049",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Randomized trial of bowel preparation education."
+ },
+ {
+  "uid": "D1050",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Book chapter on colonoscopy computing."
+ },
+ {
+  "uid": "D1051",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical study of lower GI bleeding."
+ },
+ {
+  "uid": "D1052",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical study of adenomas."
+ },
+ {
+  "uid": "D1053",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical cross-sectional study."
+ },
+ {
+  "uid": "D1054",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical study of simethicone."
+ },
+ {
+  "uid": "D1055",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Case report."
+ },
+ {
+  "uid": "D1056",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical case series."
+ },
+ {
+  "uid": "D1057",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Robotics method paper on bench-top colon model."
+ },
+ {
+  "uid": "D1058",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Interactive semantic map of a review."
+ },
+ {
+  "uid": "D1059",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical study of colorectal polyps."
+ },
+ {
+  "uid": "D1060",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-CXR-Ext-MIMIC-CXR-DB",
+  "reason": "Chest radiograph linkage dataset; static images."
+ },
+ {
+  "uid": "D1061",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CardioWave-Portable",
+  "reason": "ECG/PPG dataset; not video."
+ },
+ {
+  "uid": "D1062",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Heart rate/accelerometry sleep dataset; not video."
+ },
+ {
+  "uid": "D1063",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-EntityCoding",
+  "reason": "Clinical NER text dataset; not video."
+ },
+ {
+  "uid": "D1064",
+  "category": "DATASET-OTHER",
+  "dataset_name": "JSMF ACCESS",
+  "reason": "Intraoperative EEG dataset; no surgical video."
+ },
+ {
+  "uid": "D1065",
+  "category": "DATASET-OTHER",
+  "dataset_name": "InReDD-PAN924-Ext-BoneLoss-769",
+  "reason": "Dental panoramic radiograph dataset; static images."
+ },
+ {
+  "uid": "D1066",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "PhysioNet hearing-loss data project; not video."
+ },
+ {
+  "uid": "D1067",
+  "category": "DATASET-OTHER",
+  "dataset_name": "EHR-ReasonCon",
+  "reason": "EHR text/table dataset; not video."
+ },
+ {
+  "uid": "D1068",
+  "category": "DATASET-OTHER",
+  "dataset_name": "VTaC",
+  "reason": "ICU VT alarm waveform dataset; not video."
+ },
+ {
+  "uid": "D1069",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-MIMIC-Patient",
+  "reason": "Structured patient records; not video."
+ },
+ {
+  "uid": "D1070",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CheXmask-U",
+  "reason": "Chest X-ray segmentation masks; static images."
+ },
+ {
+  "uid": "D1071",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-SBDH",
+  "reason": "Annotated clinical text dataset; not video."
+ },
+ {
+  "uid": "D1072",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-VeriFact-BHC",
+  "reason": "Clinical text propositions dataset; not video."
+ },
+ {
+  "uid": "D1073",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-Ext-CXR-QBA",
+  "reason": "Chest X-ray VQA dataset; static images."
+ },
+ {
+  "uid": "D1074",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Echo",
+  "reason": "Echocardiogram (ultrasound) dataset; not colonoscopy/surgical."
+ },
+ {
+  "uid": "D1075",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SCRIPT CarpeDiem",
+  "reason": "ICU pneumonia clinical dataset; not video."
+ },
+ {
+  "uid": "D1076",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-BR",
+  "reason": "Hospital/ICU clinical dataset; not video."
+ },
+ {
+  "uid": "D1077",
+  "category": "DATASET-OTHER",
+  "dataset_name": "BIDMC Metabolomic MASLD Cohort",
+  "reason": "Metabolomic cohort dataset; not video."
+ },
+ {
+  "uid": "D1078",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "NHANES step-count dataset; not video."
+ },
+ {
+  "uid": "D1079",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Kingston ICU AF",
+  "reason": "ICU atrial fibrillation dataset; not video."
+ },
+ {
+  "uid": "D1080",
+  "category": "DATASET-OTHER",
+  "dataset_name": "BRSET",
+  "reason": "Fundus image dataset; static images, not endoscopy video."
+ },
+ {
+  "uid": "D1081",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ARGO",
+  "reason": "Ventricular tachycardia electrogram dataset; not video."
+ },
+ {
+  "uid": "D1082",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Insulin4RL",
+  "reason": "ICU insulin infusion dataset; not video."
+ },
+ {
+  "uid": "D1083",
+  "category": "DATASET-OTHER",
+  "dataset_name": "INSPIRE",
+  "reason": "Perioperative clinical/vital-sign dataset; no surgical video."
+ },
+ {
+  "uid": "D1084",
+  "category": "DATASET-OTHER",
+  "dataset_name": "DREAMT",
+  "reason": "Wearable sleep-staging dataset; not video."
+ },
+ {
+  "uid": "D1085",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Bridge2AI-Voice",
+  "reason": "Voice recording dataset linked to health data; not video."
+ },
+ {
+  "uid": "D1086",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Bridge2AI-Voice Pediatric",
+  "reason": "Voice recording dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D1087",
+  "category": "DATASET-OTHER",
+  "dataset_name": "EchoNext",
+  "reason": "ECG dataset with echo labels; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D1088",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Human gait kinematics/EEG/EMG dataset; not surgical."
+ },
+ {
+  "uid": "D1089",
+  "category": "DATASET-OTHER",
+  "dataset_name": "KI EndoLIST",
+  "reason": "Endometriosis symptom-tracking dataset; not video."
+ },
+ {
+  "uid": "D1090",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Title describes an ECG artifact-removal method/software; no dataset evident."
+ },
+ {
+  "uid": "D1091",
+  "category": "DATASET-OTHER",
+  "dataset_name": "GRABMyoFlow",
+  "reason": "EMG dataset extension; not video."
+ },
+ {
+  "uid": "D1092",
+  "category": "DATASET-OTHER",
+  "dataset_name": "BIG IDEAs Lab Glycemic Variability",
+  "reason": "Wearable glycemic dataset; not video."
+ },
+ {
+  "uid": "D1093",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Embeddings derived from fundus image datasets; not video."
+ },
+ {
+  "uid": "D1094",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-CXR-Ext-ILS",
+  "reason": "Chest X-ray masks and QA pairs; static images."
+ },
+ {
+  "uid": "D1095",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Software utility for data ingestion, not a dataset."
+ },
+ {
+  "uid": "D1096",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "ICU clinical time-series datasets; not video."
+ },
+ {
+  "uid": "D1097",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-CLIF",
+  "reason": "ICU data in CLIF format; not video."
+ },
+ {
+  "uid": "D1098",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-PE",
+  "reason": "Radiology report labels; not video."
+ },
+ {
+  "uid": "D1099",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-MedicalBench",
+  "reason": "Clinical text benchmark; not video."
+ },
+ {
+  "uid": "D1100",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ECHOVIEW",
+  "reason": "Echocardiography view annotations; ultrasound, not colonoscopy/surgical."
+ },
+ {
+  "uid": "D1101",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-PPG",
+  "reason": "PPG benchmark dataset; not video."
+ },
+ {
+  "uid": "D1102",
+  "category": "DATASET-OTHER",
+  "dataset_name": "HYGD",
+  "reason": "Fundus image dataset; static images."
+ },
+ {
+  "uid": "D1103",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-CA",
+  "reason": "PPG cardiac-arrest dataset; not video."
+ },
+ {
+  "uid": "D1104",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Mouse behavioral dataset; not colonoscopy/surgical video."
+ },
+ {
+  "uid": "D1105",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Respiratory/oximetry waveform dataset; not video."
+ },
+ {
+  "uid": "D1106",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-Notes",
+  "reason": "Clinical notes dataset; not video."
+ },
+ {
+  "uid": "D1107",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Neurophysiological stress dataset; not video."
+ },
+ {
+  "uid": "D1108",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-ECHO-Ext-LVVOLUMES-A4C-ROI",
+  "reason": "Echocardiography (ultrasound) subset; not colonoscopy/surgical."
+ },
+ {
+  "uid": "D1109",
+  "category": "DATASET-OTHER",
+  "dataset_name": "VitalDB Arrhythmia Database",
+  "reason": "Intraoperative ECG arrhythmia dataset; no surgical video."
+ },
+ {
+  "uid": "D1110",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Review of AI in GI endoscopy."
+ },
+ {
+  "uid": "D1111",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Review of AI in GI endoscopy."
+ },
+ {
+  "uid": "D1112",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Review on capsule endoscopy video summarization."
+ },
+ {
+  "uid": "D1113",
+  "category": "DATASET-OTHER",
+  "dataset_name": "GIM-ENDO",
+  "reason": "Gastric endoscopy images and video clips; gastroscopy only."
+ },
+ {
+  "uid": "D1114",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MEUVS",
+  "reason": "Underwater video summarization dataset; non-medical."
+ },
+ {
+  "uid": "D1115",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CE-NBI",
+  "reason": "Laryngeal contact endoscopy image dataset; other endoscopy."
+ },
+ {
+  "uid": "D1116",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Cystoscopy video dataset with annotations; other endoscopy, not colonoscopy or surgery."
+ },
+ {
+  "uid": "D1117",
+  "category": "DATASET-OTHER",
+  "dataset_name": "DOSE-I",
+  "reason": "Biosignal sedation dataset during endoscopy; no video."
+ },
+ {
+  "uid": "D1118",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Review on AI in endoscopy and robotic surgery."
+ },
+ {
+  "uid": "D1119",
+  "category": "DATASET-C-COL",
+  "dataset_name": "HyperKvasir",
+  "reason": "Lower-GI landmark model record hosting HyperKvasir splits; dataset includes GI videos; doubt rule."
+ },
+ {
+  "uid": "D1120",
+  "category": "DATASET-C-COL",
+  "dataset_name": "HyperKvasir",
+  "reason": "Model record hosting HyperKvasir splits; dataset mixes lower-GI videos; doubt rule."
+ },
+ {
+  "uid": "D1121",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Denoising method paper using HyperKvasir."
+ },
+ {
+  "uid": "D1122",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Method paper on capsule endoscopy classification."
+ },
+ {
+  "uid": "D1123",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Ecological/land-use dataset; non-medical."
+ },
+ {
+  "uid": "D1124",
+  "category": "DATASET-OTHER",
+  "dataset_name": "DowPK",
+  "reason": "841 static endoscopy/colonoscopy images; no video."
+ },
+ {
+  "uid": "D1125",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Clinical data on capsule endoscopy obstruction; no colonoscopy/surgical video."
+ },
+ {
+  "uid": "D1126",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Ex-vivo porcine larynx high-speed video; not colonoscopy or surgical."
+ },
+ {
+  "uid": "D1127",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical surgical outcomes study."
+ },
+ {
+  "uid": "D1128",
+  "category": "DATASET-OTHER",
+  "dataset_name": "GastroNet-5M",
+  "reason": "Unlabeled GI endoscopy still images (PNG); static images only."
+ },
+ {
+  "uid": "D1129",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Intrapartum ultrasound video dataset; ultrasound."
+ },
+ {
+  "uid": "D1130",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Code release for oesophageal generative-model study."
+ },
+ {
+  "uid": "D1131",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Review of ML for GI disease."
+ },
+ {
+  "uid": "D1132",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Device paper on endoscopic ammonia sensor."
+ },
+ {
+  "uid": "D1133",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Thesis on laryngeal endoscopy."
+ },
+ {
+  "uid": "D1134",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ISLES 2022",
+  "reason": "MRI stroke lesion dataset."
+ },
+ {
+  "uid": "D1135",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Journalism article mislabeled as dataset."
+ },
+ {
+  "uid": "D1136",
+  "category": "DATASET-C-COL",
+  "dataset_name": "CLTS-GAN augmented polyp dataset",
+  "reason": "Augmented optical colonoscopy video-frame polyp data; image-vs-video doubt."
+ },
+ {
+  "uid": "D1137",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical abstract on capsule endoscopy."
+ },
+ {
+  "uid": "D1138",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical retrospective study."
+ },
+ {
+  "uid": "D1139",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MUVS",
+  "reason": "Sports video and sensor dataset; non-medical."
+ },
+ {
+  "uid": "D1140",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ISLES'24 lesion atlas",
+  "reason": "MRI-derived lesion probability map."
+ },
+ {
+  "uid": "D1141",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Supplementary videos for a pig pharmacology paper."
+ },
+ {
+  "uid": "D1142",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Literature survey on capsule endoscopy."
+ },
+ {
+  "uid": "D1143",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Telemedicine theoretical model article."
+ },
+ {
+  "uid": "D1144",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Review on video summarization."
+ },
+ {
+  "uid": "D1145",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Project deliverable on bioprinting."
+ },
+ {
+  "uid": "D1146",
+  "category": "DATASET-OTHER",
+  "dataset_name": "WCEbleedGen",
+  "reason": "Capsule endoscopy frame dataset; capsule only."
+ },
+ {
+  "uid": "D1147",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Case report."
+ },
+ {
+  "uid": "D1148",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PAMELA 2",
+  "reason": "Clinical melanoma dataset; not video."
+ },
+ {
+  "uid": "D1149",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Code repository release."
+ },
+ {
+  "uid": "D1150",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Speech/face video dataset; non-medical."
+ },
+ {
+  "uid": "D1151",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Article on Camtasia software."
+ },
+ {
+  "uid": "D1152",
+  "category": "DATASET-OTHER",
+  "dataset_name": "HateMM",
+  "reason": "Hate video classification dataset; non-medical."
+ },
+ {
+  "uid": "D1153",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Hardware design video with no dataset description."
+ },
+ {
+  "uid": "D1154",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Presentation on dynamical systems."
+ },
+ {
+  "uid": "D1155",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Review article on mRNA therapeutics."
+ },
+ {
+  "uid": "D1156",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PhagoStat",
+  "reason": "Time-lapse microscopy dataset; not medical procedure video."
+ },
+ {
+  "uid": "D1157",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Knowledge-Type-Sensitive Video Analytics Dataset",
+  "reason": "Educational video-interaction dataset; non-medical."
+ },
+ {
+  "uid": "D1158",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Conversation mobile video dataset; non-medical."
+ },
+ {
+  "uid": "D1159",
+  "category": "DATASET-OTHER",
+  "dataset_name": "French Matrix Sentence Test videos",
+  "reason": "Speech-test video recordings; non-medical."
+ },
+ {
+  "uid": "D1160",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-CXR-Ext-MIMIC-CXR-DB",
+  "reason": "Chest radiograph linkage dataset; static images."
+ },
+ {
+  "uid": "D1161",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CardioWave-Portable",
+  "reason": "ECG/PPG dataset; not video."
+ },
+ {
+  "uid": "D1162",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Heart rate/accelerometry sleep dataset; not video."
+ },
+ {
+  "uid": "D1163",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-EntityCoding",
+  "reason": "Clinical NER text dataset; not video."
+ },
+ {
+  "uid": "D1164",
+  "category": "DATASET-OTHER",
+  "dataset_name": "JSMF ACCESS",
+  "reason": "Intraoperative EEG dataset; no surgical video."
+ },
+ {
+  "uid": "D1165",
+  "category": "DATASET-OTHER",
+  "dataset_name": "InReDD-PAN924-Ext-BoneLoss-769",
+  "reason": "Dental panoramic radiograph dataset; static images."
+ },
+ {
+  "uid": "D1166",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "PhysioNet hearing-loss data project; not video."
+ },
+ {
+  "uid": "D1167",
+  "category": "DATASET-OTHER",
+  "dataset_name": "EHR-ReasonCon",
+  "reason": "EHR text/table dataset; not video."
+ },
+ {
+  "uid": "D1168",
+  "category": "DATASET-OTHER",
+  "dataset_name": "VTaC",
+  "reason": "ICU VT alarm waveform dataset; not video."
+ },
+ {
+  "uid": "D1169",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-MIMIC-Patient",
+  "reason": "Structured patient records; not video."
+ },
+ {
+  "uid": "D1170",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CheXmask-U",
+  "reason": "Chest X-ray segmentation masks; static images."
+ },
+ {
+  "uid": "D1171",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-SBDH",
+  "reason": "Annotated clinical text dataset; not video."
+ },
+ {
+  "uid": "D1172",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-VeriFact-BHC",
+  "reason": "Clinical text propositions dataset; not video."
+ },
+ {
+  "uid": "D1173",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-Ext-CXR-QBA",
+  "reason": "Chest X-ray VQA dataset; static images."
+ },
+ {
+  "uid": "D1174",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Echo",
+  "reason": "Echocardiogram (ultrasound) dataset; not colonoscopy/surgical."
+ },
+ {
+  "uid": "D1175",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SCRIPT CarpeDiem",
+  "reason": "ICU pneumonia clinical dataset; not video."
+ },
+ {
+  "uid": "D1176",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-BR",
+  "reason": "Hospital/ICU clinical dataset; not video."
+ },
+ {
+  "uid": "D1177",
+  "category": "DATASET-OTHER",
+  "dataset_name": "BIDMC Metabolomic MASLD Cohort",
+  "reason": "Metabolomic cohort dataset; not video."
+ },
+ {
+  "uid": "D1178",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "NHANES step-count dataset; not video."
+ },
+ {
+  "uid": "D1179",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Kingston ICU AF",
+  "reason": "ICU atrial fibrillation dataset; not video."
+ },
+ {
+  "uid": "D1180",
+  "category": "DATASET-OTHER",
+  "dataset_name": "BRSET",
+  "reason": "Fundus image dataset; static images, not endoscopy video."
+ },
+ {
+  "uid": "D1181",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ARGO",
+  "reason": "Ventricular tachycardia electrogram dataset; not video."
+ },
+ {
+  "uid": "D1182",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Insulin4RL",
+  "reason": "ICU insulin infusion dataset; not video."
+ },
+ {
+  "uid": "D1183",
+  "category": "DATASET-OTHER",
+  "dataset_name": "INSPIRE",
+  "reason": "Perioperative clinical/vital-sign dataset; no surgical video."
+ },
+ {
+  "uid": "D1184",
+  "category": "DATASET-OTHER",
+  "dataset_name": "DREAMT",
+  "reason": "Wearable sleep-staging dataset; not video."
+ },
+ {
+  "uid": "D1185",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Bridge2AI-Voice",
+  "reason": "Voice recording dataset linked to health data; not video."
+ },
+ {
+  "uid": "D1186",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Bridge2AI-Voice Pediatric",
+  "reason": "Voice recording dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D1187",
+  "category": "DATASET-OTHER",
+  "dataset_name": "EchoNext",
+  "reason": "ECG dataset with echo labels; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D1188",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Human gait kinematics/EEG/EMG dataset; not surgical."
+ },
+ {
+  "uid": "D1189",
+  "category": "DATASET-OTHER",
+  "dataset_name": "KI EndoLIST",
+  "reason": "Endometriosis symptom-tracking dataset; not video."
+ },
+ {
+  "uid": "D1190",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Title describes an ECG artifact-removal method/software; no dataset evident."
+ },
+ {
+  "uid": "D1191",
+  "category": "DATASET-OTHER",
+  "dataset_name": "GRABMyoFlow",
+  "reason": "EMG dataset extension; not video."
+ },
+ {
+  "uid": "D1192",
+  "category": "DATASET-OTHER",
+  "dataset_name": "BIG IDEAs Lab Glycemic Variability",
+  "reason": "Wearable glycemic dataset; not video."
+ },
+ {
+  "uid": "D1193",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Embeddings derived from fundus image datasets; not video."
+ },
+ {
+  "uid": "D1194",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-CXR-Ext-ILS",
+  "reason": "Chest X-ray masks and QA pairs; static images."
+ },
+ {
+  "uid": "D1195",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Software utility for data ingestion, not a dataset."
+ },
+ {
+  "uid": "D1196",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "ICU clinical time-series datasets; not video."
+ },
+ {
+  "uid": "D1197",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-CLIF",
+  "reason": "ICU data in CLIF format; not video."
+ },
+ {
+  "uid": "D1198",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-PE",
+  "reason": "Radiology report labels; not video."
+ },
+ {
+  "uid": "D1199",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-MedicalBench",
+  "reason": "Clinical text benchmark; not video."
+ },
+ {
+  "uid": "D1200",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ECHOVIEW",
+  "reason": "Echocardiography view annotations; ultrasound, not colonoscopy/surgical."
+ },
+ {
+  "uid": "D1201",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-PPG",
+  "reason": "PPG benchmark dataset; not video."
+ },
+ {
+  "uid": "D1202",
+  "category": "DATASET-OTHER",
+  "dataset_name": "HYGD",
+  "reason": "Fundus image dataset; static images."
+ },
+ {
+  "uid": "D1203",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-CA",
+  "reason": "PPG cardiac-arrest dataset; not video."
+ },
+ {
+  "uid": "D1204",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Mouse behavioral dataset; not colonoscopy/surgical video."
+ },
+ {
+  "uid": "D1205",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Respiratory/oximetry waveform dataset; not video."
+ },
+ {
+  "uid": "D1206",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-Notes",
+  "reason": "Clinical notes dataset; not video."
+ },
+ {
+  "uid": "D1207",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Neurophysiological stress dataset; not video."
+ },
+ {
+  "uid": "D1208",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-ECHO-Ext-LVVOLUMES-A4C-ROI",
+  "reason": "Echocardiography (ultrasound) subset; not colonoscopy/surgical."
+ },
+ {
+  "uid": "D1209",
+  "category": "DATASET-OTHER",
+  "dataset_name": "VitalDB Arrhythmia Database",
+  "reason": "Intraoperative ECG arrhythmia dataset; no surgical video."
+ },
+ {
+  "uid": "D1210",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Cataract-101 (extended labels)",
+  "reason": "Per-frame surgical step and surgeon labels for Cataract-101 videos."
+ },
+ {
+  "uid": "D1211",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Method paper on MLLM surgical triplet recognition."
+ },
+ {
+  "uid": "D1212",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Stereo Endoscopic Dataset",
+  "reason": "Robotic prostatectomy stereo video with step/phase labels."
+ },
+ {
+  "uid": "D1213",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "MIPO",
+  "reason": "Orthopaedic surgery videos for workflow recognition; annotations on GitHub."
+ },
+ {
+  "uid": "D1214",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SICS-155",
+  "reason": "Challenge record introducing SICS videos with phase annotations."
+ },
+ {
+  "uid": "D1215",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "",
+  "reason": "50 surgical retraction video recordings with force labels."
+ },
+ {
+  "uid": "D1216",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Cholec80-Boxes",
+  "reason": "Tool bounding boxes on frames from five Cholec80 surgical videos."
+ },
+ {
+  "uid": "D1217",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Supplementary clinical data, ultrasound images, one unannotated surgical demo video."
+ },
+ {
+  "uid": "D1218",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Legal/policy article on surgical video data."
+ },
+ {
+  "uid": "D1219",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "EndoVis 2020",
+  "reason": "Challenge design describing surgical video datasets (e.g. CATARACTS workflow); doubt rule."
+ },
+ {
+  "uid": "D1220",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SAGES CVS Challenge",
+  "reason": "Challenge on laparoscopic cholecystectomy video with CVS annotations."
+ },
+ {
+  "uid": "D1221",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Supplementary videos for a pig pharmacology paper."
+ },
+ {
+  "uid": "D1222",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "CDS-COSA",
+  "reason": "500 laparoscopic clips with center-of-surgical-action annotations."
+ },
+ {
+  "uid": "D1223",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical VATS outcomes article."
+ },
+ {
+  "uid": "D1224",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Supplementary surgical technique videos without annotations."
+ },
+ {
+  "uid": "D1225",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "ESAD",
+  "reason": "Introduces surgeon action detection dataset on endoscopic surgery videos."
+ },
+ {
+  "uid": "D1226",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Video retrieval system paper."
+ },
+ {
+  "uid": "D1227",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SICS-155",
+  "reason": "155 SICS surgery videos with 18-phase annotations."
+ },
+ {
+  "uid": "D1228",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "",
+  "reason": "Mock fluorescence-guided surgery videos for denoising with ground truth; doubt rule."
+ },
+ {
+  "uid": "D1229",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "StereoMIS",
+  "reason": "da Vinci stereo surgical video with camera kinematics and tool masks."
+ },
+ {
+  "uid": "D1230",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical thoracoscopic surgery article."
+ },
+ {
+  "uid": "D1231",
+  "category": "DATASET-OTHER",
+  "dataset_name": "3D-COSI",
+  "reason": "3D STL models of surgical instruments; not surgical video."
+ },
+ {
+  "uid": "D1232",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PhagoStat",
+  "reason": "Time-lapse microscopy dataset; not medical procedure video."
+ },
+ {
+  "uid": "D1233",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Knowledge-Type-Sensitive Video Analytics Dataset",
+  "reason": "Educational video-interaction dataset; non-medical."
+ },
+ {
+  "uid": "D1234",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "ADM_LSIR",
+  "reason": "Laparoscopic frames from 19 source videos with aerosol masks; doubt rule."
+ },
+ {
+  "uid": "D1235",
+  "category": "DATASET-OTHER",
+  "dataset_name": "AVTrack360",
+  "reason": "Head-rotation dataset for 360-degree videos; non-medical."
+ },
+ {
+  "uid": "D1236",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Software repository release."
+ },
+ {
+  "uid": "D1237",
+  "category": "DATASET-OTHER",
+  "dataset_name": "All Countries' Dataset",
+  "reason": "Undescribed dataset record; nothing indicates colonoscopy/surgical video."
+ },
+ {
+  "uid": "D1238",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Dataset of code metrics",
+  "reason": "Software code-metrics dataset; non-medical."
+ },
+ {
+  "uid": "D1239",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Single surgical video abstract."
+ },
+ {
+  "uid": "D1240",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Single illustrative surgical case video."
+ },
+ {
+  "uid": "D1241",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Single surgical technique video."
+ },
+ {
+  "uid": "D1242",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Survey paper on video game market."
+ },
+ {
+  "uid": "D1243",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Self-described dataset with no description; no colonoscopy/surgical video evident."
+ },
+ {
+  "uid": "D1244",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Self-described dataset with no description; no colonoscopy/surgical video evident."
+ },
+ {
+  "uid": "D1245",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Dataset of code metrics - Extension",
+  "reason": "Software code-metrics dataset; non-medical."
+ },
+ {
+  "uid": "D1246",
+  "category": "DATASET-OTHER",
+  "dataset_name": "FIVR-200K",
+  "reason": "Non-medical video retrieval dataset."
+ },
+ {
+  "uid": "D1247",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "MIPO",
+  "reason": "Features from MIPO surgical workflow videos; describes MIPO dataset."
+ },
+ {
+  "uid": "D1248",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Media studies article."
+ },
+ {
+  "uid": "D1249",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Supplementary case videos and 3D models, no annotations."
+ },
+ {
+  "uid": "D1250",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgHint Annotations (HeiCo, Surgical Gauze)",
+  "reason": "Bounding-box annotations for frames of surgical video datasets."
+ },
+ {
+  "uid": "D1251",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Taxonomic species description."
+ },
+ {
+  "uid": "D1252",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "LASK",
+  "reason": "Laparoscopic box-trainer video with 7-DoF kinematics and skill levels."
+ },
+ {
+  "uid": "D1253",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "ORena SAVE FOCUS",
+  "reason": "Surgical video challenge on foreign objects; doubt rule."
+ },
+ {
+  "uid": "D1254",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "TrackVes",
+  "reason": "Ex-vivo and in-vivo surgical video sequences with tracking ground truth."
+ },
+ {
+  "uid": "D1255",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Automotive (JetRacer) video dataset; non-medical."
+ },
+ {
+  "uid": "D1256",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Music video emotion dataset; non-medical."
+ },
+ {
+  "uid": "D1257",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Surgical technique video for pilot study."
+ },
+ {
+  "uid": "D1258",
+  "category": "DATASET-OTHER",
+  "dataset_name": "VDVC survey results",
+  "reason": "Survey raw data; non-medical."
+ },
+ {
+  "uid": "D1259",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "PhaKIR",
+  "reason": "Surgical videos with phase, keypoint and instrument labels."
+ },
+ {
+  "uid": "D1260",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-CXR-Ext-MIMIC-CXR-DB",
+  "reason": "Chest radiograph linkage dataset; static images."
+ },
+ {
+  "uid": "D1261",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CardioWave-Portable",
+  "reason": "ECG/PPG dataset; not video."
+ },
+ {
+  "uid": "D1262",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Heart rate/accelerometry sleep dataset; not video."
+ },
+ {
+  "uid": "D1263",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-EntityCoding",
+  "reason": "Clinical NER text dataset; not video."
+ },
+ {
+  "uid": "D1264",
+  "category": "DATASET-OTHER",
+  "dataset_name": "JSMF ACCESS",
+  "reason": "Intraoperative EEG dataset; no surgical video."
+ },
+ {
+  "uid": "D1265",
+  "category": "DATASET-OTHER",
+  "dataset_name": "InReDD-PAN924-Ext-BoneLoss-769",
+  "reason": "Dental panoramic radiograph dataset; static images."
+ },
+ {
+  "uid": "D1266",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "PhysioNet hearing-loss data project; not video."
+ },
+ {
+  "uid": "D1267",
+  "category": "DATASET-OTHER",
+  "dataset_name": "EHR-ReasonCon",
+  "reason": "EHR text/table dataset; not video."
+ },
+ {
+  "uid": "D1268",
+  "category": "DATASET-OTHER",
+  "dataset_name": "VTaC",
+  "reason": "ICU VT alarm waveform dataset; not video."
+ },
+ {
+  "uid": "D1269",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-MIMIC-Patient",
+  "reason": "Structured patient records; not video."
+ },
+ {
+  "uid": "D1270",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CheXmask-U",
+  "reason": "Chest X-ray segmentation masks; static images."
+ },
+ {
+  "uid": "D1271",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-SBDH",
+  "reason": "Annotated clinical text dataset; not video."
+ },
+ {
+  "uid": "D1272",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-VeriFact-BHC",
+  "reason": "Clinical text propositions dataset; not video."
+ },
+ {
+  "uid": "D1273",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-Ext-CXR-QBA",
+  "reason": "Chest X-ray VQA dataset; static images."
+ },
+ {
+  "uid": "D1274",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Echo",
+  "reason": "Echocardiogram (ultrasound) dataset; not colonoscopy/surgical."
+ },
+ {
+  "uid": "D1275",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SCRIPT CarpeDiem",
+  "reason": "ICU pneumonia clinical dataset; not video."
+ },
+ {
+  "uid": "D1276",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-BR",
+  "reason": "Hospital/ICU clinical dataset; not video."
+ },
+ {
+  "uid": "D1277",
+  "category": "DATASET-OTHER",
+  "dataset_name": "BIDMC Metabolomic MASLD Cohort",
+  "reason": "Metabolomic cohort dataset; not video."
+ },
+ {
+  "uid": "D1278",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "NHANES step-count dataset; not video."
+ },
+ {
+  "uid": "D1279",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Kingston ICU AF",
+  "reason": "ICU atrial fibrillation dataset; not video."
+ },
+ {
+  "uid": "D1280",
+  "category": "DATASET-OTHER",
+  "dataset_name": "BRSET",
+  "reason": "Fundus image dataset; static images, not endoscopy video."
+ },
+ {
+  "uid": "D1281",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ARGO",
+  "reason": "Ventricular tachycardia electrogram dataset; not video."
+ },
+ {
+  "uid": "D1282",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Insulin4RL",
+  "reason": "ICU insulin infusion dataset; not video."
+ },
+ {
+  "uid": "D1283",
+  "category": "DATASET-OTHER",
+  "dataset_name": "INSPIRE",
+  "reason": "Perioperative clinical/vital-sign dataset; no surgical video."
+ },
+ {
+  "uid": "D1284",
+  "category": "DATASET-OTHER",
+  "dataset_name": "DREAMT",
+  "reason": "Wearable sleep-staging dataset; not video."
+ },
+ {
+  "uid": "D1285",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Bridge2AI-Voice",
+  "reason": "Voice recording dataset linked to health data; not video."
+ },
+ {
+  "uid": "D1286",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Bridge2AI-Voice Pediatric",
+  "reason": "Voice recording dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D1287",
+  "category": "DATASET-OTHER",
+  "dataset_name": "EchoNext",
+  "reason": "ECG dataset with echo labels; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D1288",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Human gait kinematics/EEG/EMG dataset; not surgical."
+ },
+ {
+  "uid": "D1289",
+  "category": "DATASET-OTHER",
+  "dataset_name": "KI EndoLIST",
+  "reason": "Endometriosis symptom-tracking dataset; not video."
+ },
+ {
+  "uid": "D1290",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Title describes an ECG artifact-removal method/software; no dataset evident."
+ },
+ {
+  "uid": "D1291",
+  "category": "DATASET-OTHER",
+  "dataset_name": "GRABMyoFlow",
+  "reason": "EMG dataset extension; not video."
+ },
+ {
+  "uid": "D1292",
+  "category": "DATASET-OTHER",
+  "dataset_name": "BIG IDEAs Lab Glycemic Variability",
+  "reason": "Wearable glycemic dataset; not video."
+ },
+ {
+  "uid": "D1293",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Embeddings derived from fundus image datasets; not video."
+ },
+ {
+  "uid": "D1294",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-CXR-Ext-ILS",
+  "reason": "Chest X-ray masks and QA pairs; static images."
+ },
+ {
+  "uid": "D1295",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Software utility for data ingestion, not a dataset."
+ },
+ {
+  "uid": "D1296",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "ICU clinical time-series datasets; not video."
+ },
+ {
+  "uid": "D1297",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-CLIF",
+  "reason": "ICU data in CLIF format; not video."
+ },
+ {
+  "uid": "D1298",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-PE",
+  "reason": "Radiology report labels; not video."
+ },
+ {
+  "uid": "D1299",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-MedicalBench",
+  "reason": "Clinical text benchmark; not video."
+ },
+ {
+  "uid": "D1300",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ECHOVIEW",
+  "reason": "Echocardiography view annotations; ultrasound, not colonoscopy/surgical."
+ },
+ {
+  "uid": "D1301",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-PPG",
+  "reason": "PPG benchmark dataset; not video."
+ },
+ {
+  "uid": "D1302",
+  "category": "DATASET-OTHER",
+  "dataset_name": "HYGD",
+  "reason": "Fundus image dataset; static images."
+ },
+ {
+  "uid": "D1303",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-CA",
+  "reason": "PPG cardiac-arrest dataset; not video."
+ },
+ {
+  "uid": "D1304",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Mouse behavioral dataset; not colonoscopy/surgical video."
+ },
+ {
+  "uid": "D1305",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Respiratory/oximetry waveform dataset; not video."
+ },
+ {
+  "uid": "D1306",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-Notes",
+  "reason": "Clinical notes dataset; not video."
+ },
+ {
+  "uid": "D1307",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Neurophysiological stress dataset; not video."
+ },
+ {
+  "uid": "D1308",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-ECHO-Ext-LVVOLUMES-A4C-ROI",
+  "reason": "Echocardiography (ultrasound) subset; not colonoscopy/surgical."
+ },
+ {
+  "uid": "D1309",
+  "category": "DATASET-OTHER",
+  "dataset_name": "VitalDB Arrhythmia Database",
+  "reason": "Intraoperative ECG arrhythmia dataset; no surgical video."
+ },
+ {
+  "uid": "D1310",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "StereoMIS",
+  "reason": "da Vinci stereo surgical video with camera kinematics and tool masks."
+ },
+ {
+  "uid": "D1311",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Gait kinematics dataset; no surgical video."
+ },
+ {
+  "uid": "D1312",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "LASK",
+  "reason": "Laparoscopic box-trainer video with 7-DoF kinematics and skill levels."
+ },
+ {
+  "uid": "D1313",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Cataract-101 (extended labels)",
+  "reason": "Per-frame surgical step and surgeon labels for Cataract-101 videos."
+ },
+ {
+  "uid": "D1314",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Method paper on MLLM surgical triplet recognition."
+ },
+ {
+  "uid": "D1315",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SPARK",
+  "reason": "XR pose estimation telemetry; non-medical."
+ },
+ {
+  "uid": "D1316",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Stereo Endoscopic Dataset",
+  "reason": "Robotic prostatectomy stereo video with step/phase labels."
+ },
+ {
+  "uid": "D1317",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "MIPO",
+  "reason": "Orthopaedic surgery videos for workflow recognition; annotations on GitHub."
+ },
+ {
+  "uid": "D1318",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Kinematics dataset",
+  "reason": "Undescribed kinematics dataset; nothing indicates surgical video."
+ },
+ {
+  "uid": "D1319",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Supplementary videos for humanoid robot paper."
+ },
+ {
+  "uid": "D1320",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Fish feeding kinematics video data; non-medical."
+ },
+ {
+  "uid": "D1321",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SICS-155",
+  "reason": "Challenge record introducing SICS videos with phase annotations."
+ },
+ {
+  "uid": "D1322",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "",
+  "reason": "50 surgical retraction video recordings with force labels."
+ },
+ {
+  "uid": "D1323",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Cholec80-Boxes",
+  "reason": "Tool bounding boxes on frames from five Cholec80 surgical videos."
+ },
+ {
+  "uid": "D1324",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Supplementary clinical data, ultrasound images, one unannotated surgical demo video."
+ },
+ {
+  "uid": "D1325",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Legal/policy article on surgical video data."
+ },
+ {
+  "uid": "D1326",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "EndoVis 2020",
+  "reason": "Challenge design describing surgical video datasets (e.g. CATARACTS workflow); doubt rule."
+ },
+ {
+  "uid": "D1327",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Shoulder kinematics dataset; not surgical."
+ },
+ {
+  "uid": "D1328",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SAGES CVS Challenge",
+  "reason": "Challenge on laparoscopic cholecystectomy video with CVS annotations."
+ },
+ {
+  "uid": "D1329",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Masonry wall test videos; non-medical."
+ },
+ {
+  "uid": "D1330",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Supplementary videos for a pig pharmacology paper."
+ },
+ {
+  "uid": "D1331",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Spartacus shoulder kinematics",
+  "reason": "Repository release of shoulder kinematics dataset; not surgical."
+ },
+ {
+  "uid": "D1332",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "CDS-COSA",
+  "reason": "500 laparoscopic clips with center-of-surgical-action annotations."
+ },
+ {
+  "uid": "D1333",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical VATS outcomes article."
+ },
+ {
+  "uid": "D1334",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Supplementary surgical technique videos without annotations."
+ },
+ {
+  "uid": "D1335",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "ESAD",
+  "reason": "Introduces surgeon action detection dataset on endoscopic surgery videos."
+ },
+ {
+  "uid": "D1336",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Video retrieval system paper."
+ },
+ {
+  "uid": "D1337",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SICS-155",
+  "reason": "155 SICS surgery videos with 18-phase annotations."
+ },
+ {
+  "uid": "D1338",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "",
+  "reason": "Mock fluorescence-guided surgery videos for denoising with ground truth; doubt rule."
+ },
+ {
+  "uid": "D1339",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Movement PCA visualization videos; not surgical."
+ },
+ {
+  "uid": "D1340",
+  "category": "DATASET-OTHER",
+  "dataset_name": "VIDIMU",
+  "reason": "Daily-activity video and IMU dataset; not surgical."
+ },
+ {
+  "uid": "D1341",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Helmet impact kinematics dataset; non-medical."
+ },
+ {
+  "uid": "D1342",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Cycling biomechanics dataset; non-medical."
+ },
+ {
+  "uid": "D1343",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical thoracoscopic surgery article."
+ },
+ {
+  "uid": "D1344",
+  "category": "DATASET-OTHER",
+  "dataset_name": "3D-COSI",
+  "reason": "3D STL models of surgical instruments; not surgical video."
+ },
+ {
+  "uid": "D1345",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PhagoStat",
+  "reason": "Time-lapse microscopy dataset; not medical procedure video."
+ },
+ {
+  "uid": "D1346",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Knowledge-Type-Sensitive Video Analytics Dataset",
+  "reason": "Educational video-interaction dataset; non-medical."
+ },
+ {
+  "uid": "D1347",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "ADM_LSIR",
+  "reason": "Laparoscopic frames from 19 source videos with aerosol masks; doubt rule."
+ },
+ {
+  "uid": "D1348",
+  "category": "DATASET-OTHER",
+  "dataset_name": "AVTrack360",
+  "reason": "Head-rotation dataset for 360-degree videos; non-medical."
+ },
+ {
+  "uid": "D1349",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Article on surgical robot control algorithms."
+ },
+ {
+  "uid": "D1350",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Audiovisual raga singing dataset; non-medical."
+ },
+ {
+  "uid": "D1351",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Software repository release."
+ },
+ {
+  "uid": "D1352",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Root Growth Kinematics Dataset",
+  "reason": "Plant root growth dataset; non-medical."
+ },
+ {
+  "uid": "D1353",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Poster on surgical robot motion planning."
+ },
+ {
+  "uid": "D1354",
+  "category": "DATASET-OTHER",
+  "dataset_name": "All Countries' Dataset",
+  "reason": "Undescribed dataset record; nothing indicates colonoscopy/surgical video."
+ },
+ {
+  "uid": "D1355",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Astrophysics intermediate data files."
+ },
+ {
+  "uid": "D1356",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Dataset of code metrics",
+  "reason": "Software code-metrics dataset; non-medical."
+ },
+ {
+  "uid": "D1357",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Crack kinematics image dataset; non-medical."
+ },
+ {
+  "uid": "D1358",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Mudskipper blinking study data; non-medical."
+ },
+ {
+  "uid": "D1359",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Single surgical video abstract."
+ }
+]

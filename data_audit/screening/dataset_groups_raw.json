@@ -1,0 +1,2275 @@
+[
+ {
+  "category": "DATASET-C-COL",
+  "key": "c3vd",
+  "names": [
+   "C3VD"
+  ],
+  "uids": [
+   "D0001",
+   "D0250"
+  ],
+  "urls": [
+   "https://doi.org/10.1016/j.media.2023.102956"
+  ],
+  "titles": [
+   "Colonoscopy 3D video dataset with paired depth from 2D-3D registration"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "c3vdraycasting10k",
+  "names": [
+   "C3VD-Raycasting-10k"
+  ],
+  "uids": [
+   "D0100"
+  ],
+  "urls": [
+   "https://rdr.ucl.ac.uk/articles/dataset/C3VD-Raycasting-10k_A_Clinical_Point_Cloud_Registration_Dataset_for_Image-Guided_Colonoscopy/30640043"
+  ],
+  "titles": [
+   "C3VD-Raycasting-10k: A Clinical Point Cloud Registration Dataset for Image-Guided Colonoscopy"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "c3vdv2",
+  "names": [
+   "C3VDv2"
+  ],
+  "uids": [
+   "D0016"
+  ],
+  "urls": [
+   "https://doi.org/10.1038/s41597-026-07471-1"
+  ],
+  "titles": [
+   "C3VDv2 - Colonoscopy 3D video dataset with enhanced realism"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "cascolon",
+  "names": [
+   "CAS-Colon"
+  ],
+  "uids": [
+   "D0101"
+  ],
+  "urls": [
+   "https://springernature.figshare.com/articles/dataset/CAS-Colon_A_Comprehensive_Colonoscopy_Anatomical_Segmentation_Dataset_for_Artificial_Intelligence_Development/28287929"
+  ],
+  "titles": [
+   "CAS-Colon: A Comprehensive Colonoscopy Anatomical Segmentation Dataset for Artificial Intelligence Development"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "climb2026",
+  "names": [
+   "CLiMB 2026"
+  ],
+  "uids": [
+   "D0081",
+   "D0191"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn74370700"
+  ],
+  "titles": [
+   "CLiMB 2026 Challenge"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "cltsganaugmentedpolypdataset",
+  "names": [
+   "CLTS-GAN augmented polyp dataset"
+  ],
+  "uids": [
+   "D0919",
+   "D1136"
+  ],
+  "urls": [
+   "https://zenodo.org/records/7036198"
+  ],
+  "titles": [
+   "CLTS-GAN: Color-Lighting-Texture-Specular Reflection Augmentation for Colonoscopy"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "colonoscopyanonymizeddatauniversityhospitalofbern",
+  "names": [
+   "Colonoscopy anonymized data, University Hospital of Bern"
+  ],
+  "uids": [
+   "D0913",
+   "D1035"
+  ],
+  "urls": [
+   "https://zenodo.org/records/10964732"
+  ],
+  "titles": [
+   "Colonoscopy anonymized data, University Hospital of Bern, 2020-2021"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "ead2019",
+  "names": [
+   "EAD2019"
+  ],
+  "uids": [
+   "D0243",
+   "D0609"
+  ],
+  "urls": [
+   "https://doi.org/10.1038/s41598-020-59413-5",
+   "https://ead2019.grand-challenge.org/"
+  ],
+  "titles": [
+   "An objective comparison of detection and segmentation algorithms for artefacts in clinical endoscopy",
+   "EAD2019"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "endocv2020",
+  "names": [
+   "EndoCV2020",
+   "EndoCV2020 (EAD2020/EDD2020)"
+  ],
+  "uids": [
+   "D0240",
+   "D0632"
+  ],
+  "urls": [
+   "https://doi.org/10.1016/j.media.2021.102002",
+   "https://endocv.grand-challenge.org/"
+  ],
+  "titles": [
+   "Deep learning for detection and segmentation of artefact and disease instances in gastrointestinal endoscopy",
+   "EndoCV2020"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "endocv2021",
+  "names": [
+   "EndoCV2021"
+  ],
+  "uids": [
+   "D0668"
+  ],
+  "urls": [
+   "https://endocv2021.grand-challenge.org/"
+  ],
+  "titles": [
+   "EndoCV2021"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "endocv2022",
+  "names": [
+   "EndoCV2022"
+  ],
+  "uids": [
+   "D0700"
+  ],
+  "urls": [
+   "https://endocv2022.grand-challenge.org/"
+  ],
+  "titles": [
+   "EndoCV2022"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "endomapper",
+  "names": [
+   "EndoMapper"
+  ],
+  "uids": [
+   "D0057",
+   "D0242",
+   "D0288",
+   "D0405",
+   "D0536"
+  ],
+  "urls": [
+   "https://doi.org/10.1038/s41597-023-02564-7",
+   "https://www.synapse.org/#!Synapse:syn26707219"
+  ],
+  "titles": [
+   "EndoMapper dataset of complete calibrated endoscopy procedures",
+   "Endomapper dataset of complete calibrated endoscopy procedures"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "endotest",
+  "names": [
+   "ENDOTEST"
+  ],
+  "uids": [
+   "D0126"
+  ],
+  "urls": [
+   "https://tandf.figshare.com/articles/dataset/A_video_based_benchmark_data_set_ENDOTEST_to_evaluate_computer-aided_polyp_detection_systems/20069835"
+  ],
+  "titles": [
+   "A video based benchmark data set (ENDOTEST) to evaluate computer-aided polyp detection systems"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "endovis2015polypdetection",
+  "names": [
+   "EndoVis 2015 Polyp Detection"
+  ],
+  "uids": [
+   "D0844"
+  ],
+  "urls": [
+   "http://polyp.grand-challenge.org"
+  ],
+  "titles": [
+   "polyp"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "endovisabnormalsubchallenge",
+  "names": [
+   "EndoVis abnormal sub-challenge"
+  ],
+  "uids": [
+   "D0839"
+  ],
+  "urls": [
+   "http://endovissub-abnormal.grand-challenge.org"
+  ],
+  "titles": [
+   "endovissub-abnormal"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "foldit",
+  "names": [
+   "FoldIt"
+  ],
+  "uids": [
+   "D0931",
+   "D1018"
+  ],
+  "urls": [
+   "https://zenodo.org/records/4993651"
+  ],
+  "titles": [
+   "FoldIt: Haustral Folds Detection and Segmentation in Colonoscopy Videos"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "folditpublicdataset",
+  "names": [
+   "FoldIt Public Dataset"
+  ],
+  "uids": [
+   "D0911",
+   "D1011"
+  ],
+  "urls": [
+   "https://zenodo.org/records/5519974"
+  ],
+  "titles": [
+   "FoldIt Public Dataset"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "giana",
+  "names": [
+   "GIANA"
+  ],
+  "uids": [
+   "D0855"
+  ],
+  "urls": [
+   "https://giana.grand-challenge.org"
+  ],
+  "titles": [
+   "giana"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "giana2017",
+  "names": [
+   "GIANA 2017"
+  ],
+  "uids": [
+   "D0842"
+  ],
+  "urls": [
+   "http://endovissub2017-giana.grand-challenge.org"
+  ],
+  "titles": [
+   "endovissub2017-giana"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "hyperkvasir",
+  "names": [
+   "HyperKvasir"
+  ],
+  "uids": [
+   "D0002",
+   "D0040",
+   "D0349",
+   "D1119",
+   "D1120"
+  ],
+  "urls": [
+   "https://doi.org/10.1038/s41597-020-00622-y",
+   "https://doi.org/10.31219/osf.io/mkzcq",
+   "https://zenodo.org/records/7785986",
+   "https://zenodo.org/records/7785989"
+  ],
+  "titles": [
+   "13: The Hyper Kvasir Dataset Landmark Classification (Lower GI tract)",
+   "14: The Hyper Kvasir Dataset Landmark Classification (Upper GI tract)",
+   "HyperKvasir, A Comprehensive Multi-Class Image and Video Dataset for Gastrointestinal Endoscopy"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "ibdcrowdsourcedendoscopyannotation",
+  "names": [
+   "IBD Crowdsourced Endoscopy Annotation (Digital Endoscopy DREAM)"
+  ],
+  "uids": [
+   "D0292"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn18599653"
+  ],
+  "titles": [
+   "IBD - Crowdsourced Endoscopy Annotation"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "infocolon",
+  "names": [
+   "InfoColon"
+  ],
+  "uids": [
+   "D0050",
+   "D0179"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn55251782"
+  ],
+  "titles": [
+   "InfoColon - A Real-World Dataset for Informative Frame Classification in Colonoscopy"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "ldpolypvideo",
+  "names": [
+   "LDPolypVideo"
+  ],
+  "uids": [
+   "D0000"
+  ],
+  "urls": [
+   "https://doi.org/10.1007/978-3-030-87240-3_37"
+  ],
+  "titles": [
+   "LDPolypVideo Benchmark: A Large-Scale Colonoscopy Video Dataset of Diverse Polyps"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "pocaco",
+  "names": [
+   "POCACO"
+  ],
+  "uids": [
+   "D0915"
+  ],
+  "urls": [
+   "https://zenodo.org/records/14444297"
+  ],
+  "titles": [
+   "POCACO: Polyp Videos for CADe Comparison"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "polypsize",
+  "names": [
+   "Polyp-Size"
+  ],
+  "uids": [
+   "D0102"
+  ],
+  "urls": [
+   "https://springernature.figshare.com/articles/dataset/Polyp-Size_A_Precisely_Annotated_Endoscopic_Dataset_for_AI-Assisted_Polyp_Sizing/28030115"
+  ],
+  "titles": [
+   "Polyp-Size: A Precisely Annotated Endoscopic Dataset for AI-Assisted Polyp Sizing"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "polypsset",
+  "names": [
+   "PolypsSet"
+  ],
+  "uids": [
+   "D0015",
+   "D0284"
+  ],
+  "urls": [
+   "https://doi.org/10.1371/journal.pone.0255809"
+  ],
+  "titles": [
+   "Colonoscopy Polyp Detection and Classification: Dataset Creation and Comparative Evaluations"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "procedurallygeneratedcolonoscopyandlaparoscopydata",
+  "names": [
+   "Procedurally Generated Colonoscopy and Laparoscopy Data"
+  ],
+  "uids": [
+   "D0123",
+   "D0236"
+  ],
+  "urls": [
+   "https://rdr.ucl.ac.uk/articles/dataset/Procedurally_Generated_Colonoscopy_and_Laparoscopy_Data_For_Improved_Model_Training_Performance/23843904"
+  ],
+  "titles": [
+   "Procedurally Generated Colonoscopy and Laparoscopy Data For Improved Model Training Performance"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "realcolon",
+  "names": [
+   "REAL-Colon",
+   "REAL-Colon (polyp counting benchmark)"
+  ],
+  "uids": [
+   "D0020",
+   "D0119",
+   "D0121",
+   "D0141",
+   "D0252",
+   "D0342",
+   "D0464"
+  ],
+  "urls": [
+   "https://doi.org/10.1038/s41597-024-03359-0",
+   "https://doi.org/10.1109/isbi60581.2025.10981023",
+   "https://figshare.com/articles/media/Supplementary_REAL-Colon_A_dataset_for_developing_real-world_AI_2_applications_in_colonoscopy/25315261",
+   "https://plus.figshare.com/articles/media/REAL-colon_dataset/22202866"
+  ],
+  "titles": [
+   "REAL-Colon: A dataset for developing real-world AI applications in colonoscopy",
+   "REAL-colon dataset",
+   "Supplementary Materials for REAL-Colon: A Dataset for Developing Real-World AI Applications in Colonoscopy"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "realcolontemporalsegmentationannotations",
+  "names": [
+   "REAL-Colon temporal segmentation annotations"
+  ],
+  "uids": [
+   "D0034",
+   "D0118"
+  ],
+  "urls": [
+   "https://doi.org/10.1016/j.cmpb.2025.108782",
+   "https://figshare.com/articles/dataset/Temporal_Segmentation_Annotation_for_the_REAL-Colon_dataset/26472913"
+  ],
+  "titles": [
+   "A temporal convolutional network-based approach and a benchmark dataset for colonoscopy video temporal segmentation",
+   "Temporal Segmentation Annotation for the REAL-Colon dataset"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "realsyncol",
+  "names": [
+   "RealSynCol"
+  ],
+  "uids": [
+   "D0952"
+  ],
+  "urls": [
+   "https://zenodo.org/records/19705803"
+  ],
+  "titles": [
+   "RealSynCol. A high-fidelity synthetic colon dataset for 3D reconstruction applications"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "renjiesdvideodataset",
+  "names": [
+   "Renji ESD video dataset"
+  ],
+  "uids": [
+   "D0457"
+  ],
+  "urls": [
+   "https://springernature.figshare.com/articles/dataset/Renji_endoscopic_submucosal_dissection_video_data_set_for_colorectal_neoplastic_lesions/28737686"
+  ],
+  "titles": [
+   "Renji endoscopic submucosal dissection video data set for colorectal neoplastic lesions"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "rtgancolonoscopytemporaldataset",
+  "names": [
+   "RT-GAN colonoscopy temporal dataset"
+  ],
+  "uids": [
+   "D0910",
+   "D1019"
+  ],
+  "urls": [
+   "https://zenodo.org/records/15460791"
+  ],
+  "titles": [
+   "RT-GAN: Recurrent Temporal GAN for Adding Lightweight Temporal Consistency to Frame-Based Domain Translation Approaches"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "segcol",
+  "names": [
+   "SegCol (EndoVis)"
+  ],
+  "uids": [
+   "D0200"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn54124209"
+  ],
+  "titles": [
+   "SegCol_Endovis"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "simcol",
+  "names": [
+   "SimCol"
+  ],
+  "uids": [
+   "D0265"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/tmrb.2023.3320267"
+  ],
+  "titles": [
+   "Bimodal Camera Pose Prediction for Endoscopy"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "simcol3d",
+  "names": [
+   "SimCol3D"
+  ],
+  "uids": [
+   "D0043"
+  ],
+  "urls": [
+   "https://doi.org/10.1016/j.media.2024.103195"
+  ],
+  "titles": [
+   "SimCol3D \u2014 3D reconstruction during colonoscopy challenge"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "simcolto3d2022",
+  "names": [
+   "SimCol-to-3D 2022"
+  ],
+  "uids": [
+   "D0051",
+   "D0180"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn28548633"
+  ],
+  "titles": [
+   "SimCol-to-3D 2022 - 3D Reconstruction During Colonoscopy"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "sunseg",
+  "names": [
+   "SUN-SEG"
+  ],
+  "uids": [
+   "D0013",
+   "D0246"
+  ],
+  "urls": [
+   "https://doi.org/10.1007/s11633-022-1371-y"
+  ],
+  "titles": [
+   "Video Polyp Segmentation: A Deep Learning Perspective"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "xdcyclegandepthdataset",
+  "names": [
+   "XDCycleGAN Depth Dataset"
+  ],
+  "uids": [
+   "D0917"
+  ],
+  "urls": [
+   "https://zenodo.org/records/5520029"
+  ],
+  "titles": [
+   "XDCycleGAN Depth Dataset"
+  ]
+ },
+ {
+  "category": "DATASET-C-COL",
+  "key": "xdcycleganvcdataset",
+  "names": [
+   "XDCycleGAN VC Dataset"
+  ],
+  "uids": [
+   "D0914"
+  ],
+  "urls": [
+   "https://zenodo.org/records/5520019"
+  ],
+  "titles": [
+   "XDCycleGAN VC Datatset"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "admlsir",
+  "names": [
+   "ADM_LSIR"
+  ],
+  "uids": [
+   "D1234",
+   "D1347"
+  ],
+  "urls": [
+   "https://zenodo.org/records/20470138"
+  ],
+  "titles": [
+   "ADM_LSIR: a physics-inspired laparoscopic aerosol degradation dataset"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "ajuset",
+  "names": [
+   "AJU-Set"
+  ],
+  "uids": [
+   "D0373",
+   "D0493"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/access.2020.2969885"
+  ],
+  "titles": [
+   "Surgical Tools Detection Based on Modulated Anchoring Network in Laparoscopic Videos"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "autolaparo",
+  "names": [
+   "AutoLaparo"
+  ],
+  "uids": [
+   "D0384"
+  ],
+  "urls": [
+   "https://doi.org/10.1007/978-3-031-16449-1_46"
+  ],
+  "titles": [
+   "AutoLaparo: A New Dataset of Integrated Multi-tasks for Image-guided Surgical Automation in Laparoscopic Hysterectomy"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "bypass40",
+  "names": [
+   "Bypass40"
+  ],
+  "uids": [
+   "D0515"
+  ],
+  "urls": [
+   "https://doi.org/10.1007/s11548-021-02388-z"
+  ],
+  "titles": [
+   "Multi-Task Temporal Convolutional Networks for Joint Recognition of Surgical Phases and Steps in Gastric Bypass Procedures"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "cadis",
+  "names": [
+   "CaDIS"
+  ],
+  "uids": [
+   "D0358"
+  ],
+  "urls": [
+   "https://doi.org/10.1016/j.media.2021.102053"
+  ],
+  "titles": [
+   "CaDIS: Cataract dataset for surgical RGB-image segmentation"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "cataract101",
+  "names": [
+   "Cataract-101 (extended labels)"
+  ],
+  "uids": [
+   "D1210",
+   "D1313"
+  ],
+  "urls": [
+   "https://zenodo.org/records/4984167"
+  ],
+  "titles": [
+   "Cataract101-Extended labels"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "cataracts",
+  "names": [
+   "CATARACTS"
+  ],
+  "uids": [
+   "D0589"
+  ],
+  "urls": [
+   "https://cataracts.grand-challenge.org/"
+  ],
+  "titles": [
+   "CATARACTS"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "cataracts2018",
+  "names": [
+   "CATARACTS 2018"
+  ],
+  "uids": [
+   "D0847"
+  ],
+  "urls": [
+   "https://cataracts2018.grand-challenge.org"
+  ],
+  "titles": [
+   "cataracts2018"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "cataracts2020",
+  "names": [
+   "CATARACTS 2020"
+  ],
+  "uids": [
+   "D0848"
+  ],
+  "urls": [
+   "https://cataracts2020.grand-challenge.org"
+  ],
+  "titles": [
+   "cataracts2020"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "cataractssemanticsegmentation2020",
+  "names": [
+   "CATARACTS Semantic Segmentation 2020"
+  ],
+  "uids": [
+   "D0846"
+  ],
+  "urls": [
+   "https://cataracts-semantic-segmentation2020.grand-challenge.org"
+  ],
+  "titles": [
+   "cataracts-semantic-segmentation2020"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "cdscosa",
+  "names": [
+   "CDS-COSA"
+  ],
+  "uids": [
+   "D1222",
+   "D1332"
+  ],
+  "urls": [
+   "https://zenodo.org/records/20627949"
+  ],
+  "titles": [
+   "CDS-COSA-Dataset-2026"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "cholec80",
+  "names": [
+   "Cholec80"
+  ],
+  "uids": [
+   "D0345",
+   "D0474"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/tmi.2016.2593957"
+  ],
+  "titles": [
+   "EndoNet: A Deep Architecture for Recognition Tasks on Laparoscopic Videos"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "cholec80boxes",
+  "names": [
+   "Cholec80-Boxes"
+  ],
+  "uids": [
+   "D1216",
+   "D1323"
+  ],
+  "urls": [
+   "https://zenodo.org/records/13170928"
+  ],
+  "titles": [
+   "Cholec80-Boxes: Bounding-Box Labels for Surgical Tools in Five Cholecystectomy Videos"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "cholect50",
+  "names": [
+   "CholecT50"
+  ],
+  "uids": [
+   "D0348",
+   "D0477"
+  ],
+  "urls": [
+   "https://doi.org/10.1016/j.media.2022.102433"
+  ],
+  "titles": [
+   "Rendezvous: Attention mechanisms for the recognition of surgical action triplets in endoscopic videos"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "cholectrack20",
+  "names": [
+   "CholecTrack20"
+  ],
+  "uids": [
+   "D0087",
+   "D0294",
+   "D0402",
+   "D0533"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn53182642"
+  ],
+  "titles": [
+   "CholecTrack20 Dataset for Multi-Class Multiple Tool Tracking in Laparoscopic Surgery"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "cholectriplet2021",
+  "names": [
+   "CholecTriplet2021"
+  ],
+  "uids": [
+   "D0675",
+   "D0849"
+  ],
+  "urls": [
+   "https://cholectriplet2021.grand-challenge.org",
+   "https://cholectriplet2021.grand-challenge.org/"
+  ],
+  "titles": [
+   "CholecTriplet 2021",
+   "cholectriplet2021"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "cholectriplet2022",
+  "names": [
+   "CholecTriplet2022"
+  ],
+  "uids": [
+   "D0699"
+  ],
+  "urls": [
+   "https://cholectriplet2022.grand-challenge.org/"
+  ],
+  "titles": [
+   "CholecTriplet2022: Surgical Action Triplet Detection"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "dreaming",
+  "names": [
+   "DREAMING"
+  ],
+  "uids": [
+   "D0770"
+  ],
+  "urls": [
+   "https://dreaming.grand-challenge.org/"
+  ],
+  "titles": [
+   "Diminished Reality for Emerging Applications in Medicine"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "drends",
+  "names": [
+   "DRENDS"
+  ],
+  "uids": [
+   "D0557"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn74545348"
+  ],
+  "titles": [
+   "RoDEO"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "egosurgeryphase",
+  "names": [
+   "EgoSurgery-Phase"
+  ],
+  "uids": [
+   "D0367"
+  ],
+  "urls": [
+   "https://doi.org/10.1007/978-3-031-72089-5_18"
+  ],
+  "titles": [
+   "EgoSurgery-Phase: A Dataset of Surgical Phase Recognition from Egocentric Open Surgery Videos"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "endoscopicpituitarysurgeryonahighfidelitybenchtopphantom",
+  "names": [
+   "Endoscopic Pituitary Surgery on a High-fidelity Bench-top Phantom"
+  ],
+  "uids": [
+   "D0462"
+  ],
+  "urls": [
+   "https://rdr.ucl.ac.uk/articles/dataset/Endoscopic_Pituitary_Surgery_on_a_High-fidelity_Bench-top_Phantom/26511049"
+  ],
+  "titles": [
+   "Endoscopic Pituitary Surgery on a High-fidelity Bench-top Phantom"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "endovis2015instrument",
+  "names": [
+   "EndoVis 2015 Instrument"
+  ],
+  "uids": [
+   "D0841"
+  ],
+  "urls": [
+   "http://endovissub-instrument.grand-challenge.org"
+  ],
+  "titles": [
+   "endovissub-instrument"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "endovis2017kidneyboundarydetection",
+  "names": [
+   "EndoVis 2017 Kidney Boundary Detection"
+  ],
+  "uids": [
+   "D0843"
+  ],
+  "urls": [
+   "http://endovissub2017-kidneyboundarydetection.grand-challenge.org"
+  ],
+  "titles": [
+   "endovissub2017-kidneyboundarydetection"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "endovis2017roboticinstrumentsegmentation",
+  "names": [
+   "EndoVis 2017 Robotic Instrument Segmentation"
+  ],
+  "uids": [
+   "D0851"
+  ],
+  "urls": [
+   "https://endovissub2017-roboticinstrumentsegmentation.grand-challenge.org"
+  ],
+  "titles": [
+   "endovissub2017-roboticinstrumentsegmentation"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "endovis2017surgicalworkflow",
+  "names": [
+   "EndoVis 2017 Surgical Workflow"
+  ],
+  "uids": [
+   "D0852"
+  ],
+  "urls": [
+   "https://endovissub2017-workflow.grand-challenge.org"
+  ],
+  "titles": [
+   "endovissub2017-workflow"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "endovis2018roboticscenesegmentation",
+  "names": [
+   "EndoVis 2018 Robotic Scene Segmentation"
+  ],
+  "uids": [
+   "D0853"
+  ],
+  "urls": [
+   "https://endovissub2018-roboticscenesegmentation.grand-challenge.org/home"
+  ],
+  "titles": [
+   "endovissub2018-roboticscenesegmentation"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "endovis2020",
+  "names": [
+   "EndoVis 2020"
+  ],
+  "uids": [
+   "D1219",
+   "D1326"
+  ],
+  "urls": [
+   "https://zenodo.org/records/3715646"
+  ],
+  "titles": [
+   "Endoscopic Vision Challenge"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "endovisworkflowandskill",
+  "names": [
+   "EndoVis Workflow and Skill"
+  ],
+  "uids": [
+   "D0850"
+  ],
+  "urls": [
+   "https://endovissub-workflowandskill.grand-challenge.org"
+  ],
+  "titles": [
+   "endovissub-workflowandskill"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "esad",
+  "names": [
+   "ESAD"
+  ],
+  "uids": [
+   "D1225",
+   "D1335"
+  ],
+  "urls": [
+   "https://zenodo.org/records/4471476"
+  ],
+  "titles": [
+   "ESAD: Endoscopic Surgeon Action Detection Dataset"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "fetoscopyplacentadataset",
+  "names": [
+   "Fetoscopy Placenta Dataset"
+  ],
+  "uids": [
+   "D0454"
+  ],
+  "urls": [
+   "https://rdr.ucl.ac.uk/articles/dataset/Fetoscopy_Placenta_Dataset/30536171"
+  ],
+  "titles": [
+   "Fetoscopy Placenta Dataset"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "fetreg",
+  "names": [
+   "FetReg"
+  ],
+  "uids": [
+   "D0564"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn25313156"
+  ],
+  "titles": [
+   "FetReg - Placental Vessel Segmentation and Registration in Fetoscopy"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "fetreg2021",
+  "names": [
+   "FetReg 2021"
+  ],
+  "uids": [
+   "D0321",
+   "D0432"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn25313156"
+  ],
+  "titles": [
+   "FetReg - Placental Vessel Segmentation and Registration in Fetoscopy"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "hashemi2025humanroboticsurgerydataset",
+  "names": [
+   "Hashemi 2025 human robotic surgery dataset"
+  ],
+  "uids": [
+   "D0419"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn65669574"
+  ],
+  "titles": [
+   "Closing the data gap - leveraging pretrained neural networks for robotic surgical assessment on limited clinical data"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "heichole",
+  "names": [
+   "HeiChole"
+  ],
+  "uids": [
+   "D0380",
+   "D0395",
+   "D0509",
+   "D0526"
+  ],
+  "urls": [
+   "https://doi.org/10.1016/j.media.2023.102770",
+   "https://www.synapse.org/#!Synapse:syn18824884"
+  ],
+  "titles": [
+   "Comparative validation of machine learning algorithms for surgical workflow and skill analysis with the HeiChole benchmark",
+   "Surgical Workflow and Skill Analysis Challenge (HeiChole Benchmark)"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "heicholeheisurf",
+  "names": [
+   "HeiChole / HeiSurF"
+  ],
+  "uids": [
+   "D0189",
+   "D0397"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn25101790"
+  ],
+  "titles": [
+   "HeiChole Surgical Workflow Analysis and Full Scene Segmentation (HeiSurF)"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "heico",
+  "names": [
+   "HeiCo"
+  ],
+  "uids": [
+   "D0430",
+   "D0562"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn21903917"
+  ],
+  "titles": [
+   "Heidelberg Colorectal Data Set for Surgical Data Science in the Sensor Operating Room"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "heisurf",
+  "names": [
+   "HeiSurF"
+  ],
+  "uids": [
+   "D0528"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn25101790"
+  ],
+  "titles": [
+   "HeiChole Surgical Workflow Analysis and Full Scene Segmentation (HeiSurF)"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "hiswarlls",
+  "names": [
+   "HiSWA-RLLS"
+  ],
+  "uids": [
+   "D0413",
+   "D0544"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn54626087"
+  ],
+  "titles": [
+   "EndoVis24-HiSWA-RLLS Challenge"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "imed",
+  "names": [
+   "iMED"
+  ],
+  "uids": [
+   "D0447"
+  ],
+  "urls": [
+   "https://rdr.ucl.ac.uk/articles/dataset/iMED_A_Multi-Endoscope_Dataset_for_Surgical_3D_Perception/32764638"
+  ],
+  "titles": [
+   "iMED: A Multi-Endoscope Dataset for Surgical 3D Perception"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "jigsaws",
+  "names": [
+   "JIGSAWS"
+  ],
+  "uids": [
+   "D0356",
+   "D0476"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/tbme.2016.2647680"
+  ],
+  "titles": [
+   "A Dataset and Benchmarks for Segmentation and Recognition of Gestures in Robotic Surgery"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "lapsurg230k",
+  "names": [
+   "LapSurg-230K"
+  ],
+  "uids": [
+   "D0448"
+  ],
+  "urls": [
+   "https://figshare.com/articles/dataset/LapSurg-230K/32237319"
+  ],
+  "titles": [
+   "LapSurg-230K"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "lask",
+  "names": [
+   "LASK"
+  ],
+  "uids": [
+   "D1252",
+   "D1312"
+  ],
+  "urls": [
+   "https://zenodo.org/records/20752651"
+  ],
+  "titles": [
+   "LASK: A Dataset for Laparoscopic Skill and 7-DoF Kinematics"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "m2cai16toollocations",
+  "names": [
+   "m2cai16-tool-locations"
+  ],
+  "uids": [
+   "D0347",
+   "D0516"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/wacv.2018.00081",
+   "https://doi.org/10.48550/arxiv.1802.08774"
+  ],
+  "titles": [
+   "Tool Detection and Operative Skill Assessment in Surgical Videos Using Region-Based Convolutional Neural Networks"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "macs",
+  "names": [
+   "MACS"
+  ],
+  "uids": [
+   "D0466"
+  ],
+  "urls": [
+   "https://rdr.ucl.ac.uk/articles/dataset/Microsurgical_Aneurysm_Clipping_Surgery_MACS_Dataset_with_image-level_aneurysm_presence_absence_annotations/23533731"
+  ],
+  "titles": [
+   "Microsurgical Aneurysm Clipping Surgery (MACS) Dataset with image-level aneurysm presence/absence annotations"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "mipo",
+  "names": [
+   "MIPO"
+  ],
+  "uids": [
+   "D1213",
+   "D1247",
+   "D1317"
+  ],
+  "urls": [
+   "https://zenodo.org/records/17311085",
+   "https://zenodo.org/records/17698695"
+  ],
+  "titles": [
+   "Self-supervised spatial features extracted from the MIPO dataset videos",
+   "Videos of the MIPO Dataset for Surgical Workflow Recognition in Orthopaedic Surgery"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "misaw",
+  "names": [
+   "MISAW"
+  ],
+  "uids": [
+   "D0401",
+   "D0532"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn21776936"
+  ],
+  "titles": [
+   "MIcro-Surgical Anastomose Workflow recognition on training sessions (MISAW)"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "neurosurgicaltools",
+  "names": [
+   "NeuroSurgicalTools"
+  ],
+  "uids": [
+   "D0370"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/tmi.2015.2450831"
+  ],
+  "titles": [
+   "Detecting Surgical Tools by Modelling Local Appearance and Global Shape"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "orenasavefocus",
+  "names": [
+   "ORena SAVE FOCUS"
+  ],
+  "uids": [
+   "D1253"
+  ],
+  "urls": [
+   "https://zenodo.org/records/19848528"
+  ],
+  "titles": [
+   "ORena-FOCUS: Foreign Object Contextual Understanding for Safe Surgical AI Challenge"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "p2ilf",
+  "names": [
+   "P2ILF"
+  ],
+  "uids": [
+   "D0719"
+  ],
+  "urls": [
+   "https://p2ilf.grand-challenge.org/"
+  ],
+  "titles": [
+   "Preoperative to Intraoperative Laparoscopy Fusion"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "phakir",
+  "names": [
+   "PhaKIR"
+  ],
+  "uids": [
+   "D1259"
+  ],
+  "urls": [
+   "https://zenodo.org/records/15740620"
+  ],
+  "titles": [
+   "PhaKIR Dataset - Surgical Procedure Phase, Keypoint, and Instrument Recognition"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "pitvis",
+  "names": [
+   "PitVis"
+  ],
+  "uids": [
+   "D0548"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn51232283"
+  ],
+  "titles": [
+   "PitVis - Workflow Recognition in Endoscopic Pituitary Surgery"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "pitvis2023",
+  "names": [
+   "PitVis-2023"
+  ],
+  "uids": [
+   "D0313",
+   "D0417"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn51232283"
+  ],
+  "titles": [
+   "PitVis - Workflow Recognition in Endoscopic Pituitary Surgery"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "pitvqa",
+  "names": [
+   "PitVQA"
+  ],
+  "uids": [
+   "D0461"
+  ],
+  "urls": [
+   "https://rdr.ucl.ac.uk/articles/dataset/PitVQA_A_Dataset_of_Visual_Question_Answering_in_Pituitary_Surgery/27004666"
+  ],
+  "titles": [
+   "PitVQA: A Dataset of Visual Question Answering in Pituitary Surgery"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "pitvqaanticipation",
+  "names": [
+   "PitVQA-Anticipation"
+  ],
+  "uids": [
+   "D0443"
+  ],
+  "urls": [
+   "https://rdr.ucl.ac.uk/articles/dataset/PitVQA-Anticipation_dataset_with_images_and_question-answer_pairs/33436735"
+  ],
+  "titles": [
+   "PitVQA-Anticipation dataset with images and question-answer pairs"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "rarp45",
+  "names": [
+   "RARP-45"
+  ],
+  "uids": [
+   "D0487"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/tmi.2022.3147640"
+  ],
+  "titles": [
+   "Gesture Recognition in Robotic Surgery With Multimodal Attention"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "renjiesdvideodataset",
+  "names": [
+   "Renji ESD video dataset (Esophagus)"
+  ],
+  "uids": [
+   "D0453"
+  ],
+  "urls": [
+   "https://springernature.figshare.com/articles/dataset/Renji_endoscopic_submucosal_dissection_video_data_set_for_Esophagus/28777862"
+  ],
+  "titles": [
+   "Renji endoscopic submucosal dissection video data set for Esophagus"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "robotool",
+  "names": [
+   "RoboTool"
+  ],
+  "uids": [
+   "D0537"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn22398986"
+  ],
+  "titles": [
+   "Image Compositing for Segmentation of Surgical Tools without Manual Annotations"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "robotoolsemisyntheticsurgicaltooldata",
+  "names": [
+   "RoboTool / semi-synthetic surgical tool data"
+  ],
+  "uids": [
+   "D0406"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn22398986"
+  ],
+  "titles": [
+   "Image Compositing for Segmentation of Surgical Tools without Manual Annotations"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "robustmips",
+  "names": [
+   "ROBUST-MIPS"
+  ],
+  "uids": [
+   "D0418",
+   "D0549"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn64023381"
+  ],
+  "titles": [
+   "Robust Medical Instrument Pose and Segmentation (ROBUST-MIPS)"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "robustmis2019",
+  "names": [
+   "ROBUST-MIS 2019"
+  ],
+  "uids": [
+   "D0856"
+  ],
+  "urls": [
+   "https://robustmis2019.grand-challenge.org"
+  ],
+  "titles": [
+   "robustmis2019"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "sagescvschallenge",
+  "names": [
+   "SAGES CVS Challenge"
+  ],
+  "uids": [
+   "D1220",
+   "D1328"
+  ],
+  "urls": [
+   "https://zenodo.org/records/10992104"
+  ],
+  "titles": [
+   "The SAGES Critical View of Safety Challenge"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "sarasesad",
+  "names": [
+   "SARAS-ESAD"
+  ],
+  "uids": [
+   "D0641"
+  ],
+  "urls": [
+   "https://saras-esad.grand-challenge.org/"
+  ],
+  "titles": [
+   "SARAS-ESAD"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "sarasmesad",
+  "names": [
+   "SARAS-MESAD"
+  ],
+  "uids": [
+   "D0685"
+  ],
+  "urls": [
+   "https://saras-mesad.grand-challenge.org/"
+  ],
+  "titles": [
+   "SARAS-MESAD"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "sarrarp50",
+  "names": [
+   "SAR-RARP50"
+  ],
+  "uids": [
+   "D0408",
+   "D0539"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn27618412"
+  ],
+  "titles": [
+   "SAR-RARP50"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "scared",
+  "names": [
+   "SCARED"
+  ],
+  "uids": [
+   "D0620",
+   "D0854"
+  ],
+  "urls": [
+   "https://endovissub2019-scared.grand-challenge.org",
+   "https://endovissub2019-scared.grand-challenge.org/"
+  ],
+  "titles": [
+   "Stereo Correspondence and Reconstruction of Endoscopic Data",
+   "endovissub2019-scared"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "sics155",
+  "names": [
+   "SICS-155"
+  ],
+  "uids": [
+   "D1214",
+   "D1227",
+   "D1321",
+   "D1337"
+  ],
+  "urls": [
+   "https://zenodo.org/records/15087692",
+   "https://zenodo.org/records/19482928"
+  ],
+  "titles": [
+   "Phase Recognition in Small Incision Cataract Surgery Videos",
+   "SICS-155: Phase Recognition in Small Incision Cataract Surgery Videos"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "simsurgskill",
+  "names": [
+   "SimSurgSkill"
+  ],
+  "uids": [
+   "D0394",
+   "D0525"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn25127311"
+  ],
+  "titles": [
+   "SimSurgSkill - Objective Surgical Skills Assessment in VR Simulation"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "slam",
+  "names": [
+   "SLAM"
+  ],
+  "uids": [
+   "D0360"
+  ],
+  "urls": [
+   "https://doi.org/10.1038/s41597-025-05093-7"
+  ],
+  "titles": [
+   "A Comprehensive Video Dataset for Surgical Laparoscopic Action Analysis"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "stereoendoscopicdataset",
+  "names": [
+   "Stereo Endoscopic Dataset"
+  ],
+  "uids": [
+   "D1212",
+   "D1316"
+  ],
+  "urls": [
+   "https://zenodo.org/records/7385603"
+  ],
+  "titles": [
+   "Stereo Endoscopic Dataset"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "stereomis",
+  "names": [
+   "StereoMIS"
+  ],
+  "uids": [
+   "D0511",
+   "D1229",
+   "D1310"
+  ],
+  "urls": [
+   "https://doi.org/10.1007/s11548-023-02919-w",
+   "https://zenodo.org/records/8154924"
+  ],
+  "titles": [
+   "Learning how to robustly estimate camera pose in endoscopic videos",
+   "StereoMIS"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "stir",
+  "names": [
+   "STIR"
+  ],
+  "uids": [
+   "D0424",
+   "D0440",
+   "D0555",
+   "D0572"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn65877821",
+   "https://www.synapse.org/#!Synapse:syn74381557"
+  ],
+  "titles": [
+   "2025 STIR Challenge",
+   "2026 STIR Challenge"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "surghintannotations",
+  "names": [
+   "SurgHint Annotations (HeiCo, Surgical Gauze)"
+  ],
+  "uids": [
+   "D1250"
+  ],
+  "urls": [
+   "https://zenodo.org/records/22769709"
+  ],
+  "titles": [
+   "SurgHint Annotations for ORena FOCUS Challenge"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "surgicalinstrumentmultidomainsegmentation",
+  "names": [
+   "Surgical Instrument Multi-Domain Segmentation"
+  ],
+  "uids": [
+   "D0566"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn47193563"
+  ],
+  "titles": [
+   "Surgical Instrument Multi-Domain Segmentation Challenge"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "surgicalinstrumentmultidomainsegmentationchallenge",
+  "names": [
+   "Surgical Instrument Multi-Domain Segmentation Challenge"
+  ],
+  "uids": [
+   "D0434"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn47193563"
+  ],
+  "titles": [
+   "Surgical Instrument Multi-Domain Segmentation Challenge"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "surgripe",
+  "names": [
+   "SurgRIPE"
+  ],
+  "uids": [
+   "D0411",
+   "D0542"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn51471789"
+  ],
+  "titles": [
+   "Surgical Robot Instrument Pose Estimation (SurgRIPE)"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "surgt",
+  "names": [
+   "SurgT"
+  ],
+  "uids": [
+   "D0717"
+  ],
+  "urls": [
+   "https://surgt.grand-challenge.org/"
+  ],
+  "titles": [
+   "SurgT: Surgical Tracking"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "surgtoolloc2022",
+  "names": [
+   "SurgToolLoc 2022"
+  ],
+  "uids": [
+   "D0724"
+  ],
+  "urls": [
+   "https://surgtoolloc.grand-challenge.org/"
+  ],
+  "titles": [
+   "Surgical Tool Localization in endoscopic videos"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "surgtoolloc2023",
+  "names": [
+   "SurgToolLoc 2023"
+  ],
+  "uids": [
+   "D0758"
+  ],
+  "urls": [
+   "https://surgtoolloc23.grand-challenge.org/"
+  ],
+  "titles": [
+   "Endoscopic surgical tool localization using tool presence labels"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "surgvisdom",
+  "names": [
+   "SurgVisDom"
+  ],
+  "uids": [
+   "D0393",
+   "D0524",
+   "D0650",
+   "D0845"
+  ],
+  "urls": [
+   "http://surgvisdom.grand-challenge.org",
+   "https://surgvisdom.grand-challenge.org/",
+   "https://www.synapse.org/#!Synapse:syn22083820"
+  ],
+  "titles": [
+   "SurgVisDom",
+   "SurgVisDom - Surgical Visual Domain Adaptation",
+   "surgvisdom"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "surgvu24",
+  "names": [
+   "SurgVU24"
+  ],
+  "uids": [
+   "D0776"
+  ],
+  "urls": [
+   "https://surgvu24.grand-challenge.org/"
+  ],
+  "titles": [
+   "Surgical Visual Understanding"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "surgvu25",
+  "names": [
+   "SurgVU25"
+  ],
+  "uids": [
+   "D0809"
+  ],
+  "urls": [
+   "https://surgvu25.grand-challenge.org/"
+  ],
+  "titles": [
+   "Surgical Visual Understanding"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "surgvu26",
+  "names": [
+   "SurgVU26"
+  ],
+  "uids": [
+   "D0826"
+  ],
+  "urls": [
+   "https://surgvu26.grand-challenge.org/"
+  ],
+  "titles": [
+   "Surgical Visual Understanding 2026"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "trackves",
+  "names": [
+   "TrackVes"
+  ],
+  "uids": [
+   "D1254"
+  ],
+  "urls": [
+   "https://zenodo.org/records/822053"
+  ],
+  "titles": [
+   "TrackVes Dataset"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "traumathompson",
+  "names": [
+   "Trauma THOMPSON"
+  ],
+  "uids": [
+   "D0761"
+  ],
+  "urls": [
+   "https://thompson-challenge.grand-challenge.org/"
+  ],
+  "titles": [
+   "The Trauma THOMPSON Challenge"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "traumathompson2025",
+  "names": [
+   "Trauma THOMPSON 2025"
+  ],
+  "uids": [
+   "D0807"
+  ],
+  "urls": [
+   "https://t3challenge25.grand-challenge.org/"
+  ],
+  "titles": [
+   "The Trauma THOMPSON Challenge 2025"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "url:https://doi.org/10.1007/978-3-030-59716-0_67",
+  "names": [],
+  "uids": [
+   "D0508"
+  ],
+  "urls": [
+   "https://doi.org/10.1007/978-3-030-59716-0_67"
+  ],
+  "titles": [
+   "Synthetic and Real Inputs for Tool Segmentation in Robotic Surgery"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "url:https://doi.org/10.1007/s11042-017-4699-5",
+  "names": [],
+  "uids": [
+   "D0255",
+   "D0357"
+  ],
+  "urls": [
+   "https://doi.org/10.1007/s11042-017-4699-5"
+  ],
+  "titles": [
+   "Learning laparoscopic video shot classification for gynecological surgery"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "url:https://doi.org/10.1016/j.compbiomed.2021.105121",
+  "names": [],
+  "uids": [
+   "D0497"
+  ],
+  "urls": [
+   "https://doi.org/10.1016/j.compbiomed.2021.105121"
+  ],
+  "titles": [
+   "Automated tool detection with deep learning for monitoring kinematics and eye-hand coordination in microsurgery"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "url:https://doi.org/10.1109/cvpr46437.2021.00940",
+  "names": [],
+  "uids": [
+   "D0375"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/cvpr46437.2021.00940"
+  ],
+  "titles": [
+   "Towards Unified Surgical Skill Assessment"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "url:https://doi.org/10.1109/iceccme57830.2023.10253032",
+  "names": [],
+  "uids": [
+   "D0513"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/iceccme57830.2023.10253032"
+  ],
+  "titles": [
+   "A surgical dataset from the da Vinci Research Kit for task automation and recognition"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "url:https://doi.org/10.1109/tmi.2014.2340473",
+  "names": [],
+  "uids": [
+   "D0369"
+  ],
+  "urls": [
+   "https://doi.org/10.1109/tmi.2014.2340473"
+  ],
+  "titles": [
+   "Real-Time Segmentation and Recognition of Surgical Tasks in Cataract Surgery Videos"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "url:https://doi.org/10.70675/767f12cazeacfz469bz8dc7z3678ac4ee7c6",
+  "names": [],
+  "uids": [
+   "D0518"
+  ],
+  "urls": [
+   "https://doi.org/10.70675/767f12cazeacfz469bz8dc7z3678ac4ee7c6"
+  ],
+  "titles": [
+   "Vision-based approaches for surgical activity recognition using laparoscopic and RBGD videos"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "url:https://figshare.com/articles/dataset/Artificial_intelligence-driven_phase_recognition_in_lung_surgery_a_single-center_pilot_study/29652218",
+  "names": [],
+  "uids": [
+   "D0458"
+  ],
+  "urls": [
+   "https://figshare.com/articles/dataset/Artificial_intelligence-driven_phase_recognition_in_lung_surgery_a_single-center_pilot_study/29652218"
+  ],
+  "titles": [
+   "Artificial intelligence-driven phase recognition in lung surgery: a single-center pilot study"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "url:https://www.synapse.org/#!Synapse:syn65669574",
+  "names": [],
+  "uids": [
+   "D0550"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn65669574"
+  ],
+  "titles": [
+   "Closing the data gap - leveraging pretrained neural networks for robotic surgical assessment on limited clinical data"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "url:https://zenodo.org/records/11479346",
+  "names": [],
+  "uids": [
+   "D1228",
+   "D1338"
+  ],
+  "urls": [
+   "https://zenodo.org/records/11479346"
+  ],
+  "titles": [
+   "Dataset and trained models for video denoising in fluorescence guided surgery"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "url:https://zenodo.org/records/19370452",
+  "names": [],
+  "uids": [
+   "D1215",
+   "D1322"
+  ],
+  "urls": [
+   "https://zenodo.org/records/19370452"
+  ],
+  "titles": [
+   "Exploring video recognition models for force estimation in small bowel surgical retractions"
+  ]
+ },
+ {
+  "category": "DATASET-C-SURG",
+  "key": "videobasedactionrecognitionandskillsassessmentporcinemodels",
+  "names": [
+   "Video based Action Recognition and Skills Assessment - Porcine-Models"
+  ],
+  "uids": [
+   "D0056",
+   "D0309",
+   "D0404",
+   "D0535"
+  ],
+  "urls": [
+   "https://www.synapse.org/#!Synapse:syn63852421"
+  ],
+  "titles": [
+   "Video based Action Recognition and Skills Assessment - Porcine-Models"
+  ]
+ }
+]

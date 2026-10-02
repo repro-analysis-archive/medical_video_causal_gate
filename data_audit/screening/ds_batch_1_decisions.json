@@ -1,0 +1,2726 @@
+[
+ {
+  "uid": "D0454",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Fetoscopy Placenta Dataset",
+  "reason": "Fetoscopic laser surgery video frames with placental vessel annotations; doubt rule applied."
+ },
+ {
+  "uid": "D0455",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Supplementary presentation file for a laparoscopic liver surgery AI paper."
+ },
+ {
+  "uid": "D0456",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Systematic review of surgical instrument recognition methods."
+ },
+ {
+  "uid": "D0457",
+  "category": "DATASET-C-COL",
+  "dataset_name": "Renji ESD video dataset",
+  "reason": "Colorectal endoscopic submucosal dissection videos: lower-GI endoscopy video (also surgical procedure)."
+ },
+ {
+  "uid": "D0458",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "",
+  "reason": "Figshare dataset of lung-surgery phase-recognition study; likely annotated surgical video; doubt rule."
+ },
+ {
+  "uid": "D0459",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Single surgical video media file without labels or dataset description."
+ },
+ {
+  "uid": "D0460",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Media supplement of a segmentation method paper."
+ },
+ {
+  "uid": "D0461",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "PitVQA",
+  "reason": "VQA dataset built from endoscopic pituitary surgery videos with phase/instrument annotations."
+ },
+ {
+  "uid": "D0462",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Endoscopic Pituitary Surgery on a High-fidelity Bench-top Phantom",
+  "reason": "Phantom endoscopic pituitary surgery video dataset; annotated surgical video, doubt rule."
+ },
+ {
+  "uid": "D0463",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Conference paper on a tool-segmentation method."
+ },
+ {
+  "uid": "D0464",
+  "category": "DATASET-C-COL",
+  "dataset_name": "REAL-Colon",
+  "reason": "REAL-Colon colonoscopy video dataset record."
+ },
+ {
+  "uid": "D0465",
+  "category": "DATASET-OTHER",
+  "dataset_name": "WEISS Catheter Segmentation in Fluoroscopy Dataset",
+  "reason": "Fluoroscopy catheter segmentation images, not surgical video."
+ },
+ {
+  "uid": "D0466",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "MACS",
+  "reason": "Microsurgical aneurysm clipping surgery video frames with image-level annotations."
+ },
+ {
+  "uid": "D0467",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Software record; no dataset description."
+ },
+ {
+  "uid": "D0468",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Supplementary table of a neurosurgical segmentation paper."
+ },
+ {
+  "uid": "D0469",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Supplementary video of a micro-CT case series."
+ },
+ {
+  "uid": "D0470",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Media supplement of a tool-tracking method paper."
+ },
+ {
+  "uid": "D0471",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Poster on an MRI resection-cavity segmentation method."
+ },
+ {
+  "uid": "D0472",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Pilot-study data on smart-speaker surgical-site confirmation; not video."
+ },
+ {
+  "uid": "D0473",
+  "category": "DATASET-OTHER",
+  "dataset_name": "DDSP EMG dataset",
+  "reason": "EMG spreadsheet dataset, not video."
+ },
+ {
+  "uid": "D0474",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Cholec80",
+  "reason": "EndoNet paper introduced Cholec80 cholecystectomy videos with phase and tool labels."
+ },
+ {
+  "uid": "D0475",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Skill-assessment method paper on existing data."
+ },
+ {
+  "uid": "D0476",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "JIGSAWS",
+  "reason": "JIGSAWS benchmark: robotic surgery video, kinematics, gesture and skill labels."
+ },
+ {
+  "uid": "D0477",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "CholecT50",
+  "reason": "Rendezvous paper introduced CholecT50 laparoscopic action-triplet video dataset."
+ },
+ {
+  "uid": "D0478",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Smartphone motion-analysis platform paper; not a surgical/colonoscopy dataset release."
+ },
+ {
+  "uid": "D0479",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Method paper decoding surgeon activity; no dataset release."
+ },
+ {
+  "uid": "D0480",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Consensus recommendations on surgical video annotation."
+ },
+ {
+  "uid": "D0481",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Review of autonomy in surgical robotics."
+ },
+ {
+  "uid": "D0482",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Representation-learning method paper."
+ },
+ {
+  "uid": "D0483",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Motor-cortex neuroscience study, unrelated."
+ },
+ {
+  "uid": "D0484",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Systematic review of skill assessment."
+ },
+ {
+  "uid": "D0485",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Trajectory segmentation method paper."
+ },
+ {
+  "uid": "D0486",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Literature review on tool detection and tracking."
+ },
+ {
+  "uid": "D0487",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "RARP-45",
+  "reason": "Method paper introducing new in-vivo robotic prostatectomy suturing video+kinematics gesture dataset."
+ },
+ {
+  "uid": "D0488",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Trajectory segmentation method chapter."
+ },
+ {
+  "uid": "D0489",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Systematic review of ML skill assessment."
+ },
+ {
+  "uid": "D0490",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Gesture-recognition method on kinematic data."
+ },
+ {
+  "uid": "D0491",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Gesture-recognition method on existing data."
+ },
+ {
+  "uid": "D0492",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Self-supervised segmentation method; no dataset release described."
+ },
+ {
+  "uid": "D0493",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "AJU-Set",
+  "reason": "Method paper introducing new private cholecystectomy video tool-detection dataset."
+ },
+ {
+  "uid": "D0494",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Method study using existing JIGSAWS data."
+ },
+ {
+  "uid": "D0495",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Review of robot-assisted surgery."
+ },
+ {
+  "uid": "D0496",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Review of instrument segmentation methods and datasets."
+ },
+ {
+  "uid": "D0497",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "",
+  "reason": "Introduces annotated microsurgery tool dataset from 20 surgical videos; doubt rule."
+ },
+ {
+  "uid": "D0498",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Skill-assessment method paper."
+ },
+ {
+  "uid": "D0499",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Skill-evaluation method on robot trajectory data."
+ },
+ {
+  "uid": "D0500",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Skill-assessment method paper; no dataset release."
+ },
+ {
+  "uid": "D0501",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Evaluation framework paper for surgical robotics."
+ },
+ {
+  "uid": "D0502",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Suturing automation method paper."
+ },
+ {
+  "uid": "D0503",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Gesture-recognition method paper."
+ },
+ {
+  "uid": "D0504",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Review of instrument detection and tracking."
+ },
+ {
+  "uid": "D0505",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Tracking/skill method on in-house video segments; no dataset release."
+ },
+ {
+  "uid": "D0506",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Method paper using existing JSES surgical video database."
+ },
+ {
+  "uid": "D0507",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Kinematic dataset of actors expressing emotions",
+  "reason": "Non-medical motion-capture dataset."
+ },
+ {
+  "uid": "D0508",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "",
+  "reason": "Paper releasing custom dVRK video+kinematics tool-segmentation data; abstract empty; doubt rule."
+ },
+ {
+  "uid": "D0509",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "HeiChole",
+  "reason": "HeiChole benchmark: multicentre cholecystectomy videos with phase, action, skill labels."
+ },
+ {
+  "uid": "D0510",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Narrative review of AI in robotic surgery."
+ },
+ {
+  "uid": "D0511",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "StereoMIS",
+  "reason": "Introduces StereoMIS in-vivo stereo robotic surgery video dataset with camera poses."
+ },
+ {
+  "uid": "D0512",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Method paper using an existing aggregated kinematic dataset."
+ },
+ {
+  "uid": "D0513",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "",
+  "reason": "dVRK training-task dataset: video with 154 kinematic variables per trial."
+ },
+ {
+  "uid": "D0514",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Pose-regression method paper."
+ },
+ {
+  "uid": "D0515",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Bypass40",
+  "reason": "Introduces Bypass40 gastric bypass videos with phase and step labels."
+ },
+ {
+  "uid": "D0516",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "m2cai16-tool-locations",
+  "reason": "Introduces m2cai16-tool-locations cholecystectomy video tool bounding boxes."
+ },
+ {
+  "uid": "D0517",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Survey on cloud robotics."
+ },
+ {
+  "uid": "D0518",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "",
+  "reason": "Thesis generating large annotated laparoscopic/RGBD surgical video datasets."
+ },
+ {
+  "uid": "D0519",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Telerobotic surgical system paper."
+ },
+ {
+  "uid": "D0520",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Survey of surgical tool datasets."
+ },
+ {
+  "uid": "D0521",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Gesture-recognition method on JIGSAWS."
+ },
+ {
+  "uid": "D0522",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Method synthesising composited tool-segmentation training images."
+ },
+ {
+  "uid": "D0523",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Method paper using JIGSAWS."
+ },
+ {
+  "uid": "D0524",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgVisDom",
+  "reason": "EndoVis challenge: VR and porcine surgical videos with activity labels."
+ },
+ {
+  "uid": "D0525",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SimSurgSkill",
+  "reason": "EndoVis challenge: VR surgical task videos with objective skill metrics."
+ },
+ {
+  "uid": "D0526",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "HeiChole",
+  "reason": "HeiChole workflow/skill challenge: cholecystectomy videos with labels."
+ },
+ {
+  "uid": "D0527",
+  "category": "DATASET-OTHER",
+  "dataset_name": "StageEmo-VR",
+  "reason": "EEG/physiological emotion dataset, not surgical."
+ },
+ {
+  "uid": "D0528",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "HeiSurF",
+  "reason": "HeiSurF: cholecystectomy video workflow and scene segmentation labels."
+ },
+ {
+  "uid": "D0529",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Challenge team method submission."
+ },
+ {
+  "uid": "D0530",
+  "category": "DATASET-OTHER",
+  "dataset_name": "EndoUC",
+  "reason": "Static ulcerative-colitis endoscopy image frames only; no video."
+ },
+ {
+  "uid": "D0531",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ECA",
+  "reason": "Static images with content-area masks sampled from surgical videos."
+ },
+ {
+  "uid": "D0532",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "MISAW",
+  "reason": "Micro-anastomosis training videos with kinematics and workflow labels."
+ },
+ {
+  "uid": "D0533",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "CholecTrack20",
+  "reason": "Cholecystectomy video dataset with multi-tool tracking annotations."
+ },
+ {
+  "uid": "D0534",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Subglottic Stenosis Dataset",
+  "reason": "Bronchoscopy videos; other endoscopy."
+ },
+ {
+  "uid": "D0535",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Video based Action Recognition and Skills Assessment - Porcine-Models",
+  "reason": "Public in-vivo porcine robotic surgery videos with action/skill labels."
+ },
+ {
+  "uid": "D0536",
+  "category": "DATASET-C-COL",
+  "dataset_name": "EndoMapper",
+  "reason": "Complete calibrated endoscopy procedures, mainly colonoscopy video."
+ },
+ {
+  "uid": "D0537",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "RoboTool",
+  "reason": "Data repository with surgical tool segmentation sets incl. EndoVis2017 and RoboTool."
+ },
+ {
+  "uid": "D0538",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Challenge team method submission."
+ },
+ {
+  "uid": "D0539",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SAR-RARP50",
+  "reason": "Robotic prostatectomy videos with segmentation and action labels."
+ },
+ {
+  "uid": "D0540",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Empty Synapse page with video widget; no dataset description."
+ },
+ {
+  "uid": "D0541",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Clinical/imaging study data release (AHEAD), not video."
+ },
+ {
+  "uid": "D0542",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgRIPE",
+  "reason": "Robotic surgery instrument pose estimation challenge dataset."
+ },
+ {
+  "uid": "D0543",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SPECTRALPACA",
+  "reason": "Spectral video of healthy hand palms; not surgical."
+ },
+ {
+  "uid": "D0544",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "HiSWA-RLLS",
+  "reason": "Robotic left lateral sectionectomy videos with step/task/activity labels."
+ },
+ {
+  "uid": "D0545",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Placeholder test dataset page; no content."
+ },
+ {
+  "uid": "D0546",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Clinical trial data release (A4), not video."
+ },
+ {
+  "uid": "D0547",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SENSE-42",
+  "reason": "Human-computer interaction physiological dataset."
+ },
+ {
+  "uid": "D0548",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "PitVis",
+  "reason": "Endoscopic pituitary surgery videos with step/instrument labels."
+ },
+ {
+  "uid": "D0549",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "ROBUST-MIPS",
+  "reason": "Laparoscopic instrument pose and segmentation dataset from ROBUST-MIS videos."
+ },
+ {
+  "uid": "D0550",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "",
+  "reason": "Public human robotic surgery videos with labels (Hashemi 2025)."
+ },
+ {
+  "uid": "D0551",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Challenge team method submission."
+ },
+ {
+  "uid": "D0552",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Trehalose Biomarker Dataset",
+  "reason": "ALS clinical/biomarker data."
+ },
+ {
+  "uid": "D0553",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Challenge team method submission."
+ },
+ {
+  "uid": "D0554",
+  "category": "DATASET-OTHER",
+  "dataset_name": "AKTIVES",
+  "reason": "Physiological signal dataset of children."
+ },
+ {
+  "uid": "D0555",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "STIR",
+  "reason": "STIR challenge: surgical endoscopic video tissue-tracking labels."
+ },
+ {
+  "uid": "D0556",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Challenge team method submission."
+ },
+ {
+  "uid": "D0557",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "DRENDS",
+  "reason": "RoDEO challenge: endoscopic robot-tissue deformation data (ex/in vivo); doubt rule."
+ },
+ {
+  "uid": "D0558",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CMRxRecon",
+  "reason": "Cardiac MRI k-space dataset."
+ },
+ {
+  "uid": "D0559",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PREVENT ALL ALS Clinical Dataset",
+  "reason": "ALS clinical data."
+ },
+ {
+  "uid": "D0560",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ALS Compute Dataset",
+  "reason": "ALS genomic/clinical data."
+ },
+ {
+  "uid": "D0561",
+  "category": "DATASET-OTHER",
+  "dataset_name": "JHU BAM Files Dataset",
+  "reason": "Sequencing BAM files."
+ },
+ {
+  "uid": "D0562",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "HeiCo",
+  "reason": "Laparoscopic colorectal surgery videos with instrument and workflow labels."
+ },
+ {
+  "uid": "D0563",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ASSESS ALL ALS Clinical Dataset",
+  "reason": "ALS clinical data."
+ },
+ {
+  "uid": "D0564",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "FetReg",
+  "reason": "Fetoscopic laser surgery video frames with vessel segmentation/registration labels; doubt rule."
+ },
+ {
+  "uid": "D0565",
+  "category": "DATASET-OTHER",
+  "dataset_name": "IPCL",
+  "reason": "Upper-GI magnification endoscopy images."
+ },
+ {
+  "uid": "D0566",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Surgical Instrument Multi-Domain Segmentation",
+  "reason": "Laparoscopic/robotic cholecystectomy instrument segmentation challenge dataset."
+ },
+ {
+  "uid": "D0567",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Challenge team method submission."
+ },
+ {
+  "uid": "D0568",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Gene p-value results table, not a dataset release."
+ },
+ {
+  "uid": "D0569",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PREVENT ALL ALS Speech Dataset",
+  "reason": "ALS speech data."
+ },
+ {
+  "uid": "D0570",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ASSESS ALL ALS Speech Dataset",
+  "reason": "ALS speech data."
+ },
+ {
+  "uid": "D0571",
+  "category": "DATASET-OTHER",
+  "dataset_name": "LPTA Dataset",
+  "reason": "Unspecified dataset; no surgical or colonoscopy indication."
+ },
+ {
+  "uid": "D0572",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "STIR",
+  "reason": "STIR 2026 challenge: surgical video tissue tracking."
+ },
+ {
+  "uid": "D0573",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Challenge team method submission."
+ },
+ {
+  "uid": "D0574",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Non-medical robot teleoperation manipulation dataset."
+ },
+ {
+  "uid": "D0575",
+  "category": "DATASET-OTHER",
+  "dataset_name": "VESSEL12",
+  "reason": "Challenge: lung CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0576",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CRASS",
+  "reason": "Challenge: chest radiographs; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0577",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ANODE09",
+  "reason": "Challenge: chest CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0578",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CAUSE07",
+  "reason": "Challenge: brain MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0579",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Page presents one segmentation method's results; not a dataset release."
+ },
+ {
+  "uid": "D0580",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CADDementia",
+  "reason": "Challenge: brain MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0581",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MITOS-ATYPIA-14",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0582",
+  "category": "DATASET-OTHER",
+  "dataset_name": "LOLA11",
+  "reason": "Challenge: chest CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0583",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PROMISE12",
+  "reason": "Challenge: prostate MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0584",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CAMELYON16",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0585",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ISBI-AIDA",
+  "reason": "Challenge: upper-GI endoscopy images; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0586",
+  "category": "DATASET-OTHER",
+  "dataset_name": "LUNA16",
+  "reason": "Challenge: chest CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0587",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CAMELYON17",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0588",
+  "category": "DATASET-OTHER",
+  "dataset_name": "RETOUCH",
+  "reason": "Challenge: retinal OCT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0589",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "CATARACTS",
+  "reason": "Cataract surgery videos with tool annotations."
+ },
+ {
+  "uid": "D0590",
+  "category": "DATASET-OTHER",
+  "dataset_name": "TADPOLE",
+  "reason": "Challenge: MRI/clinical longitudinal data; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0591",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CoronARe",
+  "reason": "Challenge: C-arm angiography; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0592",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ICIAR 2018",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0593",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SLIVER07",
+  "reason": "Challenge: liver CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0594",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ROCC",
+  "reason": "Challenge: retinal OCT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0595",
+  "category": "DATASET-OTHER",
+  "dataset_name": "IDRiD",
+  "reason": "Challenge: fundus photographs; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0596",
+  "category": "DATASET-OTHER",
+  "dataset_name": "EMPIRE10",
+  "reason": "Challenge: chest CT registration; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0597",
+  "category": "DATASET-OTHER",
+  "dataset_name": "LUMIC",
+  "reason": "Challenge: CT phantom; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0598",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Continuous Registration",
+  "reason": "Challenge: lung/brain image registration; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0599",
+  "category": "DATASET-OTHER",
+  "dataset_name": "DRIVE",
+  "reason": "Challenge: fundus photographs; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0600",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CuRIOUS 2018",
+  "reason": "Challenge: MRI and intraoperative ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0601",
+  "category": "DATASET-OTHER",
+  "dataset_name": "REFUGE",
+  "reason": "Challenge: fundus photographs; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0602",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MoNuSeg",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0603",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PAVES",
+  "reason": "Challenge: MR angiography; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0604",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PROSTATEx",
+  "reason": "Challenge: prostate MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0605",
+  "category": "DATASET-OTHER",
+  "dataset_name": "HC18",
+  "reason": "Challenge: fetal ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0606",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ANHIR",
+  "reason": "Challenge: histology registration; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0607",
+  "category": "DATASET-OTHER",
+  "dataset_name": "BreastPathQ: Cancer Cellularity Challenge 2019",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0608",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CHAOS",
+  "reason": "Challenge: CT/MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0609",
+  "category": "DATASET-C-COL",
+  "dataset_name": "EAD2019",
+  "reason": "Multi-organ endoscopy video frames incl. colonoscopy (artefact detection)."
+ },
+ {
+  "uid": "D0610",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ACDC-LungHP",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0611",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PALM",
+  "reason": "Challenge: fundus photographs; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0612",
+  "category": "DATASET-OTHER",
+  "dataset_name": "iChallenges",
+  "reason": "Challenge: ophthalmic imaging; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0613",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Decathlon",
+  "reason": "Challenge: CT/MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0614",
+  "category": "DATASET-OTHER",
+  "dataset_name": "LYON19",
+  "reason": "Challenge: IHC pathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0615",
+  "category": "DATASET-OTHER",
+  "dataset_name": "KiTS19",
+  "reason": "Challenge: kidney CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0616",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PAIP 2019",
+  "reason": "Challenge: liver pathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0617",
+  "category": "DATASET-OTHER",
+  "dataset_name": "orCaScore",
+  "reason": "Challenge: cardiac CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0618",
+  "category": "DATASET-OTHER",
+  "dataset_name": "curious2019",
+  "reason": "Challenge: MRI and intraoperative ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0619",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PatchCamelyon",
+  "reason": "Challenge: histopathology patches; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0620",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SCARED",
+  "reason": "da Vinci in-vivo endoscopic video with depth and kinematics."
+ },
+ {
+  "uid": "D0621",
+  "category": "DATASET-OTHER",
+  "dataset_name": "VerSe`19",
+  "reason": "Challenge: spine CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0622",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Gleason2019",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0623",
+  "category": "DATASET-OTHER",
+  "dataset_name": "AGE",
+  "reason": "Challenge: anterior-segment OCT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0624",
+  "category": "DATASET-OTHER",
+  "dataset_name": "iChallenge-AMD",
+  "reason": "Challenge: fundus photographs; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0625",
+  "category": "DATASET-OTHER",
+  "dataset_name": "StructSeg2019",
+  "reason": "Challenge: radiotherapy CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0626",
+  "category": "DATASET-OTHER",
+  "dataset_name": "DigestPath2019",
+  "reason": "Challenge: digestive pathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0627",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ODIR-2019",
+  "reason": "Challenge: fundus photographs; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0628",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Lymphocyte Assessment Hackathon",
+  "reason": "Challenge: IHC pathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0629",
+  "category": "DATASET-OTHER",
+  "dataset_name": "AASCE",
+  "reason": "Challenge: spinal radiographs; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0630",
+  "category": "DATASET-OTHER",
+  "dataset_name": "HEROHE",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0631",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MoNuSAC 2020",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0632",
+  "category": "DATASET-C-COL",
+  "dataset_name": "EndoCV2020",
+  "reason": "Endoscopy challenge (EAD/EDD) mixing colonoscopy with other GI endoscopy."
+ },
+ {
+  "uid": "D0633",
+  "category": "DATASET-OTHER",
+  "dataset_name": "LNDb Challenge",
+  "reason": "Challenge: chest CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0634",
+  "category": "DATASET-OTHER",
+  "dataset_name": "VerSe'20",
+  "reason": "Challenge: spine CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0635",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PAIP2020",
+  "reason": "Challenge: colorectal pathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0636",
+  "category": "DATASET-OTHER",
+  "dataset_name": "RibFrac",
+  "reason": "Challenge: rib CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0637",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Thyroid Nodule Segmentation and Classification",
+  "reason": "Challenge: thyroid ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0638",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Learn2Reg",
+  "reason": "Challenge: image registration (CT/MRI); not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0639",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Automated Segmentation Of Coronary Arteries",
+  "reason": "Challenge: coronary CTA; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0640",
+  "category": "DATASET-OTHER",
+  "dataset_name": "KNOAP2020",
+  "reason": "Challenge: knee imaging; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0641",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SARAS-ESAD",
+  "reason": "Prostatectomy surgical video with surgeon action detection labels."
+ },
+ {
+  "uid": "D0642",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Sub-evaluation 2 Rutgers: Ultrasound Bone Segmentation Challenge",
+  "reason": "Challenge: bone ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0643",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Sub-evaluation 1 UBC - Ultrasound Bone Segmentation Challenge",
+  "reason": "Challenge: bone ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0644",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Sub-evaluation 4 Queens - Ultrasound Bone Segmentation Challenge",
+  "reason": "Challenge: bone ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0645",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Sub-evaluation 5 Imfusion Ultrasound Bone Segmentation Challenge",
+  "reason": "Challenge: bone ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0646",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Sub-evaluation 6 Erasmus MC - Ultrasound Bone Segmentation",
+  "reason": "Challenge: bone ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0647",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Sub-evaluation 9 Combined - Ultrasound Bone Segmentation",
+  "reason": "Challenge: bone ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0648",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Sub-evaluation 10 LATIM Multi-rater - Ultrasound Bone Seg",
+  "reason": "Challenge: bone ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0649",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Sub-evaluation 7 UNAM - Ultrasound Bone Segmentation Challenge",
+  "reason": "Challenge: bone ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0650",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgVisDom",
+  "reason": "Simulation and porcine surgical videos with activity labels."
+ },
+ {
+  "uid": "D0651",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CADA",
+  "reason": "Challenge: cerebral angiography; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0652",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Diabetic Foot Ulcer Challenge 2020",
+  "reason": "Challenge: foot ulcer photographs; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0653",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CT diagnosis of COVID-19",
+  "reason": "Challenge: chest CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0654",
+  "category": "DATASET-OTHER",
+  "dataset_name": "AutoImplant",
+  "reason": "Challenge: skull CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0655",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CADA - Rupture Risk Estimation",
+  "reason": "Challenge: cerebral angiography; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0656",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CADA - Aneurysm Segmentation",
+  "reason": "Challenge: cerebral angiography; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0657",
+  "category": "DATASET-OTHER",
+  "dataset_name": "The PANDA challenge",
+  "reason": "Challenge: prostate pathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0658",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Pathology Visual Question Answering",
+  "reason": "Challenge: pathology VQA; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0659",
+  "category": "DATASET-OTHER",
+  "dataset_name": "QUBIQ",
+  "reason": "Challenge: multi-modality segmentation; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0660",
+  "category": "DATASET-OTHER",
+  "dataset_name": "LoDoPaB-CT",
+  "reason": "Challenge: CT reconstruction; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0661",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Apples-CT",
+  "reason": "Challenge: non-medical apple CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0662",
+  "category": "DATASET-OTHER",
+  "dataset_name": "RIADD (ISBI-2021)",
+  "reason": "Challenge: retinal images; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0663",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MitoEM",
+  "reason": "Challenge: electron microscopy; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0664",
+  "category": "DATASET-OTHER",
+  "dataset_name": "A-AFMA",
+  "reason": "Challenge: prenatal ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0665",
+  "category": "DATASET-OTHER",
+  "dataset_name": "COVID-19 LUNG CT LESION SEGMENTATION CHALLENGE - 2020",
+  "reason": "Challenge: lung CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0666",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Where is VALDO?",
+  "reason": "Challenge: brain MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0667",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SegPC-2021",
+  "reason": "Challenge: microscopy; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0668",
+  "category": "DATASET-C-COL",
+  "dataset_name": "EndoCV2021",
+  "reason": "Colonoscopy polyp detection/segmentation generalisation challenge data."
+ },
+ {
+  "uid": "D0669",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Foot Ulcer Segmentation Challenge",
+  "reason": "Challenge: foot ulcer images; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0670",
+  "category": "DATASET-OTHER",
+  "dataset_name": "NucMM",
+  "reason": "Challenge: microscopy; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0671",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Carotid Artery Vessel Wall Segmentation Challenge",
+  "reason": "Challenge: carotid MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0672",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Cross-Modality Domain Adaptation Image Segmentation - 2021",
+  "reason": "Challenge: brain MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0673",
+  "category": "DATASET-OTHER",
+  "dataset_name": "KiTS21",
+  "reason": "Challenge: kidney CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0674",
+  "category": "DATASET-OTHER",
+  "dataset_name": "BrainPTM 2021",
+  "reason": "Challenge: brain MRI tractography; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0675",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "CholecTriplet2021",
+  "reason": "Cholecystectomy videos with action-triplet labels."
+ },
+ {
+  "uid": "D0676",
+  "category": "DATASET-OTHER",
+  "dataset_name": "RealNoiseMRI",
+  "reason": "Challenge: brain MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0677",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PAIP2021",
+  "reason": "Challenge: pathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0678",
+  "category": "DATASET-OTHER",
+  "dataset_name": "FLARE21",
+  "reason": "Challenge: abdominal CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0679",
+  "category": "DATASET-OTHER",
+  "dataset_name": "NuCLS",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0680",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Breast Cancer Segmentation",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0681",
+  "category": "DATASET-OTHER",
+  "dataset_name": "FeTA - Fetal Tissue Annotation Challenge",
+  "reason": "Challenge: fetal MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0682",
+  "category": "DATASET-OTHER",
+  "dataset_name": "fastPET-LD",
+  "reason": "Challenge: PET/CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0683",
+  "category": "DATASET-OTHER",
+  "dataset_name": "AutoImplant 2021",
+  "reason": "Challenge: skull CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0684",
+  "category": "DATASET-OTHER",
+  "dataset_name": "DFUC2021",
+  "reason": "Challenge: foot ulcer photographs; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0685",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SARAS-MESAD",
+  "reason": "Multi-domain surgical video with surgeon action detection labels."
+ },
+ {
+  "uid": "D0686",
+  "category": "DATASET-OTHER",
+  "dataset_name": "NODE21",
+  "reason": "Challenge: chest radiographs; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0687",
+  "category": "DATASET-OTHER",
+  "dataset_name": "WSSS4LUAD",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0688",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SKI10",
+  "reason": "Challenge: knee MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0689",
+  "category": "DATASET-OTHER",
+  "dataset_name": "EMSIG",
+  "reason": "Challenge: radar human activity; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0690",
+  "category": "DATASET-OTHER",
+  "dataset_name": "QUBIQ2021",
+  "reason": "Challenge: multi-modality segmentation; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0691",
+  "category": "DATASET-OTHER",
+  "dataset_name": "AxonEM",
+  "reason": "Challenge: electron microscopy; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0692",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIDOG Challenge 2021",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0693",
+  "category": "DATASET-OTHER",
+  "dataset_name": "TIGER",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0694",
+  "category": "DATASET-OTHER",
+  "dataset_name": "STOIC2021 - COVID-19 AI Challenge",
+  "reason": "Challenge: chest CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0695",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Chest XR COVID-19 detection",
+  "reason": "Challenge: chest radiographs; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0696",
+  "category": "DATASET-OTHER",
+  "dataset_name": "The PI-CAI Challenge",
+  "reason": "Challenge: prostate MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0697",
+  "category": "DATASET-OTHER",
+  "dataset_name": "AIROGS",
+  "reason": "Challenge: fundus photographs; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0698",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CoNIC 2022",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0699",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "CholecTriplet2022",
+  "reason": "Cholecystectomy videos with action-triplet detection labels."
+ },
+ {
+  "uid": "D0700",
+  "category": "DATASET-C-COL",
+  "dataset_name": "EndoCV2022",
+  "reason": "Endoscopic (colonoscopy polyp) video sequence data."
+ },
+ {
+  "uid": "D0701",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MELA2022",
+  "reason": "Challenge: CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0702",
+  "category": "DATASET-OTHER",
+  "dataset_name": "KiPA22 (Regular Challenge)",
+  "reason": "Challenge: kidney CTA; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0703",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Parse2022",
+  "reason": "Challenge: pulmonary CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0704",
+  "category": "DATASET-OTHER",
+  "dataset_name": "TDSC-ABUS2023",
+  "reason": "Challenge: breast ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0705",
+  "category": "DATASET-OTHER",
+  "dataset_name": "INSTANCE2022",
+  "reason": "Challenge: head CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0706",
+  "category": "DATASET-OTHER",
+  "dataset_name": "BCNB",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0707",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Sub-evaluation 11 RWTH Aachen - US Bone Segmentation Challenge",
+  "reason": "Challenge: bone ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0708",
+  "category": "DATASET-OTHER",
+  "dataset_name": "RAVIR",
+  "reason": "Challenge: infrared retinal images; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0709",
+  "category": "DATASET-OTHER",
+  "dataset_name": "DFUC 2024",
+  "reason": "Challenge: foot ulcer photographs; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0710",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ATLAS R2.0 - Stroke Lesion Segmentation",
+  "reason": "Challenge: brain MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0711",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SynthRAD2023",
+  "reason": "Challenge: MRI/CT synthesis; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0712",
+  "category": "DATASET-OTHER",
+  "dataset_name": "3D Teeth Scan Segmentation and Labeling Challenge MICCAI2022",
+  "reason": "Challenge: intraoral 3D scans; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0713",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MICCAI FLARE 2022",
+  "reason": "Challenge: abdominal CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0714",
+  "category": "DATASET-OTHER",
+  "dataset_name": "AGGC22",
+  "reason": "Challenge: prostate pathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0715",
+  "category": "DATASET-OTHER",
+  "dataset_name": "autoPET",
+  "reason": "Challenge: PET/CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0716",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ACROBAT 2023",
+  "reason": "Challenge: histopathology registration; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0717",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgT",
+  "reason": "Surgical videos with bounding-box tracking annotations."
+ },
+ {
+  "uid": "D0718",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Surface Learning for Clinical Neuroimaging",
+  "reason": "Challenge: cortical surface MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0719",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "P2ILF",
+  "reason": "Laparoscopic liver surgery video with preoperative CT fusion landmarks; doubt rule."
+ },
+ {
+  "uid": "D0720",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MICCAI HECKTOR 2022",
+  "reason": "Challenge: PET/CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0721",
+  "category": "DATASET-OTHER",
+  "dataset_name": "K2S: from undersampled K-space To automatic Segmentation",
+  "reason": "Challenge: knee MRI k-space; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0722",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Diabetic Retinopathy Analysis Challenge MICCAI2022",
+  "reason": "Challenge: OCT angiography; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0723",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Multi-Modality Abdominal Multi-Organ Segmentation Challenge 2022",
+  "reason": "Challenge: abdominal CT/MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0724",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgToolLoc 2022",
+  "reason": "Endoscopic surgical videos with tool presence/localization labels."
+ },
+ {
+  "uid": "D0725",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Brain shift with Intraoperative Ultrasound - Segmentation tasks",
+  "reason": "Challenge: intraoperative ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0726",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Carotid Vessel Wall Segmentation and Atherosclerosis Diagnosis",
+  "reason": "Challenge: carotid MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0727",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Cross-Modality Domain Adaptation: Segmentation & Classification",
+  "reason": "Challenge: brain MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0728",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Multi-site, Multi-Domain Airway Tree Modeling (ATM’22)",
+  "reason": "Challenge: chest CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0729",
+  "category": "DATASET-OTHER",
+  "dataset_name": "FH-PS-AOP challenge",
+  "reason": "Challenge: intrapartum ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0730",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Shifts Challenge 2022",
+  "reason": "Challenge: MRI and non-medical data; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0731",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ACMMM MEGC2022: Facial Micro-Expression Grand Challenge",
+  "reason": "Challenge: non-medical facial video; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0732",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MItosis DOmain Generalization Challenge 2022",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0733",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Ischemic Stroke Lesion Segmentation Challenge",
+  "reason": "Challenge: brain MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0734",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Cell Segmentation in Multi-modality Microscopy Images",
+  "reason": "Challenge: microscopy; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0735",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Breast Cancer Immunohistochemical Image Generation Challenge",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0736",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Fully Automated Radiotherapy Treatment Planning Challenge",
+  "reason": "Challenge: radiotherapy CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0737",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Project AIR - commercial AI for bone age prediction on hand XR",
+  "reason": "Challenge: hand radiographs; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0738",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PAIP 2023: TC prediction in pancreatic and colon cancer",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0739",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SNEMI3D: 3D Segmentation of neurites in EM images",
+  "reason": "Challenge: electron microscopy; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0740",
+  "category": "DATASET-OTHER",
+  "dataset_name": "The Head and Neck Organ-at-Risk CT & MR Segmentation Challenge",
+  "reason": "Challenge: head-and-neck CT/MR; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0741",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Endometrial Carcinoma Detection in Pipelle biopsies",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0742",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Robust Non-rigid Registration Challenge for Expansion Microscopy",
+  "reason": "Challenge: expansion microscopy; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0743",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Xray Projectomic Reconstruction Extracting Segment with Skeleton",
+  "reason": "Challenge: X-ray microscopy; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0744",
+  "category": "DATASET-OTHER",
+  "dataset_name": "autoPET-II",
+  "reason": "Challenge: PET/CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0745",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ToothFairy: Cone-Beam Computed Tomography Segmentation Challenge",
+  "reason": "Challenge: dental CBCT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0746",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SPIDER",
+  "reason": "Challenge: spine MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0747",
+  "category": "DATASET-OTHER",
+  "dataset_name": "LNQ2023",
+  "reason": "Challenge: CT lymph nodes; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0748",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ARCADE-MICCAI2023",
+  "reason": "Challenge: X-ray coronary angiography; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0749",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Ultrasound Image Enhancement challenge 2023",
+  "reason": "Challenge: ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0750",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SEG.A.  - Segmentation of the Aorta",
+  "reason": "Challenge: aortic CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0751",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Surgical Planning in Pediatric Neuroblastoma",
+  "reason": "Challenge: MRI surgical planning; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0752",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Foundation Model Prompting for Medical Image Classification",
+  "reason": "Challenge: medical image classification; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0753",
+  "category": "DATASET-OTHER",
+  "dataset_name": "DENTEX - MICCAI23",
+  "reason": "Challenge: dental panoramic X-ray; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0754",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Topology-Aware Anatomical Segmentation of the Circle of Willis",
+  "reason": "Challenge: CTA/MRA; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0755",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SegRap 2023",
+  "reason": "Challenge: radiotherapy CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0756",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Low-dose Computed Tomography Perceptual Image Quality Assessment",
+  "reason": "Challenge: low-dose CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0757",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CL-Detection 2023",
+  "reason": "Challenge: cephalometric X-ray; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0758",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgToolLoc 2023",
+  "reason": "Endoscopic surgical videos with tool presence labels."
+ },
+ {
+  "uid": "D0759",
+  "category": "DATASET-OTHER",
+  "dataset_name": "OCELOT 2023: Cell Detection from Cell-Tissue Interaction",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0760",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Project AIR - commercial AI for lung nodule detection on CXR",
+  "reason": "Challenge: chest radiographs; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0761",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Trauma THOMPSON",
+  "reason": "Egocentric trauma-procedure videos with action labels; text empty; doubt rule."
+ },
+ {
+  "uid": "D0762",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Hypoxic Ischemic Encephalopathy Lesion Segmentation Challenge",
+  "reason": "Challenge: neonatal brain MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0763",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CHAIMELEON Open Challenges",
+  "reason": "Challenge: cancer imaging; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0764",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Head and Neck Tumor Segmentation for MR-Guided Applications",
+  "reason": "Challenge: head-and-neck MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0765",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PANORAMA",
+  "reason": "Challenge: pancreatic CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0766",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Universal Lesion Segmentation Challenge '23",
+  "reason": "Challenge: CT lesions; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0767",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Diagnostic Report Analysis: General Optimization of NLP",
+  "reason": "Challenge: clinical report text (NLP); not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0768",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Justified Referral in AI Glaucoma Screening",
+  "reason": "Challenge: fundus photographs; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0769",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Light My Cells : Bright Field to Fluorescence Imaging Challenge",
+  "reason": "Challenge: microscopy; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0770",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "DREAMING",
+  "reason": "Synthetic surgery-scene data with instrument/hand masks for inpainting; doubt rule."
+ },
+ {
+  "uid": "D0771",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Abdominal Circumference Operator-agnostic UltraSound measurement",
+  "reason": "Challenge: fetal ultrasound; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0772",
+  "category": "DATASET-OTHER",
+  "dataset_name": "The LEOPARD Challenge",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0773",
+  "category": "DATASET-OTHER",
+  "dataset_name": "AutoPET III",
+  "reason": "Challenge: PET/CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0774",
+  "category": "DATASET-OTHER",
+  "dataset_name": "AI4Life Microscopy Denoising Challenge",
+  "reason": "Challenge: microscopy; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0775",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Ischemic Stroke Lesion Segmentation Challenge 2024",
+  "reason": "Challenge: stroke CT/MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0776",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgVU24",
+  "reason": "Robotic surgical videos with tool/step labels."
+ },
+ {
+  "uid": "D0777",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ToothFairy2: Multi-Structure Segmentation in CBCT Volumes",
+  "reason": "Challenge: dental CBCT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0778",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Pelvic Bone Fragments with Injuries Segmentation Challenge",
+  "reason": "Challenge: pelvic CT/X-ray; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0779",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Multi-Class Segmentation of Aortic Branches and Zones in CTA",
+  "reason": "Challenge: aortic CTA; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0780",
+  "category": "DATASET-OTHER",
+  "dataset_name": "TopCoW 2024 Challenge",
+  "reason": "Challenge: CTA/MRA; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0781",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SynthRAD2025",
+  "reason": "Challenge: MRI/CT synthesis; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0782",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Self-supervised learning for 3D light-sheet microscopy image seg",
+  "reason": "Challenge: light-sheet microscopy; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0783",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Cross-Organ and Cross-Scanner Adenocarcinoma Segmentation",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0784",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PRISMA Challenge",
+  "reason": "Grand-Challenge page; unspecified challenge; no surgical/colonoscopy indication."
+ },
+ {
+  "uid": "D0785",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Calibration and Uncertainty for multiRater Volume Assessment in",
+  "reason": "Challenge: abdominal CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0786",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Debug instance of NLP benchmark; not a dataset release."
+ },
+ {
+  "uid": "D0787",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MONKEY challenge: Detection of inflammation in kidney biopsies",
+  "reason": "Challenge: kidney pathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0788",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PUMA: Panoptic segmentation of nUclei and tissue in MelanomA",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0789",
+  "category": "DATASET-OTHER",
+  "dataset_name": "2nd BONBID-HIE Challenge for HIE Outcome Prediction and Lesion S",
+  "reason": "Challenge: neonatal brain MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0790",
+  "category": "DATASET-OTHER",
+  "dataset_name": "TrackRad: Real-time tumor tracking for MRI-guided radiotherapy",
+  "reason": "Challenge: cine MRI for radiotherapy; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0791",
+  "category": "DATASET-OTHER",
+  "dataset_name": "UNICORN",
+  "reason": "Challenge: pathology/radiology VLM benchmark; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0792",
+  "category": "DATASET-OTHER",
+  "dataset_name": "DataChallenge 2024",
+  "reason": "Challenge: brain MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0793",
+  "category": "DATASET-OTHER",
+  "dataset_name": "The LUNA25 Challenge",
+  "reason": "Challenge: chest CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0794",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Fuse My Cells: From Single View to Fused Multiview Lightsheet Im",
+  "reason": "Challenge: light-sheet microscopy; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0795",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Beyond FA",
+  "reason": "Challenge: diffusion MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0796",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CHIMERA",
+  "reason": "Challenge: multimodal oncology data; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0797",
+  "category": "DATASET-OTHER",
+  "dataset_name": "HEad and neCK TumOR Lesion Segmentation, Diagnosis and Prognosis",
+  "reason": "Challenge: PET/CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0798",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Deep-learning Evaluation for Enhanced Prognostics - PSMA PET",
+  "reason": "Challenge: PSMA PET; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0799",
+  "category": "DATASET-OTHER",
+  "dataset_name": "AI4Life Microscopy Supervised Denoising Challenge 2025",
+  "reason": "Challenge: microscopy; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0800",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PANTHER Challenge",
+  "reason": "Challenge: pancreatic MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0801",
+  "category": "DATASET-OTHER",
+  "dataset_name": "autoPET/CT IV",
+  "reason": "Challenge: PET/CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0802",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ODELIA BREAST MRI Challenge 2025",
+  "reason": "Challenge: breast MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0803",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Challenge-organisation tutorial page."
+ },
+ {
+  "uid": "D0804",
+  "category": "DATASET-OTHER",
+  "dataset_name": "REport Generation in pathology using Pan-Asia Giga-pixel WSIs",
+  "reason": "Challenge: pathology reports; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0805",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CURVAS-Pancreatic Adenocarcinoma Vascular Invasion",
+  "reason": "Challenge: pancreatic CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0806",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Dehazing Echocardiography Challenge 2025",
+  "reason": "Challenge: echocardiography; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0807",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Trauma THOMPSON 2025",
+  "reason": "Egocentric trauma-procedure videos with action labels; text empty; doubt rule."
+ },
+ {
+  "uid": "D0808",
+  "category": "DATASET-OTHER",
+  "dataset_name": "TopBrain Segmentation Challenge for Whole Brain Vessel Anatomy",
+  "reason": "Challenge: CTA/MRA; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0809",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgVU25",
+  "reason": "Robotic surgical videos with labels."
+ },
+ {
+  "uid": "D0810",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ToothFairy3: Multi-Class Segmentation in CBCT Volumes",
+  "reason": "Challenge: dental CBCT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0811",
+  "category": "DATASET-OTHER",
+  "dataset_name": "RARE25",
+  "reason": "Challenge: Barrett/upper-GI endoscopy images; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0812",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SSL for 3D light-sheet microscopy image segmentation",
+  "reason": "Challenge: light-sheet microscopy; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0813",
+  "category": "DATASET-OTHER",
+  "dataset_name": "HANCOTHON",
+  "reason": "Challenge: multimodal clinical/pathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0814",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Mitosis Domain Generalization Challenge 2025",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0815",
+  "category": "DATASET-OTHER",
+  "dataset_name": "AI4Life Calcium Imaging Denoising Challenge 2025",
+  "reason": "Challenge: calcium imaging microscopy; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0816",
+  "category": "DATASET-OTHER",
+  "dataset_name": "BEETLE",
+  "reason": "Challenge: histopathology; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0817",
+  "category": "DATASET-OTHER",
+  "dataset_name": "DALPHIN",
+  "reason": "Challenge: pathology VQA; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0818",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Lung Nodule Volumetry 2026 Challenge",
+  "reason": "Challenge: chest CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0819",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Real-time dose calculation in radiotherapy",
+  "reason": "Challenge: radiotherapy dose; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0820",
+  "category": "DATASET-OTHER",
+  "dataset_name": "The MAMA-SYNTH Challenge",
+  "reason": "Challenge: breast MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0821",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CLEAR-EC",
+  "reason": "Grand-Challenge page; unspecified challenge; no surgical/colonoscopy indication."
+ },
+ {
+  "uid": "D0822",
+  "category": "DATASET-OTHER",
+  "dataset_name": "RARE26",
+  "reason": "Challenge: Barrett/upper-GI endoscopy images; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0823",
+  "category": "DATASET-OTHER",
+  "dataset_name": "autoPET V - Automated Lesion Segmentation in Whole-Body PET/CT",
+  "reason": "Challenge: PET/CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0824",
+  "category": "DATASET-OTHER",
+  "dataset_name": "HEad and neCK TumOR Lesion Segmentation, Staging and Prognosis",
+  "reason": "Challenge: PET/CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0825",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Peripelvic Fracture Segmentation and Reduction Planning",
+  "reason": "Challenge: pelvic CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0826",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgVU26",
+  "reason": "Robotic surgical videos with labels."
+ },
+ {
+  "uid": "D0827",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CHIMERA-agent",
+  "reason": "Challenge: prostate MRI/multimodal; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0828",
+  "category": "DATASET-OTHER",
+  "dataset_name": "TopBrain Segmentation Challenge Version 2",
+  "reason": "Challenge: CTA/MRA; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0829",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Ischemic Stroke Lesion Segmentation Challenge  2026",
+  "reason": "Challenge: stroke CT/MRI; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0830",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Pathologist REasoning-Guided REport Generation Challenge",
+  "reason": "Challenge: pathology reports; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0831",
+  "category": "DATASET-OTHER",
+  "dataset_name": "TopAneu 2026",
+  "reason": "Challenge: CTA/MRA; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0832",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Cone-beam CT reconstruction for radiation therapy challenge",
+  "reason": "Challenge: CBCT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0833",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SSL for 3D light-sheet microscopy image segmentation",
+  "reason": "Challenge: light-sheet microscopy; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0834",
+  "category": "DATASET-OTHER",
+  "dataset_name": "HEADLINE: Benchmarking VLMs in Head CT Reporting",
+  "reason": "Challenge: head CT reports; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0835",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ODIN 2026 Challenges",
+  "reason": "Challenge: dental CBCT/intraoral scans; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0836",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Airway Tree Modeling 26",
+  "reason": "Challenge: chest CT; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0837",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Light My Cells 2 : Transmitted Light to Fluorescence Challenge",
+  "reason": "Challenge: microscopy; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0838",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Observing What Models Learn",
+  "reason": "Grand-Challenge page; unspecified challenge; no surgical/colonoscopy indication."
+ },
+ {
+  "uid": "D0839",
+  "category": "DATASET-C-COL",
+  "dataset_name": "EndoVis abnormal sub-challenge",
+  "reason": "EndoVis GI-endoscopy abnormality sub-challenge; content unstated; doubt rule."
+ },
+ {
+  "uid": "D0840",
+  "category": "DATASET-OTHER",
+  "dataset_name": "EndoVis Barrett sub-challenge",
+  "reason": "Barrett oesophagus (upper-GI) endoscopy data."
+ },
+ {
+  "uid": "D0841",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "EndoVis 2015 Instrument",
+  "reason": "Laparoscopic/robotic video with instrument segmentation/tracking labels."
+ },
+ {
+  "uid": "D0842",
+  "category": "DATASET-C-COL",
+  "dataset_name": "GIANA 2017",
+  "reason": "Colonoscopy video polyp detection plus capsule endoscopy."
+ },
+ {
+  "uid": "D0843",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "EndoVis 2017 Kidney Boundary Detection",
+  "reason": "Robotic surgery video frames with kidney boundary labels."
+ },
+ {
+  "uid": "D0844",
+  "category": "DATASET-C-COL",
+  "dataset_name": "EndoVis 2015 Polyp Detection",
+  "reason": "Colonoscopy video polyp detection sub-challenge."
+ },
+ {
+  "uid": "D0845",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgVisDom",
+  "reason": "Simulation and porcine surgical videos with activity labels."
+ },
+ {
+  "uid": "D0846",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "CATARACTS Semantic Segmentation 2020",
+  "reason": "Cataract surgery video frames with semantic segmentation labels."
+ },
+ {
+  "uid": "D0847",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "CATARACTS 2018",
+  "reason": "Cataract surgery videos with tool annotations."
+ },
+ {
+  "uid": "D0848",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "CATARACTS 2020",
+  "reason": "Cataract surgery videos with workflow labels."
+ },
+ {
+  "uid": "D0849",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "CholecTriplet2021",
+  "reason": "Cholecystectomy videos with action-triplet labels."
+ },
+ {
+  "uid": "D0850",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "EndoVis Workflow and Skill",
+  "reason": "Laparoscopic surgery videos with workflow and skill labels."
+ },
+ {
+  "uid": "D0851",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "EndoVis 2017 Robotic Instrument Segmentation",
+  "reason": "Robotic surgery video with instrument segmentation labels."
+ },
+ {
+  "uid": "D0852",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "EndoVis 2017 Surgical Workflow",
+  "reason": "Laparoscopic surgery videos with phase labels and device data."
+ },
+ {
+  "uid": "D0853",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "EndoVis 2018 Robotic Scene Segmentation",
+  "reason": "Robotic surgery video with scene segmentation labels."
+ },
+ {
+  "uid": "D0854",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SCARED",
+  "reason": "da Vinci in-vivo endoscopic video with depth and kinematics."
+ },
+ {
+  "uid": "D0855",
+  "category": "DATASET-C-COL",
+  "dataset_name": "GIANA",
+  "reason": "Colonoscopy video polyp detection/segmentation plus capsule endoscopy."
+ },
+ {
+  "uid": "D0856",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "ROBUST-MIS 2019",
+  "reason": "Laparoscopic surgery video with instrument segmentation labels."
+ },
+ {
+  "uid": "D0857",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "CSS stylesheet asset, not a dataset."
+ },
+ {
+  "uid": "D0858",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "CSS stylesheet asset, not a dataset."
+ },
+ {
+  "uid": "D0859",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Favicon asset, not a dataset."
+ },
+ {
+  "uid": "D0860",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-CXR-Ext-MIMIC-CXR-DB",
+  "reason": "PhysioNet chest X-ray/EHR linkage dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0861",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CardioWave-Portable",
+  "reason": "PhysioNet ECG/PPG dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0862",
+  "category": "DATASET-OTHER",
+  "dataset_name": "A Multi-Night Instantaneous Heart Rate and Accelerometry Dataset with EEG Sleep Stage Labels",
+  "reason": "PhysioNet heart rate/accelerometry sleep dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0863",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-EntityCoding",
+  "reason": "PhysioNet clinical text NER dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0864",
+  "category": "DATASET-OTHER",
+  "dataset_name": "JSMF ACCESS intraoperative derived EEG data set",
+  "reason": "PhysioNet intraoperative EEG dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0865",
+  "category": "DATASET-OTHER",
+  "dataset_name": "InReDD-Dataset-PAN924-Ext-BoneLoss-769",
+  "reason": "PhysioNet dental panoramic radiographs dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0866",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Sex differences in age-related hearing loss",
+  "reason": "PhysioNet hearing data dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0867",
+  "category": "DATASET-OTHER",
+  "dataset_name": "EHR-ReasonCon",
+  "reason": "PhysioNet EHR notes/tables dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0868",
+  "category": "DATASET-OTHER",
+  "dataset_name": "VTaC",
+  "reason": "PhysioNet ICU monitor waveforms dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0869",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-MIMIC-Patient",
+  "reason": "PhysioNet EHR JSON records dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0870",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CheXmask-U",
+  "reason": "PhysioNet chest X-ray masks dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0871",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-SBDH",
+  "reason": "PhysioNet clinical notes dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0872",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-VeriFact-BHC",
+  "reason": "PhysioNet clinical text dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0873",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-Ext-CXR-QBA",
+  "reason": "PhysioNet chest X-ray VQA dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0874",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Echo",
+  "reason": "PhysioNet echocardiograms dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0875",
+  "category": "DATASET-OTHER",
+  "dataset_name": "SCRIPT CarpeDiem Dataset",
+  "reason": "PhysioNet ICU clinical data dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0876",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Medical Information Mart for Intensive Care Brazil (MIMIC-BR)",
+  "reason": "PhysioNet hospital/ICU EHR dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0877",
+  "category": "DATASET-OTHER",
+  "dataset_name": "BIDMC Metabolomic Cohort of Adults with Biopsy-Proven MASLD",
+  "reason": "PhysioNet metabolomics dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0878",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Minute level step counts and physical activity data from the National Health and Nutrition Examination Survey (NHANES) 2011-2014",
+  "reason": "PhysioNet step-count accelerometry dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0879",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Kingston ICU AF Dataset",
+  "reason": "PhysioNet ICU AF data dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0880",
+  "category": "DATASET-OTHER",
+  "dataset_name": "A Brazilian Multilabel Ophthalmological Dataset (BRSET)",
+  "reason": "PhysioNet fundus photographs dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0881",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Annotated dataset of post-ischemic ventricular tachycardia electrograms (ARGO)",
+  "reason": "PhysioNet electrograms dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0882",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Insulin4RL",
+  "reason": "PhysioNet insulin infusion records dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0883",
+  "category": "DATASET-OTHER",
+  "dataset_name": "INSPIRE, a publicly available research dataset for perioperative medicine",
+  "reason": "PhysioNet perioperative EHR/vitals dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0884",
+  "category": "DATASET-OTHER",
+  "dataset_name": "DREAMT",
+  "reason": "PhysioNet wearable sleep sensors dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0885",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Bridge2AI-Voice",
+  "reason": "PhysioNet voice recordings dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0886",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Bridge2AI-Voice Pediatric Dataset",
+  "reason": "PhysioNet voice recordings dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0887",
+  "category": "DATASET-OTHER",
+  "dataset_name": "EchoNext",
+  "reason": "PhysioNet ECG dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0888",
+  "category": "DATASET-OTHER",
+  "dataset_name": "A multimodal gait dataset of brain activity, muscle activity, kinematics and ground forces in young adults",
+  "reason": "PhysioNet gait EEG/EMG/kinematics dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0889",
+  "category": "DATASET-OTHER",
+  "dataset_name": "KI EndoLIST",
+  "reason": "PhysioNet symptom tracking dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0890",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "ECG pacing-artifact removal method/software record, not a dataset release."
+ },
+ {
+  "uid": "D0891",
+  "category": "DATASET-OTHER",
+  "dataset_name": "GRABMyoFlow - Dataset extension",
+  "reason": "PhysioNet EMG/flow signals dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0892",
+  "category": "DATASET-OTHER",
+  "dataset_name": "BIG IDEAs Lab Glycemic Variability and Wearable Device Data",
+  "reason": "PhysioNet wearable glucose data dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0893",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Embedding-Based Representations for BRSET and mBRSET",
+  "reason": "PhysioNet fundus image embeddings dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0894",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-CXR-Ext-ILS",
+  "reason": "PhysioNet chest X-ray masks/text dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0895",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Data-ingestion software utility, not a dataset."
+ },
+ {
+  "uid": "D0896",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Clinical Time Series Datasets for Trajectory Flow Matching Evaluation",
+  "reason": "PhysioNet ICU time series dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0897",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-CLIF",
+  "reason": "PhysioNet ICU EHR dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0898",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-PE",
+  "reason": "PhysioNet radiology report labels dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0899",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-IV-Ext-MedicalBench",
+  "reason": "PhysioNet clinical text dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0900",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Structured Viewing Classification Annotations From the MIMIC-IV-ECHO Dataset (ECHOVIEW)",
+  "reason": "PhysioNet echo view labels dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0901",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-PPG",
+  "reason": "PhysioNet PPG waveforms dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0902",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Hillel Yaffe Glaucoma Dataset (HYGD)",
+  "reason": "PhysioNet fundus photographs dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0903",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-CA",
+  "reason": "PhysioNet PPG waveforms dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0904",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Longitudinal Cylinder Rearing Behavioral Data in a Mouse Stroke Model Across Multiple Drug Treatments",
+  "reason": "PhysioNet mouse behavioural data dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0905",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Respiratory and Pulse Oximetry Waveforms from Healthy Adults During Simulated Apnoea Events",
+  "reason": "PhysioNet respiratory/oximetry waveforms dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0906",
+  "category": "DATASET-OTHER",
+  "dataset_name": "MIMIC-III-Ext-Notes",
+  "reason": "PhysioNet clinical notes dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D0907",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Neurophysiological Dataset of Stress Resilience During Human-Computer Interaction",
+  "reason": "PhysioNet neurophysiological signals dataset; not colonoscopy or surgical video."
+ }
+]
