@@ -1,0 +1,258 @@
+{
+ "a_delta1_max_abs_bias": 0.0,
+ "b_prior_exact_reproduction": [
+  {
+   "K": 1,
+   "P": 0,
+   "with_Z": false,
+   "new": 0.0,
+   "prior_exact": 0.0,
+   "abs_diff": 0.0
+  },
+  {
+   "K": 1,
+   "P": 0,
+   "with_Z": true,
+   "new": 0.0,
+   "prior_exact": 0.0,
+   "abs_diff": 0.0
+  },
+  {
+   "K": 2,
+   "P": 0,
+   "with_Z": false,
+   "new": 0.026249999999999662,
+   "prior_exact": 0.026249999999999662,
+   "abs_diff": 0.0
+  },
+  {
+   "K": 2,
+   "P": 0,
+   "with_Z": true,
+   "new": 0.0,
+   "prior_exact": 0.0,
+   "abs_diff": 0.0
+  },
+  {
+   "K": 15,
+   "P": 0,
+   "with_Z": false,
+   "new": 1.2595640890870037,
+   "prior_exact": 1.2595640890870072,
+   "abs_diff": 3.552713678800501e-15
+  },
+  {
+   "K": 15,
+   "P": 0,
+   "with_Z": true,
+   "new": 0.0,
+   "prior_exact": 5.329070518200751e-15,
+   "abs_diff": 5.329070518200751e-15
+  },
+  {
+   "K": 1,
+   "P": 30,
+   "with_Z": false,
+   "new": 0.7499999999999964,
+   "prior_exact": 0.7499999999999822,
+   "abs_diff": 1.4210854715202004e-14
+  },
+  {
+   "K": 1,
+   "P": 30,
+   "with_Z": true,
+   "new": 0.0,
+   "prior_exact": 0.0,
+   "abs_diff": 0.0
+  },
+  {
+   "K": 15,
+   "P": 30,
+   "with_Z": false,
+   "new": 5.027496756125139,
+   "prior_exact": 5.027496756125146,
+   "abs_diff": 7.105427357601002e-15
+  },
+  {
+   "K": 15,
+   "P": 30,
+   "with_Z": true,
+   "new": 0.0,
+   "prior_exact": 7.105427357601002e-15,
+   "abs_diff": 7.105427357601002e-15
+  }
+ ],
+ "c_K1_P0_closed_forms": [
+  {
+   "alpha": 0.0,
+   "gamma": 0.5,
+   "formula_H": 0.0,
+   "computed_H": 0.0,
+   "formula_HZ": 0.0,
+   "computed_HZ": 0.0,
+   "abs_err": 0.0
+  },
+  {
+   "alpha": 0.0,
+   "gamma": 1.0,
+   "formula_H": 0.0,
+   "computed_H": 0.0,
+   "formula_HZ": 0.0,
+   "computed_HZ": 0.0,
+   "abs_err": 0.0
+  },
+  {
+   "alpha": 0.0,
+   "gamma": 2.0,
+   "formula_H": 0.0,
+   "computed_H": 0.0,
+   "formula_HZ": 0.0,
+   "computed_HZ": 0.0,
+   "abs_err": 0.0
+  },
+  {
+   "alpha": 0.5,
+   "gamma": 0.5,
+   "formula_H": 0.00833333333333334,
+   "computed_H": 0.008333333333333304,
+   "formula_HZ": 0.010000000000000009,
+   "computed_HZ": 0.010000000000000009,
+   "abs_err": 3.642919299551295e-17
+  },
+  {
+   "alpha": 0.5,
+   "gamma": 1.0,
+   "formula_H": 0.00555555555555556,
+   "computed_H": 0.005555555555555536,
+   "formula_HZ": 0.010000000000000009,
+   "computed_HZ": 0.010000000000000009,
+   "abs_err": 2.42861286636753e-17
+  },
+  {
+   "alpha": 0.5,
+   "gamma": 2.0,
+   "formula_H": 0.002380952380952383,
+   "computed_H": 0.0023809523809523725,
+   "formula_HZ": 0.010000000000000009,
+   "computed_HZ": 0.010000000000000009,
+   "abs_err": 1.0408340855860843e-17
+  },
+  {
+   "alpha": 1.0,
+   "gamma": 0.5,
+   "formula_H": 0.02222222222222224,
+   "computed_H": 0.022222222222222143,
+   "formula_HZ": 0.025000000000000022,
+   "computed_HZ": 0.025000000000000133,
+   "abs_err": 1.1102230246251565e-16
+  },
+  {
+   "alpha": 1.0,
+   "gamma": 1.0,
+   "formula_H": 0.01666666666666668,
+   "computed_H": 0.016666666666666607,
+   "formula_HZ": 0.025000000000000022,
+   "computed_HZ": 0.025000000000000133,
+   "abs_err": 1.1102230246251565e-16
+  },
+  {
+   "alpha": 1.0,
+   "gamma": 2.0,
+   "formula_H": 0.00833333333333334,
+   "computed_H": 0.008333333333333304,
+   "formula_HZ": 0.025000000000000022,
+   "computed_HZ": 0.025000000000000133,
+   "abs_err": 1.1102230246251565e-16
+  }
+ ],
+ "all_sanity_checks_pass": true,
+ "cross_check_vs_prior_mc_alpha0": [
+  {
+   "K": 1,
+   "P": 0,
+   "alpha": 0.0,
+   "gamma": 1.0,
+   "with_Z": false,
+   "mc_printed": 0.0013,
+   "closed_form": 0.0,
+   "mc_se": 0.00105,
+   "z": 1.2380952380952381
+  },
+  {
+   "K": 2,
+   "P": 0,
+   "alpha": 0.0,
+   "gamma": 1.0,
+   "with_Z": false,
+   "mc_printed": 0.0267,
+   "closed_form": 0.026249999999999662,
+   "mc_se": 0.0018414332902660364,
+   "z": 0.24437485863814615
+  },
+  {
+   "K": 15,
+   "P": 0,
+   "alpha": 0.0,
+   "gamma": 1.0,
+   "with_Z": false,
+   "mc_printed": 1.2635,
+   "closed_form": 1.2595640890870037,
+   "mc_se": 0.012425303734044067,
+   "z": 0.31676577065978617
+  },
+  {
+   "K": 1,
+   "P": 0,
+   "alpha": 0.0,
+   "gamma": 1.0,
+   "with_Z": true,
+   "mc_printed": -0.0003,
+   "closed_form": 0.0,
+   "mc_se": 0.00105,
+   "z": -0.2857142857142857
+  },
+  {
+   "K": 2,
+   "P": 0,
+   "alpha": 0.0,
+   "gamma": 1.0,
+   "with_Z": true,
+   "mc_printed": 0.0007,
+   "closed_form": 0.0,
+   "mc_se": 0.0018186533479473213,
+   "z": 0.38490017945975047
+  },
+  {
+   "K": 15,
+   "P": 0,
+   "alpha": 0.0,
+   "gamma": 1.0,
+   "with_Z": true,
+   "mc_printed": 0.0145,
+   "closed_form": 0.0,
+   "mc_se": 0.011502173707608488,
+   "z": 1.260631283146811
+  }
+ ],
+ "requested_cells_closed_form_alpha1_gamma1_P0": [
+  {
+   "K": 1,
+   "truth": 1.05,
+   "bias_H": 0.016666666666666607,
+   "bias_HZ": 0.025000000000000133
+  },
+  {
+   "K": 5,
+   "truth": 5.25,
+   "bias_H": 0.29457345454545525,
+   "bias_HZ": 0.2717868085937498
+  },
+  {
+   "K": 15,
+   "truth": 15.75,
+   "bias_H": 1.5761356077016124,
+   "bias_HZ": 1.3851618446549416
+  }
+ ],
+ "note": "The MC named in the task (alpha=beta=1, K=1,5,15) is not available in this session; cross-check is against prior/persistent_iv.py (alpha=0), per SPEC I-14."
+}
