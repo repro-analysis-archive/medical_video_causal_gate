@@ -5,6 +5,7 @@ import itertools, json, os, sys, time, urllib.error, urllib.parse, urllib.reques
 HERE = os.path.dirname(os.path.abspath(__file__)); OUT = os.path.join(HERE, "runs", "s2"); os.makedirs(OUT, exist_ok=True)
 sys.path.insert(0, HERE)
 from search_native import Q                                                     # noqa: E402  (identical query blocks)
+import s2_client                                                                # noqa: E402
 
 FIELDS = "paperId,title,abstract,year,venue,publicationVenue,externalIds,publicationDate"
 PROBES = {"MICCAI": "arXiv:1505.04597", "IPMI": "arXiv:1703.05921", "MIDL": "arXiv:1804.03999",
@@ -18,21 +19,12 @@ LOG = open(os.path.join(OUT, "run.log"), "a")
 
 
 def log(*a):
-    s = time.strftime("%Y-%m-%dT%H:%M:%SZ ", time.gmtime()) + " ".join(str(x) for x in a); print(s, flush=True); LOG.write(s + "\n"); LOG.flush()
+    s = time.strftime("%Y-%m-%dT%H:%M:%SZ ", time.gmtime()) + s2_client.scrub(" ".join(str(x) for x in a)); print(s, flush=True); LOG.write(s + "\n"); LOG.flush()
 
 
-def get(url, tries=12):
-    for i in range(tries):
-        try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "gate-audit/1.0"}), timeout=90) as r:
-                d = json.load(r); time.sleep(4); return d
-        except urllib.error.HTTPError as e:
-            if e.code in (429, 500, 502, 503, 504):
-                w = min(30 * 2 ** i, 900); log("HTTP", e.code, "wait", w); time.sleep(w); continue
-            log("HTTP", e.code, url); return {"error": e.code}
-        except Exception as e:                                                      # noqa: BLE001
-            w = min(30 * 2 ** i, 900); log("ERR", repr(e), "wait", w); time.sleep(w)
-    log("GAVE UP", url); return None
+def get(url):
+    """Keyed, paced client (lit/s2_client.py; SEARCH_IMPLEMENTATION.md §10). Raises S2Stop after the backoff schedule."""
+    return s2_client.get(url, log=log)
 
 
 def cached(name, url):
@@ -81,11 +73,14 @@ def run_arm(arm, venue_filter):
 
 
 def main():
-    v = venues()
-    vf = ",".join(n for names in v.values() for n in names)
-    run_arm("S2", None)
-    run_arm("PROC", vf)
-    log("DONE")
+    try:
+        v = venues()
+        vf = ",".join(n for names in v.values() for n in names)
+        run_arm("S2", None)
+        run_arm("PROC", vf)
+        log("DONE")
+    except s2_client.S2Stop as e:
+        log("STOPPED (backoff schedule exhausted):", e); sys.exit(2)
 
 
 if __name__ == "__main__":

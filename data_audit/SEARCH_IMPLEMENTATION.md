@@ -53,3 +53,14 @@ Before this commit, only reachability probes were made (one request per source);
 * **PhysioNet** returns 10 results per page. The first 50 are pages 1–5.
 * The failed first-run responses are kept in `runs/` (zenodo: 0 records, FAILED; physionet: 10 per query).
 * No other source changes.
+
+## 5. Semantic Scholar arm (script committed before it runs)
+
+* **Script:** `data_audit/search_datasets_s2.py`.
+* **Request:** the five fixed queries of §1 to `graph/v1/paper/search?query=<query>&limit=50`, in relevance order,
+  with no other filter, as in §2. One request per query.
+* **Client:** `lit/s2_client.py`. Keyed, at most 1 request per second, and the same 2–32 s backoff then stop.
+* **Output:**
+  * raw responses in `runs/s2_q{k}.json`;
+  * records in `runs/dataset_records_s2.json`, with uids continuing after D1359.
+* **Screening:** screened under §3 like all other records, and logged in `data_audit/RECORDS.csv`.

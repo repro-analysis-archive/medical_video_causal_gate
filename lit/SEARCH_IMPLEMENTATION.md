@@ -119,3 +119,14 @@ A source is graded separately on L1, L2, L3 and L4. A combined condition takes t
   received HTTP 429 continuously from 03:37 to 04:07 UTC, through backoff waits of 120–900 s. The run was then stopped.
   Under §4 the Semantic Scholar and proceedings arms are **BLOCKED (needs an API key: investigator action)**. The
   corrected script is what a re-run with a key would execute.
+
+## 10. Keyed client for the Semantic Scholar and proceedings arms (investigator instruction, before the run)
+
+* **Client:** `lit/s2_client.py`, which replaces the unauthenticated backoff client in `search_s2.py`:
+  * The API key is read at call time from `~/.config/s2/key` and sent only as the `x-api-key` header. It is never
+    printed, logged or stored, and every log line is scrubbed.
+  * At most 1 request per second.
+  * On HTTP 429 or 5xx, retries follow after 2, 4, 8, 16 and 32 s. If the last retry fails, the run **stops and is
+    reported** (`S2Stop`). Every sub-query response already received stays cached.
+* **Unchanged:** queries, sub-query split, depth (first 100 per query per arm, merged round-robin), date range, venue
+  names (§9) and screening.
