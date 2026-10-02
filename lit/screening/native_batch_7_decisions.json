@@ -1,0 +1,583 @@
+[
+ {
+  "uid": "N0637",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Harmonizing multi-study MRI for lifespan trends; site harmonization without learned representations or causal estimation."
+ },
+ {
+  "uid": "N0638",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Mendelian randomization concepts; generic IV causal inference."
+ },
+ {
+  "uid": "N0639",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "No abstract; causal ML for treatment outcomes perspective, use of imaging/unstructured covariates cannot be ruled out."
+ },
+ {
+  "uid": "N0640",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Stochastic adversarial video prediction; no causal inference."
+ },
+ {
+  "uid": "N0641",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Applied observational causal inference in ecology; no images or representations."
+ },
+ {
+  "uid": "N0642",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Causal ML review for treatment effects in healthcare addressing high-dimensional unstructured data; may cover image representations as covariates."
+ },
+ {
+  "uid": "N0643",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Poorly measured confounder proxies in regression designs; generic identification."
+ },
+ {
+  "uid": "N0644",
+  "decision": "RELATED",
+  "claims": [
+   "L2",
+   "L4"
+  ],
+  "reason": "Review of statistical/deep image harmonization removing batch confounding; no causal effect estimation."
+ },
+ {
+  "uid": "N0645",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "cBioPortal longitudinal genomic visualization; unrelated."
+ },
+ {
+  "uid": "N0646",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "N3C COVID data infrastructure; unrelated."
+ },
+ {
+  "uid": "N0647",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "ComBat removes site effects in fMRI connectivity; harmonization, no learned representations or causal estimation."
+ },
+ {
+  "uid": "N0648",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Precarious employment mental health meta-analysis; unrelated."
+ },
+ {
+  "uid": "N0649",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Inflation expectations randomized information treatment; unrelated."
+ },
+ {
+  "uid": "N0650",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Generic causal inference survey."
+ },
+ {
+  "uid": "N0651",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Radiograph DL encodes scanner and hospital-process variables driving predictions; shortcut, no causal estimation."
+ },
+ {
+  "uid": "N0652",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Mendelian randomization guidelines; generic."
+ },
+ {
+  "uid": "N0653",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Alzheimer neuropathology review; unrelated."
+ },
+ {
+  "uid": "N0654",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; DNN safety survey title, criteria ruled out."
+ },
+ {
+  "uid": "N0655",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Review combining RCTs and observational data; generic."
+ },
+ {
+  "uid": "N0656",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "GANs for time series review; unrelated."
+ },
+ {
+  "uid": "N0657",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Synthetic difference-in-differences; generic panel estimator."
+ },
+ {
+  "uid": "N0658",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; plasma metabolome genomic atlas, criteria ruled out."
+ },
+ {
+  "uid": "N0659",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Applied MR for ADHD and depression; unrelated."
+ },
+ {
+  "uid": "N0660",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Causal representation learning GAN for OOD generalization; non-medical prediction."
+ },
+ {
+  "uid": "N0661",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Accelerometry physical activity harmonized analyses; unrelated."
+ },
+ {
+  "uid": "N0662",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Bias in dating platforms HCI; unrelated."
+ },
+ {
+  "uid": "N0663",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Diffusion MRI multi-site/longitudinal harmonization review; no learned representations or causal estimation."
+ },
+ {
+  "uid": "N0664",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "GAN review; unrelated."
+ },
+ {
+  "uid": "N0665",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "ML-based causal effect estimators performance; generic."
+ },
+ {
+  "uid": "N0666",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Fatty liver nomenclature consensus; unrelated."
+ },
+ {
+  "uid": "N0667",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Digital media and democracy review; unrelated."
+ },
+ {
+  "uid": "N0668",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; single-cell perturbation data resource, criteria ruled out."
+ },
+ {
+  "uid": "N0669",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Confounder-invariant deep features from MRI/X-ray for prediction; no treatment-effect estimation."
+ },
+ {
+  "uid": "N0670",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Semiparametric proximal causal inference with confounder proxies; generic, no images."
+ },
+ {
+  "uid": "N0671",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Tutorial on causal questions and estimators; generic."
+ },
+ {
+  "uid": "N0672",
+  "decision": "RELATED",
+  "claims": [
+   "L2",
+   "L4"
+  ],
+  "reason": "Scanner-invariant deep features for MRI harmonisation/confound removal; prediction tasks, no causal estimation."
+ },
+ {
+  "uid": "N0673",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; sequential causal GAN image synthesis, causal is architectural."
+ },
+ {
+  "uid": "N0674",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "LLM debiasing/hallucination review; unrelated."
+ },
+ {
+  "uid": "N0675",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Proximal deconfounding in recommendation; unrelated."
+ },
+ {
+  "uid": "N0676",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Causal confusion from nuisance image correlates in imitation learning; policy learning, not effect estimation."
+ },
+ {
+  "uid": "N0677",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "ComBat site harmonization increases power in multi-site case-control MRI; no learned representations."
+ },
+ {
+  "uid": "N0678",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Mendelian randomization guidelines update; generic."
+ },
+ {
+  "uid": "N0679",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Survey of causal panel data methods; generic."
+ },
+ {
+  "uid": "N0680",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Occupational burnout definition consensus; unrelated."
+ },
+ {
+  "uid": "N0681",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Stable IPW for time-varying exposures; generic longitudinal estimator."
+ },
+ {
+  "uid": "N0682",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Face gender privacy networks; unrelated."
+ },
+ {
+  "uid": "N0683",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Data harmonization primer; unrelated."
+ },
+ {
+  "uid": "N0684",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Bias and fairness in ML survey; unrelated."
+ },
+ {
+  "uid": "N0685",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Adversarial attacks on IoT intrusion detection; unrelated."
+ },
+ {
+  "uid": "N0686",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Child cohort network infrastructure; unrelated."
+ },
+ {
+  "uid": "N0687",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Abstract is citation only; counterfactual debiasing of text classifiers, prediction not treatment effects."
+ },
+ {
+  "uid": "N0688",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deconfounded collaborative filtering; unrelated."
+ },
+ {
+  "uid": "N0689",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "TMLE/AIPW/DML overview for epidemiology; generic."
+ },
+ {
+  "uid": "N0690",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; HCP lifespan imaging protocols, criteria ruled out."
+ },
+ {
+  "uid": "N0691",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Cardiovascular-kidney-metabolic advisory; unrelated."
+ },
+ {
+  "uid": "N0692",
+  "decision": "RELATED",
+  "claims": [
+   "L1",
+   "L4"
+  ],
+  "reason": "Proximal causal learning identification incl. time-varying treatments; generic, no images."
+ },
+ {
+  "uid": "N0693",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "BraTS challenge benchmark; no causal estimation."
+ },
+ {
+  "uid": "N0694",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; feature selection optimizer title, criteria ruled out."
+ },
+ {
+  "uid": "N0695",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Lipoprotein(a) consensus statement; unrelated."
+ },
+ {
+  "uid": "N0696",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "NLP adversarial defense survey; unrelated."
+ },
+ {
+  "uid": "N0697",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Adversarial defense for retinal images; unrelated."
+ },
+ {
+  "uid": "N0698",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Causal inference as missing data review; generic."
+ },
+ {
+  "uid": "N0699",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Adversarial reward learning for visual storytelling; unrelated."
+ },
+ {
+  "uid": "N0700",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Debiased SARS-CoV-2 prevalence estimation; no images or representations."
+ },
+ {
+  "uid": "N0701",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Doubly robust CATE estimation theory; generic."
+ },
+ {
+  "uid": "N0702",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Sequential causal imitation learning blocking backdoor paths; driving data, no image-representation adjustment."
+ },
+ {
+  "uid": "N0703",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Harmonizing RCT and observational analyses for comparable causal estimates; generic."
+ },
+ {
+  "uid": "N0704",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Identification for causal imitation learning with unobserved confounders; generic."
+ },
+ {
+  "uid": "N0705",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Causal survival forests for heterogeneous effects; generic."
+ },
+ {
+  "uid": "N0706",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Collaborative pooled epidemiologic designs commentary; unrelated."
+ },
+ {
+  "uid": "N0707",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Tutorial on causal inference estimators; generic."
+ },
+ {
+  "uid": "N0708",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Liquid biopsy tracking in nasopharyngeal carcinoma; unrelated."
+ },
+ {
+  "uid": "N0709",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Conditional permutation test for independence; not effect estimation with representations."
+ },
+ {
+  "uid": "N0710",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Applied MSM handgrip strength and mortality; unrelated."
+ },
+ {
+  "uid": "N0711",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; deepfake survey title, criteria ruled out."
+ },
+ {
+  "uid": "N0712",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Transformer-learned EHR representations used for doubly robust treatment-effect estimation with semi-synthetic confounding; borderline text-like representations."
+ },
+ {
+  "uid": "N0713",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "MACS/WIHS cohort description; unrelated."
+ },
+ {
+  "uid": "N0714",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Adolescent mental health cohort comparison; unrelated."
+ },
+ {
+  "uid": "N0715",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Review of causal inference and ML for sociology; generic."
+ },
+ {
+  "uid": "N0716",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep generative models review; unrelated."
+ },
+ {
+  "uid": "N0717",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Brain structure-cognition longitudinal review; unrelated."
+ },
+ {
+  "uid": "N0718",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deprivation, ethnicity and SARS-CoV-2 ecological study; unrelated."
+ },
+ {
+  "uid": "N0719",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Diffusion augmentation for sequential recommendation; unrelated."
+ },
+ {
+  "uid": "N0720",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "DiD with time-varying covariates; generic."
+ }
+]

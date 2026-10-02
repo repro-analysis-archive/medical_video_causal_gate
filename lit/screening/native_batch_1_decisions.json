@@ -1,0 +1,571 @@
+[
+ {
+  "uid": "N0091",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case-control prevalence study; no learned representations."
+ },
+ {
+  "uid": "N0092",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Causality-inspired invariant representations against view-shift spurious correlations for polyp detection; no causal effect estimation."
+ },
+ {
+  "uid": "N0093",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Matched clinical case-control study on GLP1-RA with tabular covariates; no learned representations."
+ },
+ {
+  "uid": "N0094",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical risk-score development; no learned representations."
+ },
+ {
+  "uid": "N0095",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Prevalence meta-analysis; no learned representations."
+ },
+ {
+  "uid": "N0096",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-matched surgical cohort with tabular covariates; no learned representations."
+ },
+ {
+  "uid": "N0097",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical study without learned image/video/text representations as adjustment covariates; not a causal-representation benchmark."
+ },
+ {
+  "uid": "N0098",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical study without learned image/video/text representations as adjustment covariates; not a causal-representation benchmark."
+ },
+ {
+  "uid": "N0099",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical predictor study (LASSO on tabular data); no learned representations."
+ },
+ {
+  "uid": "N0100",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Diffusion-based counterfactual generation for medical video diagnosis; no causal effect estimation of an action/treatment."
+ },
+ {
+  "uid": "N0101",
+  "decision": "RELATED",
+  "claims": [
+   "L3"
+  ],
+  "reason": "Survey of surgical video generation and world models; adjacent generative/causal dynamics, no causal estimation benchmark."
+ },
+ {
+  "uid": "N0102",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Domain-invariant (sim-to-real) CLIP representations for surgical phase recognition; no causal effect estimation."
+ },
+ {
+  "uid": "N0103",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep-learning method for prediction/segmentation/recognition; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0104",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Surgical video question answering method; 'causal' refers to temporal dependencies, no causal estimation."
+ },
+ {
+  "uid": "N0105",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1",
+   "L3"
+  ],
+  "reason": "Causal generative twin-network model for counterfactual echo videos; synthetic validation; cannot rule out treatment-effect framing or semi-synthetic benchmark."
+ },
+ {
+  "uid": "N0106",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Causal/non-causal explanations generating disease progression images in capsule endoscopy; no causal effect estimation."
+ },
+ {
+  "uid": "N0107",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep-learning method for prediction/segmentation/recognition; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0108",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Foundation-model digital-twin representation to avoid non-causal associations and OOD failure in phase recognition; no causal estimation."
+ },
+ {
+  "uid": "N0109",
+  "decision": "RELATED",
+  "claims": [
+   "L3"
+  ],
+  "reason": "Expert benchmark of surgical video generation plausibility; generative world models, no causal effect estimation."
+ },
+ {
+  "uid": "N0110",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Counterfactual lesion-masking RL to remove spurious background correlations in MLLM diagnosis; shortcut mitigation, no causal estimation."
+ },
+ {
+  "uid": "N0111",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep-learning method for prediction/segmentation/recognition; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0112",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Report-generation preference optimisation; counterfactual edits for training data, no causal estimation."
+ },
+ {
+  "uid": "N0113",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep-learning method for prediction/segmentation/recognition; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0114",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; historical overview of AI in medicine, criteria ruled out by title."
+ },
+ {
+  "uid": "N0115",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical guideline/consensus; no learned representations or causal methodology."
+ },
+ {
+  "uid": "N0116",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep-learning method for prediction/segmentation/recognition; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0117",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical guideline/consensus; no learned representations or causal methodology."
+ },
+ {
+  "uid": "N0118",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Meta-analysis of AI polyp detection trials; AI as intervention, no learned representations as covariates."
+ },
+ {
+  "uid": "N0119",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Microbiome confounder-control study; no learned image/video/text representations."
+ },
+ {
+  "uid": "N0120",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Commentary on AI translation challenges; no causal estimation with learned representations."
+ },
+ {
+  "uid": "N0121",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; general review of AI in endoscopy and surgery, criteria ruled out by title."
+ },
+ {
+  "uid": "N0122",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey of AI or generative models; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0123",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical guideline/consensus; no learned representations or causal methodology."
+ },
+ {
+  "uid": "N0124",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Contrastive representation learning for surgical video retrieval; no causal estimation."
+ },
+ {
+  "uid": "N0125",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "StylEx counterfactual visualisations reveal acquisition confounders (e.g., underexposure) in classifiers; explicitly not causal estimation."
+ },
+ {
+  "uid": "N0126",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey of AI or generative models; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0127",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Robotic capsule magnetic control; no learned representations or causal estimation."
+ },
+ {
+  "uid": "N0128",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Perspective on video-text generative AI for 3D imaging; no causal estimation."
+ },
+ {
+  "uid": "N0129",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; endoscopy consensus conference, criteria ruled out by title."
+ },
+ {
+  "uid": "N0130",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; disease primer on H. pylori, criteria ruled out by title."
+ },
+ {
+  "uid": "N0131",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey of AI or generative models; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0132",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "LLM medical exam evaluation; no causal estimation with learned representations."
+ },
+ {
+  "uid": "N0133",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey of AI or generative models; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0134",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Review of data-centric ML for healthcare; no causal estimation with learned representations."
+ },
+ {
+  "uid": "N0135",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Lynch syndrome registry mortality study; no learned representations."
+ },
+ {
+  "uid": "N0136",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical review of endoscopy complications; no learned representations."
+ },
+ {
+  "uid": "N0137",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; review of capsule endoscopy imaging, criteria ruled out by title."
+ },
+ {
+  "uid": "N0138",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Library of pretrained generative models for image synthesis; no causal estimation."
+ },
+ {
+  "uid": "N0139",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey of AI or generative models; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0140",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey of AI or generative models; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0141",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Meta-analysis of AI-assisted colonoscopy RCTs; no learned representations as covariates."
+ },
+ {
+  "uid": "N0142",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey of AI or generative models; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0143",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Microbiota/proteomics study of enteropathy; no learned representations."
+ },
+ {
+  "uid": "N0144",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-matched registry study with tabular covariates; no learned representations."
+ },
+ {
+  "uid": "N0145",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Microbiology mechanistic study; no learned representations."
+ },
+ {
+  "uid": "N0146",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "LLM clinical knowledge benchmark; no causal estimation."
+ },
+ {
+  "uid": "N0147",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-matched CADe effectiveness study; AI is the intervention, no learned representations as covariates."
+ },
+ {
+  "uid": "N0148",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical review of colonoscopy complications; no learned representations."
+ },
+ {
+  "uid": "N0149",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Spatial transcriptomics technology; no learned representations or causal estimation."
+ },
+ {
+  "uid": "N0150",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep-learning method for prediction/segmentation/recognition; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0151",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Radiation biomarker gene-expression study; no learned representations."
+ },
+ {
+  "uid": "N0152",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical guideline/consensus; no learned representations or causal methodology."
+ },
+ {
+  "uid": "N0153",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Narrative clinical review; no learned representations."
+ },
+ {
+  "uid": "N0154",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Device RCT for adenoma detection; no learned representations."
+ },
+ {
+  "uid": "N0155",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep learning prediction of mutations from histology; no causal estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0156",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Medical physics practice guideline; no learned representations."
+ },
+ {
+  "uid": "N0157",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Review of AI scoring in IBD endoscopy trials; no learned representations as adjustment covariates."
+ },
+ {
+  "uid": "N0158",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Registry epidemiology with regression on tabular data; no learned representations."
+ },
+ {
+  "uid": "N0159",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "cfDNA ML with confounder-based cross-validation by batch/institution; acquisition bias in prediction, no causal estimation or imaging representations."
+ },
+ {
+  "uid": "N0160",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Narrative review of human-AI collaboration in colonoscopy; no causal estimation."
+ },
+ {
+  "uid": "N0161",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Philosophy of affective representation; unrelated."
+ },
+ {
+  "uid": "N0162",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey of AI or generative models; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0163",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Surgical video search system; no causal estimation."
+ },
+ {
+  "uid": "N0164",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep-learning method for prediction/segmentation/recognition; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0165",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Pathology vision-language foundation model; no causal estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0166",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; general generative-AI review, criteria ruled out by title."
+ },
+ {
+  "uid": "N0167",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical guideline/consensus; no learned representations or causal methodology."
+ },
+ {
+  "uid": "N0168",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Review of ML for 2D/3D registration; no causal estimation."
+ },
+ {
+  "uid": "N0169",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical systematic review/position statement; no learned representations."
+ },
+ {
+  "uid": "N0170",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Surgical self-supervised foundation model; no causal estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0171",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Counterfactual reasoning for interpretable EHR prediction; no image representations or causal effect estimation."
+ },
+ {
+  "uid": "N0172",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey of AI or generative models; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0173",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; clinical GLP-1RA aspiration study, criteria ruled out by title."
+ },
+ {
+  "uid": "N0174",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Bibliometric analysis of AI in endoscopy; no causal estimation."
+ },
+ {
+  "uid": "N0175",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey of AI or generative models; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0176",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Ethics in robot design; unrelated to learned representations in causal estimation."
+ },
+ {
+  "uid": "N0177",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey of AI or generative models; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0178",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical study without learned image/video/text representations as adjustment covariates; not a causal-representation benchmark."
+ },
+ {
+  "uid": "N0179",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Veterinary RCT of spinal cord therapy; no learned representations."
+ },
+ {
+  "uid": "N0180",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; latent graph encoding of surgical video for recognition tasks, criteria ruled out by title."
+ },
+ {
+  "uid": "N0181",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Molecular pilot study of bile reflux in carcinoma; no learned representations."
+ }
+]

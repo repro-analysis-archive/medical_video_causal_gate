@@ -1,0 +1,548 @@
+[
+ {
+  "uid": "N0000",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Colorectal screening simulation/cost-effectiveness model; no learned representations or imaging-based causal adjustment."
+ },
+ {
+  "uid": "N0001",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case report; no learned representations, causal effect estimation with learned covariates, or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0002",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; title indicates clinical topic unrelated to learned representations in causal estimation."
+ },
+ {
+  "uid": "N0003",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Mouse colonoscopy tumor-modeling protocol; unrelated to learned representations or causal estimation."
+ },
+ {
+  "uid": "N0004",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-score matched clinical comparison using tabular covariates; no learned image/video representations."
+ },
+ {
+  "uid": "N0005",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical study without learned image/video/text representations as adjustment covariates; not a causal-representation benchmark."
+ },
+ {
+  "uid": "N0006",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case report; no learned representations, causal effect estimation with learned covariates, or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0007",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Surgical technique case series; no learned representations or causal estimation."
+ },
+ {
+  "uid": "N0008",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Retrospective clinical prognosis study (Cox regression); no learned representations."
+ },
+ {
+  "uid": "N0009",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Bowel-preparation RCT; no learned representations or imaging-based causal adjustment."
+ },
+ {
+  "uid": "N0010",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical guideline; no learned representations or causal methodology."
+ },
+ {
+  "uid": "N0011",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case report; no learned representations, causal effect estimation with learned covariates, or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0012",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case report; no learned representations, causal effect estimation with learned covariates, or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0013",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Systematic review of clinical interventions; no learned representations."
+ },
+ {
+  "uid": "N0014",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Claims-data comparative study with tabular covariate balancing; no learned representations."
+ },
+ {
+  "uid": "N0015",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical risk-score validation; no learned representations or causal adjustment."
+ },
+ {
+  "uid": "N0016",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case report; no learned representations, causal effect estimation with learned covariates, or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0017",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical study without learned image/video/text representations as adjustment covariates; not a causal-representation benchmark."
+ },
+ {
+  "uid": "N0018",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Screening-behaviour survey; unrelated to learned representations or causal estimation."
+ },
+ {
+  "uid": "N0019",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-matched surgical study with tabular covariates; no learned representations."
+ },
+ {
+  "uid": "N0020",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "FMT randomized trial; no learned representations."
+ },
+ {
+  "uid": "N0021",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Genetic/environmental risk-score screening study; no learned image representations."
+ },
+ {
+  "uid": "N0022",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Colonoscope device RCT; no learned representations or representation-based causal analysis."
+ },
+ {
+  "uid": "N0023",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; title indicates clinical topic unrelated to learned representations in causal estimation."
+ },
+ {
+  "uid": "N0024",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; title indicates clinical topic unrelated to learned representations in causal estimation."
+ },
+ {
+  "uid": "N0025",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; title indicates clinical topic unrelated to learned representations in causal estimation."
+ },
+ {
+  "uid": "N0026",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Crossover RCT with video-recorded colonoscopies counted manually; no learned representations."
+ },
+ {
+  "uid": "N0027",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical study without learned image/video/text representations as adjustment covariates; not a causal-representation benchmark."
+ },
+ {
+  "uid": "N0028",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Health-policy difference-in-differences with administrative data; no learned representations."
+ },
+ {
+  "uid": "N0029",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical study without learned image/video/text representations as adjustment covariates; not a causal-representation benchmark."
+ },
+ {
+  "uid": "N0030",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Descriptive prevalence study; no learned representations."
+ },
+ {
+  "uid": "N0031",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Endoscopy modality RCT; no learned representations."
+ },
+ {
+  "uid": "N0032",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical study without learned image/video/text representations as adjustment covariates; not a causal-representation benchmark."
+ },
+ {
+  "uid": "N0033",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case report; no learned representations, causal effect estimation with learned covariates, or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0034",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-adjusted adenoma detection by sex using tabular covariates; no learned representations."
+ },
+ {
+  "uid": "N0035",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Microbiome profiling study; no learned representations or causal estimation."
+ },
+ {
+  "uid": "N0036",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical study without learned image/video/text representations as adjustment covariates; not a causal-representation benchmark."
+ },
+ {
+  "uid": "N0037",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical RCT on clip closure; no learned representations."
+ },
+ {
+  "uid": "N0038",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical study without learned image/video/text representations as adjustment covariates; not a causal-representation benchmark."
+ },
+ {
+  "uid": "N0039",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Explainable AI classification of colonoscopy images; no causal estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0040",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case report; no learned representations, causal effect estimation with learned covariates, or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0041",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; title indicates clinical topic unrelated to learned representations in causal estimation."
+ },
+ {
+  "uid": "N0042",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case report; no learned representations, causal effect estimation with learned covariates, or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0043",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical risk-score validation; no learned representations."
+ },
+ {
+  "uid": "N0044",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical meta-analysis; no learned representations."
+ },
+ {
+  "uid": "N0045",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; title indicates clinical topic unrelated to learned representations in causal estimation."
+ },
+ {
+  "uid": "N0046",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Health-equity perspective on COVID-19 and screening; no learned representations."
+ },
+ {
+  "uid": "N0047",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case report; no learned representations, causal effect estimation with learned covariates, or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0048",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-matched mediation analysis with tabular data; no learned representations."
+ },
+ {
+  "uid": "N0049",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; clinical endoscopic therapy topic unrelated to learned representations in causal estimation."
+ },
+ {
+  "uid": "N0050",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical RCT on CT before colonoscopy; no learned representations."
+ },
+ {
+  "uid": "N0051",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case report; no learned representations, causal effect estimation with learned covariates, or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0052",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Ultrasound segmentation plus nursing intervention comparison; segmentation not used as causal adjustment covariates."
+ },
+ {
+  "uid": "N0053",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; title indicates clinical topic unrelated to learned representations in causal estimation."
+ },
+ {
+  "uid": "N0054",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical study without learned image/video/text representations as adjustment covariates; not a causal-representation benchmark."
+ },
+ {
+  "uid": "N0055",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; title indicates clinical topic unrelated to learned representations in causal estimation."
+ },
+ {
+  "uid": "N0056",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical study without learned image/video/text representations as adjustment covariates; not a causal-representation benchmark."
+ },
+ {
+  "uid": "N0057",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Epidemiologic cohort with tabular covariates; no learned representations."
+ },
+ {
+  "uid": "N0058",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Anesthesia RCT; no learned representations."
+ },
+ {
+  "uid": "N0059",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case report; no learned representations, causal effect estimation with learned covariates, or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0060",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Animal experimental study on laparoscope heat; no learned representations."
+ },
+ {
+  "uid": "N0061",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case report; no learned representations, causal effect estimation with learned covariates, or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0062",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case report; no learned representations, causal effect estimation with learned covariates, or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0063",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical meta-analysis; no learned representations."
+ },
+ {
+  "uid": "N0064",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical study without learned image/video/text representations as adjustment covariates; not a causal-representation benchmark."
+ },
+ {
+  "uid": "N0065",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Systematic review of adverse events; no learned representations."
+ },
+ {
+  "uid": "N0066",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case report; no learned representations, causal effect estimation with learned covariates, or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0067",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; title indicates clinical topic unrelated to learned representations in causal estimation."
+ },
+ {
+  "uid": "N0068",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinician survey; no learned representations or causal estimation."
+ },
+ {
+  "uid": "N0069",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case report; no learned representations, causal effect estimation with learned covariates, or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0070",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; title indicates clinical topic unrelated to learned representations in causal estimation."
+ },
+ {
+  "uid": "N0071",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Microbiome association study with tabular confounders; no learned image representations."
+ },
+ {
+  "uid": "N0072",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; title indicates clinical topic unrelated to learned representations in causal estimation."
+ },
+ {
+  "uid": "N0073",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; title indicates clinical topic unrelated to learned representations in causal estimation."
+ },
+ {
+  "uid": "N0074",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; title indicates clinical topic unrelated to learned representations in causal estimation."
+ },
+ {
+  "uid": "N0075",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case series; no learned representations."
+ },
+ {
+  "uid": "N0076",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Histology immunohistochemistry study; no learned representations or causal estimation."
+ },
+ {
+  "uid": "N0077",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Anesthesia RCT; no learned representations."
+ },
+ {
+  "uid": "N0078",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Occupational radiation dosimetry study; no learned representations."
+ },
+ {
+  "uid": "N0079",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical study without learned image/video/text representations as adjustment covariates; not a causal-representation benchmark."
+ },
+ {
+  "uid": "N0080",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Registry data-linkage cancer incidence study; no learned representations."
+ },
+ {
+  "uid": "N0081",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; title indicates clinical topic unrelated to learned representations in causal estimation."
+ },
+ {
+  "uid": "N0082",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Immunohistochemistry expression study; no learned representations."
+ },
+ {
+  "uid": "N0083",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case report; no learned representations, causal effect estimation with learned covariates, or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0084",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical case report; no learned representations, causal effect estimation with learned covariates, or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0085",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Population cohort symptom-association study; no learned representations."
+ },
+ {
+  "uid": "N0086",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Registry survival study with propensity matching on tabular covariates; no learned representations."
+ },
+ {
+  "uid": "N0087",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical study without learned image/video/text representations as adjustment covariates; not a causal-representation benchmark."
+ },
+ {
+  "uid": "N0088",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Microbiome cohort protocol; no learned image representations or causal-adjustment use."
+ },
+ {
+  "uid": "N0089",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical RCT subgroup analysis; no learned representations."
+ },
+ {
+  "uid": "N0090",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Narrative clinical review; no learned representations."
+ }
+]

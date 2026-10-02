@@ -64,3 +64,42 @@ text of each source was read before any DIRECT or PARTIAL grade.
 | L4 | **RELATED**. A sequential estimator with video-representation deconfounders, but no acquisition information, no instrument-vs-confounder role, and no duration analysis of that role | §3.3–3.6, pp. 12–19 |
 
 **Note.** K4 is the closest prior work for L1. It also gives a precedent for a known-truth video benchmark (L3 RELATED).
+
+## S1. Lead decisions on the 17 screening FULLTEXT candidates (native search)
+
+**Rule.** A full text was read wherever DIRECT or PARTIAL was possible. Where the abstract, or a scan of the text,
+settles RELATED or NONE, that grade is recorded (gate §6: "Screening to RELATED or NONE may use abstracts").
+
+| uid | source | L1 | L2 | L3 | L4 | basis |
+|---|---|---|---|---|---|---|
+| N0105 | D'ARTAGNAN: Counterfactual Video Generation (MICCAI 2022) | RELATED | NONE | RELATED | NONE | abstract: counterfactual echo-video generation for EF; no treatment-effect estimation with representations as adjustment |
+| N0217 | Confounder-aware foundation modeling … cell imaging (npj Imaging 2025) | RELATED | RELATED | NONE | NONE | full-text scan (PMC12546604): an SCM-conditioned latent diffusion model generates batch-balanced synthetic Cell Painting images, evaluated by MoA / target **prediction**. No adjustment-based causal estimate, and no bias or overlap analysis of acquisition information |
+| N0235 | rsfMRI foundation models … cognitive aging interventions (bioRxiv 2026) | RELATED | RELATED | NONE | RELATED | full-text scan (PMC13105019): predicts individual intervention response in two RCTs. "Robustness to confounders (site, head motion, arm)" means **classification accuracy**, not causal-estimation bias |
+| N0305 | Gui & Toubia, LLMs to Simulate Human Behavior (SSRN 2023) | RELATED | NONE | NONE | NONE | abstract (Crossref): confounding in LLM-simulated experiments; no representation adjustment |
+| N0309 | Deep Feature IV regression (DFIV, 2020) | RELATED | NONE | NONE | NONE | abstract: learned features in IV regression; not adjustment covariates; no acquisition information |
+| N0311 | Harmonization with Flow-Based Causal Inference (MICCAI 2021) | NONE | RELATED | NONE | RELATED | abstract (PubMed): counterfactual site harmonization of MRI for **prediction** generalization; no treatment-effect estimation |
+| N0337 | Deep Causal Learning survey (ACM CSUR 2025) | RELATED | NONE | NONE | NONE | abstract: survey |
+| N0367 | Individualized lesion-symptom mapping (NeuroImage Clin 2025) | NONE | NONE | RELATED | NONE | abstract: simulated scores on real lesion maps for XAI validation; not a causal benchmark; no acquisition instrument |
+| N0378 | Neuroimaging Simulation Framework for Causal AI (arXiv 2606.28684) | NONE | NONE | RELATED | NONE | full-text scan: **synthetic** template-deformed MRI with a causal structure for causal-discovery evaluation; not real medical video; no acquisition instrument |
+| N0386 | DR-ME distributional treatment-effect test (arXiv 2605.08034) | NONE | NONE | RELATED | NONE | full-text scan: in the OCTMNIST semi-synthetic study, "OCTMNIST images only on the outcome side … confounding is driven by the synthetic covariates" (App. I.7) |
+| N0445 | MICCAI 2021 proceedings volume (LNCS 12903) | NONE | NONE | NONE | NONE | a whole volume, not a single source |
+| N0570 | ComBat harmonization … amyloid PET (HBM 2024) | NONE | RELATED | NONE | RELATED | abstract: ComBat on regional SUVR (not learned representations) across tracers; trial-power simulation |
+| N0587 | Causal State-Space Model, longitudinal ITE (arXiv 2608.08288) | RELATED | NONE | NONE | RELATED | abstract: treatment-invariant (not acquisition-invariant) representations |
+| N0596 | DRTCI disentangled temporal causal inference (arXiv 2201.08137) | RELATED | NONE | NONE | RELATED | abstract: disentangled balancing of patient-history representations; no acquisition information |
+| N0639 | Causal ML for predicting treatment outcomes (Nat Med 2024) | RELATED | NONE | NONE | NONE | perspective / review |
+| N0642 | Causal ML for healthcare and precision medicine (RSOS 2022) | RELATED | NONE | NONE | NONE | abstract: review |
+| N0712 | Targeted-BEHRT (IEEE TNNLS 2022; arXiv 2202.03487) | **PARTIAL** | NONE | RELATED | RELATED | **full text read**: see S2 |
+
+## S2. Rao et al. (2022). Targeted-BEHRT: Deep learning for observational causal inference on longitudinal electronic health records. IEEE TNNLS; arXiv:2202.03487
+
+* Read in full (10 pp. + supplement).
+* **What it does.** A transformer (BEHRT) pre-trained with masked-EHR modelling extracts representations of
+  longitudinal EHR. These feed propensity and outcome heads, with CV-TMLE, to estimate the risk ratio of an
+  antihypertensive class on cancer, in semi-synthetic CPRD data and in real CPRD data.
+
+| claim | grade | supporting passage (location) |
+|---|---|---|
+| L1 | **PARTIAL**. Pre-trained (foundation-style) representations are used as **adjustment covariates** for the causal effect of a **treatment**. The modality is **EHR, not video** | "T-BEHRT first extracts latent EHR features from static covariates and fixed sub-sequences of medical history with BEHRT. Second, the model predicts propensity of exposure and conditional outcome using these grasped features similar to the Dragonnet model." (§II.D, p. 4). "we pre-trained contextualised EHR embeddings and network weights through MEM on the pretraining dataset" (§II.E, p. 5) |
+| L2 | **NONE**. No acquisition information | — |
+| L3 | **RELATED**. A semi-synthetic causal benchmark on real EHR, not on medical video, with no acquisition instrument | "we first construct semi-synthetic derivations of our observational dataset" (§I, p. 2) |
+| L4 | **RELATED**. It distinguishes **persistent vs transient confounding** in the semi-synthetic design. This concerns clinical confounders, not acquisition information in representations, and not intervention duration | "We define persisting confounding as confounders that are assigned at birth and persist through one's life course … transient confounding as confounders that manifest at a point or period of one's life" (§II.B, p. 3) |

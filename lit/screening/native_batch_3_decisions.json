@@ -1,0 +1,573 @@
+[
+ {
+  "uid": "N0273",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0274",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0275",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Molecular/omics/chemistry foundation model or predictor; no image/video/text representations in causal estimation."
+ },
+ {
+  "uid": "N0276",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0277",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Molecular/omics/chemistry foundation model or predictor; no image/video/text representations in causal estimation."
+ },
+ {
+  "uid": "N0278",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Molecular/omics/chemistry foundation model or predictor; no image/video/text representations in causal estimation."
+ },
+ {
+  "uid": "N0279",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0280",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Molecular/omics/chemistry foundation model or predictor; no image/video/text representations in causal estimation."
+ },
+ {
+  "uid": "N0281",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Molecular/omics/chemistry foundation model or predictor; no image/video/text representations in causal estimation."
+ },
+ {
+  "uid": "N0282",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Radiology foundation model and benchmark; no causal estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0283",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0284",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Ophthalmology vision-language foundation model; no causal estimation."
+ },
+ {
+  "uid": "N0285",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General-purpose foundation model; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0286",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General-purpose foundation model; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0287",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Molecular/omics/chemistry foundation model or predictor; no image/video/text representations in causal estimation."
+ },
+ {
+  "uid": "N0288",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General-purpose foundation model; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0289",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Molecular/omics/chemistry foundation model or predictor; no image/video/text representations in causal estimation."
+ },
+ {
+  "uid": "N0290",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0291",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "fMRI foundation model for prediction/forecasting; no causal estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0292",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Molecular/omics/chemistry foundation model or predictor; no image/video/text representations in causal estimation."
+ },
+ {
+  "uid": "N0293",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0294",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General-purpose foundation model; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0295",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0296",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Co-design study for LLM companion robots; unrelated."
+ },
+ {
+  "uid": "N0297",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Molecular/omics/chemistry foundation model or predictor; no image/video/text representations in causal estimation."
+ },
+ {
+  "uid": "N0298",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Molecular/omics/chemistry foundation model or predictor; no image/video/text representations in causal estimation."
+ },
+ {
+  "uid": "N0299",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep-learning method for prediction/segmentation; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0300",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep-learning method for prediction/segmentation; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0301",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "EHR foundation model adaptation across hospitals for prediction; no causal estimation."
+ },
+ {
+  "uid": "N0302",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; perspective on algorithmic fairness, criteria ruled out by title."
+ },
+ {
+  "uid": "N0303",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep-learning method for prediction/segmentation; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0304",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Vision-language foundation-model embeddings encode demographics causing underdiagnosis bias; shortcut leakage without causal estimation."
+ },
+ {
+  "uid": "N0305",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "No abstract; causal-inference perspective on LLM-simulated behaviour; confounding with generative text models cannot be ruled out."
+ },
+ {
+  "uid": "N0306",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0307",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Molecular/omics/chemistry foundation model or predictor; no image/video/text representations in causal estimation."
+ },
+ {
+  "uid": "N0308",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0309",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Deep learned features in instrumental-variable causal estimation including high-dimensional image data; possible learned-representation adjustment."
+ },
+ {
+  "uid": "N0310",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep-learning method for prediction/segmentation; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0311",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L2",
+   "L4"
+  ],
+  "reason": "No abstract; flow-based causal inference for site harmonisation; role of acquisition/harmonisation in causal modelling cannot be ruled out."
+ },
+ {
+  "uid": "N0312",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General-purpose foundation model; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0313",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "No abstract; explanatory interactive learning to correct confounded (Clever Hans) features; shortcut correction, no causal estimation."
+ },
+ {
+  "uid": "N0314",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "COVID-19 radiograph models exploit site-related shortcuts; shortcut leakage without causal estimation."
+ },
+ {
+  "uid": "N0315",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Taxonomy of language-model risks; unrelated."
+ },
+ {
+  "uid": "N0316",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General-purpose foundation model; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0317",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0318",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Particle-physics foundation model; unrelated."
+ },
+ {
+  "uid": "N0319",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Front-door causal intervention for deconfounded representations in report generation; no causal effect estimation of an action."
+ },
+ {
+  "uid": "N0320",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0321",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; m6A site prediction with gradient boosting, criteria ruled out by title."
+ },
+ {
+  "uid": "N0322",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Biosignal foundation models for disease detection; no causal estimation."
+ },
+ {
+  "uid": "N0323",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Hyperspectral GAN classification; unrelated."
+ },
+ {
+  "uid": "N0324",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0325",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multi-site fMRI graph network for diagnosis; no site-bias analysis or causal estimation."
+ },
+ {
+  "uid": "N0326",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0327",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Search/recommendation foundation model; unrelated."
+ },
+ {
+  "uid": "N0328",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Pseudo-scanner standardisation removes scanner information from MRI embeddings for retrieval; harmonisation without causal estimation."
+ },
+ {
+  "uid": "N0329",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0330",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0331",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General-purpose foundation model; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0332",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; perspective on model reuse beyond fine-tuning, criteria ruled out by title."
+ },
+ {
+  "uid": "N0333",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Graph foundation model for drug repurposing prediction; no learned image/text adjustment in causal estimation."
+ },
+ {
+  "uid": "N0334",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Astronomy language model; unrelated."
+ },
+ {
+  "uid": "N0335",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0336",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Learned image compression; unrelated."
+ },
+ {
+  "uid": "N0337",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Survey of deep causal learning covering representation learning for unstructured variables and confounding; may cover learned representations as adjustment covariates."
+ },
+ {
+  "uid": "N0338",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0339",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Language foundation model of human cognition; no causal estimation with learned representations."
+ },
+ {
+  "uid": "N0340",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0341",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Ethics framework for imaging foundation models; no causal estimation."
+ },
+ {
+  "uid": "N0342",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Cross-subject EEG domain adaptation for classification; no acquisition-bias causal analysis."
+ },
+ {
+  "uid": "N0343",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0344",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0345",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Molecular/omics/chemistry foundation model or predictor; no image/video/text representations in causal estimation."
+ },
+ {
+  "uid": "N0346",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Pathology foundation-model embeddings organised by medical centre; centre confounding in classification, no causal estimation."
+ },
+ {
+  "uid": "N0347",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Slide-level pathology generative foundation model; no causal estimation."
+ },
+ {
+  "uid": "N0348",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "LLM causal-reasoning benchmark on news events; no causal effect estimation with learned representations."
+ },
+ {
+  "uid": "N0349",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Tabular foundation model for geotechnical prediction; unrelated."
+ },
+ {
+  "uid": "N0350",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "GAN batch equalisation removes batch effects from cell images while preserving biology; no causal estimation."
+ },
+ {
+  "uid": "N0351",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Open-set 3D mapping with foundation features; unrelated."
+ },
+ {
+  "uid": "N0352",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Digital surveillance symptom association study; no learned representations."
+ },
+ {
+  "uid": "N0353",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Microscopy segmentation dataset; no causal estimation."
+ },
+ {
+  "uid": "N0354",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Fetal brain segmentation benchmark; not a causal benchmark."
+ },
+ {
+  "uid": "N0355",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep-learning method for prediction/segmentation; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0356",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep-learning method for prediction/segmentation; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0357",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review/survey; no learned representations used for causal effect estimation."
+ },
+ {
+  "uid": "N0358",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Molecular/omics/chemistry foundation model or predictor; no image/video/text representations in causal estimation."
+ },
+ {
+  "uid": "N0359",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Computational TIL challenge with prognostic/response associations; no learned representations as causal adjustment."
+ },
+ {
+  "uid": "N0360",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Causal self-supervised regularisation to suppress non-causal features for cross-domain robustness; no causal effect estimation."
+ },
+ {
+  "uid": "N0361",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Molecular/omics/chemistry foundation model or predictor; no image/video/text representations in causal estimation."
+ },
+ {
+  "uid": "N0362",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep-learning method for prediction/segmentation; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "N0363",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Imaging-genetics sparse CCA; no learned representations in causal estimation."
+ }
+]

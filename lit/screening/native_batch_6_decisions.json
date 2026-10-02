@@ -1,0 +1,626 @@
+[
+ {
+  "uid": "N0546",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Chronic pain and PTSD in older psychiatric patients; unrelated."
+ },
+ {
+  "uid": "N0547",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "FDA data integrity warning letters; unrelated."
+ },
+ {
+  "uid": "N0548",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "PASC prevalence survey; unrelated."
+ },
+ {
+  "uid": "N0549",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Synthetic tabular data for disease prediction; unrelated."
+ },
+ {
+  "uid": "N0550",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Cognitive data harmonization in HIV cohorts; no representations or causal estimation."
+ },
+ {
+  "uid": "N0551",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Resting EEG in learning disabilities review; unrelated."
+ },
+ {
+  "uid": "N0552",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Health microsimulation for Mexico; unrelated."
+ },
+ {
+  "uid": "N0553",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Hip dislocation in cerebral palsy meta-analysis; unrelated."
+ },
+ {
+  "uid": "N0554",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Vaccine safety biomarker protocol; unrelated."
+ },
+ {
+  "uid": "N0555",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Sarcopenia epidemiology review; unrelated."
+ },
+ {
+  "uid": "N0556",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Applied MSM comparative effectiveness of biologics; no images or representations."
+ },
+ {
+  "uid": "N0557",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "PRO score translation models; unrelated."
+ },
+ {
+  "uid": "N0558",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Candida endophthalmitis review; unrelated."
+ },
+ {
+  "uid": "N0559",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "NOACs after colorectal surgery review; unrelated."
+ },
+ {
+  "uid": "N0560",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Liquid biopsy and radiomics biomarker perspective; no causal estimation."
+ },
+ {
+  "uid": "N0561",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Cognitive complaint trajectories in MDD; unrelated."
+ },
+ {
+  "uid": "N0562",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Applied difference-in-differences on abortion policy; no images or representations."
+ },
+ {
+  "uid": "N0563",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Air pollution and cognition; unrelated."
+ },
+ {
+  "uid": "N0564",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Epigenetic clocks across countries; unrelated."
+ },
+ {
+  "uid": "N0565",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "GBD lifestyle-mental disorder protocol; unrelated."
+ },
+ {
+  "uid": "N0566",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Dutch dementia cohort consortium infrastructure; unrelated."
+ },
+ {
+  "uid": "N0567",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-matched post-hoc RA trial analysis; no images or representations."
+ },
+ {
+  "uid": "N0568",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Diabetes and cognition in India/China; unrelated."
+ },
+ {
+  "uid": "N0569",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Menopause and dementia pooled analysis; unrelated."
+ },
+ {
+  "uid": "N0570",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L2",
+   "L4"
+  ],
+  "reason": "Tracer harmonization (ComBat) effect on simulated longitudinal drug-trial treatment-effect power/type I error; acquisition imbalance across arms."
+ },
+ {
+  "uid": "N0571",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "TTR V142I carriers and risk factors; unrelated."
+ },
+ {
+  "uid": "N0572",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Muscle synergy stroke rehabilitation review; unrelated."
+ },
+ {
+  "uid": "N0573",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Time-series GAN synthetic medical data; unrelated."
+ },
+ {
+  "uid": "N0574",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Anthracycline strain cardiotoxicity; unrelated."
+ },
+ {
+  "uid": "N0575",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Illusions of causality psychology experiments; unrelated."
+ },
+ {
+  "uid": "N0576",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Cardiomyopathy risk prediction in survivors; unrelated."
+ },
+ {
+  "uid": "N0577",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Omega-3 and stroke pooled cohorts; unrelated."
+ },
+ {
+  "uid": "N0578",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Inflammatory biomarkers and dementia; unrelated."
+ },
+ {
+  "uid": "N0579",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Debiased ATT under time-varying confounding on ICU data; generic longitudinal causal method, no images/representations."
+ },
+ {
+  "uid": "N0580",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Deep ICE g-computation with transformer for longitudinal effects; tabular, no image/video representations."
+ },
+ {
+  "uid": "N0581",
+  "decision": "RELATED",
+  "claims": [
+   "L1",
+   "L4"
+  ],
+  "reason": "Learned VAE/LSTM representations of time-varying instruments from proxies; not image/video/text, no acquisition."
+ },
+ {
+  "uid": "N0582",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Diffusion model for longitudinal counterfactual outcomes; simulator-based, no image representations."
+ },
+ {
+  "uid": "N0583",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity debiasing for sequential recommendation cloze task; unrelated."
+ },
+ {
+  "uid": "N0584",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Generic identification/debiased learning with general instrumental variables."
+ },
+ {
+  "uid": "N0585",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Generic debiased ML for principal stratification effects."
+ },
+ {
+  "uid": "N0586",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Generic causal generative model falsification/identification theory; no medical images."
+ },
+ {
+  "uid": "N0587",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Analyses how invariant (balancing) representations destroy confounder signal in longitudinal effect estimation; treatment- not site-invariance, borderline L4."
+ },
+ {
+  "uid": "N0588",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Generic DiD with time-varying continuous treatments via DML."
+ },
+ {
+  "uid": "N0589",
+  "decision": "RELATED",
+  "claims": [
+   "L2",
+   "L4"
+  ],
+  "reason": "Sequential learning of domain-invariant representations against shortcuts; prediction, no causal estimation."
+ },
+ {
+  "uid": "N0590",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Longitudinal multi-policy effect estimation with shared learned policy representations; tabular semi-synthetic."
+ },
+ {
+  "uid": "N0591",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Causal Transformer with balanced representations for longitudinal counterfactuals; no images or acquisition."
+ },
+ {
+  "uid": "N0592",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "COT-GAN sequential data generation; unrelated."
+ },
+ {
+  "uid": "N0593",
+  "decision": "RELATED",
+  "claims": [
+   "L1",
+   "L4"
+  ],
+  "reason": "Causal imitation learning with sequential backdoor-adjusted state representations; control tasks, not medical images."
+ },
+ {
+  "uid": "N0594",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Negative-control identification of time-varying vaccine effects; generic, no images."
+ },
+ {
+  "uid": "N0595",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Debiased interactive recommendation; unrelated."
+ },
+ {
+  "uid": "N0596",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Disentangled vs fully balanced history representations for temporal causal inference; questions harm of over-invariance, borderline L4."
+ },
+ {
+  "uid": "N0597",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Hidden-confounder environment reconstruction for recommendation; unrelated."
+ },
+ {
+  "uid": "N0598",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal (autoregressive) video generation distillation; no causal inference."
+ },
+ {
+  "uid": "N0599",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Generic debiased average-hazard estimator; no images."
+ },
+ {
+  "uid": "N0600",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Continuous-time counterfactuals with balanced representations in multi-agent systems; no images."
+ },
+ {
+  "uid": "N0601",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "LLM sequential processing bias theorems; unrelated."
+ },
+ {
+  "uid": "N0602",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Counterfactual Recurrent Network with adversarially balanced representations; no images or acquisition."
+ },
+ {
+  "uid": "N0603",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Covariate balancing robustness in RCTs; generic."
+ },
+ {
+  "uid": "N0604",
+  "decision": "RELATED",
+  "claims": [
+   "L1",
+   "L4"
+  ],
+  "reason": "Proximal causal imitation learning with noisy measurement proxies; semi-simulated tabular longitudinal data."
+ },
+ {
+  "uid": "N0605",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal CVR estimation in recommendation; unrelated."
+ },
+ {
+  "uid": "N0606",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Temporal counterfactual forecasting with adversarial balancing for multiple treatments; no images."
+ },
+ {
+  "uid": "N0607",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Gated information bottleneck for sequential environments/invariance; prediction only."
+ },
+ {
+  "uid": "N0608",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Neural CDE counterfactual outcomes with adversarial confounding adjustment; tabular simulation."
+ },
+ {
+  "uid": "N0609",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Generic automatic debiased ML for dynamic treatment effects."
+ },
+ {
+  "uid": "N0610",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Generic generalized difference-in-differences estimator."
+ },
+ {
+  "uid": "N0611",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Generic A/B test bias under network interference."
+ },
+ {
+  "uid": "N0612",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Cluster-adversarial invariant fixed effects for clustered data fairness; prediction, no causal estimation."
+ },
+ {
+  "uid": "N0613",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Generic LMTP estimators depending on treatment history."
+ },
+ {
+  "uid": "N0614",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Generic regression with estimated covariates/propensity; first-stage estimated covariates, not image representations."
+ },
+ {
+  "uid": "N0615",
+  "decision": "RELATED",
+  "claims": [
+   "L2",
+   "L4"
+  ],
+  "reason": "Evolving domain generalization with dynamic/invariant latent features; prediction only."
+ },
+ {
+  "uid": "N0616",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Agent-based market simulator calibration; unrelated."
+ },
+ {
+  "uid": "N0617",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Conditional COT-GAN video prediction; no causal inference."
+ },
+ {
+  "uid": "N0618",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "RL adversarial attack; unrelated."
+ },
+ {
+  "uid": "N0619",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Unsupervised video disentanglement; no causal estimation."
+ },
+ {
+  "uid": "N0620",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "High-dimensional prediction for decision making; unrelated."
+ },
+ {
+  "uid": "N0621",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Generic doubly robust high-dimensional estimation incl. ATE."
+ },
+ {
+  "uid": "N0622",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Age-of-information scheduling; unrelated."
+ },
+ {
+  "uid": "N0623",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multimodal vision-language risk prediction; no causal estimation."
+ },
+ {
+  "uid": "N0624",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Oscillatory state-space models; unrelated."
+ },
+ {
+  "uid": "N0625",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "SSM UNDO flip-flop probe; unrelated."
+ },
+ {
+  "uid": "N0626",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "AI for Alzheimer progression survey; no causal estimation."
+ },
+ {
+  "uid": "N0627",
+  "decision": "RELATED",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Switchback experiment design with carryover; generic sequential causal design."
+ },
+ {
+  "uid": "N0628",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Bayesian causal forests under strong confounding; generic."
+ },
+ {
+  "uid": "N0629",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Debiased contrastive sequential recommendation; unrelated."
+ },
+ {
+  "uid": "N0630",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Generic causal inference survey."
+ },
+ {
+  "uid": "N0631",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Generic propensity weighting/overlap weights for multiple treatments."
+ },
+ {
+  "uid": "N0632",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Adversarial attacks review; unrelated."
+ },
+ {
+  "uid": "N0633",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "IPS debiased sequential recommendation; unrelated."
+ },
+ {
+  "uid": "N0634",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "SWAG commonsense dataset; unrelated."
+ },
+ {
+  "uid": "N0635",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "NIA-AA Alzheimer research framework; unrelated."
+ },
+ {
+  "uid": "N0636",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Temporal causal discovery with CNNs; not effect estimation with representations."
+ }
+]

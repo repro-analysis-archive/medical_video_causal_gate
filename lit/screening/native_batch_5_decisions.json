@@ -1,0 +1,550 @@
+[
+ {
+  "uid": "N0455",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multimodal LLMs in health care review; unrelated."
+ },
+ {
+  "uid": "N0456",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; semi-supervised classification method title, criteria ruled out."
+ },
+ {
+  "uid": "N0457",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "MRI/CT reconstruction state space model; unrelated."
+ },
+ {
+  "uid": "N0458",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Concept learning benchmarks overview; unrelated."
+ },
+ {
+  "uid": "N0459",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; open set recognition title, criteria ruled out."
+ },
+ {
+  "uid": "N0460",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Fairness benchmark for medical foundation models; no causal estimation."
+ },
+ {
+  "uid": "N0461",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Normative modeling neuroimaging features; no causal estimation or acquisition analysis."
+ },
+ {
+  "uid": "N0462",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Differentiable causal discovery with active interventions; not representation-based effect estimation."
+ },
+ {
+  "uid": "N0463",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Hybrid CNN-Mamba segmentation; unrelated."
+ },
+ {
+  "uid": "N0464",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multiomics cancer review; unrelated."
+ },
+ {
+  "uid": "N0465",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Non-causal vision state space model; architectural meaning of causal."
+ },
+ {
+  "uid": "N0466",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Radiomics pipeline survey; no causal estimation."
+ },
+ {
+  "uid": "N0467",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Noisy-label benchmark for medical classification; unrelated."
+ },
+ {
+  "uid": "N0468",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "GAN synthetic medical data sharing evaluation; unrelated to causal estimation."
+ },
+ {
+  "uid": "N0469",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Segmentation tricks benchmark; unrelated."
+ },
+ {
+  "uid": "N0470",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal discovery with missing cohort data; no images or representations."
+ },
+ {
+  "uid": "N0471",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Domain generalization benchmark for ECG/EEG; no causal estimation."
+ },
+ {
+  "uid": "N0472",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "XAI biomedical imaging survey; unrelated."
+ },
+ {
+  "uid": "N0473",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Counterfactual explanation benchmarking on tabular data; unrelated."
+ },
+ {
+  "uid": "N0474",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; transformer segmentation title, criteria ruled out."
+ },
+ {
+  "uid": "N0475",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Graph neural networks in medical imaging review; unrelated."
+ },
+ {
+  "uid": "N0476",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Sea ice forecasting; unrelated."
+ },
+ {
+  "uid": "N0477",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Transformers/LLMs in healthcare review; unrelated."
+ },
+ {
+  "uid": "N0478",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; COVID-19 ML outbreak management title, criteria ruled out."
+ },
+ {
+  "uid": "N0479",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "APOE genetic association with cognition; unrelated."
+ },
+ {
+  "uid": "N0480",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Gut microbiome in MS review; unrelated."
+ },
+ {
+  "uid": "N0481",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "DNA methylation cognitive marker; unrelated."
+ },
+ {
+  "uid": "N0482",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Cytokine release reporting commentary; unrelated."
+ },
+ {
+  "uid": "N0483",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Depression pathophysiology in Huntington's review; unrelated."
+ },
+ {
+  "uid": "N0484",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Precision oncology closed-loop review; unrelated."
+ },
+ {
+  "uid": "N0485",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multi-site EHR selection-bias correction for associations; no images or representations."
+ },
+ {
+  "uid": "N0486",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Food allergy immunology review; unrelated."
+ },
+ {
+  "uid": "N0487",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Methylation array version batch differences; not learned representations or causal estimation."
+ },
+ {
+  "uid": "N0488",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Imputation-based harmonization of cognitive scores; unrelated."
+ },
+ {
+  "uid": "N0489",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Genetic variants and cognition in India; unrelated."
+ },
+ {
+  "uid": "N0490",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Dementia cohort data descriptor; unrelated."
+ },
+ {
+  "uid": "N0491",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Prenatal caffeine and autism traits epidemiology; unrelated."
+ },
+ {
+  "uid": "N0492",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Physical activity and dementia pooled cohorts; unrelated."
+ },
+ {
+  "uid": "N0493",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Pathology foundation-model mucin prediction for risk; prediction only, no causal estimation."
+ },
+ {
+  "uid": "N0494",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Codon harmonization for protein expression; unrelated."
+ },
+ {
+  "uid": "N0495",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; harmonized survey data resource profile, criteria ruled out."
+ },
+ {
+  "uid": "N0496",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Biliary stricture outcome definitions review; unrelated."
+ },
+ {
+  "uid": "N0497",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Applied MSM on encampment sweeps; no images or representations."
+ },
+ {
+  "uid": "N0498",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "TyG-WHtR multimorbidity epidemiology; unrelated."
+ },
+ {
+  "uid": "N0499",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "UAV oil spill segmentation; unrelated."
+ },
+ {
+  "uid": "N0500",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Islet transplantation DSA review; unrelated."
+ },
+ {
+  "uid": "N0501",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Obesity microbiome review; unrelated."
+ },
+ {
+  "uid": "N0502",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Microcystin intestinal toxicity review; unrelated."
+ },
+ {
+  "uid": "N0503",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Flow cytometry MRD protocol; unrelated."
+ },
+ {
+  "uid": "N0504",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Myocardial hypertrophy metabolism review; unrelated."
+ },
+ {
+  "uid": "N0505",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "NMOSD/MOGAD fluid biomarkers review; unrelated."
+ },
+ {
+  "uid": "N0506",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Patient-reported outcomes in lymphoma review; unrelated."
+ },
+ {
+  "uid": "N0507",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Healthcare performance management bibliometrics; unrelated."
+ },
+ {
+  "uid": "N0508",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Sensory impairment and depression cohorts; unrelated."
+ },
+ {
+  "uid": "N0509",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Activity/depression trajectories and multimorbidity; unrelated."
+ },
+ {
+  "uid": "N0510",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Neurofilament light chain in MS review; unrelated."
+ },
+ {
+  "uid": "N0511",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Applied LMTP depression-hip fracture cohorts; no images or representations."
+ },
+ {
+  "uid": "N0512",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Cognitive decline risk factors India; unrelated."
+ },
+ {
+  "uid": "N0513",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "RNA biomarkers in antidoping; unrelated."
+ },
+ {
+  "uid": "N0514",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Cognition after transplantation cross-sectional; unrelated."
+ },
+ {
+  "uid": "N0515",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Telomere length and DNA repair genes; unrelated."
+ },
+ {
+  "uid": "N0516",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "CKD-COPD propensity-matched cohort; no images or representations."
+ },
+ {
+  "uid": "N0517",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Subjective cognitive decline prevalence; unrelated."
+ },
+ {
+  "uid": "N0518",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Fluoropyrimidine dosing trial protocol; unrelated."
+ },
+ {
+  "uid": "N0519",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Caregiving and depression mediation; unrelated."
+ },
+ {
+  "uid": "N0520",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Cancer-depression mediation by sleep; unrelated."
+ },
+ {
+  "uid": "N0521",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Hearing aids and dementia IPTW cohorts; no images or representations."
+ },
+ {
+  "uid": "N0522",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Stressful life events and CVD; unrelated."
+ },
+ {
+  "uid": "N0523",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Immunosenescence review; unrelated."
+ },
+ {
+  "uid": "N0524",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Glucocorticoid cardiac effects review; unrelated."
+ },
+ {
+  "uid": "N0525",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Causal-invariant representation augmentation for online continual learning; prediction only, non-medical."
+ },
+ {
+  "uid": "N0526",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "CAR T-cell monitoring reagents; unrelated."
+ },
+ {
+  "uid": "N0527",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Educational mobility and depression; unrelated."
+ },
+ {
+  "uid": "N0528",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Counterfactual fairness for tabular classifiers; no images or effect estimation."
+ },
+ {
+  "uid": "N0529",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "EEG-fMRI LLM tinnitus diagnosis; subject-invariant learning for prediction."
+ },
+ {
+  "uid": "N0530",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Metabolomics in psychiatry review; unrelated."
+ },
+ {
+  "uid": "N0531",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Biological aging in MASLD review; unrelated."
+ },
+ {
+  "uid": "N0532",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Carotid siphon calcification review; unrelated."
+ },
+ {
+  "uid": "N0533",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "AI/multiomics in endocrine hypertension review; unrelated."
+ },
+ {
+  "uid": "N0534",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "GAD65 epilepsy immunotherapy case pooling; unrelated."
+ },
+ {
+  "uid": "N0535",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multimodal data integration in RA review; unrelated."
+ },
+ {
+  "uid": "N0536",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Environmental exposure harmonization for aging studies; unrelated."
+ },
+ {
+  "uid": "N0537",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Circadian syndrome and MCI; unrelated."
+ },
+ {
+  "uid": "N0538",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Genetic biomarkers in treatment-resistant depression; unrelated."
+ },
+ {
+  "uid": "N0539",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Beef cattle omics roadmap; unrelated."
+ },
+ {
+  "uid": "N0540",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Edentulism and frailty cohorts; unrelated."
+ },
+ {
+  "uid": "N0541",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Pediatric obesity malnutrition review; unrelated."
+ },
+ {
+  "uid": "N0542",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Cancer clinical data dictionary; unrelated."
+ },
+ {
+  "uid": "N0543",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Radiogenomics lung cancer review; no causal estimation."
+ },
+ {
+  "uid": "N0544",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Global dementia incidence review; unrelated."
+ },
+ {
+  "uid": "N0545",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "HSP fluid biomarkers review; unrelated."
+ }
+]

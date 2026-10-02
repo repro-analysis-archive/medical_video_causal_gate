@@ -1,0 +1,606 @@
+[
+ {
+  "uid": "N0364",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Causal-inspired domain-invariant segmentation removing scanner/protocol confounding; prediction only, no causal effect estimation."
+ },
+ {
+  "uid": "N0365",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Fetal brain segmentation challenge report; site/quality domain shift noted but no representation-causal analysis."
+ },
+ {
+  "uid": "N0366",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General review of cancer informatics; no causal estimation with representations."
+ },
+ {
+  "uid": "N0367",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L3"
+  ],
+  "reason": "Simulated cognitive outcomes on real WMH lesion maps with ground-truth lesion effects; possible semi-synthetic causal benchmark on real images."
+ },
+ {
+  "uid": "N0368",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Cervical lesion classification with transfer learning; no causal content."
+ },
+ {
+  "uid": "N0369",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Cardiovascular health prevalence epidemiology; no imaging representations or causal estimation."
+ },
+ {
+  "uid": "N0370",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Bayesian-network diagnosis reasoning; causal relations among attributes for classification, not effect estimation."
+ },
+ {
+  "uid": "N0371",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Protein-protein interaction prediction; unrelated."
+ },
+ {
+  "uid": "N0372",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Survey framing medical-imaging domain shift causally; robustness/transfer, not treatment-effect estimation."
+ },
+ {
+  "uid": "N0373",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Survey of causal representation learning for medical image analysis; no adjustment for treatment effects."
+ },
+ {
+  "uid": "N0374",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Benchmarks dependence measures to remove device/site confounders from representations; shortcut prevention, no causal estimation."
+ },
+ {
+  "uid": "N0375",
+  "decision": "RELATED",
+  "claims": [
+   "L3"
+  ],
+  "reason": "Counterfactual image generation benchmark; no causal effect estimation of an action/treatment."
+ },
+ {
+  "uid": "N0376",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multi-modality medical image synthesis; 'causal' module is architectural."
+ },
+ {
+  "uid": "N0377",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Causal-mask perturbations for OOD generalization on multi-hospital pathology; prediction only."
+ },
+ {
+  "uid": "N0378",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L3"
+  ],
+  "reason": "Synthetic neuroimages from real-data subspace with user-specified causal structure; ground-truth benchmark for causal AI."
+ },
+ {
+  "uid": "N0379",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Removing domain-style confounding from SAM features for segmentation robustness; no causal estimation."
+ },
+ {
+  "uid": "N0380",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Feature disentanglement benchmark separating confounder/acquisition info in latent space; shortcut mitigation only."
+ },
+ {
+  "uid": "N0381",
+  "decision": "RELATED",
+  "claims": [
+   "L3"
+  ],
+  "reason": "Diffusion counterfactual augmentation over SCM pathways for fairness; no treatment-effect estimation."
+ },
+ {
+  "uid": "N0382",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Pseudo-intervention contrastive learning against non-causal cues across sources; prediction robustness only."
+ },
+ {
+  "uid": "N0383",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Backdoor adjustment/IV on learned multimodal representations for VQA debiasing; not effect of an action."
+ },
+ {
+  "uid": "N0384",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Conditional IV framework for site selection bias and scanner artifacts in domain generalization; prediction target."
+ },
+ {
+  "uid": "N0385",
+  "decision": "RELATED",
+  "claims": [
+   "L3"
+  ],
+  "reason": "Evaluation of 3D counterfactual brain MRI generation; no causal effect estimation."
+ },
+ {
+  "uid": "N0386",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1",
+   "L3"
+  ],
+  "reason": "Doubly robust distributional treatment-effect test with semi-synthetic medical-imaging study; images may serve as covariates."
+ },
+ {
+  "uid": "N0387",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Null-space model editing for medical ViTs; causal tracing of layers only."
+ },
+ {
+  "uid": "N0388",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "LVLM hallucination mitigation; unrelated to causal estimation."
+ },
+ {
+  "uid": "N0389",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Disentangles view-specific (acquisition) from disease features in CMR embeddings; shortcut learning, no causal estimation."
+ },
+ {
+  "uid": "N0390",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Text-conditional 3D CT generation; 'causal' transformer architecture."
+ },
+ {
+  "uid": "N0391",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Medical VQA cue tokens; causal attention mask only."
+ },
+ {
+  "uid": "N0392",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "General causal representation learning perspective; generic, no medical adjustment application."
+ },
+ {
+  "uid": "N0393",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Causal perspective on medical imaging data/acquisition biases; no representation-based effect estimation."
+ },
+ {
+  "uid": "N0394",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Uncertainty quantification review; unrelated."
+ },
+ {
+  "uid": "N0395",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal (streaming) speech enhancement; unrelated."
+ },
+ {
+  "uid": "N0396",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Explainable medical imaging AI design review; unrelated."
+ },
+ {
+  "uid": "N0397",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "XAI in medical imaging review; unrelated."
+ },
+ {
+  "uid": "N0398",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; CLIP medical imaging survey title, criteria ruled out."
+ },
+ {
+  "uid": "N0399",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Explainable medical image classification survey; unrelated."
+ },
+ {
+  "uid": "N0400",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Explainable cancer detection review; unrelated."
+ },
+ {
+  "uid": "N0401",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Domain generalization review; no causal estimation or representation-acquisition analysis."
+ },
+ {
+  "uid": "N0402",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "AI bias in medical imaging review; no causal effect estimation."
+ },
+ {
+  "uid": "N0403",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Generalization/domain shift review for classification; no causal estimation."
+ },
+ {
+  "uid": "N0404",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Mamba-UNet segmentation architecture; unrelated."
+ },
+ {
+  "uid": "N0405",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Medical image data preparation guide; unrelated."
+ },
+ {
+  "uid": "N0406",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Interpretable ML challenges overview; only passing matching mention."
+ },
+ {
+  "uid": "N0407",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Medical image captioning review; unrelated."
+ },
+ {
+  "uid": "N0408",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Adversarial attack/defense survey; unrelated."
+ },
+ {
+  "uid": "N0409",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Fine-tuning strategies comparison; unrelated."
+ },
+ {
+  "uid": "N0410",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Augmentation for single-source domain generalization segmentation; unrelated to causal estimation."
+ },
+ {
+  "uid": "N0411",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Attention/transformer review in medical imaging; unrelated."
+ },
+ {
+  "uid": "N0412",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "XAI medical imaging review; unrelated."
+ },
+ {
+  "uid": "N0413",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Counterfactual causal intervention for VQA interpretability; debiasing prediction, no treatment effect."
+ },
+ {
+  "uid": "N0414",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Fairness benchmarking for medical imaging; no causal estimation."
+ },
+ {
+  "uid": "N0415",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "XAI scoping review; unrelated."
+ },
+ {
+  "uid": "N0416",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Regression dynamic causal modeling for fMRI connectivity; not treatment effects with representations."
+ },
+ {
+  "uid": "N0417",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General deep learning survey; unrelated."
+ },
+ {
+  "uid": "N0418",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Secure ML for healthcare survey; unrelated."
+ },
+ {
+  "uid": "N0419",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Fairness in medical image analysis review; no causal estimation."
+ },
+ {
+  "uid": "N0420",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Wheat head detection dataset; unrelated."
+ },
+ {
+  "uid": "N0421",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "3D CNN segmentation review; unrelated."
+ },
+ {
+  "uid": "N0422",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "COVID-19 image processing review; unrelated."
+ },
+ {
+  "uid": "N0423",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "U-Net segmentation method; unrelated."
+ },
+ {
+  "uid": "N0424",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal explanations for feature importance; model interpretation only."
+ },
+ {
+  "uid": "N0425",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Data scarcity in deep learning survey; unrelated."
+ },
+ {
+  "uid": "N0426",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Language models in medical imaging review; unrelated."
+ },
+ {
+  "uid": "N0427",
+  "decision": "RELATED",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Mediation analysis using DL-segmented CT phenotypes for age/disease effects; mediators not adjustment, exposures not actions."
+ },
+ {
+  "uid": "N0428",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Domain-generalized segmentation via decoupled features; no causal analysis."
+ },
+ {
+  "uid": "N0429",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Self-supervised representation robustness (REMEDIS); no causal estimation."
+ },
+ {
+  "uid": "N0430",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Genetic fine-mapping; unrelated."
+ },
+ {
+  "uid": "N0431",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Trustworthy AI segmentation review; unrelated."
+ },
+ {
+  "uid": "N0432",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Underspecification in ML pipelines; no causal estimation."
+ },
+ {
+  "uid": "N0433",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "XAI accountability meta-analysis; unrelated."
+ },
+ {
+  "uid": "N0434",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Federated learning review; unrelated."
+ },
+ {
+  "uid": "N0435",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Generative AI in medical imaging review; no causal estimation."
+ },
+ {
+  "uid": "N0436",
+  "decision": "RELATED",
+  "claims": [
+   "L3"
+  ],
+  "reason": "Counterfactual explainers for chest X-ray models detecting shortcuts; no treatment-effect estimation."
+ },
+ {
+  "uid": "N0437",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Federated segmentation with distillation; unrelated."
+ },
+ {
+  "uid": "N0438",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal inference for GCN neighbor trust in IR; unrelated to medical representations."
+ },
+ {
+  "uid": "N0439",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "XAI neurological imaging review; unrelated."
+ },
+ {
+  "uid": "N0440",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep learning in neurology review; unrelated."
+ },
+ {
+  "uid": "N0441",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Fourier domain adaptation for segmentation; no causal estimation."
+ },
+ {
+  "uid": "N0442",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; general deep learning review title, criteria ruled out."
+ },
+ {
+  "uid": "N0443",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; feature-selection optimization title, criteria ruled out."
+ },
+ {
+  "uid": "N0444",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "XAI methods overview; unrelated."
+ },
+ {
+  "uid": "N0445",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1",
+   "L2",
+   "L3",
+   "L4"
+  ],
+  "reason": "No abstract; MICCAI 2021 proceedings volume, contents cannot be ruled out from title."
+ },
+ {
+  "uid": "N0446",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "No abstract; Clever Hans/shortcut review in medical imaging, prediction-focused, causal estimation unlikely."
+ },
+ {
+  "uid": "N0447",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Review of causality for robust medical image analysis algorithms; domain shift focus, no effect estimation."
+ },
+ {
+  "uid": "N0448",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Causal semantic generative model separating domain variation factors; OOD prediction only."
+ },
+ {
+  "uid": "N0449",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Scribble-supervised segmentation; unrelated."
+ },
+ {
+  "uid": "N0450",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Self-explaining neural networks; unrelated."
+ },
+ {
+  "uid": "N0451",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep learning COVID-19 survey; unrelated."
+ },
+ {
+  "uid": "N0452",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "XAI evaluation review; unrelated."
+ },
+ {
+  "uid": "N0453",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Functional connectivity method benchmark; unrelated."
+ },
+ {
+  "uid": "N0454",
+  "decision": "RELATED",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Domain generalization benchmark with induced site shifts/sampling bias in clinical data; prediction, no causal estimation."
+ }
+]
