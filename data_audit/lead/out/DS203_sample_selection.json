@@ -1,0 +1,38 @@
+{
+ "2": {
+  "op": 11,
+  "duration_min": 25.2,
+  "centre_median_min": 25.2,
+  "file": [
+   "Full_Videos/Center2/Center2_11/Center2_011.mp4"
+  ],
+  "size_bytes": 889338771
+ },
+ "3": {
+  "op": 24,
+  "duration_min": 31.7,
+  "centre_median_min": 31.7,
+  "file": [
+   "Full_Videos/Center3/Center3_24/Center3_024.mp4"
+  ],
+  "size_bytes": 19304783361
+ },
+ "4": {
+  "op": 42,
+  "duration_min": 28.8,
+  "centre_median_min": 28.8,
+  "file": [
+   "Full_Videos/Center4/Center4_042/Center4_042.mp4"
+  ],
+  "size_bytes": 805320432
+ },
+ "5": {
+  "op": 3,
+  "duration_min": 29.3,
+  "centre_median_min": 29.3,
+  "file": [
+   "Full_Videos/Center5/Center5_3/Center5_003.mp4"
+  ],
+  "size_bytes": 1670407866
+ }
+}

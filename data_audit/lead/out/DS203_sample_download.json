@@ -1,0 +1,34 @@
+{
+ "2": {
+  "file": "Full_Videos/Center2/Center2_11/Center2_011.mp4",
+  "local": "/media/user/LaCie/medvideo_gate/DS203/samples/Center2_011.mp4",
+  "bytes": 889338771,
+  "seconds": 113.7,
+  "MBps": 7.8,
+  "sha256": "c5987792d87b7be44cc4a1fdb596df92a75604bf179a9c12803105bcead09544"
+ },
+ "3": {
+  "file": "Full_Videos/Center3/Center3_24/Center3_024.mp4",
+  "local": "/media/user/LaCie/medvideo_gate/DS203/samples/Center3_024.mp4",
+  "bytes": 19304783361,
+  "seconds": 2193.1,
+  "MBps": 8.8,
+  "sha256": "4b4bd6797757aa7019fe80fc78d5d749ebf1fdd143f5571ab6cb5207993a0e15"
+ },
+ "4": {
+  "file": "Full_Videos/Center4/Center4_042/Center4_042.mp4",
+  "local": "/media/user/LaCie/medvideo_gate/DS203/samples/Center4_042.mp4",
+  "bytes": 805320432,
+  "seconds": 123.4,
+  "MBps": 6.5,
+  "sha256": "ccfa2960be0fda7c18e853a7b7a6567a91d30436751f3e6cfd7da80b9e8474f9"
+ },
+ "5": {
+  "file": "Full_Videos/Center5/Center5_3/Center5_003.mp4",
+  "local": "/media/user/LaCie/medvideo_gate/DS203/samples/Center5_003.mp4",
+  "bytes": 1670407866,
+  "seconds": 183.2,
+  "MBps": 9.1,
+  "sha256": "19b144ce09b941e5c8a9495427b2bd809ba82c1c8b4bfce455428bb003e11043"
+ }
+}
