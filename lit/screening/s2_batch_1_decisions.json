@@ -1,0 +1,547 @@
+[
+ {
+  "uid": "S0099",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; acupoint embedding clinical trial, unrelated."
+ },
+ {
+  "uid": "S0100",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Image embedding benchmark for retrieval/clustering tasks; no causal estimation."
+ },
+ {
+  "uid": "S0101",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Analysis of causal attention in text-to-image text encoders; not causal effect estimation."
+ },
+ {
+  "uid": "S0102",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Federated MIL for multi-site whole-slide images; no causal estimation or acquisition-bias analysis for causal effects."
+ },
+ {
+  "uid": "S0104",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Population-aware autoencoder embeddings for MRI anomaly detection; no causal estimation."
+ },
+ {
+  "uid": "S0105",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Image steganography; unrelated."
+ },
+ {
+  "uid": "S0106",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Hyperspectral few-shot classification; unrelated."
+ },
+ {
+  "uid": "S0109",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; surgical quality-improvement study, unrelated."
+ },
+ {
+  "uid": "S0111",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Cardiac MRI foundation model for on-scanner reporting; no causal estimation."
+ },
+ {
+  "uid": "S0114",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Single-cell generative foundation model; not image/video/text representations used for causal adjustment."
+ },
+ {
+  "uid": "S0115",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Action-effect pretraining on instructional video for affordance knowledge; no causal effect estimation."
+ },
+ {
+  "uid": "S0116",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Qualitative social-media user study; unrelated."
+ },
+ {
+  "uid": "S0117",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "ComBat harmonisation of pathology patch embeddings removes tissue-source-site signal; site leakage in embeddings analysed for prediction, not causal estimation."
+ },
+ {
+  "uid": "S0118",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "RBM dimensionality reduction and clustering on SEER tabular data; no causal effect estimation with image/video/text representations."
+ },
+ {
+  "uid": "S0119",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; RNA modification site prediction, unrelated."
+ },
+ {
+  "uid": "S0121",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal-intervention segmentation separating lesion and acquisition-dependent ultrasound features; no causal effect estimation."
+ },
+ {
+  "uid": "S0122",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Thesis on CT stroke lesion segmentation; no causal estimation."
+ },
+ {
+  "uid": "S0123",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Tabular energy prediction with meta-learner ATE in transport; no learned image/video/text representations."
+ },
+ {
+  "uid": "S0124",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Job-shop scheduling with SOMs; unrelated."
+ },
+ {
+  "uid": "S0126",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Temporal causal discovery in wind-turbine SCADA data; unrelated to learned image representations."
+ },
+ {
+  "uid": "S0127",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Instrument reading recognition; unrelated."
+ },
+ {
+  "uid": "S0128",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal feature weighting for visible-infrared image registration; no causal effect estimation."
+ },
+ {
+  "uid": "S0129",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-matched clinical study with tabular covariates; no learned representations."
+ },
+ {
+  "uid": "S0130",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "CT dose/image-quality phantom study; no learned representations or causal estimation."
+ },
+ {
+  "uid": "S0131",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Image watermarking; unrelated."
+ },
+ {
+  "uid": "S0132",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Ear biometrics embedding network; unrelated."
+ },
+ {
+  "uid": "S0133",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Adversarial site-ID deconfounding for site-invariant ECG classification latents; no causal effect estimation."
+ },
+ {
+  "uid": "S0134",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Category-theoretic multi-agent knowledge framework; unrelated."
+ },
+ {
+  "uid": "S0135",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Radiotherapy knowledge-based planning model; unrelated."
+ },
+ {
+  "uid": "S0136",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Tabular foundation model for causal fairness; generic causal ML without image/video/text representations."
+ },
+ {
+  "uid": "S0137",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Scanner identity explains a large share of brain-MRI foundation-model embedding variance in a travelling-heads study; acquisition leakage in embeddings without causal estimation."
+ },
+ {
+  "uid": "S0138",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Image-generative model of cell-morphology perturbation effects that disentangles perturbation effects from confounding batch effects; whether batch/acquisition information in learned representations biases effect estimation cannot be ruled out from the abstract."
+ },
+ {
+  "uid": "S0139",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Single-cell transcriptome foundation model; no image/video/text representations in causal adjustment."
+ },
+ {
+  "uid": "S0140",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; spatial transcriptomics foundation model, no causal estimation indicated."
+ },
+ {
+  "uid": "S0141",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Video world model for robot control; no causal effect estimation."
+ },
+ {
+  "uid": "S0142",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "EEG foundation model for MI feedback; unrelated."
+ },
+ {
+  "uid": "S0143",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "EEG ViT classification of AUD with demographic matching; no causal estimation with representations."
+ },
+ {
+  "uid": "S0144",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep learning enhancer design; unrelated."
+ },
+ {
+  "uid": "S0145",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "RNA splicing noise study; unrelated."
+ },
+ {
+  "uid": "S0146",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Deep-learning ComBat harmonisation of neuroimaging batch effects; harmonisation without causal effect estimation."
+ },
+ {
+  "uid": "S0147",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; prognostic PET deep-learning predictor with cross-scanner validation; no causal estimation indicated."
+ },
+ {
+  "uid": "S0148",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Time-series forecasting network; unrelated."
+ },
+ {
+  "uid": "S0149",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; visual tracking, unrelated."
+ },
+ {
+  "uid": "S0150",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1",
+   "L2"
+  ],
+  "reason": "VAE-derived causal representations of CT images plus acquisition parameters support counterfactual what-if effects of scan settings/contrast on image quality; use of learned image representations in effect estimation of acquisition actions cannot be ruled out."
+ },
+ {
+  "uid": "S0151",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "EEG classification in language acquisition; unrelated."
+ },
+ {
+  "uid": "S0152",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Adversarial site-invariant fMRI representation for diagnosis; site confounding without causal effect estimation."
+ },
+ {
+  "uid": "S0153",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Text-embedding refinement for text-to-image compositionality; unrelated."
+ },
+ {
+  "uid": "S0154",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "No abstract; multi-site fMRI domain adaptation for autism classification; site effects without causal estimation."
+ },
+ {
+  "uid": "S0155",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Multi-scanner neuroimaging harmonisation via embedding learning; harmonisation without causal effect estimation."
+ },
+ {
+  "uid": "S0156",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Ultrasound self-supervised pretraining; no causal estimation."
+ },
+ {
+  "uid": "S0157",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Fragile watermarking for facial images; unrelated."
+ },
+ {
+  "uid": "S0159",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Qualitative development-assistance study; unrelated."
+ },
+ {
+  "uid": "S0160",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Collider-physics foundation model; unrelated."
+ },
+ {
+  "uid": "S0161",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Perspective on a generative causal foundation model for perturbation cell atlases; generic causal-biology vision, no representation-based adjustment."
+ },
+ {
+  "uid": "S0162",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Foundation-model MRI classification with scanner harmonisation; prediction only."
+ },
+ {
+  "uid": "S0163",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Steelmaking off-gas forecasting; unrelated."
+ },
+ {
+  "uid": "S0166",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal feature selection for chemical foundation models; not causal effect estimation with image/video/text representations."
+ },
+ {
+  "uid": "S0167",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Head CT foundation model for disease detection; no causal estimation."
+ },
+ {
+  "uid": "S0168",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "CNN bleeding detection in capsule endoscopy; no causal estimation."
+ },
+ {
+  "uid": "S0169",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Signal peptide prediction; unrelated."
+ },
+ {
+  "uid": "S0170",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Photon-counting micro-CT perfusion imaging; unrelated."
+ },
+ {
+  "uid": "S0171",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Load disaggregation; unrelated."
+ },
+ {
+  "uid": "S0172",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Video facial expression recognition; unrelated."
+ },
+ {
+  "uid": "S0173",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Front-door causal learning for histopathology domain shift from acquisition differences; classification robustness, no causal effect estimation."
+ },
+ {
+  "uid": "S0174",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Radiomic feature reproducibility under DL reconstruction; hand-crafted features, no causal estimation."
+ },
+ {
+  "uid": "S0175",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Site-independent hypergraph embedding for multisite fMRI diagnosis; site effects without causal estimation."
+ },
+ {
+  "uid": "S0177",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Domain-oriented feature embedding for cross-scanner fundus segmentation; domain/acquisition variation without causal estimation."
+ },
+ {
+  "uid": "S0178",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Zero-shot composed image retrieval; unrelated."
+ },
+ {
+  "uid": "S0179",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Low-dimensional MRI embedding for image retrieval; no causal estimation."
+ },
+ {
+  "uid": "S0180",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Survey-based epidemiology with logistic regression; no learned representations."
+ },
+ {
+  "uid": "S0181",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Soil erosion causality model; unrelated."
+ },
+ {
+  "uid": "S0182",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Wireless CSI foundation model; unrelated."
+ },
+ {
+  "uid": "S0183",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Activation steering in a physics foundation model; not causal effect estimation."
+ },
+ {
+  "uid": "S0184",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Pathology foundation-model embeddings to classify BMI; prediction only."
+ },
+ {
+  "uid": "S0185",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Brain fMRI foundation-model embeddings dominated by batch/acquisition variability, with harmonisation effects; no causal effect estimation."
+ },
+ {
+  "uid": "S0186",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Remote sensing segmentation; unrelated."
+ },
+ {
+  "uid": "S0187",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Sumoylation site prediction; unrelated."
+ },
+ {
+  "uid": "S0188",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Genetic case report; unrelated."
+ },
+ {
+  "uid": "S0189",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Protein binding-site segmentation; unrelated."
+ },
+ {
+  "uid": "S0190",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal disentanglement for bearing fault diagnosis; unrelated domain, no causal effect estimation."
+ },
+ {
+  "uid": "S0191",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "PET reconstruction; unrelated."
+ },
+ {
+  "uid": "S0192",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Deconfounding VAEs removing batch/age confounding from multi-omics latents for clustering; no causal effect estimation and not image/video/text."
+ },
+ {
+  "uid": "S0193",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Radio emitter identification; unrelated."
+ },
+ {
+  "uid": "S0194",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Ensemble CNN features for Alzheimer MRI diagnosis; no causal estimation."
+ },
+ {
+  "uid": "S0196",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "SAR target recognition with noisy labels; unrelated."
+ },
+ {
+  "uid": "S0197",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal disentanglement of domain-invariant vs domain-variant features for medical segmentation; no causal effect estimation."
+ },
+ {
+  "uid": "S0198",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Video deraining; unrelated."
+ },
+ {
+  "uid": "S0200",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Toolbox of visual-linguistic causal reasoning methods incl. medical report generation; no representation-based causal effect estimation described."
+ },
+ {
+  "uid": "S0201",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Federated semi-supervised segmentation; no causal estimation."
+ },
+ {
+  "uid": "S0202",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Graph synthetic-control counterfactual demand forecasting; generic causal ML, no image/video/text representations."
+ }
+]

@@ -60,6 +60,48 @@ for r in json.load(open(os.path.join(H, "runs/citations/citation_records.json"))
                      lead_L1=g[0], lead_L2=g[1], lead_L3=g[2], lead_L4=g[3], lead_basis=g[4]))
 missing = [k for k, v in cdec.items() if v["decision"] == "FULLTEXT" and k not in CIT]
 assert not missing, missing
+
+# --- Semantic Scholar / proceedings arms (S0000-S0747) and their citation chasing (C0298-C0524): FULLTEXT_NOTES S5-S6
+S2G = {"S0414": ("PARTIAL (non-medical video; outcome model)", "RELATED (borderline)", "RELATED", "NONE", "S5.1 full text"),
+ "S0209": ("PARTIAL", "NONE", "RELATED", "NONE", "S5.1 full text"), "S0446": ("PARTIAL", "RELATED", "RELATED", "NONE", "S5.1 full text"),
+ "S0460": ("PARTIAL", "NONE", "RELATED", "NONE", "S5.1 full text"), "S0008": ("RELATED", "RELATED (borderline; medical video)", "NONE", "RELATED", "S5.1 full text"),
+ "S0474": ("RELATED", "NONE", "NONE", "NONE", "S5.1 full text"), "S0443": ("RELATED", "RELATED", "NONE", "NONE", "S5.1 full text"),
+ "S0058": ("UNRESOLVED", "NONE", "NONE", "NONE", "S5.3 full text inaccessible"), "S0340": ("UNRESOLVED", "RELATED", "RELATED", "RELATED", "S5.3 full text inaccessible"),
+ "S0373": ("UNRESOLVED", "NONE", "NONE", "RELATED", "S5.3 full text inaccessible"), "S0242": ("NONE", "NONE", "UNRESOLVED", "NONE", "S5.3 full text inaccessible")}
+for u in ["S0138","S0150","S0491","S0588","S0459","S0305","S0205","S0232","S0239","S0412","S0444","S0472","S0506","S0574","S0729","S0670","S0411","S0424","S0473","S0504","S0541","S0299","S0335","S0361","S0317","S0321"]:
+    S2G[u] = ("RELATED", "RELATED" if u in ("S0138","S0150","S0491","S0588","S0321") else "NONE", "RELATED" if u in ("S0588","S0459") else "NONE", "RELATED" if u in ("S0299","S0335","S0361","S0472") else "NONE", "S5.2 abstract")
+CG = {"C0306": ("PARTIAL (non-medical video; outcome model)", "RELATED (borderline)", "RELATED", "NONE", "S6.1 full text"),
+ "C0332": ("PARTIAL (non-medical video; outcome model)", "RELATED", "NONE", "NONE", "S6.1 full text"), "C0320": ("PARTIAL (non-medical video; outcome model)", "RELATED", "NONE", "NONE", "S6.1 full text"),
+ "C0424": ("PARTIAL", "RELATED", "RELATED", "NONE", "S6.1 full text"), "C0452": ("PARTIAL", "NONE", "RELATED", "NONE", "S6.1 full text"),
+ "C0460": ("PARTIAL", "NONE", "RELATED", "NONE", "S6.1 full text"), "C0462": ("PARTIAL", "NONE", "RELATED", "NONE", "S6.1 full text"),
+ "C0494": ("PARTIAL", "NONE", "NONE", "NONE", "S6.1 full text"), "C0507": ("PARTIAL", "NONE", "NONE", "NONE", "S6.1 full text"),
+ "C0520": ("RELATED", "NONE", "NONE", "NONE", "S6.1 full text"), "C0377": ("UNRESOLVED", "NONE", "NONE", "NONE", "S6.3 full text inaccessible")}
+for u in ["C0328","C0329","C0356","C0478","C0479","C0380","C0514","C0515","C0516","C0522"]: CG[u] = ("RELATED", "NONE", "RELATED" if u == "C0515" else "NONE", "NONE", "S6.2 abstract")
+ALREADY = {"C0304": "jerzak23b", "C0458": "daoud22", "C0468": "guo25", "C0495": "mozer20", "C0499": "pryzant21", "C0500": "roberts20", "C0511": "veitch20", "C0463": "egami22", "C0481": "keith20"}
+sdec = {}
+for k in range(8): sdec.update({d["uid"]: d for d in json.load(open(os.path.join(H, f"screening/s2_batch_{k}_decisions.json")))})
+for r in json.load(open(os.path.join(H, "runs/s2_unique.json"))):
+    d = sdec.get(r["uid"])
+    if d is None:   # duplicate of an already-screened native/citation record
+        rows.append(dict(arm="s2:" + r["db"], uid=r["uid"], database=r["db"], query=r["query"], rank=r["rank"], all_hits=";".join(r["hits"]), doi=r.get("doi") or "",
+                         pmid=r.get("pmid") or "", arxiv=r.get("arxiv") or "", title=r["title"], year=r.get("year") or "", venue=r.get("venue") or "",
+                         screening_decision="DUPLICATE", screening_reason=f"duplicate of already-screened {r['duplicate_of']}", screener="lead (deduplication rule §5)"))
+        continue
+    g = S2G[r["uid"]] if d["decision"] == "FULLTEXT" else ("",) * 5
+    rows.append(dict(arm="s2:" + r["db"], uid=r["uid"], database=r["db"], query=r["query"], rank=r["rank"], all_hits=";".join(r["hits"]), doi=r.get("doi") or "",
+                     pmid=r.get("pmid") or "", arxiv=r.get("arxiv") or "", title=r["title"], year=r.get("year") or "", venue=r.get("venue") or "",
+                     screening_decision=d["decision"], screening_claims=",".join(d.get("claims", [])), screening_reason=d["reason"], screener=SCREENER,
+                     lead_L1=g[0], lead_L2=g[1], lead_L3=g[2], lead_L4=g[3], lead_basis=g[4]))
+cdec2 = {d["uid"]: d for d in json.load(open(os.path.join(H, "screening/citation_s2_batch_decisions.json")))}
+for r in json.load(open(os.path.join(H, "runs/citations/citation_records_s2.json"))):
+    d = cdec2[r["uid"]]
+    g = (W[ALREADY[r["uid"]]] if r["uid"] in ALREADY else CG[r["uid"]]) if d["decision"] == "FULLTEXT" else ("",) * 5
+    rows.append(dict(arm="citation_s2", uid=r["uid"], database="PDF reference list" if r["direction"] == "backward" else "OpenAlex (citations)", query=f'{r["direction"]} of {r["seed"]}',
+                     rank=r.get("rank", ""), seed=r["seed"], direction=r["direction"], openalex=r.get("openalex") or "", title=r["ref"][:400], year=r.get("year") or "",
+                     screening_decision=d["decision"], screening_claims=",".join(d.get("claims", [])), screening_reason=d["reason"], screener=SCREENER,
+                     lead_L1=g[0], lead_L2=g[1], lead_L3=g[2], lead_L4=g[3], lead_basis=g[4]))
+miss = [u for u, d in sdec.items() if d["decision"] == "FULLTEXT" and u not in S2G] + [u for u, d in cdec2.items() if d["decision"] == "FULLTEXT" and u not in CG and u not in ALREADY]
+assert not miss, miss
 with open(os.path.join(H, "RECORDS.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=COLS); w.writeheader(); [w.writerow({c: row.get(c, "") for c in COLS}) for row in rows]
 print(len(rows), "rows")

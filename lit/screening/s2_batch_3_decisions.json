@@ -1,0 +1,562 @@
+[
+ {
+  "uid": "S0305",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1",
+   "L2"
+  ],
+  "reason": "Federated multimodal (imaging/omics/EHR) framework with a causal layer for treatment-response counterfactuals under site heterogeneity and batch effects; use of learned imaging representations in treatment-effect estimation and site effects on it cannot be ruled out."
+ },
+ {
+  "uid": "S0306",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal invariant representations for cross-site photovoltaic forecasting; unrelated domain, no causal effect estimation."
+ },
+ {
+  "uid": "S0307",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "G-estimation of SNMMs with time-varying coefficient functions; generic longitudinal causal methodology without learned representations."
+ },
+ {
+  "uid": "S0308",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Drug-delivery biomaterials study; unrelated."
+ },
+ {
+  "uid": "S0309",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "RMST vs time-varying Cox for trial treatment effects; survival methodology, no learned representations."
+ },
+ {
+  "uid": "S0310",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-matched cohort study with tabular covariates; no learned representations."
+ },
+ {
+  "uid": "S0311",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; propensity-matched stroke cohort, no learned representations indicated."
+ },
+ {
+  "uid": "S0312",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Shoreline model data assimilation; unrelated."
+ },
+ {
+  "uid": "S0313",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "CVAE site-invariant connectome representations removing scanner/acquisition effects to improve cognitive diagnosis; harmonisation without causal effect estimation."
+ },
+ {
+  "uid": "S0314",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Active-comparator self-controlled case series for time-varying confounding; generic causal epidemiology without learned representations."
+ },
+ {
+  "uid": "S0315",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Parkinson digital-twin cohort protocol abstract; no representation-based causal estimation."
+ },
+ {
+  "uid": "S0316",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Telecom governance mixed-methods study; unrelated."
+ },
+ {
+  "uid": "S0317",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "U-Net spatiotemporal encoder combined with iterative G-computation to adjust for time-varying and spatial confounding from gridded data; learned image-like representations used for confounding adjustment cannot be ruled out."
+ },
+ {
+  "uid": "S0318",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Patient-specific hemodynamic simulation of an aneurysm device; no learned representations."
+ },
+ {
+  "uid": "S0319",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Sequential treatment effect estimation with latent IVs/negative controls; generic sequential causal ML without image/video/text representations."
+ },
+ {
+  "uid": "S0320",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Stepped-wedge trial time-varying treatment effect models; trial methodology without learned representations."
+ },
+ {
+  "uid": "S0321",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L2",
+   "L4"
+  ],
+  "reason": "Longitudinal multi-centre propensity-matched treatment effect on AI-derived MRI volumes from unharmonised 1.5T/3T scanners, with sensitivity matching on scanner model at baseline and follow-up; acquisition information affecting bias in a longitudinal causal estimate cannot be ruled out."
+ },
+ {
+  "uid": "S0322",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; meta-analysis of propensity-matched surgical studies, unrelated."
+ },
+ {
+  "uid": "S0323",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; time-varying propensity-score pharmacoepidemiology, no learned representations indicated."
+ },
+ {
+  "uid": "S0324",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Image-processing and ComBat/LongComBat harmonisation effects on multisite tau-PET group separability cross-sectionally and longitudinally; harmonisation without causal effect estimation or learned representations."
+ },
+ {
+  "uid": "S0325",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Identification of long-term causal effects under sequential latent confounding; generic identification theory."
+ },
+ {
+  "uid": "S0327",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal-intervention debiasing in sequential recommendation; unrelated to learned image/video/text representations in effect estimation."
+ },
+ {
+  "uid": "S0328",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; recommendation debiasing via time-varying demand modelling, unrelated."
+ },
+ {
+  "uid": "S0331",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Adversarial propensity weighting for collaborative filtering; recommender debiasing, unrelated."
+ },
+ {
+  "uid": "S0332",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Time-aware IPS for sequential recommendation; recommender debiasing without learned image/video/text representations as covariates."
+ },
+ {
+  "uid": "S0334",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Heterogeneous quantile treatment effects for longitudinal data with high-dimensional tabular confounding; generic causal methodology."
+ },
+ {
+  "uid": "S0335",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Causal transformer for sequential ad-touchpoint attribution using VAE plus gradient-reversal debiased representations against static/dynamic confounding; effect of debiased representations on sequential causal estimation cannot be ruled out."
+ },
+ {
+  "uid": "S0338",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Domain-generalised gearbox fault diagnosis; unrelated."
+ },
+ {
+  "uid": "S0339",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep-learning prediction of sarcoma RT response from longitudinal DWI; prediction only."
+ },
+ {
+  "uid": "S0340",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1",
+   "L3",
+   "L4"
+  ],
+  "reason": "Temporal IPW diffusion with treatment-invariant adversarial latent representations generating counterfactual knee X-rays from longitudinal OAI data and reporting treatment-effect error; learned image representations in sequential effect estimation, possible semi-synthetic evaluation, and debiased representations all cannot be ruled out."
+ },
+ {
+  "uid": "S0341",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; generative chatbot, unrelated."
+ },
+ {
+  "uid": "S0342",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; bearing fault diagnosis, unrelated."
+ },
+ {
+  "uid": "S0344",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Maximin ITE using latent factor representations of item-level symptom data; generic causal ML without image/video/text representations."
+ },
+ {
+  "uid": "S0345",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Longitudinal risk-taking psychology; unrelated."
+ },
+ {
+  "uid": "S0346",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "LiDAR domain adaptation; unrelated."
+ },
+ {
+  "uid": "S0347",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Electrical impedance theory; unrelated."
+ },
+ {
+  "uid": "S0348",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Time-varying Cox and MSM epidemiology in ABCD; no learned representations."
+ },
+ {
+  "uid": "S0349",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Longitudinal occupational health study; unrelated."
+ },
+ {
+  "uid": "S0350",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Nanocarrier drug delivery; unrelated."
+ },
+ {
+  "uid": "S0351",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Multimodal SSL MRI-PET with longitudinal consistency and scanner-invariant embeddings for AD diagnosis/prognosis; site invariance without causal effect estimation."
+ },
+ {
+  "uid": "S0352",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; surgical meta-analysis, unrelated."
+ },
+ {
+  "uid": "S0353",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Materials-science ML; unrelated."
+ },
+ {
+  "uid": "S0354",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "CVAE site-invariant connectome features for harmonisation preserving age associations; no causal effect estimation."
+ },
+ {
+  "uid": "S0355",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Latent-variable SEM check for time-varying confounding in fixed-effects models; generic longitudinal causal methodology."
+ },
+ {
+  "uid": "S0356",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Narrative review of reserve/resilience concepts; no representation-based causal estimation."
+ },
+ {
+  "uid": "S0357",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Streaming 3D reconstruction with causal transformer; unrelated."
+ },
+ {
+  "uid": "S0358",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Macroeconomic time-varying causality test; unrelated."
+ },
+ {
+  "uid": "S0359",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Group sequential surrogate-marker testing; trial methodology without learned representations."
+ },
+ {
+  "uid": "S0360",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-weighting harmonisation of self-reported vs measured vision; no learned representations."
+ },
+ {
+  "uid": "S0361",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1",
+   "L4"
+  ],
+  "reason": "LLM-derived debiased text embeddings used to estimate time-aware propensity scores for exposure in sequential recommendation; text representations as propensity covariates and debiased representations in a sequential setting cannot be ruled out."
+ },
+ {
+  "uid": "S0362",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Comparison of time-varying propensity scores vs sequential stratification for longitudinal matching; generic longitudinal causal methodology."
+ },
+ {
+  "uid": "S0363",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Longitudinal QC harmonisation in proteomics facilities; no learned representations or causal estimation."
+ },
+ {
+  "uid": "S0364",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Proximal off-policy evaluation for sequential persuasion with unobserved confounding; generic sequential causal theory."
+ },
+ {
+  "uid": "S0365",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Bayesian sensitivity analysis for time-varying unmeasured confounding; generic longitudinal causal methodology."
+ },
+ {
+  "uid": "S0366",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Longitudinal fairness-intervention simulation in credit scoring; not causal effect estimation with learned image/video/text representations."
+ },
+ {
+  "uid": "S0367",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "No abstract; debiasing treatment effect estimation on privacy-protected data; generic causal methodology."
+ },
+ {
+  "uid": "S0369",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-aware session recommendation; recommender debiasing, unrelated."
+ },
+ {
+  "uid": "S0370",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Sensitivity models and bounds under sequential unmeasured confounding; generic identification theory."
+ },
+ {
+  "uid": "S0371",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "SMC guidance for discrete diffusion; unrelated."
+ },
+ {
+  "uid": "S0373",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1",
+   "L4"
+  ],
+  "reason": "Frozen LLM representations of time-varying covariates/treatments with adversarial debiasing for counterfactual estimation over time; foundation-model representations as adjustment and debiased representations in sequential estimation cannot be ruled out."
+ },
+ {
+  "uid": "S0375",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "No abstract; adversarial-net ITE estimation, generic causal ML with no indication of image/video/text representations."
+ },
+ {
+  "uid": "S0377",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; dynamic-graph anomaly detection, unrelated."
+ },
+ {
+  "uid": "S0378",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Recipe-to-food image generation; unrelated."
+ },
+ {
+  "uid": "S0380",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Front-door causal features for single-domain generalisation in natural images; no causal effect estimation."
+ },
+ {
+  "uid": "S0381",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "RCT with mediation analysis on human feedback in grid-world; no learned representations in causal adjustment."
+ },
+ {
+  "uid": "S0382",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal mechanism transfer for mechanical time-series; unrelated."
+ },
+ {
+  "uid": "S0383",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Deep sequence models (RNN/Transformer) on claims records for IPTW under time-dependent confounding; learned representations of coded EHR, not image/video/text or acquisition information."
+ },
+ {
+  "uid": "S0384",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "IRM-based ITE estimation to handle limited overlap; generic invariant-representation causal ML, not longitudinal or imaging."
+ },
+ {
+  "uid": "S0385",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-score clinical cohort; no learned representations."
+ },
+ {
+  "uid": "S0386",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Domain-adversarial bearing fault diagnosis; unrelated."
+ },
+ {
+  "uid": "S0387",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multi-domain sequential recommendation; unrelated."
+ },
+ {
+  "uid": "S0388",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "LTMLE epidemiology of sleep and depression with tabular covariates; no learned representations."
+ },
+ {
+  "uid": "S0389",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Invariant causal representations for wind-turbine monitoring; unrelated."
+ },
+ {
+  "uid": "S0390",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Identification and DR estimation of dynamic ATT under dynamic selection; generic identification theory."
+ },
+ {
+  "uid": "S0391",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Agronomy; unrelated."
+ },
+ {
+  "uid": "S0392",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "HRpQCT reference data; unrelated."
+ },
+ {
+  "uid": "S0393",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Simulated visual benchmark for causal representation learning (non-medical); no real medical images and no adjustment-based effect estimation."
+ },
+ {
+  "uid": "S0394",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Medical video generation transformer; no causal estimation."
+ },
+ {
+  "uid": "S0395",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Endoscopic depth estimation foundation-model adaptation; unrelated."
+ },
+ {
+  "uid": "S0396",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "No abstract; SyncTwin treatment effect estimation with longitudinal outcomes (representation-based synthetic control on covariate trajectories); generic causal ML without image/video/text representations indicated."
+ },
+ {
+  "uid": "S0397",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Surgical camera selection network; unrelated."
+ },
+ {
+  "uid": "S0398",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Lymph-node segmentation foundation model fine-tuning; unrelated."
+ },
+ {
+  "uid": "S0399",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Synthetic tabular data generation preserving treatment mechanisms for medical causal inference; not built on medical images/video."
+ },
+ {
+  "uid": "S0400",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Ultrasound video contrastive pretraining; no causal estimation."
+ },
+ {
+  "uid": "S0401",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Synthetic echocardiogram video generation for de-identification; no causal estimation."
+ },
+ {
+  "uid": "S0402",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Surgical video-language pretraining; no causal estimation."
+ },
+ {
+  "uid": "S0403",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Endoscopic video foundation model; no causal estimation."
+ },
+ {
+  "uid": "S0404",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Video-model repurposing for image synthesis; unrelated."
+ },
+ {
+  "uid": "S0405",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Robotic ultrasound simulation platform; no causal estimation."
+ },
+ {
+  "uid": "S0406",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Surgical video-language pretraining; no causal estimation."
+ }
+]

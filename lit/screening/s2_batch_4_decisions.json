@@ -1,0 +1,571 @@
+[
+ {
+  "uid": "S0407",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Surgical video synthesis with scene-graph control; no causal effect estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "S0408",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Zero-shot optical flow from generative video models (non-medical); counterfactual prompting is not causal effect estimation."
+ },
+ {
+  "uid": "S0409",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal abstraction for mechanistic interpretability of neural networks; no treatment-effect estimation with learned covariates."
+ },
+ {
+  "uid": "S0410",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal abstraction learning between SCMs (generic causal theory); no learned image/video/text representations as adjustment."
+ },
+ {
+  "uid": "S0411",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Title only: causal foundation model linking balancing and attention for effect estimation; use of learned representations as adjustment covariates not ruled out."
+ },
+ {
+  "uid": "S0412",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Title only: learned (shadow-variable) representations for treatment effect estimation; covariate modality unspecified, L1 not ruled out."
+ },
+ {
+  "uid": "S0413",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Kernel conditional distributional treatment effect estimation; generic causal methodology without learned image/video/text representations."
+ },
+ {
+  "uid": "S0414",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1",
+   "L2"
+  ],
+  "reason": "Fine-tuned foundation model and sufficient-representation constraint for valid causal inference across experiments with complex recordings; representation adjustment/acquisition role not ruled out."
+ },
+ {
+  "uid": "S0415",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Capsule endoscopy illumination correction with diffusion transformer; no causal component."
+ },
+ {
+  "uid": "S0416",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Endoscopic metric scale estimation; no causal component."
+ },
+ {
+  "uid": "S0417",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Endoscopy video foundation model for classification/segmentation/detection; no causal estimation or acquisition-bias analysis."
+ },
+ {
+  "uid": "S0418",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal-inspired multitask learning mitigating target-causing confounding for robust prediction; no treatment-effect estimation."
+ },
+ {
+  "uid": "S0419",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Endoscopy video generation as simulator for education/augmentation; no causal effect estimation."
+ },
+ {
+  "uid": "S0420",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Counterfactual embedding calibration in CLIP space to remove object-context shortcuts; causal framing for prediction, not effect of an action."
+ },
+ {
+  "uid": "S0421",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Doubly robust kernel counterfactual policy mean embeddings; generic off-policy causal estimation without learned image/video/text representations."
+ },
+ {
+  "uid": "S0422",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Title only: probabilistic-programming language for counterfactual generative models; generic counterfactual methodology."
+ },
+ {
+  "uid": "S0423",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Colonoscopy video polyp segmentation; no causal component."
+ },
+ {
+  "uid": "S0424",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Learned (network) embeddings used as proxies to adjust for unobserved confounding; non-image modality but close analog of L1, doubt."
+ },
+ {
+  "uid": "S0425",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Few-shot anomaly detection of polyp frames; no causal component."
+ },
+ {
+  "uid": "S0426",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "GAN translation for haustral fold segmentation in colonoscopy; no causal component."
+ },
+ {
+  "uid": "S0427",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Conditional echocardiogram video diffusion on clinical parameters (counterfactual-style generation) without causal effect estimation."
+ },
+ {
+  "uid": "S0428",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causality-inspired removal of view/style spurious correlations in ultrasound video prediction; no causal effect estimation."
+ },
+ {
+  "uid": "S0429",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multimodal clinical foundation-model benchmark; no causal estimation."
+ },
+ {
+  "uid": "S0430",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Contrastive ultrasound video representation learning for diagnosis; no causal component."
+ },
+ {
+  "uid": "S0431",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Network causal effect estimation under contagion vs latent confounding; generic causal methodology."
+ },
+ {
+  "uid": "S0432",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Language-promptable X-ray segmentation foundation model; no causal component."
+ },
+ {
+  "uid": "S0433",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Propensity-score-based alignment of unpaired multimodal data; causal analogy for matching, not effect estimation with representation adjustment."
+ },
+ {
+  "uid": "S0434",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Sparse-autoencoder analysis of transformer hallucinations; no causal effect estimation."
+ },
+ {
+  "uid": "S0435",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Anti-causal invariant representation learning across environments for OOD generalization; no treatment-effect estimation."
+ },
+ {
+  "uid": "S0436",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Conditional diffusion model for medical image segmentation; no causal component."
+ },
+ {
+  "uid": "S0437",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Ultrasound video-speech self-supervised representation learning; no causal component."
+ },
+ {
+  "uid": "S0438",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: generated motion videos to boost static medical image diagnosis; no causal estimation indicated."
+ },
+ {
+  "uid": "S0439",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Surgical phase recognition transformer; no causal component."
+ },
+ {
+  "uid": "S0440",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Autoregressive diffusion transformer for video synthesis; no causal component."
+ },
+ {
+  "uid": "S0441",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Surgical skill assessment from video; no causal component."
+ },
+ {
+  "uid": "S0442",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Identifiability of hierarchical temporal causal representation learning; generic theory without effect estimation."
+ },
+ {
+  "uid": "S0443",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1",
+   "L2"
+  ],
+  "reason": "Title only: federated (multi-site) learning of deep causal generative models; image-based causal estimation and site effects not ruled out."
+ },
+ {
+  "uid": "S0444",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Title only: representation learning for treatment effect estimation; covariate modality unspecified, L1 not ruled out."
+ },
+ {
+  "uid": "S0445",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Kernel IV estimator under treatment measurement error; generic causal methodology."
+ },
+ {
+  "uid": "S0446",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1",
+   "L3"
+  ],
+  "reason": "Conditional generative (diffusion) models for sampling interventional distributions with image variables incl. MIMIC-CXR; image-based adjustment and semi-synthetic medical benchmark not ruled out."
+ },
+ {
+  "uid": "S0447",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Title only: counterfactual reasoning for multi-view mammogram representation learning (diagnosis), not effect of an action."
+ },
+ {
+  "uid": "S0448",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Generative counterfactual attention for fMRI diagnosis explainability; no causal effect estimation."
+ },
+ {
+  "uid": "S0449",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Text-guided polyp segmentation; no causal component."
+ },
+ {
+  "uid": "S0450",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Backdoor adjustment to debias foundation-model fine-tuning for classification; causal framing, no treatment-effect estimation."
+ },
+ {
+  "uid": "S0451",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Back-door/IPW framing of fairness for deepfake detection; causal-inspired prediction, no treatment-effect estimation."
+ },
+ {
+  "uid": "S0452",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: GAN rendering of synthetic colonoscopy videos; no causal estimation indicated."
+ },
+ {
+  "uid": "S0453",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Counterfactual vision-language fine-tuning for causal reasoning in VLMs; no treatment-effect estimation."
+ },
+ {
+  "uid": "S0454",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Tool-augmented video question answering with MLLMs; no causal estimation."
+ },
+ {
+  "uid": "S0455",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Sensorless freehand 3D ultrasound reconstruction; no causal component."
+ },
+ {
+  "uid": "S0456",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal reweighting against type confounding in ad hoc teamwork RL; generic causal methodology, no learned image/video/text adjustment."
+ },
+ {
+  "uid": "S0457",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Title only: propensity balancing for debiased recommendation; generic causal methodology, no image/video/text representations indicated."
+ },
+ {
+  "uid": "S0458",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Deep generative semi-synthetic validation of causal methods anchored on tabular data (Lalonde, STAR); not built on medical images or video."
+ },
+ {
+  "uid": "S0459",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L3"
+  ],
+  "reason": "Causal analysis quantifying bias sources in medical-image time-to-event prediction under distribution shift; a semi-synthetic causal construction on real medical images not ruled out."
+ },
+ {
+  "uid": "S0460",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "LLM-derived text representations with a doubly robust learner to adjust for text-mediated confounding in treatment effect estimation."
+ },
+ {
+  "uid": "S0461",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Backdoor/front-door adjustment within egocentric video segmentation; causal-inspired prediction, no treatment-effect estimation."
+ },
+ {
+  "uid": "S0462",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Demographic fairness of segmentation foundation models; no causal effect estimation or representation acquisition analysis."
+ },
+ {
+  "uid": "S0463",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Spatiotemporal representation learning for irregular medical image time series; no causal estimation."
+ },
+ {
+  "uid": "S0464",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Biomedical mixed-modal instruction-tuning dataset; no causal component."
+ },
+ {
+  "uid": "S0465",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Surgical video motion magnification; no causal component."
+ },
+ {
+  "uid": "S0466",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Online 3D reconstruction from endoscopic video; no causal component."
+ },
+ {
+  "uid": "S0467",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Joint image-video tokenizer for generation; no causal component."
+ },
+ {
+  "uid": "S0468",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Temporal CycleGAN for surgical phantom hyperrealism; no causal component."
+ },
+ {
+  "uid": "S0469",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Active learning for cataract surgical step recognition; no causal component."
+ },
+ {
+  "uid": "S0470",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Real-world sanity-check benchmark for causal representation learning (optical system); no effect estimation, not medical imaging."
+ },
+ {
+  "uid": "S0471",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "LLM causal reasoning benchmark; no learned-representation adjustment."
+ },
+ {
+  "uid": "S0472",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Learned invariant covariate representation across environments used as the adjustment set for treatment effect estimation; modality not stated, doubt."
+ },
+ {
+  "uid": "S0473",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "VAE-adversarial learned embeddings of high-dimensional proxies used to adjust for latent confounding in contagion effects; non-image modality likely, doubt."
+ },
+ {
+  "uid": "S0474",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Autoencoder-coupled causal bridge using learned representations of proxies for treatment effects under unobserved confounding; proxy modality (possibly images) not stated."
+ },
+ {
+  "uid": "S0475",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Low-light capsule endoscopy enhancement; no causal component."
+ },
+ {
+  "uid": "S0476",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Speech embeddings regularized for repeatability/invariance to nuisance factors; no causal estimation."
+ },
+ {
+  "uid": "S0477",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Diffusion-based counterfactual image generation with semantic abduction; no causal effect estimation of an action."
+ },
+ {
+  "uid": "S0478",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Counterfactual adjustment of helpfulness votes for position/herding bias; generic causal adjustment without image/video/text representation covariates."
+ },
+ {
+  "uid": "S0479",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causality-aware generative counterfactual explanations on graphs; causal explanation, no treatment-effect estimation."
+ },
+ {
+  "uid": "S0480",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Title only: generative-model transfer-entropy estimator for causal discovery; generic causal methodology."
+ },
+ {
+  "uid": "S0481",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Certified medical image segmentation via diffusion smoothing; no causal component."
+ },
+ {
+  "uid": "S0482",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Model extraction attacks via counterfactual explanations; no causal estimation."
+ },
+ {
+  "uid": "S0483",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Unsupervised ultrasound video quality assessment; no causal component."
+ },
+ {
+  "uid": "S0484",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Multi-site MRI harmonization using CLIP style embeddings of scanner/protocol differences; no causal estimation."
+ },
+ {
+  "uid": "S0485",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Fine-grained image-text contrastive pretraining; no causal component."
+ },
+ {
+  "uid": "S0486",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Federated medical foundation-model benchmark; no causal estimation."
+ },
+ {
+  "uid": "S0487",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Metadata (scanner/hospital/staining) guided diffusion augmentation against shortcut bias in histopathology; no causal estimation."
+ },
+ {
+  "uid": "S0488",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Hematology foundation model with batch-effect assessment of embeddings; no causal estimation."
+ },
+ {
+  "uid": "S0489",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Red blood cell foundation model; no causal or acquisition-bias analysis."
+ },
+ {
+  "uid": "S0490",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "LLM value-generalization benchmark with controlled confounding of features; no causal estimation with learned covariates."
+ },
+ {
+  "uid": "S0491",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Title only: multi-site neuroimaging with counterfactual inference; site-information handling in a causal/counterfactual analysis not ruled out."
+ },
+ {
+  "uid": "S0492",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Antibody epitope prediction benchmark; no causal component."
+ },
+ {
+  "uid": "S0493",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Intrinsic causal attributions of input features treating neural networks as SCMs; causal explanation, no treatment-effect estimation."
+ },
+ {
+  "uid": "S0494",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Domain-aware loss regularization for OOD MRI segmentation; no causal estimation or representation acquisition analysis."
+ },
+ {
+  "uid": "S0495",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multi-slice spatial transcriptomics alignment and embedding; no causal component."
+ },
+ {
+  "uid": "S0496",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Hierarchical VAE missing-data imputation and feature acquisition; no causal component."
+ }
+]

@@ -1,0 +1,219 @@
+[
+ {
+  "id": "DS221",
+  "key": "u:D1545",
+  "category": "DATASET-C-SURG",
+  "names": [],
+  "uids": [
+   "D1545",
+   "D1595"
+  ],
+  "titles": [
+   "HecVL: Hierarchical Video-Language Pretraining for Zero-shot Surgical Phase Recognition",
+   "HecVL: Hierarchical Video-Language Pretraining for Zero-shot Surgical Phase Recognition"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/ad4b36077ab34ef222fb4d80661ede526e6278c6"
+  ],
+  "doi": [
+   "10.48550/arXiv.2405.10075",
+   "10.48550/arXiv.2405.10075"
+  ],
+  "arxiv": [
+   "2405.10075",
+   "2405.10075"
+  ]
+ },
+ {
+  "id": "DS222",
+  "key": "n:endoscapes2023",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Endoscapes2023"
+  ],
+  "uids": [
+   "D1547",
+   "D1608"
+  ],
+  "titles": [
+   "Endoscapes, a critical view of safety and surgical scene segmentation dataset for laparoscopic cholecystectomy",
+   "Endoscapes, a critical view of safety and surgical scene segmentation dataset for laparoscopic cholecystectomy"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/26b2e49685814005311d89320abbde155a7227ec"
+  ],
+  "doi": [
+   "10.1038/s41597-025-04642-4",
+   "10.1038/s41597-025-04642-4"
+  ],
+  "arxiv": [
+   "2312.12429",
+   "2312.12429"
+  ]
+ },
+ {
+  "id": "DS223",
+  "key": "n:multibypass140",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "MultiBypass140"
+  ],
+  "uids": [
+   "D1549",
+   "D1594"
+  ],
+  "titles": [
+   "Analyzing the impact of surgical technique on intraoperative adverse events in laparoscopic Roux-en-Y gastric bypass surgery by video-based assessment",
+   "Analyzing the impact of surgical technique on intraoperative adverse events in laparoscopic Roux-en-Y gastric bypass surgery by video-based assessment"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/a927528d2b9c7e264d52572318302198f1547a7e"
+  ],
+  "doi": [
+   "10.1007/s00464-025-11557-z",
+   "10.1007/s00464-025-11557-z"
+  ],
+  "arxiv": [
+   null,
+   null
+  ]
+ },
+ {
+  "id": "DS224",
+  "key": "n:pov-surgery",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "POV-Surgery"
+  ],
+  "uids": [
+   "D1553"
+  ],
+  "titles": [
+   "POV-Surgery: A Dataset for Egocentric Hand and Tool Pose Estimation During Surgical Activities"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/9ebcaa8afe25aebb302b0452833ad5082e57b2e9"
+  ],
+  "doi": [
+   "10.1007/978-3-031-43996-4_42"
+  ],
+  "arxiv": [
+   "2307.10387"
+  ]
+ },
+ {
+  "id": "DS225",
+  "key": "n:sata",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SATA"
+  ],
+  "uids": [
+   "D1564"
+  ],
+  "titles": [
+   "Cosmos-H-Surgical: Learning Surgical Robot Policies from Videos via World Modeling"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/60a56060321023d2b1606c346a097ab069a91b86"
+  ],
+  "doi": [
+   null
+  ],
+  "arxiv": [
+   "2512.23162"
+  ]
+ },
+ {
+  "id": "DS226",
+  "key": "n:brs / vts",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "BRS / VTS"
+  ],
+  "uids": [
+   "D1567"
+  ],
+  "titles": [
+   "MS-TCRNet: Multi-Stage Temporal Convolutional Recurrent Networks for Action Segmentation Using Sensor-Augmented Kinematics"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/9ff3b571921bd69623e714162ef71efd17664885"
+  ],
+  "doi": [
+   "10.1016/j.patcog.2024.110778"
+  ],
+  "arxiv": [
+   "2303.07814"
+  ]
+ },
+ {
+  "id": "DS227",
+  "key": "n:surgpose",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgPose"
+  ],
+  "uids": [
+   "D1574"
+  ],
+  "titles": [
+   "SurgPose: a Dataset for Articulated Robotic Surgical Tool Pose Estimation and Tracking"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/cdbf4e7c0d4e55cfcf89f3c3264f2ff4d3438553"
+  ],
+  "doi": [
+   "10.1109/ICRA55743.2025.11127958"
+  ],
+  "arxiv": [
+   "2502.11534"
+  ]
+ },
+ {
+  "id": "DS228",
+  "key": "n:surglavi",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgLaVi"
+  ],
+  "uids": [
+   "D1591"
+  ],
+  "titles": [
+   "SurgLaVi: Large-Scale Hierarchical Dataset for Surgical Vision-Language Representation Learning"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/3eb7ec1d730efab9d6c5b00735accf1186e38a17"
+  ],
+  "doi": [
+   "10.48550/arXiv.2509.10555"
+  ],
+  "arxiv": [
+   "2509.10555"
+  ]
+ },
+ {
+  "id": "DS229",
+  "key": "n:lemon",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "LEMON"
+  ],
+  "uids": [
+   "D1599"
+  ],
+  "titles": [
+   "LEMON: A Large Endoscopic MONocular Dataset and Foundation Model for Perception in Surgical Settings"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/f4478fc12ac2309493c1f7da71ed840a4f9d5bbe"
+  ],
+  "doi": [
+   null
+  ],
+  "arxiv": [
+   "2503.19740"
+  ]
+ }
+]

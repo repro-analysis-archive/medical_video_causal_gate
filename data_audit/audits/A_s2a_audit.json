@@ -1,0 +1,770 @@
+[
+ {
+  "id": "DS194",
+  "name": "UNC oblique / en face colonoscopy sequence datasets (Wang et al., 'Structure-preserving Image Translation for Depth Estimation in Colonoscopy', MICCAI 2024)",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://arxiv.org/abs/2408.10153 (PDF saved: /media/user/LaCie/medvideo_gate/DS194/arxiv_2408.10153.pdf; text /media/user/LaCie/medvideo_gate/DS194/arxiv_2408.10153_raw.txt)",
+   "https://endoscopography.web.unc.edu/place-recognition-in-colonoscopy/ (UNC 'Datasets' page; saved /media/user/LaCie/medvideo_gate/DS194/datasets_page.html/.txt)",
+   "https://endoscopography.web.unc.edu/ and /data-and-results/ (saved; no dataset terms)",
+   "Google Drive file links for oblique_train / oblique_test / enface_pub listed on the Datasets page (not opened; no download)"
+  ],
+  "trajectory_unit": "Released unit = a hand-picked sequence of consecutive frames (PNG/JPG images, 270x216) cut from a clinical colonoscopy video; several sequences can come from the same procedure and the source procedure of each sequence is not documented. Not full-procedure recordings.",
+  "n_trajectories": null,
+  "n_trajectories_quote": "There are 93 sequences totalling 16,756 frames. | There are 14 sequences totalling 816 frames.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "Both consist of sequences of consecutive frames manually selected from a library of video recordings of full colonoscopy procedures. | oblique_train /sequence_id: contains images from oblique viewpoints (training partition)",
+   "source": "https://arxiv.org/abs/2408.10153 (saved copy: /media/user/LaCie/medvideo_gate/DS194/arxiv_2408.10153_raw.txt) | https://endoscopography.web.unc.edu/place-recognition-in-colonoscopy/ (saved copy: /media/user/LaCie/medvideo_gate/DS194/datasets_page.txt)"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "Clinical data by nature does not have per-frame depth or pose | enface_pub /sequence_id: contains images from en face viewpoints",
+   "source": "https://arxiv.org/abs/2408.10153 (saved copy: /media/user/LaCie/medvideo_gate/DS194/arxiv_2408.10153_raw.txt) | https://endoscopography.web.unc.edu/place-recognition-in-colonoscopy/ (saved copy: /media/user/LaCie/medvideo_gate/DS194/datasets_page.txt)"
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "Both consist of sequences of consecutive frames manually selected from a library of video recordings of full colonoscopy procedures. | Each sequence has between 2 and 586 frames, averaging 180 frames per sequence.",
+   "source": "https://arxiv.org/abs/2408.10153 (saved copy: /media/user/LaCie/medvideo_gate/DS194/arxiv_2408.10153_raw.txt) | https://arxiv.org/abs/2408.10153 (saved copy: /media/user/LaCie/medvideo_gate/DS194/arxiv_2408.10153_raw.txt)"
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "The original videos were recorded using CF and PCF series Olympus colonoscopes with a raw image size of 1350 × 1080. | oblique_test /sequence_id: contains images from oblique viewpoints (test partition)",
+   "source": "https://arxiv.org/abs/2408.10153 (saved copy: /media/user/LaCie/medvideo_gate/DS194/arxiv_2408.10153_raw.txt) | https://endoscopography.web.unc.edu/place-recognition-in-colonoscopy/ (saved copy: /media/user/LaCie/medvideo_gate/DS194/datasets_page.txt)"
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "Code is available at github.com/sherry97/struct-preserving-cyclegan and data at endoscopography.web.unc.edu | Data copyright belongs to UNC Medical School.",
+   "source": "https://arxiv.org/abs/2408.10153 (saved copy: /media/user/LaCie/medvideo_gate/DS194/arxiv_2408.10153_raw.txt) | https://endoscopography.web.unc.edu/place-recognition-in-colonoscopy/ (saved copy: /media/user/LaCie/medvideo_gate/DS194/datasets_page.txt)"
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "There are 93 sequences totalling 16,756 frames. | Camera Intrinsics: Pinhole fx=145.4410 fy=145.4410 cx=135.6993 cy=107.8946 width=270 height=216",
+   "source": "https://arxiv.org/abs/2408.10153 (saved copy: /media/user/LaCie/medvideo_gate/DS194/arxiv_2408.10153_raw.txt) | https://endoscopography.web.unc.edu/place-recognition-in-colonoscopy/ (saved copy: /media/user/LaCie/medvideo_gate/DS194/datasets_page.txt)"
+  },
+  "D7": {
+   "verdict": "FAIL",
+   "quote": "The datasets have been curated on the basis of the viewpoint of each frame such that a sequence extends as long as each consecutive frame is of the same viewpoint category modulo gaps of up to 30 consecutive frames with excessive obfuscation (e.g. water drops on the lens).",
+   "source": "https://arxiv.org/abs/2408.10153 (saved copy: /media/user/LaCie/medvideo_gate/DS194/arxiv_2408.10153_raw.txt)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4 (no per-sequence site/device/operator metadata; single UNC library; device given only at dataset level as 'CF and PCF series Olympus colonoscopes'), and no D7 content variable varies within a released sequence (viewpoint category is constant within each sequence by construction)."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "source videos are clinician-performed clinical colonoscopies (UNC library); released only as hand-picked image sequences",
+   "site": "1 (UNC; not recorded per sequence)",
+   "device": "'CF and PCF series Olympus colonoscopes' (dataset level only)",
+   "operator": "not recorded",
+   "annotation_type": "sequence-level viewpoint category (oblique 93 sequences / en face 14 sequences) by folder; train/test partition; shared pinhole intrinsics; no per-frame labels, no depth/pose for clinical frames"
+  },
+  "registration_required": "no",
+  "subjects": {
+   "type": "in vivo human patients (clinical)",
+   "quote": "We also propose a dataset of hand-picked sequences from clinical colonoscopies to improve the image translation process.",
+   "source": "https://arxiv.org/abs/2408.10153 (saved copy: /media/user/LaCie/medvideo_gate/DS194/arxiv_2408.10153_raw.txt)"
+  },
+  "notes": "Released data are image sequences (2-586 frames each), not videos; procedure-to-sequence mapping not documented, so the trajectory count is unknown but at most 107 (93 + 14 sequences) < 200. D5: the Datasets page gives Google Drive links and no licence or terms for the oblique/en face data; the only rights statement on the page ('Data copyright belongs to UNC Medical School.') is in the Colon10K section. D6: no byte size documented (Drive pages not opened); 16,756 + 816 small frames suggest it is small, but size is undocumented per the rule. Ethics statement: 'The UNC Office of Human Research Ethics has determined that this work does not constitute human subject research'.",
+  "input_record": {
+   "key": "u:D1365",
+   "uids": [
+    "D1365"
+   ],
+   "titles": [
+    "Structure-preserving Image Translation for Depth Estimation in Colonoscopy Video"
+   ],
+   "urls": [
+    "https://www.semanticscholar.org/paper/bfc1faa1ac06001a553f9c44455ef07a1a69beec"
+   ],
+   "doi": [
+    "10.48550/arXiv.2408.10153"
+   ],
+   "arxiv": [
+    "2408.10153"
+   ]
+  }
+ },
+ {
+  "id": "DS195",
+  "name": "EndoGaze (Eye-tracking dataset of endoscopist-AI teaming during colonoscopy; ScienceDB 10.57760/sciencedb.09204)",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://doi.org/10.1038/s41597-025-04535-6 (Zhu et al., Sci Data 12, 212 (2025); full text via Europe PMC PMC11799166, saved /media/user/LaCie/medvideo_gate/DS195/PMC11799166.xml/.txt; nature.com HTML saved scidata_article.html)",
+   "https://doi.org/10.57760/sciencedb.09204 -> https://www.scidb.cn/detail?dataSetId=9a16dac3ab9b4516a48de8e03f25ffd7 (saved scidb_doi.html; Croissant JSON-LD extracted to scidb_croissant_jsonld.json)",
+   "https://china.scidb.cn/download?fileId=06f7be0aabb5c685e9401f35287d9c52 (meta.csv, 1,811 B, public metadata; saved meta.csv)",
+   "https://china.scidb.cn/download?fileId=68b8d7fbdae4344822a7ddd411887139 (polyp-presence-period.csv, 1,229 B; saved)",
+   "https://github.com/ku262/EndoGaze (README saved github_README.md; analysis code only)"
+  ],
+  "trajectory_unit": "Prospective subset: one examination video = the recording of one patient's colonoscopy withdrawal phase (raw.mp4 + gaze-overlay.mp4) with a synchronized 30 Hz gaze CSV. Retrospective subset: one fixed 33-min compilation of 60 ~30-s clips (source procedures not identified) viewed by 26 participants.",
+  "n_trajectories": 80,
+  "n_trajectories_quote": "The prospective dataset consists of 80 examination videos, 43 of which contain AI detection boxes, while the remaining 37 are original videos.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "In addition to the videos, a CSV file logs eye movement data and coordinates over time. The grouping information and examiner details are stored in a meta.csv file. | VideoID,Group,Endoscopist",
+   "source": "https://doi.org/10.1038/s41597-025-04535-6 (full text via Europe PMC PMC11799166) (saved copy: /media/user/LaCie/medvideo_gate/DS195/PMC11799166.txt) | https://china.scidb.cn/download?fileId=06f7be0aabb5c685e9401f35287d9c52 (meta.csv) (saved copy: /media/user/LaCie/medvideo_gate/DS195/meta.csv)"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "Each examination record includes two videos: one showing the fixation points and the other being the original video. | During the colonoscopy, any detected polyps were resected or biopsied for pathological examination.",
+   "source": "https://doi.org/10.1038/s41597-025-04535-6 (full text via Europe PMC PMC11799166) (saved copy: /media/user/LaCie/medvideo_gate/DS195/PMC11799166.txt) | https://doi.org/10.1038/s41597-025-04535-6 (full text via Europe PMC PMC11799166) (saved copy: /media/user/LaCie/medvideo_gate/DS195/PMC11799166.txt)"
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "For the prospective real-time dataset, videos of endoscopists performing colonoscopy withdrawal were collected along with their corresponding eye-tracking data. | For the prospective data, we did not process it in order to maintain its authenticity, allowing for more accurate and reliable data for research purposes.",
+   "source": "https://doi.org/10.1038/s41597-025-04535-6 (full text via Europe PMC PMC11799166) (saved copy: /media/user/LaCie/medvideo_gate/DS195/PMC11799166.txt) | https://doi.org/10.1038/s41597-025-04535-6 (full text via Europe PMC PMC11799166) (saved copy: /media/user/LaCie/medvideo_gate/DS195/PMC11799166.txt)"
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "All colonoscopy videos used in this study were collected between February 2024 and March 2024 at the Endoscopy Center of Zhongshan Hospital affiliated with Fudan University. The endoscopic equipment used included standard colonoscopes (CF-H290 [Olympus Medical Systems, Tokyo, Japan]) and video systems (EVIS LUCERA ELITE CV-290/CLV-290SL [Olympus Medical Systems]). | VideoID,Group,Endoscopist",
+   "source": "https://doi.org/10.1038/s41597-025-04535-6 (full text via Europe PMC PMC11799166) (saved copy: /media/user/LaCie/medvideo_gate/DS195/PMC11799166.txt) | https://china.scidb.cn/download?fileId=06f7be0aabb5c685e9401f35287d9c52 (meta.csv) (saved copy: /media/user/LaCie/medvideo_gate/DS195/meta.csv)"
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "\"license\":\"https://creativecommons.org/licenses/by/4.0/\" | \"conditionsOfAccess\":\"PUBLIC\"",
+   "source": "https://doi.org/10.57760/sciencedb.09204 (ScienceDB page, embedded Croissant JSON-LD) (saved copy: /media/user/LaCie/medvideo_gate/DS195/scidb_doi.html) | https://doi.org/10.57760/sciencedb.09204 (ScienceDB page, embedded Croissant JSON-LD) (saved copy: /media/user/LaCie/medvideo_gate/DS195/scidb_doi.html)"
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "\"size\":{\"@type\":\"sc:QuantitativeValue\",\"unitText\":\"bytes\",\"value\":467166947943}",
+   "source": "https://doi.org/10.57760/sciencedb.09204 (ScienceDB page, embedded Croissant JSON-LD) (saved copy: /media/user/LaCie/medvideo_gate/DS195/scidb_doi.html)"
+  },
+  "D7": {
+   "verdict": "UNKNOWN",
+   "quote": "Additionally, a file named “polyp-presence-period.csv” documents the appearance and disappearance times of each polyp in the fixed videos. | Polyp No.,Start,End | In the CADe-assisted group, diagnostic boxes were displayed to highlight polyp lesions within the colonic lumen.",
+   "source": "https://doi.org/10.1038/s41597-025-04535-6 (full text via Europe PMC PMC11799166) (saved copy: /media/user/LaCie/medvideo_gate/DS195/PMC11799166.txt) | https://china.scidb.cn/download?fileId=68b8d7fbdae4344822a7ddd411887139 (polyp-presence-period.csv) (saved copy: /media/user/LaCie/medvideo_gate/DS195/polyp-presence-period.csv) | https://doi.org/10.1038/s41597-025-04535-6 (full text via Europe PMC PMC11799166) (saved copy: /media/user/LaCie/medvideo_gate/DS195/PMC11799166.txt)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4: single site (Zhongshan Hospital), single colonoscope model in the prospective subset (CF-H290), and per-video operator (meta.csv Endoscopist) has only one level with >=20 videos (senior-005: 22; next senior-010: 13). D7 also not established for the continuous (prospective) subset."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "prospective: 80 clinician-performed real-time withdrawals, randomized per patient to CADe-assisted (meta.csv Group=AI, 43) or routine (control, 37); retrospective: 26 participants (6 senior, 8 novice endoscopists, 8 nurses, 4 students) viewing a fixed compilation of 60 clips twice (without/with CADe)",
+   "site": "1 (Endoscopy Center, Zhongshan Hospital, Fudan University)",
+   "device": "prospective: Olympus CF-H290 + EVIS LUCERA ELITE CV-290/CLV-290SL (all 80); retrospective clips: CF-H260 and CF-H290 (not per clip)",
+   "operator": "prospective, per video from meta.csv (14 endoscopists): senior-005 22, senior-010 13, senior-007 10, senior-013 6, senior-016 6, senior-012 5, senior-014 5, senior-017 4, senior-006 3, senior-008 2, senior-004 1, senior-009 1, senior-011 1, senior-015 1",
+   "annotation_type": "30 Hz gaze coordinates (Tobii Pro Nano) per video; CADe overlay boxes (commercial model output, AI group); retrospective: key-press logs (participant polyp detection), polyp-presence-period.csv (42 polyp intervals in the compiled video), CADe box coordinates"
+  },
+  "registration_required": "no",
+  "subjects": {
+   "type": "in vivo human patients (clinical)",
+   "quote": "Furthermore, 80 real-time video segments were prospectively collected during endoscopists’ actual colonoscopy withdrawal procedures, comprising 43 segments with CADe assistance and 37 segments without assistance (normal control).",
+   "source": "https://doi.org/10.1038/s41597-025-04535-6 (full text via Europe PMC PMC11799166) (saved copy: /media/user/LaCie/medvideo_gate/DS195/PMC11799166.txt)"
+  },
+  "notes": "Subset structure: the prospective subset (80 continuous withdrawal recordings, own folder) is the only part passing D3; the retrospective subset is ~30-s clips (D3 FAIL). D3 PASS is for withdrawal-phase recordings only (insertion not included). D1: gaze is a perceptual measurement, not a control action on the procedure; scope manipulation is not recorded; CADe assignment is a trajectory-level randomized condition, not a time-stamped action; and 80 < 200 in any case. D2: released records contain videos, gaze CSV and meta.csv (VideoID, Group, Endoscopist) only; no pathology or detection outcome is released for the prospective videos. D7 UNKNOWN: the only human-style content annotation (polyp presence intervals) belongs to the retrospective compilation and its annotator is not stated (two endoscopists reached consensus on the clip diagnoses); no content annotation is documented for the prospective subset. D5: ScienceDB licence CC BY 4.0 (the Sci Data article itself is CC BY-NC-ND, which covers the article only). D6: 467,166,947,943 bytes (~467 GB) per ScienceDB metadata (sum of listed file sizes matches). meta.csv and polyp-presence-period.csv downloaded anonymously (no login, no terms accepted). Total trajectories <= 80 + 60 clips = 140 < 200.",
+  "input_record": {
+   "key": "u:D1367",
+   "uids": [
+    "D1367"
+   ],
+   "titles": [
+    "Eye-tracking dataset of endoscopist-AI teaming during colonoscopy: Retrospective and real-time acquisition"
+   ],
+   "urls": [
+    "https://www.semanticscholar.org/paper/2ef98b13dcaa6aea9944f9d5153ad3566d56ec30"
+   ],
+   "doi": [
+    "10.1038/s41597-025-04535-6"
+   ],
+   "arxiv": [
+    null
+   ]
+  }
+ },
+ {
+  "id": "DS196",
+  "name": "VIM-Polyp",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://doi.org/10.1038/s41597-025-06168-1 (Dogan et al., Sci Data 2025; full text via Europe PMC PMC12675750, saved /media/user/LaCie/medvideo_gate/DS196/PMC12675750.xml/.txt)",
+   "https://zenodo.org/records/15388073 (via https://zenodo.org/api/records/15388073, saved zenodo_15388073.json)",
+   "https://github.com/biorsd/VIM-Polyp (named in Code availability; not needed for verdicts)"
+  ],
+  "trajectory_unit": "One released AVI = a short colonoscopy clip of a single polyp (patient and polyp id in the filename); not a full procedure recording. Several clips can come from one patient's procedure (would count once).",
+  "n_trajectories": null,
+  "n_trajectories_quote": "The dataset’ colonVideosWithLabels’ contains 133 colonoscopy video files in.avi format. Each video corresponds to a single polyp",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "Each video corresponds to a single polyp and includes structured metadata encoded in the file name, such as Patient ID, sex and age, polyp location (e.g., sigmoid, ascending), polyp type (e.g., nonneoplastic, hyperplastic), IHC results for selected markers (e.g., p53, Ki-67, PD-L1, VEGF, CD34).",
+   "source": "https://doi.org/10.1038/s41597-025-06168-1 (full text via Europe PMC PMC12675750) (saved copy: /media/user/LaCie/medvideo_gate/DS196/PMC12675750.txt)"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "Each video corresponds to a single polyp and includes structured metadata encoded in the file name, such as Patient ID, sex and age, polyp location (e.g., sigmoid, ascending), polyp type (e.g., nonneoplastic, hyperplastic), IHC results for selected markers (e.g., p53, Ki-67, PD-L1, VEGF, CD34). | Two experienced pathologists performed pathological diagnoses.",
+   "source": "https://doi.org/10.1038/s41597-025-06168-1 (full text via Europe PMC PMC12675750) (saved copy: /media/user/LaCie/medvideo_gate/DS196/PMC12675750.txt) | https://doi.org/10.1038/s41597-025-06168-1 (full text via Europe PMC PMC12675750) (saved copy: /media/user/LaCie/medvideo_gate/DS196/PMC12675750.txt)"
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "The total duration of these selected videos was 168 minutes, and the average duration of each video was set as 1.29 minutes. | The dataset’ colonVideosWithLabels’ contains 133 colonoscopy video files in.avi format. Each video corresponds to a single polyp",
+   "source": "https://doi.org/10.1038/s41597-025-06168-1 (full text via Europe PMC PMC12675750) (saved copy: /media/user/LaCie/medvideo_gate/DS196/PMC12675750.txt) | https://doi.org/10.1038/s41597-025-06168-1 (full text via Europe PMC PMC12675750) (saved copy: /media/user/LaCie/medvideo_gate/DS196/PMC12675750.txt)"
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "An important limitation of this study is that the dataset was collected from a single center (Kayseri City Hospital, Turkiye). | The system used in this research was a Fujinon VP-3500HD Processor combined with an XL-4450 light source and a 300 W Xenon lamp. | The colonoscopy procedures included in this dataset were performed by an experienced gastroenterologist",
+   "source": "https://doi.org/10.1038/s41597-025-06168-1 (full text via Europe PMC PMC12675750) (saved copy: /media/user/LaCie/medvideo_gate/DS196/PMC12675750.txt) | https://doi.org/10.1038/s41597-025-06168-1 (full text via Europe PMC PMC12675750) (saved copy: /media/user/LaCie/medvideo_gate/DS196/PMC12675750.txt) | https://doi.org/10.1038/s41597-025-06168-1 (full text via Europe PMC PMC12675750) (saved copy: /media/user/LaCie/medvideo_gate/DS196/PMC12675750.txt)"
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "\"license\": {\"id\": \"cc-by-4.0\"} | \"access_right\": \"open\"",
+   "source": "https://zenodo.org/records/15388073 (via https://zenodo.org/api/records/15388073) (saved copy: /media/user/LaCie/medvideo_gate/DS196/zenodo_15388073.json) | https://zenodo.org/records/15388073 (via https://zenodo.org/api/records/15388073) (saved copy: /media/user/LaCie/medvideo_gate/DS196/zenodo_15388073.json)"
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "\"key\": \"colonVideosWithLabels.zip\", \"size\": 19206350365 | \"size\": 21471305631",
+   "source": "https://zenodo.org/records/15388073 (via https://zenodo.org/api/records/15388073) (saved copy: /media/user/LaCie/medvideo_gate/DS196/zenodo_15388073.json) | https://zenodo.org/records/15388073 (via https://zenodo.org/api/records/15388073) (saved copy: /media/user/LaCie/medvideo_gate/DS196/zenodo_15388073.json)"
+  },
+  "D7": {
+   "verdict": "FAIL",
+   "quote": "Each video corresponds to a single polyp and includes structured metadata encoded in the file name | Because colonoscopy videos do not have labels for normal tissues, it is necessary to consult other datasets to analyze normal tissues.",
+   "source": "https://doi.org/10.1038/s41597-025-06168-1 (full text via Europe PMC PMC12675750) (saved copy: /media/user/LaCie/medvideo_gate/DS196/PMC12675750.txt) | https://doi.org/10.1038/s41597-025-06168-1 (full text via Europe PMC PMC12675750) (saved copy: /media/user/LaCie/medvideo_gate/DS196/PMC12675750.txt)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 (single centre, single Fujinon processor, one experienced gastroenterologist) and no D7 variable varies within a clip (all video labels are clip-level filename metadata)."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "clinician-performed routine colonoscopy (one experienced gastroenterologist), Kayseri City Hospital, 2019-2021",
+   "site": "1 (Kayseri City Hospital)",
+   "device": "1 (Fujinon VP-3500HD processor, XL-4450 light source)",
+   "operator": "1 experienced gastroenterologist (not recorded per video)",
+   "annotation_type": "clip-level filename metadata: patient id, sex, age, polyp location, polyp type/pathology, IHC scores (p53, Ki-67, PD-L1, VEGF, CD34) + Excel index; 1,903 histopathology TIFFs (198 patients, 383 polyps); ihc_data.xlsx"
+  },
+  "registration_required": "no",
+  "subjects": {
+   "type": "in vivo human patients (clinical)",
+   "quote": "This case study was conducted on 201 patients, 119 males and 82 females, treated at the Gastroenterology Clinic of Kayseri City Hospital, KCH.",
+   "source": "https://doi.org/10.1038/s41597-025-06168-1 (full text via Europe PMC PMC12675750) (saved copy: /media/user/LaCie/medvideo_gate/DS196/PMC12675750.txt)"
+  },
+  "notes": "n_trajectories: 133 released polyp clips (from 202 original short videos, 422 min total, mean 2.14 min); the number of distinct patients/procedures among the 133 clips is not stated, so trajectories <= 133 < 200. D2: pathology and IHC are lesion attributes measured on resected/biopsied tissue, not outcomes of a recorded action (same treatment as REAL-Colon DS099 histology). D6: Zenodo files colonVideosWithLabels.zip 19,206,350,365 B + histoImagesWithZoomingLabels.zip 21,471,305,631 B = 40,677,655,996 B (~40.7 GB). Licence on Zenodo CC BY 4.0, open access (no login needed per access_right).",
+  "input_record": {
+   "key": "n:vim-polyp",
+   "uids": [
+    "D1372"
+   ],
+   "titles": [
+    "VIM-Polyp: Multimodal Colon Polyp Dataset with Video, Histopathology, and Protein Expression"
+   ],
+   "urls": [
+    "https://www.semanticscholar.org/paper/2d92599ff1ede870fa32526b7337491ecb38cde0"
+   ],
+   "doi": [
+    "10.1038/s41597-025-06168-1"
+   ],
+   "arxiv": [
+    null
+   ]
+  }
+ },
+ {
+  "id": "DS197",
+  "name": "Romanian two-centre full-length colonoscopy video set for BBPS / landmark interobserver study (Vulpoi et al., Arch Clin Cases 2026)",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://doi.org/10.22551/2026.51.1302.10338 -> https://clinicalcases.eu/index.php/acc/article/view/1293 (landing page saved /media/user/LaCie/medvideo_gate/DS197/doi_landing.html/.txt)",
+   "https://clinicalcases.eu/index.php/acc/article/download/1293/376 (PDF saved article_1293_376.pdf; text article_1293_376.txt)",
+   "https://api.crossref.org/works/10.22551/2026.51.1302.10338 (saved crossref.json)"
+  ],
+  "trajectory_unit": "One full-length withdrawal-phase colonoscopy video of one screening patient (complete examination to the caecum).",
+  "n_trajectories": 64,
+  "n_trajectories_quote": "The final group consisted of 64 complete colonoscopy videos: 43 from the Institute of Gastroenterology and Hepatology at [...] 21 from Fundeni Clinical Institute in Bucharest.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "Assessments included segmental and total BBPS scores, bowel preparation adequacy, and recognition of key anatomical landmarks: ileocecal valve, appendiceal orifice, hepatic and splenic flexures, and anal verge.",
+   "source": "https://clinicalcases.eu/index.php/acc/article/download/1293/376 (Arch Clin Cases 2026;13(2):30-37) (saved copy: /media/user/LaCie/medvideo_gate/DS197/article_1293_376.txt)"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "Bowel preparation quality was assessed using the Boston Bowel Preparation Scale (BBPS), with separate scores for the right, transverse, and left colon, according to validated methodology [7].",
+   "source": "https://clinicalcases.eu/index.php/acc/article/download/1293/376 (Arch Clin Cases 2026;13(2):30-37) (saved copy: /media/user/LaCie/medvideo_gate/DS197/article_1293_376.txt)"
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "This retrospective, observational, multicenter study was based on full-length withdrawal-phase colonoscopy videos recorded during routine clinical practice. | Videos had to demonstrate a complete examination of the caecum and meet quality standards for structured assessment.",
+   "source": "https://clinicalcases.eu/index.php/acc/article/download/1293/376 (Arch Clin Cases 2026;13(2):30-37) (saved copy: /media/user/LaCie/medvideo_gate/DS197/article_1293_376.txt) | https://clinicalcases.eu/index.php/acc/article/download/1293/376 (Arch Clin Cases 2026;13(2):30-37) (saved copy: /media/user/LaCie/medvideo_gate/DS197/article_1293_376.txt)"
+  },
+  "D4": {
+   "verdict": "UNKNOWN",
+   "quote": "The final group consisted of 64 complete colonoscopy videos: 43 from the Institute of Gastroenterology and Hepatology at [...] 21 from Fundeni Clinical Institute in Bucharest. | The files were anonymized, assigned unique study codes, and stored in a dedicated study archive. | All procedures were digitally recorded during routine endoscopic practice using Olympus systems (EVIS EXERA III and EVIS X1), both of which provide high-definition imaging.",
+   "source": "https://clinicalcases.eu/index.php/acc/article/download/1293/376 (Arch Clin Cases 2026;13(2):30-37) (saved copy: /media/user/LaCie/medvideo_gate/DS197/article_1293_376.txt) | https://clinicalcases.eu/index.php/acc/article/download/1293/376 (Arch Clin Cases 2026;13(2):30-37) (saved copy: /media/user/LaCie/medvideo_gate/DS197/article_1293_376.txt) | https://clinicalcases.eu/index.php/acc/article/download/1293/376 (Arch Clin Cases 2026;13(2):30-37) (saved copy: /media/user/LaCie/medvideo_gate/DS197/article_1293_376.txt)"
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "The datasets generated and/or analyzed during the current study are not publicly available due to institutional and data protection restrictions. Still, they are available from the corresponding author on reasonable request and subject to approval by the participating institutions and applicable data protection regulations.",
+   "source": "https://clinicalcases.eu/index.php/acc/article/download/1293/376 (Arch Clin Cases 2026;13(2):30-37) (saved copy: /media/user/LaCie/medvideo_gate/DS197/article_1293_376.txt)"
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "To reduce technical heterogeneity, videos were captured using OBS (Open Broadcaster Software) with standardized settings for resolution, frame rate, and file format.",
+   "source": "https://clinicalcases.eu/index.php/acc/article/download/1293/376 (Arch Clin Cases 2026;13(2):30-37) (saved copy: /media/user/LaCie/medvideo_gate/DS197/article_1293_376.txt)"
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "When a landmark was considered visible, the corresponding time interval in the video was also recorded. | For each landmark, reviewers selected one of three categories: identified, not identified, or uncertain.",
+   "source": "https://clinicalcases.eu/index.php/acc/article/download/1293/376 (Arch Clin Cases 2026;13(2):30-37) (saved copy: /media/user/LaCie/medvideo_gate/DS197/article_1293_376.txt) | https://clinicalcases.eu/index.php/acc/article/download/1293/376 (Arch Clin Cases 2026;13(2):30-37) (saved copy: /media/user/LaCie/medvideo_gate/DS197/article_1293_376.txt)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor is established to meet D4: site counts 43 (Iasi) / 21 (Bucharest) are given only in the paper, the per-video file is not public; device given only at dataset level (EVIS EXERA III and EVIS X1); performing endoscopist not reported. D7 (reviewer-recorded landmark visibility intervals) is met per the paper."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "clinician-performed routine screening colonoscopies, recorded retrospectively (all 64)",
+   "site": "Iasi ('Sf. Spiridon' Emergency University Hospital) 43, Fundeni Clinical Institute Bucharest 21 (paper; per-video assignment not public)",
+   "device": "Olympus EVIS EXERA III and EVIS X1 (dataset level; per-video split not reported); captured with OBS at standardized settings",
+   "operator": "performing endoscopist not reported; 8 expert reviewers in 5 pairs (each reviewer 10-33 videos)",
+   "annotation_type": "per video, two independent reviewers: segmental BBPS (right/transverse/left) + total, adequacy, landmark identified/not identified/uncertain with visibility time interval, overall balance assessment"
+  },
+  "registration_required": "yes",
+  "subjects": {
+   "type": "in vivo human patients (clinical)",
+   "quote": "Eligible cases were complete colonoscopy videos from patients undergoing colorectal cancer screening at two tertiary academic centers in Romania.",
+   "source": "https://clinicalcases.eu/index.php/acc/article/download/1293/376 (Arch Clin Cases 2026;13(2):30-37) (saved copy: /media/user/LaCie/medvideo_gate/DS197/article_1293_376.txt)"
+  },
+  "notes": "Study dataset, not a public release: 'not publicly available ... available from the corresponding author on reasonable request and subject to approval by the participating institutions' (counted as registration/request-gated; no request made). D5 UNKNOWN (no licence; access by request only; same treatment as SCARED DS157). D2: BBPS describes bowel-preparation state and landmarks describe examination completeness; neither is an outcome of a recorded action. D4 would need the per-video site table (both centres have >=20 videos per the paper) but it cannot be inspected; 64 < 200 in any case. The article (landing page) is CC BY-NC 4.0; this concerns the article only.",
+  "input_record": {
+   "key": "u:D1378",
+   "uids": [
+    "D1378"
+   ],
+   "titles": [
+    "Interobserver variability in colonoscopy quality assessment: a retrospective standardized multicenter video-based study"
+   ],
+   "urls": [
+    "https://www.semanticscholar.org/paper/5d7a0e01148f51ddc4a9cef99c36c3f74cc5a178"
+   ],
+   "doi": [
+    "10.22551/2026.51.1302.10338"
+   ],
+   "arxiv": [
+    null
+   ]
+  }
+ },
+ {
+  "id": "DS198",
+  "name": "ToPV (Scheme and Dataset for Evaluating Computer-Aided Polyp Detection System in Colonoscopy, ISBI 2022)",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://doi.org/10.1109/ISBI52829.2022.9761699 / https://ieeexplore.ieee.org/document/9761699/ (IEEE Xplore returned an empty/blocked response to curl and WebFetch; full text closed access per OpenAlex: oa_status closed)",
+   "https://api.openalex.org/works/doi:10.1109/ISBI52829.2022.9761699 (saved /media/user/LaCie/medvideo_gate/DS198/openalex.json; abstract reconstructed from abstract_inverted_index to openalex_abstract_reconstructed.txt)",
+   "WebSearch: 'ToPV colonoscopy video dataset 360 short videos ... github' and '\"ToPV\" Leyu Yao Xiaolin Huang colonoscopy dataset' (no dataset release page, repository or licence found)"
+  ],
+  "trajectory_unit": "Short video clip collected during a real colonoscopy examination; number of source examinations not stated.",
+  "n_trajectories": null,
+  "n_trajectories_quote": "we propose a new colorectal examination video dataset for evaluation, named ToPV, which contains 360 short videos collected during real colonoscopy examination.",
+  "D1": {
+   "verdict": "UNKNOWN",
+   "quote": "Based on ToPV, we also present an experiment scheme for evaluating the assistance performance of CAD systems.",
+   "source": "https://doi.org/10.1109/ISBI52829.2022.9761699 (abstract via OpenAlex W4225005998 abstract_inverted_index, reconstructed) (saved copy: /media/user/LaCie/medvideo_gate/DS198/openalex_abstract_reconstructed.txt)"
+  },
+  "D2": {
+   "verdict": "UNKNOWN",
+   "quote": "The result of the initial experiment shows potential benefits of CAD systems in improving physicians’ performance.",
+   "source": "https://doi.org/10.1109/ISBI52829.2022.9761699 (abstract via OpenAlex W4225005998 abstract_inverted_index, reconstructed) (saved copy: /media/user/LaCie/medvideo_gate/DS198/openalex_abstract_reconstructed.txt)"
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "which contains 360 short videos collected during real colonoscopy examination.",
+   "source": "https://doi.org/10.1109/ISBI52829.2022.9761699 (abstract via OpenAlex W4225005998 abstract_inverted_index, reconstructed) (saved copy: /media/user/LaCie/medvideo_gate/DS198/openalex_abstract_reconstructed.txt)"
+  },
+  "D4": {
+   "verdict": "UNKNOWN",
+   "quote": "we propose a new colorectal examination video dataset for evaluation, named ToPV, which contains 360 short videos collected during real colonoscopy examination.",
+   "source": "https://doi.org/10.1109/ISBI52829.2022.9761699 (abstract via OpenAlex W4225005998 abstract_inverted_index, reconstructed) (saved copy: /media/user/LaCie/medvideo_gate/DS198/openalex_abstract_reconstructed.txt)"
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "\"is_oa\": false, \"oa_status\": \"closed\"",
+   "source": "https://api.openalex.org/works/doi:10.1109/ISBI52829.2022.9761699 (saved copy: /media/user/LaCie/medvideo_gate/DS198/openalex.json)"
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "which contains 360 short videos collected during real colonoscopy examination.",
+   "source": "https://doi.org/10.1109/ISBI52829.2022.9761699 (abstract via OpenAlex W4225005998 abstract_inverted_index, reconstructed) (saved copy: /media/user/LaCie/medvideo_gate/DS198/openalex_abstract_reconstructed.txt)"
+  },
+  "D7": {
+   "verdict": "UNKNOWN",
+   "quote": "204 of the videos contain one polyp and are labeled by experienced endoscopic physicians.",
+   "source": "https://doi.org/10.1109/ISBI52829.2022.9761699 (abstract via OpenAlex W4225005998 abstract_inverted_index, reconstructed) (saved copy: /media/user/LaCie/medvideo_gate/DS198/openalex_abstract_reconstructed.txt)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor is established to meet D4 (no site/device/operator information in the accessible documentation) and no D7 variable is established (label granularity not stated)."
+  },
+  "ge200_trajectories": "UNKNOWN",
+  "counts": {
+   "collection_mode": "clips from real (clinician-performed) colonoscopy examinations; per-clip mode not documented",
+   "site": "not documented (authors at Shanghai Jiao Tong University)",
+   "device": "not documented",
+   "operator": "not documented",
+   "annotation_type": "204/360 clips contain one polyp, labelled by experienced endoscopic physicians (granularity not stated)"
+  },
+  "registration_required": "unknown",
+  "subjects": {
+   "type": "in vivo human patients (clinical)",
+   "quote": "which contains 360 short videos collected during real colonoscopy examination.",
+   "source": "https://doi.org/10.1109/ISBI52829.2022.9761699 (abstract via OpenAlex W4225005998 abstract_inverted_index, reconstructed) (saved copy: /media/user/LaCie/medvideo_gate/DS198/openalex_abstract_reconstructed.txt)"
+  },
+  "notes": "Only the abstract is accessible (IEEE full text closed; IEEE Xplore page not retrievable by the tools). No public dataset page, repository, licence or size was found. D3 FAIL because the dataset is described as '360 short videos' (clips). ge200 UNKNOWN: 360 clips but the number of source examinations is not stated. Quotes for the abstract are checked against the OpenAlex abstract_inverted_index reconstruction (word order restored from token positions).",
+  "input_record": {
+   "key": "n:topv",
+   "uids": [
+    "D1379"
+   ],
+   "titles": [
+    "Scheme And Dataset for Evaluating Computer-Aided Polyp Detection System in Colonoscopy"
+   ],
+   "urls": [
+    "https://www.semanticscholar.org/paper/0cdf3bbb2b9ad2b3e79fb0f848a71c3b29b2f202"
+   ],
+   "doi": [
+    "10.1109/ISBI52829.2022.9761699"
+   ],
+   "arxiv": [
+    null
+   ]
+  }
+ },
+ {
+  "id": "DS199",
+  "name": "Nerthus (bowel preparation quality video dataset, MMSys 2017)",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://datasets.simula.no/nerthus/ (current Simula datasets page, saved /media/user/LaCie/medvideo_gate/DS199/simula_nerthus.html/.txt; fetched with TLS verification disabled because the server sends an incomplete certificate chain)",
+   "http://web.archive.org/web/20190117140046id_/http://datasets.simula.no/nerthus/ (2019 archived page with the download description; saved wayback_nerthus_2019.html/.txt)",
+   "https://doi.org/10.1145/3083187.3083216 (ACM DL PDF returned HTTP 403; the Simula page reproduces the paper text)"
+  ],
+  "trajectory_unit": "One video clip recorded in the left colon during colonoscopy, labelled with one BBPS class; released as extracted JPEG frames in BBPS-class folders. Whether clips are from distinct procedures is not stated.",
+  "n_trajectories": 21,
+  "n_trajectories_quote": "It contains 21 videos with a total number of 5, 525 frames annotated and verified by medical doctors (experienced endoscopists).",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "The videos are divided into four classes of predefined bowel-preparation qualities.",
+   "source": "https://datasets.simula.no/nerthus/ (saved copy: /media/user/LaCie/medvideo_gate/DS199/simula_nerthus.txt)"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "The dataset consists of videos with resolution 720x576 and is organized by sorting the videos into separate folders named according to their BBPS-bowel preparation quality score.",
+   "source": "https://datasets.simula.no/nerthus/ (saved copy: /media/user/LaCie/medvideo_gate/DS199/simula_nerthus.txt)"
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "The nerthus-dataset-frames.zip (size 250.3 MB) archive contains a total number of 5,525 frames extracted from the 21 videos, 4 classes, from 500 to 2,700 frames per class. | In the Nerthus dataset, however, all videos are recorded in the left part of the bowel.",
+   "source": "http://web.archive.org/web/20190117140046id_/http://datasets.simula.no/nerthus/ (saved copy: /media/user/LaCie/medvideo_gate/DS199/wayback_nerthus_2019.txt) | https://datasets.simula.no/nerthus/ (saved copy: /media/user/LaCie/medvideo_gate/DS199/simula_nerthus.txt)"
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "The data is collected using equipment as shown in figure 3 at Bærum hospital, Vestre Viken Hospital Trust in Norway.",
+   "source": "https://datasets.simula.no/nerthus/ (saved copy: /media/user/LaCie/medvideo_gate/DS199/simula_nerthus.txt)"
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "Download File Description Size Download nerthus.zip The entire HyperKvasir dataset in one zip file. 250.3MB",
+   "source": "https://datasets.simula.no/nerthus/ (saved copy: /media/user/LaCie/medvideo_gate/DS199/simula_nerthus.txt)"
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "Download File Description Size Download nerthus.zip The entire HyperKvasir dataset in one zip file. 250.3MB | The nerthus-dataset-frames.zip (size 250.3 MB)",
+   "source": "https://datasets.simula.no/nerthus/ (saved copy: /media/user/LaCie/medvideo_gate/DS199/simula_nerthus.txt) | http://web.archive.org/web/20190117140046id_/http://datasets.simula.no/nerthus/ (saved copy: /media/user/LaCie/medvideo_gate/DS199/wayback_nerthus_2019.txt)"
+  },
+  "D7": {
+   "verdict": "FAIL",
+   "quote": "The dataset consists of videos with resolution 720x576 and is organized by sorting the videos into separate folders named according to their BBPS-bowel preparation quality score.",
+   "source": "https://datasets.simula.no/nerthus/ (saved copy: /media/user/LaCie/medvideo_gate/DS199/simula_nerthus.txt)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 (single hospital, one equipment setup, operator not recorded) and no D7 variable varies within a video (one BBPS class per video)."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "clinician-performed colonoscopy at Baerum hospital; 21 left-colon clips",
+   "site": "1 (Baerum hospital, Vestre Viken Hospital Trust)",
+   "device": "1 setup (figure 3; ScopeGuide electromagnetic overlay, Olympus, visible in most frames)",
+   "operator": "not recorded",
+   "annotation_type": "video-level BBPS segmental class (0-3) via folder name; 5,525 frames"
+  },
+  "registration_required": "no",
+  "subjects": {
+   "type": "in vivo human patients (clinical)",
+   "quote": "Here, we present Nerthus, a dataset containing videos from inside the gastrointestinal (GI) tract, showing different degrees of bowel cleansing.",
+   "source": "https://datasets.simula.no/nerthus/ (saved copy: /media/user/LaCie/medvideo_gate/DS199/simula_nerthus.txt)"
+  },
+  "notes": "Release is frames extracted from 21 clips (not videos); 21 < 200. D5: neither the current nor the archived 2019 page states a licence or terms of use; the ACM paper's copyright notice covers the paper, not the data. D6: 250.3 MB (the current page's description line reads 'The entire HyperKvasir dataset in one zip file', an apparent copy error on the page, but the file is nerthus.zip). D2: BBPS describes bowel-preparation state, not an outcome of a recorded action.",
+  "input_record": {
+   "key": "n:nerthus",
+   "uids": [
+    "D1380"
+   ],
+   "titles": [
+    "Nerthus: A Bowel Preparation Quality Video Dataset"
+   ],
+   "urls": [
+    "https://www.semanticscholar.org/paper/606f9cc22daf9cd6077e7d2f37d554a967215415"
+   ],
+   "doi": [
+    "10.1145/3083187.3083216"
+   ],
+   "arxiv": [
+    null
+   ]
+  }
+ },
+ {
+  "id": "DS200",
+  "name": "SOFA real-time colonoscopy simulator expert dataset (Myeong & Kim, 'Real-Time Colonoscopy Simulation and Expert Data Acquisition for Inverse Reinforcement Learning', ICCAIS 2025)",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://doi.org/10.1109/ICCAIS67508.2025.11262140 / https://ieeexplore.ieee.org/document/11262140/ (closed access per OpenAlex; full text not read)",
+   "https://api.openalex.org/works/doi:10.1109/ICCAIS67508.2025.11262140 (saved /media/user/LaCie/medvideo_gate/DS200/openalex.json; abstract reconstructed to openalex_abstract_reconstructed.txt)",
+   "https://api.crossref.org/works/10.1109/ICCAIS67508.2025.11262140 (saved crossref.json; no abstract)",
+   "WebSearch: exact title + 'SOFA dataset github' (no dataset release or repository found)"
+  ],
+  "trajectory_unit": "One simulated colonoscopy episode in the SOFA framework with joystick inputs synchronized to rendered endoscopic frames (per abstract); episode count not stated.",
+  "n_trajectories": null,
+  "n_trajectories_quote": "The system records expert manipulation data in real time to construct a dataset for future applications in Inverse Reinforcement Learning (IRL).",
+  "D1": {
+   "verdict": "UNKNOWN",
+   "quote": "Joystick inputs and endoscopic video frames are synchronized at the frame level, allowing for precise alignment of states and actions. | The system records expert manipulation data in real time to construct a dataset for future applications in Inverse Reinforcement Learning (IRL).",
+   "source": "https://doi.org/10.1109/ICCAIS67508.2025.11262140 (abstract via OpenAlex W4416923004 abstract_inverted_index, reconstructed) (saved copy: /media/user/LaCie/medvideo_gate/DS200/openalex_abstract_reconstructed.txt) | https://doi.org/10.1109/ICCAIS67508.2025.11262140 (abstract via OpenAlex W4416923004 abstract_inverted_index, reconstructed) (saved copy: /media/user/LaCie/medvideo_gate/DS200/openalex_abstract_reconstructed.txt)"
+  },
+  "D2": {
+   "verdict": "UNKNOWN",
+   "quote": "This methodology facilitates the generation of reliable training datasets within anatomically realistic and real-time simulated environments, thereby establishing a foundation for learning autonomous control policies.",
+   "source": "https://doi.org/10.1109/ICCAIS67508.2025.11262140 (abstract via OpenAlex W4416923004 abstract_inverted_index, reconstructed) (saved copy: /media/user/LaCie/medvideo_gate/DS200/openalex_abstract_reconstructed.txt)"
+  },
+  "D3": {
+   "verdict": "UNKNOWN",
+   "quote": "Joystick inputs and endoscopic video frames are synchronized at the frame level, allowing for precise alignment of states and actions.",
+   "source": "https://doi.org/10.1109/ICCAIS67508.2025.11262140 (abstract via OpenAlex W4416923004 abstract_inverted_index, reconstructed) (saved copy: /media/user/LaCie/medvideo_gate/DS200/openalex_abstract_reconstructed.txt)"
+  },
+  "D4": {
+   "verdict": "UNKNOWN",
+   "quote": "The system records expert manipulation data in real time to construct a dataset for future applications in Inverse Reinforcement Learning (IRL).",
+   "source": "https://doi.org/10.1109/ICCAIS67508.2025.11262140 (abstract via OpenAlex W4416923004 abstract_inverted_index, reconstructed) (saved copy: /media/user/LaCie/medvideo_gate/DS200/openalex_abstract_reconstructed.txt)"
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "\"is_oa\": false, \"oa_status\": \"closed\"",
+   "source": "https://api.openalex.org/works/doi:10.1109/ICCAIS67508.2025.11262140 (saved copy: /media/user/LaCie/medvideo_gate/DS200/openalex.json)"
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "The system records expert manipulation data in real time to construct a dataset for future applications in Inverse Reinforcement Learning (IRL).",
+   "source": "https://doi.org/10.1109/ICCAIS67508.2025.11262140 (abstract via OpenAlex W4416923004 abstract_inverted_index, reconstructed) (saved copy: /media/user/LaCie/medvideo_gate/DS200/openalex_abstract_reconstructed.txt)"
+  },
+  "D7": {
+   "verdict": "UNKNOWN",
+   "quote": "SuperPoint-based feature extraction is used for real-time preprocessing to ensure robust state estimation, even in environments constrained to an RGB camera and lighting.",
+   "source": "https://doi.org/10.1109/ICCAIS67508.2025.11262140 (abstract via OpenAlex W4416923004 abstract_inverted_index, reconstructed) (saved copy: /media/user/LaCie/medvideo_gate/DS200/openalex_abstract_reconstructed.txt)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor is established to meet D4 and no D7 variable is established (only the abstract is accessible; SuperPoint features are model-derived)."
+  },
+  "ge200_trajectories": "UNKNOWN",
+  "counts": {
+   "collection_mode": "human expert joystick teleoperation of a simulated endoscope (SOFA); number of experts/episodes not stated",
+   "site": "1 lab (Korea Aerospace University); not per episode",
+   "device": "simulated endoscope/colon models (SOFA)",
+   "operator": "'expert' (count not stated)",
+   "annotation_type": "frame-synchronized joystick inputs; SuperPoint features (model-derived)"
+  },
+  "registration_required": "unknown",
+  "subjects": {
+   "type": "simulation",
+   "quote": "This study proposes a real-time simulation system that replicates the physical interactions during colonoscopy using colon and endoscope models implemented in the SOFA framework.",
+   "source": "https://doi.org/10.1109/ICCAIS67508.2025.11262140 (abstract via OpenAlex W4416923004 abstract_inverted_index, reconstructed) (saved copy: /media/user/LaCie/medvideo_gate/DS200/openalex_abstract_reconstructed.txt)"
+  },
+  "notes": "SIMULATION data (SOFA framework), not patient video; Amendment 2 excludes simulation from all arms - recorded here as a fact only. Full text closed; no public dataset release, repository, licence or size found. D1 would hinge on episode counts and collection mode, which the abstract does not give.",
+  "input_record": {
+   "key": "u:D1388",
+   "uids": [
+    "D1388"
+   ],
+   "titles": [
+    "Real-Time Colonoscopy Simulation and Expert Data Acquisition for Inverse Reinforcement Learning"
+   ],
+   "urls": [
+    "https://www.semanticscholar.org/paper/af48d46bdd17f3944b70eaf2b26e27364d9cf1ff"
+   ],
+   "doi": [
+    "10.1109/ICCAIS67508.2025.11262140"
+   ],
+   "arxiv": [
+    null
+   ]
+  }
+ },
+ {
+  "id": "DS201",
+  "name": "Colon-Bench",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://arxiv.org/abs/2603.25645 (v3, 28 Jun 2026; PDF saved /media/user/LaCie/medvideo_gate/DS201/arxiv_2603.25645.pdf; text raw.txt)",
+   "https://abdullahamdi.com/colon-bench (project page, saved project_page.html/.txt)",
+   "https://huggingface.co/api/datasets/ajhamdi/colon-bench (saved hf_api.json: card data, gating form, file list, usedStorage); README raw returned 'Access to dataset ajhamdi/colon-bench is restricted' (gated; not accessed)",
+   "REAL-Colon source documentation reused from the DS099 audit: /media/user/LaCie/medvideo_gate/DS099/dataset_description.md and video_info.csv (copied into DS201/ for citation)"
+  ],
+  "trajectory_unit": "Source trajectory = one REAL-Colon full-procedure colonoscopy video (60 patients); Colon-Bench itself releases lesion windows / short clips (1,597 clips; 528 verified lesion windows) cut from those videos.",
+  "n_trajectories": 60,
+  "n_trajectories_quote": "The benchmark comprises 1,597 unique video clips from 60 patient sequences totalling 955,126 frames (Table 9).",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "Colon-Bench is a multi-task video benchmark for colonoscopy understanding spanning five tasks: binary lesion classification, lesion detection, instance segmentation, and visual question answering at two difficulty levels (prompted and unprompted).",
+   "source": "https://arxiv.org/abs/2603.25645 (v3) (saved copy: /media/user/LaCie/medvideo_gate/DS201/raw.txt)"
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "Motivated by Gemini-3’s recent medical-domain performance [4], we used Gemini-2.5-flash-lite for proposals, Gemini-3-pro for video verification, and Gemini-3-flash for bounding boxes, balancing performance and cost (Table 3).",
+   "source": "https://arxiv.org/abs/2603.25645 (v3) (saved copy: /media/user/LaCie/medvideo_gate/DS201/raw.txt)"
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "The benchmark comprises 1,597 unique video clips from 60 patient sequences totalling 955,126 frames (Table 9). | License. Video copyrights remain with their owners [3].",
+   "source": "https://arxiv.org/abs/2603.25645 (v3) (saved copy: /media/user/LaCie/medvideo_gate/DS201/raw.txt) | https://arxiv.org/abs/2603.25645 (v3) (saved copy: /media/user/LaCie/medvideo_gate/DS201/raw.txt)"
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "- 60 recordings, 15 for each of the 4 centers | - unique_video_name: name of the video in the format SSS-VVV (site-video) | \"unique_video_name\",\"age\",\"sex\",\"endoscope_brand\",\"fps\",\"num_frames\",\"num_lesions\",\"bbps\"",
+   "source": "https://ndownloader.figshare.com/files/39495742 (REAL-Colon dataset_description.md, copy of DS099 saved file) (saved copy: /media/user/LaCie/medvideo_gate/DS201/REALcolon_dataset_description_copy_from_DS099.md) | https://ndownloader.figshare.com/files/39495742 (REAL-Colon dataset_description.md, copy of DS099 saved file) (saved copy: /media/user/LaCie/medvideo_gate/DS201/REALcolon_dataset_description_copy_from_DS099.md) | REAL-Colon video_info.csv (figshare 22202866; copy of DS099 saved file) (saved copy: /media/user/LaCie/medvideo_gate/DS201/REALcolon_video_info_copy_from_DS099.csv)"
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "License. Video copyrights remain with their owners [3]. The Colon-Bench dataset is licensed under Creative Commons Attribution (CC BY) | ColonBench is released under the CC-BY-4.0 license. By accessing ColonBench you additionally agree to the following responsible-use terms:",
+   "source": "https://arxiv.org/abs/2603.25645 (v3) (saved copy: /media/user/LaCie/medvideo_gate/DS201/raw.txt) | https://huggingface.co/api/datasets/ajhamdi/colon-bench (saved copy: /media/user/LaCie/medvideo_gate/DS201/hf_api.json)"
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "\"usedStorage\":89729936233",
+   "source": "https://huggingface.co/api/datasets/ajhamdi/colon-bench (saved copy: /media/user/LaCie/medvideo_gate/DS201/hf_api.json)"
+  },
+  "D7": {
+   "verdict": "UNKNOWN",
+   "quote": "Motivated by Gemini-3’s recent medical-domain performance [4], we used Gemini-2.5-flash-lite for proposals, Gemini-3-pro for video verification, and Gemini-3-flash for bounding boxes, balancing performance and cost (Table 3). | Human review. Human review served as the final quality gate. | A reviewing physician rejected only 69 of the 597 presented windows (11.6%), demonstrating strong agreement with the AI filters.",
+   "source": "https://arxiv.org/abs/2603.25645 (v3) (saved copy: /media/user/LaCie/medvideo_gate/DS201/raw.txt) | https://arxiv.org/abs/2603.25645 (v3) (saved copy: /media/user/LaCie/medvideo_gate/DS201/raw.txt) | https://arxiv.org/abs/2603.25645 (v3) (saved copy: /media/user/LaCie/medvideo_gate/DS201/raw.txt)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4: the 60 source REAL-Colon videos are 15 per centre (no level >=20) and device is Olympus 53 / Fujifilm 7 (only one level >=20); operator not recorded. D7 not established (labels are AI-generated, human-reviewed)."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "clinician-performed (REAL-Colon source procedures, 60 patients); annotations by an agentic AI pipeline with physician accept/reject review",
+   "site": "source REAL-Colon: 4 clinical studies x 15 videos (SSS prefix); per-clip source sequence id presumably in gated json/benchmark_raw.json (not inspected)",
+   "device": "source REAL-Colon: Olympus 53 / Fujifilm 7 videos (video_info.csv)",
+   "operator": "not recorded",
+   "annotation_type": "AI-generated (Gemini proposals/verification/boxes, EdgeTAM tracking) lesion windows: 528 verified windows, 300,132 boxes, 213,067 masks, ~133k words of text; physician rejected 69/597 windows; 14 lesion categories by keyword matching over text; classification (790 clips), detection (272), segmentation (264), VQA splits"
+  },
+  "registration_required": "yes",
+  "subjects": {
+   "type": "in vivo human patients (clinical)",
+   "quote": "Colon-Bench is a multi-task video benchmark for colonoscopy understanding comprising 1,597 clips from 60 patients (955,126 frames)",
+   "source": "https://arxiv.org/abs/2603.25645 (v3) (saved copy: /media/user/LaCie/medvideo_gate/DS201/raw.txt)"
+  },
+  "notes": "Derived benchmark on REAL-Colon (DS099): adds no new trajectories; full videos are not redistributed ('Video copyrights remain with their owners'); released videos/ folder holds ~1,626 clip files. Registration: Hugging Face gated ('gated':'auto') with a form (Full Name, Email, Affiliation, Country, Purpose of use, agreement checkbox) - not submitted. D5: CC BY / CC-BY-4.0 plus responsible-use terms (no re-identification, security, attribution, cite); these do not bar release of derived features. D6: Hugging Face usedStorage 89,729,936,233 B (~89.7 GB; repository storage incl. history). D7 UNKNOWN: spatial/temporal lesion labels are model-generated with window-level physician acceptance; whether that counts as human annotation is for the lead (REAL-Colon's own human boxes belong to DS099). D2 FAIL: lesion labels are not outcomes and are model-derived.",
+  "input_record": {
+   "key": "n:colon-bench",
+   "uids": [
+    "D1411"
+   ],
+   "titles": [
+    "Colon-Bench: An Agentic Workflow for Scalable Dense Lesion Annotation in Full-Procedure Colonoscopy Videos"
+   ],
+   "urls": [
+    "https://www.semanticscholar.org/paper/2d5756b3d9ccd96a8b9bec737252115d54623a84"
+   ],
+   "doi": [
+    "10.48550/arXiv.2603.25645"
+   ],
+   "arxiv": [
+    "2603.25645"
+   ]
+  }
+ },
+ {
+  "id": "DS202",
+  "name": "Northwestern Medicine cloud-stored colonoscopy video library linked to EHR (Keswani et al., Endosc Int Open 2021)",
+  "category": "DATASET-C-COL",
+  "sources_consulted": [
+   "https://doi.org/10.1055/a-1326-1289 (Endosc Int Open 2021;9:E233-E238; full text via Europe PMC PMC7857968, saved /media/user/LaCie/medvideo_gate/DS202/PMC7857968.xml/.txt)"
+  ],
+  "trajectory_unit": "One full-length colonoscopy procedure video (automatically recorded to a commercial cloud store) matched to one EHR exam record.",
+  "n_trajectories": 21170,
+  "n_trajectories_quote": "In total, 21,170 procedure recordings were identified which matched with colonoscopies occurring in the same procedure room at the same procedure time (74 % of all colonoscopies).",
+  "D1": {
+   "verdict": "PASS",
+   "quote": "Capturing an image during endoscopy results in a unique “picture in picture” event – when the endoscopy image that is captured appears as a small inset on the larger video frame. Because our video storage solution already recognizes these events, we developed a process to automatically extract frames surrounding these endoscopist-identified points of interest and export these frames to standalone image files. | Among the 21,170 matched colonoscopy videos, 179,660 total picture-in-picture events occurred with a mean of 8.5 (SD 8.8) “highlights” per video. | All endoscopic procedures were performed at one of two locations (16 total procedure rooms) by 50 endoscopists over the study period.",
+   "source": "https://doi.org/10.1055/a-1326-1289 (full text via Europe PMC PMC7857968) (saved copy: /media/user/LaCie/medvideo_gate/DS202/PMC7857968.txt) | https://doi.org/10.1055/a-1326-1289 (full text via Europe PMC PMC7857968) (saved copy: /media/user/LaCie/medvideo_gate/DS202/PMC7857968.txt) | https://doi.org/10.1055/a-1326-1289 (full text via Europe PMC PMC7857968) (saved copy: /media/user/LaCie/medvideo_gate/DS202/PMC7857968.txt)"
+  },
+  "D2": {
+   "verdict": "UNKNOWN",
+   "quote": "Thus, this linkage can result in a complete “endoscopy health record” which combines the entire endoscopic procedure with patient characteristics (including demographics and disease status) with immediate and long-term outcomes | Further work is ongoing to utilize this large video library to explore the relationship between colonoscopy findings and patient outcomes.",
+   "source": "https://doi.org/10.1055/a-1326-1289 (full text via Europe PMC PMC7857968) (saved copy: /media/user/LaCie/medvideo_gate/DS202/PMC7857968.txt) | https://doi.org/10.1055/a-1326-1289 (full text via Europe PMC PMC7857968) (saved copy: /media/user/LaCie/medvideo_gate/DS202/PMC7857968.txt)"
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "Storage of full-length endoscopic procedures is becoming increasingly popular. | In total, these 21,170 colonoscopy videos represent 489,721 minutes of colonoscopy video performed by 50 unique endoscopists (median 214 colonoscopies per endoscopist; IQR 51–758).",
+   "source": "https://doi.org/10.1055/a-1326-1289 (full text via Europe PMC PMC7857968) (saved copy: /media/user/LaCie/medvideo_gate/DS202/PMC7857968.txt) | https://doi.org/10.1055/a-1326-1289 (full text via Europe PMC PMC7857968) (saved copy: /media/user/LaCie/medvideo_gate/DS202/PMC7857968.txt)"
+  },
+  "D4": {
+   "verdict": "UNKNOWN",
+   "quote": "In total, these 21,170 colonoscopy videos represent 489,721 minutes of colonoscopy video performed by 50 unique endoscopists (median 214 colonoscopies per endoscopist; IQR 51–758). | We subsequently determined if the room corresponding with the procedure matches the room identified in the cloud-storage video metadata to confirm a match.",
+   "source": "https://doi.org/10.1055/a-1326-1289 (full text via Europe PMC PMC7857968) (saved copy: /media/user/LaCie/medvideo_gate/DS202/PMC7857968.txt) | https://doi.org/10.1055/a-1326-1289 (full text via Europe PMC PMC7857968) (saved copy: /media/user/LaCie/medvideo_gate/DS202/PMC7857968.txt)"
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "This study was conducted at a single academic medical center (Chicago, Illinois, United States). | All videos were stored via a commercial gastrointestinal endoscopy cloud storage company (Virgo Surgical Video Solutions, San Francisco, California, United States).",
+   "source": "https://doi.org/10.1055/a-1326-1289 (full text via Europe PMC PMC7857968) (saved copy: /media/user/LaCie/medvideo_gate/DS202/PMC7857968.txt) | https://doi.org/10.1055/a-1326-1289 (full text via Europe PMC PMC7857968) (saved copy: /media/user/LaCie/medvideo_gate/DS202/PMC7857968.txt)"
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "identifying 21,170 colonoscopy videos representing 8162 hours of colonoscopy video from 50 different colonoscopists",
+   "source": "https://doi.org/10.1055/a-1326-1289 (full text via Europe PMC PMC7857968) (saved copy: /media/user/LaCie/medvideo_gate/DS202/PMC7857968.txt)"
+  },
+  "D7": {
+   "verdict": "UNKNOWN",
+   "quote": "To facilitate this, our team developed an automated process to extract frames surrounding these images of interest, identified via the “picture-in-picture” events, which can then be quickly labeled by the research team.",
+   "source": "https://doi.org/10.1055/a-1326-1289 (full text via Europe PMC PMC7857968) (saved copy: /media/user/LaCie/medvideo_gate/DS202/PMC7857968.txt)"
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor is established to meet D4: operator (50 endoscopists, median 214 videos each) and room (per-video cloud metadata) are implied per video, but no per-trajectory table is public and no per-level counts are given; device not reported. No D7 content variable is documented."
+  },
+  "ge200_trajectories": "PASS",
+  "counts": {
+   "collection_mode": "clinician-performed routine colonoscopies (50 endoscopists), automatically recorded to cloud; all human-performed",
+   "site": "1 academic medical centre, 2 locations, 16 procedure rooms (room in per-video cloud metadata; per-location counts not reported)",
+   "device": "not reported",
+   "operator": "50 endoscopists; median 214 (IQR 51-758) colonoscopy videos per endoscopist; per-video linkage via EHR/report system, not public",
+   "annotation_type": "EHR/report-linked patient data (demographics, indication: screening 10,018, surveillance 6,112, diagnostic 3,451, IBD 1,998); 179,660 picture-in-picture image-capture events (mean 8.5/video) with extracted surrounding frames; no content labels reported"
+  },
+  "registration_required": "unknown",
+  "subjects": {
+   "type": "in vivo human patients (clinical)",
+   "quote": "Among 28,611 total colonoscopies performed over the study period, 21,170 colonoscopy videos in 20,420 unique patients (54.2 % male, median age 58) were matched to EHR data.",
+   "source": "https://doi.org/10.1055/a-1326-1289 (full text via Europe PMC PMC7857968) (saved copy: /media/user/LaCie/medvideo_gate/DS202/PMC7857968.txt)"
+  },
+  "notes": "Institutional (Northwestern Medicine) video library described in a methods paper; the article has no data-availability statement and documents no public release, licence or access route (article licence CC BY-NC-ND covers the article only). D1 PASS rests on endoscopist image-capture ('picture-in-picture') events: a human operator action, time-stamped by the vendor's event recognition, recorded per video for 21,170 videos, with all procedures performed by endoscopists; flag for the lead whether an image-capture event qualifies as an action variable. D2 UNKNOWN: EHR outcomes are named as a possibility of the linkage, not as released variables. D4 UNKNOWN: per-video endoscopist/room assignment exists in the institution's linked records by construction but no per-trajectory file can be inspected. D6 UNKNOWN: 489,721 min (8,162 h) of video, no byte size given. Not RA/SS-usable without institutional access.",
+  "input_record": {
+   "key": "u:D1435",
+   "uids": [
+    "D1435"
+   ],
+   "titles": [
+    "Amalgamation of cloud-based colonoscopy videos with patient-level metadata to facilitate large-scale machine learning"
+   ],
+   "urls": [
+    "https://www.semanticscholar.org/paper/08e7f83b199e3d958c958ca5d1108f28dca0ea74"
+   ],
+   "doi": [
+    "10.1055/a-1326-1289"
+   ],
+   "arxiv": [
+    null
+   ]
+  }
+ }
+]

@@ -1,0 +1,546 @@
+[
+ {
+  "uid": "S0000",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal representation learning against spurious visual correlations in VR video streaming; no medical causal effect estimation."
+ },
+ {
+  "uid": "S0001",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "LLM-based causality extraction from medical video subtitles for QA; not causal effect estimation with learned representations."
+ },
+ {
+  "uid": "S0002",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Foundation-model framework with causal reasoning among imaging biomarkers; no treatment-effect estimation using representations as adjustment covariates described."
+ },
+ {
+  "uid": "S0003",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Survey arguing world models need causal/counterfactual structure using medical decision-making as stress test; no representation-based effect estimation or benchmark."
+ },
+ {
+  "uid": "S0004",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical video case report; unrelated to learned representations or causal estimation."
+ },
+ {
+  "uid": "S0005",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical VR-video intervention study; no learned representations used in causal estimation."
+ },
+ {
+  "uid": "S0006",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Foundation model for CATE estimation on tabular/synthetic data; generic causal ML without image/video/text representations as adjustment."
+ },
+ {
+  "uid": "S0007",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Review of biomedical video synthesis; no causal estimation."
+ },
+ {
+  "uid": "S0008",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L2"
+  ],
+  "reason": "Video MAE latent cardiac-MRI phenotypes encode imaging-centre/field-of-view information that confounds downstream genetic association and is addressed by covariate residualisation vs adjustment; acquisition-in-representation confounding cannot be ruled out as L2."
+ },
+ {
+  "uid": "S0009",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; title indicates medical video watermarking, unrelated."
+ },
+ {
+  "uid": "S0010",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; title indicates video foundation model for 3D segmentation, no causal component."
+ },
+ {
+  "uid": "S0011",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Generative CFD-to-grayscale ultrasound video translation addressing confounding sub-modalities in datasets; no causal effect estimation."
+ },
+ {
+  "uid": "S0012",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Medical video generation model; no causal estimation."
+ },
+ {
+  "uid": "S0013",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-score survey analysis with tabular covariates; no learned representations."
+ },
+ {
+  "uid": "S0014",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; title indicates GAN video super-resolution, unrelated."
+ },
+ {
+  "uid": "S0018",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Mechanistic interpretability of video-language models; not causal effect estimation."
+ },
+ {
+  "uid": "S0020",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Action-conditioned generative surgical video world model/simulator; no causal effect estimation or adjustment using representations."
+ },
+ {
+  "uid": "S0021",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Surgical video case report; unrelated."
+ },
+ {
+  "uid": "S0022",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Scene-graph representation for surgical workflow recognition; no causal estimation."
+ },
+ {
+  "uid": "S0023",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Surgical video-language representation for phase recognition; no causal estimation."
+ },
+ {
+  "uid": "S0024",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Surgical video foundation model pretraining; no causal estimation."
+ },
+ {
+  "uid": "S0025",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Generative retrieval for surgical video understanding; no causal estimation."
+ },
+ {
+  "uid": "S0026",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-score clinical comparison with tabular covariates; no learned representations."
+ },
+ {
+  "uid": "S0027",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Counterfactual video editing to reduce MLLM hallucination; not causal effect estimation."
+ },
+ {
+  "uid": "S0029",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal embedding for multimedia recommendation (interest vs conformity); causal modelling with multimodal embeddings but not treatment-effect adjustment with representations in medical data."
+ },
+ {
+  "uid": "S0030",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal foundation model as what-if simulator on semi-synthetic manufacturing data; generic causal ML, no image/video/text representations."
+ },
+ {
+  "uid": "S0031",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Statistical review of causal representation learning and identifiability; generic theory."
+ },
+ {
+  "uid": "S0032",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Latent-representation CATE estimator on covariates; generic causal representation learning without image/video/text representations."
+ },
+ {
+  "uid": "S0033",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; nursing case report, unrelated."
+ },
+ {
+  "uid": "S0034",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "No abstract; generative approach for treatment effect estimation under collider bias (generic causal ML), no indication of image/video/text representations as covariates."
+ },
+ {
+  "uid": "S0035",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "No abstract; deconfounding representation learning in recommendation; generic latent-confounder method, not medical imaging representations."
+ },
+ {
+  "uid": "S0036",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; capsule endoscopy abnormality detection via embedding learning; no causal component."
+ },
+ {
+  "uid": "S0037",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "GI endoscopy foundation model for downstream tasks; no causal estimation."
+ },
+ {
+  "uid": "S0038",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "GAN-based capsule endoscopy visualization quality assessment; no causal estimation."
+ },
+ {
+  "uid": "S0039",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Endoscopy video foundation model; no causal estimation."
+ },
+ {
+  "uid": "S0040",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-score clinical comparison with tabular covariates; no learned representations."
+ },
+ {
+  "uid": "S0041",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "MNAR propensity modelling in recommender systems; not related to learned image/video representations in causal estimation."
+ },
+ {
+  "uid": "S0042",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Counterfactual ablation of document embeddings for history of science; no causal effect of an action/treatment."
+ },
+ {
+  "uid": "S0043",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Counterfactual generative modelling of high-dimensional outcomes (e.g. facial images) under treatment; representations not used as adjustment covariates and no medical image benchmark indicated."
+ },
+ {
+  "uid": "S0044",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical comparison of colorectal surgery; unrelated."
+ },
+ {
+  "uid": "S0045",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical NER on colonoscopy reports with word embeddings; no causal estimation."
+ },
+ {
+  "uid": "S0046",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Colonoscopy video foundation model for polyp analysis; no causal estimation."
+ },
+ {
+  "uid": "S0047",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; ChatGPT-4 bowel preparation scoring concordance, no causal estimation."
+ },
+ {
+  "uid": "S0048",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-score clinical comparison of CADe use with tabular covariates; no learned representations as adjustment."
+ },
+ {
+  "uid": "S0050",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "SAM2 fine-tuning for ultrasound video segmentation; no causal estimation."
+ },
+ {
+  "uid": "S0051",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Endoscopic technique video abstract; unrelated."
+ },
+ {
+  "uid": "S0052",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Self-supervised ultrasound video/audio representation learning; no causal estimation."
+ },
+ {
+  "uid": "S0053",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Bimodal ultrasound video diagnosis network; no causal estimation."
+ },
+ {
+  "uid": "S0054",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Ultrasound video super-resolution; unrelated."
+ },
+ {
+  "uid": "S0055",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causality-aware ultrasound video pipeline disentangling scanner/acquisition artifacts for fibrosis classification; diagnostic, no causal effect estimation of an action/treatment."
+ },
+ {
+  "uid": "S0056",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Disentangled representation network for ITE on tabular covariates; generic causal ML."
+ },
+ {
+  "uid": "S0057",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "LSTM forecasting with CATE-based causal regularisation; generic causal ML, no learned image/video/text representations."
+ },
+ {
+  "uid": "S0058",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "No abstract; title indicates semantic (text) embeddings combined with PSM-DID for a causal effect of digital transformation, so text representations as matching/adjustment covariates cannot be ruled out."
+ },
+ {
+  "uid": "S0059",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Sim-to-real SAM adaptation for guidewire segmentation; no causal estimation."
+ },
+ {
+  "uid": "S0060",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Generative 2D-to-3D vascular reconstruction pipeline; no causal estimation."
+ },
+ {
+  "uid": "S0061",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-matched clinical diagnostic comparison with tabular covariates; no learned representations."
+ },
+ {
+  "uid": "S0062",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Counterfactual representation learning to remove sensitive-attribute bias in recommendation; debiased representations without causal effect estimation."
+ },
+ {
+  "uid": "S0063",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "No abstract; invariant causal representation learning for domain-generalizable medical image segmentation; no causal effect estimation indicated."
+ },
+ {
+  "uid": "S0064",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "No abstract; causal-constraint embedding network for medical image segmentation; no causal effect estimation indicated."
+ },
+ {
+  "uid": "S0065",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; patient decision-aid pilot study, unrelated."
+ },
+ {
+  "uid": "S0066",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Retrospective clinical comparison; no learned representations."
+ },
+ {
+  "uid": "S0067",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Radiology foundation model for radiomics feature extraction; no causal estimation."
+ },
+ {
+  "uid": "S0068",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "One-shot medical video object segmentation; no causal estimation."
+ },
+ {
+  "uid": "S0069",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Generative echocardiogram synthesis for privacy-preserving data; no causal estimation."
+ },
+ {
+  "uid": "S0071",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; propensity-matched surgical comparison, unrelated to learned representations."
+ },
+ {
+  "uid": "S0073",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Position paper on digital twins and geometric scene understanding in surgical data science; no causal estimation."
+ },
+ {
+  "uid": "S0074",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Video tokenizer for generation; temporal causality in the autoregressive sense only."
+ },
+ {
+  "uid": "S0075",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Surgical case series; unrelated."
+ },
+ {
+  "uid": "S0077",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Surgical video-language pretraining; no causal estimation."
+ },
+ {
+  "uid": "S0078",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Surgical video foundation model; no causal estimation."
+ },
+ {
+  "uid": "S0079",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; expert assessment of generative surgical video plausibility; no causal estimation indicated."
+ },
+ {
+  "uid": "S0080",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Correction notice for a propensity-matched surgical study; unrelated."
+ },
+ {
+  "uid": "S0081",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Privacy attacks on causal recommendation embeddings; not causal effect estimation."
+ },
+ {
+  "uid": "S0082",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Tabular causal foundation model for structure and outcome prediction; generic causal ML."
+ },
+ {
+  "uid": "S0083",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Deconfounding causal generative model with proxy variables on tabular data; generic identification/estimation, no image/video/text representations."
+ },
+ {
+  "uid": "S0084",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Workforce commentary; unrelated."
+ },
+ {
+  "uid": "S0085",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Erratum to a tabular CATE foundation-model paper; generic causal ML."
+ },
+ {
+  "uid": "S0086",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Variational disentangled generative model for ITE on covariates; generic causal ML."
+ },
+ {
+  "uid": "S0087",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Retrospective clinical confounder-adjusted association study; no learned representations."
+ },
+ {
+  "uid": "S0088",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; ChatGPT-4 for endoscopy image analysis; no causal estimation indicated."
+ },
+ {
+  "uid": "S0089",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-score clinical comparison; no learned representations."
+ },
+ {
+  "uid": "S0090",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Counterfactual debiased co-embedding for drug-drug interaction prediction; not causal effect estimation."
+ },
+ {
+  "uid": "S0091",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal-intervention counterfactual generative network for zero-shot classification; no causal effect estimation."
+ },
+ {
+  "uid": "S0092",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "No abstract; disentangled representation learning for causal effect estimation, generic causal ML with no indication of image/video/text representations."
+ },
+ {
+  "uid": "S0093",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; instrumental-variable epidemiology of colonoscopy screening; no learned representations."
+ },
+ {
+  "uid": "S0094",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Colonoscopy geometry estimation via foundation-model adaptation; no causal estimation."
+ },
+ {
+  "uid": "S0095",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Controlled colonoscopy image synthesis; no causal estimation."
+ },
+ {
+  "uid": "S0096",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Propensity-score clinical comparison of AI-assisted colonoscopy; tabular adjustment only."
+ },
+ {
+  "uid": "S0097",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Event-level causal representation with back/front-door de-biasing for video classification; no causal effect estimation."
+ },
+ {
+  "uid": "S0098",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Randomized clinical analgesia trial; unrelated."
+ }
+]

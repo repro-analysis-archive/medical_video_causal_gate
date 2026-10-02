@@ -204,3 +204,102 @@ remains UNRESOLVED.
     * **N0389:** cine CMR view–disease disentanglement for **classification**.
 * **Conclusion.** No L2 DIRECT or PARTIAL among these records. They are the RELATED evidence for L2 and are cited as
   such in `LIT_GATE_RESULT.md`.
+
+## S5. Semantic Scholar and proceedings arms (keyed run, 2026-10-02; `0ac6aee`)
+
+* **Run.**
+  * 440 of 440 sub-queries returned (S2: 220, PROC: 220); 0 failed.
+  * There were 262 HTTP 429 responses, each resolved within the 2–32 s backoff.
+  * 800 hits deduplicate to 748 unique records (S0000–S0747).
+  * 49 duplicate already-screened native or citation records and inherit those decisions.
+  * 699 were screened under `RUBRIC.md`: 37 FULLTEXT, the rest NONE or RELATED (`screening/s2_batch_*_decisions.json`).
+* **Lead decisions on the 37 FULLTEXT records.** As in S1, a full text was read wherever DIRECT or PARTIAL could not
+  be ruled out from the abstract.
+
+### S5.1 Full text read
+
+| uid | work | L1 | L2 | L3 | L4 | supporting passage (location) |
+|---|---|---|---|---|---|---|
+| S0414 | Cadei, Demirel, De Bartolomeis et al. (2025). Prediction-Powered Causal Inferences. NeurIPS; arXiv:2502.06343 | **PARTIAL** (non-medical video; representations used as the **outcome model**, not as adjustment covariates) | RELATED, **borderline**: the closest L2 mechanism in video | RELATED | NONE | L1: "we leveraged such annotated videos to fine-tune a pretrained model generalizing the predictions to ISTAnt and then estimating the ATE by AIPW on such prediction-powered sample" (§5, p. 8); encoders: ViT, CLIP-ViT, DINOv2 (Fig. 2). L2: recording-setup and background information is a shortcut that biases the ATE and threatens positivity: "the model can leverage such spurious shortcut in subsequent batches, relying on background information like the pen markings on the floor to identify the plate. This invalidates any downstream prediction-powered analysis" (Example 1, §2.1, p. 5); "up to violating positivity, which may bias any training and invalidate any causal downstream prediction-powered estimation" (p. 4). The two filming setups "mainly differ in lighting conditions, treatments, experimental nests (wall height) and color marking" (Fig. 3, p. 8). Graded RELATED because two L2 elements differ: the representations are an outcome model, not adjustment covariates, and the information acts as a **shortcut confounder of the outcome model, not an instrument**. L3: ISTAnt is a real (ant) video experiment with human-annotated ground truth; not medical, no instrument |
+| S0209 | Israel, Grover & Van den Broeck (2023). High Dimensional Causal Inference with Variational Backdoor Adjustment. arXiv:2310.06100 | **PARTIAL** (images) | NONE | RELATED | NONE | L1: "we take a generative modeling approach to backdoor adjustment for high dimensional treatments and confounders" (Abstract, p. 1). In the X-ray experiment the confounder is the image: "a patient receives an initial X-ray scan … (Z)", using chest X-rays from MedMNIST (§4.3, p. 8). L3: semi-synthetic on real chest X-rays (static images); no acquisition instrument |
+| S0446 | Rahman & Kocaoglu (2024). Conditional Generative Models are Sufficient to Sample from Any Causal Effect Estimand. NeurIPS; arXiv:2402.07419 | **PARTIAL** (images / text) | RELATED | RELATED | NONE | L1: "we show how to sample from any identifiable interventional distribution given an arbitrary causal graph through a sequence of push-forward computations of conditional generative models, such as diffusion models" (Abstract), including backdoor adjustment with image and text variables and "foundation models for chest X-ray generation" (p. 9). L2: hospital as a **confounder** of report style and pneumonia ("patients with severe pneumonia are transferred to a different hospital and receives critical reports"); not an instrument; static images. L3: semi-synthetic Colored-MNIST, not medical video |
+| S0460 | Ma et al. (2025). LLM-Driven Treatment Effect Estimation Under Inference Time Text Confounding. NeurIPS; arXiv:2507.02843 | **PARTIAL** (text) | NONE | RELATED | NONE | L1: "we map the text T̃ to the text embedding ϕ(T̃) using a pretrained LLM. We then train a regression model … to predict the pseudo-outcome Ỹ from text embeddings" (§4.3, p. 7); pretrained BERT embeddings (§4.4, p. 8). L3: semi-synthetic narratives generated from structured data |
+| S0008 | Field-of-view confounding shapes genetic discovery from self-supervised cardiac-imaging phenotypes (2026). medRxiv 10.64898/2026.09.01.26361959 | RELATED | RELATED, **borderline**: the closest L2 evidence in **medical video** | NONE | RELATED | "We trained a video masked-autoencoder on 69,932 UK Biobank cardiac cine-MRI studies and performed genome-wide association analysis of its latent representation … the representation encoded substantial field-of-view information: body size, stature and imaging centre (linear-probe R2 = 0.55 for site); standard genomic-control and LD-score diagnostics did not identify this source of phenotype-level confounding" (Abstract, p. 1). "A representation that encodes acquisition site more strongly than it predicts the heart's pump function …" (p. 3). L1 RELATED: the representations are GWAS **phenotypes (outcomes)**, not adjustment covariates for an action's effect. L2 RELATED: site information acts as a **phenotype-level confounder** of genetic association, not an instrument in effect estimation. L4 RELATED: representation-level removal of acquisition information (crop + residualisation), but static association, not sequential causal estimation |
+| S0474 | Brahma, Henao, Carin et al. (2025). Coupling Generative Modeling and an Autoencoder with the Causal Bridge. NeurIPS; arXiv:2509.25599 | RELATED | NONE | NONE | NONE | Proximal causal learning: a task-specific autoencoder of the latent confounder from proxies. In the dSprite experiment the image is the **treatment** (§7.1, p. 7). Not generative / foundation representations of unstructured data used as adjustment covariates |
+| S0443 | Rahman & Kocaoglu (2025). FeDCM: Federated Learning of Deep Causal Generative Models. UAI, PMLR 286 | RELATED | RELATED | NONE | NONE | Experiments are synthetic discrete graphs and IHDP (tabular): "We illustrate performance of FeDCM algorithm on synthetic and real-world IHDP data" (Experiments, p. 8). X-ray images appear only in the motivating example (Fig. 1). Clients are hospitals, but this is federated training, with no acquisition information in representations |
+
+### S5.2 Settled at RELATED / NONE from the abstract (gate §6)
+
+| uids | basis |
+|---|---|
+| S0138 CellFluxV2; S0150 CAPRI-CT; S0491 multi-site PD classification; S0588 Data AUDIT; S0459 FairTTE; S0305 federated multimodal oncology | **prediction or generation**, not effect estimation with representations as adjustment covariates. S0138: batch effects in a generative cell model. S0150: acquisition parameters as **treatments** of image quality. S0491: harmonization for classification. S0588: detectability of artifacts in task models, on static images. S0459: fairness of prognosis. S0305: a framework proposal |
+| S0205 = S0232 (Feder et al. 2023, arXiv:2310.12803) | counterfactual augmentation for robust text **classifiers** (caregiver as a spurious attribute); prediction |
+| S0239, S0412, S0444 SITE, S0472 NICE, S0506 Causal-BALD, S0574 DRCFS, S0729 DeepMatch, S0670 RMSN, S0411 CInA | representation learning on tabular / low-dimensional covariates, or task-specific CNNs trained from scratch on images (S0506, S0729). CInA (arXiv:2310.00809 abstract) is a "causally-aware foundation model" over tabular datasets. S0412 PMLR abstract: shadow-variable representations of observed variables |
+| S0424 (Veitch et al. 2019), S0473 ProEmb | **network** embeddings as proxies; not image, video or text |
+| S0504 DFPV | deep features trained from scratch for proxy variables (dSprite) |
+| S0541 | Bayesian deep learning on MS MRI from **randomized** trials (no confounding adjustment); a model trained from scratch |
+| S0299 DeepNetTMLE; S0335 CT-MTA; S0361 LDPE | treatment-invariant / debiased representations over time (networks, advertising, recommendation); no acquisition information. S0361 debiases recommendation, not an effect estimate |
+| S0317 GST-UNet | spatiotemporal grid data with a U-Net trained from scratch; not medical, not generative / foundation |
+| S0321 DeepGRAI | AI-derived volumes are **outcomes**; propensity matching on age, disability and follow-up; scanners unharmonized but not analysed as an instrument |
+
+### S5.3 UNRESOLVED (full text not obtainable; abstract cannot settle)
+
+| uid | work | what is open | reason |
+|---|---|---|---|
+| S0058 | A Semantic Embedding and Dynamic PSM-DID Framework … Green Patent Quality (ACM 2025, doi 10.1145/3800227.3800305) | L1 (text embeddings as matching covariates; at most PARTIAL) | no abstract; ACM PDF returns a bot challenge; OpenAlex: closed |
+| S0340 | TIDAL: A Temporal Causal Diffusion Framework … Knee Osteoarthritis Treatment Outcomes (KDD 2026, doi 10.1145/3770855.3819025) | L1 (whether trajectory-encoding image representations act as adjustment covariates; at most PARTIAL, X-ray sequences). L2–L4 RELATED / NONE from the abstract | ACM PDF bot challenge (OpenAlex lists it as gold OA) |
+| S0373 | LLMCE: Adapting LLMs with Adversarial Debiasing for Counterfactual Estimation over Time (CIKM 2025, doi 10.1145/3746252.3760914) | L1 (frozen-LLM representations of time series for counterfactual estimation; at most PARTIAL). L4 RELATED from the abstract | ACM PDF bot challenge; OpenAlex: closed |
+| S0242 | Synthetic Ground Truth Counterfactuals for Comprehensive Evaluation of Causal Generative Models in Medical Imaging (MICCAI 2025, doi 10.1007/978-3-032-04984-1_52) | L3 | no abstract; Springer bot challenge; closed |
+
+## S6. Citation chasing for the new PARTIAL hits (S0414, S0209, S0446, S0460): one level, gate §6
+
+* **Collection** (`citation_chase_s2.py`).
+  * OpenAlex holds no reference lists for these four works, so backward references were parsed from the PDFs:
+    * S0414: 56;
+    * S0209: 31;
+    * S0446: 64;
+    * S0460: 73.
+  * Forward citations come from the OpenAlex `cites:` filter: 3 in total.
+  * That gives 227 records (C0298–C0524). Three are parsing debris: C0353, C0384, C0448.
+* **Screening:** 88 NONE, 109 RELATED, 30 FULLTEXT (`screening/citation_s2_batch_decisions.json`). Seven FULLTEXT
+  records are works already graded, and they keep their grades:
+  * C0304: Jerzak 2023b;
+  * C0458: Daoud 2022;
+  * C0468: Guo 2025;
+  * C0495: Mozer 2020;
+  * C0499: Pryzant 2021;
+  * C0500: Roberts 2020;
+  * C0511: Veitch 2020.
+
+  C0463 (Egami 2022) and C0481 (Keith 2020) are also already graded, RELATED, in S3.2.
+
+### S6.1 Full text read
+
+| uid | work | L1 | L2 | L3 | L4 | supporting passage (location) |
+|---|---|---|---|---|---|---|
+| C0306 | Cadei, Lindorfer, Cremer, Schmid & Locatello (2024). Smoke and Mirrors in Causal Downstream Tasks. NeurIPS; arXiv:2405.17151 | **PARTIAL** (non-medical video; **outcome model** in an RCT) | RELATED, **borderline** (as for S0414) | RELATED | NONE | "we fine-tune 6 480 state-of-the-art models" on ISTAnt ant videos to estimate the ATE (p. 2). "e is an encoder potentially pre-trained on a much larger corpus … If a representation is only sufficient, redundant information from W or S could be preserved, potentially leading to systematic errors on Du due to spurious correlations" (§3, "Model bias from the encoder choice", p. 4). W = the experiment settings, which shift the outcome model; not an instrument, and not adjustment covariates |
+| C0332 | Yao, Rancati, Cadei, Fumero & Locatello (2025). Unifying Causal Representation Learning with the Invariance Principle. ICLR; arXiv:2409.02772 | **PARTIAL** (non-medical video; outcome model) | RELATED | NONE | NONE | "The goal is to extract a per-frame representation for supervised behavior classification (grooming or not) to estimate the Average Treatment Effect of an intervention" on ISTAnt (§5.1, p. 9). Backbone DINOv2 (App. F). Invariance enforced across experiments and positions |
+| C0320 | Yao, Huang, Cadei, Zhang & Locatello (2025). The Third Pillar of Causal Analysis? A Measurement Perspective on Causal Representations. NeurIPS; arXiv:2505.17708 | **PARTIAL** (non-medical video; representations as outcome **measurements**) | RELATED | NONE | NONE | "This experiment validates the T-MEX score on ISTAnt … The goal is to extract a per-frame representation for supervised behavior classification (grooming or not) to estimate the ATE" (§5.2, p. 8) |
+| C0424 | Rahman & Kocaoglu (2024). Modular Learning of Deep Causal Generative Models for High-dimensional Causal Inference. ICML; arXiv:2401.01426 | **PARTIAL** (images) | RELATED | RELATED | NONE | pre-trained conditional generative models answer identifiable causal queries with image variables (Abstract). The COVIDx example: "hospital location acts as a latent confounder" (§1, p. 2), i.e. site as a **confounder**, not an instrument |
+| C0452 | Chen, Bhattacharya & Keith (2024). Proximal Causal Inference with Text Data. NeurIPS; arXiv:2401.06687 | **PARTIAL** (text) | NONE | RELATED | NONE | "uses two instances of pre-treatment text data, infers two proxies using two zero-shot models on the separate instances, and applies these proxies in the proximal g-formula" (Abstract, p. 1); zero-shot LLMs |
+| C0460 | Deshpande, Wang, Sheldon, Lin & Kuleshov (2022). Deep Multi-Modal Structural Equations For Causal Effect Estimation With Unstructured Proxies. NeurIPS; arXiv:2203.09672 | **PARTIAL** (images / text) | NONE | RELATED | NONE | "deep multi-modal structural equations, a generative model for causal effect estimation in which confounders are latent variables and unstructured data are proxy variables. This model supports multiple multi-modal proxies (images, text)" (Abstract, p. 1) |
+| C0462 | Dhawan, Cotta, Ullrich, Krishnan & Maddison (2024). End-To-End Causal Effect Estimation from Unstructured Natural Language Data (NATURAL). NeurIPS; arXiv:2407.07018 | **PARTIAL** (text) | NONE | RELATED | NONE | "Our estimators use LLM conditional distributions (over variables of interest, given the text data) to assist in the computation of classical estimators of causal effect" (Abstract), including "inverse propensity score weighting and outcome imputation" (§1, p. 2) |
+| C0494 | Maiya (2021). CausalNLP: A Practical Toolkit for Causal Inference with Text. arXiv:2106.08043 | **PARTIAL** (text) | NONE | NONE | NONE | "CausalNLP includes an implementation of CausalBert … which is essentially an S-Learner that uses a DistilBERT text classification model as the base learner with extra covariates representing additional confounders" (§3.1, p. 3) |
+| C0507 | Sridhar & Getoor (2019). Estimating Causal Effects of Tone in Online Debates. IJCAI; arXiv:1906.04177 | **PARTIAL** (text; generative text model) | NONE | NONE | NONE | "we learn representations of ideology using generative models of text … our latent confounder representation reduces bias in ATE estimation" (Abstract, p. 1) |
+| C0520 | Zeng et al. (2022). Uncovering interpretable potential confounders in electronic medical records. Nat Commun 13:1014; PMC8866497 | RELATED | NONE | NONE | NONE | "we use simple NLP techniques (e.g., entity identification, bag-of-words) to generate matrix representations" (Introduction), then Lasso. Explicitly not deep embeddings |
+
+### S6.2 Settled at RELATED from the abstract
+
+| uids | basis |
+|---|---|
+| C0328 De Bartolomeis 2025; C0329 Poulet 2025 | foundation-model or prognostic predictions combined with **randomized** trials for precision; not confounding adjustment with representations of unstructured data |
+| C0356 Chen 2019; C0478 Johansson 2016; C0479 Johansson 2018; C0380 Xu & Gretton 2022 | representations trained from scratch on EHR, tabular or bag-of-words covariates; NMMR uses neural features on dSprite |
+| C0514 Wang & Culotta 2019; C0515 Weld 2022; C0516 Wood-Doughty 2018; C0522 Zhang 2020 | quasi-experimental matching on words; an evaluation framework comparing others' methods (L3 RELATED: real text, not medical video); text classifiers as measurement; conversation features |
+
+### S6.3 UNRESOLVED
+
+| uid | work | what is open | reason |
+|---|---|---|---|
+| C0377 | Tesei et al. (2023). Learning end-to-end patient representations through self-supervised covariate balancing for causal treatment effect estimation. J Biomed Inform 140:104339 | L1 (EHR representations; at most PARTIAL) | ScienceDirect returns a bot challenge; OpenAlex marks it hybrid OA but has no repository copy |
+
+**No further chasing.** These hits are one citation level from search hits, and gate §6 requires one level only.

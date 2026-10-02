@@ -1,0 +1,199 @@
+[
+ {
+  "id": "DS194",
+  "key": "u:D1365",
+  "category": "DATASET-C-COL",
+  "names": [],
+  "uids": [
+   "D1365"
+  ],
+  "titles": [
+   "Structure-preserving Image Translation for Depth Estimation in Colonoscopy Video"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/bfc1faa1ac06001a553f9c44455ef07a1a69beec"
+  ],
+  "doi": [
+   "10.48550/arXiv.2408.10153"
+  ],
+  "arxiv": [
+   "2408.10153"
+  ]
+ },
+ {
+  "id": "DS195",
+  "key": "u:D1367",
+  "category": "DATASET-C-COL",
+  "names": [],
+  "uids": [
+   "D1367"
+  ],
+  "titles": [
+   "Eye-tracking dataset of endoscopist-AI teaming during colonoscopy: Retrospective and real-time acquisition"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/2ef98b13dcaa6aea9944f9d5153ad3566d56ec30"
+  ],
+  "doi": [
+   "10.1038/s41597-025-04535-6"
+  ],
+  "arxiv": [
+   null
+  ]
+ },
+ {
+  "id": "DS196",
+  "key": "n:vim-polyp",
+  "category": "DATASET-C-COL",
+  "names": [
+   "VIM-Polyp"
+  ],
+  "uids": [
+   "D1372"
+  ],
+  "titles": [
+   "VIM-Polyp: Multimodal Colon Polyp Dataset with Video, Histopathology, and Protein Expression"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/2d92599ff1ede870fa32526b7337491ecb38cde0"
+  ],
+  "doi": [
+   "10.1038/s41597-025-06168-1"
+  ],
+  "arxiv": [
+   null
+  ]
+ },
+ {
+  "id": "DS197",
+  "key": "u:D1378",
+  "category": "DATASET-C-COL",
+  "names": [],
+  "uids": [
+   "D1378"
+  ],
+  "titles": [
+   "Interobserver variability in colonoscopy quality assessment: a retrospective standardized multicenter video-based study"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/5d7a0e01148f51ddc4a9cef99c36c3f74cc5a178"
+  ],
+  "doi": [
+   "10.22551/2026.51.1302.10338"
+  ],
+  "arxiv": [
+   null
+  ]
+ },
+ {
+  "id": "DS198",
+  "key": "n:topv",
+  "category": "DATASET-C-COL",
+  "names": [
+   "ToPV"
+  ],
+  "uids": [
+   "D1379"
+  ],
+  "titles": [
+   "Scheme And Dataset for Evaluating Computer-Aided Polyp Detection System in Colonoscopy"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/0cdf3bbb2b9ad2b3e79fb0f848a71c3b29b2f202"
+  ],
+  "doi": [
+   "10.1109/ISBI52829.2022.9761699"
+  ],
+  "arxiv": [
+   null
+  ]
+ },
+ {
+  "id": "DS199",
+  "key": "n:nerthus",
+  "category": "DATASET-C-COL",
+  "names": [
+   "Nerthus"
+  ],
+  "uids": [
+   "D1380"
+  ],
+  "titles": [
+   "Nerthus: A Bowel Preparation Quality Video Dataset"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/606f9cc22daf9cd6077e7d2f37d554a967215415"
+  ],
+  "doi": [
+   "10.1145/3083187.3083216"
+  ],
+  "arxiv": [
+   null
+  ]
+ },
+ {
+  "id": "DS200",
+  "key": "u:D1388",
+  "category": "DATASET-C-COL",
+  "names": [],
+  "uids": [
+   "D1388"
+  ],
+  "titles": [
+   "Real-Time Colonoscopy Simulation and Expert Data Acquisition for Inverse Reinforcement Learning"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/af48d46bdd17f3944b70eaf2b26e27364d9cf1ff"
+  ],
+  "doi": [
+   "10.1109/ICCAIS67508.2025.11262140"
+  ],
+  "arxiv": [
+   null
+  ]
+ },
+ {
+  "id": "DS201",
+  "key": "n:colon-bench",
+  "category": "DATASET-C-COL",
+  "names": [
+   "Colon-Bench"
+  ],
+  "uids": [
+   "D1411"
+  ],
+  "titles": [
+   "Colon-Bench: An Agentic Workflow for Scalable Dense Lesion Annotation in Full-Procedure Colonoscopy Videos"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/2d5756b3d9ccd96a8b9bec737252115d54623a84"
+  ],
+  "doi": [
+   "10.48550/arXiv.2603.25645"
+  ],
+  "arxiv": [
+   "2603.25645"
+  ]
+ },
+ {
+  "id": "DS202",
+  "key": "u:D1435",
+  "category": "DATASET-C-COL",
+  "names": [],
+  "uids": [
+   "D1435"
+  ],
+  "titles": [
+   "Amalgamation of cloud-based colonoscopy videos with patient-level metadata to facilitate large-scale machine learning"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/08e7f83b199e3d958c958ca5d1108f28dca0ea74"
+  ],
+  "doi": [
+   "10.1055/a-1326-1289"
+  ],
+  "arxiv": [
+   null
+  ]
+ }
+]

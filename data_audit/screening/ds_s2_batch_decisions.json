@@ -1,0 +1,1593 @@
+[
+ {
+  "uid": "D1360",
+  "category": "DATASET-C-COL",
+  "dataset_name": "LDPolypVideo",
+  "existing_id": "DS094",
+  "reason": "LDPolypVideo large-scale colonoscopy video polyp benchmark (dataset release)."
+ },
+ {
+  "uid": "D1361",
+  "category": "DATASET-C-COL",
+  "dataset_name": "C3VDv2",
+  "existing_id": "DS076",
+  "reason": "C3VDv2 phantom colonoscopy 3D video dataset with depth/pose ground truth."
+ },
+ {
+  "uid": "D1362",
+  "category": "DATASET-C-COL",
+  "dataset_name": "REAL-Colon temporal segmentation annotations",
+  "existing_id": "DS099",
+  "reason": "First open-access full-procedure colonoscopy temporal segmentation annotations on REAL-Colon videos."
+ },
+ {
+  "uid": "D1363",
+  "category": "DATASET-C-COL",
+  "dataset_name": "C3VD",
+  "existing_id": "DS076",
+  "reason": "C3VD colonoscopy 3D video dataset with paired depth (phantom)."
+ },
+ {
+  "uid": "D1364",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "AI polyp-detection method using semi-automatic annotation of private videos; no dataset release."
+ },
+ {
+  "uid": "D1365",
+  "category": "DATASET-C-COL",
+  "dataset_name": "",
+  "existing_id": null,
+  "reason": "Depth-estimation method paper that also proposes a dataset of hand-picked clinical colonoscopy sequences; doubt rule."
+ },
+ {
+  "uid": "D1366",
+  "category": "DATASET-C-COL",
+  "dataset_name": "REAL-Colon",
+  "existing_id": "DS099",
+  "reason": "REAL-Colon multi-center full-procedure colonoscopy video dataset."
+ },
+ {
+  "uid": "D1367",
+  "category": "DATASET-C-COL",
+  "dataset_name": "",
+  "existing_id": null,
+  "reason": "Eye-tracking dataset during colonoscopy withdrawal incl. 80 prospectively collected real-time colonoscopy video segments."
+ },
+ {
+  "uid": "D1368",
+  "category": "DATASET-C-COL",
+  "dataset_name": "CAS-Colon",
+  "existing_id": "DS077",
+  "reason": "CAS-Colon: 78 withdrawal-phase colonoscopy videos with anatomical-region annotations."
+ },
+ {
+  "uid": "D1369",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Bowel-preparation assessment method (no abstract); no dataset release indicated."
+ },
+ {
+  "uid": "D1370",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Self-supervised haustral fold edge detection method (no abstract)."
+ },
+ {
+  "uid": "D1371",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Polyp detection/classification method using the existing SUN database."
+ },
+ {
+  "uid": "D1372",
+  "category": "DATASET-C-COL",
+  "dataset_name": "VIM-Polyp",
+  "existing_id": null,
+  "reason": "Open multimodal dataset of 202 colonoscopy videos with histopathology and IHC results."
+ },
+ {
+  "uid": "D1373",
+  "category": "DATASET-C-COL",
+  "dataset_name": "HyperKvasir",
+  "existing_id": "DS091",
+  "reason": "HyperKvasir GI image+video dataset incl. colonoscopy videos."
+ },
+ {
+  "uid": "D1374",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ECIQAD",
+  "reason": "Benchmark of 300 enhanced colonoscopy still images for quality assessment; static images only."
+ },
+ {
+  "uid": "D1375",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Polyp detection post-processing method paper."
+ },
+ {
+  "uid": "D1376",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "CNN polyp detection/segmentation method; dataset not presented as a release."
+ },
+ {
+  "uid": "D1377",
+  "category": "DATASET-C-COL",
+  "dataset_name": "InfoColon",
+  "existing_id": "DS093",
+  "reason": "InfoColon informative-frame colonoscopy video dataset."
+ },
+ {
+  "uid": "D1378",
+  "category": "DATASET-C-COL",
+  "dataset_name": "",
+  "existing_id": null,
+  "reason": "Interobserver study on a standardized multicenter set of 64 complete colonoscopy videos; release not stated; doubt rule."
+ },
+ {
+  "uid": "D1379",
+  "category": "DATASET-C-COL",
+  "dataset_name": "ToPV",
+  "existing_id": null,
+  "reason": "ToPV: 360 short colonoscopy examination videos for evaluating CADe assistance."
+ },
+ {
+  "uid": "D1380",
+  "category": "DATASET-C-COL",
+  "dataset_name": "Nerthus",
+  "existing_id": null,
+  "reason": "Nerthus: GI/colonoscopy video dataset graded for bowel-preparation quality."
+ },
+ {
+  "uid": "D1381",
+  "category": "DATASET-C-COL",
+  "dataset_name": "Polyp-Size",
+  "existing_id": "DS096",
+  "reason": "Polyp-Size: 42 colonoscopy videos with caliper-measured polyp sizes."
+ },
+ {
+  "uid": "D1382",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "RCT of AI-assisted colonoscopy; clinical trial, not a dataset."
+ },
+ {
+  "uid": "D1383",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "ColonCrafter depth-estimation model evaluated on existing C3VD."
+ },
+ {
+  "uid": "D1384",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Polyp classification method using existing Kvasir images."
+ },
+ {
+  "uid": "D1385",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "YOLO-V8 polyp detection method on public images."
+ },
+ {
+  "uid": "D1386",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Polyp detection method evaluated on a public video dataset."
+ },
+ {
+  "uid": "D1387",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Multimodal classification method using PathMNIST and HyperKvasir."
+ },
+ {
+  "uid": "D1388",
+  "category": "DATASET-C-COL",
+  "dataset_name": "",
+  "existing_id": null,
+  "reason": "Simulated colonoscopy system recording synchronized endoscope video and expert joystick actions to construct an IRL dataset; doubt rule."
+ },
+ {
+  "uid": "D1389",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "ML colonoscopy-quality assessment method; no dataset release."
+ },
+ {
+  "uid": "D1390",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Annotation-box detection method on private videos."
+ },
+ {
+  "uid": "D1391",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Polyp/lumen detection method using Extended-LDPolyp images."
+ },
+ {
+  "uid": "D1392",
+  "category": "DATASET-C-COL",
+  "dataset_name": "SimCol3D",
+  "existing_id": "DS104",
+  "reason": "SimCol3D EndoVis 2022 colonoscopy 3D reconstruction challenge dataset."
+ },
+ {
+  "uid": "D1393",
+  "category": "DATASET-C-COL",
+  "dataset_name": "OpenRC",
+  "existing_id": "DS193",
+  "reason": "Robotic colonoscopy multimodal dataset (video, commands, tip pose); contributed to Open-H (ut_austin/arts_lab colonoscope)."
+ },
+ {
+  "uid": "D1394",
+  "category": "DATASET-C-COL",
+  "dataset_name": "SUN-SEG",
+  "existing_id": "DS105",
+  "reason": "Introduces SUN-SEG frame-annotated colonoscopy video polyp segmentation dataset."
+ },
+ {
+  "uid": "D1395",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Diminutive polyp detection algorithm (no abstract)."
+ },
+ {
+  "uid": "D1396",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "CDSS neoplasm detection method trained on archive frames."
+ },
+ {
+  "uid": "D1397",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Retrospective CADe training-data comparison; no dataset release."
+ },
+ {
+  "uid": "D1398",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Polyp detection algorithm validation on existing datasets."
+ },
+ {
+  "uid": "D1399",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Polyp detection method (no abstract)."
+ },
+ {
+  "uid": "D1400",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Colonoscopy image classification method (no abstract)."
+ },
+ {
+  "uid": "D1401",
+  "category": "DATASET-C-COL",
+  "dataset_name": "ENDOTEST",
+  "existing_id": "DS086",
+  "reason": "ENDOTEST video benchmark incl. full-length screening colonoscopies."
+ },
+ {
+  "uid": "D1402",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Self-supervised representation learning method (no abstract)."
+ },
+ {
+  "uid": "D1403",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Keyframe selection method for colonoscopy videos."
+ },
+ {
+  "uid": "D1404",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "CAD polyp detection method comparison on a study dataset."
+ },
+ {
+  "uid": "D1405",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Polyp detection method evaluated on CVC-ClinicVideoDB."
+ },
+ {
+  "uid": "D1406",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Withdrawal-time detection method."
+ },
+ {
+  "uid": "D1407",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Contaminant segmentation method trained on public/private sequences."
+ },
+ {
+  "uid": "D1408",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Colon centreline learning method using simulator-generated training data."
+ },
+ {
+  "uid": "D1409",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Ivy-Net image-video joint polyp detection method."
+ },
+ {
+  "uid": "D1410",
+  "category": "DATASET-C-COL",
+  "dataset_name": "REAL-Colon (polyp counting benchmark)",
+  "existing_id": "DS099",
+  "reason": "Defines open-access polyp-counting tasks/splits/metrics on REAL-Colon full-procedure videos."
+ },
+ {
+  "uid": "D1411",
+  "category": "DATASET-C-COL",
+  "dataset_name": "Colon-Bench",
+  "existing_id": null,
+  "reason": "Colon-Bench: 528 densely annotated full-procedure colonoscopy videos (boxes, masks, descriptions)."
+ },
+ {
+  "uid": "D1412",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical study of sigmoidoscopy in paediatric UC."
+ },
+ {
+  "uid": "D1413",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Patient-navigator bowel-prep quality abstract."
+ },
+ {
+  "uid": "D1414",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Novel resection technique report."
+ },
+ {
+  "uid": "D1415",
+  "category": "DATASET-C-COL",
+  "dataset_name": "REAL-Colon temporal segmentation annotations",
+  "existing_id": "DS099",
+  "reason": "Duplicate of REAL-Colon temporal segmentation benchmark record."
+ },
+ {
+  "uid": "D1416",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Review of population-based screening colonoscopy."
+ },
+ {
+  "uid": "D1417",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical study of full colonoscopy in young patients."
+ },
+ {
+  "uid": "D1418",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Case report."
+ },
+ {
+  "uid": "D1419",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Bowel-preparation RCT."
+ },
+ {
+  "uid": "D1420",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Colonoscopy training simulator with pressure feedback (no abstract)."
+ },
+ {
+  "uid": "D1421",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Lesion-centered mapping pipeline evaluated on public videos."
+ },
+ {
+  "uid": "D1422",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Single-case surgical video vignette."
+ },
+ {
+  "uid": "D1423",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Pressure-sensing colonoscope sleeve device."
+ },
+ {
+  "uid": "D1424",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Systematic review."
+ },
+ {
+  "uid": "D1425",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Systematic review and meta-analysis."
+ },
+ {
+  "uid": "D1426",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Scoping review."
+ },
+ {
+  "uid": "D1427",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Randomised tandem colonoscopy trial."
+ },
+ {
+  "uid": "D1428",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Deep-learning colonoscopy quality method (no abstract)."
+ },
+ {
+  "uid": "D1429",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Qualitative systematic review."
+ },
+ {
+  "uid": "D1430",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Prospective cohort of a colonoscopy platform."
+ },
+ {
+  "uid": "D1431",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Case report."
+ },
+ {
+  "uid": "D1432",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Case report."
+ },
+ {
+  "uid": "D1433",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Population-based health-services study."
+ },
+ {
+  "uid": "D1434",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Case report."
+ },
+ {
+  "uid": "D1435",
+  "category": "DATASET-C-COL",
+  "dataset_name": "",
+  "existing_id": null,
+  "reason": "Builds a single-center corpus of 21,170 full-length colonoscopy videos linked to EHR metadata; release not stated; doubt rule."
+ },
+ {
+  "uid": "D1436",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Randomized back-to-back trial."
+ },
+ {
+  "uid": "D1437",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "ADR measurement method (no abstract)."
+ },
+ {
+  "uid": "D1438",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Training certification study."
+ },
+ {
+  "uid": "D1439",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Bowel-preparation clinical study."
+ },
+ {
+  "uid": "D1440",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Textbook chapter on colonoscopy."
+ },
+ {
+  "uid": "D1441",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Bowel-preparation RCT."
+ },
+ {
+  "uid": "D1442",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Case report."
+ },
+ {
+  "uid": "D1443",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical case series."
+ },
+ {
+  "uid": "D1444",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Polyp detection method evaluated on ASU-Mayo."
+ },
+ {
+  "uid": "D1445",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Single-center clinical experience."
+ },
+ {
+  "uid": "D1446",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Real-time polyp feedback system."
+ },
+ {
+  "uid": "D1447",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Randomized trial of full-spectrum endoscopy."
+ },
+ {
+  "uid": "D1448",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Case report."
+ },
+ {
+  "uid": "D1449",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "COVID-19 endoscopy rehearsal report."
+ },
+ {
+  "uid": "D1450",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Polyp segmentation method."
+ },
+ {
+  "uid": "D1451",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Matched case-control clinical study."
+ },
+ {
+  "uid": "D1452",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Guideline summary."
+ },
+ {
+  "uid": "D1453",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Case report."
+ },
+ {
+  "uid": "D1454",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Case report."
+ },
+ {
+  "uid": "D1455",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Case series."
+ },
+ {
+  "uid": "D1456",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Sedation wastage audit."
+ },
+ {
+  "uid": "D1457",
+  "category": "DATASET-C-COL",
+  "dataset_name": "TRUE-Colon (benchmark protocol on REAL-Colon)",
+  "existing_id": "DS099",
+  "reason": "Benchmarking protocol on existing SUN/PICCOLO/REAL-Colon full procedures; no new videos; doubt rule."
+ },
+ {
+  "uid": "D1458",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Case report."
+ },
+ {
+  "uid": "D1459",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Robotic navigation feasibility study on a colon model."
+ },
+ {
+  "uid": "D1460",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Public multi-center video capsule endoscopy dataset; capsule only."
+ },
+ {
+  "uid": "D1461",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Barrett's neoplasia CADe development/validation study."
+ },
+ {
+  "uid": "D1462",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "PhaKIR",
+  "existing_id": "DS147",
+  "reason": "PhaKIR 2024 EndoVis challenge: multi-center laparoscopic videos with phase/keypoint/instance labels."
+ },
+ {
+  "uid": "D1463",
+  "category": "DATASET-C-COL",
+  "dataset_name": "REAL-Colon",
+  "existing_id": "DS099",
+  "reason": "REAL-Colon multi-center full-procedure colonoscopy video dataset."
+ },
+ {
+  "uid": "D1464",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Galar",
+  "reason": "Video capsule endoscopy dataset only; not colonoscopy."
+ },
+ {
+  "uid": "D1465",
+  "category": "DATASET-C-COL",
+  "dataset_name": "HyperKvasir",
+  "existing_id": "DS091",
+  "reason": "HyperKvasir GI image+video dataset incl. colonoscopy videos."
+ },
+ {
+  "uid": "D1466",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Multi-label capsule endoscopy cleanliness dataset; capsule only."
+ },
+ {
+  "uid": "D1467",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Clinical capsule endoscopy study."
+ },
+ {
+  "uid": "D1468",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Capsule bleeding-detection app/method."
+ },
+ {
+  "uid": "D1469",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Capsule abnormality classification method."
+ },
+ {
+  "uid": "D1470",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Bowel-prep RCT for capsule endoscopy."
+ },
+ {
+  "uid": "D1471",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "VFSS AI model validation study."
+ },
+ {
+  "uid": "D1472",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Capsule Vision 2024 Challenge",
+  "reason": "Capsule endoscopy challenge data only."
+ },
+ {
+  "uid": "D1473",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Capsule classification method for a challenge."
+ },
+ {
+  "uid": "D1474",
+  "category": "DATASET-OTHER",
+  "dataset_name": "GastroVision",
+  "reason": "Multi-center GI endoscopy still-image dataset; static images only."
+ },
+ {
+  "uid": "D1475",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Video-EEG IED detection model study."
+ },
+ {
+  "uid": "D1476",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Intrapartum ultrasound video dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D1477",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Capsule classification method on Galar."
+ },
+ {
+  "uid": "D1478",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Capsule classification method (no abstract)."
+ },
+ {
+  "uid": "D1479",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Lung ultrasound AI evaluation study."
+ },
+ {
+  "uid": "D1480",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Appendix300",
+  "existing_id": null,
+  "reason": "Appendix300: 330 multi-institution laparoscopic appendectomy videos with appendicitis-grade annotations and metadata."
+ },
+ {
+  "uid": "D1481",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PolypDB",
+  "reason": "Multi-center colonoscopy polyp still-image dataset; static images only."
+ },
+ {
+  "uid": "D1482",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Nasopharyngeal carcinoma AI study."
+ },
+ {
+  "uid": "D1483",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Capsule cleanliness scoring method evaluation."
+ },
+ {
+  "uid": "D1484",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Surveillance video deblurring method; non-medical."
+ },
+ {
+  "uid": "D1485",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Web platform for capsule reader studies."
+ },
+ {
+  "uid": "D1486",
+  "category": "DATASET-OTHER",
+  "dataset_name": "CARE-PD",
+  "reason": "Parkinson's gait mesh dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D1487",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Capsule video-to-report generation system (trained on MICS-CE)."
+ },
+ {
+  "uid": "D1488",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Registry analysis of endoscopy quality metrics; not video."
+ },
+ {
+  "uid": "D1489",
+  "category": "DATASET-C-COL",
+  "dataset_name": "",
+  "existing_id": "DS084",
+  "reason": "Multi-center video polyp detection/segmentation analysis with a compiled multi-center sequence dataset (appears to be EndoCV2022/PolypGen 2.0); doubt rule."
+ },
+ {
+  "uid": "D1490",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Gauze detection method on in-house laparoscopic videos; no dataset release stated."
+ },
+ {
+  "uid": "D1491",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "DSA generative imaging system study."
+ },
+ {
+  "uid": "D1492",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Report on endoscopy video recording strategies; not a dataset."
+ },
+ {
+  "uid": "D1493",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Artefact detection method (no abstract)."
+ },
+ {
+  "uid": "D1494",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "CT deep-feature prognosis study."
+ },
+ {
+  "uid": "D1495",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Cataract-LMM",
+  "existing_id": null,
+  "reason": "3,000 cataract surgery videos with phase, segmentation, tracking and skill annotations."
+ },
+ {
+  "uid": "D1496",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Esports commentary video dataset; non-medical."
+ },
+ {
+  "uid": "D1497",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Capsule classification method."
+ },
+ {
+  "uid": "D1498",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Webcam multi-task video dataset for Parkinson's detection; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D1499",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Capsule classification method."
+ },
+ {
+  "uid": "D1500",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Upper-GI site classification method."
+ },
+ {
+  "uid": "D1501",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Peritoneal nodule detection feasibility study on in-house frames."
+ },
+ {
+  "uid": "D1502",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PLPS",
+  "reason": "Public-space video dataset; non-medical."
+ },
+ {
+  "uid": "D1503",
+  "category": "DATASET-OTHER",
+  "dataset_name": "Friends-MMC",
+  "reason": "TV-series conversation dataset; non-medical."
+ },
+ {
+  "uid": "D1504",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "PhaKIR",
+  "existing_id": "DS147",
+  "reason": "PhaKIR data article: laparoscopic cholecystectomy videos with phase/keypoint/instrument labels."
+ },
+ {
+  "uid": "D1505",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Capsule redundant-frame removal method."
+ },
+ {
+  "uid": "D1506",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "GI endoscopy classification method."
+ },
+ {
+  "uid": "D1507",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Multimodal RAG system; non-medical."
+ },
+ {
+  "uid": "D1508",
+  "category": "DATASET-OTHER",
+  "dataset_name": "PairFS-4K / HumanRob-300",
+  "reason": "Video generation paper introducing non-medical datasets."
+ },
+ {
+  "uid": "D1509",
+  "category": "DATASET-C-COL",
+  "dataset_name": "",
+  "existing_id": null,
+  "reason": "Prospective full-length EGD/colonoscopy video databank (7,909 colonoscopies) with timestamped structured annotations."
+ },
+ {
+  "uid": "D1510",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "",
+  "existing_id": null,
+  "reason": "Multicenter MIGS surgical video dataset with phase and segmentation annotations."
+ },
+ {
+  "uid": "D1511",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SLAM",
+  "existing_id": "DS160",
+  "reason": "SLAM laparoscopic surgical action video dataset."
+ },
+ {
+  "uid": "D1512",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "PhaKIR",
+  "existing_id": "DS147",
+  "reason": "PhaKIR data article (duplicate record)."
+ },
+ {
+  "uid": "D1513",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgBench",
+  "existing_id": null,
+  "reason": "SurgBench-P/E surgical video pretraining and evaluation benchmark (phase, tool, action labels)."
+ },
+ {
+  "uid": "D1514",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgPub-Video",
+  "existing_id": null,
+  "reason": "SurgPub-Video: 3,000+ surgical videos with annotated frames and VQA benchmark."
+ },
+ {
+  "uid": "D1515",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Self-supervised surgical image analysis method (no abstract)."
+ },
+ {
+  "uid": "D1516",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Ophora-160K",
+  "existing_id": null,
+  "reason": "Introduces Ophora-160K ophthalmic surgical video-instruction pairs; doubt rule."
+ },
+ {
+  "uid": "D1517",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Surg-QA",
+  "existing_id": null,
+  "reason": "Introduces Surg-QA: 102k surgical video-instruction pairs; doubt rule."
+ },
+ {
+  "uid": "D1518",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "",
+  "existing_id": null,
+  "reason": "Method that constructs a large surgical video-language pretraining dataset from YouTube; doubt rule."
+ },
+ {
+  "uid": "D1519",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "SAM2 fine-tuning on existing public datasets."
+ },
+ {
+  "uid": "D1520",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "OphVL",
+  "existing_id": null,
+  "reason": "Introduces OphVL: 375k ophthalmic surgical video-text pairs incl. phases/actions/instruments."
+ },
+ {
+  "uid": "D1521",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Cataract-LMM",
+  "existing_id": null,
+  "reason": "Cataract-LMM (duplicate record)."
+ },
+ {
+  "uid": "D1522",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "SAM2 fine-tuning on existing public datasets."
+ },
+ {
+  "uid": "D1523",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "",
+  "existing_id": null,
+  "reason": "Newly curated 397 laparoscopic appendectomy recordings from six centers with patient-level labels (may overlap Appendix300); doubt rule."
+ },
+ {
+  "uid": "D1524",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Temporal action / competency method (no abstract)."
+ },
+ {
+  "uid": "D1525",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Appendix300",
+  "existing_id": null,
+  "reason": "Appendix300 (duplicate record)."
+ },
+ {
+  "uid": "D1526",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgiSR4K",
+  "existing_id": null,
+  "reason": "Native-4K robotic MIS video dataset; labels not explicit; doubt rule."
+ },
+ {
+  "uid": "D1527",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "SAM-2 robustness evaluation study."
+ },
+ {
+  "uid": "D1528",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgAtlas",
+  "existing_id": null,
+  "reason": "SurgAtlas: 15,291 surgical videos with captions, phase/step descriptions and QA."
+ },
+ {
+  "uid": "D1529",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "LapSurg-230K",
+  "existing_id": "DS138",
+  "reason": "LapSurg-230K laparoscopic action-annotated video clip dataset."
+ },
+ {
+  "uid": "D1530",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Surgical video retrieval method."
+ },
+ {
+  "uid": "D1531",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Out-of-body scene classifier on in-house videos."
+ },
+ {
+  "uid": "D1532",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "CaDIS/CATARACTS scene graphs",
+  "existing_id": "DS114",
+  "reason": "Method creating a derived scene-graph dataset from CaDIS/CATARACTS cataract videos; doubt rule."
+ },
+ {
+  "uid": "D1533",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "EgoSurgery-Phase",
+  "existing_id": "DS121",
+  "reason": "EgoSurgery-Phase open surgery phase video dataset."
+ },
+ {
+  "uid": "D1534",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgSTU",
+  "existing_id": null,
+  "reason": "SurgSTU: 6,711 clips from public surgical datasets with 150k spatial-temporal QA samples."
+ },
+ {
+  "uid": "D1535",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Appendix300",
+  "existing_id": null,
+  "reason": "Appendix300 data descriptor (duplicate dataset)."
+ },
+ {
+  "uid": "D1536",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "TMVP-SurgVideo",
+  "existing_id": null,
+  "reason": "TMVP-SurgVideo: 57 thoracoscopic mitral valvuloplasty videos with phase/instrument labels."
+ },
+ {
+  "uid": "D1537",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "",
+  "existing_id": null,
+  "reason": "Same 397-recording multinational appendectomy cohort with patient-level labels; doubt rule."
+ },
+ {
+  "uid": "D1538",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgOnAir-11k",
+  "existing_id": null,
+  "reason": "Streaming VLM paper with curated hierarchical action/step/phase dataset SurgOnAir-11k; doubt rule."
+ },
+ {
+  "uid": "D1539",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Single-case surgical technique video."
+ },
+ {
+  "uid": "D1540",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "TEMSET-24K",
+  "existing_id": null,
+  "reason": "TEMSET-24K: 24,306 TEMS video clips with phase/task/action labels."
+ },
+ {
+  "uid": "D1541",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "ACL27 (ArthroPhase)",
+  "existing_id": null,
+  "reason": "ACL27: 27 arthroscopic ACL reconstruction videos with phase labels."
+ },
+ {
+  "uid": "D1542",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Instrument recognition method on Cholec80."
+ },
+ {
+  "uid": "D1543",
+  "category": "DATASET-C-COL",
+  "dataset_name": "REAL-Colon-VQA",
+  "existing_id": "DS099",
+  "reason": "Curates REAL-Colon-VQA colonoscopic video QA dataset on REAL-Colon videos."
+ },
+ {
+  "uid": "D1544",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Desmoking method on Cholec80."
+ },
+ {
+  "uid": "D1545",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "",
+  "existing_id": null,
+  "reason": "Constructs hierarchical surgical lecture video-text dataset for pretraining; doubt rule."
+ },
+ {
+  "uid": "D1546",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Surgical video retrieval method."
+ },
+ {
+  "uid": "D1547",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Endoscapes2023",
+  "existing_id": null,
+  "reason": "Endoscapes2023: 201 laparoscopic cholecystectomy videos with segmentation and CVS labels."
+ },
+ {
+  "uid": "D1548",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Semi-supervised instrument segmentation method."
+ },
+ {
+  "uid": "D1549",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "MultiBypass140",
+  "existing_id": null,
+  "reason": "MultiBypass140 LRYGB videos (Strasbourg+Bern) annotated with phases and iAEs; clinical analysis; doubt rule."
+ },
+ {
+  "uid": "D1550",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Semi-supervised phase recognition method."
+ },
+ {
+  "uid": "D1551",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Tool keypoint tracking method on EndoVis 2015."
+ },
+ {
+  "uid": "D1552",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Tool detection method on Cholec80."
+ },
+ {
+  "uid": "D1553",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "POV-Surgery",
+  "existing_id": null,
+  "reason": "Synthetic egocentric RGB-D surgical-activity video dataset with pose/activity annotations; doubt rule."
+ },
+ {
+  "uid": "D1554",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "STIR",
+  "existing_id": "DS163",
+  "reason": "STIR endoscopic tissue-tracking video dataset."
+ },
+ {
+  "uid": "D1555",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Out-of-body detection method (no abstract)."
+ },
+ {
+  "uid": "D1556",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "SAM2 zero-shot evaluation."
+ },
+ {
+  "uid": "D1557",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Skill assessment generalizability study (no abstract)."
+ },
+ {
+  "uid": "D1558",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "KAFR frame-reduction method."
+ },
+ {
+  "uid": "D1559",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "AutoLaparo",
+  "existing_id": "DS110",
+  "reason": "AutoLaparo laparoscopic hysterectomy multi-task video dataset."
+ },
+ {
+  "uid": "D1560",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "KAFR frame-reduction method (duplicate record)."
+ },
+ {
+  "uid": "D1561",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Open surgical skill assessment method (no abstract)."
+ },
+ {
+  "uid": "D1562",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Kinematics modelling method on benchmark data."
+ },
+ {
+  "uid": "D1563",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Kinematics-conditioned video generation on JIGSAWS."
+ },
+ {
+  "uid": "D1564",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SATA",
+  "existing_id": null,
+  "reason": "Method paper curating SATA surgical video action-text dataset; doubt rule."
+ },
+ {
+  "uid": "D1565",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Open-H-Embodiment",
+  "existing_id": "DS001-DS075,DS186-DS193",
+  "reason": "Open-H-Embodiment medical robotic video + kinematics dataset (already listed per sub-dataset)."
+ },
+ {
+  "uid": "D1566",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Multimodal gesture recognition method."
+ },
+ {
+  "uid": "D1567",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "BRS / VTS",
+  "existing_id": null,
+  "reason": "Method paper introducing new Bowel Repair Simulation dataset (with VTS) of sensor-kinematics open-surgery suturing; doubt rule."
+ },
+ {
+  "uid": "D1568",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Self-supervised gesture/skill method (no abstract)."
+ },
+ {
+  "uid": "D1569",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SLAM",
+  "existing_id": "DS160",
+  "reason": "SLAM (duplicate record)."
+ },
+ {
+  "uid": "D1570",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Kinematics reconstruction method on Open-H."
+ },
+ {
+  "uid": "D1571",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "PhaKIR",
+  "existing_id": "DS147",
+  "reason": "PhaKIR data article (duplicate record)."
+ },
+ {
+  "uid": "D1572",
+  "category": "DATASET-OTHER",
+  "dataset_name": "EPFL-Smart-Kitchen-30",
+  "reason": "Cooking action dataset with kinematics; non-medical."
+ },
+ {
+  "uid": "D1573",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Tool kinematics estimation method."
+ },
+ {
+  "uid": "D1574",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgPose",
+  "existing_id": null,
+  "reason": "SurgPose: robotic surgical tool stereo videos with keypoint pose annotations."
+ },
+ {
+  "uid": "D1575",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "",
+  "existing_id": null,
+  "reason": "MIGS surgical video dataset (duplicate record)."
+ },
+ {
+  "uid": "D1576",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Action-conditioned surgical video generation method."
+ },
+ {
+  "uid": "D1577",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgiSR4K",
+  "existing_id": null,
+  "reason": "SurgiSR4K (duplicate record)."
+ },
+ {
+  "uid": "D1578",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Appendix300",
+  "existing_id": null,
+  "reason": "Appendix300 (duplicate record)."
+ },
+ {
+  "uid": "D1579",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "OpenPose accuracy analysis."
+ },
+ {
+  "uid": "D1580",
+  "category": "DATASET-OTHER",
+  "dataset_name": "",
+  "reason": "Amputee biomechanics dataset; not colonoscopy or surgical video."
+ },
+ {
+  "uid": "D1581",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "RALP kinematic step-separation study on 4 procedures; no dataset release."
+ },
+ {
+  "uid": "D1582",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "EgoSurgery-Phase",
+  "existing_id": "DS121",
+  "reason": "EgoSurgery-Phase (duplicate record)."
+ },
+ {
+  "uid": "D1583",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "TMVP-SurgVideo",
+  "existing_id": null,
+  "reason": "TMVP-SurgVideo (duplicate record)."
+ },
+ {
+  "uid": "D1584",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "TEMSET-24K",
+  "existing_id": null,
+  "reason": "TEMSET-24K (duplicate record)."
+ },
+ {
+  "uid": "D1585",
+  "category": "DATASET-OTHER",
+  "dataset_name": "ODAH",
+  "reason": "Human 3D-kinematics method creating synthetic dataset ODAH; non-surgical."
+ },
+ {
+  "uid": "D1586",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "ACL27 (ArthroPhase)",
+  "existing_id": null,
+  "reason": "ACL27 (duplicate record)."
+ },
+ {
+  "uid": "D1587",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgBench",
+  "existing_id": null,
+  "reason": "SurgBench (duplicate record)."
+ },
+ {
+  "uid": "D1588",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgPub-Video",
+  "existing_id": null,
+  "reason": "SurgPub-Video (duplicate record)."
+ },
+ {
+  "uid": "D1589",
+  "category": "DATASET-C-COL",
+  "dataset_name": "REAL-Colon-VQA",
+  "existing_id": "DS099",
+  "reason": "REAL-Colon-VQA (duplicate record)."
+ },
+ {
+  "uid": "D1590",
+  "category": "DATASET-OTHER",
+  "dataset_name": "LSC50",
+  "reason": "Sign language video/IMU dataset; non-medical."
+ },
+ {
+  "uid": "D1591",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "SurgLaVi",
+  "existing_id": null,
+  "reason": "SurgLaVi: 240k surgical clip-caption pairs (SurgLaVi-beta released)."
+ },
+ {
+  "uid": "D1592",
+  "category": "DATASET-OTHER",
+  "dataset_name": "UBnormal human-related annotations",
+  "reason": "Video anomaly method contributing annotations to a non-medical dataset."
+ },
+ {
+  "uid": "D1593",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Multimodal gesture recognition method."
+ },
+ {
+  "uid": "D1594",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "MultiBypass140",
+  "existing_id": null,
+  "reason": "MultiBypass140 (duplicate record)."
+ },
+ {
+  "uid": "D1595",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "",
+  "existing_id": null,
+  "reason": "HecVL hierarchical video-text dataset (duplicate record); doubt rule."
+ },
+ {
+  "uid": "D1596",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Ophora-160K",
+  "existing_id": null,
+  "reason": "Ophora-160K (duplicate record)."
+ },
+ {
+  "uid": "D1597",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "",
+  "existing_id": null,
+  "reason": "Watch-and-learn YouTube surgical video-language dataset (duplicate record); doubt rule."
+ },
+ {
+  "uid": "D1598",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Tool keypoint tracking method (duplicate record)."
+ },
+ {
+  "uid": "D1599",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "LEMON",
+  "existing_id": null,
+  "reason": "LEMON: 4K+ surgical videos (938 h) compiled from online sources with downstream tasks; doubt rule on labels."
+ },
+ {
+  "uid": "D1600",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Semi-supervised phase recognition method on private RAMIE and Cholec80."
+ },
+ {
+  "uid": "D1601",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Cataract-LMM",
+  "existing_id": null,
+  "reason": "Cataract-LMM (duplicate record)."
+ },
+ {
+  "uid": "D1602",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Surg-QA",
+  "existing_id": null,
+  "reason": "Surg-QA (duplicate record)."
+ },
+ {
+  "uid": "D1603",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "OphVL",
+  "existing_id": null,
+  "reason": "OphVL (duplicate record)."
+ },
+ {
+  "uid": "D1604",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "Temporal action / competency method (no abstract)."
+ },
+ {
+  "uid": "D1605",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "SAM2 zero-shot evaluation (duplicate record)."
+ },
+ {
+  "uid": "D1606",
+  "category": "DATASET-OTHER",
+  "dataset_name": "HabitatDyn",
+  "reason": "Synthetic robot-perception video dataset; non-medical."
+ },
+ {
+  "uid": "D1607",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "CRCD",
+  "existing_id": "DS070",
+  "reason": "CRCD dVRK ex vivo cholecystectomy video + kinematics + pedals (Open-H uic_crcd_lerobot)."
+ },
+ {
+  "uid": "D1608",
+  "category": "DATASET-C-SURG",
+  "dataset_name": "Endoscapes2023",
+  "existing_id": null,
+  "reason": "Endoscapes2023 (duplicate record)."
+ },
+ {
+  "uid": "D1609",
+  "category": "NOT-DATASET",
+  "dataset_name": "",
+  "reason": "SAM-2 robustness evaluation (duplicate record)."
+ }
+]

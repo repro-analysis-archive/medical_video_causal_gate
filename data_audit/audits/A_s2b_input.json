@@ -1,0 +1,248 @@
+[
+ {
+  "id": "DS203",
+  "key": "n:appendix300",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Appendix300"
+  ],
+  "uids": [
+   "D1480",
+   "D1525",
+   "D1535",
+   "D1578"
+  ],
+  "titles": [
+   "Appendix300: A multi-institutional laparoscopic appendectomy video dataset for computational modeling tasks",
+   "Appendix300: A multi-institutional laparoscopic appendectomy video dataset for computational modeling tasks",
+   "Appendix300: Surgical video and patient metadata of 330 laparoscopic appendectomy cases from five institutions",
+   "Appendix300: A multi-institutional laparoscopic appendectomy video dataset for computational modeling tasks"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/1e71dc2ab83441463fc6322bb7d12d347578720a",
+   "https://www.semanticscholar.org/paper/3056ad3d56cdd09ed77b47cdd69c35b1e30b3661"
+  ],
+  "doi": [
+   "10.1101/2025.09.05.25335174",
+   "10.1101/2025.09.05.25335174",
+   "10.1038/s41597-026-07593-6",
+   "10.1101/2025.09.05.25335174"
+  ],
+  "arxiv": [
+   null,
+   null,
+   null,
+   null
+  ]
+ },
+ {
+  "id": "DS204",
+  "key": "n:cataract-lmm",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Cataract-LMM"
+  ],
+  "uids": [
+   "D1495",
+   "D1521",
+   "D1601"
+  ],
+  "titles": [
+   "Cataract-LMM Large-Scale Multi-Source Multi-Task Benchmark for Deep Learning in Surgical Video Analysis",
+   "Cataract-LMM Large-Scale Multi-Source Multi-Task Benchmark for Deep Learning in Surgical Video Analysis",
+   "Cataract-LMM Large-Scale Multi-Source Multi-Task Benchmark for Deep Learning in Surgical Video Analysis"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/4240f929464ce28cde40bc609b13d0a969af69ae"
+  ],
+  "doi": [
+   "10.1038/s41597-026-07464-0",
+   "10.1038/s41597-026-07464-0",
+   "10.1038/s41597-026-07464-0"
+  ],
+  "arxiv": [
+   "2510.16371",
+   "2510.16371",
+   "2510.16371"
+  ]
+ },
+ {
+  "id": "DS205",
+  "key": "u:D1509",
+  "category": "DATASET-C-COL",
+  "names": [],
+  "uids": [
+   "D1509"
+  ],
+  "titles": [
+   "Implementation of a prospective video databank for artificial intelligence model development, validation and clinical outcomes research in gastrointestinal endoscopy."
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/26ad3756100cfda2b5de6d80e011c59696d67ae4"
+  ],
+  "doi": [
+   "10.1016/j.gie.2026.06.036"
+  ],
+  "arxiv": [
+   null
+  ]
+ },
+ {
+  "id": "DS206",
+  "key": "u:D1510",
+  "category": "DATASET-C-SURG",
+  "names": [],
+  "uids": [
+   "D1510",
+   "D1575"
+  ],
+  "titles": [
+   "Multicenter fine annotated surgical video dataset for minimally invasive glaucoma surgery",
+   "Multicenter fine annotated surgical video dataset for minimally invasive glaucoma surgery"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/73745881fcb2de63f3d82e93963afc7448935ae4"
+  ],
+  "doi": [
+   "10.1038/s41597-026-07535-2",
+   "10.1038/s41597-026-07535-2"
+  ],
+  "arxiv": [
+   null,
+   null
+  ]
+ },
+ {
+  "id": "DS207",
+  "key": "n:surgbench",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgBench"
+  ],
+  "uids": [
+   "D1513",
+   "D1587"
+  ],
+  "titles": [
+   "SurgBench: A Unified Large-Scale Benchmark for Surgical Video Analysis",
+   "SurgBench: A Unified Large-Scale Benchmark for Surgical Video Analysis"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/5df106a7316c25422c3a85d3762bad91261dae5d"
+  ],
+  "doi": [
+   "10.48550/arXiv.2506.07603",
+   "10.48550/arXiv.2506.07603"
+  ],
+  "arxiv": [
+   "2506.07603",
+   "2506.07603"
+  ]
+ },
+ {
+  "id": "DS208",
+  "key": "n:surgpub-video",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgPub-Video"
+  ],
+  "uids": [
+   "D1514",
+   "D1588"
+  ],
+  "titles": [
+   "SurgPub-Video: A Comprehensive Surgical Video Framework for Enhanced Surgical Intelligence in Vision-Language Model",
+   "SurgPub-Video: A Comprehensive Surgical Video Framework for Enhanced Surgical Intelligence in Vision-Language Model"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/9026828a6bbe58b896419d8546aefab1e0bd92a0"
+  ],
+  "doi": [
+   "10.1609/aaai.v40i8.37593",
+   "10.1609/aaai.v40i8.37593"
+  ],
+  "arxiv": [
+   "2508.10054",
+   "2508.10054"
+  ]
+ },
+ {
+  "id": "DS209",
+  "key": "n:ophora-160k",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Ophora-160K"
+  ],
+  "uids": [
+   "D1516",
+   "D1596"
+  ],
+  "titles": [
+   "Ophora: A Large-Scale Data-Driven Text-Guided Ophthalmic Surgical Video Generation Model",
+   "Ophora: A Large-Scale Data-Driven Text-Guided Ophthalmic Surgical Video Generation Model"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/38e5f9aeac30c3b23bef3b1902a9b7cb22b4d5e7"
+  ],
+  "doi": [
+   "10.48550/arXiv.2505.07449",
+   "10.48550/arXiv.2505.07449"
+  ],
+  "arxiv": [
+   "2505.07449",
+   "2505.07449"
+  ]
+ },
+ {
+  "id": "DS210",
+  "key": "n:surg-qa",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Surg-QA"
+  ],
+  "uids": [
+   "D1517",
+   "D1602"
+  ],
+  "titles": [
+   "LLaVA-Surg: Towards Multimodal Surgical Assistant via Structured Surgical Video Learning",
+   "LLaVA-Surg: Towards Multimodal Surgical Assistant via Structured Surgical Video Learning"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/02a7f19c6a0a72e86ca53e12402befe5bd22f265"
+  ],
+  "doi": [
+   "10.48550/arXiv.2408.07981",
+   "10.48550/arXiv.2408.07981"
+  ],
+  "arxiv": [
+   "2408.07981",
+   "2408.07981"
+  ]
+ },
+ {
+  "id": "DS211",
+  "key": "u:D1518",
+  "category": "DATASET-C-SURG",
+  "names": [],
+  "uids": [
+   "D1518",
+   "D1597"
+  ],
+  "titles": [
+   "Watch and learn: leveraging expert knowledge and language for surgical video understanding",
+   "Watch and learn: leveraging expert knowledge and language for surgical video understanding"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/1ed540849b562d66e420a8552a1ca1eac7f26b74"
+  ],
+  "doi": [
+   "10.1007/s11548-025-03472-4",
+   "10.1007/s11548-025-03472-4"
+  ],
+  "arxiv": [
+   "2503.11392",
+   "2503.11392"
+  ]
+ }
+]

@@ -1,0 +1,686 @@
+[
+ {
+  "id": "DS221",
+  "name": "HecVL hierarchical video-text pretraining set (SVL / SVL-Pretrain surgical lecture videos extended with phase- and video-level texts)",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://arxiv.org/pdf/2405.10075 (saved: /media/user/LaCie/medvideo_gate/DS221/sources/arxiv_2405.10075.pdf)",
+   "https://arxiv.org/pdf/2307.15220 (saved: /media/user/LaCie/medvideo_gate/DS221/sources/arxiv_2307.15220_SurgVLP.pdf)",
+   "https://github.com/CAMMA-public/SurgVLP (README.md) (saved: /media/user/LaCie/medvideo_gate/DS221/sources/SurgVLP_README.md)",
+   "https://github.com/CAMMA-public/PeskaVLP (README.md) (saved: /media/user/LaCie/medvideo_gate/DS221/sources/PeskaVLP_README.md)",
+   "https://arxiv.org/pdf/2509.10555 (SurgLaVi paper, third-party statement) (saved: /media/user/LaCie/medvideo_gate/DS228/sources/arxiv_2509.10555.pdf)"
+  ],
+  "trajectory_unit": "one surgical lecture video crawled from WebSurg / EAES / YouTube (the dataset is not publicly released)",
+  "n_trajectories": 1076,
+  "n_trajectories_quote": "In total, we have 25, 578 clip-level, 10, 304 phase-level, and 1, 076 video-level video-text pairs.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "The clip-level video-text pairs contain short video clips of few seconds duration along with narration texts transcribed from lecture audio for capturing the short-term activity.",
+   "source": "https://arxiv.org/pdf/2405.10075 (saved: /media/user/LaCie/medvideo_gate/DS221/sources/arxiv_2405.10075.pdf)",
+   "reason": "No time-stamped action variable chosen by an operator is recorded: clip texts are automatic speech-recognition transcripts (AWS/Whisper) of the lecture audio, i.e. model-derived narration, not human action labels or kinematics. No collection-mode statement. Not publicly released."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "The metadata for each lecture video contains the title of the procedure, the abstract summary, and the key steps.",
+   "source": "https://arxiv.org/pdf/2405.10075 (saved: /media/user/LaCie/medvideo_gate/DS221/sources/arxiv_2405.10075.pdf)",
+   "reason": "No outcome variable (success, skill, complication, error or independent sensor measurement) is documented."
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "For example, the lecturer might comment on the importance of an adequate dissection to obtain tension-free anastomosis, even though that dissection step was shown at the procedure’s beginning or edited out.",
+   "source": "https://arxiv.org/pdf/2307.15220 (saved: /media/user/LaCie/medvideo_gate/DS221/sources/arxiv_2307.15220_SurgVLP.pdf)",
+   "reason": "Lecture videos are edited educational videos (steps can be 'edited out'), not continuous full recordings of a procedure; no video is released."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "we query the videos based on keywords from three online platforms, i.e., Websurg (Websurg, 2023), EAES (EAES, 2023), and YouTube (YouTube, 2023).",
+   "source": "https://arxiv.org/pdf/2307.15220 (saved: /media/user/LaCie/medvideo_gate/DS221/sources/arxiv_2307.15220_SurgVLP.pdf)",
+   "reason": "Only the source platform is documented; the documented per-video metadata are title, abstract and key steps (HecVL), with no site, device or operator field per video."
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "#### In this repo we provide: - SurgVLP weights trained on the SVL dataset. - Evaluation code for zero-shot recognition on surgical phases on the Cholec-80 dataset. [...] The code and the models are available for non-commercial scientific research purposes as defined in the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). [...] all previous datasets are either entirely private (SVL) or have private captions (GenSurg+).",
+   "source": "https://github.com/CAMMA-public/SurgVLP (README.md) (saved: /media/user/LaCie/medvideo_gate/DS221/sources/SurgVLP_README.md) ; https://arxiv.org/pdf/2509.10555 (SurgLaVi paper, third-party statement) (saved: /media/user/LaCie/medvideo_gate/DS228/sources/arxiv_2509.10555.pdf)",
+   "reason": "No dataset release or dataset licence found: the official repos (SurgVLP, PeskaVLP) release only weights and code under CC BY-NC-SA 4.0, and the SurgLaVi authors (third party) describe SVL as entirely private. The source videos are third-party WebSurg/EAES/YouTube content."
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "In total, we have 25, 578 clip-level, 10, 304 phase-level, and 1, 076 video-level video-text pairs.",
+   "source": "https://arxiv.org/pdf/2405.10075 (saved: /media/user/LaCie/medvideo_gate/DS221/sources/arxiv_2405.10075.pdf)",
+   "reason": "Storage size not documented."
+  },
+  "D7": {
+   "verdict": "UNKNOWN",
+   "quote": "The phase-level video-text pairs contain longer video segments with conceptual text summaries for capturing longer surgical video activity.",
+   "source": "https://arxiv.org/pdf/2405.10075 (saved: /media/user/LaCie/medvideo_gate/DS221/sources/arxiv_2405.10075.pdf)",
+   "reason": "Segment-level key-step texts come from the human-written lecture metadata and vary within a video, but the provenance of segment boundaries is not documented and nothing is public to inspect. Clip-level texts are ASR output (model-derived) and do not qualify."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 and no variable meets D7."
+  },
+  "ge200_trajectories": "PASS",
+  "counts": {
+   "collection_mode": "web-crawled surgical lecture videos (SVL-Pretrain: 1,124 WebSurg + 202 EAES/YouTube = 1,326; 1,076 used with video-level texts in HecVL); no action / collection-mode variable",
+   "site": "not documented per video",
+   "device": "not documented",
+   "operator": "not documented",
+   "annotation_type": "ASR narration per clip (25,578 clip pairs); key-step texts per phase segment (10,304); abstract per video (1,076)"
+  },
+  "registration_required": "unknown",
+  "subjects": {
+   "type": "in vivo human patients (clinical)",
+   "quote": "This is the case of a 56-year-old woman with abdominal pain due to a uterine myoma. A 5cm subserous myoma is located on the posterior aspect of the uterus.",
+   "source": "https://arxiv.org/pdf/2405.10075 (saved: /media/user/LaCie/medvideo_gate/DS221/sources/arxiv_2405.10075.pdf)"
+  },
+  "notes": "The S2 record is the HecVL method paper; the dataset it uses is the private SVL lecture-video collection, extended with metadata-derived texts. Downstream evaluation sets (Cholec80, AutoLaparo, MultiBypass140) are separate datasets (MultiBypass140 = DS223). ge200 counts lecture videos; they are edited lectures, so D3 fails."
+ },
+ {
+  "id": "DS222",
+  "name": "Endoscapes2023 (Endoscapes-CVS201 / Endoscapes-BBox201 / Endoscapes-Seg50)",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://www.nature.com/articles/s41597-025-04642-4 (saved: /media/user/LaCie/medvideo_gate/DS222/sources/sdata_s41597-025-04642-4.html)",
+   "https://arxiv.org/pdf/2312.12429 (saved: /media/user/LaCie/medvideo_gate/DS222/sources/arxiv_2312.12429.pdf)",
+   "https://github.com/CAMMA-public/Endoscapes (README.md) (saved: /media/user/LaCie/medvideo_gate/DS222/sources/Endoscapes_README.md)",
+   "https://github.com/CAMMA-public/Endoscapes/blob/main/LICENSE (saved: /media/user/LaCie/medvideo_gate/DS222/sources/Endoscapes_LICENSE)",
+   "https://s3.unistra.fr/camma_public/datasets/endoscapes/endoscapes.zip (HTTP HEAD) (saved: /media/user/LaCie/medvideo_gate/DS222/sources/endoscapes_zip_HEAD.txt)",
+   "https://s3.unistra.fr/camma_public/datasets/endoscapes/endoscapes.zip (member endoscapes/all_metadata.csv, read via HTTP range request) (saved: /media/user/LaCie/medvideo_gate/DS222/endoscapes__all_metadata.csv)",
+   "https://s3.unistra.fr/camma_public/datasets/endoscapes/endoscapes.zip (member endoscapes/test/annotation_coco_vid.json, read via HTTP range request) (saved: /media/user/LaCie/medvideo_gate/DS222/endoscapes__test__annotation_coco_vid.json)",
+   "https://s3.unistra.fr/camma_public/datasets/endoscapes/endoscapes.zip (central-directory listing via HTTP range requests) (saved: /media/user/LaCie/medvideo_gate/DS222/endoscapes.zip_central_directory_listing.txt)",
+   "https://physionet.org/content/endoscapes-2023/1.0.0/ (saved: /media/user/LaCie/medvideo_gate/DS222/sources/physionet_endoscapes-2023_1.0.0.html)"
+  ],
+  "trajectory_unit": "one laparoscopic cholecystectomy case (vid 1-201); the release holds only 1-fps frames of the edited region of interest (from 'Criterion x evaluable' to the first clip), not the full-length video",
+  "n_trajectories": 201,
+  "n_trajectories_quote": "201 full-length endoscopic videos of standard LC performed by 22 surgeons (10 attending surgeons and 12 surgical residents) in patients older than 18 years operated for benign conditions were retrospectively collected following patients’ written consent.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "_Endoscapes-CVS201_: 11090 frames from 201 videos annotated with CVS by 3 experts.",
+   "source": "https://github.com/CAMMA-public/Endoscapes (README.md) (saved: /media/user/LaCie/medvideo_gate/DS222/sources/Endoscapes_README.md)",
+   "reason": "No time-stamped action variable (gesture, triplet, kinematics): annotations are CVS criteria, bounding boxes and segmentation masks only."
+  },
+  "D2": {
+   "verdict": "PASS",
+   "quote": "The assessments of CVS criteria were done independently by three surgeons trained on a robust annotation protocol to reduce bias.",
+   "source": "https://www.nature.com/articles/s41597-025-04642-4 (saved: /media/user/LaCie/medvideo_gate/DS222/sources/sdata_s41597-025-04642-4.html)",
+   "reason": "Candidate outcome: expert-assessed achievement of the three CVS criteria on frames up to the first clip (end of the dissection shown), i.e. human annotation of post-dissection frames on the same trajectory. No action variable is recorded, so 'after the action' refers to the dissection itself. It is a frame-level visual-state assessment, not a clinical outcome."
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "Finally, the 201 LC videos were edited down to shorter video clips showing only from the “Criterion x evaluable” to the “End” timestamp (see Fig. 2 ). The average duration of these video clips is 283.1 ± 275.9 seconds. From this video clips, extracting 1 frame per second resulted in a dataset of 58813 frames.",
+   "source": "https://www.nature.com/articles/s41597-025-04642-4 (saved: /media/user/LaCie/medvideo_gate/DS222/sources/sdata_s41597-025-04642-4.html)",
+   "reason": "Release = 1-fps frames of one edited sub-segment per case (mean 283 s), not the full procedure recording. The archive's central directory has no video files (158,457 .jpg plus annotations). The lead may treat contiguous 1-fps region-of-interest sequences differently."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "Surgical videos were prospectively recorded at the Institute of Image-Guided Surgery (IHU-Strasbourg, France) between February 10, 2015, and June 7, 2019. [...] vid,frame,avg_cvs,C1,C2,C3,is_ds_keyframe,cvs_annotator_1,cvs_annotator_2,cvs_annotator_3,mask_path,label_path [...] \"videos\": [{\"name\": 162.0, \"id\": 162.0, \"fps\": 1}",
+   "source": "https://www.nature.com/articles/s41597-025-04642-4 (saved: /media/user/LaCie/medvideo_gate/DS222/sources/sdata_s41597-025-04642-4.html) ; https://s3.unistra.fr/camma_public/datasets/endoscapes/endoscapes.zip (member endoscapes/all_metadata.csv, read via HTTP range request) (saved: /media/user/LaCie/medvideo_gate/DS222/endoscapes__all_metadata.csv) ; https://s3.unistra.fr/camma_public/datasets/endoscapes/endoscapes.zip (member endoscapes/test/annotation_coco_vid.json, read via HTTP range request) (saved: /media/user/LaCie/medvideo_gate/DS222/endoscapes__test__annotation_coco_vid.json)",
+   "reason": "Single site. 22 surgeons are stated only at dataset level: neither all_metadata.csv nor the COCO 'videos' entries carry a surgeon, device or site field. All videos were re-encoded to 480x854."
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "The data released here are available for non-commercial scientific research purposes as defined in the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).",
+   "source": "https://github.com/CAMMA-public/Endoscapes (README.md) (saved: /media/user/LaCie/medvideo_gate/DS222/sources/Endoscapes_README.md)",
+   "reason": "CC BY-NC-SA 4.0 (GitHub/S3 release; LICENSE file is the CC BY-NC-SA 4.0 legal code) permits non-commercial research use and adapted material under ShareAlike, consistent with earlier batches. The PhysioNet copy is restricted-access under the PhysioNet Restricted Health Data License 1.5.0 (DUA)."
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "content-length: 6285499749",
+   "source": "https://s3.unistra.fr/camma_public/datasets/endoscapes/endoscapes.zip (HTTP HEAD) (saved: /media/user/LaCie/medvideo_gate/DS222/sources/endoscapes_zip_HEAD.txt)",
+   "reason": "endoscapes.zip = 6.29 GB (frames + annotations; no video in the release) <= 2.02 TB."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "All annotations are in COCO-format, with CVS labels encoded as image-level tags. Of note, the CVS labels represent the average of the 3 annotators for each criterion.",
+   "source": "https://github.com/CAMMA-public/Endoscapes (README.md) (saved: /media/user/LaCie/medvideo_gate/DS222/sources/Endoscapes_README.md)",
+   "reason": "Frame-level human CVS criteria (C1-C3) vary within trajectories: checked in all_metadata.csv, C1 varies within 154/201 videos, C2 130/201, C3 152/201. Bbox/segmentation labels are also human content annotations. Not acquisition metadata."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No acquisition factor meets D4 (single site; operator/device not recorded per trajectory)."
+  },
+  "ge200_trajectories": "PASS",
+  "counts": {
+   "collection_mode": "201 clinical LC cases performed by 22 surgeons (10 attending, 12 residents); no robotic/programmatic collection",
+   "site": "1 (IHU-Strasbourg): 201",
+   "device": "not recorded per video (all re-encoded 480x854, 30 fps)",
+   "operator": "22 surgeons at dataset level; no per-video field in released files",
+   "annotation_type": "CVS criteria by 3 surgeons every 5 s (11,090 frames); bboxes 1 frame/30 s (1,933 frames, 201 videos); instance/semantic segmentation 493 frames (50 videos); 58,813 1-fps frames in total"
+  },
+  "registration_required": "no",
+  "subjects": {
+   "type": "in vivo human patients (clinical)",
+   "quote": "201 full-length endoscopic videos of standard LC performed by 22 surgeons (10 attending surgeons and 12 surgical residents) in patients older than 18 years operated for benign conditions",
+   "source": "https://www.nature.com/articles/s41597-025-04642-4 (saved: /media/user/LaCie/medvideo_gate/DS222/sources/sdata_s41597-025-04642-4.html)"
+  },
+  "notes": "Direct S3 download (no login) per the GitHub README; the PhysioNet copy needs a signed DUA. all_metadata.csv (4.5 MB) and test/annotation_coco_vid.json (2.3 MB) were extracted from the remote zip by HTTP range requests (no frames or videos downloaded); saved under /media/user/LaCie/medvideo_gate/DS222/. Videos overlap other CAMMA datasets (see CAMMA dataset-overlaps repo)."
+ },
+ {
+  "id": "DS223",
+  "name": "MultiBypass140 (StrasBypass70 + BernBypass70; incl. IAE labels)",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://github.com/CAMMA-public/MultiBypass140 (README.md) (saved: /media/user/LaCie/medvideo_gate/DS223/sources/MultiBypass140_README.md)",
+   "https://arxiv.org/pdf/2312.11250 (saved: /media/user/LaCie/medvideo_gate/DS223/sources/arxiv_2312.11250.pdf)",
+   "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11870895/fullTextXML (Lavanchy et al., Surg Endosc 2025, doi:10.1007/s00464-025-11557-z) (saved: /media/user/LaCie/medvideo_gate/DS223/sources/PMC11870895_fullTextXML.xml)",
+   "https://s3.unistra.fr/camma_public/datasets/MultiBypass140/multibypass0[1-6]*.zip (HTTP HEAD) (saved: /media/user/LaCie/medvideo_gate/DS223/sources/multibypass_zips_HEAD.txt)"
+  ],
+  "trajectory_unit": "one complete LRYGB procedure video (SBP01-SBP70 Strasbourg, BBP01-BBP70 Bern)",
+  "n_trajectories": 140,
+  "n_trajectories_quote": "we introduce a large multi-centric multi-activity dataset consisting of 140 surgical videos (MultiBypass140) of laparoscopic Roux-en-Y gastric bypass (LRYGB) surgeries performed at two medical centers, i.e., the University Hospital of Strasbourg, France (StrasBypass70) and Inselspital, Bern University Hospital, Switzerland (BernBypass70).",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "The dataset has been fully annotated by two board-certified surgeons with an ontology consisting of 12 phases, 46 steps and 5 IAEs (with 5 scale of severity).",
+   "source": "https://github.com/CAMMA-public/MultiBypass140 (README.md) (saved: /media/user/LaCie/medvideo_gate/DS223/sources/MultiBypass140_README.md)",
+   "reason": "Only phase/step workflow labels and adverse-event labels; no gesture/triplet/kinematic action variable. 140 trajectories < 200."
+  },
+  "D2": {
+   "verdict": "PASS",
+   "quote": "IAE annotations integrated within the dataset. [...] The IAE categories include bleeding, mechanical injury, thermal injury, ischmic injury and insufficient closure of anastomosis. The severity of the events in the range of 1 - 5, with 0 for \"no IAE\". [...] The surgeon annotator watched the full MultiBypass140 video dataset and annotated the type, grade, and temporal duration of iAEs using the MOSaiC video annotation platform [ 16 ].",
+   "source": "https://github.com/CAMMA-public/MultiBypass140 (README.md) (saved: /media/user/LaCie/medvideo_gate/DS223/sources/MultiBypass140_README.md) ; https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11870895/fullTextXML (Lavanchy et al., Surg Endosc 2025, doi:10.1007/s00464-025-11557-z) (saved: /media/user/LaCie/medvideo_gate/DS223/sources/PMC11870895_fullTextXML.xml)",
+   "reason": "Candidate outcome: surgeon-annotated intraoperative adverse events (type, severity grade, temporal extent) on the same video, i.e. human annotation of post-action frames; released (multibypass06_corrected.zip per README). Label files were not inspected (see notes). Bern 30-day Clavien-Dindo complications are reported in the paper, but their release is not documented."
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "Patients undergoing LRYGB surgery in one of both hospitals with complete video recordings of the procedure were retrospectively included into MultiBypass140. [...] All videos have been anonymized by blacking out the potentially identifying frames outside the patient’s body.",
+   "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11870895/fullTextXML (Lavanchy et al., Surg Endosc 2025, doi:10.1007/s00464-025-11557-z) (saved: /media/user/LaCie/medvideo_gate/DS223/sources/PMC11870895_fullTextXML.xml) ; https://arxiv.org/pdf/2312.11250 (saved: /media/user/LaCie/medvideo_gate/DS223/sources/arxiv_2312.11250.pdf)",
+   "reason": "Complete procedure videos (25 fps); out-of-body frames are blacked out, not removed, so the timeline stays contiguous. Full videos are released."
+  },
+  "D4": {
+   "verdict": "PASS",
+   "quote": "MultiBypass140, a multicentric dataset of 140 LRYGB videos consisting of 70 videos from Strasbourg University Hospital, France (referred to as StrasBypass70) and 70 videos from Inselspital, Bern University Hospital, Switzerland (referred to as BernBypass70) [...] > python util/extract_frames.py --video_path datasets/MultiBypass140/BernBypass70/videos --output datasets/MultiBypass140/BernBypass70/frames/ [...] > python util/extract_frames.py --video_path datasets/MultiBypass140/StrasBypass70/videos --output datasets/MultiBypass140/StrasBypass70/frames/",
+   "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11870895/fullTextXML (Lavanchy et al., Surg Endosc 2025, doi:10.1007/s00464-025-11557-z) (saved: /media/user/LaCie/medvideo_gate/DS223/sources/PMC11870895_fullTextXML.xml) ; https://github.com/CAMMA-public/MultiBypass140 (README.md) (saved: /media/user/LaCie/medvideo_gate/DS223/sources/MultiBypass140_README.md)",
+   "reason": "Site is recorded per trajectory through the per-centre release directories (BernBypass70/ and StrasBypass70/) and video IDs (SBP01-SBP70, BBP01-BBP70 in the documented layout): 2 levels x 70 >= 20. The per-centre assignment comes from the README layout; the archives were not listed (see notes). Device (resolution) coincides with site; operator is not recorded per video."
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "This code, models, and datasets are available for non-commercial scientific research purposes as defined in the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).",
+   "source": "https://github.com/CAMMA-public/MultiBypass140 (README.md) (saved: /media/user/LaCie/medvideo_gate/DS223/sources/MultiBypass140_README.md)",
+   "reason": "CC BY-NC-SA 4.0 permits non-commercial research use and adapted material under ShareAlike (consistent with earlier batches)."
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "content-length: 91651078910 [...] content-length: 72783091133 [...] content-length: 1156292 [...] content-length: 89040698860 [...] content-length: 138223121400 [...] content-length: 28324911",
+   "source": "https://s3.unistra.fr/camma_public/datasets/MultiBypass140/multibypass0[1-6]*.zip (HTTP HEAD) (saved: /media/user/LaCie/medvideo_gate/DS223/sources/multibypass_zips_HEAD.txt)",
+   "reason": "Sum of the six documented archives = 391,727,471,506 bytes (391.7 GB) <= 2.02 TB."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "Annotations. Two board-certified surgeons with more than 10 years of clinical practice and extensive experience with surgical video analysis, annotated the MultiBypass140 dataset with activities at two levels of granularity, i.e., phases and steps.",
+   "source": "https://arxiv.org/pdf/2312.11250 (saved: /media/user/LaCie/medvideo_gate/DS223/sources/arxiv_2312.11250.pdf)",
+   "reason": "Frame-level human phase (12) and step (46) labels vary within each video; IAE labels also vary in time. Not acquisition metadata."
+  },
+  "D8": {
+   "verdict": "PENDING-LEAD",
+   "reason": "Site (2 x 70) meets D4 and phase/step labels meet D7; Cramer's V to be computed by the lead from the label files."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "140 clinical, surgeon-performed LRYGB procedures; no robotic/programmatic collection",
+   "site": "Strasbourg 70 / Bern 70",
+   "device": "Bern 720x576 @25 fps; Strasbourg 854x480 or 1920x1080 @25 fps re-encoded to 854x480 (not recorded per video separately; coincides with site)",
+   "operator": "Bern: 3 attending surgeons; Strasbourg: no surgeon data ('anonymous dataset'); not per video",
+   "annotation_type": "phases (12) and steps (46) per frame; iAEs (5 types, severity 0-5, temporal duration); official 5-fold 1-fps split metadata"
+  },
+  "registration_required": "no",
+  "subjects": {
+   "type": "in vivo human patients (clinical)",
+   "quote": "Patients undergoing LRYGB surgery in one of both hospitals with complete video recordings of the procedure were retrospectively included into MultiBypass140.",
+   "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11870895/fullTextXML (Lavanchy et al., Surg Endosc 2025, doi:10.1007/s00464-025-11557-z) (saved: /media/user/LaCie/medvideo_gate/DS223/sources/PMC11870895_fullTextXML.xml)"
+  },
+  "notes": "Archive sizes come from HTTP HEAD responses (saved). An attempt to list the archives' central directories and to fetch the two small label archives (multibypass03.zip 1.2 MB, multibypass06_corrected.zip 28 MB) was DENIED by the session's permission classifier (PII data handling). It was not retried, and no label file was inspected, so the D4/D7/D8 per-trajectory facts rest on the README and papers. Surgical technique differs systematically between centres (omentum division 94% vs 36%; mesenteric closure 100% vs 21%; Surg Endosc 2025), so site is entangled with technique and content. Strasbourg videos extend Bypass40 (DS111). ge200 FAIL (140) excludes it from the SS arm."
+ },
+ {
+  "id": "DS224",
+  "name": "POV-Surgery (synthetic egocentric hand/tool pose dataset)",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://arxiv.org/pdf/2307.10387 (saved: /media/user/LaCie/medvideo_gate/DS224/sources/arxiv_2307.10387.pdf)",
+   "https://batfacewayne.github.io/POV_Surgery_io/ (saved: /media/user/LaCie/medvideo_gate/DS224/sources/POV_Surgery_io.html)",
+   "https://github.com/BatFaceWayne/POV_Surgery (README.md) (saved: /media/user/LaCie/medvideo_gate/DS224/sources/POV_Surgery_README.md)",
+   "https://github.com/BatFaceWayne/POV_Surgery/blob/main/LICENSE (saved: /media/user/LaCie/medvideo_gate/DS224/sources/POV_Surgery_LICENSE)",
+   "https://drive.google.com/drive/folders/1nSDig2cEHscCPgG10-VcSW3Q1zKge4tP (public folder listing) (saved: /media/user/LaCie/medvideo_gate/DS224/sources/gdrive_folder_POV_Surgery.html)"
+  ],
+  "trajectory_unit": "one rendered egocentric RGB-D sequence of a simulated tool-manipulation activity (scalpel / friem / diskplacer)",
+  "n_trajectories": 53,
+  "n_trajectories_quote": "Our dataset consists of 53 sequences and 88,329 frames, featuring high-resolution RGB-D video streams with activity annotations, accurate 3D and 2D annotations for hand-object pose, and 2D hand-object segmentation masks.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "It features a body motion capture module to model realistic body movement sequences during artificial surgeries and a hand-object manipulation generation module to model the grasp evolution sequences.",
+   "source": "https://arxiv.org/pdf/2307.10387 (saved: /media/user/LaCie/medvideo_gate/DS224/sources/arxiv_2307.10387.pdf)",
+   "reason": "Synthetic: hand-tool manipulation sequences are generated by an optimisation pipeline (grasp generation/selection/refinement); body motion comes from motion capture of participants in simulated surgeries. No recorded per-trajectory human action variable; 53 < 200."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "featuring high-resolution RGB-D video streams with activity annotations, accurate 3D and 2D annotations for hand-object pose, and 2D hand-object segmentation masks",
+   "source": "https://arxiv.org/pdf/2307.10387 (saved: /media/user/LaCie/medvideo_gate/DS224/sources/arxiv_2307.10387.pdf)",
+   "reason": "No outcome variable."
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "we propose a novel synthetic data generation pipeline that goes beyond single image cases to synthesize realistic temporal sequences of surgical tool manipulation from an egocentric perspective. [...] The POV-Surgery dataset consists of 36 sequences with 55,078 frames in the training set and 17 sequences with 33,161 frames in the testing set, respectively.",
+   "source": "https://arxiv.org/pdf/2307.10387 (saved: /media/user/LaCie/medvideo_gate/DS224/sources/arxiv_2307.10387.pdf)",
+   "reason": "Continuous rendered RGB-D sequences (mean ~1,670 frames per sequence). They are synthetic, not real video."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "Three bloodied glove textures and one scene created from a room scanning of a surgery room are only used in the testing set to measure generalizability.",
+   "source": "https://arxiv.org/pdf/2307.10387 (saved: /media/user/LaCie/medvideo_gate/DS224/sources/arxiv_2307.10387.pdf)",
+   "reason": "No site, device or operator factor is recorded per sequence (a single rendering pipeline; textures/scenes are rendering choices). 53 sequences."
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "Please remember that if you wish to download and utilize our dataset, compliance with the licensing conditions is mandatory. [...] The code and the dataset are publicly available for research purposes.",
+   "source": "https://github.com/BatFaceWayne/POV_Surgery (README.md) (saved: /media/user/LaCie/medvideo_gate/DS224/sources/POV_Surgery_README.md) ; https://batfacewayne.github.io/POV_Surgery_io/ (saved: /media/user/LaCie/medvideo_gate/DS224/sources/POV_Surgery_io.html)",
+   "reason": "Dataset licence terms are not stated; the GitHub repository (code) is GPL-3.0; SMPL-X/MANO body-model licences apply to the generation code. Release of derived features is not addressed."
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "Compressed archive POV_Surgery_data.zip 共有中です 2023/10/03 57.03 GB Download",
+   "source": "https://drive.google.com/drive/folders/1nSDig2cEHscCPgG10-VcSW3Q1zKge4tP (public folder listing) (saved: /media/user/LaCie/medvideo_gate/DS224/sources/gdrive_folder_POV_Surgery.html)",
+   "reason": "POV_Surgery_data.zip = 57.03 GB (other archives in the folder total ~4.1 GB) <= 2.02 TB. Text is from the public Google Drive folder listing (Japanese UI locale)."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "accurate 3D and 2D annotations for hand-object pose, and 2D hand-object segmentation masks",
+   "source": "https://arxiv.org/pdf/2307.10387 (saved: /media/user/LaCie/medvideo_gate/DS224/sources/arxiv_2307.10387.pdf)",
+   "reason": "Per-frame rendering ground truth of hand and tool pose/segmentation (scene state) varies within each sequence; not acquisition metadata. It is simulator ground truth of a synthetic scene."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "synthetic rendering (Blender); body motion from multi-view MoCap of participants during simulated surgeries; grasps optimisation-generated",
+   "site": "n/a (synthetic)",
+   "device": "rendered egocentric camera (single pipeline)",
+   "operator": "not documented per sequence",
+   "annotation_type": "activity annotations; 3D/2D hand and tool pose; hand-object segmentation; depth"
+  },
+  "registration_required": "no",
+  "subjects": {
+   "type": "simulation",
+   "quote": "we propose POV-Surgery, a large-scale, synthetic, egocentric dataset focusing on pose estimation for hands with different surgical gloves and three orthopedic surgical instruments, namely scalpel, friem, and diskplacer.",
+   "source": "https://arxiv.org/pdf/2307.10387 (saved: /media/user/LaCie/medvideo_gate/DS224/sources/arxiv_2307.10387.pdf)"
+  },
+  "notes": "Dataset download is from a public Google Drive folder (no login). Running the generation code requires SMPL-X/MANO registration (not needed for the dataset itself). The 6,557-image real-life test set is separate still images."
+ },
+ {
+  "id": "DS225",
+  "name": "SATA (Surgical Action-Text Alignment) dataset, Cosmos-H-Surgical",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://arxiv.org/pdf/2512.23162 (saved: /media/user/LaCie/medvideo_gate/DS225/sources/arxiv_2512.23162.pdf)",
+   "https://github.com/NVIDIA-Medtech/Cosmos-H-Surgical (README.md) (saved: /media/user/LaCie/medvideo_gate/DS225/sources/CosmosHSurgical_README.md)",
+   "https://huggingface.co/nvidia/Cosmos-H-Surgical (model card README.md) (saved: /media/user/LaCie/medvideo_gate/DS225/sources/hf_nvidia_Cosmos-H-Surgical_README.md)",
+   "https://arxiv.org/html/2512.23162 (v4) (saved: /media/user/LaCie/medvideo_gate/DS225/sources/arxiv_html_2512.23162.html)",
+   "Hugging Face dataset search: SATA, SurgWorld, Cosmos-H-Surgical, author=nvidia (no SATA dataset found)",
+   "WebSearch (secondary pages emergentmind.com / awesomepapers.io; not used for verdicts)"
+  ],
+  "trajectory_unit": "one source surgical video from which action clips were cut (number not documented); released unit would be a short action clip",
+  "n_trajectories": null,
+  "n_trajectories_quote": "We introduce SATA, a large-scale surgical action–text alignment dataset comprising 2,447 expert-annotated video clips (over 300k frames) collected across 8 different surgery types.",
+  "D1": {
+   "verdict": "UNKNOWN",
+   "quote": "Each clip captures one of four fundamental actions: needle grasping (689), needle puncture (989), suture pulling (475), and knotting (294), which provides diverse visual and procedural coverage.",
+   "source": "https://arxiv.org/pdf/2512.23162 (saved: /media/user/LaCie/medvideo_gate/DS225/sources/arxiv_2512.23162.pdf)",
+   "reason": "Expert action categories exist per clip (segment level), but the number of distinct source procedures, the clips' time positions within them, and the collection mode are not documented, and SATA is not publicly available."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "its fine-grained action labels and detailed text descriptions capture precise tool–tissue interactions and spatial relationships needed for training world models.",
+   "source": "https://arxiv.org/pdf/2512.23162 (saved: /media/user/LaCie/medvideo_gate/DS225/sources/arxiv_2512.23162.pdf)",
+   "reason": "No outcome variable."
+  },
+  "D3": {
+   "verdict": "FAIL",
+   "quote": "comprising 2,447 expert-annotated video clips (over 300k frames)",
+   "source": "https://arxiv.org/pdf/2512.23162 (saved: /media/user/LaCie/medvideo_gate/DS225/sources/arxiv_2512.23162.pdf)",
+   "reason": "Short action clips (~120 frames each on average), not continuous procedure recordings."
+  },
+  "D4": {
+   "verdict": "UNKNOWN",
+   "quote": "SATA is curated by aggregating and re-annotating videos from credentialed YouTube surgical channels [32] and publicly available datasets, including GraSP [33], SAR-RARP50 [34], Multiypass140 [35], SurgicalActions160 [36], AutoLaparo [37], and HeiCo [38].",
+   "source": "https://arxiv.org/pdf/2512.23162 (saved: /media/user/LaCie/medvideo_gate/DS225/sources/arxiv_2512.23162.pdf)",
+   "reason": "A per-clip source-dataset field (a site proxy) may exist, but SATA is not public and no per-clip site/device/operator assignment is documented."
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "Code and model weights in this release are provided under [OpenMDW-1.1](LICENSE).",
+   "source": "https://github.com/NVIDIA-Medtech/Cosmos-H-Surgical (README.md) (saved: /media/user/LaCie/medvideo_gate/DS225/sources/CosmosHSurgical_README.md)",
+   "reason": "No public SATA release found (GitHub repo ships only a synthetic toy post-training dataset; HF model card lists synthetic data + GraSP; no HF dataset). No primary source states a SATA licence. A secondary web page claims CC BY 4.0, unverified. Source videos carry YouTube and third-party dataset terms."
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "comprising 2,447 expert-annotated video clips (over 300k frames)",
+   "source": "https://arxiv.org/pdf/2512.23162 (saved: /media/user/LaCie/medvideo_gate/DS225/sources/arxiv_2512.23162.pdf)",
+   "reason": "Storage size not documented."
+  },
+  "D7": {
+   "verdict": "UNKNOWN",
+   "quote": "Each clip captures one of four fundamental actions",
+   "source": "https://arxiv.org/pdf/2512.23162 (saved: /media/user/LaCie/medvideo_gate/DS225/sources/arxiv_2512.23162.pdf)",
+   "reason": "Segment-level expert labels and text exist, but each clip has a single label; within-procedure variation cannot be assessed without a procedure-level release."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 and no variable meets D7."
+  },
+  "ge200_trajectories": "UNKNOWN",
+  "counts": {
+   "collection_mode": "clips re-annotated from YouTube surgical channels and public datasets (GraSP, SAR-RARP50, MultiBypass140, SurgicalActions160, AutoLaparo, HeiCo)",
+   "site": "not documented per clip",
+   "device": "not documented",
+   "operator": "not documented",
+   "annotation_type": "4 action classes per clip (689 / 989 / 475 / 294) + free-text descriptions"
+  },
+  "registration_required": "unknown",
+  "subjects": {
+   "type": "unknown",
+   "quote": "SATA is curated by aggregating and re-annotating videos from credentialed YouTube surgical channels [32] and publicly available datasets, including GraSP [33], SAR-RARP50 [34], Multiypass140 [35], SurgicalActions160 [36], AutoLaparo [37], and HeiCo [38].",
+   "source": "https://arxiv.org/pdf/2512.23162 (saved: /media/user/LaCie/medvideo_gate/DS225/sources/arxiv_2512.23162.pdf)"
+  },
+  "notes": "The named public sources are clinical surgical datasets, but the YouTube portion is not characterised (clinical vs training/animal), so subjects.type = unknown. The paper's real-robot trajectories (for policy learning) are separate from SATA. arXiv v1 was titled 'SurgWorld'."
+ },
+ {
+  "id": "DS226",
+  "name": "BRS (Bowel Repair Simulation) / VTS (Variable Tissue Simulation) open-surgery simulation datasets",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://arxiv.org/pdf/2303.07814 (saved: /media/user/LaCie/medvideo_gate/DS226/sources/arxiv_2303.07814.pdf)",
+   "https://github.com/AdamGoldbraikh/MS-TCRNet (README.md) (saved: /media/user/LaCie/medvideo_gate/DS226/sources/MS-TCRNet_README.md)",
+   "https://arxiv.org/pdf/2110.13972 (VTS source paper, ref [25]) (saved: /media/user/LaCie/medvideo_gate/DS226/sources/arxiv_2110.13972_VTS.pdf)",
+   "https://arxiv.org/pdf/2111.06098 (BRS source paper, ref [26]) (saved: /media/user/LaCie/medvideo_gate/DS226/sources/arxiv_2111.06098_BRS.pdf)"
+  ],
+  "trajectory_unit": "one simulated open-surgery task recording (VTS: one suturing task, 2-6 min; BRS: one porcine enterotomy repair, ~10 min), two synchronized cameras + hand EM kinematics",
+  "n_trajectories": 255,
+  "n_trajectories_quote": "The dataset comprises 255 porcine enterotomy repair procedures performed by surgeons of various skill levels. [...] Eleven medical students, thirteen attending surgeons, and one resident completed 100 procedures, each lasting 2-6 minutes.",
+  "D1": {
+   "verdict": "UNKNOWN",
+   "quote": "Motion data was captured using electromagnetic sensors (NDI, trackSTAR Model 180) attached to participants’ index, thumb, and wrist under surgical gloves (see Fig.1- A). [...] Labeling relied on the video data, defining activities by start and end times. [...] Among participants, 52 performed a single-layer repair on the large hole, with only the suturing part annotated, resulting in 52 sequences in this dataset.",
+   "source": "https://arxiv.org/pdf/2303.07814 (saved: /media/user/LaCie/medvideo_gate/DS226/sources/arxiv_2303.07814.pdf)",
+   "reason": "Time-stamped human gesture/maneuver labels and recorded hand kinematics exist; all procedures are manual open surgery by human participants (no robot). VTS: 100 < 200 -> FAIL. BRS: labels exist for only 52 sequences, and kinematic coverage of all 255 procedures is not stated -> UNKNOWN. Entry verdict = UNKNOWN."
+  },
+  "D2": {
+   "verdict": "UNKNOWN",
+   "quote": "in order to assess the quality of the repair, a dedicated device was developed to examine [...] if the repaired bowel leaked.",
+   "source": "https://arxiv.org/pdf/2111.06098 (BRS source paper, ref [26]) (saved: /media/user/LaCie/medvideo_gate/DS226/sources/arxiv_2111.06098_BRS.pdf)",
+   "reason": "BRS: a leak test of the repaired bowel is a candidate post-action sensor outcome, but whether per-procedure leak results are part of the dataset is undocumented and nothing is public. VTS: no outcome (motion metrics are computed by the authors' model) -> FAIL."
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "Thus, there were a total of 100 videos, each approximately 2-6 minutes long. [...] On average most participants finished the procedure in approximately 10 minutes. [...] Additionally, video data was captured, with two synchronized cameras: one close-up on the simulation area and one overview, using MotionMonitor software (Innovative Sports Training, Inc.).",
+   "source": "https://arxiv.org/pdf/2110.13972 (VTS source paper, ref [25]) (saved: /media/user/LaCie/medvideo_gate/DS226/sources/arxiv_2110.13972_VTS.pdf) ; https://arxiv.org/pdf/2111.06098 (BRS source paper, ref [26]) (saved: /media/user/LaCie/medvideo_gate/DS226/sources/arxiv_2111.06098_BRS.pdf) ; https://arxiv.org/pdf/2303.07814 (saved: /media/user/LaCie/medvideo_gate/DS226/sources/arxiv_2303.07814.pdf)",
+   "reason": "Whole-task recordings (VTS 2-6 min; BRS ~10 min) with synchronized cameras and kinematics."
+  },
+  "D4": {
+   "verdict": "UNKNOWN",
+   "quote": "There were ten stations in the area, each containing a tray of surgical instruments, sutures, absorbent pads, a step stool, a stopwatch, an overhead light and a tray containing a segment of porcine bowel that had a standardized injury. In each station, one camera was fixed on a frame to collect video data from above. [...] Eleven medical students, one resident, and 13 attending surgeons participated in the study. Each participant performed twice on the friable tissue simulator and twice on the artery simulator.",
+   "source": "https://arxiv.org/pdf/2111.06098 (BRS source paper, ref [26]) (saved: /media/user/LaCie/medvideo_gate/DS226/sources/arxiv_2111.06098_BRS.pdf) ; https://arxiv.org/pdf/2110.13972 (VTS source paper, ref [25]) (saved: /media/user/LaCie/medvideo_gate/DS226/sources/arxiv_2110.13972_VTS.pdf)",
+   "reason": "BRS: one venue with 10 camera stations; a per-procedure station/camera assignment may exist but is not public -> UNKNOWN. Operator: one procedure per participant. VTS: 25 participants x 4 procedures (no operator with >= 20), single study site -> FAIL."
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "## VTS Dataset [Data request](https://docs.google.com/forms/d/e/1FAIpQLSeKvalfDwLBkxh1PgrVH14wu2a8UXl7xi0bSAYEU0z9yPrdUA/viewform?usp=sf_link/)",
+   "source": "https://github.com/AdamGoldbraikh/MS-TCRNet (README.md) (saved: /media/user/LaCie/medvideo_gate/DS226/sources/MS-TCRNet_README.md)",
+   "reason": "VTS: access via a request form; no licence stated (GitHub repo has no licence file; VTS kinematics/transcriptions sit in data/VTS). BRS: no release or licence found."
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "Thus, there were a total of 100 videos, each approximately 2-6 minutes long.",
+   "source": "https://arxiv.org/pdf/2110.13972 (VTS source paper, ref [25]) (saved: /media/user/LaCie/medvideo_gate/DS226/sources/arxiv_2110.13972_VTS.pdf)",
+   "reason": "Storage size not documented for either dataset."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "The VTS dataset identified six suturing gestures: background, needle passing, suture pulling, instrumental tie, knot laying, and suture cutting.",
+   "source": "https://arxiv.org/pdf/2303.07814 (saved: /media/user/LaCie/medvideo_gate/DS226/sources/arxiv_2303.07814.pdf)",
+   "reason": "Human time-stamped gesture/maneuver segments vary within each procedure (VTS transcriptions_gestures in the repo; BRS 5 maneuvers for 52 sequences). Hand EM kinematics are also sensor ground truth."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 (BRS station assignment unverifiable; VTS no qualifying factor)."
+  },
+  "ge200_trajectories": "PASS",
+  "counts": {
+   "collection_mode": "all human-performed manual open-surgery simulation; VTS 100 procedures / 25 participants (11 students, 13 attendings, 1 resident); BRS 255 procedures by surgeons of various skill at the 2019 ACS Clinical Congress (BRS paper: ~200 participants, ~400 two-view videos), 52 annotated sequences",
+   "site": "VTS: one study; BRS: one venue (ACS Clinical Congress 2019, San Francisco)",
+   "device": "BRS: 10 stations, each with top-view + close-up camera (not per trajectory); EM trackSTAR 180 sensors in both",
+   "operator": "VTS: 25 x 4; BRS: 1 procedure per participant",
+   "annotation_type": "VTS 6 gestures + tool usage per hand; BRS 5 maneuvers; 36 kinematic variables (index/thumb/wrist, both hands)"
+  },
+  "registration_required": "yes",
+  "subjects": {
+   "type": "mixed",
+   "quote": "The materials were tissue paper and rubber balloons, with two repetitions for each. [...] The dataset comprises 255 porcine enterotomy repair procedures performed by surgeons of various skill levels.",
+   "source": "https://arxiv.org/pdf/2303.07814 (saved: /media/user/LaCie/medvideo_gate/DS226/sources/arxiv_2303.07814.pdf)"
+  },
+  "notes": "This entry bundles two separately collected datasets. Entry verdicts take the more favourable component, and each component's verdict is in the reason. ge200 PASS rests on BRS's 255 recorded procedures only (VTS 100 fails), and BRS is not publicly released. registration_required = yes for VTS (request form); BRS release route is unknown. subjects: VTS = bench-top phantom (tissue paper/balloons), BRS = ex vivo porcine bowel -> mixed. The two source papers' participant counts differ (255 procedures vs ~200 participants)."
+ },
+ {
+  "id": "DS227",
+  "name": "SurgPose (dVRK articulated tool pose, UV-paint keypoints)",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://arxiv.org/pdf/2502.11534 (saved: /media/user/LaCie/medvideo_gate/DS227/sources/arxiv_2502.11534.pdf)",
+   "https://surgpose.github.io/ (saved: /media/user/LaCie/medvideo_gate/DS227/sources/surgpose_github_io.html)",
+   "https://github.com/zijianwu1231/SurgPose (README.md) (saved: /media/user/LaCie/medvideo_gate/DS227/sources/SurgPose_README.md)",
+   "https://zenodo.org/api/records/15278516 (saved: /media/user/LaCie/medvideo_gate/DS227/sources/zenodo_api_records_15278516.json)"
+  ],
+  "trajectory_unit": "one programmed dVRK PSM trajectory (1,000 steps) recorded as a stereo video pair (folder 000000-000033)",
+  "n_trajectories": 34,
+  "n_trajectories_quote": "There are 34 folders (000000-000033) of data.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "Then we randomly select trajectory points in this workspace and use a periodic interpolating cubic spline [37] to smoothly connect these random points. [...] For joints 4-7 we generate periodic sinusoidal trajectories.",
+   "source": "https://arxiv.org/pdf/2502.11534 (saved: /media/user/LaCie/medvideo_gate/DS227/sources/arxiv_2502.11534.pdf)",
+   "reason": "Trajectories are programmatically generated (random spline + sinusoidal joints) and executed by the robot; no human-chosen actions. 34 < 200."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "SurgPose provides keypoints annotation, stereo frames, and kinematics for multi-class surgical tools.",
+   "source": "https://surgpose.github.io/ (saved: /media/user/LaCie/medvideo_gate/DS227/sources/surgpose_github_io.html)",
+   "reason": "No outcome variable."
+  },
+  "D3": {
+   "verdict": "PASS",
+   "quote": "we execute the same trajectory under different lighting conditions to collect raw videos and keypoint annotations [...] 4) Capture left and right frames end while",
+   "source": "https://arxiv.org/pdf/2502.11534 (saved: /media/user/LaCie/medvideo_gate/DS227/sources/arxiv_2502.11534.pdf)",
+   "reason": "Each trajectory is one continuous stereo video of the whole programmed episode (left_video.mp4 / right_video.mp4 per folder)."
+  },
+  "D4": {
+   "verdict": "FAIL",
+   "quote": "We collect 30 trajectories with diverse annotations using a da Vinci IS1200 system with the da Vinci Research Kit (dVRK), with ex vivo tissue background.",
+   "source": "https://arxiv.org/pdf/2502.11534 (saved: /media/user/LaCie/medvideo_gate/DS227/sources/arxiv_2502.11534.pdf)",
+   "reason": "One site, one robot/camera system, no operator; 34 trajectories < 40."
+  },
+  "D5": {
+   "verdict": "PASS",
+   "quote": "\"license\": {\"id\": \"cc-by-4.0\"}",
+   "source": "https://zenodo.org/api/records/15278516 (saved: /media/user/LaCie/medvideo_gate/DS227/sources/zenodo_api_records_15278516.json)",
+   "reason": "CC BY 4.0 (Zenodo, open access) permits research use and release of derived material with attribution."
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "\"key\": \"000033.zip\", \"size\": 1130431690",
+   "source": "https://zenodo.org/api/records/15278516 (saved: /media/user/LaCie/medvideo_gate/DS227/sources/zenodo_api_records_15278516.json)",
+   "reason": "Sum of the 34 Zenodo files = 23,050,967,968 bytes (23.05 GB) <= 2.02 TB."
+  },
+  "D7": {
+   "verdict": "PASS",
+   "quote": "The forward kinematics `api_cp_data.yaml` and joint states `api_jp_data.yaml` are obtained using dVRK API `measured_cp()` and `measured_jp()`.",
+   "source": "https://github.com/zijianwu1231/SurgPose (README.md) (saved: /media/user/LaCie/medvideo_gate/DS227/sources/SurgPose_README.md)",
+   "reason": "Per-frame measured instrument pose and joint states (sensor ground truth of instrument state) plus UV-derived keypoints vary within trajectories; not acquisition metadata."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4."
+  },
+  "ge200_trajectories": "FAIL",
+  "counts": {
+   "collection_mode": "programmatic (random spline + sinusoidal joint trajectories), each executed twice (white / UV light)",
+   "site": "1 (UBC Robotics and Control Laboratory)",
+   "device": "1 (da Vinci IS1200 + dVRK, stereo endoscope)",
+   "operator": "none (programmatic)",
+   "annotation_type": "7 keypoints per instrument (~120k instances), bboxes, part segmentation, forward kinematics, joint states, gripper angle"
+  },
+  "registration_required": "no",
+  "subjects": {
+   "type": "ex vivo",
+   "quote": "using a da Vinci IS1200 system with the da Vinci Research Kit (dVRK), with ex vivo tissue background",
+   "source": "https://arxiv.org/pdf/2502.11534 (saved: /media/user/LaCie/medvideo_gate/DS227/sources/arxiv_2502.11534.pdf)"
+  },
+  "notes": "Paper says 30 trajectories; Zenodo/README release has 34 folders."
+ },
+ {
+  "id": "DS228",
+  "name": "SurgLaVi / SurgLaVi-β (open-source subset)",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://arxiv.org/pdf/2509.10555 (saved: /media/user/LaCie/medvideo_gate/DS228/sources/arxiv_2509.10555.pdf)",
+   "https://github.com/aperezr20/SurgLaVi (README.md) (saved: /media/user/LaCie/medvideo_gate/DS228/sources/SurgLaVi_README.md)",
+   "https://huggingface.co/api/datasets/aleperez24/SurgLaVi?blobs=true (saved: /media/user/LaCie/medvideo_gate/DS228/sources/hf_api_datasets_aleperez24_SurgLaVi.json)",
+   "https://huggingface.co/datasets/aleperez24/SurgLaVi (README.md) (saved: /media/user/LaCie/medvideo_gate/DS228/sources/hf_SurgLaVi_README.md)"
+  ],
+  "trajectory_unit": "one YouTube surgical video (downloaded by the user from its ID); released annotations are hierarchical clip–caption pairs within it",
+  "n_trajectories": 2464,
+  "n_trajectories_quote": "SurgLaVi-β represents the open-source subset of SurgLaVi, containing 2,464 videos with 465 hours of surgical footage, sampled at 15 to 30 fps (mean: 28.75 fps), and 112,757 clip–caption pairs following the same hierarchical structure.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "At the core of SurgLaVi lies a fully automated pipeline that systematically generates fine-grained transcriptions of surgical videos and segments them into coherent procedural units.",
+   "source": "https://github.com/aperezr20/SurgLaVi (README.md) (saved: /media/user/LaCie/medvideo_gate/DS228/sources/SurgLaVi_README.md)",
+   "reason": "Segments and captions are produced automatically (ASR + LLM); no human action labels or kinematics."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "At the core of SurgLaVi lies a fully automated pipeline that systematically generates fine-grained transcriptions of surgical videos and segments them into coherent procedural units.",
+   "source": "https://github.com/aperezr20/SurgLaVi (README.md) (saved: /media/user/LaCie/medvideo_gate/DS228/sources/SurgLaVi_README.md)",
+   "reason": "No outcome variable; all annotations are model-derived."
+  },
+  "D3": {
+   "verdict": "UNKNOWN",
+   "quote": "These videos originate from surgeons and institutions that publicly share operative recordings for educational purposes.",
+   "source": "https://arxiv.org/pdf/2509.10555 (saved: /media/user/LaCie/medvideo_gate/DS228/sources/arxiv_2509.10555.pdf)",
+   "reason": "Whole YouTube videos are downloadable from the released IDs, but whether these uploads are unedited full-procedure recordings is not documented. The released annotation units are clips."
+  },
+  "D4": {
+   "verdict": "UNKNOWN",
+   "quote": "Alongside curated captions, the database provides raw captions with filtering flags, full transcriptions, and video metadata. [...] \"rfilename\":\"data/surglavi_beta.db\",\"blobId\":\"02deab77a3d29a4b8ea081a0d72d7e421028e22e\",\"size\":125071360",
+   "source": "https://github.com/aperezr20/SurgLaVi (README.md) (saved: /media/user/LaCie/medvideo_gate/DS228/sources/SurgLaVi_README.md) ; https://huggingface.co/api/datasets/aleperez24/SurgLaVi?blobs=true (saved: /media/user/LaCie/medvideo_gate/DS228/sources/hf_api_datasets_aleperez24_SurgLaVi.json)",
+   "reason": "Per-video metadata exists in the SQL database, which was not inspected (125 MB, above the 50 MB fetch limit). The documentation lists no site, device or operator field."
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "This dataset is released under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/). [...] \"license\":\"cc-by-sa-4.0\"",
+   "source": "https://github.com/aperezr20/SurgLaVi (README.md) (saved: /media/user/LaCie/medvideo_gate/DS228/sources/SurgLaVi_README.md) ; https://huggingface.co/api/datasets/aleperez24/SurgLaVi?blobs=true (saved: /media/user/LaCie/medvideo_gate/DS228/sources/hf_api_datasets_aleperez24_SurgLaVi.json)",
+   "reason": "The annotation database is CC BY-NC-SA 4.0 per GitHub but cc-by-sa-4.0 per the HF card (inconsistent; both are share-alike). The videos are third-party YouTube content not covered by either licence, so the right to release features derived from the video is not established."
+  },
+  "D6": {
+   "verdict": "UNKNOWN",
+   "quote": "containing 2,464 videos with 465 hours of surgical footage",
+   "source": "https://arxiv.org/pdf/2509.10555 (saved: /media/user/LaCie/medvideo_gate/DS228/sources/arxiv_2509.10555.pdf)",
+   "reason": "Video storage not documented (465 h downloaded by the user); released DB 125 MB + transcriptions.zip 116 MB."
+  },
+  "D7": {
+   "verdict": "FAIL",
+   "quote": "Using our automated pipeline, we also construct SurgLaVi−β, an open-source derivative of 113k clip–caption pairs built entirely from public data",
+   "source": "https://arxiv.org/pdf/2509.10555 (saved: /media/user/LaCie/medvideo_gate/DS228/sources/arxiv_2509.10555.pdf)",
+   "reason": "Segment-level captions are model-derived (ASR + LLM), neither human annotation nor sensor ground truth."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No factor meets D4 and no variable meets D7."
+  },
+  "ge200_trajectories": "PASS",
+  "counts": {
+   "collection_mode": "web videos from prior YouTube scrapes (LEMON 3,110 + GenSurgery 4,172 = 6,812 source videos; 2,464 retained in SurgLaVi-β); full SurgLaVi adds 2,945 private archive videos",
+   "site": "not documented (DB metadata not inspected)",
+   "device": "not documented",
+   "operator": "not documented",
+   "annotation_type": "automated hierarchical clip–caption pairs (coarse/mid/fine), ASR transcriptions, filtering flags"
+  },
+  "registration_required": "no",
+  "subjects": {
+   "type": "in vivo human patients (clinical)",
+   "quote": "These videos originate from surgeons and institutions that publicly share operative recordings for educational purposes.",
+   "source": "https://arxiv.org/pdf/2509.10555 (saved: /media/user/LaCie/medvideo_gate/DS228/sources/arxiv_2509.10555.pdf)"
+  },
+  "notes": "Annotation DB is public on Google Drive / Hugging Face (HF gated: false). Some YouTube videos need a YouTube login (cookies). Overlaps LEMON (DS229) source videos. subjects.type rests on 'operative recordings'; the paper has no explicit human-patient statement."
+ },
+ {
+  "id": "DS229",
+  "name": "LEMON (formerly Surg-3M), Large Endoscopic MONocular dataset",
+  "category": "DATASET-C-SURG",
+  "sources_consulted": [
+   "https://arxiv.org/pdf/2503.19740 (saved: /media/user/LaCie/medvideo_gate/DS229/sources/arxiv_2503.19740.pdf)",
+   "https://github.com/visurg-ai/LEMON (README.md) (saved: /media/user/LaCie/medvideo_gate/DS229/sources/LEMON_README.md)",
+   "https://github.com/visurg-ai/LEMON/blob/main/labels.json (saved: /media/user/LaCie/medvideo_gate/DS229/labels.json)",
+   "https://huggingface.co/api/datasets/visurg/LEMON?blobs=true (saved: /media/user/LaCie/medvideo_gate/DS229/sources/hf_api_datasets_visurg_LEMON.json)"
+  ],
+  "trajectory_unit": "one curated YouTube surgical video (start/end trimmed, non-surgical frames masked)",
+  "n_trajectories": 4194,
+  "n_trajectories_quote": "is a dataset of over 4K surgical high-resolution videos totaling 938 hours from 35 diverse surgical procedure types.",
+  "D1": {
+   "verdict": "FAIL",
+   "quote": "Each video is annotated for multi-label classification, indicating the surgical procedures carried out in the video, and for binary classification, indicating if it is robotic or non-robotic.",
+   "source": "https://github.com/visurg-ai/LEMON (README.md) (saved: /media/user/LaCie/medvideo_gate/DS229/sources/LEMON_README.md)",
+   "reason": "Video-level labels only; no time-stamped action variable."
+  },
+  "D2": {
+   "verdict": "FAIL",
+   "quote": "Each video is annotated for multi-label classification, indicating the surgical procedures carried out in the video, and for binary classification, indicating if it is robotic or non-robotic.",
+   "source": "https://github.com/visurg-ai/LEMON (README.md) (saved: /media/user/LaCie/medvideo_gate/DS229/sources/LEMON_README.md)",
+   "reason": "No outcome variable."
+  },
+  "D3": {
+   "verdict": "UNKNOWN",
+   "quote": "then remove the beginning and end segments of non-surgical content from the videos, and mask the non-surgical regions in 'surgical' frames and the entire 'non-surgical' frames.",
+   "source": "https://github.com/visurg-ai/LEMON (README.md) (saved: /media/user/LaCie/medvideo_gate/DS229/sources/LEMON_README.md)",
+   "reason": "Curation trims only the start/end and masks (does not drop) interior non-surgical frames, but whether the source YouTube uploads are unedited full-procedure recordings is not documented."
+  },
+  "D4": {
+   "verdict": "UNKNOWN",
+   "quote": "\"robotic\": false, \"title\": \"Laparoscopic Distal Pancreaticosplenectomy for Mucinous Neoplasm Pancreas\", \"youtubeId\": \"80czDESoMiQ\"",
+   "source": "https://github.com/visurg-ai/LEMON/blob/main/labels.json (saved: /media/user/LaCie/medvideo_gate/DS229/labels.json)",
+   "reason": "labels.json (4,194 entries; fields informative, md5, procedureName, robotic, title, youtubeId, resolution) has no site or operator field. The per-video 'robotic' flag (1,667 true / 2,527 false) labels the surgical platform: it implies different camera systems but is not a recorded device identifier, and it was assigned semi-automatically with manual QC. The lead should decide whether it counts as 'device'."
+  },
+  "D5": {
+   "verdict": "UNKNOWN",
+   "quote": "We publicly release the dataset metadata, the list of original YouTube video IDs, and our corresponding annotations under the [Creative Commons Attribution 4.0 International (CC BY 4.0) license](https://creativecommons.org/licenses/by/4.0/). The copyright of the raw videos remains with their original creators. [...] 1. I agree that using the Database only for non-commercial research and educational purposes.",
+   "source": "https://github.com/visurg-ai/LEMON (README.md) (saved: /media/user/LaCie/medvideo_gate/DS229/sources/LEMON_README.md) ; https://huggingface.co/api/datasets/visurg/LEMON?blobs=true (saved: /media/user/LaCie/medvideo_gate/DS229/sources/hf_api_datasets_visurg_LEMON.json)",
+   "reason": "Metadata/labels are CC BY 4.0; raw-video copyright stays with YouTube creators; the curated-video HF repo (license tag cc-by-nc-4.0) is gated with non-commercial research terms that do not address release of derived features."
+  },
+  "D6": {
+   "verdict": "PASS",
+   "quote": "\"rfilename\":\"-EGrBFKnq84.mp4\",\"blobId\":\"1c58810d65927cc43a4506f8b00d0a989a8d32c6\",\"size\":4234144228",
+   "source": "https://huggingface.co/api/datasets/visurg/LEMON?blobs=true (saved: /media/user/LaCie/medvideo_gate/DS229/sources/hf_api_datasets_visurg_LEMON.json)",
+   "reason": "Sum of the 4,194 mp4 files in the HF dataset repo = 993,041,612,165 bytes (0.99 TB) <= 2.02 TB."
+  },
+  "D7": {
+   "verdict": "FAIL",
+   "quote": "Each video is annotated for multi-label classification, indicating the surgical procedures carried out in the video, and for binary classification, indicating if it is robotic or non-robotic.",
+   "source": "https://github.com/visurg-ai/LEMON (README.md) (saved: /media/user/LaCie/medvideo_gate/DS229/sources/LEMON_README.md)",
+   "reason": "Only video-level labels (constant within each video). Frame-level surgical/non-surgical flags come from the curation classifier (model-derived)."
+  },
+  "D8": {
+   "verdict": "FAIL",
+   "reason": "No variable meets D7 (and D4 is not established)."
+  },
+  "ge200_trajectories": "PASS",
+  "counts": {
+   "collection_mode": "YouTube surgical videos selected by storyboard/frame classifiers with manual verification",
+   "site": "not recorded",
+   "device": "robotic flag: 1,667 robotic / 2,527 non-robotic; resolution 1280x720 for 3,960 videos",
+   "operator": "not recorded",
+   "annotation_type": "video-level procedure type (35 types, multi-label) + robotic flag (semi-automatic, ChatGPT title matching, manual QC)"
+  },
+  "registration_required": "yes",
+  "subjects": {
+   "type": "in vivo human patients (clinical)",
+   "quote": "Because the dataset consists exclusively of anonymized, intraoperative endoscopic views, patients are, to the best of our knowledge, unidentifiable by current methods.",
+   "source": "https://github.com/visurg-ai/LEMON (README.md) (saved: /media/user/LaCie/medvideo_gate/DS229/sources/LEMON_README.md)"
+  },
+  "notes": "labels.json (1.55 MB, public) saved at /media/user/LaCie/medvideo_gate/DS229/labels.json. The curated videos need a gated HF request with an institutional-email account (manual approval) or the website request form. Alternatively, raw videos can be re-downloaded from YouTube IDs (some need a YouTube login) and re-curated with the released code."
+ }
+]

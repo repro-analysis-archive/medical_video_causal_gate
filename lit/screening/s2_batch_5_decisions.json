@@ -1,0 +1,551 @@
+[
+ {
+  "uid": "S0497",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Fair text-to-image generation via prompt learning; no causal estimation."
+ },
+ {
+  "uid": "S0498",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Title only: identifying shortcuts in medical image deep learning models; shortcut leakage without causal effect estimation indicated."
+ },
+ {
+  "uid": "S0499",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep metric learning with message passing; no causal component."
+ },
+ {
+  "uid": "S0500",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Decoupled SAM for cross-site segmentation generalization; no causal component."
+ },
+ {
+  "uid": "S0501",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Test-time adaptive object detection with foundation models; no causal component."
+ },
+ {
+  "uid": "S0502",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Foundation-model web agents exploration; no causal component."
+ },
+ {
+  "uid": "S0503",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Predicting brain functional connectivity from gene expression with spatial null maps; no treatment-effect estimation."
+ },
+ {
+  "uid": "S0504",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Deep-feature proxy variable method using learned representations (incl. high-dimensional image data) to adjust for unobserved confounding."
+ },
+ {
+  "uid": "S0505",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep sigma point processes for regression; no causal component."
+ },
+ {
+  "uid": "S0506",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Deep Bayesian active learning for treatment effects with image covariates (CMNIST) and overlap; learned image representations in effect estimation not ruled out."
+ },
+ {
+  "uid": "S0507",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Active feature acquisition oracle; no causal estimation."
+ },
+ {
+  "uid": "S0508",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Promptable image embeddings for retrieval; no causal component."
+ },
+ {
+  "uid": "S0509",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Title only: brain shape as unexpected confounder in MRI scan classification; confounding in prediction, no causal effect estimation indicated."
+ },
+ {
+  "uid": "S0510",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Invariant causal mechanism from CLIP embeddings for OOD prediction; no treatment-effect estimation."
+ },
+ {
+  "uid": "S0511",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Regularized normalization removing confounder effects from multimodal learned features; no causal estimation."
+ },
+ {
+  "uid": "S0512",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Universal image embedding distillation; no causal component."
+ },
+ {
+  "uid": "S0513",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Image-to-LiDAR contrastive distillation; no causal component."
+ },
+ {
+  "uid": "S0514",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Protein foundation model; no causal component."
+ },
+ {
+  "uid": "S0515",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Neural spiking foundation model; no causal component."
+ },
+ {
+  "uid": "S0516",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal deconfounding within multimodal CXR-ECG risk prediction; no treatment-effect estimation."
+ },
+ {
+  "uid": "S0517",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Efficient transformer architecture; no causal component."
+ },
+ {
+  "uid": "S0518",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Registration foundation model; no causal component."
+ },
+ {
+  "uid": "S0519",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Graphical criterion for causal interpretability of predictors; generic counterfactual identification theory."
+ },
+ {
+  "uid": "S0520",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: fetal MRI quality assessment and brain extraction; no causal component indicated."
+ },
+ {
+  "uid": "S0521",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Batch-instance normalization for style invariance; no causal estimation."
+ },
+ {
+  "uid": "S0522",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reinforced acquisition function learning for Bayesian optimization; no causal component."
+ },
+ {
+  "uid": "S0523",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal-inspired disentangled embeddings for compositional zero-shot recognition; no treatment-effect estimation."
+ },
+ {
+  "uid": "S0524",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: contrastive conditional GAN; no causal component indicated."
+ },
+ {
+  "uid": "S0525",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: batch size and learning rate generalization; no causal component indicated."
+ },
+ {
+  "uid": "S0526",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Backtracking counterfactual explanations under a causal framework; no treatment-effect estimation."
+ },
+ {
+  "uid": "S0527",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Simplicity bias theory in two-layer networks; no causal component."
+ },
+ {
+  "uid": "S0528",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Exact Gauss-Newton optimization generalization; no causal component."
+ },
+ {
+  "uid": "S0529",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: graph attention MR image enhancement; no causal component indicated."
+ },
+ {
+  "uid": "S0530",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Prototype-guided federated learning on multi-site fundus images; no causal estimation."
+ },
+ {
+  "uid": "S0531",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Variational supervised contrastive learning; no causal component."
+ },
+ {
+  "uid": "S0532",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Few-shot CLIP adaptation for ultrasound anomaly classification; no causal estimation."
+ },
+ {
+  "uid": "S0533",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Front-door adjustment for CLIP adaptation misalignment; causal-inspired prediction, no treatment-effect estimation."
+ },
+ {
+  "uid": "S0534",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Neural encoding/decoding foundation model; no causal estimation."
+ },
+ {
+  "uid": "S0535",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Routing confounding factors away from adapters to prevent shortcut entanglement in generators; no causal estimation."
+ },
+ {
+  "uid": "S0536",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Confounding-robust off-policy evaluation bounds in infinite-horizon RL; generic sequential causal methodology without learned image representations."
+ },
+ {
+  "uid": "S0537",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Tile-level data curation for pathology foundation models; no causal component."
+ },
+ {
+  "uid": "S0538",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "LM-as-examiner benchmarking; no causal component."
+ },
+ {
+  "uid": "S0539",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "BiLSTM dynamic connectivity MCI classification; no causal component."
+ },
+ {
+  "uid": "S0540",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Recursive metadata normalization removing confounder effects from features in continual learning; prediction equity, no causal effect estimation."
+ },
+ {
+  "uid": "S0541",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Bayesian deep learning on multi-center MRI to estimate individual treatment effects; learned image representations as covariates in effect estimation."
+ },
+ {
+  "uid": "S0542",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Test-time adaptation with feature-aware normalization; no causal component."
+ },
+ {
+  "uid": "S0543",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Contrastive multi-subject/multi-site fMRI alignment; no causal estimation or acquisition-bias analysis of representations."
+ },
+ {
+  "uid": "S0544",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Identifiability of discrete latent hierarchical causal concepts from images; generic causal representation theory without effect estimation."
+ },
+ {
+  "uid": "S0545",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Variable-size vision transformer for brain MRI classification; no causal component."
+ },
+ {
+  "uid": "S0546",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "CT sparse-view reconstruction and metal artifact reduction; no causal component."
+ },
+ {
+  "uid": "S0547",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Asymmetric Shapley values incorporating causal structure into explanations; no treatment-effect estimation."
+ },
+ {
+  "uid": "S0548",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Collaborative multi-site IPW causal inference under site heterogeneity; no learned image/video/text representations."
+ },
+ {
+  "uid": "S0549",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Worldwide-scale CLIP training recipe; no causal component."
+ },
+ {
+  "uid": "S0550",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Vision Mamba backbone; no causal component."
+ },
+ {
+  "uid": "S0551",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Two-stage classifier surrogate losses; no causal component."
+ },
+ {
+  "uid": "S0552",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal predictive models for privacy robustness; no treatment-effect estimation or representation adjustment."
+ },
+ {
+  "uid": "S0553",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Pathology auto-focus model; no causal component."
+ },
+ {
+  "uid": "S0554",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Continual Alzheimer's progression modeling; no causal estimation."
+ },
+ {
+  "uid": "S0555",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Quantifies confounder (incl. acquisition artifact) information in DL latent representations for neuroimaging prediction; no causal effect estimation."
+ },
+ {
+  "uid": "S0556",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Penalty metadata normalization removing confounder effects from learned features in multi-site MRI classification; no causal estimation."
+ },
+ {
+  "uid": "S0558",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Supervised contrastive learning; no causal component."
+ },
+ {
+  "uid": "S0559",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multi-scale finetuning of time-series foundation models; causal framing only, no causal estimation."
+ },
+ {
+  "uid": "S0560",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Activation steering of protein language models; no causal component."
+ },
+ {
+  "uid": "S0561",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Suppressing site/scanner domain-specific features for AD-to-LBD transfer; site-invariant representations without causal estimation."
+ },
+ {
+  "uid": "S0562",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Feature reliance of CNNs via controlled cue suppression; no causal estimation."
+ },
+ {
+  "uid": "S0563",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: dental mesh tooth labeling; no causal component indicated."
+ },
+ {
+  "uid": "S0564",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Training dynamics of importance weighting in deep networks; no causal estimation with learned covariates."
+ },
+ {
+  "uid": "S0565",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: boundary detection for MR prostate segmentation; no causal component indicated."
+ },
+ {
+  "uid": "S0566",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Self-supervised equivariant representation learning; no causal component."
+ },
+ {
+  "uid": "S0567",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep metric learning for low-dose CT denoising; no causal component."
+ },
+ {
+  "uid": "S0568",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Analysis of computer-network foundation model representations; no causal effect estimation."
+ },
+ {
+  "uid": "S0569",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: hyperbolic Procrustes analysis; no causal component indicated."
+ },
+ {
+  "uid": "S0570",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "LLM weight quantization; no causal component."
+ },
+ {
+  "uid": "S0571",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Active label correction for segmentation; no causal component."
+ },
+ {
+  "uid": "S0572",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "EEG-to-fMRI synthesis; no causal component."
+ },
+ {
+  "uid": "S0573",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: tree interpretation of object representations in deep RL; no causal estimation indicated."
+ },
+ {
+  "uid": "S0574",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1",
+   "L3"
+  ],
+  "reason": "Doubly robust causal feature selection in high-dimensional image settings with semi-synthetic data; image-feature adjustment and medical semi-synthetic construction not ruled out."
+ },
+ {
+  "uid": "S0575",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Deep SCMs for counterfactual brain MRI generation; counterfactual imaging without treatment-effect estimation."
+ },
+ {
+  "uid": "S0576",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Front-door adjustment and counterfactual learning for video temporal grounding; causal-inspired prediction, no treatment-effect estimation."
+ },
+ {
+  "uid": "S0577",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Title only: multi-source StyleGAN integration of heterogeneous medical data; source/acquisition harmonization, no causal estimation indicated."
+ },
+ {
+  "uid": "S0578",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "SCM-based causal attention for multi-label medical image recognition; causal-inspired prediction, no treatment-effect estimation."
+ },
+ {
+  "uid": "S0579",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Keyframe search for long video understanding; no causal estimation."
+ },
+ {
+  "uid": "S0580",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Graph knowledge distillation for disease prediction; no causal component."
+ },
+ {
+  "uid": "S0581",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multi-center abdominal segmentation benchmark; no causal component."
+ },
+ {
+  "uid": "S0582",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Video fusion framework and benchmark; no causal component."
+ },
+ {
+  "uid": "S0583",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Stratified CycleGAN graded image generation; no causal component."
+ },
+ {
+  "uid": "S0584",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Cold-start active learning benchmark for 3D segmentation; no causal component."
+ },
+ {
+  "uid": "S0585",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Hour-long video-language benchmark; no causal effect estimation."
+ },
+ {
+  "uid": "S0586",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical visual reasoning benchmark for VLMs; no causal estimation."
+ },
+ {
+  "uid": "S0587",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Audio-visual LLM for video understanding; no causal component."
+ }
+]

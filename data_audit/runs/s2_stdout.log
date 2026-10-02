@@ -1,0 +1,9 @@
+s2 0 50
+s2 1 50
+HTTP 429; retry in 2 s
+s2 2 50
+HTTP 429; retry in 2 s
+s2 3 50
+s2 4 50
+records 250 uids D1360 - D1609
+ds exit=0

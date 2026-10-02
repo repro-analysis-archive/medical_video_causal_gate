@@ -1,0 +1,547 @@
+[
+ {
+  "uid": "S0588",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L2",
+   "L3"
+  ],
+  "reason": "Causal-inference-based screening of bias-inducing attributes using medical images with synthetically inserted artifacts and true counterfactuals; semi-synthetic construction on real medical images and attribute/acquisition detectability not ruled out."
+ },
+ {
+  "uid": "S0589",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "GI hallucination-aware VLM benchmark; no causal component."
+ },
+ {
+  "uid": "S0590",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Reinforced fine-tuning for video reasoning in MLLMs; no causal estimation."
+ },
+ {
+  "uid": "S0591",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Contrastive brain MRI re-identification; no causal component."
+ },
+ {
+  "uid": "S0592",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Distribution-aware mixture of experts for fair segmentation; no causal estimation."
+ },
+ {
+  "uid": "S0593",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Transitive/commutative multimodal transformer pretraining; no causal estimation."
+ },
+ {
+  "uid": "S0594",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Benchmarking 3D segmentation validation practices; no causal component."
+ },
+ {
+  "uid": "S0595",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General medical AI multimodal benchmark; no causal component."
+ },
+ {
+  "uid": "S0596",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Long-video causal-event QA benchmark for VLMs; no causal effect estimation."
+ },
+ {
+  "uid": "S0597",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Trustworthiness benchmark for medical VLMs; no causal estimation."
+ },
+ {
+  "uid": "S0598",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Aerial anomaly reasoning benchmark; no causal estimation."
+ },
+ {
+  "uid": "S0599",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Parameter-efficient fine-tuning benchmark for medical images; no causal component."
+ },
+ {
+  "uid": "S0600",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Physical causal-event video QA benchmark with human labels; no causal effect estimation."
+ },
+ {
+  "uid": "S0601",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multimodal medical in-context learning benchmark; no causal component."
+ },
+ {
+  "uid": "S0602",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Structured grounding for dash-cam video reasoning; no causal effect estimation."
+ },
+ {
+  "uid": "S0603",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Efficient video-language streaming; no causal component."
+ },
+ {
+  "uid": "S0604",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multi-image medical LVLM dataset and benchmark; no causal component."
+ },
+ {
+  "uid": "S0605",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Medical neuropathic-pain simulator for evaluating causal discovery; tabular causal benchmark, not built on images or video."
+ },
+ {
+  "uid": "S0606",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: GNN calibration on medical image data; no causal component indicated."
+ },
+ {
+  "uid": "S0607",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Natural video pretraining for 3D chest CT models; no causal component."
+ },
+ {
+  "uid": "S0608",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Autoregressive medical image segmentation; no causal component."
+ },
+ {
+  "uid": "S0609",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Efficient masked video autoencoder; no causal component."
+ },
+ {
+  "uid": "S0610",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Medical image registration training; no causal component."
+ },
+ {
+  "uid": "S0611",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Self-supervised distillation for surgical video understanding; no causal component."
+ },
+ {
+  "uid": "S0612",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Semi-supervised segmentation via CNN-Transformer cross teaching; no causal component."
+ },
+ {
+  "uid": "S0613",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Action quality assessment dataset for AI-generated videos; no causal effect estimation."
+ },
+ {
+  "uid": "S0614",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Cross-conditioned diffusion MRI translation; no causal component."
+ },
+ {
+  "uid": "S0615",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Intention-aware human motion dataset; no causal effect estimation."
+ },
+ {
+  "uid": "S0616",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Report-mined medical image retrieval; no causal component."
+ },
+ {
+  "uid": "S0617",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Semi-supervised segmentation augmentation; no causal component."
+ },
+ {
+  "uid": "S0618",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Medical image-text narratives dataset and CLIP model; no causal component."
+ },
+ {
+  "uid": "S0619",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Langevin data augmentation for multi-source domain generalization; no causal estimation."
+ },
+ {
+  "uid": "S0620",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Autoregressive any-to-image generation; no causal component."
+ },
+ {
+  "uid": "S0621",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Adversarial style augmentation for robust segmentation; no causal estimation."
+ },
+ {
+  "uid": "S0622",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Egocentric task-understanding video QA benchmark; no causal effect estimation."
+ },
+ {
+  "uid": "S0623",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "SCM/backdoor adjustment within chest X-ray classification; causal-inspired prediction, no treatment-effect estimation."
+ },
+ {
+  "uid": "S0624",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Video-based contactless vital sign measurement; no causal component."
+ },
+ {
+  "uid": "S0625",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multi-scale logits mixing for segmentation; no causal component."
+ },
+ {
+  "uid": "S0626",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Fourier style augmentation for domain-generalizable segmentation; no causal estimation."
+ },
+ {
+  "uid": "S0627",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Curriculum fine-tuning of vision foundation models under label noise; no causal component."
+ },
+ {
+  "uid": "S0628",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Operating-room scene graph generation; no causal component."
+ },
+ {
+  "uid": "S0629",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Concept-based explainable medical image classification; no causal component."
+ },
+ {
+  "uid": "S0630",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Self-supervised skill abstractions for continuous control; no causal effect estimation."
+ },
+ {
+  "uid": "S0631",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: promptable foundation model for barely supervised 3D segmentation; no causal component indicated."
+ },
+ {
+  "uid": "S0632",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causality-aware entropy regularization in off-policy RL; no causal effect estimation with learned covariates."
+ },
+ {
+  "uid": "S0633",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: uncertainty-driven contrastive self-distillation for medical image classification; no causal component indicated."
+ },
+ {
+  "uid": "S0634",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Metadata-conditioned diffusion time-series generation; no causal estimation."
+ },
+ {
+  "uid": "S0635",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Variance-reduced contrastive semi-supervised segmentation; no causal component."
+ },
+ {
+  "uid": "S0636",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Hierarchical state-space models for sensor sequences; no causal component."
+ },
+ {
+  "uid": "S0637",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multi-scale hierarchical ViT for segmentation; no causal component."
+ },
+ {
+  "uid": "S0638",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Laparoscopic liver landmark detection; no causal component."
+ },
+ {
+  "uid": "S0639",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Channel-level contrastive single-domain generalization for segmentation; no causal estimation."
+ },
+ {
+  "uid": "S0640",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Thickness-aware operator for anisotropic 3D volumes; no causal component."
+ },
+ {
+  "uid": "S0641",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Debiased co-training for class-imbalanced semi-supervised segmentation; no causal component."
+ },
+ {
+  "uid": "S0642",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Imitation learning from observations; no causal effect estimation."
+ },
+ {
+  "uid": "S0643",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Adaptive anatomical contrast for semi-supervised segmentation; no causal component."
+ },
+ {
+  "uid": "S0644",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Unsupervised generative object learning from videos; no causal effect estimation."
+ },
+ {
+  "uid": "S0645",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Adversarial robustness benchmark for medical segmentation; no causal component."
+ },
+ {
+  "uid": "S0646",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: Siamese tracking of cell behaviour; no causal component indicated."
+ },
+ {
+  "uid": "S0647",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Calibration training strategy for segmentation; no causal component."
+ },
+ {
+  "uid": "S0648",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: endoscopic video tool segmentation; no causal component indicated."
+ },
+ {
+  "uid": "S0649",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Annotator-bias-aware segmentation; no causal estimation."
+ },
+ {
+  "uid": "S0650",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Iterative/parallel visual reasoning module for VQA; no causal estimation."
+ },
+ {
+  "uid": "S0651",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Shape-attentive interpretable U-Net; no causal component."
+ },
+ {
+  "uid": "S0652",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Large-kernel CNN re-parameterization for segmentation; no causal component."
+ },
+ {
+  "uid": "S0653",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Generic semi-supervised/domain-generalization segmentation framework; no causal estimation."
+ },
+ {
+  "uid": "S0654",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Consistent learning for semi-supervised segmentation; no causal component."
+ },
+ {
+  "uid": "S0655",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Vector-quantized perturbation for semi-supervised segmentation; no causal component."
+ },
+ {
+  "uid": "S0656",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Silent failure analysis under distribution shift in medical classification; no causal estimation."
+ },
+ {
+  "uid": "S0657",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal domain-invariant temporal dynamics representations for few-shot action recognition; no treatment-effect estimation."
+ },
+ {
+  "uid": "S0658",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Learned latent mental-state representations from multi-domain clinical measures for individualized treatment rules; tabular measures, not image/video/text."
+ },
+ {
+  "uid": "S0659",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: plasticity and invariance in sequential task learning; no causal component indicated."
+ },
+ {
+  "uid": "S0660",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Hypernetwork learning implicit domain (acquisition/device) representations for test-time adaptation; no causal estimation."
+ },
+ {
+  "uid": "S0661",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Multi-domain causal discovery in bijective causal models; generic causal methodology."
+ },
+ {
+  "uid": "S0662",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Sensitivity analysis for missing mediators in transported mediation effects; generic causal methodology."
+ },
+ {
+  "uid": "S0663",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Disentangled counterfactual learning for audiovisual physical reasoning; causal-inspired prediction, no treatment-effect estimation."
+ },
+ {
+  "uid": "S0664",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Optimal sequential treatment allocation for policy evaluation; generic causal methodology."
+ },
+ {
+  "uid": "S0665",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: surface-theoretic statistical shape modeling; no causal component indicated."
+ },
+ {
+  "uid": "S0666",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Complete graphical criterion for sequential covariate adjustment; generic identification theory."
+ },
+ {
+  "uid": "S0667",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Adaptive experimental design for ATE with covariate density choice; generic causal methodology."
+ },
+ {
+  "uid": "S0668",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Diffusion-based MRI scanner contrast harmonization motivated by longitudinal comparability; no causal effect estimation."
+ },
+ {
+  "uid": "S0669",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: multimodal LLM architecture; no causal component indicated."
+ },
+ {
+  "uid": "S0670",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Title only: recurrent learned history representations for treatment-response forecasting with marginal structural models; covariate modality unspecified, L1 not ruled out."
+ },
+ {
+  "uid": "S0671",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Worst-case OPE bounds for sequential decisions under unobserved confounding; generic causal methodology without learned image representations."
+ },
+ {
+  "uid": "S0672",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Disentangled causal substructure for debiasing GNN prediction; causal-inspired prediction, no treatment-effect estimation."
+ },
+ {
+  "uid": "S0673",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Front-door adjustment to debias LLM table QA; causal-inspired prediction, no treatment-effect estimation."
+ },
+ {
+  "uid": "S0675",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Adversarial point cloud transformer for corruption robustness; no causal component."
+ },
+ {
+  "uid": "S0676",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Sequential prediction with abstention under adversarial examples; no causal component."
+ },
+ {
+  "uid": "S0677",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Projection-free online convex optimization; no causal component."
+ },
+ {
+  "uid": "S0678",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Invariant and transportable representations under anti-causal domain shift; no treatment-effect estimation."
+ }
+]

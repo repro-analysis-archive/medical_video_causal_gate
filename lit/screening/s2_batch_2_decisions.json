@@ -1,0 +1,558 @@
+[
+ {
+  "uid": "S0203",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General-domain video QA benchmark on physical causal reasoning; no causal effect estimation with representations."
+ },
+ {
+  "uid": "S0204",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; cross-modality domain-adaptive segmentation, no causal estimation indicated."
+ },
+ {
+  "uid": "S0205",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1",
+   "L2"
+  ],
+  "reason": "No abstract; causal-structure-driven text augmentations for OOD generalization (apparently the NeurIPS 2023 work abstracted under S0232, which uses matching-based counterfactual text augmentation against caregiver-specific spurious features), so text representations in causal adjustment/operator confounding cannot be ruled out."
+ },
+ {
+  "uid": "S0207",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Automated causal-consistency testing of general video generation models; no causal effect estimation with representations."
+ },
+ {
+  "uid": "S0208",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Semi-supervised robust discriminant classification; no causal estimation."
+ },
+ {
+  "uid": "S0209",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1",
+   "L3"
+  ],
+  "reason": "Generative (variational) backdoor adjustment with high-dimensional treatments and confounders evaluated on semi-synthetic X-ray data; learned image representations for adjustment and a semi-synthetic medical-image benchmark are both plausible."
+ },
+ {
+  "uid": "S0211",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Synthetic-to-real feature alignment for segmentation; no causal estimation."
+ },
+ {
+  "uid": "S0212",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; surgical training model, unrelated."
+ },
+ {
+  "uid": "S0213",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causally regularised ultrasound classifier suppressing acquisition-induced spurious cues; no causal effect estimation."
+ },
+ {
+  "uid": "S0214",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Medical instructional video QA benchmark; no causal estimation."
+ },
+ {
+  "uid": "S0215",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Diffusion inpainting augmentation for segmentation; no causal estimation."
+ },
+ {
+  "uid": "S0216",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Balanced/disentangled representation learning for treatment effects on structured EHR; representations of tabular covariates, not image/video/text."
+ },
+ {
+  "uid": "S0218",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Surveillance video QA benchmark; no causal effect estimation."
+ },
+ {
+  "uid": "S0219",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Semi-supervised segmentation; no causal estimation."
+ },
+ {
+  "uid": "S0220",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal effect estimation under informative censoring using learned shadow representations of covariates; generic causal ML."
+ },
+ {
+  "uid": "S0221",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Interventional (occlusion/swap) audit of whether chest X-ray VLMs use the image; causal probing of model behaviour, not treatment-effect estimation."
+ },
+ {
+  "uid": "S0222",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Streaming medical video understanding benchmark; no causal estimation."
+ },
+ {
+  "uid": "S0223",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Copy-paste consistency learning for segmentation; no causal estimation."
+ },
+ {
+  "uid": "S0224",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Semi-supervised GAN regression incl. estimating physiological effects of treatments; not image/video/text representations used for confounding adjustment."
+ },
+ {
+  "uid": "S0225",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Prompt-guided CT image quality assessment with causal debiasing of text priors; no causal effect estimation."
+ },
+ {
+  "uid": "S0226",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Medical video understanding RL benchmark; no causal estimation."
+ },
+ {
+  "uid": "S0227",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "GAN-based medical anomaly detection; no causal estimation."
+ },
+ {
+  "uid": "S0228",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Wearable IMU respiratory instability detection; unrelated."
+ },
+ {
+  "uid": "S0231",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Diffusion data augmentation for segmentation; no causal estimation."
+ },
+ {
+  "uid": "S0232",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1",
+   "L2"
+  ],
+  "reason": "Counterfactual text augmentation via diff-in-diff matching and LLM text modelling to remove caregiver (operator) spurious features from clinical-note predictors; use of text representations and operator information in a causal-estimation step cannot be ruled out."
+ },
+ {
+  "uid": "S0233",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Concept-relationship model performing causal inference between image concepts and diagnoses; no treatment-effect estimation with representations as adjustment."
+ },
+ {
+  "uid": "S0234",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Long-video moment retrieval benchmark; unrelated."
+ },
+ {
+  "uid": "S0235",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal-diagram-inspired semi-supervised segmentation; no causal effect estimation."
+ },
+ {
+  "uid": "S0236",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "High-dimensional mediation analysis of herbal ingredients from EMR prescriptions; no learned image/video/text representations."
+ },
+ {
+  "uid": "S0238",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Semi-supervised multi-dataset segmentation; no causal estimation."
+ },
+ {
+  "uid": "S0239",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1",
+   "L3"
+  ],
+  "reason": "Proves CATE identification when high-dimensional covariates are replaced by a learned representation and evaluates on semi-synthetic medical data; covariate modality (possibly imaging/text) and benchmark construction cannot be ruled out."
+ },
+ {
+  "uid": "S0240",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causality-driven surgical tool segmentation evaluated on counterfactually altered images; no causal effect estimation."
+ },
+ {
+  "uid": "S0241",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Video stepwise causal reasoning benchmark; unrelated to causal effect estimation."
+ },
+ {
+  "uid": "S0242",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L3"
+  ],
+  "reason": "No abstract; title indicates synthetic ground-truth counterfactuals for evaluating causal generative models in medical imaging, i.e. a possible semi-synthetic causal benchmark built on medical images."
+ },
+ {
+  "uid": "S0244",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Disentangled representations with attribution for shortcut detection in medical imaging; no causal effect estimation."
+ },
+ {
+  "uid": "S0245",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "General video QA benchmark; unrelated."
+ },
+ {
+  "uid": "S0246",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causality-driven consistency for semi-supervised image classification; no causal effect estimation."
+ },
+ {
+  "uid": "S0247",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "No abstract; generalisability/transport of causal effects with sensitivity analysis for missing covariates; generic identification theory."
+ },
+ {
+  "uid": "S0249",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Video restoration with causal (autoregressive) history model; unrelated."
+ },
+ {
+  "uid": "S0250",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Quality-guided semi-supervised segmentation; no causal estimation."
+ },
+ {
+  "uid": "S0251",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Adaptive clinical-trial design using causal deep Bayesian active learning; generic causal ML without image/video/text representations."
+ },
+ {
+  "uid": "S0252",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal-intervention module for referring medical image segmentation; no causal effect estimation."
+ },
+ {
+  "uid": "S0253",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Video causal reasoning benchmark for LVLMs; unrelated to effect estimation."
+ },
+ {
+  "uid": "S0254",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Physically grounded rendering of otoscopic images; no causal estimation."
+ },
+ {
+  "uid": "S0255",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "De-confounding representation learning for continuous-treatment counterfactual inference on covariates; generic causal ML."
+ },
+ {
+  "uid": "S0256",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "U-Net scaling benchmark; unrelated."
+ },
+ {
+  "uid": "S0257",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal abductive reasoning over video events; not causal effect estimation."
+ },
+ {
+  "uid": "S0258",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Shortcut learning of a diffusion generative classifier on synthetic neuroimaging data with controlled biases; no causal effect estimation."
+ },
+ {
+  "uid": "S0259",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Deep sequential weighting for ITE with time-varying hidden confounders learned from EHR sequences; representations of tabular data, not image/video/text or acquisition."
+ },
+ {
+  "uid": "S0260",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Federated learning benchmark for medical image classification; no causal estimation."
+ },
+ {
+  "uid": "S0261",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Counterfactual video QA benchmark and post-training; not causal effect estimation."
+ },
+ {
+  "uid": "S0262",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "One-shot segmentation with synthetic-to-clinical translation; no causal estimation."
+ },
+ {
+  "uid": "S0263",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Neural-network propensity model for multi-arm observational studies on tabular covariates; generic causal ML."
+ },
+ {
+  "uid": "S0264",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Medical image sequence grounding benchmark; no causal estimation."
+ },
+ {
+  "uid": "S0265",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal (prefix-only) token reduction for long-video VLMs; unrelated."
+ },
+ {
+  "uid": "S0266",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Classical wound image segmentation; unrelated."
+ },
+ {
+  "uid": "S0267",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; thesis on ML image analysis in medical applications, no causal topic indicated."
+ },
+ {
+  "uid": "S0268",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Medical segmentation benchmark; unrelated."
+ },
+ {
+  "uid": "S0269",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Causal-temporal video captioning; unrelated."
+ },
+ {
+  "uid": "S0270",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Semi-supervised deep causal generative model for medical image counterfactuals; counterfactual image generation without treatment-effect estimation."
+ },
+ {
+  "uid": "S0271",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; pharmacy education/conference item, unrelated."
+ },
+ {
+  "uid": "S0272",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Foundation-model classification benchmark on MedMNIST; no causal estimation."
+ },
+ {
+  "uid": "S0273",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Medical multimodal reasoning benchmark; no causal estimation."
+ },
+ {
+  "uid": "S0274",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Bi-modality medical image synthesis GAN; unrelated."
+ },
+ {
+  "uid": "S0275",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Interactive segmentation dataset; unrelated."
+ },
+ {
+  "uid": "S0276",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Fall detection video dataset; unrelated."
+ },
+ {
+  "uid": "S0277",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Task-driven augmentation for segmentation; unrelated."
+ },
+ {
+  "uid": "S0278",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Federated learning with causal weight sparsification and blockchain; no causal effect estimation."
+ },
+ {
+  "uid": "S0279",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Video generation model reasoning benchmark; unrelated."
+ },
+ {
+  "uid": "S0280",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; synthetic CT generation for classification, no causal estimation indicated."
+ },
+ {
+  "uid": "S0282",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Long-context medical video benchmark; no causal estimation."
+ },
+ {
+  "uid": "S0283",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Semi-supervised GAN classification; unrelated."
+ },
+ {
+  "uid": "S0284",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multi-image medical VQA benchmark; no causal estimation."
+ },
+ {
+  "uid": "S0285",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Medical video generation dataset/model; no causal estimation."
+ },
+ {
+  "uid": "S0286",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "GAN oversampling for class imbalance; unrelated."
+ },
+ {
+  "uid": "S0287",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "SCM-based causal/bias disentanglement for cross-modality domain adaptation in segmentation; no causal effect estimation."
+ },
+ {
+  "uid": "S0288",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Clinical-note error detection benchmark; unrelated."
+ },
+ {
+  "uid": "S0289",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Compares causal vs non-causal medical image counterfactual generation for augmentation and fairness; counterfactual imaging without treatment-effect estimation."
+ },
+ {
+  "uid": "S0290",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Traffic accident video QA benchmark; unrelated."
+ },
+ {
+  "uid": "S0291",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Deep affine registration comparison; unrelated."
+ },
+ {
+  "uid": "S0292",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Non-causal Mamba segmentation architecture; unrelated."
+ },
+ {
+  "uid": "S0293",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Multimodal tracking benchmark; unrelated."
+ },
+ {
+  "uid": "S0296",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Electromagnetic system theory; unrelated."
+ },
+ {
+  "uid": "S0297",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Growth-model specification for ATE in longitudinal RCTs with missing data; RCT estimation methodology without learned representations."
+ },
+ {
+  "uid": "S0298",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "T-learners within the G-formula under sequential randomization; generic sequential causal methodology without learned image/video/text representations."
+ },
+ {
+  "uid": "S0299",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L4"
+  ],
+  "reason": "Deep TMLE using domain-adversarial intervention-invariant (debiased) representations for time-varying treatment effects; effect of debiased representations on sequential causal estimation cannot be ruled out despite non-imaging data."
+ },
+ {
+  "uid": "S0300",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Vendor-invariant mammography representations for Ki-67 prediction under acquisition domain shift; prediction only."
+ },
+ {
+  "uid": "S0301",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Cross-domain sequential recommendation; unrelated."
+ },
+ {
+  "uid": "S0302",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No abstract; fault diagnosis domain-invariant features, unrelated."
+ },
+ {
+  "uid": "S0303",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal representation learning with domain-invariance for biobank risk stratification; prediction rather than treatment-effect estimation, tabular/genetic data."
+ }
+]

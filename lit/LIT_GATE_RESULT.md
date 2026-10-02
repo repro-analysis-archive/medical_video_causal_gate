@@ -1,143 +1,134 @@
-# Literature Gate Result (gate `baadf5c` §6)
+# Literature Gate Result (gate `baadf5c` §6): updated after the Semantic Scholar and proceedings arms
 
-**Verdict:** **GO, conditional on two BLOCKED arms.** No source puts L1 and L2 together, and no source reaches L2,
-L3 or L4 at DIRECT or PARTIAL. The benchmark-novelty claim (L3) and the duration headline (L4) are retained.
-**Closest prior work to cite:**
-* **K4**, Nakamura et al. 2026: L1 DIRECT, in non-medical video.
-* For the L2 mechanism (RELATED):
-  * Roberts et al. 2020;
-  * K2 Supplement S2;
-  * the site-leakage literature.
-
-**Condition.** The Semantic Scholar arm and the proceedings arm (MICCAI, IPMI, MIDL, NeurIPS, ICML, CLeaR, UAI) could
-not be run (HTTP 429), and one work is UNRESOLVED (§5). The verdict holds for the three databases searched plus one
-level of citation chasing.
+**Verdict: GO.**
+* No source puts L1 and L2 together, and no source reaches L2, L3 or L4 at DIRECT or PARTIAL.
+* The headline, the benchmark-novelty claim (L3) and the duration claim (L4) are retained.
+* The verdict is unchanged from `01be89e`. That version was conditional on the BLOCKED Semantic Scholar and proceedings
+  arms, which have now been run in full (keyed client, `0ac6aee`; 440 / 440 sub-queries).
+* Six works remain UNRESOLVED (full text unobtainable, §5). None can change the verdict: each is open only on L1 at
+  most PARTIAL, or on L3.
 
 ## 1. What was run
 
 | arm | status | records |
 |---|---|---|
-| PubMed (Q1–Q4, boolean, relevance, first 100) | done | Q1 100 of 14,745 · Q2 28 · Q3 21 · Q4 100 of 459 |
-| arXiv (cs.CV, cs.LG, stat.ME, stat.ML; 2018-01-01 to freeze) | done | Q1 14 · Q2 17 · Q3 24 · Q4 49 (all hits) |
-| OpenAlex (boolean search, relevance, first 100) | done | 100 per query (of 12,657 / 24,890 / 9,729 / 92,427) |
-| **Semantic Scholar** (split into 120 + 36 + 4 + 60 = 220 sub-queries) | **BLOCKED** | 0 of 220 sub-queries returned. The first sub-query got HTTP 429 continuously, 03:37–04:07 UTC, through backoffs of 120–900 s |
-| **Proceedings: MICCAI, IPMI, MIDL, NeurIPS, ICML, CLeaR, UAI** (Semantic Scholar venue filter; 220 sub-queries) | **BLOCKED** | 0 of 220. A venue-name defect was found and fixed before any query ran (`SEARCH_IMPLEMENTATION.md` §9) |
-| Citation chasing: one level backward and forward from every DIRECT / PARTIAL hit (K1–K4, N0712) via OpenAlex | done | 298 records |
+| PubMed, arXiv (4 categories), OpenAlex: Q1–Q4 | done (`01be89e`) | 753 hits → 721 unique (N0000–N0720) |
+| Citation chasing from K1–K4 and N0712 (OpenAlex; PDF reference lists) | done (`01be89e`) | 298 (C0000–C0297) |
+| **Semantic Scholar**, Q1–Q4 split into 120 + 36 + 4 + 60 = 220 sub-queries | **done 2026-10-02** | 220 / 220 returned; 100 merged per query |
+| **Proceedings: MICCAI, IPMI, MIDL, NeurIPS, ICML, CLeaR, UAI** (S2 venue filter, venue erratum §9), 220 sub-queries | **done 2026-10-02** | 220 / 220 returned; 100 merged per query |
+| Citation chasing from the new PARTIAL hits (S0414, S0209, S0446, S0460) | done 2026-10-02 | 227 (C0298–C0524) |
 
-* **Native search:** 753 hits, which deduplicate to **721 unique records**. Screening: 571 NONE, 133 RELATED,
-  17 FULLTEXT.
-* **Citation chasing:** 298 records. Screening: 138 NONE, 105 RELATED, 55 FULLTEXT. The 55 FULLTEXT records are 30
-  distinct works.
-* **Log.** Every screened record (1,019) is in `RECORDS.csv`, with database, query, rank, ids, title, year, venue,
-  decision, reason and screener. Lead grades for FULLTEXT records are in the same file.
-* **Full texts.** The lead analyst read in full all four known works (K1–K4) and 18 other works, and scanned the
-  full text of 4 more. The quotes are in
-  `FULLTEXT_NOTES.md`, sections K1–K4 and S1–S4.
+* **Semantic Scholar and proceedings arms:** 800 hits → 748 unique (S0000–S0747). 49 duplicate already-screened
+  records and inherit those decisions. Of the 699 screened: 37 FULLTEXT (S5), the rest NONE or RELATED.
+* **Rate limits:** 262 HTTP 429 responses, all resolved within the 2–32 s backoff; no stop.
+* **API key:** never logged or stored. A scan of the repository, LaCie and the scratchpad found it in 0 files.
+* **New citation records:** 30 FULLTEXT, of which 9 are works already graded (S6).
+* **Log:** every screened record (1,994) is in `RECORDS.csv`, with lead grades for every FULLTEXT record.
+* **Full texts:** read by the lead analyst for 4 known works and 35 others (18 + 7 + 10), plus 4 full-text scans;
+  quotes in `FULLTEXT_NOTES.md` K1–K4 and
+  S1–S6.
 
-## 2. Per-claim tables
+## 2. Per-claim tables (DIRECT and PARTIAL in full; RELATED summarized)
 
 ### L1. Generative or foundation video representations used as adjustment covariates for the effect of an action or treatment
 
-| source | grade | quote | location |
-|---|---|---|---|
-| **K4** Nakamura, Breuer, Crespin, Dietrich & Imai (2026), arXiv:2607.06126 | **DIRECT (non-medical video)** | "we first reproduce each video using a deep generative model and leverage the model's internal representations as learned, low-dimensional summaries of video content for causal estimation." | Abstract, p. 1; also §1 p. 3, §4.2 p. 21 |
-| K1 Imai & Nakamura (2026a), JASA; arXiv:2410.00903 | PARTIAL (text) | "internal representations extracted from GenAI models can be leveraged within a causal machine learning framework to estimate the causal effects of interest." | §1, p. 2 |
-| K2 Imai & Nakamura (2026b), PNAS; arXiv:2507.03897 | PARTIAL (text, images) | "Text as confounder: Estimating the causal effects of a treatment variable by adjusting for latent confounders embedded in textual data" | §1, p. 2 |
-| K3 Nakamura & Imai (2026), arXiv:2605.07834 | PARTIAL (text; sequential) | "internal representations extracted from an open-source generative AI model can be leveraged to nonparametrically estimate a deconfounder … at each point in the sequence." | §1, p. 2 |
-| Rao et al. (2022) Targeted-BEHRT, IEEE TNNLS (N0712) | PARTIAL (EHR) | "T-BEHRT first extracts latent EHR features … with BEHRT. Second, the model predicts propensity of exposure and conditional outcome using these grasped features" | §II.D, p. 4 |
-| Veitch, Sridhar & Blei (2020), UAI | PARTIAL (text) | "We combine these two ideas to adapt modern methods for language modeling — BERT and topic models — in service of causal inference" | §1, p. 2 |
-| Pryzant et al. (2021), NAACL | PARTIAL (text) | "We approximate this confounding information in the text … with a learned representation b(W) … We use DistilBERT … to produce a representation of the text" | §5.2, p. 4 |
-| Gui & Veitch (2023), ICLR | PARTIAL (text) | "use supervised representation learning to produce a data representation that preserves confounding information while eliminating information that is only predictive of the treatment. This representation then suffices for adjustment" | Abstract, p. 1; §4.2, p. 6 |
-| Ahrens et al. (2021), EMNLP | PARTIAL (text; generative topic model) | "a supervised text representation Zi = g(Wi, yi, ti, Ci), which … together with Ci blocks all 'backdoor path' between yi and ti" | §2.1, p. 2 |
-| Roberts, Stewart & Nielsen (2020), AJPS | PARTIAL (text; generative topic model) | "estimate a low-dimensional summary of the text and condition on this summary via matching"; "TIRM uses a structural topic model … as the measurement model" | Abstract, p. 1; p. 5 |
-| Klaassen et al. (2024), arXiv:2402.01785 | PARTIAL (text, images) | "We use pre-trained transformer-based models such as BERT … For the image processing, we rely on transformer-based models such as BEIT … or Vision Transformers" | §4, p. 4 |
-| Lin, Morency & Ben-Michael (2024/25), ICML | PARTIAL (text) | "Sentence embeddings from transformer-based language models" for the non-focal language adjusted for | §4.2, p. 6 |
-| Feldman et al. (2026), arXiv:2602.15730 | PARTIAL (text) | "we control for such unwanted variations by adjusting for dense contextual embeddings using robust causal machine learning" | §1, p. 2 |
-| Guo et al. (2025), IJCNLP-AACL | PARTIAL (text) | "(1) a BERT encoder for textual representation, (2) an outcome predictor … (3) a domain predictor … ensuring domain-invariant embeddings" | §3, p. 5 |
-| Rao et al. (2023) Hypertension; Heart; Eur Heart J (T-BEHRT applications) | PARTIAL (EHR) | e.g. "the patient representation vector is used as input to jointly learn the propensity score … and the outcome of interest" | EHJ, Methods: Statistical methods (PMC10635668) |
-| RELATED (23 works) | RELATED | not adjustment with generative / foundation representations (TF-IDF, task-specific CNNs, text as treatment, moderators, reviews), e.g. Daoud 2022, Mozer 2020 / 2024, Jerzak 2023a / b, Egami 2022, N0105, N0217, N0235, N0587, N0596 | S1, S3 |
+| grade | sources (location of quote in FULLTEXT_NOTES) |
+|---|---|
+| **DIRECT (non-medical video)** | **K4** Nakamura, Breuer, Crespin, Dietrich & Imai (2026), arXiv:2607.06126: "we first reproduce each video using a deep generative model and leverage the model's internal representations as learned, low-dimensional summaries of video content for causal estimation" (Abstract, p. 1) |
+| PARTIAL, non-medical **video**, with representations as the **outcome model** in randomized experiments (not adjustment covariates) | **S0414** Cadei et al. 2025, Prediction-Powered Causal Inferences (§5, p. 8). **C0306** Cadei et al. 2024, Smoke and Mirrors (pp. 2, 4). **C0332** Yao et al. 2025, ICLR (§5.1, p. 9). **C0320** Yao et al. 2025, NeurIPS (§5.2, p. 8) |
+| PARTIAL, **images** | **S0209** Israel et al. 2023 (generative backdoor adjustment, X-ray confounder). **S0446** Rahman & Kocaoglu 2024 (conditional generative models, image / text). **C0424** Rahman & Kocaoglu 2024 (Modular-DCM). **C0460** Deshpande et al. 2022 (multi-modal generative SEM). **K2** Imai & Nakamura 2026b (text + images). **Klaassen** et al. 2024 (text + images) |
+| PARTIAL, **text** | **K1**; **K3** (sequential); Veitch 2020; Pryzant 2021; Gui & Veitch 2023; Ahrens 2021; Roberts 2020; Lin 2024; Feldman 2026; Guo 2025; **S0460** Ma et al. 2025; **C0452** Chen, Bhattacharya & Keith 2024; **C0462** Dhawan et al. 2024 (NATURAL); **C0494** CausalNLP; **C0507** Sridhar & Getoor 2019 |
+| PARTIAL, **EHR** | Targeted-BEHRT (N0712) and its applications C0262, C0265, C0276 |
+| RELATED | about 70 works: representations trained from scratch or on tabular / network data, text as treatment, moderators, prediction-side debiasing, reviews (S1–S6) |
 
 **L1 summary.**
-* **DIRECT:** one source, K4, in non-medical video.
+* One DIRECT source, K4, in **non-medical** video.
 * **No medical-video source reaches L1 DIRECT or PARTIAL.**
-* All 16 PARTIAL sources differ in modality (text, images or EHR) instead of video.
+* The video PARTIALs (ant-behaviour RCTs) use foundation representations as **outcome models**, not adjustment
+  covariates.
 
 ### L2. Representations carry instrument-like acquisition information (site, device, operator) that amplifies bias or degrades overlap
 
-| source | grade | quote | location |
-|---|---|---|---|
-| Roberts, Stewart & Nielsen (2020) | **RELATED: closest statement of the mechanism.** Text, generic content, qualitative, no acquisition information | "if the text is an instrument, meaning it explains the outcome only through the treatment, conditioning on the text can amplify the bias of unconditioned confounders (Pearl 2011)"; "conditioning on Z would amplify bias from U" | p. 3; p. 4 |
-| K2 Imai & Nakamura (2026b) | RELATED. Treatment-predictive content, not acquisition information | "adding a prediction head for the treatment assignment encourages the deconfounder to capture nearly all the information predictive of treatment, thereby exacerbating the violation of overlap assumption." | Supp. S2.1.3, p. 20 |
-| K1, K3, K4 | RELATED. Overlap lost through the treatment feature or treatment persistence | e.g. K4: "a characteristic that typically exhibits strong temporal persistence … thereby violating the positivity assumption" | K1 §3.2 p. 9; K3 §1 p. 3; K4 §3.3 p. 12 |
-| Gui & Veitch (2023); Feldman et al. (2026); Lin et al. (2024); Daoud et al. (2022) | RELATED. The treatment attribute encoded in text breaks overlap | Feldman: "Using such embeddings as controls will … lead to a positivity violation" | Gui §1 p. 2; Feldman §1 p. 2; Lin §3.3 p. 5; Daoud §2.1.1 p. 3 |
-| Jerzak et al. (2023a) | RELATED. Sensor resolution under-captures confounders (residual bias), not an instrument | "resolution is a key driver of the residual confounding" | §3.5, p. 10 |
-| Site / scanner leakage in learned or foundation features, e.g. N0219 (TCGA site prediction), N0230 (acquisition confounding of frozen CT FM features), N0240 (scanner variability in 14 pathology FMs), N0241, N0244, N0246, N0253, N0268, N0314, N0651 | RELATED. Static images or EEG; **prediction** shortcuts, not causal-estimation bias or overlap (S4) | N0230: "acquisition-related confounding … is not evidence of malignancy discrimination" | abstracts (S4) |
-| Investigator's pathology foundation-model site audit (gate §6 known prior work) | not graded: no preprint yet. The gate records it as "related to L2 for static images" | — | to be replaced by its preprint reference |
+| grade | source | basis |
+|---|---|---|
+| RELATED, **borderline**: the closest L2 evidence in **medical video** | **S0008** Field-of-view confounding shapes genetic discovery from self-supervised cardiac-imaging phenotypes (medRxiv 2026) | A video masked-autoencoder on 69,932 cine-MRI studies encodes "imaging centre (linear-probe R2 = 0.55 for site)", causing "phenotype-level confounding" of GWAS (Abstract, p. 1). Two elements differ: (i) the representations are **outcomes (phenotypes)**, not adjustment covariates for an action's effect; (ii) site acts as a **confounder**, not an instrument |
+| RELATED, **borderline**: the closest in **video** (non-medical) | **S0414** Cadei et al. 2025; **C0306** Cadei et al. 2024 | Recording-setup and background information (plate markings, lighting, nests) in fine-tuned foundation encoders biases the ATE and threatens positivity (S0414 Example 1, p. 5; C0306 p. 4). Two elements differ: an outcome model, not adjustment; a shortcut confounder, not an instrument |
+| RELATED: the closest **statement** of Z-bias through learned summaries | **Roberts** et al. 2020 | "conditioning on Z would amplify bias from U" (p. 4); text, qualitative, no acquisition information |
+| RELATED | K1–K4, Gui & Veitch, Feldman, Lin, Daoud; S0446 and C0424 (hospital as a **confounder**); site-leakage literature N0219, N0230, N0240 and others (S4); Jerzak 2023a (sensor resolution) | overlap lost through treatment information, or acquisition information analysed for **prediction** |
 
-**L2 summary.** No DIRECT or PARTIAL. No source shows **acquisition information** in a representation **used as an
-adjustment covariate** acting **as an instrument** in causal estimation.
+**L2 summary.**
+* No DIRECT or PARTIAL.
+* No source shows acquisition information, in a representation **used as an adjustment covariate**, acting **as an
+  instrument** in causal estimation.
 
 ### L3. Semi-synthetic causal benchmark on real medical video, with acquisition information manipulated as an instrument
 
-| source | grade | quote | location |
-|---|---|---|---|
-| K4 (Mario benchmark) | RELATED. Synthetic game video; confounder, not instrument | "we construct a novel video causal benchmark dataset with known ground truth"; "Pipe obstacles serve as confounding features" | §4 p. 19; §4.1 p. 20 |
-| Targeted-BEHRT (N0712) | RELATED. Semi-synthetic, on real EHR | "we first construct semi-synthetic derivations of our observational dataset" | §I, p. 2 |
-| N0386 DR-ME (OCTMNIST semi-synthetic) | RELATED. Real images, outcome side only | "OCTMNIST images only on the outcome side … confounding is driven by the synthetic covariates" | App. I.7 |
-| N0378 neuroimaging simulation framework; N0367 lesion-symptom mapping; N0105 D'ARTAGNAN (counterfactual echo video) | RELATED. Synthetic MRI / XAI validation / video generation without effect estimation | — | S1 |
-| Semi-synthetic text / image benchmarks: Veitch 2020, Pryzant 2021, Gui & Veitch 2023, Ahrens 2021, Roberts 2020, Klaassen 2024, Lin 2024, Feldman 2026, Guo 2025, Jerzak 2023a / b | RELATED. Real text or images, not medical video; no instrument manipulated | e.g. Klaassen: semi-synthetic from "the IMDB dataset" and "the CIFAR-10 dataset" | §5.1, p. 5 |
-
-**L3 summary.** No DIRECT or PARTIAL. No benchmark on **real medical video**, and none **manipulates acquisition
-information as an instrument**.
+**No DIRECT or PARTIAL.**
+* RELATED: K4 Mario (synthetic game video, confounder); ISTAnt (S0414, C0306: real ant video, RCT ground truth, no
+  instrument).
+* RELATED: semi-synthetic benchmarks on real static images or text (S0209 MedMNIST X-ray, S0446 Colored-MNIST,
+  Klaassen, Targeted-BEHRT, Veitch, Pryzant and others). None is on real medical video, and none manipulates acquisition
+  information as an instrument.
+* UNRESOLVED: S0242 (§5).
 
 ### L4. Duration / persistence dependence of the role of acquisition information; acquisition-removed representations in sequential estimation
 
-| source | grade | quote | location |
-|---|---|---|---|
-| K3; K4 | RELATED. Sequential estimators with representation deconfounders; no acquisition information, no role switch | — | K3 §3.3–3.5; K4 §3.3–3.6 |
-| Targeted-BEHRT (N0712) | RELATED. Persistent vs transient **clinical** confounding | "We define persisting confounding as confounders that are assigned at birth and persist through one's life course" | §II.B, p. 3 |
-| Guo et al. (2025) | RELATED. Domain-invariant (adversarial) embeddings, but invariant to the LLM-intervened text domain; static | "ensuring domain-invariant embeddings" | §3, p. 5 |
-| N0311 flow-based harmonization; N0570 ComBat PET; N0235 rsfMRI FM; N0587 causal state-space; N0596 DRTCI | RELATED. Harmonization for prediction, or balancing (treatment-invariant) representations over time | — | S1 |
-
-**L4 summary.** No DIRECT or PARTIAL. No source analyses how the **causal role** of acquisition information in
-representations **depends on intervention duration or persistence**. No source tests **site-invariant or harmonized
-representations in sequential causal estimation**.
+**No DIRECT or PARTIAL.**
+* RELATED:
+  * K3 and K4 (sequential deconfounders, no acquisition information);
+  * Targeted-BEHRT (persistent vs transient **clinical** confounding);
+  * S0008 (removal of acquisition information from representations, but static association);
+  * S0299, S0335, S0361, S0373, S0340 (treatment-invariant representations over time, not acquisition-invariant);
+  * the harmonization literature (S1).
 
 ## 3. Consequence under gate §6 (applied mechanically)
 
 | gate condition | met? | consequence |
 |---|---|---|
 | L1 and L2 DIRECT in the same paper, in medical video | no (no L2 DIRECT anywhere) | NO-GO not triggered |
-| L1 and L2 in the same paper, static medical images or non-medical video | no. K4 has L1 DIRECT but L2 only RELATED; the combined grade is RELATED | PARTIAL narrowing not triggered |
-| L1 and L2 in different papers | L1 yes (K4 DIRECT, plus PARTIALs). L2: RELATED only | **GO; cite K4 for L1, and the L2-RELATED works as nearest mechanism** |
+| L1 and L2 in the same paper, static medical images or non-medical video | no. Same-paper pairs: K4 (L1 DIRECT, L2 RELATED); S0414 and C0306 (L1 PARTIAL, L2 RELATED); combined grade RELATED | PARTIAL narrowing not triggered |
+| L1 and L2 in different papers | L1 yes. L2: RELATED only | **GO; cite K4 for L1 and the L2-RELATED works** |
 | L3 DIRECT | no | benchmark-novelty claim retained |
-| L4 DIRECT | no | duration-dependence headline retained |
-| L4 PARTIAL | no | no narrowing |
+| L4 DIRECT / PARTIAL | no | duration headline retained; no narrowing |
 
-**Literature-gate verdict: GO.**
-* The headline, the benchmark-novelty claim and the duration claim are all retained.
-* **Required citations:**
-  * K4, as L1 DIRECT in non-medical video and the precedent for a video causal benchmark;
-  * K1–K3;
-  * Roberts et al. 2020 and K2 Supp. S2, for Z-bias and overlap through learned summaries;
-  * the site-leakage literature (N0219, N0230, N0240), for acquisition information in foundation features.
-* **Condition:** the BLOCKED arms and the one UNRESOLVED work below.
+**Robustness of the verdict to the borderline L2 calls.** The verdict would not change if the investigator re-graded
+them as PARTIAL:
+* **S0414 / C0306 as L2 PARTIAL.** Each paper would then have L1 PARTIAL and L2 PARTIAL in non-medical video. The
+  consequence is "GO with the claim narrowed to sequential medical video", and the claim is already sequential
+  medical video.
+* **S0008 as L2 PARTIAL.** It has no L1 PARTIAL in the same paper, so the "different papers: GO; cite both" row
+  applies.
+
+**Required citations:**
+* K4, as L1 DIRECT (non-medical video) and the video causal benchmark precedent;
+* K1–K3;
+* S0414, C0306, C0320, C0332, for foundation video representations in causal estimation and encoder or shortcut bias;
+* S0008, for acquisition (site) information in a generative video representation of medical video;
+* Roberts 2020 and K2 Supp. S2, for Z-bias and overlap through learned summaries;
+* the site-leakage literature.
 
 ## 4. What the result does not establish
 
-* It covers PubMed, arXiv (four categories), OpenAlex and one citation level. **Semantic Scholar and the seven
-  proceedings were not searched.** MICCAI 2024–2026 and MIDL papers indexed only there could change L2 or L3.
-* Screening to RELATED or NONE used abstracts, by screening subagents under a fixed rubric. Every FULLTEXT record was
-  decided by the lead analyst. The L2 RELATED decisions were re-checked by the lead analyst (S4).
+* Screening to RELATED or NONE used abstracts, by screening subagents under the fixed rubric. Every FULLTEXT record was
+  decided by the lead analyst.
+* The six UNRESOLVED works below were not read.
 
-## 5. UNRESOLVED and investigator actions
+## 5. UNRESOLVED (full text not obtainable)
 
-| item | what is open | needed |
-|---|---|---|
-| **Semantic Scholar arm** (220 sub-queries) | all of L1–L4 for records indexed only there | a Semantic Scholar API key; then re-run `lit/search_s2.py` (resumable, cached) |
-| **Proceedings arm**: MICCAI, IPMI, MIDL, NeurIPS, ICML, CLeaR, UAI (220 sub-queries) | as above, the venue-restricted ranking | the same key (it runs after the Semantic Scholar arm in the same script) |
-| C0288: OmniNet (Neural Comput Appl 2025, doi 10.1007/s00521-025-11202-9) | L1 only (PARTIAL possible). L2–L4 NONE from the abstract | full text: the Springer OA PDF returns a bot challenge. A manual download by the investigator is needed |
-| Investigator's pathology FM site audit | its L2 grade | the preprint reference, when available |
+| uid | work | open on | reason |
+|---|---|---|---|
+| C0288 | OmniNet (Neural Comput Appl 2025, doi 10.1007/s00521-025-11202-9) | L1 (at most PARTIAL) | Springer bot challenge |
+| S0058 | Semantic Embedding and Dynamic PSM-DID … Green Patent Quality (ACM 2025, doi 10.1145/3800227.3800305) | L1 (text; at most PARTIAL) | no abstract; ACM bot challenge |
+| S0340 | TIDAL: Temporal Causal Diffusion … Knee Osteoarthritis (KDD 2026, doi 10.1145/3770855.3819025) | L1 (X-ray sequences; at most PARTIAL) | ACM bot challenge (listed gold OA) |
+| S0373 | LLMCE (CIKM 2025, doi 10.1145/3746252.3760914) | L1 (time series; at most PARTIAL) | ACM bot challenge |
+| S0242 | Synthetic Ground Truth Counterfactuals … Causal Generative Models in Medical Imaging (MICCAI 2025, doi 10.1007/978-3-032-04984-1_52) | L3 | no abstract; Springer bot challenge |
+| C0377 | Tesei et al. 2023, J Biomed Inform 140:104339 | L1 (EHR; at most PARTIAL) | ScienceDirect bot challenge |
 
-**Earlier list corrected.** C0262, C0265 and C0276 had been listed as unreadable. They were read in full from PMC
-and graded L1 PARTIAL (EHR); they are not UNRESOLVED.
+* **Investigator action, optional.** These six PDFs could be retrieved manually.
+* **Why they cannot change the verdict.**
+  * The five L1 items can reach at most L1 PARTIAL, and none is in medical video.
+  * S0242 could change only the L3 benchmark-novelty claim, and only if it is a semi-synthetic benchmark on **real
+    medical video** with acquisition information manipulated as an instrument. Its title says synthetic ground truth
+    in medical imaging.
+* The investigator's pathology foundation-model site audit (gate §6 known prior work) is still to be replaced by its
+  preprint reference.

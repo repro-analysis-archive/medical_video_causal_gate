@@ -1,0 +1,892 @@
+[
+ {
+  "id": "DS194",
+  "key": "u:D1365",
+  "category": "DATASET-C-COL",
+  "names": [],
+  "uids": [
+   "D1365"
+  ],
+  "titles": [
+   "Structure-preserving Image Translation for Depth Estimation in Colonoscopy Video"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/bfc1faa1ac06001a553f9c44455ef07a1a69beec"
+  ],
+  "doi": [
+   "10.48550/arXiv.2408.10153"
+  ],
+  "arxiv": [
+   "2408.10153"
+  ]
+ },
+ {
+  "id": "DS195",
+  "key": "u:D1367",
+  "category": "DATASET-C-COL",
+  "names": [],
+  "uids": [
+   "D1367"
+  ],
+  "titles": [
+   "Eye-tracking dataset of endoscopist-AI teaming during colonoscopy: Retrospective and real-time acquisition"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/2ef98b13dcaa6aea9944f9d5153ad3566d56ec30"
+  ],
+  "doi": [
+   "10.1038/s41597-025-04535-6"
+  ],
+  "arxiv": [
+   null
+  ]
+ },
+ {
+  "id": "DS196",
+  "key": "n:vim-polyp",
+  "category": "DATASET-C-COL",
+  "names": [
+   "VIM-Polyp"
+  ],
+  "uids": [
+   "D1372"
+  ],
+  "titles": [
+   "VIM-Polyp: Multimodal Colon Polyp Dataset with Video, Histopathology, and Protein Expression"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/2d92599ff1ede870fa32526b7337491ecb38cde0"
+  ],
+  "doi": [
+   "10.1038/s41597-025-06168-1"
+  ],
+  "arxiv": [
+   null
+  ]
+ },
+ {
+  "id": "DS197",
+  "key": "u:D1378",
+  "category": "DATASET-C-COL",
+  "names": [],
+  "uids": [
+   "D1378"
+  ],
+  "titles": [
+   "Interobserver variability in colonoscopy quality assessment: a retrospective standardized multicenter video-based study"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/5d7a0e01148f51ddc4a9cef99c36c3f74cc5a178"
+  ],
+  "doi": [
+   "10.22551/2026.51.1302.10338"
+  ],
+  "arxiv": [
+   null
+  ]
+ },
+ {
+  "id": "DS198",
+  "key": "n:topv",
+  "category": "DATASET-C-COL",
+  "names": [
+   "ToPV"
+  ],
+  "uids": [
+   "D1379"
+  ],
+  "titles": [
+   "Scheme And Dataset for Evaluating Computer-Aided Polyp Detection System in Colonoscopy"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/0cdf3bbb2b9ad2b3e79fb0f848a71c3b29b2f202"
+  ],
+  "doi": [
+   "10.1109/ISBI52829.2022.9761699"
+  ],
+  "arxiv": [
+   null
+  ]
+ },
+ {
+  "id": "DS199",
+  "key": "n:nerthus",
+  "category": "DATASET-C-COL",
+  "names": [
+   "Nerthus"
+  ],
+  "uids": [
+   "D1380"
+  ],
+  "titles": [
+   "Nerthus: A Bowel Preparation Quality Video Dataset"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/606f9cc22daf9cd6077e7d2f37d554a967215415"
+  ],
+  "doi": [
+   "10.1145/3083187.3083216"
+  ],
+  "arxiv": [
+   null
+  ]
+ },
+ {
+  "id": "DS200",
+  "key": "u:D1388",
+  "category": "DATASET-C-COL",
+  "names": [],
+  "uids": [
+   "D1388"
+  ],
+  "titles": [
+   "Real-Time Colonoscopy Simulation and Expert Data Acquisition for Inverse Reinforcement Learning"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/af48d46bdd17f3944b70eaf2b26e27364d9cf1ff"
+  ],
+  "doi": [
+   "10.1109/ICCAIS67508.2025.11262140"
+  ],
+  "arxiv": [
+   null
+  ]
+ },
+ {
+  "id": "DS201",
+  "key": "n:colon-bench",
+  "category": "DATASET-C-COL",
+  "names": [
+   "Colon-Bench"
+  ],
+  "uids": [
+   "D1411"
+  ],
+  "titles": [
+   "Colon-Bench: An Agentic Workflow for Scalable Dense Lesion Annotation in Full-Procedure Colonoscopy Videos"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/2d5756b3d9ccd96a8b9bec737252115d54623a84"
+  ],
+  "doi": [
+   "10.48550/arXiv.2603.25645"
+  ],
+  "arxiv": [
+   "2603.25645"
+  ]
+ },
+ {
+  "id": "DS202",
+  "key": "u:D1435",
+  "category": "DATASET-C-COL",
+  "names": [],
+  "uids": [
+   "D1435"
+  ],
+  "titles": [
+   "Amalgamation of cloud-based colonoscopy videos with patient-level metadata to facilitate large-scale machine learning"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/08e7f83b199e3d958c958ca5d1108f28dca0ea74"
+  ],
+  "doi": [
+   "10.1055/a-1326-1289"
+  ],
+  "arxiv": [
+   null
+  ]
+ },
+ {
+  "id": "DS203",
+  "key": "n:appendix300",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Appendix300"
+  ],
+  "uids": [
+   "D1480",
+   "D1525",
+   "D1535",
+   "D1578"
+  ],
+  "titles": [
+   "Appendix300: A multi-institutional laparoscopic appendectomy video dataset for computational modeling tasks",
+   "Appendix300: A multi-institutional laparoscopic appendectomy video dataset for computational modeling tasks",
+   "Appendix300: Surgical video and patient metadata of 330 laparoscopic appendectomy cases from five institutions",
+   "Appendix300: A multi-institutional laparoscopic appendectomy video dataset for computational modeling tasks"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/1e71dc2ab83441463fc6322bb7d12d347578720a",
+   "https://www.semanticscholar.org/paper/3056ad3d56cdd09ed77b47cdd69c35b1e30b3661"
+  ],
+  "doi": [
+   "10.1101/2025.09.05.25335174",
+   "10.1101/2025.09.05.25335174",
+   "10.1038/s41597-026-07593-6",
+   "10.1101/2025.09.05.25335174"
+  ],
+  "arxiv": [
+   null,
+   null,
+   null,
+   null
+  ]
+ },
+ {
+  "id": "DS204",
+  "key": "n:cataract-lmm",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Cataract-LMM"
+  ],
+  "uids": [
+   "D1495",
+   "D1521",
+   "D1601"
+  ],
+  "titles": [
+   "Cataract-LMM Large-Scale Multi-Source Multi-Task Benchmark for Deep Learning in Surgical Video Analysis",
+   "Cataract-LMM Large-Scale Multi-Source Multi-Task Benchmark for Deep Learning in Surgical Video Analysis",
+   "Cataract-LMM Large-Scale Multi-Source Multi-Task Benchmark for Deep Learning in Surgical Video Analysis"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/4240f929464ce28cde40bc609b13d0a969af69ae"
+  ],
+  "doi": [
+   "10.1038/s41597-026-07464-0",
+   "10.1038/s41597-026-07464-0",
+   "10.1038/s41597-026-07464-0"
+  ],
+  "arxiv": [
+   "2510.16371",
+   "2510.16371",
+   "2510.16371"
+  ]
+ },
+ {
+  "id": "DS205",
+  "key": "u:D1509",
+  "category": "DATASET-C-COL",
+  "names": [],
+  "uids": [
+   "D1509"
+  ],
+  "titles": [
+   "Implementation of a prospective video databank for artificial intelligence model development, validation and clinical outcomes research in gastrointestinal endoscopy."
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/26ad3756100cfda2b5de6d80e011c59696d67ae4"
+  ],
+  "doi": [
+   "10.1016/j.gie.2026.06.036"
+  ],
+  "arxiv": [
+   null
+  ]
+ },
+ {
+  "id": "DS206",
+  "key": "u:D1510",
+  "category": "DATASET-C-SURG",
+  "names": [],
+  "uids": [
+   "D1510",
+   "D1575"
+  ],
+  "titles": [
+   "Multicenter fine annotated surgical video dataset for minimally invasive glaucoma surgery",
+   "Multicenter fine annotated surgical video dataset for minimally invasive glaucoma surgery"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/73745881fcb2de63f3d82e93963afc7448935ae4"
+  ],
+  "doi": [
+   "10.1038/s41597-026-07535-2",
+   "10.1038/s41597-026-07535-2"
+  ],
+  "arxiv": [
+   null,
+   null
+  ]
+ },
+ {
+  "id": "DS207",
+  "key": "n:surgbench",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgBench"
+  ],
+  "uids": [
+   "D1513",
+   "D1587"
+  ],
+  "titles": [
+   "SurgBench: A Unified Large-Scale Benchmark for Surgical Video Analysis",
+   "SurgBench: A Unified Large-Scale Benchmark for Surgical Video Analysis"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/5df106a7316c25422c3a85d3762bad91261dae5d"
+  ],
+  "doi": [
+   "10.48550/arXiv.2506.07603",
+   "10.48550/arXiv.2506.07603"
+  ],
+  "arxiv": [
+   "2506.07603",
+   "2506.07603"
+  ]
+ },
+ {
+  "id": "DS208",
+  "key": "n:surgpub-video",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgPub-Video"
+  ],
+  "uids": [
+   "D1514",
+   "D1588"
+  ],
+  "titles": [
+   "SurgPub-Video: A Comprehensive Surgical Video Framework for Enhanced Surgical Intelligence in Vision-Language Model",
+   "SurgPub-Video: A Comprehensive Surgical Video Framework for Enhanced Surgical Intelligence in Vision-Language Model"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/9026828a6bbe58b896419d8546aefab1e0bd92a0"
+  ],
+  "doi": [
+   "10.1609/aaai.v40i8.37593",
+   "10.1609/aaai.v40i8.37593"
+  ],
+  "arxiv": [
+   "2508.10054",
+   "2508.10054"
+  ]
+ },
+ {
+  "id": "DS209",
+  "key": "n:ophora-160k",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Ophora-160K"
+  ],
+  "uids": [
+   "D1516",
+   "D1596"
+  ],
+  "titles": [
+   "Ophora: A Large-Scale Data-Driven Text-Guided Ophthalmic Surgical Video Generation Model",
+   "Ophora: A Large-Scale Data-Driven Text-Guided Ophthalmic Surgical Video Generation Model"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/38e5f9aeac30c3b23bef3b1902a9b7cb22b4d5e7"
+  ],
+  "doi": [
+   "10.48550/arXiv.2505.07449",
+   "10.48550/arXiv.2505.07449"
+  ],
+  "arxiv": [
+   "2505.07449",
+   "2505.07449"
+  ]
+ },
+ {
+  "id": "DS210",
+  "key": "n:surg-qa",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Surg-QA"
+  ],
+  "uids": [
+   "D1517",
+   "D1602"
+  ],
+  "titles": [
+   "LLaVA-Surg: Towards Multimodal Surgical Assistant via Structured Surgical Video Learning",
+   "LLaVA-Surg: Towards Multimodal Surgical Assistant via Structured Surgical Video Learning"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/02a7f19c6a0a72e86ca53e12402befe5bd22f265"
+  ],
+  "doi": [
+   "10.48550/arXiv.2408.07981",
+   "10.48550/arXiv.2408.07981"
+  ],
+  "arxiv": [
+   "2408.07981",
+   "2408.07981"
+  ]
+ },
+ {
+  "id": "DS211",
+  "key": "u:D1518",
+  "category": "DATASET-C-SURG",
+  "names": [],
+  "uids": [
+   "D1518",
+   "D1597"
+  ],
+  "titles": [
+   "Watch and learn: leveraging expert knowledge and language for surgical video understanding",
+   "Watch and learn: leveraging expert knowledge and language for surgical video understanding"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/1ed540849b562d66e420a8552a1ca1eac7f26b74"
+  ],
+  "doi": [
+   "10.1007/s11548-025-03472-4",
+   "10.1007/s11548-025-03472-4"
+  ],
+  "arxiv": [
+   "2503.11392",
+   "2503.11392"
+  ]
+ },
+ {
+  "id": "DS212",
+  "key": "n:ophvl",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "OphVL"
+  ],
+  "uids": [
+   "D1520",
+   "D1603"
+  ],
+  "titles": [
+   "OphCLIP: Hierarchical Retrieval-Augmented Learning for Ophthalmic Surgical Video-Language Pretraining",
+   "OphCLIP: Hierarchical Retrieval-Augmented Learning for Ophthalmic Surgical Video-Language Pretraining"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/e59680a82808c1c3d96454a4d5f8c896f7187882"
+  ],
+  "doi": [
+   "10.1109/ICCV51701.2025.01845",
+   "10.1109/ICCV51701.2025.01845"
+  ],
+  "arxiv": [
+   "2411.15421",
+   "2411.15421"
+  ]
+ },
+ {
+  "id": "DS213",
+  "key": "u:D1523",
+  "category": "DATASET-C-SURG",
+  "names": [],
+  "uids": [
+   "D1523",
+   "D1537"
+  ],
+  "titles": [
+   "Decentralized, privacy-preserving surgical video analysis with Swarm Learning",
+   "Privacy-Preserving Surgical Video Analysis with Swarm Learning \u2014 Results from a Multinational Appendectomy Cohort"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/3f05a0dd9788c1fa04cbacd15704705b3e649d2d",
+   "https://www.semanticscholar.org/paper/7a6cd86d042879130f795d032ba074161d9ad44d"
+  ],
+  "doi": [
+   "10.1101/2025.10.02.25337106",
+   "10.1056/aioa2501116"
+  ],
+  "arxiv": [
+   null,
+   null
+  ]
+ },
+ {
+  "id": "DS214",
+  "key": "n:surgisr4k",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgiSR4K"
+  ],
+  "uids": [
+   "D1526",
+   "D1577"
+  ],
+  "titles": [
+   "SurgiSR4K: A High-Resolution Endoscopic Video Dataset for Robotic-Assisted Minimally Invasive Procedures",
+   "SurgiSR4K: A High-Resolution Endoscopic Video Dataset for Robotic-Assisted Minimally Invasive Procedures"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/66e7b76ada6907ff652fbfe35990144f4788980c"
+  ],
+  "doi": [
+   "10.59275/j.melba.2025-f593",
+   "10.59275/j.melba.2025-f593"
+  ],
+  "arxiv": [
+   "2507.00209",
+   "2507.00209"
+  ]
+ },
+ {
+  "id": "DS215",
+  "key": "n:surgatlas",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgAtlas"
+  ],
+  "uids": [
+   "D1528"
+  ],
+  "titles": [
+   "SurgAtlas: A Large-Scale Surgical Video-Language Dataset with 2,391 Hours of Open and Minimally Invasive Surgery"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/4c186893f534408e33422da9c70fae926fc9c59c"
+  ],
+  "doi": [
+   "10.48550/arXiv.2606.25905"
+  ],
+  "arxiv": [
+   "2606.25905"
+  ]
+ },
+ {
+  "id": "DS216",
+  "key": "n:surgstu",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgSTU"
+  ],
+  "uids": [
+   "D1534"
+  ],
+  "titles": [
+   "An Approach to Enriching Surgical Video Datasets for Fine-Grained Spatial-Temporal Understanding of Vision-Language Models"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/34e68338f7d9c72f7a36107f1b4a8acfcaf2087b"
+  ],
+  "doi": [
+   "10.48550/arXiv.2604.00784"
+  ],
+  "arxiv": [
+   "2604.00784"
+  ]
+ },
+ {
+  "id": "DS217",
+  "key": "n:tmvp-surgvideo",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "TMVP-SurgVideo"
+  ],
+  "uids": [
+   "D1536",
+   "D1583"
+  ],
+  "titles": [
+   "A new dataset and versatile multi-task surgical workflow analysis framework for thoracoscopic mitral valvuloplasty",
+   "A new dataset and versatile multi-task surgical workflow analysis framework for thoracoscopic mitral valvuloplasty"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/4a304a2b385f42d94796fc75216817919b178b2c"
+  ],
+  "doi": [
+   "10.1016/j.media.2025.103724",
+   "10.1016/j.media.2025.103724"
+  ],
+  "arxiv": [
+   null,
+   null
+  ]
+ },
+ {
+  "id": "DS218",
+  "key": "n:surgonair-11k",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgOnAir-11k"
+  ],
+  "uids": [
+   "D1538"
+  ],
+  "titles": [
+   "SurgOnAir: Hierarchy-Aware Real-Time Surgical Video Commentary"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/68e53f1a5f1c257418a7c69f441bdff234d6b088"
+  ],
+  "doi": [
+   "10.48550/arXiv.2605.21132"
+  ],
+  "arxiv": [
+   "2605.21132"
+  ]
+ },
+ {
+  "id": "DS219",
+  "key": "n:temset-24k",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "TEMSET-24K"
+  ],
+  "uids": [
+   "D1540",
+   "D1584"
+  ],
+  "titles": [
+   "TEMSET-24K: Densely Annotated Dataset for Indexing Multipart Endoscopic Videos using Surgical Timeline Segmentation",
+   "TEMSET-24K: Densely Annotated Dataset for Indexing Multipart Endoscopic Videos using Surgical Timeline Segmentation"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/d0c31734a479ed5a9983794e185a267f109f5f4d"
+  ],
+  "doi": [
+   "10.1038/s41597-025-05646-w",
+   "10.1038/s41597-025-05646-w"
+  ],
+  "arxiv": [
+   "2502.06708",
+   "2502.06708"
+  ]
+ },
+ {
+  "id": "DS220",
+  "key": "n:acl27 (arthrophase)",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "ACL27 (ArthroPhase)"
+  ],
+  "uids": [
+   "D1541",
+   "D1586"
+  ],
+  "titles": [
+   "ArthroPhase: a novel dataset and method for phase recognition in arthroscopic video",
+   "ArthroPhase: a novel dataset and method for phase recognition in arthroscopic video"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/3902d1c7b1d171bd7f6d118be81b0f364b6ca873"
+  ],
+  "doi": [
+   "10.1080/24699322.2025.2508144",
+   "10.1080/24699322.2025.2508144"
+  ],
+  "arxiv": [
+   "2502.07431",
+   "2502.07431"
+  ]
+ },
+ {
+  "id": "DS221",
+  "key": "u:D1545",
+  "category": "DATASET-C-SURG",
+  "names": [],
+  "uids": [
+   "D1545",
+   "D1595"
+  ],
+  "titles": [
+   "HecVL: Hierarchical Video-Language Pretraining for Zero-shot Surgical Phase Recognition",
+   "HecVL: Hierarchical Video-Language Pretraining for Zero-shot Surgical Phase Recognition"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/ad4b36077ab34ef222fb4d80661ede526e6278c6"
+  ],
+  "doi": [
+   "10.48550/arXiv.2405.10075",
+   "10.48550/arXiv.2405.10075"
+  ],
+  "arxiv": [
+   "2405.10075",
+   "2405.10075"
+  ]
+ },
+ {
+  "id": "DS222",
+  "key": "n:endoscapes2023",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "Endoscapes2023"
+  ],
+  "uids": [
+   "D1547",
+   "D1608"
+  ],
+  "titles": [
+   "Endoscapes, a critical view of safety and surgical scene segmentation dataset for laparoscopic cholecystectomy",
+   "Endoscapes, a critical view of safety and surgical scene segmentation dataset for laparoscopic cholecystectomy"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/26b2e49685814005311d89320abbde155a7227ec"
+  ],
+  "doi": [
+   "10.1038/s41597-025-04642-4",
+   "10.1038/s41597-025-04642-4"
+  ],
+  "arxiv": [
+   "2312.12429",
+   "2312.12429"
+  ]
+ },
+ {
+  "id": "DS223",
+  "key": "n:multibypass140",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "MultiBypass140"
+  ],
+  "uids": [
+   "D1549",
+   "D1594"
+  ],
+  "titles": [
+   "Analyzing the impact of surgical technique on intraoperative adverse events in laparoscopic Roux-en-Y gastric bypass surgery by video-based assessment",
+   "Analyzing the impact of surgical technique on intraoperative adverse events in laparoscopic Roux-en-Y gastric bypass surgery by video-based assessment"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/a927528d2b9c7e264d52572318302198f1547a7e"
+  ],
+  "doi": [
+   "10.1007/s00464-025-11557-z",
+   "10.1007/s00464-025-11557-z"
+  ],
+  "arxiv": [
+   null,
+   null
+  ]
+ },
+ {
+  "id": "DS224",
+  "key": "n:pov-surgery",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "POV-Surgery"
+  ],
+  "uids": [
+   "D1553"
+  ],
+  "titles": [
+   "POV-Surgery: A Dataset for Egocentric Hand and Tool Pose Estimation During Surgical Activities"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/9ebcaa8afe25aebb302b0452833ad5082e57b2e9"
+  ],
+  "doi": [
+   "10.1007/978-3-031-43996-4_42"
+  ],
+  "arxiv": [
+   "2307.10387"
+  ]
+ },
+ {
+  "id": "DS225",
+  "key": "n:sata",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SATA"
+  ],
+  "uids": [
+   "D1564"
+  ],
+  "titles": [
+   "Cosmos-H-Surgical: Learning Surgical Robot Policies from Videos via World Modeling"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/60a56060321023d2b1606c346a097ab069a91b86"
+  ],
+  "doi": [
+   null
+  ],
+  "arxiv": [
+   "2512.23162"
+  ]
+ },
+ {
+  "id": "DS226",
+  "key": "n:brs / vts",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "BRS / VTS"
+  ],
+  "uids": [
+   "D1567"
+  ],
+  "titles": [
+   "MS-TCRNet: Multi-Stage Temporal Convolutional Recurrent Networks for Action Segmentation Using Sensor-Augmented Kinematics"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/9ff3b571921bd69623e714162ef71efd17664885"
+  ],
+  "doi": [
+   "10.1016/j.patcog.2024.110778"
+  ],
+  "arxiv": [
+   "2303.07814"
+  ]
+ },
+ {
+  "id": "DS227",
+  "key": "n:surgpose",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgPose"
+  ],
+  "uids": [
+   "D1574"
+  ],
+  "titles": [
+   "SurgPose: a Dataset for Articulated Robotic Surgical Tool Pose Estimation and Tracking"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/cdbf4e7c0d4e55cfcf89f3c3264f2ff4d3438553"
+  ],
+  "doi": [
+   "10.1109/ICRA55743.2025.11127958"
+  ],
+  "arxiv": [
+   "2502.11534"
+  ]
+ },
+ {
+  "id": "DS228",
+  "key": "n:surglavi",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgLaVi"
+  ],
+  "uids": [
+   "D1591"
+  ],
+  "titles": [
+   "SurgLaVi: Large-Scale Hierarchical Dataset for Surgical Vision-Language Representation Learning"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/3eb7ec1d730efab9d6c5b00735accf1186e38a17"
+  ],
+  "doi": [
+   "10.48550/arXiv.2509.10555"
+  ],
+  "arxiv": [
+   "2509.10555"
+  ]
+ },
+ {
+  "id": "DS229",
+  "key": "n:lemon",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "LEMON"
+  ],
+  "uids": [
+   "D1599"
+  ],
+  "titles": [
+   "LEMON: A Large Endoscopic MONocular Dataset and Foundation Model for Perception in Surgical Settings"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/f4478fc12ac2309493c1f7da71ed840a4f9d5bbe"
+  ],
+  "doi": [
+   null
+  ],
+  "arxiv": [
+   "2503.19740"
+  ]
+ }
+]

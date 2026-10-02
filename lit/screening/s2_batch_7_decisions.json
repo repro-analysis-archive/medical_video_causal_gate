@@ -1,0 +1,418 @@
+[
+ {
+  "uid": "S0679",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Neural SPDE operator learning; no causal component."
+ },
+ {
+  "uid": "S0680",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Static-dynamic disentanglement for time-series forecasting; no causal component."
+ },
+ {
+  "uid": "S0681",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Path-dependent structural equation models for longitudinal causal inference; generic causal methodology."
+ },
+ {
+  "uid": "S0682",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal effect identification across heterogeneous environments via higher-order moments; generic identification theory."
+ },
+ {
+  "uid": "S0683",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Title only: causal inference for functional longitudinal data; generic longitudinal causal methodology, no learned image/video/text representations indicated."
+ },
+ {
+  "uid": "S0684",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "History-restricted MSMs for closed-loop sequential excursion effects; generic longitudinal causal methodology."
+ },
+ {
+  "uid": "S0685",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Dynamic causal graph hypothesis generation from neural time series; causal discovery, no learned-representation adjustment."
+ },
+ {
+  "uid": "S0686",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Sharp bounds for generalized causal sensitivity analysis; generic causal methodology."
+ },
+ {
+  "uid": "S0687",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Diffusion-autoencoder scanner harmonization for multi-site/longitudinal MRI; no causal effect estimation."
+ },
+ {
+  "uid": "S0688",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Semiparametric efficient inference in adaptive experiments; generic causal methodology."
+ },
+ {
+  "uid": "S0689",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Segmented time-series classification; no causal component."
+ },
+ {
+  "uid": "S0690",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Sequential indirect experiment design bounding causal effects; generic causal methodology."
+ },
+ {
+  "uid": "S0691",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Contrastive/InfoMax history representations for counterfactual regression over time on generic time-series covariates; not image/video/text."
+ },
+ {
+  "uid": "S0692",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Moment-constrained Riesz representer learning for debiased causal estimation; generic, no learned image/video/text representations."
+ },
+ {
+  "uid": "S0693",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Double ML for dynamic treatment effects with high-dimensional state; generic sequential causal methodology."
+ },
+ {
+  "uid": "S0694",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Front-door deconfounded drug recommendation from multi-visit EHR codes; recommendation, no treatment-effect estimation with learned image/video/text covariates."
+ },
+ {
+  "uid": "S0695",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Adaptive exploration for debiasing classification datasets; no causal effect estimation."
+ },
+ {
+  "uid": "S0696",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Title only: V-learning for dynamic treatment regimes; generic causal methodology."
+ },
+ {
+  "uid": "S0697",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Removing hidden confounding in recommendation via multi-task calibration; generic debiasing methodology."
+ },
+ {
+  "uid": "S0698",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Adversarial hijacking of LLM in-context learning; no causal estimation."
+ },
+ {
+  "uid": "S0699",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Counterfactual propensity-based learning for recommender exposure bias; generic causal methodology."
+ },
+ {
+  "uid": "S0700",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Black-box adversarial attacks on sequential data; no causal component."
+ },
+ {
+  "uid": "S0701",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "No-regret learning in time-varying games; no causal component."
+ },
+ {
+  "uid": "S0702",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Longitudinal latent disentanglement of aging and Alzheimer's progression; no causal estimation."
+ },
+ {
+  "uid": "S0703",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "RL framework for dynamic mediation analysis; generic sequential causal methodology."
+ },
+ {
+  "uid": "S0704",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: label-matching deep domain adaptation; no causal component indicated."
+ },
+ {
+  "uid": "S0705",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: test-time adaptation for tabular data; no causal component indicated."
+ },
+ {
+  "uid": "S0706",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Phylogenetic variant effect prediction; no causal component."
+ },
+ {
+  "uid": "S0707",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Graphical criterion for sequential causal imitation learning; generic identification theory."
+ },
+ {
+  "uid": "S0708",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Removing non-causal representation components at test time; causal-inspired prediction, no treatment-effect estimation."
+ },
+ {
+  "uid": "S0709",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Personalized pathway-specific policies in longitudinal settings; generic causal methodology."
+ },
+ {
+  "uid": "S0710",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Sequential instrument selection for high-dimensional treatment effects; generic causal methodology."
+ },
+ {
+  "uid": "S0711",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Generative harmonization of slice positional (acquisition) variance for longitudinal CT analysis; no causal estimation."
+ },
+ {
+  "uid": "S0712",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Mamba-based 3D segmentation; no causal component."
+ },
+ {
+  "uid": "S0713",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Title only: confounding-robust off-policy evaluation; generic causal methodology."
+ },
+ {
+  "uid": "S0714",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Title only: doubly robust debiased collaborative filtering; generic debiasing methodology."
+ },
+ {
+  "uid": "S0715",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Bandits under priming/repetition effects; no causal effect estimation with learned covariates."
+ },
+ {
+  "uid": "S0716",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Title only: bandits with interference bridging causal inference; generic causal methodology."
+ },
+ {
+  "uid": "S0717",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "GAN simulation of neurodegeneration on MRI as a function of age/disease (counterfactual-style generation); no causal effect estimation."
+ },
+ {
+  "uid": "S0718",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: attribute-guided sequential lung nodule synthesis; no causal component indicated."
+ },
+ {
+  "uid": "S0719",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Real-time adversarial audio for privacy; no causal component."
+ },
+ {
+  "uid": "S0720",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal visual prompts disentangling spurious features for domain-generalized detection; no treatment-effect estimation."
+ },
+ {
+  "uid": "S0721",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Balancing representations for treatment-specific hazard estimation on generic covariates; not image/video/text."
+ },
+ {
+  "uid": "S0722",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "View-invariant X-ray landmark detection; no causal component."
+ },
+ {
+  "uid": "S0723",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Stability of graph scattering transforms; no causal component."
+ },
+ {
+  "uid": "S0724",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Backdoor adjustment for latent context confounding in OOD sequential event prediction; causal-inspired prediction, no learned image/video/text adjustment."
+ },
+ {
+  "uid": "S0725",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Identification of compositional sequential intervention effects; generic causal methodology."
+ },
+ {
+  "uid": "S0726",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "RNN factor-model latent substitutes for hidden confounders in longitudinal treatment effects; tabular time series, not image/video/text representations."
+ },
+ {
+  "uid": "S0727",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Adversarially robust causal algorithmic recourse; causal decision methodology without learned-representation adjustment."
+ },
+ {
+  "uid": "S0728",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Counterfactual-query risk minimization for environment models; generic counterfactual methodology."
+ },
+ {
+  "uid": "S0729",
+  "decision": "FULLTEXT",
+  "claims": [
+   "L1"
+  ],
+  "reason": "Adversarially balanced deep covariate representations for causal inference, including convolutional networks for image confounders."
+ },
+ {
+  "uid": "S0730",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Vertical federated adversarial training; no causal component."
+ },
+ {
+  "uid": "S0731",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Online constrained MDPs with adversarial constraints; no causal component."
+ },
+ {
+  "uid": "S0732",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Causal invariance regularization for anomaly detection under distribution shift; no treatment-effect estimation."
+ },
+ {
+  "uid": "S0733",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Title only: invariant predictors via causal structure; causal-inspired prediction, no treatment-effect estimation indicated."
+ },
+ {
+  "uid": "S0734",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "OOD generalization in dynamical systems reconstruction; no causal effect estimation."
+ },
+ {
+  "uid": "S0735",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Adaptive experimental design under temporal interference; generic causal methodology."
+ },
+ {
+  "uid": "S0736",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Sequential SCM simulator and causal estimation benchmark built from tabular Adult data; not built on medical images or video."
+ },
+ {
+  "uid": "S0737",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "AIPW off-policy estimation with adaptively collected data; generic causal methodology."
+ },
+ {
+  "uid": "S0738",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Identifiability of selection structure in sequential data; generic causal identification theory."
+ },
+ {
+  "uid": "S0739",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Debiased causal tree for CATT under unmeasured confounding; generic causal methodology."
+ },
+ {
+  "uid": "S0740",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Propensity-corrected Bayesian priors for ATE; generic causal methodology."
+ },
+ {
+  "uid": "S0741",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "GAN deformation fields turning diseased into healthy-looking images for disease-evidence explanation; counterfactual-style imaging, no causal effect estimation."
+ },
+ {
+  "uid": "S0742",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Robust satisficing GP bandits; no causal component."
+ },
+ {
+  "uid": "S0743",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Defense against score-based query attacks; no causal component."
+ },
+ {
+  "uid": "S0744",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Invariant causal representation for imitation learning across environments; no treatment-effect estimation with image/video/text adjustment."
+ },
+ {
+  "uid": "S0745",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Circuit domain generalization for logic synthesis; no causal component."
+ },
+ {
+  "uid": "S0746",
+  "decision": "NONE",
+  "claims": [],
+  "reason": "Title only: whole-slide image representation learning; no causal component indicated."
+ },
+ {
+  "uid": "S0747",
+  "decision": "RELATED",
+  "claims": [],
+  "reason": "Gaussian-process latent substitutes for unobserved confounders in sequential treatment effects; not image/video/text representations."
+ }
+]

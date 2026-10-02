@@ -1,0 +1,232 @@
+[
+ {
+  "id": "DS212",
+  "key": "n:ophvl",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "OphVL"
+  ],
+  "uids": [
+   "D1520",
+   "D1603"
+  ],
+  "titles": [
+   "OphCLIP: Hierarchical Retrieval-Augmented Learning for Ophthalmic Surgical Video-Language Pretraining",
+   "OphCLIP: Hierarchical Retrieval-Augmented Learning for Ophthalmic Surgical Video-Language Pretraining"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/e59680a82808c1c3d96454a4d5f8c896f7187882"
+  ],
+  "doi": [
+   "10.1109/ICCV51701.2025.01845",
+   "10.1109/ICCV51701.2025.01845"
+  ],
+  "arxiv": [
+   "2411.15421",
+   "2411.15421"
+  ]
+ },
+ {
+  "id": "DS213",
+  "key": "u:D1523",
+  "category": "DATASET-C-SURG",
+  "names": [],
+  "uids": [
+   "D1523",
+   "D1537"
+  ],
+  "titles": [
+   "Decentralized, privacy-preserving surgical video analysis with Swarm Learning",
+   "Privacy-Preserving Surgical Video Analysis with Swarm Learning \u2014 Results from a Multinational Appendectomy Cohort"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/3f05a0dd9788c1fa04cbacd15704705b3e649d2d",
+   "https://www.semanticscholar.org/paper/7a6cd86d042879130f795d032ba074161d9ad44d"
+  ],
+  "doi": [
+   "10.1101/2025.10.02.25337106",
+   "10.1056/aioa2501116"
+  ],
+  "arxiv": [
+   null,
+   null
+  ]
+ },
+ {
+  "id": "DS214",
+  "key": "n:surgisr4k",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgiSR4K"
+  ],
+  "uids": [
+   "D1526",
+   "D1577"
+  ],
+  "titles": [
+   "SurgiSR4K: A High-Resolution Endoscopic Video Dataset for Robotic-Assisted Minimally Invasive Procedures",
+   "SurgiSR4K: A High-Resolution Endoscopic Video Dataset for Robotic-Assisted Minimally Invasive Procedures"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/66e7b76ada6907ff652fbfe35990144f4788980c"
+  ],
+  "doi": [
+   "10.59275/j.melba.2025-f593",
+   "10.59275/j.melba.2025-f593"
+  ],
+  "arxiv": [
+   "2507.00209",
+   "2507.00209"
+  ]
+ },
+ {
+  "id": "DS215",
+  "key": "n:surgatlas",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgAtlas"
+  ],
+  "uids": [
+   "D1528"
+  ],
+  "titles": [
+   "SurgAtlas: A Large-Scale Surgical Video-Language Dataset with 2,391 Hours of Open and Minimally Invasive Surgery"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/4c186893f534408e33422da9c70fae926fc9c59c"
+  ],
+  "doi": [
+   "10.48550/arXiv.2606.25905"
+  ],
+  "arxiv": [
+   "2606.25905"
+  ]
+ },
+ {
+  "id": "DS216",
+  "key": "n:surgstu",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgSTU"
+  ],
+  "uids": [
+   "D1534"
+  ],
+  "titles": [
+   "An Approach to Enriching Surgical Video Datasets for Fine-Grained Spatial-Temporal Understanding of Vision-Language Models"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/34e68338f7d9c72f7a36107f1b4a8acfcaf2087b"
+  ],
+  "doi": [
+   "10.48550/arXiv.2604.00784"
+  ],
+  "arxiv": [
+   "2604.00784"
+  ]
+ },
+ {
+  "id": "DS217",
+  "key": "n:tmvp-surgvideo",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "TMVP-SurgVideo"
+  ],
+  "uids": [
+   "D1536",
+   "D1583"
+  ],
+  "titles": [
+   "A new dataset and versatile multi-task surgical workflow analysis framework for thoracoscopic mitral valvuloplasty",
+   "A new dataset and versatile multi-task surgical workflow analysis framework for thoracoscopic mitral valvuloplasty"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/4a304a2b385f42d94796fc75216817919b178b2c"
+  ],
+  "doi": [
+   "10.1016/j.media.2025.103724",
+   "10.1016/j.media.2025.103724"
+  ],
+  "arxiv": [
+   null,
+   null
+  ]
+ },
+ {
+  "id": "DS218",
+  "key": "n:surgonair-11k",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "SurgOnAir-11k"
+  ],
+  "uids": [
+   "D1538"
+  ],
+  "titles": [
+   "SurgOnAir: Hierarchy-Aware Real-Time Surgical Video Commentary"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/68e53f1a5f1c257418a7c69f441bdff234d6b088"
+  ],
+  "doi": [
+   "10.48550/arXiv.2605.21132"
+  ],
+  "arxiv": [
+   "2605.21132"
+  ]
+ },
+ {
+  "id": "DS219",
+  "key": "n:temset-24k",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "TEMSET-24K"
+  ],
+  "uids": [
+   "D1540",
+   "D1584"
+  ],
+  "titles": [
+   "TEMSET-24K: Densely Annotated Dataset for Indexing Multipart Endoscopic Videos using Surgical Timeline Segmentation",
+   "TEMSET-24K: Densely Annotated Dataset for Indexing Multipart Endoscopic Videos using Surgical Timeline Segmentation"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/d0c31734a479ed5a9983794e185a267f109f5f4d"
+  ],
+  "doi": [
+   "10.1038/s41597-025-05646-w",
+   "10.1038/s41597-025-05646-w"
+  ],
+  "arxiv": [
+   "2502.06708",
+   "2502.06708"
+  ]
+ },
+ {
+  "id": "DS220",
+  "key": "n:acl27 (arthrophase)",
+  "category": "DATASET-C-SURG",
+  "names": [
+   "ACL27 (ArthroPhase)"
+  ],
+  "uids": [
+   "D1541",
+   "D1586"
+  ],
+  "titles": [
+   "ArthroPhase: a novel dataset and method for phase recognition in arthroscopic video",
+   "ArthroPhase: a novel dataset and method for phase recognition in arthroscopic video"
+  ],
+  "urls": [
+   "https://www.semanticscholar.org/paper/3902d1c7b1d171bd7f6d118be81b0f364b6ca873"
+  ],
+  "doi": [
+   "10.1080/24699322.2025.2508144",
+   "10.1080/24699322.2025.2508144"
+  ],
+  "arxiv": [
+   "2502.07431",
+   "2502.07431"
+  ]
+ }
+]

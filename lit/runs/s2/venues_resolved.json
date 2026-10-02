@@ -12,8 +12,9 @@
   "IPMI"
  ],
  "MIDL": [
-  "arXiv.org",
-  "ArXiv"
+  "Medical Imaging with Deep Learning",
+  "International Conference on Medical Imaging with Deep Learning",
+  "MIDL"
  ],
  "NeurIPS": [
   "Neural Information Processing Systems",
@@ -27,13 +28,9 @@
   "Int Conf Mach Learn"
  ],
  "CLeaR": [
-  "CLEaR",
-  "Classification of Events, Activities and Relationships",
-  "CLEAR",
-  "CLeaR",
+  "Conference on Causal Learning and Reasoning",
   "Conf Causal Learn Reason",
-  "Classif Event Act Relatsh",
-  "Conference on Causal Learning and Reasoning"
+  "CLeaR"
  ],
  "UAI": [
   "Conference on Uncertainty in Artificial Intelligence",
