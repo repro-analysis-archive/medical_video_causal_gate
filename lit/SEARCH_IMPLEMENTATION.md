@@ -87,3 +87,19 @@ are far from complete (for example 38 MICCAI works and 66 MIDL works, and CLeaR 
   reason and screener.
 * `FULLTEXT_NOTES.md`: full-text readings, quotes and grades.
 * `LIT_GATE_RESULT.md`: tables per claim L1–L4, the §6 consequence, and the UNRESOLVED list.
+
+## 8. Grade definitions (added before any grade is assigned)
+
+Gate §6 names the grades but does not define them. They are applied per claim, per source, as follows:
+
+* **DIRECT:** the source does what the claim states, with every element the claim names.
+  * For L1: generative or foundation **video** representations, used as **adjustment covariates**, for the causal
+    effect of an **action or treatment**.
+  * L1 does not require medical data. Medical vs non-medical scope is handled by the §6 consequences.
+* **PARTIAL:** the source does the claim's core with exactly one named element different or narrower. Examples: text
+  or images instead of video; a static instead of a sequential setting, where the claim names sequential; acquisition
+  information analysed for prediction shortcuts, but tied to overlap or confounding only qualitatively.
+* **RELATED:** the source shares the topic, tools or setting, but not the claim's core.
+* **NONE:** unrelated.
+
+A source is graded separately on L1, L2, L3 and L4. A combined condition takes the lowest component grade (gate §6).
