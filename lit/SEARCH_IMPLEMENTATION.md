@@ -32,7 +32,9 @@ are far from complete (for example 38 MICCAI works and 66 MIDL works, and CLeaR 
 ## 3. Split rule for engines without boolean support
 
 * **Sub-queries:** one sub-query for each element of the Cartesian product of the query's OR-blocks, taking one term
-  from each block in the order written. That gives Q1 150, Q2 36, Q3 4 and Q4 60 sub-queries.
+  from each block in the order written. That gives Q1 120 (6 × 5 × 4), Q2 36, Q3 4 and Q4 60 sub-queries.
+  (Erratum, before any search: an earlier version of this line said Q1 150. The rule is unchanged; only the derived
+  count was miscounted.)
 * **Merge:** the ranked lists are merged round-robin by rank (rank 1 of every sub-query in order, then rank 2, and so
   on). Records are deduplicated by Semantic Scholar paper id, and the merge stops at **100 unique records per query
   per database**.
