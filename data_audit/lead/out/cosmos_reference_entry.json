@@ -1,0 +1,197 @@
+{
+ "name": "NVIDIA Cosmos tokenizer used by Nakamura, Breuer, Crespin, Dietrich & Imai (2026), arXiv:2607.06126 (K4); named reference representation (Decision 005)",
+ "version": {
+  "value": "nvidia/Cosmos-1.0-Tokenizer-CV8x8x8 (Cosmos Tokenizer v1.0 continuous video tokenizer; HF repo sha 5110dbb3c94a9eb6648eabbbccc19c76180fe426)",
+  "basis": "K4 names only 'the NVIDIA Cosmos tokenizer (Agarwal et al., 2025)'. The checkpoint is the default of the authors' package gpi_pack (MIT, Copyright 2025 Kentaro Nakamura; repo commit 8836037), whose video module says it implements 'the representation used by the video paper', and whose documentation links 'NVIDIA Cosmos Tokenizer' to this checkpoint. The package also states the paper does not specify resize or frame-sampling policy. Exact version therefore = authors' package default, not a statement in the paper.",
+  "quotes": [
+   {
+    "quote": "NVIDIA Cosmos tokenizer (Agarwal et al., 2025) and extract their internal representations.",
+    "copy": "../../lit/fulltext/2607.06126.txt",
+    "verified": true
+   },
+   {
+    "quote": "DEFAULT_COSMOS_MODEL_ID = \"nvidia/Cosmos-1.0-Tokenizer-CV8x8x8\"",
+    "copy": "fm_sources/reference/gpi_pack_video.py.txt",
+    "verified": true
+   },
+   {
+    "quote": "For each segment, the representation used by the video paper is the Cosmos decoder input (``vae.post_quant_conv(latent)``) averaged over its latent-time axis.",
+    "copy": "fm_sources/reference/gpi_pack_video.py.txt",
+    "verified": true
+   },
+   {
+    "quote": "This section describes how to do so using the `NVIDIA Cosmos Tokenizer <https://huggingface.co/nvidia/Cosmos-1.0-Tokenizer-CV8x8x8>`_.",
+    "copy": "fm_sources/reference/docs_source__gen_cosmos.rst.txt",
+    "verified": true
+   },
+   {
+    "quote": "The paper reports a `(16, 40, 60)` representation, but does not specify its resize or frame-sampling policy",
+    "copy": "fm_sources/reference/gpi_pack_readme.md.txt",
+    "verified": true
+   },
+   {
+    "quote": "Copyright (c) 2025 Kentaro Nakamura",
+    "copy": "fm_sources/reference/gpi_pack_LICENSE.txt",
+    "verified": true
+   }
+  ]
+ },
+ "weights_location": {
+  "value": "https://huggingface.co/nvidia/Cosmos-1.0-Tokenizer-CV8x8x8 (encoder.jit, decoder.jit, autoencoder.jit, vae/diffusion_pytorch_model.safetensors); gated 'auto' - access conditions must be accepted. NOT downloaded; terms NOT accepted.",
+  "quotes": [
+   {
+    "quote": "\"gated\":\"auto\"",
+    "copy": "fm_sources/reference/hf_cosmos1_cv888_api.json",
+    "verified": true
+   },
+   {
+    "quote": "The default Cosmos checkpoint requires you to accept its access conditions on Hugging Face.",
+    "copy": "fm_sources/reference/docs_source__gen_cosmos.rst.txt",
+    "verified": true
+   }
+  ]
+ },
+ "licence": {
+  "value": "NVIDIA Open Model License Agreement (version release date January 6, 2025); card: 'This model is ready for commercial use.'",
+  "quotes": [
+   {
+    "quote": "NVIDIA Open Model License Agreement",
+    "copy": "fm_sources/reference/hf_cosmos1_cv888_page.txt",
+    "verified": true
+   },
+   {
+    "quote": "Version Release Date: January 6, 2025",
+    "copy": "fm_sources/reference/hf_cosmos1_cv888_page.txt",
+    "verified": true
+   },
+   {
+    "quote": "This model is ready for commercial use.",
+    "copy": "fm_sources/reference/hf_cosmos1_cv888_page.txt",
+    "verified": true
+   }
+  ]
+ },
+ "training_data": {
+  "value": "Described, not listed: proprietary video datasets plus publicly available open-domain Internet videos (about 20M hours raw before curation), with content-category percentages; no named datasets; no medical / surgical / endoscopic / laparoscopic term anywhere in the paper (0 matches). The model card states no training data.",
+  "quotes": [
+   {
+    "quote": "We use both proprietary video datasets and publicly available open-domain Internet videos to train our models.",
+    "copy": "fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+    "verified": true
+   },
+   {
+    "quote": "In total, we accumulate about 20M hours of raw videos with resolutions from 720p to 4k.",
+    "copy": "fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+    "verified": true
+   },
+   {
+    "quote": "We train our tokenizers directly on high-resolution images and long-duration videos without limiting the categories or aspect ratios.",
+    "copy": "fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+    "verified": true
+   },
+   {
+    "quote": "6. Nature dynamics (20%), 7. Dynamic camera movements (8%), 8. Synthetically rendered (4%), and 9. Others (7%).",
+    "copy": "fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+    "verified": true
+   }
+  ]
+ },
+ "ds203_overlap": {
+  "answer": "UNKNOWN",
+  "reason": "Training sources undisclosed (proprietary + open-domain Internet video), so DS203 / Appendix300 source recordings cannot be excluded. The OPARA release (issued 2026-04-29) post-dates the checkpoint (created 2025-01-07), so the release itself cannot be in it; no medical category is documented."
+ },
+ "input": {
+  "value": "RGB images/videos; shorter side 256 px to 4K; up to 8 s at 1080p (A100 80 GB bound); checkpoint: 8x temporal, 8x8 spatial compression, 720 short side, 121-frame context. K4 setting: 5-s segments; pooled (16,40,60) consistent with a 320x480 input; package default max_frames=121.",
+  "quotes": [
+   {
+    "quote": "Minimum: 256px (shorter side). Maximum: Up to 4K",
+    "copy": "fm_sources/reference/hf_cosmos1_cv888_page.txt",
+    "verified": true
+   },
+   {
+    "quote": "(8x temporal compression, 8x8 spatial compression, 720 short spatial size, 121 frames context)",
+    "copy": "fm_sources/reference/hf_cosmos1_cv888_page.txt",
+    "verified": true
+   },
+   {
+    "quote": "Our unit of analysis is the video segment, with each segment lasting 5 seconds.",
+    "copy": "../../lit/fulltext/2607.06126.txt",
+    "verified": true
+   },
+   {
+    "quote": "which is consistent with a ``(320,480)`` input under 8x8 spatial compression",
+    "copy": "fm_sources/reference/gpi_pack_video.py.txt",
+    "verified": true
+   }
+  ]
+ },
+ "latent_dimension": {
+  "value": "16 channels per latent voxel; latent grid (1+(T-1)/8) x H/8 x W/8; K4 representation after temporal mean pooling: 16 x 40 x 60 = 38,400 values per 5-s segment",
+  "quotes": [
+   {
+    "quote": "Continuous-valued feature vectors with a dimensionality of 16",
+    "copy": "fm_sources/reference/hf_cosmos1_cv888_page.txt",
+    "verified": true
+   },
+   {
+    "quote": "After pooling, the dimensionality of the resulting representa- tions is (16, 40, 60) for video",
+    "copy": "../../lit/fulltext/2607.06126.txt",
+    "verified": true
+   }
+  ]
+ },
+ "params": {
+  "value": "not stated for this checkpoint; the card's runtime table gives 105M and 34.8 ms/frame (A100, encode+decode) for 'Cosmos-Tokenizer-CV' at 4x8x8 and 720x1280 (a different compression ratio; used here only as a proxy)",
+  "quotes": [
+   {
+    "quote": "averaged encoding and decoding times per image or video frame, measured on a single A100 80GB GPU",
+    "copy": "fm_sources/reference/hf_cosmos1_cv888_page.txt",
+    "verified": true
+   }
+  ]
+ },
+ "compute": {
+  "value": {
+   "frames_into_tokenizer_per_video_hour": 87120,
+   "input": "121 x 320 x 480 per 5-s segment",
+   "rtx4500ada_gpu_h_per_video_h": {
+    "runtime_scaled_encode_only": 0.138,
+    "runtime_scaled_encode_decode": 0.276,
+    "flops_calibrated_whole_AE_105M": 0.486
+   },
+   "rtx4500ada_gpu_h_DS203_145_6h": {
+    "low": 20.1,
+    "high": 70.7
+   },
+   "rtx_pro_6000_gpu_h_per_video_h": {
+    "low": 0.044,
+    "high": 0.154
+   },
+   "bf16_weights_fit_24GB": "yes (105M proxy)"
+  },
+  "basis": "Order of magnitude only. (i) Card runtime 34.8 ms/frame (A100, encode+decode, 720x1280, 105M 4x8x8 CV proxy) scaled by pixel count to 320x480 and by the dense-BF16 peak ratio A100 312 / RTX 4500 Ada 158.5; encode-only taken as half (assumption). (ii) The 052590c conv-VAE calibration c*P*voxels with P = 105M (whole-AE proxy) at 30% of dense BF16 peak. The representation needs only encode + post_quant_conv (no decode). Frame decoding is dense: <=121 of the 125 (25 fps), 150 (30 fps) or 250 (50 fps) native frames per 5-s segment are selected uniformly, so every native frame must be decoded. Native-resolution input (frame_size=None, the package default) would cost about 13.5x more at 1080p.",
+  "quotes": [
+   {
+    "quote": "Cosmos-Tokenizer-CV 720x1280 4\u00d78\u00d78 105M 34.8",
+    "copy": "fm_sources/reference/hf_cosmos1_cv888_page.txt",
+    "verified": true
+   },
+   {
+    "quote": "DEFAULT_MAX_FRAMES = 121",
+    "copy": "fm_sources/reference/gpi_pack_video.py.txt",
+    "verified": true
+   },
+   {
+    "quote": "Select at most ``max_frames`` indices while retaining both endpoints.",
+    "copy": "fm_sources/reference/gpi_pack_video.py.txt",
+    "verified": true
+   },
+   {
+    "quote": "latent = get_latent(vae.encode(video)) decoder_input = vae.post_quant_conv(latent)",
+    "copy": "fm_sources/reference/gpi_pack_video.py.txt",
+    "verified": true
+   }
+  ]
+ },
+ "quotes_verified": "26/26"
+}
