@@ -1375,7 +1375,7 @@
    "name": "CV-VAE",
    "cls": "secondary (generic reconstructive / generative video model)",
    "clip_level": true,
-   "note": "LAION-COCO / Unsplash / WebVid-10M would fall under the B1 override, but the Stable Diffusion VAE whose weights are retained has no training-data statement in the obtained level-1-3 sources",
+   "note": "v0.4-final3: LAION-COCO / Unsplash / WebVid-10M are open-domain web corpora without a bounded content scope (UNK under Rule B), and the Stable Diffusion VAE whose weights are retained has no training-data statement in the obtained level-1-3 sources (UNK)",
    "eligible": false,
    "eligible_strict_counterfactual": false,
    "overlap_A": "UNK",
@@ -2964,7 +2964,7 @@
      "verified": true
     }
    ],
-   "note": "LAION-COCO / Unsplash / WebVid-10M would fall under the B1 override, but the Stable Diffusion VAE whose weights are retained has no training-data statement in the obtained level-1-3 sources"
+   "note": "v0.4-final3: LAION-COCO / Unsplash / WebVid-10M are open-domain web corpora without a bounded content scope (UNK under Rule B), and the Stable Diffusion VAE whose weights are retained has no training-data statement in the obtained level-1-3 sources (UNK)"
   },
   {
    "name": "Reducio-VAE",
