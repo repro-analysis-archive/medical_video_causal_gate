@@ -13,6 +13,12 @@ the mutually exclusive classes and the TWO-LEVEL OVERLAP RULE. NO ranking is app
     DS203's release on 2026-04-29); UNK if open-ended / web-scale or the clinical/site provenance cannot be bounded.
   B (generic web origin): for a fixed closed benchmark, generic web provenance does not change NO to UNK; it is
     disclosed as a limitation ("incidental web-origin exposure cannot be excluded at the level of every source image").
+    [freeze-repair B1] OVERRIDE: a named, versioned benchmark with a fixed sample list or fixed release, finalized
+    before DS203's release (level-1-3 source), is treated under B even if its media came from YouTube or another
+    generic web source; A's "open-ended / web-scale -> UNK" clause applies only to open-ended, continuously scraped,
+    unversioned or otherwise unbounded web corpora. The override concerns generic web provenance only: A's
+    clinical/site-provenance clause still makes UNK any corpus of clinical or surgical video whose recording sites
+    cannot be bounded (e.g., LEMON, SVL).
   C (same-hospital): applies to clinical / endoscopic sources only.
   A candidate is eligible on overlap only if every source is NO under A. The strict reading (every web-derived source
   UNK) is reported as a counterfactual only.
@@ -54,16 +60,22 @@ SRC = {
  "k400": (GEN, "Kinetics-400: human actions", [Q("The dataset contains 400 human action classes, with at least 400 video clips for each action. Each clip lasts around 10s and is taken from a different YouTube video.", S + "kinetics_arxiv_1705.06950_abs.txt"), Q("[v1] Fri, 19 May 2017 12:07:01 UTC", S + "kinetics_arxiv_1705.06950_abs.txt")]),
  "k600": (GEN, "Kinetics-600: human actions", [Q("We describe an extension of the DeepMind Kinetics human action dataset from 400 classes, each with at least 400 video clips, to 600 classes, each with at least 600 video clips.", S + "kinetics600_arxiv_1808.01340.txt"), Q("arXiv:1808.01340v1 [cs.CV] 3 Aug 2018", S + "kinetics600_arxiv_1808.01340.txt")]),
  "ucf101": (GEN, "UCF-101: human actions", [Q("It consists of 101 action classes, over 13k clips and 27 hours of video data. The database consists of realistic user-uploaded videos containing camera motion and cluttered background.", S + "ucf101_arxiv_1212.0402.txt"), Q("arXiv:1212.0402v1 [cs.CV] 3 Dec 2012", S + "ucf101_arxiv_1212.0402.txt")]),
+ "k700": (GEN, "Kinetics-700: human actions", [Q("We describe an extension of the DeepMind Kinetics human action dataset from 600 classes to 700 classes, where for each class there are at least 600 video clips from different YouTube videos.", "eligibility_v04/kinetics700_arxiv_1907.06987_api.txt"), Q("<published>2019-07-15T12:58:21Z</published>", "eligibility_v04/kinetics700_arxiv_1907.06987_api.txt")]),
+ "howto100m": (GEN, "HowTo100M: narrated instructional web videos of everyday visual tasks (fixed release)", [Q("we introduce HowTo100M: a large-scale dataset of 136 million video clips sourced from 1.22M narrated instructional web videos depicting humans performing and describing over 23k different visual tasks.", "eligibility_v04/howto100m_arxiv_1906.03327_api.txt"), Q("<published>2019-06-07T20:48:19Z</published>", "eligibility_v04/howto100m_arxiv_1906.03327_api.txt")]),
+ "heico": (NAMED, "Heidelberg University Hospital, Department of Surgery", PV("HeiCo / ROBUST-MIS")),
+ "mbp140": (NAMED, "University Hospital of Strasbourg; Inselspital, Bern University Hospital", PV("MultiBypass140")),
  "ssv2": (GEN, "SSv2: crowd-sourced caption templates", [Q("The database currently contains more than 100,000 videos across 174 classes, which are defined as caption-templates. We also describe the challenges in crowd-sourcing this data at scale.", S + "ssv2_arxiv_1706.04261_abs.txt"), Q("[v1] Tue, 13 Jun 2017 21:26:19 UTC", S + "ssv2_arxiv_1706.04261_abs.txt")]),
 }
 UNK_REASON = {  # decisive reasons for overlap-ineligible candidates
  "dsad_yes": "direct overlap YES under rule A: DSAD, a known same-hospital clinical source (University Hospital Carl Gustav Carus Dresden; C2 = its Department of Pediatric Surgery); other sources are also UNK",
  "site_not_stated": "a clinical training set has no recording site in any obtainable level-1-3 source (out/dataset_provenance.json status NOT_STATED / NOT_OBTAINABLE)",
- "web": "a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)",
+ "web": "a training source is an open-ended / unversioned web corpus (stock / social / self-crawled Internet video; not a named versioned benchmark)",
+ "clinical_web": "a training source is surgical / clinical video from web platforms whose recording sites cannot be bounded (rule A clinical/site-provenance clause; the B1 override covers generic web provenance only)",
  "base_undoc": "a base or initialisation model's training data are not documented",
 }
 LEVEL4_CONTEXT = "mmaction2 label maps (level 4, context only): no Kinetics-400/600/700 class name contains surg/operat/laparo/endoscop/hospital/medic/doctor/patient/clinic"
 # ---- candidates --------------------------------------------------------------------------------------------------
+VIT_TAB = Q("Model Layers Hidden size D MLP size Heads Params ViT-Base 12 768 3072 12 86M ViT-Large 24 1024 4096 16 307M", "eligibility_v04/vit_arxiv_2010.11929_pdf.txt")
 C = []
 def cand(name, survey, cls, cls_q, clip, clip_q, rules=None, unk=None, unk_q=None, note=""):
     C.append(dict(name=name, survey_entry=survey, cls=cls, class_quotes=cls_q, clip_level=clip, clip_quotes=clip_q, rules=rules or {}, unk=unk, unk_quotes=unk_q or [], note=note))
@@ -81,19 +93,28 @@ cand("SurgeNetXL", "SurgeNetXL", ENC, [Q("Scaling up self-supervised learning fo
 cand("SurgeNet / SurgeNetPublic", "SurgeNet /", ENC, [Q("Scaling up self-supervised learning for improved surgical foundation models", P + "surgenetxl_arxiv_pdf.txt")], False, [], unk="dsad_yes",
      unk_q=[Q("| **Others** | DSAD ([Carstens et al., 2023](https://www.nature.com/articles/s41597-022-01719-2)) | RA Rectal Resection/Extirpation | 32 | 14,623 | Yes |", P + "surgenet_github_readme.txt"), Q("| **SurgeNetPublic** | All public datasets (excluding YouTube & private datasets) | All of the above (excluding YouTube & RA Esophagectomy) | \\>1238 | 1,997,987 | Yes |", P + "surgenet_github_readme.txt")], note="DSAD -> A-YES; GLENDA / LapGyn4 / hSDB-Gastric / SurgToolLoc also A-UNK")
 cand("SurgVLP / HecVL / PeskaVLP", "SurgVLP", ENC, [Q("We utilize the dual-encoder architecture with ResNet50 [21] as visual encoder and ClinicalBert [22] as textual encoder, respectively.", P + "peskavlp_arxiv_pdf.txt")], False,
-     [Q("For a given video clip v, we first sample a fixed number of frames {z0 , ..., zT } and then feed them through F", P + "surgvlp_arxiv_pdf.txt")], unk="web",
+     [Q("For a given video clip v, we first sample a fixed number of frames {z0 , ..., zT } and then feed them through F", P + "surgvlp_arxiv_pdf.txt")], unk="clinical_web",
      unk_q=[Q("we query the videos based on keywords from three online platforms, i.e., Websurg (Websurg, 2023), EAES (EAES, 2023), and YouTube (YouTube, 2023).", P + "surgvlp_arxiv_pdf.txt")], note="clip embedding = average of per-frame embeddings: not conditioned on temporal order, so frame-level under the v0.4 definition")
 cand("EndoMamba", "EndoMamba", ENC, [Q("we propose a self-supervised hierarchical pre-training diagram to enhance EndoMamba’s representation learning using endoscopic videos", P + "endomamba_arxiv_pdf.txt")], True, [], unk="site_not_stated",
      unk_q=[Q("This includes MIX7 (shared with EndoFM), four curated from public datasets, and one from our porcine bronchoscopy dataset (PB), as detailed in Table 1 and Fig. 2.", P + "endomamba_arxiv_pdf.txt")], note="inherits Endo-FM's LDPolypVideo / Colonoscopic; GLENDA")
 cand("LemonFM", "LemonFM", ENC, [Q("*LemonFM* is an image foundation model for surgery, it receives an image as input and produces a feature vector of 1536 features as output.", P + "lemonfm_hf_readme.txt")], False,
-     [Q("*LemonFM* is an image foundation model for surgery, it receives an image as input and produces a feature vector of 1536 features as output.", P + "lemonfm_hf_readme.txt")], unk="web",
+     [Q("*LemonFM* is an image foundation model for surgery, it receives an image as input and produces a feature vector of 1536 features as output.", P + "lemonfm_hf_readme.txt")], unk="clinical_web",
      unk_q=[Q("Inspired by works [1, 11, 19, 50, 70], we collected our videos from YouTube.", P + "lemon_arxiv_pdf.txt")])
-cand("SurgLIME", "SurgLIME", ENC, [Q("Can LLM-Generated Text Empower Surgical Vision-Language Pre-training?", P + "llmtext_vlp_arxiv_pdf.txt")], None, [], unk="web",
+cand("SurgLIME", "SurgLIME", ENC, [Q("Can LLM-Generated Text Empower Surgical Vision-Language Pre-training?", P + "llmtext_vlp_arxiv_pdf.txt")], None, [], unk="clinical_web",
      unk_q=[Q("LEMON collection comprises 4194 surgical videos sourced from YouTube", P + "llmtext_vlp_arxiv_pdf.txt")])
-cand("PL-Stitch", "PL-Stitch", ENC, [Q("Learning Procedural Workflow via Self-Supervised Plackett-Luce Ranking", P + "plstitch_github_readme.txt")], False, [], unk="web",
+cand("PL-Stitch", "PL-Stitch", ENC, [Q("Learning Procedural Workflow via Self-Supervised Plackett-Luce Ranking", P + "plstitch_github_readme.txt")], False, [], unk="clinical_web",
      unk_q=[Q("Download the pretraining dataset ([LEMON](https://github.com/visurg-ai/LEMON))", P + "plstitch_github_readme.txt")])
-cand("Basel V-JEPA ViT-L", "Finetuned V-JEPA", ENC, [Q("We finetuned *V-JEPA ViT-L* on unlabeled endoscopic surgical videos, as described in the paper.", P + "mlcds_hf_readme.txt")], True, [], unk="web",
-     unk_q=[Q("V-JEPA’s published weights have been trained on 2 million videos of primarily human everyday activities without special focus on the medical field.", P + "mlcds_arxiv_pdf.txt")], note="base VideoMix2M includes HowTo100M (keyword-searched YouTube)")
+cand("Basel V-JEPA ViT-L (jepa-12h)", "Finetuned V-JEPA", ENC, [Q("We finetuned *V-JEPA ViT-L* on unlabeled endoscopic surgical videos, as described in the paper.", P + "mlcds_hf_readme.txt")], True,
+     [Q("Each model takes as input a video clip of 16 frames sampled with a frameskip of 4, corresponding to roughly 3 second clips on average.", P + "vjepa_arxiv_pdf.txt")], rules=dict(
+    sources=["heico", "cholec80", "mbp140", "k400", "k600", "k700", "ssv2", "howto100m"],
+    laparoscopic=("YES", [Q("we use all videos from the Cholec80 [12] dataset (80 laparoscopic videos of cholecystectomy surgery, 51:15 h)", P + "mlcds_arxiv_pdf.txt")]),
+    same_hospital=("NO", []),
+    fits_24gb=("YES", [Q('"rfilename":"jepa-12h.pth.tar","blobId":"5a6e468d2107d9b8f49a17820a6314ea4c2ac498","size":5143102207', P + "mlcds_hf_api_blobs.txt"), VIT_TAB]),
+    compute=("YES", [Q("For all experiments, we use the V-JEPA ViT-L model size.", P + "mlcds_arxiv_pdf.txt"), VIT_TAB]),
+    init=[Q("By pretrained V-JEPA, we refer to the weights provided by Bardes et al. [1].", P + "mlcds_arxiv_pdf.txt"),
+          Q("Specifically, we combine the videos from HowTo100M (HT) (Miech et al., 2019), Kinetics-400/600/700 (K710) (Kay et al., 2017), and Something-Something-v2 (SSv2) (Goyal et al., 2017)", P + "vjepa_arxiv_pdf.txt"),
+          Q("Videos from the following datasets were used for finetuning:", P + "mlcds_hf_readme.txt")]),
+    note="eligible only through the B1 override (HowTo100M in the V-JEPA base data VideoMix2M); finetuning list on the official model card = HeiCo, Cholec80, MultiBypass140; the in-house liver videos are not on it")
 cand("EndoSSL (colonoscopy weights)", "EndoSSL", ENC, [Q("we study the use of a leading SSL framework, namely Masked Siamese Networks (MSNs), for endoscopic video analysis such as colonoscopy and laparoscopy.", P + "endossl_arxiv_pdf.txt")], False, [],
      unk="site_not_stated", unk_q=[Q("These videos were recorded during standard colonoscopy procedures performed at six different medical centers between the years 2019 and 2022.", P + "endossl_arxiv_pdf.txt")], note="also fails the laparoscopic rule (colonoscopy only)")
 # primary class, candidates for eligibility (full rule evaluation)
@@ -120,7 +141,6 @@ cand("SurgeNetRAMIE (CAFormer-S18)", "SurgeNet /", ENC, SN_CLS, False, SN_CLIP, 
     note="no level-1-3 source calls the RAMIE videos laparoscopic ('robot-assisted minimally invasive esophagectomy')")
 ESSL_CLS = [Q("we study the use of a leading SSL framework, namely Masked Siamese Networks (MSNs), for endoscopic video analysis such as colonoscopy and laparoscopy.", P + "endossl_arxiv_pdf.txt")]
 ESSL_ARCH = Q("As our image encoders we train Vision Transformer (ViT [16]) of different sizes, abbreviated as ViT-S/B/L", P + "endossl_arxiv_pdf.txt")
-VIT_TAB = Q("Model Layers Hidden size D MLP size Heads Params ViT-Base 12 768 3072 12 86M ViT-Large 24 1024 4096 16 307M", "eligibility_v04/vit_arxiv_2010.11929_pdf.txt")
 ESSL_INIT = [Q("In Tab.2e), we look at the effect of the training length when starting from scratch or from a good SSL pretrained checkpoint on ImageNet-1k.", P + "endossl_arxiv_pdf.txt")]
 for sz, ok in (("ViT-B", "YES"), ("ViT-L", "YES"), ("ViT-S", "UNK")):
     cand(f"EndoSSL laparoscopy {sz}", "EndoSSL", ENC, ESSL_CLS, False, [Q("Each video recording was sampled at a rate of 1 frame per second (FPS)", P + "endossl_arxiv_pdf.txt")], rules=dict(
@@ -153,8 +173,8 @@ cand("VideoMAE V2", "VideoMAE V2", GENERIC, [Q("we propose to mask the decoder a
      unk_q=[Q("Specifically, our dataset is built by simply selecting videos from the public available datasets of Kinetics [43], Something-Something [31], AVA [32], WebVid2M [5], and our own crawled Instagram dataset.", S + "videomaev2_arxiv_2303.16727v2.txt")])
 cand("Open-Sora-Plan v1.2 VAE", "Open-Sora-Plan", GENERIC, [Q("The VAE in version 1.2.0 maintains the overall architecture of the previous version but merges the temporal and spatial downsampling layers.", S + "osplan_github_Report-v1.2.0.md")], True, [], unk="web",
      unk_q=[Q("We perform the first phase of training on the Kinetic400 video dataset, then use the EMA weights from this phase to initialize the second phase, which is fine-tuned on high-quality data (collected in v1.1.0).", S + "osplan_github_Report-v1.2.0.md")], note="v1.1.0 data = Mixkit / Pixabay / Pexels stock video; SD2.1 VAE initialisation")
-cand("CV-VAE", "CV-VAE", GENERIC, [Q("A video VAE for latent generative video models, which is compatible with pretrained image and video models, e.g., SD 2.1 and SVD", S + "cvvae_github_README.md")], True, [], unk="web",
-     unk_q=[Q("Training Details. We train our CV-VAE model using image datasets including LAION-COCO [ 9 ] and Unsplash [ 23 ] , as well as the video dataset Webvid-10M [ 3 ] .", S + "cvvae_arxiv_2405.20279_fulltext.txt")])
+cand("CV-VAE", "CV-VAE", GENERIC, [Q("A video VAE for latent generative video models, which is compatible with pretrained image and video models, e.g., SD 2.1 and SVD", S + "cvvae_github_README.md")], True, [], unk="base_undoc",
+     unk_q=[Q("The architecture of CV-VAE is primarily derived from the VAE in Stable Diffusion [ 28 ] , with several notable differences: (1) Some or all 2D convolutions within the network are transformed into 3D convolutions, while retaining their weights.", S + "cvvae_arxiv_2405.20279_fulltext.txt"), Q("Training Details. We train our CV-VAE model using image datasets including LAION-COCO [ 9 ] and Unsplash [ 23 ] , as well as the video dataset Webvid-10M [ 3 ] .", S + "cvvae_arxiv_2405.20279_fulltext.txt")], note="LAION-COCO / Unsplash / WebVid-10M would fall under the B1 override, but the Stable Diffusion VAE whose weights are retained has no training-data statement in the obtained level-1-3 sources")
 cand("Reducio-VAE", "Reducio", GENERIC, [Q("This model is a 3D VAE that encodes video into a compact latent space conditioned on a content frame.", S + "reducio_hf_README.md")], True, [], unk="web",
      unk_q=[Q("Our Reducio -VAE is trained on a 400K video dataset collected from Pexels", S + "reducio_arxiv_2411.13552_fulltext.txt")])
 VMAE_T7 = [Q("VideoMAE ViT-B 7 16 180×5×3 87 81.5 95.1", S + "videomae_arxiv_2203.12602v3.txt"), Q("VideoMAE ViT-L 7 16 597×5×3 305 85.2 96.8", S + "videomae_arxiv_2203.12602v3.txt")]

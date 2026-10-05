@@ -1,5 +1,5 @@
 {
- "note": "Pre-freeze fact task for SS protocol v0.4 (consolidated task Part 2 item 5; final pre-freeze task items 1, 4, 6):\nre-determine the eligibility of every 052590c-eligible candidate under the source hierarchy, the clip-level definition,\nthe mutually exclusive classes and the TWO-LEVEL OVERLAP RULE. NO ranking is applied and NO model is selected.\n* Source levels: 1 original paper (incl. a dataset's own paper); 2 official model card / official repository README or\n  file listing; 3 documented pretraining-data list (official configs / training scripts); 4 secondary; 5 internal\n  tables (052590c, cb07e93). A required fact holds only if a level-1-3 source affirmatively supports it; otherwise it\n  is UNK and the candidate is ineligible. Level-4/5 material is shown for context only.\n* Two-level overlap rule, per training source of the released weights and of their initialisation / base weights:\n  A (direct DS203 / DS203-centre overlap): YES if DS203, a constituent DS203 dataset or a known same-hospital clinical\n    source (DSAD) is documented; NO if a level-1-3 source establishes a closed or sufficiently defined corpus whose\n    documented scope excludes DS203 and the known DS203 clinical sources (a clinical set with a named non-DS203\n    recording site or non-German geography; a versioned non-surgical benchmark with fixed classes finalized before\n    DS203's release on 2026-04-29); UNK if open-ended / web-scale or the clinical/site provenance cannot be bounded.\n  B (generic web origin): for a fixed closed benchmark, generic web provenance does not change NO to UNK; it is\n    disclosed as a limitation (\"incidental web-origin exposure cannot be excluded at the level of every source image\").\n  C (same-hospital): applies to clinical / endoscopic sources only.\n  A candidate is eligible on overlap only if every source is NO under A. The strict reading (every web-derived source\n  UNK) is reported as a counterfactual only.\n* \"Fits 24 GB\" here is the PRIOR SCREEN (parameter count / checkpoint size); the final determination is the frozen\n  synthetic-input feasibility test run after freeze (protocol §4.1).\nEvery quote is verified as a whitespace-normalised substring of its saved copy.",
+ "note": "Pre-freeze fact task for SS protocol v0.4 (consolidated task Part 2 item 5; final pre-freeze task items 1, 4, 6):\nre-determine the eligibility of every 052590c-eligible candidate under the source hierarchy, the clip-level definition,\nthe mutually exclusive classes and the TWO-LEVEL OVERLAP RULE. NO ranking is applied and NO model is selected.\n* Source levels: 1 original paper (incl. a dataset's own paper); 2 official model card / official repository README or\n  file listing; 3 documented pretraining-data list (official configs / training scripts); 4 secondary; 5 internal\n  tables (052590c, cb07e93). A required fact holds only if a level-1-3 source affirmatively supports it; otherwise it\n  is UNK and the candidate is ineligible. Level-4/5 material is shown for context only.\n* Two-level overlap rule, per training source of the released weights and of their initialisation / base weights:\n  A (direct DS203 / DS203-centre overlap): YES if DS203, a constituent DS203 dataset or a known same-hospital clinical\n    source (DSAD) is documented; NO if a level-1-3 source establishes a closed or sufficiently defined corpus whose\n    documented scope excludes DS203 and the known DS203 clinical sources (a clinical set with a named non-DS203\n    recording site or non-German geography; a versioned non-surgical benchmark with fixed classes finalized before\n    DS203's release on 2026-04-29); UNK if open-ended / web-scale or the clinical/site provenance cannot be bounded.\n  B (generic web origin): for a fixed closed benchmark, generic web provenance does not change NO to UNK; it is\n    disclosed as a limitation (\"incidental web-origin exposure cannot be excluded at the level of every source image\").\n    [freeze-repair B1] OVERRIDE: a named, versioned benchmark with a fixed sample list or fixed release, finalized\n    before DS203's release (level-1-3 source), is treated under B even if its media came from YouTube or another\n    generic web source; A's \"open-ended / web-scale -> UNK\" clause applies only to open-ended, continuously scraped,\n    unversioned or otherwise unbounded web corpora. The override concerns generic web provenance only: A's\n    clinical/site-provenance clause still makes UNK any corpus of clinical or surgical video whose recording sites\n    cannot be bounded (e.g., LEMON, SVL).\n  C (same-hospital): applies to clinical / endoscopic sources only.\n  A candidate is eligible on overlap only if every source is NO under A. The strict reading (every web-derived source\n  UNK) is reported as a counterfactual only.\n* \"Fits 24 GB\" here is the PRIOR SCREEN (parameter count / checkpoint size); the final determination is the frozen\n  synthetic-input feasibility test run after freeze (protocol §4.1).\nEvery quote is verified as a whitespace-normalised substring of its saved copy.",
  "level4_context": "mmaction2 label maps (level 4, context only): no Kinetics-400/600/700 class name contains surg/operat/laparo/endoscop/hospital/medic/doctor/patient/clinic",
  "ds203_release": {
   "quote": "\"dc.date.issued\" : [ { \"value\" : \"2026-04-29\"",
@@ -7,7 +7,7 @@
   "level": 2,
   "verified": true
  },
- "quotes_verified": "150/150",
+ "quotes_verified": "166/166",
  "quotes_above_level3": 0,
  "tie_break_order": [
   "scientific rank criteria of protocol §4.1.4 (not applied here)",
@@ -17,6 +17,7 @@
   "4. lexical order of the model / checkpoint identifier"
  ],
  "eligible_primary": [
+  "Basel V-JEPA ViT-L (jepa-12h)",
   "SurgeNetCholec (CAFormer-S18)",
   "SurgeNetRARP (CAFormer-S18)",
   "EndoSSL laparoscopy ViT-B",
@@ -83,7 +84,7 @@
    "eligible": false,
    "eligible_strict_counterfactual": false,
    "overlap_A": "UNK",
-   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+   "failing": "direct overlap UNK under rule A: a training source is surgical / clinical video from web platforms whose recording sites cannot be bounded (rule A clinical/site-provenance clause; the B1 override covers generic web provenance only)"
   },
   {
    "name": "EndoMamba",
@@ -103,7 +104,7 @@
    "eligible": false,
    "eligible_strict_counterfactual": false,
    "overlap_A": "UNK",
-   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+   "failing": "direct overlap UNK under rule A: a training source is surgical / clinical video from web platforms whose recording sites cannot be bounded (rule A clinical/site-provenance clause; the B1 override covers generic web provenance only)"
   },
   {
    "name": "SurgLIME",
@@ -113,7 +114,7 @@
    "eligible": false,
    "eligible_strict_counterfactual": false,
    "overlap_A": "UNK",
-   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+   "failing": "direct overlap UNK under rule A: a training source is surgical / clinical video from web platforms whose recording sites cannot be bounded (rule A clinical/site-provenance clause; the B1 override covers generic web provenance only)"
   },
   {
    "name": "PL-Stitch",
@@ -123,17 +124,67 @@
    "eligible": false,
    "eligible_strict_counterfactual": false,
    "overlap_A": "UNK",
-   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+   "failing": "direct overlap UNK under rule A: a training source is surgical / clinical video from web platforms whose recording sites cannot be bounded (rule A clinical/site-provenance clause; the B1 override covers generic web provenance only)"
   },
   {
-   "name": "Basel V-JEPA ViT-L",
+   "name": "Basel V-JEPA ViT-L (jepa-12h)",
    "cls": "primary (medical/endoscopic representation-learning encoder)",
    "clip_level": true,
-   "note": "base VideoMix2M includes HowTo100M (keyword-searched YouTube)",
-   "eligible": false,
+   "note": "eligible only through the B1 override (HowTo100M in the V-JEPA base data VideoMix2M); finetuning list on the official model card = HeiCo, Cholec80, MultiBypass140; the in-house liver videos are not on it",
+   "overlap_A": "NO",
+   "eligible": true,
+   "failing": "-",
    "eligible_strict_counterfactual": false,
-   "overlap_A": "UNK",
-   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+   "web_origin_disclosure_B": [
+    "Kinetics-400: human actions",
+    "Kinetics-600: human actions",
+    "Kinetics-700: human actions",
+    "SSv2: crowd-sourced caption templates",
+    "HowTo100M: narrated instructional web videos of everyday visual tasks (fixed release)"
+   ],
+   "sources": [
+    {
+     "source": "heico",
+     "status": "A-NO: named non-DS203 recording site",
+     "institution_or_content": "Heidelberg University Hospital, Department of Surgery"
+    },
+    {
+     "source": "cholec80",
+     "status": "A-NO: named non-DS203 recording site",
+     "institution_or_content": "University Hospital of Strasbourg"
+    },
+    {
+     "source": "mbp140",
+     "status": "A-NO: named non-DS203 recording site",
+     "institution_or_content": "University Hospital of Strasbourg; Inselspital, Bern University Hospital"
+    },
+    {
+     "source": "k400",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "Kinetics-400: human actions"
+    },
+    {
+     "source": "k600",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "Kinetics-600: human actions"
+    },
+    {
+     "source": "k700",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "Kinetics-700: human actions"
+    },
+    {
+     "source": "ssv2",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "SSv2: crowd-sourced caption templates"
+    },
+    {
+     "source": "howto100m",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "HowTo100M: narrated instructional web videos of everyday visual tasks (fixed release)"
+    }
+   ],
+   "prior_screen_24gb": "YES"
   },
   {
    "name": "EndoSSL (colonoscopy weights)",
@@ -418,7 +469,7 @@
    "eligible": false,
    "eligible_strict_counterfactual": false,
    "overlap_A": "UNK",
-   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+   "failing": "direct overlap UNK under rule A: a training source is an open-ended / unversioned web corpus (stock / social / self-crawled Internet video; not a named versioned benchmark)"
   },
   {
    "name": "VideoMAE V2",
@@ -428,7 +479,7 @@
    "eligible": false,
    "eligible_strict_counterfactual": false,
    "overlap_A": "UNK",
-   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+   "failing": "direct overlap UNK under rule A: a training source is an open-ended / unversioned web corpus (stock / social / self-crawled Internet video; not a named versioned benchmark)"
   },
   {
    "name": "Open-Sora-Plan v1.2 VAE",
@@ -438,17 +489,17 @@
    "eligible": false,
    "eligible_strict_counterfactual": false,
    "overlap_A": "UNK",
-   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+   "failing": "direct overlap UNK under rule A: a training source is an open-ended / unversioned web corpus (stock / social / self-crawled Internet video; not a named versioned benchmark)"
   },
   {
    "name": "CV-VAE",
    "cls": "secondary (generic reconstructive / generative video model)",
    "clip_level": true,
-   "note": "",
+   "note": "LAION-COCO / Unsplash / WebVid-10M would fall under the B1 override, but the Stable Diffusion VAE whose weights are retained has no training-data statement in the obtained level-1-3 sources",
    "eligible": false,
    "eligible_strict_counterfactual": false,
    "overlap_A": "UNK",
-   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+   "failing": "direct overlap UNK under rule A: a base or initialisation model's training data are not documented"
   },
   {
    "name": "Reducio-VAE",
@@ -458,7 +509,7 @@
    "eligible": false,
    "eligible_strict_counterfactual": false,
    "overlap_A": "UNK",
-   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+   "failing": "direct overlap UNK under rule A: a training source is an open-ended / unversioned web corpus (stock / social / self-crawled Internet video; not a named versioned benchmark)"
   },
   {
    "name": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
@@ -783,7 +834,7 @@
     }
    ],
    "rules": {},
-   "unk": "web",
+   "unk": "clinical_web",
    "unk_quotes": [
     {
      "quote": "we query the videos based on keywords from three online platforms, i.e., Websurg (Websurg, 2023), EAES (EAES, 2023), and YouTube (YouTube, 2023).",
@@ -842,7 +893,7 @@
     }
    ],
    "rules": {},
-   "unk": "web",
+   "unk": "clinical_web",
    "unk_quotes": [
     {
      "quote": "Inspired by works [1, 11, 19, 50, 70], we collected our videos from YouTube.",
@@ -868,7 +919,7 @@
    "clip_level": null,
    "clip_quotes": [],
    "rules": {},
-   "unk": "web",
+   "unk": "clinical_web",
    "unk_quotes": [
     {
      "quote": "LEMON collection comprises 4194 surgical videos sourced from YouTube",
@@ -894,7 +945,7 @@
    "clip_level": false,
    "clip_quotes": [],
    "rules": {},
-   "unk": "web",
+   "unk": "clinical_web",
    "unk_quotes": [
     {
      "quote": "Download the pretraining dataset ([LEMON](https://github.com/visurg-ai/LEMON))",
@@ -906,7 +957,7 @@
    "note": ""
   },
   {
-   "name": "Basel V-JEPA ViT-L",
+   "name": "Basel V-JEPA ViT-L (jepa-12h)",
    "survey_entry": "Finetuned V-JEPA",
    "cls": "primary (medical/endoscopic representation-learning encoder)",
    "class_quotes": [
@@ -918,18 +969,98 @@
     }
    ],
    "clip_level": true,
-   "clip_quotes": [],
-   "rules": {},
-   "unk": "web",
-   "unk_quotes": [
+   "clip_quotes": [
     {
-     "quote": "V-JEPA’s published weights have been trained on 2 million videos of primarily human everyday activities without special focus on the medical field.",
-     "copy": "data_audit/lead/fm_sources/primary/mlcds_arxiv_pdf.txt",
+     "quote": "Each model takes as input a video clip of 16 frames sampled with a frameskip of 4, corresponding to roughly 3 second clips on average.",
+     "copy": "data_audit/lead/fm_sources/primary/vjepa_arxiv_pdf.txt",
      "level": 1,
      "verified": true
     }
    ],
-   "note": "base VideoMix2M includes HowTo100M (keyword-searched YouTube)"
+   "rules": {
+    "sources": [
+     "heico",
+     "cholec80",
+     "mbp140",
+     "k400",
+     "k600",
+     "k700",
+     "ssv2",
+     "howto100m"
+    ],
+    "laparoscopic": [
+     "YES",
+     [
+      {
+       "quote": "we use all videos from the Cholec80 [12] dataset (80 laparoscopic videos of cholecystectomy surgery, 51:15 h)",
+       "copy": "data_audit/lead/fm_sources/primary/mlcds_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "same_hospital": [
+     "NO",
+     []
+    ],
+    "fits_24gb": [
+     "YES",
+     [
+      {
+       "quote": "\"rfilename\":\"jepa-12h.pth.tar\",\"blobId\":\"5a6e468d2107d9b8f49a17820a6314ea4c2ac498\",\"size\":5143102207",
+       "copy": "data_audit/lead/fm_sources/primary/mlcds_hf_api_blobs.txt",
+       "level": 2,
+       "verified": true
+      },
+      {
+       "quote": "Model Layers Hidden size D MLP size Heads Params ViT-Base 12 768 3072 12 86M ViT-Large 24 1024 4096 16 307M",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/vit_arxiv_2010.11929_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "compute": [
+     "YES",
+     [
+      {
+       "quote": "For all experiments, we use the V-JEPA ViT-L model size.",
+       "copy": "data_audit/lead/fm_sources/primary/mlcds_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      },
+      {
+       "quote": "Model Layers Hidden size D MLP size Heads Params ViT-Base 12 768 3072 12 86M ViT-Large 24 1024 4096 16 307M",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/vit_arxiv_2010.11929_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "init": [
+     {
+      "quote": "By pretrained V-JEPA, we refer to the weights provided by Bardes et al. [1].",
+      "copy": "data_audit/lead/fm_sources/primary/mlcds_arxiv_pdf.txt",
+      "level": 1,
+      "verified": true
+     },
+     {
+      "quote": "Specifically, we combine the videos from HowTo100M (HT) (Miech et al., 2019), Kinetics-400/600/700 (K710) (Kay et al., 2017), and Something-Something-v2 (SSv2) (Goyal et al., 2017)",
+      "copy": "data_audit/lead/fm_sources/primary/vjepa_arxiv_pdf.txt",
+      "level": 1,
+      "verified": true
+     },
+     {
+      "quote": "Videos from the following datasets were used for finetuning:",
+      "copy": "data_audit/lead/fm_sources/primary/mlcds_hf_readme.txt",
+      "level": 2,
+      "verified": true
+     }
+    ]
+   },
+   "unk": null,
+   "unk_quotes": [],
+   "note": "eligible only through the B1 override (HowTo100M in the V-JEPA base data VideoMix2M); finetuning list on the official model card = HeiCo, Cholec80, MultiBypass140; the in-house liver videos are not on it"
   },
   {
    "name": "EndoSSL (colonoscopy weights)",
@@ -1785,8 +1916,14 @@
    "clip_level": true,
    "clip_quotes": [],
    "rules": {},
-   "unk": "web",
+   "unk": "base_undoc",
    "unk_quotes": [
+    {
+     "quote": "The architecture of CV-VAE is primarily derived from the VAE in Stable Diffusion [ 28 ] , with several notable differences: (1) Some or all 2D convolutions within the network are transformed into 3D convolutions, while retaining their weights.",
+     "copy": "data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt",
+     "level": 1,
+     "verified": true
+    },
     {
      "quote": "Training Details. We train our CV-VAE model using image datasets including LAION-COCO [ 9 ] and Unsplash [ 23 ] , as well as the video dataset Webvid-10M [ 3 ] .",
      "copy": "data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt",
@@ -1794,7 +1931,7 @@
      "verified": true
     }
    ],
-   "note": ""
+   "note": "LAION-COCO / Unsplash / WebVid-10M would fall under the B1 override, but the Stable Diffusion VAE whose weights are retained has no training-data statement in the obtained level-1-3 sources"
   },
   {
    "name": "Reducio-VAE",
@@ -2381,6 +2518,72 @@
     {
      "quote": "arXiv:1212.0402v1 [cs.CV] 3 Dec 2012",
      "copy": "data_audit/lead/fm_sources/secondary/ucf101_arxiv_1212.0402.txt",
+     "level": 1,
+     "verified": true
+    }
+   ]
+  },
+  "k700": {
+   "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+   "what": "Kinetics-700: human actions",
+   "quotes": [
+    {
+     "quote": "We describe an extension of the DeepMind Kinetics human action dataset from 600 classes to 700 classes, where for each class there are at least 600 video clips from different YouTube videos.",
+     "copy": "data_audit/lead/fm_sources/eligibility_v04/kinetics700_arxiv_1907.06987_api.txt",
+     "level": 1,
+     "verified": true
+    },
+    {
+     "quote": "<published>2019-07-15T12:58:21Z</published>",
+     "copy": "data_audit/lead/fm_sources/eligibility_v04/kinetics700_arxiv_1907.06987_api.txt",
+     "level": 1,
+     "verified": true
+    }
+   ]
+  },
+  "howto100m": {
+   "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+   "what": "HowTo100M: narrated instructional web videos of everyday visual tasks (fixed release)",
+   "quotes": [
+    {
+     "quote": "we introduce HowTo100M: a large-scale dataset of 136 million video clips sourced from 1.22M narrated instructional web videos depicting humans performing and describing over 23k different visual tasks.",
+     "copy": "data_audit/lead/fm_sources/eligibility_v04/howto100m_arxiv_1906.03327_api.txt",
+     "level": 1,
+     "verified": true
+    },
+    {
+     "quote": "<published>2019-06-07T20:48:19Z</published>",
+     "copy": "data_audit/lead/fm_sources/eligibility_v04/howto100m_arxiv_1906.03327_api.txt",
+     "level": 1,
+     "verified": true
+    }
+   ]
+  },
+  "heico": {
+   "status": "A-NO: named non-DS203 recording site",
+   "what": "Heidelberg University Hospital, Department of Surgery",
+   "quotes": [
+    {
+     "quote": "Data acquisition took place during daily routine procedures in the integrated operating room KARL STORZ OR1 FUSION® (KARL STORZ SE & Co KG, Tuttlingen, Germany) at Heidelberg University Hospital, Department of Surgery",
+     "copy": "data_audit/lead/fm_sources/datasets/heico__scidata.txt",
+     "level": 1,
+     "verified": true
+    },
+    {
+     "quote": "we acquired data from only one hospital",
+     "copy": "data_audit/lead/fm_sources/datasets/heico__arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ]
+  },
+  "mbp140": {
+   "status": "A-NO: named non-DS203 recording site",
+   "what": "University Hospital of Strasbourg; Inselspital, Bern University Hospital",
+   "quotes": [
+    {
+     "quote": "surgeries performed at two medical centers, i.e., the University Hospital of Strasbourg, France (StrasBypass70) and Inselspital, Bern University Hospital, Switzerland (BernBypass70)",
+     "copy": "data_audit/lead/fm_sources/datasets/multibypass140__arxiv_pdf.txt",
      "level": 1,
      "verified": true
     }
