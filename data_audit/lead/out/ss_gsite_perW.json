@@ -1,0 +1,23 @@
+{
+ "note": "G-SITE quantity for the per-W sensitivity sets (SS protocol v0.4 \u00a75.4, \u00a710.3; v0.4-final3 item 4): eta^2 of S at\nthe window start (window-relative step 0, S = 1{O_i >= 0}) on centre C, one-way, from the fixed offsets only\n(out/ss_window_offsets.csv for the primary set; out/ss_window_offsets_perW.csv for W = 0 / W = 5). Metadata only.",
+ "results": {
+  "primary_W30": {
+   "n": 158,
+   "eta2_S_rel0_on_C": 0.00141,
+   "P_S1_rel0": 0.519,
+   "gate_le_0_01": true
+  },
+  "W0": {
+   "n": 204,
+   "eta2_S_rel0_on_C": 0.00366,
+   "P_S1_rel0": 0.485,
+   "gate_le_0_01": true
+  },
+  "W5": {
+   "n": 201,
+   "eta2_S_rel0_on_C": 0.00449,
+   "P_S1_rel0": 0.493,
+   "gate_le_0_01": true
+  }
+ }
+}
