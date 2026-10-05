@@ -1,0 +1,236 @@
+{
+ "note": "SS protocol v0.2 design facts (metadata only: centre, annotated appendix-visible timestamp and duration per case from\nout/DS203_d8_cases.csv, the same inputs as the D8 audit of 146f69b). No frame is read, no representation is extracted,\nno synthetic action or outcome is drawn.\nCompares window-placement rules for the D7 state S_t (S_t = 1 if step t, covering [5t, 5t+5) s, ends at or after the\ntimestamp): A0 = draft v0.1 (window starts at switch step - floor(K/2)); A1 = fixed procedure-time anchor at the pooled\nmedian timestamp; A1u = seeded uniform eligible-window sampling; A2 = seeded switch-relative offset O_i in {-L..L},\nassigned within site from a seeded permutation (site-stratified), on one eligible case set common to all cells.\nWrites out/ss_window_design.json and the fixed per-case offsets out/ss_window_offsets.csv.",
+ "n_cases": 278,
+ "cases_by_site": {
+  "2": 49,
+  "3": 41,
+  "4": 71,
+  "5": 117
+ },
+ "A0_distinct_S_sequences_per_K": {
+  "1": 1,
+  "2": 1,
+  "5": 1,
+  "15": 1
+ },
+ "A1_fixed_anchor": {
+  "anchor_s": 280,
+  "eligible": 272,
+  "P_S1_by_site_at_start": {
+   "2": 0.438,
+   "3": 0.293,
+   "4": 0.42,
+   "5": 0.632
+  },
+  "V_C_S": {
+   "0": 0.253,
+   "7": 0.266,
+   "14": 0.317
+  }
+ },
+ "A1u_uniform_sampling": {
+  "eligible": 274,
+  "P_S1_by_site": {
+   "2": 0.792,
+   "3": 0.707,
+   "4": 0.714,
+   "5": 0.887
+  },
+  "V_C_S0": 0.199,
+  "share_K15_windows_containing_switch": 0.04
+ },
+ "A2_eligible_by_L_W": {
+  "L10_W0": {
+   "n": 214,
+   "by_site": {
+    "2": 38,
+    "3": 40,
+    "4": 60,
+    "5": 76
+   }
+  },
+  "L10_W5": {
+   "n": 204,
+   "by_site": {
+    "2": 37,
+    "3": 40,
+    "4": 57,
+    "5": 70
+   }
+  },
+  "L10_W30": {
+   "n": 166,
+   "by_site": {
+    "2": 28,
+    "3": 38,
+    "4": 47,
+    "5": 53
+   }
+  },
+  "L15_W0": {
+   "n": 204,
+   "by_site": {
+    "2": 37,
+    "3": 40,
+    "4": 57,
+    "5": 70
+   }
+  },
+  "L15_W5": {
+   "n": 201,
+   "by_site": {
+    "2": 37,
+    "3": 40,
+    "4": 56,
+    "5": 68
+   }
+  },
+  "L15_W30": {
+   "n": 158,
+   "by_site": {
+    "2": 28,
+    "3": 34,
+    "4": 44,
+    "5": 52
+   }
+  }
+ },
+ "early_switch_cases_T_lt_75s_by_site": {
+  "2": 9,
+  "3": 1,
+  "4": 12,
+  "5": 46
+ },
+ "A2_final": {
+  "L": 15,
+  "seed": 20261005,
+  "eligible": 158,
+  "by_site": {
+   "2": 28,
+   "3": 34,
+   "4": 44,
+   "5": 52
+  },
+  "single_file": 123,
+  "single_file_by_site": {
+   "2": 13,
+   "3": 34,
+   "4": 44,
+   "5": 32
+  },
+  "P_S1_by_rel_step": {
+   "-30": 0.0,
+   "-5": 0.354,
+   "0": 0.519,
+   "1": 0.551,
+   "4": 0.665,
+   "14": 0.968,
+   "15": 1.0,
+   "44": 1.0
+  },
+  "V_C_S_by_rel_step_max": 0.0529,
+  "V_C_S_rel0": 0.0376,
+  "eta2_C_S_rel0": 0.00141,
+  "V_C_S_by_rel_step": {
+   "-30": 0.0,
+   "-29": 0.0,
+   "-28": 0.0,
+   "-27": 0.0,
+   "-26": 0.0,
+   "-25": 0.0,
+   "-24": 0.0,
+   "-23": 0.0,
+   "-22": 0.0,
+   "-21": 0.0,
+   "-20": 0.0,
+   "-19": 0.0,
+   "-18": 0.0,
+   "-17": 0.0,
+   "-16": 0.0,
+   "-15": 0.0368,
+   "-14": 0.0236,
+   "-13": 0.0219,
+   "-12": 0.025,
+   "-11": 0.0344,
+   "-10": 0.0251,
+   "-9": 0.0164,
+   "-8": 0.0228,
+   "-7": 0.0253,
+   "-6": 0.0138,
+   "-5": 0.0145,
+   "-4": 0.0071,
+   "-3": 0.0155,
+   "-2": 0.0168,
+   "-1": 0.0261,
+   "0": 0.0376,
+   "1": 0.05,
+   "2": 0.0378,
+   "3": 0.0238,
+   "4": 0.0244,
+   "5": 0.0334,
+   "6": 0.0308,
+   "7": 0.0326,
+   "8": 0.0197,
+   "9": 0.0091,
+   "10": 0.0196,
+   "11": 0.0346,
+   "12": 0.039,
+   "13": 0.0529,
+   "14": 0.0368,
+   "15": 0.0,
+   "16": 0.0,
+   "17": 0.0,
+   "18": 0.0,
+   "19": 0.0,
+   "20": 0.0,
+   "21": 0.0,
+   "22": 0.0,
+   "23": 0.0,
+   "24": 0.0,
+   "25": 0.0,
+   "26": 0.0,
+   "27": 0.0,
+   "28": 0.0,
+   "29": 0.0,
+   "30": 0.0,
+   "31": 0.0,
+   "32": 0.0,
+   "33": 0.0,
+   "34": 0.0,
+   "35": 0.0,
+   "36": 0.0,
+   "37": 0.0,
+   "38": 0.0,
+   "39": 0.0,
+   "40": 0.0,
+   "41": 0.0,
+   "42": 0.0,
+   "43": 0.0,
+   "44": 0.0
+  },
+  "offset_mean_sd_by_site": {
+   "2": [
+    0.21,
+    9.09
+   ],
+   "3": [
+    0.03,
+    8.92
+   ],
+   "4": [
+    0.2,
+    8.88
+   ],
+   "5": [
+    0.25,
+    8.89
+   ]
+  },
+  "window_start_elapsed_s_median_by_site": {
+   "2": 472.5,
+   "3": 520.0,
+   "4": 682.5,
+   "5": 397.5
+  }
+ }
+}
