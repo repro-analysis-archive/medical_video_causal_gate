@@ -1,0 +1,27 @@
+{
+ "code_commit": "af56777e0f52b5c350dd7ba557d55b2394cbd4bf",
+ "code_dir": "/home/user/projects/medical_video_causal_gate/results/codelock_gate/code_snapshot/ss_benchmark",
+ "code_snapshot": "/home/user/projects/medical_video_causal_gate/results/codelock_gate/code_snapshot",
+ "cpu_count": 20,
+ "implementation_notes": {
+  "N1": "'2-layer MLP' (\u00a79) and '2 layers, 256 hidden units' (\u00a75.3) are implemented as two linear layers with one ReLU hidden layer (128 resp. 256 units).",
+  "N10": "E1 lower bound = 2.5th percentile of the stratified case bootstrap (two-sided 95 %); E3-site upper bound = 95th percentile (one-sided 95 %, as stated); E2 CI = 2.5th / 97.5th percentiles.",
+  "N11": "Secondary-model representation (not fixed in \u00a74.2): KL-VAEs (WF-VAE-L, LeanVAE): the encoder posterior mean; VQ tokenizers (OmniTokenizer, LARP): the codebook-lookup input (after the authors' pre-quantiser projection and L2 normalisation; nothing quantised); averaged over latent time (LARP has none: holistic query tokens) and flattened, as for the Cosmos reference arm; VideoMAE: mean of the last hidden states.",
+  "N12": "Compute-budget reduction (b) 'ridge only' is applied as linear learners only (ridge outcome regressions and L2-logistic density ratios).",
+  "N2": "MLP mini-batch size: min(200, n_fit) (the scikit-learn 'auto' convention); weight decay as an L2 term added to the gradient of every parameter (torch.optim.Adam semantics); PyTorch nn.Linear default initialisation; early stopping on the inner-validation loss (MSE, binary or multinomial log-loss), patience counted in epochs without a strict improvement, best-epoch parameters restored.",
+  "N3": "L2 logistic density-ratio classifier: penalty by inner 5-fold CV (log-loss) over the \u00a79 ridge grid {1e-3..1e3} ('the same two learner families').",
+  "N4": "Learner choice (\u00a79): each learner is a procedure (ridge incl. its inner penalty CV; MLP incl. its early stopping); its loss is estimated by 5-fold CV within the outer training fold (case-level), the lower loss wins (ties: the linear learner), and the winner is refitted on the whole outer training fold.",
+  "N5": "Ridge / L2-logistic penalty parameterisation: sum of squared errors + \u03bb||b||\u00b2 resp. sum of log-losses + (\u03bb/2)||b||\u00b2 (scikit-learn alpha / C = 1/\u03bb conventions), on z-scored features, intercept unpenalised.",
+  "N6": "SDR: D\u00edaz et al. (2021) sequential regression V_t = m_t(\u03b4A_t, H_t) + r_t (V_{t+1} \u2212 m_t(A_t, H_t)), V_K = Y; density ratios r_t = exp(classifier logit) from the stacked (A_t, \u039b=0) / (\u03b4A_t, \u039b=1) classification; no trimming; contrast IF = V_0 \u2212 Y; SE = sd(IF, ddof=1)/sqrt(n); 95 % Wald interval.",
+  "N7": "Cross-fitting uses the fixed \u00a72 fold labels of the analysis set; training-fold pseudo-outcomes are computed in-sample from the training-fold fits (as in lmtp).",
+  "N8": "Seeds: replicate SeedSequence(root, spawn_key=(cell, rep)); named streams are children with an extra spawn key int.from_bytes(name.encode('ascii'), 'big'), e.g. 'c-permutation'.",
+  "N9": "Linear site probe (E1, E3-site): multinomial L2 logistic regression with the E2 learner settings (penalty by inner 5-fold CV over {1e-4..1e2}, log-loss)."
+ },
+ "numpy": "2.3.5",
+ "pandas": "3.0.1",
+ "platform": "Linux-5.15.0-112-generic-x86_64-with-glibc2.35",
+ "python": "3.11.14 | packaged by conda-forge | (main, Jan 26 2026, 23:48:32) [GCC 14.3.0]",
+ "scipy": "1.17.0",
+ "start": "2026-10-05 15:33:37 +0900",
+ "workers": 20
+}

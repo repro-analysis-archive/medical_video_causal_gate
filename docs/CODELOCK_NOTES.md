@@ -139,3 +139,25 @@
   * With the investigator's authorisation 003, the pipeline was retrieved: `DataAugmentationForVideoMAE` applies mean (0.485, 0.456, 0.406) / std (0.229, 0.224, 0.225) to RGB / 255. This confirms the audit's quoted lines.
   * The VideoMAE adapter, extraction spec, manifest, tests and records were updated accordingly.
   * No estimator, gate, projection, G-SITE, small-truth or runner file changed.
+
+## 6. Checkpoint coverage at the SDR implementation commit
+
+* Checkpoint coverage was verified at `af56777e0f52b5c350dd7ba557d55b2394cbd4bf` by `tests/test_codelock_coverage.py` (26 / 26 passed).
+* Result: 21 reachable checkpoints, each with exactly one adapter / registry entry and one extraction-spec entry.
+* The manifest is `docs/codelock_checkpoint_manifest.json`.
+* No further check or code change was made after that commit.
+
+## 7. Code-lock result (§14 step 2)
+
+* **SDR implementation commit (§9):** `af56777e0f52b5c350dd7ba557d55b2394cbd4bf`. It was referenced in the run record before the causal grid (§14 step 6).
+* **Part B run:**
+  * Timing: one run, 2026-10-05 15:33:36 → 15:57:17 +0900, exit 0, 20 workers.
+  * Executed code: the `git archive` snapshot of af56777, byte-identical to the commit.
+  * Units: 1,200 / 1,200 gate units and 1,026 / 1,026 timing units.
+  * Repository: no commit, checkout or tracked-file change during the run.
+* **Results** (records in `results/codelock_gate/`; summary in `decisions/CODELOCK_FINAL_RECORD.md`):
+  * estimator gate (§9): PASS in all six test cells;
+  * compute projection (§10.4): 5.99 days ≤ 7 with no frozen reduction applied;
+  * G-SITE (§5.4): primary η² 0.0014, W0 0.0037, W5 0.0045, all ≤ 0.01;
+  * small-truth design check (§11): 0 flagged cells.
+* **Next:** §14 step 3, only when instructed.

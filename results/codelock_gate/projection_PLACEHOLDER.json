@@ -1,0 +1,45 @@
+{
+ "all_timing_fits_finite": true,
+ "budget_days": 7.0,
+ "label": "PLACEHOLDER",
+ "method": "\u03a3 over cells, arms and \u00a710.3 runs of M \u00d7 mean measured wall time per SDR fit (PLACEHOLDER, same K, W, arm, learner mode and set size), divided by the number of worker processes; fit times measured with all workers busy.",
+ "n_workers": 20,
+ "projection_pass": true,
+ "projection_steps": [
+  {
+   "projected_days": 5.990147617608404,
+   "projected_wall_seconds": 517548.7541613661,
+   "reductions": []
+  },
+  {
+   "projected_days": 4.5440959524362805,
+   "projected_wall_seconds": 392609.89029049466,
+   "reductions": [
+    "a"
+   ]
+  },
+  {
+   "projected_days": 3.1980281292924184,
+   "projected_wall_seconds": 276309.63037086494,
+   "reductions": [
+    "a",
+    "b"
+   ]
+  },
+  {
+   "projected_days": 3.173258758440162,
+   "projected_wall_seconds": 274169.55672923,
+   "reductions": [
+    "a",
+    "b",
+    "c"
+   ]
+  }
+ ],
+ "reductions_applied": [],
+ "smoke_extrapolated": false,
+ "sum_fit_wall_seconds": 9272.251993357902,
+ "timing_reps_per_config": 3,
+ "timing_stage_wall_seconds": 471.72796726226807,
+ "timing_units": 1026
+}
