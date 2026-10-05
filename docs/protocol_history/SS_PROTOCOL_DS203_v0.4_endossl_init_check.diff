@@ -1,0 +1,75 @@
+--- SS_PROTOCOL_DS203_DRAFT_v0.4.md (before EndoSSL init check)
++++ SS_PROTOCOL_DS203_DRAFT_v0.4.md (after EndoSSL init check)
+@@ -8,8 +8,9 @@
+ * **Pre-protocol facts:** 146f69b, e4ea0d8, 052590c, dba9c06, 39d6eeb, cb07e93, 2012acd, **dbd5984** (window design,
+   metadata only), **[v0.4-final2] adf9160** (per-W sensitivity offsets, metadata only), and the v0.4 eligibility facts
+   (`data_audit/lead/ss_eligibility_v04.py`, `out/ss_eligibility_v04.json`, `fm_sources/eligibility_v04/`):
+-  6245f25, superseded by e81ab5f (v0.4-final2 override), superseded by **[v0.4-final3] a437225** (content-boundedness
+-  Rule B; json sha256 45a2f43d7154b799…); and **[v0.4-final3] b987010** (per-W G-SITE, metadata only).
++  6245f25, superseded by e81ab5f (v0.4-final2 override), superseded by a437225 (content-boundedness Rule B), superseded
++  by **[v0.4-final3] ca04c5b + d3563e7** (initialization check; in force: **d3563e7**, json sha256 32e538dee89dd9ea…);
++  and **[v0.4-final3] b987010** (per-W G-SITE, metadata only).
+   All are committed before, and separately from, any protocol commit.
+ * **Revision:**
+   * v0.4 consolidates the investigator decisions D-1 to D-5 and answers the final audit of v0.2 (HOLD — DESIGN CORE
+@@ -37,11 +38,11 @@
+   the three arms distinct in kind, not to target a model.
+ * **[v0.4]** The eligibility facts of §4.1.5 were re-determined before freeze from level-1–3 sources (commit
+   6245f25; re-checked under the v0.4-final2 override, e81ab5f; **[v0.4-final3]** recomputed under the
+-  content-boundedness Rule B, commit **a437225**).
++  content-boundedness Rule B, a437225; initialization check, ca04c5b + d3563e7, in force **d3563e7**). **[v0.4-final3]**
++  The eligible lists are therefore known. The ranking has not been applied, and no model has been selected.
+ * **[v0.4-final3]** The per-W G-SITE values were computed from case metadata only (commit **b987010**; §10.3).
+ * **[v0.4-final2]** Offsets for the per-W sensitivity sets were computed from case metadata only (commit **adf9160**;
+-  §7.2, §10.3). The eligible lists are therefore known. The ranking has not been applied, and no model has been
+-  selected.
++  §7.2, §10.3).
+ * **[v0.4-final]** The two-level overlap rule of §4.1.1 was fixed after it was known that a strict reading would make
+   every candidate ineligible (§4.1.1, disclosure).
+ * **Written before** any DS203 frame is decoded for analysis, any representation is extracted, any synthetic action or
+@@ -296,8 +297,11 @@
+ 
+ #### 4.1.5 [v0.4] Pre-freeze eligibility facts (no ranking applied, no selection)
+ 
+-* **[v0.4-final3] Source:** commit **a437225** (supersedes e81ab5f and 6245f25), `out/ss_eligibility_v04.json`,
+-  under the two-level rule with the content-boundedness Rule B. 174 / 174 quotes verified; all at levels 1–3.
++* **[v0.4-final3] Source:** commit **d3563e7** (initialization check ca04c5b plus a note correction; supersedes
++  a437225, e81ab5f and 6245f25), `out/ss_eligibility_v04.json`, under the two-level rule with the content-boundedness
++  Rule B. 203 / 203 quotes verified; all at levels 1–3.
++  * **[v0.4-final3] Initialization:** every eligible model's initialization is affirmatively stated in a level-1–3
++    source (`init_stated`, `init_quotes`). An unstated initialization is an undocumented base (Rule A UNK).
+   * For every source of every candidate the file records whether its level-1–3 documentation gives a bounded content
+     scope (`per_candidate_source_boundedness`).
+   * For each benchmark it records the ontology quote and a term check of its documented class / task list
+@@ -307,8 +311,6 @@
+ * **[v0.4-final3] Eligible primary**, all frame-level:
+   * SurgeNetCholec (CAFormer-S18);
+   * SurgeNetRARP (CAFormer-S18);
+-  * EndoSSL laparoscopy ViT-B;
+-  * EndoSSL laparoscopy ViT-L;
+   * SelfSupSurg ResNet-50 (MoCo v2 / SimCLR / SwAV / DINO checkpoints).
+ * **Eligible secondary**, all clip-level (training sources re-checked under the content-boundedness rule; unchanged):
+   * VideoMAE (Kinetics-400 / SSv2 / UCF-101 checkpoints);
+@@ -329,7 +331,11 @@
+     * **[v0.4-final3]** a fixed release without a bounded content scope: Basel V-JEPA ViT-L. Its base data
+       (VideoMix2M) include HowTo100M, whose task ontology includes a Health category ("Health 172" tasks).
+   * SurgeNetRAMIE: laparoscopic video not affirmatively documented.
+-  * EndoSSL ViT-S: size and compute not in a level-1–3 source.
++  * **[v0.4-final3]** EndoSSL laparoscopy ViT-B / ViT-L / ViT-S: the initialization of the released checkpoints is not
++    stated in any level-1–3 source (paper, supplementary, README, released code), so it is an undocumented base
++    (Rule A UNK). The paper's ablations compare starting "from scratch or from a good SSL pretrained checkpoint on
++    ImageNet-1k" without saying which the released checkpoints used. The ViT-S size is given in the supplementary
++    (23M).
+   * Neither class: Cosmos-H ×4, MedSora, SG2VID, KVLR.
+   * **[v0.4-final2]** Secondary, rule A **UNK**:
+     * unversioned / self-collected web corpora: Open-Sora VAE, VideoMAE V2 (Instagram crawl), Open-Sora-Plan VAE,
+@@ -882,3 +888,9 @@
+     benchmarks relied on by eligible candidates.
+   * Item 4: per-W G-SITE added: W = 0 0.0037, W = 5 0.0045 (b987010). Interpretation rule in §10.3, pointer in §5.4.
+   * The `…_accept_B1` task was never received or applied, so there was nothing to reverse.
++  * EndoSSL initialization check: EndoSSL laparoscopy ViT-B / ViT-L (and ViT-S) became ineligible, because their
++    initialization is not stated in any level-1–3 source. The initialization of every other eligible model is
++    affirmatively stated (quotes in d3563e7). Eligibility facts recommitted: ca04c5b, plus d3563e7 for a stale CV-VAE
++    note. §4.1.5, §0 and the header hashes were updated.
++  * Editing correction: the §0 sentence "The eligible lists are therefore known…", which a v0.4-final2 edit had
++    attached to the per-W offsets bullet, was returned to the eligibility bullet.

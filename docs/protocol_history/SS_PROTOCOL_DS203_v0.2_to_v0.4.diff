@@ -1,0 +1,686 @@
+--- SS_PROTOCOL_DS203_DRAFT_v0.2.md	2026-10-05 10:39:44.167597172 +0900
++++ SS_PROTOCOL_DS203_DRAFT_v0.4.md	2026-10-05 11:14:25.524452341 +0900
+@@ -1,4 +1,4 @@
+-# SS PROTOCOL — DS203 semi-synthetic causal benchmark (DRAFT v0.2, not frozen)
++# SS PROTOCOL — DS203 semi-synthetic causal benchmark (DRAFT v0.4, not frozen)
+ 
+ * **Repository:** `~/projects/medical_video_causal_gate/`
+ * **Governing records:**
+@@ -6,9 +6,13 @@
+   * Amendment 2 (ebc097d);
+   * Decisions 002 (cdbbc6e), 003, 004 (314cd94) and 005 (3660721).
+ * **Pre-protocol facts:** 146f69b, e4ea0d8, 052590c, dba9c06, 39d6eeb, cb07e93, 2012acd, **dbd5984** (window design,
+-  metadata only).
+-* **Revision:** v0.2 answers the audit of v0.1 (HOLD — MAJOR DESIGN CORRECTION BEFORE PROTOCOL FREEZE). Changed or new
+-  text is marked **[v0.2]**. The response to each audit point is in `SS_PROTOCOL_DS203_AUDIT_RESPONSE.md`.
++  metadata only), and the v0.4 eligibility facts (`data_audit/lead/ss_eligibility_v04.py` →
++  `out/ss_eligibility_v04.json`; not committed).
++* **Revision:**
++  * v0.4 consolidates the investigator decisions D-1 to D-5 and answers the final audit of v0.2 (HOLD — DESIGN CORE
++    NOW SOUND; RESOLVE POST-WINDOW S / P1b CONSISTENCY, D-2 MODEL SELECTION, AND CAUSAL-SET E1/E3 BEFORE FREEZE).
++  * There is no v0.3 draft; v0.4 is built on v0.2.
++  * Text changed in v0.4 is marked **[v0.4]**; **[v0.2]** marks earlier changes.
+ 
+ ## 0. Status and disclosure
+ 
+@@ -19,9 +23,11 @@
+   * the foundation-model candidate tables;
+   * the site-overlap table;
+   * the throughput estimates.
+-* **[v0.2] Also known: window-design facts computed after v0.1 (dbd5984).**
+-  * They use only the case metadata already used by D8: centre, annotated timestamp and duration.
+-  * They include the fixed per-case window offsets of §7.2 and their site–state balance.
++* **[v0.2]** Window-design facts (dbd5984) from case metadata only: centre, annotated timestamp and duration (§7.2).
++* **[v0.4]** The class definitions of §4.1.3 were fixed with knowledge of the candidate tables. Their purpose is to keep
++  the three arms distinct in kind, not to target a model.
++* **[v0.4]** The eligibility facts of §4.1.5 were re-determined before freeze from level-1–3 sources. The eligible lists
++  are therefore known. The ranking has not been applied, and no model has been selected.
+ * **Written before** any DS203 frame is decoded for analysis, any representation is extracted, any synthetic action or
+   outcome is generated, or any causal estimate is computed.
+ * **Freeze:** the protocol becomes frozen when committed alone. Nothing in §14 from step 2 onward runs before that
+@@ -40,6 +46,9 @@
+ **Scope.**
+ * This is a **semi-synthetic causal benchmark**: real clinical video, real site heterogeneity, real foundation-model
+   representations, and a known causal truth from synthesized actions and outcomes.
++* **[v0.4]** It is **a deliberately constructed orthogonal benchmark using real video and real acquisition
++  heterogeneity** (§7.2). It does not reproduce DS203's natural joint distribution of site, state and timing, and it is
++  not described as doing so.
+ * It does not estimate any causal effect in DS203, and it does not establish how real clinical actions affect real
+   outcomes.
+ * **[v0.2]** The directional claims (§12) concern whether representation-based adjustment reproduces the direction of
+@@ -47,13 +56,18 @@
+ 
+ ## 2. Data
+ 
+-* **[v0.2] Representation-level checks** (E1, E3 (i), E2 secondary (i)): all 278 full-length cases of centres 2–5. That is
+-  279 counted cases minus Center3_020, whose annotated timestamp exceeds its video length. Centre 1 is excluded (mostly
+-  5-min clips).
+-* **[v0.2] Causal grid and E2 primary:** the **eligible set**, n = 158 (§7.2: centres 2–5 = 28 / 34 / 44 / 52). It is
+-  common to every cell.
+-* **[v0.2] Single-file sensitivity set:** the 123 single-file cases of the eligible set (centre 2: 13). Its scope is
+-  fixed in §10.3.
++* **Representation-level checks:** all 278 full-length cases of centres 2–5. That is 279 counted cases minus
++  Center3_020, whose annotated timestamp exceeds its video length. Centre 1 is excluded (mostly 5-min clips).
++* **[v0.4] Primary causal set (D-5):** the common eligible set, n = 158, for every W, K and P (§7.2).
++  * Centres 2–5 = 28 / 34 / 44 / 52; every centre keeps ≥ 20 cases.
++  * E2 primary and the causal-set confirmation of E1 / E3 (§5) use this set.
++* **[v0.4] Per-W sensitivity sets (D-5):** W = 0 → 204 cases; W = 5 → 201 cases; W = 30 → 158 (= primary). Scope in
++  §10.3.
++* **[v0.2] Single-file sensitivity set:** the 123 single-file cases of the primary causal set (centre 2: 13). Scope in
++  §10.3.
++* **[v0.4] Folds:**
++  * defined once on the 278 cases: case-level 5-fold, stratified by site, seed **20261006**;
++  * the 158-case set and the sensitivity sets use the same fold labels, restricted to their cases.
+ * **[v0.2] Multi-file cases:**
+   * files are ordered by their version suffix (`_v01`, `_v02`, …) and placed end to end;
+   * physical time = summed duration of the preceding files + time within the file, with no gap assumed;
+@@ -120,81 +134,164 @@
+ 
+ ## 4. Representations
+ 
+-### 4.1 Selection rules (applied mechanically after this protocol is frozen)
++### 4.1 [v0.4] Selection rules (replace v0.2 §4.1 and decision point D-2)
+ 
+-**Primary** (surgical / endoscopic), among eligible candidates in 052590c:
+-1. laparoscopic video in the documented pretraining data;
+-2. **[v0.2]** DS203 overlap NO: the row of cb07e93's candidate × centre table is "NO" in every centre (this is the
+-   site-level table; it is stricter than the Appendix300 answer of 052590c);
+-3. no same-hospital overlap with any DS203 centre (this excludes models trained on DSAD);
+-4. fits 24 GB at bf16;
+-5. model compute documented, i.e. non-empty `flops_per_input` in 052590c's `fm_compute_estimate.csv`.
+-
+-**Rank:** clip-level (temporal) models before frame-level models; then most recent release; then lowest compute. The
+-top-ranked model is selected.
+-* **[v0.2] Decision point D-2:** whether "clip-level" includes generative video models (diffusion / world models)
+-  whose representation is not an encoder output. It must be settled before freeze (response, §4).
++The rules below are applied mechanically after freeze (§14 step 3). The underlying facts were determined before freeze
++(§4.1.5).
+ 
+-**Secondary** (generic video, reconstructive), among eligible candidates:
+-1. DS203 overlap NO (as in primary rule 2);
+-2. reconstructive latent model (VAE, tokenizer or masked autoencoder);
+-3. fits 24 GB at bf16;
+-4. model compute documented (as in primary rule 5).
++#### 4.1.1 Source hierarchy
+ 
+-**Rank:** video VAE / tokenizer before masked autoencoder; then most recent release; then lowest compute.
++Every eligibility fact is determined from, in order:
++1. the original paper (for a training dataset, that dataset's own paper);
++2. the official model card (official repository README or official file listing);
++3. the documented pretraining-data list (official configs / training scripts);
++4. secondary sources;
++5. earlier internal tables (052590c, cb07e93).
++
++**Standard of evidence:**
++* A fact counts as NO (for an exclusion such as DS203 overlap), or holds (for a requirement such as "laparoscopic video
++  in the pretraining data"), **only if a level-1 to level-3 source affirmatively supports it. Otherwise it is UNK. UNK
++  is ineligible.**
++* Levels 4–5 provide context only.
++
++**DS203 overlap NO** requires every training source of the released weights and of their initialisation or base
++weights to be one of:
++* (a) a clinical set with a level-1–3 recording site, or geography, that is not a DS203 institution;
++* (b) **[v0.4, decision point D-6] content reading:** a fixed general-domain benchmark whose level-1 definition consists
++  of non-surgical classes: ImageNet object categories; Kinetics / UCF-101 human actions; SSv2 crowd-sourced caption
++  templates.
++  * Under the alternative **strict reading** (every web-derived source is UNK), no candidate in either arm is eligible
++    (§4.1.5).
++
++Web-scale sources, undocumented base weights and clinical sets without a stated recording site are UNK.
++
++#### 4.1.2 Clip-level definition
++
++* "A clip-level model jointly consumes two or more temporally ordered frames and produces a representation conditioned
++  on temporal context."
++* A model that averages independent per-frame embeddings is frame-level.
++
++#### 4.1.3 Mutually exclusive classes
++
++* **Primary:** medical / endoscopic **representation-learning encoders** (self-supervised or discriminative).
++  Generative models are excluded.
++* **Secondary:** **generic** (non-medical) reconstructive or generative video models.
++* **Neither:** surgical-domain generative models (e.g., Cosmos-H, SG2VID, MedSora, KVLR). They are ineligible for
++  both arms.
++* **Disclosure:** the class definitions were fixed with knowledge of the candidate tables, to keep the three arms
++  distinct in kind, not to target a model.
+ 
+-**Reference (Decision 005):** nvidia/Cosmos-1.0-Tokenizer-CV8x8x8, the default of the authors' gpi_pack (§4.2).
++#### 4.1.4 Rules
+ 
+-If no candidate passes a rule, that arm is dropped and reported. No rule is relaxed.
++**Primary**, among 052590c-eligible candidates of the primary class:
++1. laparoscopic video in the documented pretraining data;
++2. DS203 overlap NO (§4.1.1);
++3. no same-hospital overlap with any DS203 centre (this excludes models trained on DSAD);
++4. fits 24 GB at bf16, from a level-1–3 parameter count (2 bytes per parameter < 14.4 GB) or the official checkpoint
++   file size (< 14.4 GB);
++5. compute documented: FLOPs per input, a parameter count, or a standard named architecture whose size is given in its
++   level-1 paper.
++
++**Primary rank:**
++1. clip-level before frame-level;
++2. most recent release (first public availability of the checkpoint, per a level-1–3 source);
++3. lowest compute;
++4. **[v0.4, added; not in the task list]** the checkpoint the authors designate as default or recommended in a
++   level-1–3 source;
++5. **[v0.4, added; not in the task list]** lexicographic order of the checkpoint file name.
++
++The top-ranked checkpoint is selected.
++
++**Secondary**, among 052590c-eligible candidates of the secondary class:
++1. DS203 overlap NO;
++2. fits 24 GB at bf16 (as in primary rule 4);
++3. compute documented (as in primary rule 5).
++
++**Secondary rank:** video VAE / tokenizer before masked autoencoder; then most recent release; then lowest compute;
++then the two tie-breaks above.
++
++**Reference (Decision 005):** nvidia/Cosmos-1.0-Tokenizer-CV8x8x8, the default of the authors' gpi_pack (§4.2). It is
++not subject to these rules.
++
++If no candidate passes, that arm is dropped and reported. No rule is relaxed.
++
++#### 4.1.5 [v0.4] Pre-freeze eligibility facts (no ranking applied, no selection)
++
++* **Source:** `out/ss_eligibility_v04.json`. 140 / 140 quotes verified; all at levels 1–3.
++* **Eligible primary (content reading)**, all frame-level:
++  * SurgeNetCholec (CAFormer-S18);
++  * SurgeNetRARP (CAFormer-S18);
++  * EndoSSL laparoscopy ViT-B;
++  * EndoSSL laparoscopy ViT-L;
++  * SelfSupSurg ResNet-50 (MoCo v2 / SimCLR / SwAV / DINO checkpoints).
++* **Eligible secondary (content reading)**, all clip-level:
++  * VideoMAE (Kinetics-400 / SSv2 / UCF-101 checkpoints);
++  * OmniTokenizer (ImageNet + K600);
++  * WF-VAE-L 16ch;
++  * LARP-L-Long tokenizer;
++  * LeanVAE.
++* **Strict reading:** none in either arm.
++* **Ineligible:** every other candidate.
++  * Primary class, DS203 overlap UNK (web-scale source or clinical set without a stated site): Endo-FM, EndoViT,
++    SurgeNetXL, SurgeNet / SurgeNetPublic, SurgVLP family, EndoMamba, LemonFM, SurgLIME, PL-Stitch, Basel V-JEPA,
++    EndoSSL colonoscopy.
++  * SurgeNetRAMIE: laparoscopic video not affirmatively documented.
++  * EndoSSL ViT-S: size not in a level-1–3 source.
++  * Neither class: Cosmos-H ×4, MedSora, SG2VID, KVLR.
++  * Secondary, web-scale: Open-Sora VAE, VideoMAE V2, Open-Sora-Plan VAE, CV-VAE, Reducio-VAE.
++  * Open-MAGVIT2: compute not documented.
+ 
+ ### 4.2 Extraction
+ 
+ * **Frame-level models:** one embedding per grid frame, mean-pooled over the step's 10 frames.
+-* **[v0.2] Clip-level models:** one clip per step, at the model's documented clip length L_m.
++* **[v0.2] Clip-level models (§4.1.2):** one clip per step, at the model's documented clip length L_m.
+   * The clip is the L_m most recent grid frames ending at the step's last grid frame. No frame after 5t + 5 is used.
+   * If L_m > 10, the earlier frames come from preceding steps.
+   * At the video start, the first grid frame is repeated.
+-* **[v0.2] Reference arm (paper-faithful reference, not a standardized-model comparison):**
++* **[v0.4] Reference arm (D-3)** — "paper-linked Cosmos reference using the original temporal/representation
++  definition under DS203-standardized spatial preprocessing":
+   * Input: the step's contiguous native frames in [5t, 5t + 5); at most 121, uniformly selected (package default).
+   * The standardized crop and mask (§3.1 steps 2–3) are applied, then the frames are resized to **320×320**.
+   * The representation is the decoder input `post_quant_conv(latent)`, averaged over latent time:
+-    16 × 40 × 40 = 25,600 values.
+-  * It follows K4's representation definition and contiguous temporal sampling. K4 does not state a resize policy, and
+-    its 16 × 40 × 60 shape implies a non-square input; the square shape here follows from the standardized crop
+-    (decision point D-3).
+-  * Because the reference uses contiguous native frames rather than the 2-fps grid, it can retain frame-rate-derived
+-    information.
+-* **PCA:** each representation R_t is reduced to 64 principal components. PCA, and every later fitted operator, is
+-  fit within training folds only (§9).
++    **16 × 40 × 40** = 25,600 values.
++  * It is **not a pixel-level replication** of K4: K4's (16, 40, 60) shape implies a non-square, approximately
++    320×480 input.
++  * It can retain frame-rate-derived information, because it uses contiguous native frames rather than the 2-fps grid.
++* **[v0.4] PCA:** each representation R_t is reduced to 64 principal components.
++  * PCA is fit on all steps of the training-fold cases of the 278-case set and applied to the held-out fold.
+ 
+ ### 4.3 Linear site removal
+ 
+-* R_t^(−C) is a LEACE-type closed-form removal of linearly decodable site information, fit within training folds and
+-  applied to held-out folds.
++* **[v0.4]** R_t^(−C) is a LEACE-type closed-form removal of linearly decodable site information.
++  * It is fit on all steps of the training-fold cases of the 278-case set and applied to the held-out fold.
+ * **Reported:**
+   * site decodability before and after (linear probe and 2-layer MLP probe, §5.3);
+   * state incremental value retained (§5.2);
+   * dimension and variance retained.
+-* Results are described as "linearly site-removed", never as "site-invariant".
++* Results are described as **"linearly site-removed"**, never as "site-invariant".
+ 
+ ## 5. Pre-causal checks (after extraction, before any causal run)
+ 
+-**[v0.2] Shared settings:**
+-* **Folds:** case-level 5-fold cross-fitting, stratified by site, fold seed **20261006**. The same folds are used for
+-  PCA, LEACE, the probes and the nuisances.
++**Shared settings:**
++* **Folds:** as in §2.
+ * **Site probes:** per step; the case-level prediction is the mean predicted probability over the case's steps;
+   balanced accuracy is computed over cases.
+ * **CIs:** case bootstrap stratified by site, 2,000 resamples, seed **20261008**.
++* **[v0.4] Two sets:**
++  * E1 and E3 are run on the 278-case set (primary representation check) and on the 158-case primary causal set
++    (causal-set confirmation);
++  * **the 158-case results are never used for model selection.**
+ 
+ ### 5.1 E1 Site encoding
+ 
+-* **Data:** all steps of the 278 full videos, standardized and native arms.
++* **Data:** all steps of the 278 full videos (primary) and the analysis region of the 158 cases (confirmation;
++  relative steps −30 … 44, §7.2). Standardized and native arms.
+ * **Encoding present** if balanced accuracy ≥ 0.50 (chance 0.25) with the lower 95 % bound above 0.35.
+ 
+ ### 5.2 [v0.2] E2 State recovery beyond time (fully prespecified)
+ 
+ **Primary.**
+-* **Data:** the analysis region of the eligible set, steps w_i − 30 … w_i + 44 of each of the 158 cases (§7.2).
++* **Data:** the analysis region of the 158 cases, steps w_i − 30 … w_i + 44 (§7.2).
+ * **Comparison:** held-out AUC for S_t of
+   * base = elapsed time (natural cubic spline, 4 df, knots at training-fold quantiles), against
+   * base + R_t (64 PCs).
+@@ -210,12 +307,15 @@
+ **Stricter reference.** Normalized time (t / case length) is reported as a stricter reference. It uses future
+ information and is not a valid baseline.
+ 
+-### 5.3 [v0.2] E3 Removal success (equivalence form)
++### 5.3 E3 Removal success (equivalence form; D-4)
+ 
+-Success if both hold:
+-* (i) after removal, the **linear-probe site balanced accuracy has a one-sided 95 % upper bound ≤ 0.35**. The margin
+-  equals E1's encoding bound, so the "encoded" and "removed" regions do not overlap;
+-* (ii) the E2-primary ΔAUC after removal is ≥ 50 % of its pre-removal value (point estimates).
++Success, on each of the two sets, if both hold:
++* (i) after removal, the **linear-probe site balanced accuracy has a one-sided 95 % upper bound ≤ 0.35**;
++* (ii) the E2-primary ΔAUC after removal is ≥ 50 % of its pre-removal value (point estimates; on the 158-case set).
++
++**[v0.4] Wording when (i) passes:** linear site decodability "**no longer exceeds the prespecified linear
++site-encoding boundary**". It is never described as "equivalent to chance" or "eliminated", since 0.35 is 10 points
++above chance. The representation is "linearly site-removed".
+ 
+ **MLP probe (fixed):**
+ * architecture: 2 layers, 256 hidden units, ReLU;
+@@ -225,21 +325,23 @@
+ If (i) passes but the MLP upper bound exceeds 0.35, the claim ceiling is **"linear site information removed;
+ nonlinear site information remains"**.
+ 
+-### 5.4 [v0.2] G-SITE: site role in the DGP truth (at code lock, from the design only)
++### 5.4 [v0.4] G-SITE: verification that the constructed benchmark satisfies its intended orthogonality condition
+ 
++* **Status:** G-SITE is a design check computed at code lock from the design only. It is not an independent
++  validation.
+ * **Outcome component.** In the P2 cells (K = 1, P = 0), the non-treatment outcome component is
+   N_i = λ·S_{i, w_i} + β·U_i. U ⟂ C by construction.
+-* **Gate:** η² of S_{i, w_i} on C (one-way, eligible set) **≤ 0.01**.
++* **Gate:** η² of S_{i, w_i} on C (one-way, primary causal set) **≤ 0.01**.
+ * **Also reported:** η² of Σ_{window ∪ post} S_it on C, for every cell.
+ * **If the gate fails:** P2-SITE and P2-ORACLE (§12) are not tested and are reported as P3.
+-* **Analytic basis:**
+-  * In the DGP (§6), C enters only A.
+-  * The window rule (§7.2) makes S at relative step j equal to 1{O_i + j ≥ 0}. That is a function of the site-stratified
+-    offset alone.
+-  * So C ⟂ S at every relative step, up to finite-sample imbalance, and in K = 1, P = 0 cells C is instrument-like with
+-    respect to (S, U).
+-* **Disclosure:** with the fixed offsets, η² = 0.0014 (V = 0.038) at relative step 0 and max V = 0.053 over relative
+-  steps −30 … 44 are already known from metadata (dbd5984). The gate checks the implementation.
++* **Basis:**
++  * C enters only A.
++  * Under §7.2, S at window-relative step j is 1{O_i + j ≥ 0}, a function of the site-stratified offset alone.
++* **[v0.4] Scope: G-SITE checks marginal independence.** When W > 0, conditioning on past actions, which are common
++  effects of C and U, induces dependence between C and U given H. Theory statement (i) held in all seven settings,
++  including pre-window history (E2), so the P2 predictions are unchanged.
++* **Disclosure:** with the fixed offsets, η² = 0.0014 (V = 0.038) at relative step 0, and max V = 0.053 over relative
++  steps −30 … 44, are already known from metadata (dbd5984).
+ 
+ ## 6. Semi-synthetic data-generating process
+ 
+@@ -250,11 +352,12 @@
+ 
+ Y_i = τ·Σ_{t∈window∪post} A_it + λ·Σ_{t∈window∪post} S_it + β·U_i + ε_Y, ε_Y ~ N(0, 1)
+ 
+-* **[v0.2] c(C):**
++* **[v0.4] Site loadings c(C):**
+   * values (−3, −1, 1, 3)/√5 (centred, unit variance over the four levels);
+-  * assigned to the four centres by a random permutation drawn independently for each replicate from that replicate's
+-    seed;
+-  * results therefore average over labellings, and no centre ordering is chosen.
++  * assigned to the four centres by a permutation drawn for each replicate from a pre-fixed seed: the replicate's
++    SeedSequence child (§10.2) with spawn key "c-permutation";
++  * the same mapping is used for all arms within a replicate;
++  * results are interpreted as the effect of a **generic site-identity signal**, not of any specific centre.
+ * **Causal structure:**
+   * C has no direct effect on Y; S_t affects A and Y; U affects A and Y.
+   * Synthetic actions do not alter the video; S_t and C are fixed by the data and the window rule.
+@@ -277,24 +380,33 @@
+ * **Truth:** computed exactly from the DGP for each replicate (it depends on that replicate's c permutation). Closed
+   form for φ_A = 0; exact recursion for φ_A = 0.5.
+ 
+-### 7.2 [v0.2] Window placement (replaces v0.1)
++### 7.2 Window placement (D-1)
+ 
++* **[v0.4] Design:** a deliberately constructed orthogonal benchmark using real video and real acquisition
++  heterogeneity. It is not a reproduction of DS203's natural joint distribution.
+ * **Eligible set:** cases with s_i − 15 − 30 ≥ 0 and s_i + 15 + 15 + 30 ≤ n_i, where n_i = ⌊D_i / 5⌋. n = 158.
+ * **Offsets:** O_i ∈ {−15, …, 15}, assigned within each site from a seeded permutation (seed **20261005**).
+-  * The values are fixed in `data_audit/lead/out/ss_window_offsets.csv` (sha256 4794e139…ea6c3, commit dbd5984).
++  * The values are in `data_audit/lead/out/ss_window_offsets.csv` (sha256 4794e139…ea6c3, commit dbd5984).
++  * **[v0.4] Each case's offset is fixed once and is unchanged across all cells, arms and replicates.**
+ * **Window:**
+-  * the window starts at **w_i = s_i + O_i, the same for every cell**;
++  * the window starts at **w_i = s_i + O_i**;
+   * window steps are w_i … w_i + K − 1;
+   * W pre-window steps precede it and P post-window steps follow it.
+-* **Properties (dbd5984):**
+-  * P(S = 1) at relative step j is 0 for j ≤ −16, 0.35 at −5, 0.52 at 0, 0.67 at 4, 0.97 at 14, and 1 from 15. Both
+-    S levels therefore occur across cases at every window step.
++* **[v0.4] State along the trajectory:**
++  * S at window-relative step j is 1{O_i + j ≥ 0};
++  * it is 1 for every case when j ≥ 15, and varies across cases when j < 15;
++  * **post-window S is constant only when K ≥ 15**; for K < 15 the switch can occur in post-window steps;
++  * P(S = 1) at relative step j (dbd5984): 0 for j ≤ −16, 0.35 at −5, 0.52 at 0, 0.67 at 4, 0.97 at 14, 1 from 15;
+   * max V(C, S_j) = 0.053.
+-  * Post-window S is constant (1).
+-* **Rationale (dbd5984):**
+-  * The v0.1 rule (start = s_i − ⌊K/2⌋) gave one S sequence per K, so there was no between-case state confounding.
+-  * A fixed procedure-time anchor (280 s, pooled median) gives V(C, S) = 0.25–0.32, making C a proxy for S.
+-  * Seeded uniform eligible-window sampling leaves only 4 % of 75-s windows containing the switch.
++* **[v0.4] Disclosure:** "Candidate window-placement rules were evaluated before any frame decoding, representation
++  extraction, synthetic treatment/outcome generation, or causal estimation. The final rule was selected to satisfy two
++  prespecified structural requirements: within-step state variation and minimal site–state association."
++* **Rejected rules (record, dbd5984):**
++  * the v0.1 switch-centred rule (start = s_i − ⌊K/2⌋) gave one S sequence per K, so there was no between-case state
++    variation;
++  * a fixed procedure-time anchor (280 s, pooled median) gives V(C, S) = 0.25–0.32, a large site–state association;
++  * seeded uniform eligible-window sampling leaves only 4 % of 75-s windows containing the switch, too little state
++    variation.
+ * **Exclusions:**
+   * 120 of 278 cases are excluded, mainly for early switches. 46 of 117 centre-5 cases show the appendix within 75 s
+     and have no pre-switch footage.
+@@ -302,35 +414,47 @@
+ 
+ ## 8. Adjustment arms
+ 
+-**[v0.2]** History H = past synthetic actions in the trajectory: pre-window steps and earlier window steps.
+-* Elapsed time is not included. Window-start elapsed time differs by site (medians 398–683 s, dbd5984), so it would
+-  carry site information into the no-video arm, and the DGP does not depend on it.
++* **[v0.2] History H** = past synthetic actions in the trajectory: pre-window steps and earlier window steps.
++  * Elapsed time is not included. Window-start elapsed time differs by site (medians 398–683 s, dbd5984), and the DGP
++    does not depend on it.
++* **[v0.4] Conditioning set.** At each window step t, the nuisances condition on H_t (all past synthetic actions in the
++  trajectory) and on the arm's covariates at step t only. Past representations and past S are not included.
+ 
+-| arm | adjustment set |
++| arm | adjustment set (step-t covariates) |
+ |---|---|
+-| NV | H (no video) |
+-| SITE | H + C (explicit site; theory analogue of Z) |
+-| FM-P | H + R_t, primary model, standardized |
+-| FM-P−C | H + R_t^(−C), primary, standardized |
++| NV | H_t (no video) |
++| SITE | H_t + C (explicit site; theory analogue of Z) |
++| FM-P | H_t + R_t, primary model, standardized |
++| FM-P−C | H_t + R_t^(−C), primary, standardized |
+ | FM-S, FM-S−C | as above, secondary model |
+-| REF, REF−C | as above, Cosmos reference (paper-faithful reference arm) |
+-| FM-P-nat | H + R_t, primary, native (sensitivity) |
+-| **[v0.2] ORACLE−C** | H + S_t (exact state, no site) |
+-| ORACLE | H + S_t + C |
+-| FULL | H + S_t + C + U (sanity: unbiased) |
++| REF, REF−C | as above, paper-linked Cosmos reference (§4.2) |
++| FM-P-nat | H_t + R_t, primary, native (sensitivity) |
++| ORACLE−C | H_t + S_t (exact state, no site) |
++| ORACLE | H_t + S_t + C |
++| **[v0.4] FULL** | H_t + S_t + C + U, the **exchangeability oracle / implementation sanity reference** (not called unbiased) |
+ 
+ ## 9. Estimator and inference
+ 
+-* **Estimator:** cross-fitted sequentially doubly robust estimator for the multiplicative MTP, with
+-  influence-function-based standard errors.
++* **[v0.4] Estimator:** a sequentially doubly robust (SDR) estimator for the multiplicative MTP, with
++  influence-function-based standard errors, **implemented in this repository**.
++  * The DR-FLEX / V3-C05 code path is **not used**: its commissioning scope and learners do not transfer without
++    retuning.
+   * The implementation is fixed at code lock (code only, no free numeric settings).
+-  * If the existing DR-FLEX code path is used, its architecture is frozen as committed and not retuned.
++* **[v0.4] Estimator gate (code lock):**
++  * Data: synthetic placeholder features with known truth.
++  * Test subset: K ∈ {1, 5, 15}, P ∈ {0, 5}, W = 5, α = 0.5, γ = 1, M = 200.
++  * Pass: the FULL arm reaches 95 % coverage within [0.90, 0.99] and |bias| below 5 % of the true contrast in every
++    test cell.
++  * **If it fails: STOP before extraction.**
+ * **[v0.2] Nuisances**, with learner choice by lower cross-validated loss within the training fold:
+   * **Outcome regressions:** ridge (penalty by inner 5-fold CV over {10⁻³, …, 10³}) or a 2-layer MLP (128 units,
+     ReLU, Adam 10⁻³, weight decay 10⁻⁴, at most 300 epochs, early stopping with patience 20 on a 20 % inner split).
+   * **Density ratios:** probabilistic classification with the same two learner families (L2 logistic regression or MLP,
+     by log-loss).
+-* **Cross-fitting:** the folds of §5. PCA, LEACE and all nuisances are fit on training folds only.
++* **[v0.4] Fitting sets:**
++  * PCA and LEACE: all steps of the training-fold cases of the 278-case set;
++  * causal nuisances: the training-fold cases of the analysis set (the 158-case set, or the §10.3 sensitivity set);
++  * all predictions are made on held-out folds.
+ * **Intervals:** 95 % Wald intervals from the influence function.
+ 
+ ## 10. Design grid and replication
+@@ -346,9 +470,25 @@
+ * Replicate seeds come from NumPy SeedSequence(**20261007**), spawned by (cell index, replicate index).
+ * All arms of a replicate share its draws (paired comparisons).
+ 
+-### 10.3 [v0.2] Single-file sensitivity (fixed scope)
++### 10.3 Sensitivity runs (fixed scope)
+ 
+-On the 123 single-file eligible cases: E1–E3, and the P1b and P2 families (§12) for arms NV, SITE, FM-P and FM-P−C.
++* **[v0.2] Single-file:** on the 123 single-file cases of the primary causal set: E1–E3, and the P1b and P2 families
++  (§12) for arms NV, SITE, FM-P and FM-P−C.
++* **[v0.4] Per-W sets (D-5):** the P1b and P2 family cells with W = 0 (204 cases) and W = 5 (201 cases), for arms NV,
++  SITE, FM-P, FM-P−C, ORACLE and ORACLE−C.
++  * They are reported separately and do not enter family verdicts.
++
++### 10.4 [v0.4] Compute budget
++
++* **Projection (code lock):** the dry run times a representative subset of SDR fits (all K, both learners, all arms) and
++  projects the full-grid wall time, including §10.3, on the available cores.
++* **Budget:** 7 days of wall time.
++* **If exceeded, reduce in this order until it fits:**
++  * (a) P3 cells only: M = 100;
++  * (b) P3 cells only: ridge only;
++  * (c) P3 cells only: drop FM-S−C and REF−C.
++* Family cells (P1a, P1b, P2) are never reduced.
++* **If still over budget: STOP for a human decision before extraction.**
+ 
+ ## 11. Metrics
+ 
+@@ -358,7 +498,7 @@
+ * 95 % coverage.
+ 
+ **Secondary:**
+-* bias-to-Monte-Carlo-SD ratio (|bias| / SD of Ψ̂ over replicates; called "standardized absolute bias" in v0.1);
++* bias-to-Monte-Carlo-SD ratio (|bias| / SD of Ψ̂ over replicates);
+ * RMSE;
+ * CI width;
+ * effective sample size and density-ratio diagnostics;
+@@ -369,37 +509,51 @@
+ * The DGP gives |truth| ≥ 0.05·K·(1 + γ·mean c). Cells with |truth| < 0.025, if any, are flagged at code lock.
+ * Within-cell comparisons between arms are paired on replicates.
+ 
+-## 12. [v0.2] Predictions and their aggregation
++## 12. Predictions and their aggregation
+ 
+ ### 12.1 Mapping to the theory
+ 
++**Mapping.**
+ * The maps 47a49ea and 6165ece have Z, a trajectory-constant factor acting on A, and U, an unmeasured confounder.
+ * Here Z corresponds to C. The unmeasured confounding of an arm is U **plus whatever part of S the arm does not
+   capture**.
+-* In NV and SITE, S is entirely unmeasured, so α = 0 does not mean "no unmeasured confounding". This corrects v0.1's
+-  conditions.
+-* Only ORACLE and ORACLE−C have unmeasured confounding of exactly strength α.
++* In NV and SITE, S is entirely unmeasured, so α = 0 does not mean "no unmeasured confounding".
+ 
+-Statements of the maps that hold in all seven settings (base, E1 × 2, E2 × 2, E3 × 2, E4):
++**Statements of the maps that hold in all seven settings** (base, E1 × 2, E2 × 2, E3 × 2, E4):
+ * (i) at K = 1, P = 0, adjusting Z never reduces |bias|;
+ * (ii) with no unmeasured confounding, adjusting Z reduces |bias| in every other cell.
+ 
+-In addition, at W = 0 and P ≥ 1, adjusting Z reduces |bias| at every α in base, E1, E3 and E4. Pre-window history
+-(E2) breaks this in some rows: W = 5 at P = 5, α = 1; W = 30 at P = 5, α ≥ 0.5 and at P = 30, α = 1.
++In addition, at W = 0 and P ≥ 1, adjusting Z reduces |bias| at every α in base, E1, E3 and E4. Pre-window history (E2)
++breaks this in some rows: W = 5 at P = 5, α = 1; W = 30 at P = 5, α ≥ 0.5 and at P = 30, α = 1.
++
++**[v0.4] Why P1a stays theory-derived.**
++* In ORACLE and ORACLE−C, S_t is conditioned on at each window step. S_t is a non-collider on every path from A_t
++  through the switch timing to post-window S, so conditioning on it blocks the path through post-window S.
++* The remaining unmeasured confounder is the constant U. At α = 0, which is P1a's domain, none remains.
++* At α > 0, U remains, including U-paths opened by conditioning on past actions.
++* This is the setting of statement (ii).
++
++**[v0.4] Why P1b is not theory-derived.**
++* The theory maps contain constant or AR(1) Gaussian unmeasured confounding.
++* In NV and SITE (and partly in the FM arms), the unmeasured confounder is S: a **binary, monotone, time-varying**
++  state that switches within or after the window for K < 15.
++* The maps do not cover such a confounder. v0.2's P1b used the maps with S folded into an effective α, which assumes a
++  confounder that is constant over the post-window steps; that does not hold here.
++* P1b is therefore a **prespecified empirical hypothesis (theory-motivated)**. Its verdict rules are unchanged.
+ 
+ ### 12.2 Families
+ 
+ Each family is a paired comparison of "with C" against "without C".
+ 
+-| family | cells | prediction | conditions |
+-|---|---|---|---|
+-| P1a (theory analogue) | α = 0, all cells except K = 1, P = 0 (66 cells) | ORACLE \|bias\| < ORACLE−C | — |
+-| P1b-SITE | W = 0, P ∈ {5, 30}, all K, α, γ (48 cells) | SITE < NV | — |
+-| P1b-FM | the same 48 cells | FM-P < FM-P−C | E1 and E3 pass |
+-| P2-SITE | K = 1, P = 0, all W, α, γ (18 cells) | SITE ≥ NV | G-SITE passes |
+-| P2-FM | K = 1, P = 0, α > 0 (12 cells) | FM-P ≥ FM-P−C | G-SITE, E1 and E3 pass |
+-| P2-ORACLE | K = 1, P = 0, α > 0 (12 cells) | ORACLE ≥ ORACLE−C | G-SITE passes |
+-| P3 | all other cells and comparisons | no directional prediction; reported against the maps | — |
++| family | status | cells | prediction | conditions |
++|---|---|---|---|---|
++| P1a | theory-derived | α = 0, all cells except K = 1, P = 0 (66 cells) | ORACLE \|bias\| < ORACLE−C | — |
++| P1b-SITE | **[v0.4] prespecified empirical hypothesis (theory-motivated)** | W = 0, P ∈ {5, 30}, all K, α, γ (48 cells) | SITE < NV | — |
++| P1b-FM | **[v0.4] prespecified empirical hypothesis (theory-motivated)** | the same 48 cells | FM-P < FM-P−C | E1 and E3 pass (both sets, §13) |
++| P2-SITE | theory-derived (statement i) | K = 1, P = 0, all W, α, γ (18 cells) | SITE ≥ NV | G-SITE passes |
++| P2-FM | theory-derived (statement i) | K = 1, P = 0, α > 0 (12 cells) | FM-P ≥ FM-P−C | G-SITE passes; E1 and E3 pass (both sets, §13) |
++| P2-ORACLE | theory-derived (statement i) | K = 1, P = 0, α > 0 (12 cells) | ORACLE ≥ ORACLE−C | G-SITE passes |
++| P3 | — | all other cells and comparisons | no directional prediction; reported against the maps | — |
+ 
+ ### 12.3 Aggregation rule (fixed)
+ 
+@@ -407,49 +561,61 @@
+   * P1: D_j = (|b_without C| − |b_with C|) / Ψ̄_j;
+   * P2: D_j = (|b_with C| − |b_without C|) / Ψ̄_j.
+ * **Aggregate:** D̄_F = mean_j D_j.
+-* **95 % CI:** percentile bootstrap over replicates. Each cell's M replicates are resampled with the same indices for
+-  both arms; B = 2,000; seed 20261008.
++* **[v0.4] Sampling unit.**
++  * The 216 cells (and the 24 φ_A cells) are fixed design points, not a sample.
++  * The 95 % CI is a percentile bootstrap that resamples the synthetic replicates within each cell, with the same
++    indices for both arms of a pair; B = 2,000; seed 20261008.
++  * Cells are not resampled.
+ * **Verdicts:**
+   * **SUPPORTED** if the lower bound of D̄_F > 0 and D_j > 0 in ≥ 75 % of the family's cells;
+   * **CONTRADICTED** if the upper bound < 0 or D_j > 0 in ≤ 25 % of cells;
+   * **INCONCLUSIVE** otherwise.
+-* **Use in claims:** headline directional claims come only from family verdicts. Single cells are descriptive. All
+-  cells are reported.
++* **Use in claims:**
++  * Headline directional claims come only from family verdicts. Single cells are descriptive. All cells are reported.
++  * Verdicts on P1b families are reported as tests of prespecified empirical hypotheses.
+ 
+ ## 13. Falsification rules and claim ceilings
+ 
+-* **E1 fails (standardized):** "site-like information in representations" is not established for this dataset.
+-  FM-vs-FM−C comparisons are reported descriptively only.
++* **E1 fails (standardized, 278-case set):** "site-like information in representations" is not established for this
++  dataset. FM-vs-FM−C comparisons are reported descriptively only.
+ * **E2 fails:** "video representations recover the confounding state" is not established. FM-vs-NV comparisons cannot
+   be read as confounder recovery.
+-* **E3 (i) fails:** the removal manipulation failed; FM−C arms are not interpreted.
+-* **[v0.2] E3 (i) passes but the MLP probe exceeds the margin:** the claim ceiling is "linear site information removed;
++* **E3 (i) fails (278-case set):** the removal manipulation failed; FM−C arms are not interpreted.
++* **[v0.4] E1 and E3 pass on the 278-case set but fail on the 158-case set:** FM vs FM−C comparisons in the causal grid
++  are reported descriptively only, and P1b-FM / P2-FM are not tested.
++* **E3 (i) passes but the MLP probe exceeds the margin:** the claim ceiling is "linear site information removed;
+   nonlinear site information remains".
++* **[v0.4] E3 (i) passes:** the wording is "no longer exceeds the prespecified linear site-encoding boundary", never
++  "equivalent to chance" or "eliminated".
+ * **E3 (ii) fails (state destroyed):** FM−C differences are not attributed to site removal alone.
+-* **[v0.2] G-SITE fails:** C is not instrument-like in the DGP truth at K = 1, P = 0. P2-SITE and P2-ORACLE become P3,
+-  and no amplification claim is made.
++* **G-SITE fails:** C is not instrument-like in the constructed design at K = 1, P = 0. P2-SITE and P2-ORACLE become
++  P3, and no amplification claim is made.
+ * **E1 and E3 pass but P1b-FM and P2-FM are INCONCLUSIVE:** a negative result, "encoded site information did not
+   change causal behaviour here".
+-* **[v0.2] Native arm differs from standardized:** attributed to acquisition shortcuts (resolution, borders, overlays
++* **Native arm differs from standardized:** attributed to acquisition shortcuts (resolution, borders, overlays
+   including on-screen time, compression, motion blur), not to image content. The raw frame rate is removed by the grid.
+-* **[v0.2] REF arm:** a paper-faithful reference. Its comparisons with FM arms are not a fair model comparison, and it
+-  may retain frame-rate-derived information.
++* **[v0.4] REF arm:** the paper-linked Cosmos reference (§4.2). Its comparisons with FM arms are not a fair model
++  comparison, it is not a pixel-level replication of K4, and it may retain frame-rate-derived information.
++* **[v0.4] FULL arm:** an exchangeability oracle / implementation sanity reference. Its finite-sample bias is reported,
++  not assumed zero.
++* **[v0.4] All claims** describe a deliberately constructed orthogonal benchmark (§1, §7.2).
+ 
+ ## 14. Execution order
+ 
+ 1. Commit this protocol alone (freeze) and record the hash.
+ 2. Code lock:
+-   * code for preprocessing, extraction, PCA / LEACE, the DGP, the estimator, the probes and the seeds;
++   * code for preprocessing, extraction, PCA / LEACE, the DGP, the SDR estimator, the probes and the seeds;
+    * a dry run on fully synthetic placeholder features (no DS203 frames);
+-   * **[v0.2]** G-SITE (§5.4) computed from the design.
+-   * Commit.
+-3. Apply the §4.1 selection rules and record the selected models.
++   * **[v0.4]** the estimator gate (§9) and the compute-budget projection (§10.4). STOP if either fails;
++   * G-SITE (§5.4) computed from the design;
++   * commit.
++3. Apply the §4.1 ranking to the §4.1.5 eligible lists and record the selected checkpoints.
+ 4. Extraction:
+-   * 4a. **[v0.2]** run the mask check (§3.1 step 3) and record r;
++   * 4a. run the mask check (§3.1 step 3) and record r;
+    * 4b. extract representations;
+    * commit manifests and hashes.
+-5. Run E1–E3, commit, and apply §13 before any causal run.
+-6. Run the causal grid and commit.
++5. **[v0.4]** Run E1–E3 on the 278-case and 158-case sets, commit, and apply §13 before any causal run.
++6. Run the causal grid (and §10.3) and commit.
+ 7. Report.
+ 
+ ## 15. Not authorized
+@@ -457,22 +623,32 @@
+ * Any change to §§2–13 after freeze, except by a committed amendment stating its reason.
+ * Re-running extraction or the grid with different settings after seeing results.
+ * Adding arms, models or cells after step 5.
++* **[v0.4]** Using any 158-case E1 / E3 result for model selection.
+ 
+ ## 16. Limitations (stated in advance)
+ 
+ * One procedure type; one content variable with a single switch per case.
+ * Synthetic actions with no feedback into the video; a linear DGP.
+ * The reference model's training data are undisclosed.
+-* Centre 2 shares a hospital with DSAD (models trained on DSAD are excluded from the primary).
+-* **[v0.2] Eligible set:**
++* Centre 2 shares a hospital with DSAD (models trained on DSAD are ineligible).
++* **[v0.4] Constructed design:** site–state orthogonality is constructed (§7.2), not natural.
++* **Eligible set:**
+   * it holds 158 of 278 cases;
+   * early-switch cases are excluded, which under-represents centre 5 (52 of 117);
+   * state variation is local to the switch (window starts within ±75 s of it);
+-  * post-window S is constant;
++  * **[v0.4]** S is 1 for every case from relative step 15 onward, so post-window S varies across cases only when
++    K < 15;
+   * centre 2 has only 13 single-file eligible cases.
++* **[v0.4] Model pool:**
++  * all eligible primary models are frame-level, and all eligible secondary models are clip-level (§4.1.5);
++  * eligibility under the strict reading of §4.1.1 would leave no model in either arm.
+ 
+ ## 17. Investigator actions before freeze / before step 4
+ 
+-* **[v0.2] Before freeze:** settle decision points D-1 to D-5 (response, §4).
++* **[v0.4] Settled:** D-1, D-3, D-4, D-5 (this draft), and D-2 (replaced by §4.1).
++* **[v0.4] Open before freeze:**
++  * **D-6**, the reading of §4.1.1 for fixed general-domain benchmarks: content reading (adopted in this draft) or
++    strict reading (no eligible model);
++  * confirmation or removal of the two added tie-breaks in §4.1.4.
+ * **Before step 4:** accept the NVIDIA Open Model License for the Cosmos tokenizer weights on Hugging Face (only the
+   investigator may accept terms).

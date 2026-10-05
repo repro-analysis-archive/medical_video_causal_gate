@@ -1,0 +1,23 @@
+--- SS_PROTOCOL_DS203_DRAFT_v0.4.md (before loss-network clause)
++++ SS_PROTOCOL_DS203_DRAFT_v0.4.md (final text)
+@@ -186,6 +186,11 @@
+ **[v0.4-final] Two-level overlap rule** (replaces the D-6 text). It is applied to every training source of the
+ released weights and of their initialisation or base weights.
+ 
++**[v0.4-final3]** "Frozen auxiliary networks used only inside a training loss (e.g., perceptual-loss or discriminator
++feature extractors) are not training sources of the released weights and are not assessed under Rules A–C. They shape
++a similarity measure; they do not supply training samples. Any network whose weights initialize, or are distilled into,
++the released model is a training source and is assessed."
++
+ **A. Direct DS203 / DS203-centre overlap.** For each training source:
+ * **YES:** DS203, a constituent DS203 dataset, or a known same-hospital clinical source (e.g., DSAD, University
+   Hospital Carl Gustav Carus Dresden) is documented;
+@@ -894,3 +899,8 @@
+     note. §4.1.5, §0 and the header hashes were updated.
+   * Editing correction: the §0 sentence "The eligible lists are therefore known…", which a v0.4-final2 edit had
+     attached to the per-W offsets bullet, was returned to the eligibility bullet.
++  * Loss-network clause added to §4.1.1. Auxiliary networks of every eligible model were checked against level-1–3
++    sources (14 / 14 quotes verified). They are either loss-only (frozen LPIPS, or discriminators and LARP's
++    training-time AR prior trained jointly on the same data), or EMA copies of the model itself (DINO teacher, MoCo
++    momentum encoder), whose lineage is the already-assessed initialization. None initializes or is distilled into
++    the released model from an external source. No eligibility change; eligibility facts in force remain d3563e7.

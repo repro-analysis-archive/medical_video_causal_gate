@@ -1,0 +1,419 @@
+--- SS_PROTOCOL_DS203_DRAFT_v0.4.md (before final pre-freeze edits)
++++ SS_PROTOCOL_DS203_DRAFT_v0.4.md (after final pre-freeze edits)
+@@ -6,13 +6,16 @@
+   * Amendment 2 (ebc097d);
+   * Decisions 002 (cdbbc6e), 003, 004 (314cd94) and 005 (3660721).
+ * **Pre-protocol facts:** 146f69b, e4ea0d8, 052590c, dba9c06, 39d6eeb, cb07e93, 2012acd, **dbd5984** (window design,
+-  metadata only), and the v0.4 eligibility facts (`data_audit/lead/ss_eligibility_v04.py` →
+-  `out/ss_eligibility_v04.json`; not committed).
++  metadata only), and **6245f25** (v0.4 eligibility facts: `data_audit/lead/ss_eligibility_v04.py`,
++  `out/ss_eligibility_v04.json` (sha256 992842f6d1941933…), `fm_sources/eligibility_v04/`; committed before, and
++  separately from, any protocol commit).
+ * **Revision:**
+   * v0.4 consolidates the investigator decisions D-1 to D-5 and answers the final audit of v0.2 (HOLD — DESIGN CORE
+     NOW SOUND; RESOLVE POST-WINDOW S / P1b CONSISTENCY, D-2 MODEL SELECTION, AND CAUSAL-SET E1/E3 BEFORE FREEZE).
+   * There is no v0.3 draft; v0.4 is built on v0.2.
+   * Text changed in v0.4 is marked **[v0.4]**; **[v0.2]** marks earlier changes.
++  * **[v0.4-final]** marks the final pre-freeze edits (two-level overlap rule, theory-motivated labels, claim wording,
++    GPU feasibility test, extraction compute fallback, tie-breaks, estimator commit). Version history: §18.
+ 
+ ## 0. Status and disclosure
+ 
+@@ -26,8 +29,11 @@
+ * **[v0.2]** Window-design facts (dbd5984) from case metadata only: centre, annotated timestamp and duration (§7.2).
+ * **[v0.4]** The class definitions of §4.1.3 were fixed with knowledge of the candidate tables. Their purpose is to keep
+   the three arms distinct in kind, not to target a model.
+-* **[v0.4]** The eligibility facts of §4.1.5 were re-determined before freeze from level-1–3 sources. The eligible lists
+-  are therefore known. The ranking has not been applied, and no model has been selected.
++* **[v0.4]** The eligibility facts of §4.1.5 were re-determined before freeze from level-1–3 sources (commit
++  **6245f25**). The eligible lists are therefore known. The ranking has not been applied, and no model has been
++  selected.
++* **[v0.4-final]** The two-level overlap rule of §4.1.1 was fixed after it was known that a strict reading would make
++  every candidate ineligible (§4.1.1, disclosure).
+ * **Written before** any DS203 frame is decoded for analysis, any representation is extracted, any synthetic action or
+   outcome is generated, or any causal estimate is computed.
+ * **Freeze:** the protocol becomes frozen when committed alone. Nothing in §14 from step 2 onward runs before that
+@@ -51,8 +57,15 @@
+   not described as doing so.
+ * It does not estimate any causal effect in DS203, and it does not establish how real clinical actions affect real
+   outcomes.
+-* **[v0.2]** The directional claims (§12) concern whether representation-based adjustment reproduces the direction of
+-  the role switch shown by an exactly known oracle covariate and by the theory maps.
++* **[v0.4-final]** The directional claims (§12) are tests of theory-motivated prespecified hypotheses. They are stated
++  as "consistent / inconsistent with the theory-motivated direction", not as derived from the theory maps.
++* **[v0.4-final] Claim wording for the representations.** Collectively, the arms use **"video-derived
++  representations"**:
++  * primary: "domain-specific surgical/endoscopic visual representation derived from video frames";
++  * secondary: "generic temporally contextualized video representation";
++  * reference: "paper-linked reconstructive/generative video representation".
++  * The primary arm is not described as a temporal video foundation model unless the selected model is itself
++    temporally contextualized (§4.1.2). Every currently eligible primary model is frame-level (§4.1.5).
+ 
+ ## 2. Data
+ 
+@@ -154,16 +167,38 @@
+   is ineligible.**
+ * Levels 4–5 provide context only.
+ 
+-**DS203 overlap NO** requires every training source of the released weights and of their initialisation or base
+-weights to be one of:
+-* (a) a clinical set with a level-1–3 recording site, or geography, that is not a DS203 institution;
+-* (b) **[v0.4, decision point D-6] content reading:** a fixed general-domain benchmark whose level-1 definition consists
+-  of non-surgical classes: ImageNet object categories; Kinetics / UCF-101 human actions; SSv2 crowd-sourced caption
+-  templates.
+-  * Under the alternative **strict reading** (every web-derived source is UNK), no candidate in either arm is eligible
+-    (§4.1.5).
++**[v0.4-final] Two-level overlap rule** (replaces the D-6 text). It is applied to every training source of the
++released weights and of their initialisation or base weights.
+ 
+-Web-scale sources, undocumented base weights and clinical sets without a stated recording site are UNK.
++**A. Direct DS203 / DS203-centre overlap.** For each training source:
++* **YES:** DS203, a constituent DS203 dataset, or a known same-hospital clinical source (e.g., DSAD, University
++  Hospital Carl Gustav Carus Dresden) is documented;
++* **NO:** a level-1 to level-3 source establishes a closed or sufficiently defined corpus whose documented scope
++  excludes DS203 and the known DS203 clinical sources. Examples:
++  * a clinical set with a named non-DS203 recording site, or a stated non-German geography;
++  * a versioned, non-surgical benchmark with fixed classes, finalized before DS203's release (2026-04-29);
++* **UNK:** the source is open-ended or web-scale (YouTube, web lecture platforms, stock / social / Internet video), its
++  base weights' data are undocumented, or its clinical / site provenance cannot be bounded (e.g., a clinical set with
++  no stated recording site).
++
++A candidate passes only if every source is NO. YES and UNK are ineligible.
++
++**B. Generic web origin.**
++* For a fixed, closed benchmark (e.g., ImageNet, Kinetics), generic web provenance alone does not change NO to UNK.
++* It is disclosed separately as a limitation (§16): "incidental web-origin exposure cannot be excluded at the level of
++  every source image."
++
++**C. Same-hospital rule.**
++* It applies to clinical / endoscopic pretraining sources, where acquisition-site provenance is meaningful.
++* A generic object or action benchmark is not disqualified because individual web items cannot be traced.
++
++**Justification and disclosure.**
++* **Consistency:** the rule is consistent with 052590c, where NO was assigned to closed lists of named datasets,
++  including ImageNet-initialized models, before the present outcome was known.
++* **Purpose:** to bound direct DS203 / DS203-centre overlap, which is the contamination relevant to this study, as
++  distinct from untraceable generic web origin.
++* **A strict reading** (every web-derived source UNK) would leave no eligible model in either arm (§4.1.5).
++* "The rule was fixed after it was known that a strict reading would make every candidate ineligible."
+ 
+ #### 4.1.2 Clip-level definition
+ 
+@@ -174,8 +209,10 @@
+ #### 4.1.3 Mutually exclusive classes
+ 
+ * **Primary:** medical / endoscopic **representation-learning encoders** (self-supervised or discriminative).
+-  Generative models are excluded.
+-* **Secondary:** **generic** (non-medical) reconstructive or generative video models.
++  Generative models are excluded. **[v0.4-final]** Claim wording: "domain-specific surgical/endoscopic visual
++  representation derived from video frames" (§1).
++* **Secondary:** **generic** (non-medical) reconstructive or generative video models. **[v0.4-final]** Claim wording:
++  "generic temporally contextualized video representation" (§1).
+ * **Neither:** surgical-domain generative models (e.g., Cosmos-H, SG2VID, MedSora, KVLR). They are ineligible for
+   both arms.
+ * **Disclosure:** the class definitions were fixed with knowledge of the candidate tables, to keep the three arms
+@@ -185,30 +222,45 @@
+ 
+ **Primary**, among 052590c-eligible candidates of the primary class:
+ 1. laparoscopic video in the documented pretraining data;
+-2. DS203 overlap NO (§4.1.1);
+-3. no same-hospital overlap with any DS203 centre (this excludes models trained on DSAD);
+-4. fits 24 GB at bf16, from a level-1–3 parameter count (2 bytes per parameter < 14.4 GB) or the official checkpoint
+-   file size (< 14.4 GB);
+-5. compute documented: FLOPs per input, a parameter count, or a standard named architecture whose size is given in its
+-   level-1 paper.
++2. **[v0.4-final]** every training source NO under rule A (§4.1.1). Rule C applies to clinical / endoscopic sources;
++   this excludes models trained on DSAD;
++3. compute documented: FLOPs per input, a parameter count, or a standard named architecture whose size is given in its
++   level-1 paper;
++4. **[v0.4-final] GPU memory feasibility** (rule frozen now, test run after freeze, §14 step 3):
++   * **prior screen:** a level-1–3 parameter count (2 bytes per parameter < 14.4 GB) or the official checkpoint file
++     size (< 14.4 GB);
++   * **final determination: synthetic-input feasibility test.**
++     * Conditions: inference only; batch size 1; bf16 where supported; the exact protocol input size and clip length
++       (§4.2); the software stack intended for extraction; no DS203 frame.
++     * **Feasible if peak reserved GPU memory ≤ 20.0 GB** on the 24 GB RTX 4500 Ada (4 GB headroom).
++     * A candidate failing the test is infeasible, and the next-ranked candidate is taken;
++5. **[v0.4-final] extraction compute feasibility** (§10.4): a top-ranked candidate whose projected extraction time
++   exceeds 7 days is infeasible, and the next-ranked candidate is taken.
+ 
+-**Primary rank:**
++**Primary rank (scientific criteria):**
+ 1. clip-level before frame-level;
+ 2. most recent release (first public availability of the checkpoint, per a level-1–3 source);
+-3. lowest compute;
+-4. **[v0.4, added; not in the task list]** the checkpoint the authors designate as default or recommended in a
+-   level-1–3 source;
+-5. **[v0.4, added; not in the task list]** lexicographic order of the checkpoint file name.
++3. lowest compute.
+ 
+-The top-ranked checkpoint is selected.
++**[v0.4-final] Tie-breaks** (replace the drafted ones). After the scientific criteria, in order:
++1. the authors' explicitly documented default or recommended checkpoint, supported by a level-1 source. If none is
++   stated, none is inferred;
++2. lower protocol-relevant compute;
++3. lower measured synthetic-input peak memory (rule 4 test);
++4. lexical order of the model / checkpoint identifier.
++
++No DS203 representation quality, real-frame throughput or causal result may enter a tie-break.
++
++The top-ranked feasible checkpoint (rules 4–5) is selected.
+ 
+ **Secondary**, among 052590c-eligible candidates of the secondary class:
+-1. DS203 overlap NO;
+-2. fits 24 GB at bf16 (as in primary rule 4);
+-3. compute documented (as in primary rule 5).
++1. every training source NO under rule A (§4.1.1);
++2. compute documented (as in primary rule 3);
++3. GPU memory feasibility (as in primary rule 4);
++4. extraction compute feasibility (as in primary rule 5).
+ 
+ **Secondary rank:** video VAE / tokenizer before masked autoencoder; then most recent release; then lowest compute;
+-then the two tie-breaks above.
++then the four tie-breaks above.
+ 
+ **Reference (Decision 005):** nvidia/Cosmos-1.0-Tokenizer-CV8x8x8, the default of the authors' gpi_pack (§4.2). It is
+ not subject to these rules.
+@@ -217,26 +269,33 @@
+ 
+ #### 4.1.5 [v0.4] Pre-freeze eligibility facts (no ranking applied, no selection)
+ 
+-* **Source:** `out/ss_eligibility_v04.json`. 140 / 140 quotes verified; all at levels 1–3.
+-* **Eligible primary (content reading)**, all frame-level:
++* **[v0.4-final] Source:** commit **6245f25**, `out/ss_eligibility_v04.json`, under the two-level rule. 150 / 150
++  quotes verified; all at levels 1–3. Benchmark finalization dates are quoted against DS203's release (OPARA
++  `dc.date.issued` 2026-04-29).
++* The memory and compute feasibility rules (rules 4–5) are applied after freeze. The size facts below are the prior
++  screen only.
++* **Eligible primary (two-level rule)**, all frame-level:
+   * SurgeNetCholec (CAFormer-S18);
+   * SurgeNetRARP (CAFormer-S18);
+   * EndoSSL laparoscopy ViT-B;
+   * EndoSSL laparoscopy ViT-L;
+   * SelfSupSurg ResNet-50 (MoCo v2 / SimCLR / SwAV / DINO checkpoints).
+-* **Eligible secondary (content reading)**, all clip-level:
++* **Eligible secondary (two-level rule)**, all clip-level:
+   * VideoMAE (Kinetics-400 / SSv2 / UCF-101 checkpoints);
+   * OmniTokenizer (ImageNet + K600);
+   * WF-VAE-L 16ch;
+   * LARP-L-Long tokenizer;
+   * LeanVAE.
+-* **Strict reading:** none in either arm.
++* **Strict-reading counterfactual:** none in either arm.
++* **Tie-break order** (both arms, after the scientific criteria): authors' level-1 default → lower compute → lower
++  synthetic-input peak memory → lexical identifier.
+ * **Ineligible:** every other candidate.
+-  * Primary class, DS203 overlap UNK (web-scale source or clinical set without a stated site): Endo-FM, EndoViT,
+-    SurgeNetXL, SurgeNet / SurgeNetPublic, SurgVLP family, EndoMamba, LemonFM, SurgLIME, PL-Stitch, Basel V-JEPA,
+-    EndoSSL colonoscopy.
++  * Primary class, rule A **YES** (DSAD, a same-hospital clinical source): EndoViT, SurgeNetXL, SurgeNet /
++    SurgeNetPublic.
++  * Primary class, rule A **UNK** (web-scale source or clinical set without a stated site): Endo-FM, SurgVLP family,
++    EndoMamba, LemonFM, SurgLIME, PL-Stitch, Basel V-JEPA, EndoSSL colonoscopy.
+   * SurgeNetRAMIE: laparoscopic video not affirmatively documented.
+-  * EndoSSL ViT-S: size not in a level-1–3 source.
++  * EndoSSL ViT-S: size and compute not in a level-1–3 source.
+   * Neither class: Cosmos-H ×4, MedSora, SG2VID, KVLR.
+   * Secondary, web-scale: Open-Sora VAE, VideoMAE V2, Open-Sora-Plan VAE, CV-VAE, Reducio-VAE.
+   * Open-MAGVIT2: compute not documented.
+@@ -257,6 +316,7 @@
+   * It is **not a pixel-level replication** of K4: K4's (16, 40, 60) shape implies a non-square, approximately
+     320×480 input.
+   * It can retain frame-rate-derived information, because it uses contiguous native frames rather than the 2-fps grid.
++  * **[v0.4-final]** Claim wording: "paper-linked reconstructive/generative video representation" (§1).
+ * **[v0.4] PCA:** each representation R_t is reduced to 64 principal components.
+   * PCA is fit on all steps of the training-fold cases of the 278-case set and applied to the held-out fold.
+ 
+@@ -440,8 +500,10 @@
+   * The DR-FLEX / V3-C05 code path is **not used**: its commissioning scope and learners do not transfer without
+     retuning.
+   * The implementation is fixed at code lock (code only, no free numeric settings).
++  * **[v0.4-final]** The exact code commit of the in-house SDR implementation is recorded at code lock (§14 step 2).
++    It is referenced in the run record before the causal grid runs.
+ * **[v0.4] Estimator gate (code lock):**
+-  * Data: synthetic placeholder features with known truth.
++  * Data: synthetic placeholder features with known truth only (no DS203 frame, no representation).
+   * Test subset: K ∈ {1, 5, 15}, P ∈ {0, 5}, W = 5, α = 0.5, γ = 1, M = 200.
+   * Pass: the FULL arm reaches 95 % coverage within [0.90, 0.99] and |bias| below 5 % of the true contrast in every
+     test cell.
+@@ -490,6 +552,15 @@
+ * Family cells (P1a, P1b, P2) are never reduced.
+ * **If still over budget: STOP for a human decision before extraction.**
+ 
++**[v0.4-final] Extraction compute fallback** (§4.1.4 rule 5).
++* **Procedure (frozen):** for each arm's top-ranked eligible model, total extraction wall time for all DS203 steps is
++  projected from:
++  * a synthetic-input throughput benchmark (same input size, clip length and software stack as extraction), combined
++    with
++  * the already measured disk and decode throughput (2012acd).
++* **If the projection exceeds 7 days**, the model is computationally infeasible and the next-ranked candidate is taken.
++* Representation quality, decoding of real frames and causal results never enter this decision.
++
+ ## 11. Metrics
+ 
+ **[v0.2] Primary**, per arm and cell:
+@@ -513,6 +584,19 @@
+ 
+ ### 12.1 Mapping to the theory
+ 
++**[v0.4-final] Status of all families: theory-motivated prespecified hypotheses.**
++* Every family (P1a, P1b-SITE, P1b-FM, P2-SITE, P2-FM, P2-ORACLE) is a **theory-motivated prespecified hypothesis**.
++  None is "theory-derived".
++* **Reason:** the theory maps establish the direction under their own DGPs. The v0.4 DGP differs:
++  * a four-level discrete site with permuted loadings;
++  * a binary switching state;
++  * a different post-window state process;
++  * finite-sample nuisance estimation.
++* No transport proof is given.
++* Claims take the form "**consistent / inconsistent with the theory-motivated direction**". The family verdict rules
++  (§12.3) are unchanged.
++* The earlier labels and the reason for the change are kept in §18.
++
+ **Mapping.**
+ * The maps 47a49ea and 6165ece have Z, a trajectory-constant factor acting on A, and U, an unmeasured confounder.
+ * Here Z corresponds to C. The unmeasured confounding of an arm is U **plus whatever part of S the arm does not
+@@ -526,20 +610,22 @@
+ In addition, at W = 0 and P ≥ 1, adjusting Z reduces |bias| at every α in base, E1, E3 and E4. Pre-window history (E2)
+ breaks this in some rows: W = 5 at P = 5, α = 1; W = 30 at P = 5, α ≥ 0.5 and at P = 30, α = 1.
+ 
+-**[v0.4] Why P1a stays theory-derived.**
++**[v0.4-final] P1a: what the correspondence does and does not give.**
+ * In ORACLE and ORACLE−C, S_t is conditioned on at each window step. S_t is a non-collider on every path from A_t
+-  through the switch timing to post-window S, so conditioning on it blocks the path through post-window S.
+-* The remaining unmeasured confounder is the constant U. At α = 0, which is P1a's domain, none remains.
+-* At α > 0, U remains, including U-paths opened by conditioning on past actions.
+-* This is the setting of statement (ii).
++  through the switch timing to post-window S, so conditioning on it blocks that path.
++* At α = 0, which is P1a's domain, no unmeasured confounder remains. At α > 0, U remains, including U-paths opened by
++  conditioning on past actions.
++* This is an identification / measurement correspondence with statement (ii). It does not by itself establish the
++  directional bias inequality under the v0.4 DGP, so P1a is theory-motivated.
+ 
+-**[v0.4] Why P1b is not theory-derived.**
++**[v0.4] P1b: an additional difference from the maps.**
+ * The theory maps contain constant or AR(1) Gaussian unmeasured confounding.
+ * In NV and SITE (and partly in the FM arms), the unmeasured confounder is S: a **binary, monotone, time-varying**
+   state that switches within or after the window for K < 15.
+ * The maps do not cover such a confounder. v0.2's P1b used the maps with S folded into an effective α, which assumes a
+   confounder that is constant over the post-window steps; that does not hold here.
+-* P1b is therefore a **prespecified empirical hypothesis (theory-motivated)**. Its verdict rules are unchanged.
++* P1b is therefore further from the maps than the other families. Like them, it is a theory-motivated prespecified
++  hypothesis, and its verdict rules are unchanged.
+ 
+ ### 12.2 Families
+ 
+@@ -547,12 +633,12 @@
+ 
+ | family | status | cells | prediction | conditions |
+ |---|---|---|---|---|
+-| P1a | theory-derived | α = 0, all cells except K = 1, P = 0 (66 cells) | ORACLE \|bias\| < ORACLE−C | — |
+-| P1b-SITE | **[v0.4] prespecified empirical hypothesis (theory-motivated)** | W = 0, P ∈ {5, 30}, all K, α, γ (48 cells) | SITE < NV | — |
+-| P1b-FM | **[v0.4] prespecified empirical hypothesis (theory-motivated)** | the same 48 cells | FM-P < FM-P−C | E1 and E3 pass (both sets, §13) |
+-| P2-SITE | theory-derived (statement i) | K = 1, P = 0, all W, α, γ (18 cells) | SITE ≥ NV | G-SITE passes |
+-| P2-FM | theory-derived (statement i) | K = 1, P = 0, α > 0 (12 cells) | FM-P ≥ FM-P−C | G-SITE passes; E1 and E3 pass (both sets, §13) |
+-| P2-ORACLE | theory-derived (statement i) | K = 1, P = 0, α > 0 (12 cells) | ORACLE ≥ ORACLE−C | G-SITE passes |
++| P1a | **[v0.4-final] theory-motivated prespecified hypothesis** (from statement ii) | α = 0, all cells except K = 1, P = 0 (66 cells) | ORACLE \|bias\| < ORACLE−C | — |
++| P1b-SITE | **[v0.4-final] theory-motivated prespecified hypothesis** | W = 0, P ∈ {5, 30}, all K, α, γ (48 cells) | SITE < NV | — |
++| P1b-FM | **[v0.4-final] theory-motivated prespecified hypothesis** | the same 48 cells | FM-P < FM-P−C | E1 and E3 pass (both sets, §13) |
++| P2-SITE | **[v0.4-final] theory-motivated prespecified hypothesis** (from statement i) | K = 1, P = 0, all W, α, γ (18 cells) | SITE ≥ NV | G-SITE passes |
++| P2-FM | **[v0.4-final] theory-motivated prespecified hypothesis** (from statement i) | K = 1, P = 0, α > 0 (12 cells) | FM-P ≥ FM-P−C | G-SITE passes; E1 and E3 pass (both sets, §13) |
++| P2-ORACLE | **[v0.4-final] theory-motivated prespecified hypothesis** (from statement i) | K = 1, P = 0, α > 0 (12 cells) | ORACLE ≥ ORACLE−C | G-SITE passes |
+ | P3 | — | all other cells and comparisons | no directional prediction; reported against the maps | — |
+ 
+ ### 12.3 Aggregation rule (fixed)
+@@ -572,7 +658,8 @@
+   * **INCONCLUSIVE** otherwise.
+ * **Use in claims:**
+   * Headline directional claims come only from family verdicts. Single cells are descriptive. All cells are reported.
+-  * Verdicts on P1b families are reported as tests of prespecified empirical hypotheses.
++  * **[v0.4-final]** A SUPPORTED verdict is reported as "consistent with the theory-motivated direction". A
++    CONTRADICTED verdict is reported as "inconsistent with the theory-motivated direction".
+ 
+ ## 13. Falsification rules and claim ceilings
+ 
+@@ -592,6 +679,10 @@
+   P3, and no amplification claim is made.
+ * **E1 and E3 pass but P1b-FM and P2-FM are INCONCLUSIVE:** a negative result, "encoded site information did not
+   change causal behaviour here".
++* **[v0.4-final] Family verdicts:** stated as consistent / inconsistent with the theory-motivated direction (§12). No
++  family result is stated as a confirmation of the theory maps.
++* **[v0.4-final] Representation wording:** "video-derived representations" with the arm-specific wording of §1. The
++  primary arm is not called a temporal video foundation model unless the selected model is temporally contextualized.
+ * **Native arm differs from standardized:** attributed to acquisition shortcuts (resolution, borders, overlays
+   including on-screen time, compression, motion blur), not to image content. The raw frame rate is removed by the grid.
+ * **[v0.4] REF arm:** the paper-linked Cosmos reference (§4.2). Its comparisons with FM arms are not a fair model
+@@ -605,17 +696,22 @@
+ 1. Commit this protocol alone (freeze) and record the hash.
+ 2. Code lock:
+    * code for preprocessing, extraction, PCA / LEACE, the DGP, the SDR estimator, the probes and the seeds;
++   * **[v0.4-final]** record the exact code commit of the in-house SDR implementation;
+    * a dry run on fully synthetic placeholder features (no DS203 frames);
+    * **[v0.4]** the estimator gate (§9) and the compute-budget projection (§10.4). STOP if either fails;
+    * G-SITE (§5.4) computed from the design;
+    * commit.
+-3. Apply the §4.1 ranking to the §4.1.5 eligible lists and record the selected checkpoints.
++3. Apply the §4.1 ranking and tie-breaks to the §4.1.5 eligible lists.
++   * **[v0.4-final]** In rank order, run the synthetic-input GPU memory feasibility test (§4.1.4 rule 4) and the
++     extraction compute projection (§10.4), with no DS203 frame.
++   * Take the top-ranked feasible checkpoint per arm, and record the selected checkpoints and the test results.
+ 4. Extraction:
+    * 4a. run the mask check (§3.1 step 3) and record r;
+    * 4b. extract representations;
+    * commit manifests and hashes.
+ 5. **[v0.4]** Run E1–E3 on the 278-case and 158-case sets, commit, and apply §13 before any causal run.
+-6. Run the causal grid (and §10.3) and commit.
++6. **[v0.4-final]** Confirm that the SDR commit recorded at step 2 is the one in use, then run the causal grid (and
++   §10.3) and commit.
+ 7. Report.
+ 
+ ## 15. Not authorized
+@@ -641,14 +737,43 @@
+   * centre 2 has only 13 single-file eligible cases.
+ * **[v0.4] Model pool:**
+   * all eligible primary models are frame-level, and all eligible secondary models are clip-level (§4.1.5);
+-  * eligibility under the strict reading of §4.1.1 would leave no model in either arm.
++  * **[v0.4-final]** the primary arm is therefore a "domain-specific surgical/endoscopic visual representation derived
++    from video frames", not a temporal video model (§1);
++  * a strict reading of the overlap rule would leave no model in either arm. The two-level rule (§4.1.1) was fixed
++    with that knowledge.
++* **[v0.4-final] Generic web origin (rule B):** for fixed benchmarks used in pretraining or initialisation (ImageNet,
++  Kinetics, UCF-101, SSv2), "incidental web-origin exposure cannot be excluded at the level of every source image."
+ 
+ ## 17. Investigator actions before freeze / before step 4
+ 
+-* **[v0.4] Settled:** D-1, D-3, D-4, D-5 (this draft), and D-2 (replaced by §4.1).
+-* **[v0.4] Open before freeze:**
+-  * **D-6**, the reading of §4.1.1 for fixed general-domain benchmarks: content reading (adopted in this draft) or
+-    strict reading (no eligible model);
+-  * confirmation or removal of the two added tie-breaks in §4.1.4.
++* **[v0.4] Settled:** D-1, D-3, D-4, D-5 and D-2 (replaced by §4.1).
++* **[v0.4-final] Settled:** D-6 (two-level overlap rule, §4.1.1) and the tie-breaks (§4.1.4).
++* **[v0.4-final] Before freeze:** the final freeze GO / NO-GO follows direct review of this text.
+ * **Before step 4:** accept the NVIDIA Open Model License for the Cosmos tokenizer weights on Hugging Face (only the
+   investigator may accept terms).
++
++## 18. [v0.4-final] Version history
++
++* **v0.1:** switch-centred windows. Audit: HOLD, because S was identical across cases within each K cell.
++* **v0.2:**
++  * switch-relative site-stratified offsets (dbd5984), ORACLE−C arm, E2 / E3 / G-SITE prespecified;
++  * predictions: P1a "theory analogue", P1b and P2 tied directly to the maps.
++  * Final audit: HOLD (post-window S statement false; D-2; causal-set E1/E3).
++* **v0.4 (consolidated draft):**
++  * D-1 to D-5 applied;
++  * P1b relabelled "prespecified empirical hypothesis (theory-motivated)" because the maps do not cover a binary,
++    time-varying unmeasured state;
++  * P1a and P2 labelled "theory-derived";
++  * D-6 left open (content vs strict reading);
++  * two drafted tie-breaks.
++* **v0.4-final (this text):**
++  * **all families relabelled "theory-motivated prespecified hypotheses"**. Reason: the theory maps establish direction
++    under their own DGPs; the v0.4 DGP differs (four-level discrete site with permuted loadings, binary switching
++    state, a different post-window state process, finite-sample nuisance estimation), and no transport proof is
++    given;
++  * D-6 replaced by the two-level overlap rule;
++  * arm claim wording added;
++  * GPU memory feasibility test (≤ 20.0 GB peak reserved) and extraction compute fallback (7 days);
++  * tie-breaks replaced by the four-step order;
++  * the SDR code commit recorded at code lock;
++  * eligibility facts committed separately (6245f25).

@@ -1,0 +1,381 @@
+--- SS_PROTOCOL_DS203_DRAFT_v0.4.md (last version reviewed directly by the investigator: v0.4 before the freeze-repair task)
++++ SS_PROTOCOL_DS203_DRAFT_v0.4.md (final text)
+@@ -6,9 +6,12 @@
+   * Amendment 2 (ebc097d);
+   * Decisions 002 (cdbbc6e), 003, 004 (314cd94) and 005 (3660721).
+ * **Pre-protocol facts:** 146f69b, e4ea0d8, 052590c, dba9c06, 39d6eeb, cb07e93, 2012acd, **dbd5984** (window design,
+-  metadata only), and **6245f25** (v0.4 eligibility facts: `data_audit/lead/ss_eligibility_v04.py`,
+-  `out/ss_eligibility_v04.json` (sha256 992842f6d1941933…), `fm_sources/eligibility_v04/`; committed before, and
+-  separately from, any protocol commit).
++  metadata only), **[v0.4-final2] adf9160** (per-W sensitivity offsets, metadata only), and the v0.4 eligibility facts
++  (`data_audit/lead/ss_eligibility_v04.py`, `out/ss_eligibility_v04.json`, `fm_sources/eligibility_v04/`):
++  6245f25, superseded by e81ab5f (v0.4-final2 override), superseded by a437225 (content-boundedness Rule B), superseded
++  by **[v0.4-final3] ca04c5b + d3563e7** (initialization check; in force: **d3563e7**, json sha256 32e538dee89dd9ea…);
++  and **[v0.4-final3] b987010** (per-W G-SITE, metadata only).
++  All are committed before, and separately from, any protocol commit.
+ * **Revision:**
+   * v0.4 consolidates the investigator decisions D-1 to D-5 and answers the final audit of v0.2 (HOLD — DESIGN CORE
+     NOW SOUND; RESOLVE POST-WINDOW S / P1b CONSISTENCY, D-2 MODEL SELECTION, AND CAUSAL-SET E1/E3 BEFORE FREEZE).
+@@ -16,6 +19,10 @@
+   * Text changed in v0.4 is marked **[v0.4]**; **[v0.2]** marks earlier changes.
+   * **[v0.4-final]** marks the final pre-freeze edits (two-level overlap rule, theory-motivated labels, claim wording,
+     GPU feasibility test, extraction compute fallback, tie-breaks, estimator commit). Version history: §18.
++  * **[v0.4-final3]** marks the replacement of the Rule-B override by the content-boundedness rule, the recomputed
++    eligibility and the per-W G-SITE rule. Version history: §18.
++  * **[v0.4-final2]** marks the freeze repairs (per-W offsets, clip temporal sampling, Rule-B override,
++    site-associated wording, pretrained video-derived wording, E3 components). Version history: §18.
+ 
+ ## 0. Status and disclosure
+ 
+@@ -30,8 +37,12 @@
+ * **[v0.4]** The class definitions of §4.1.3 were fixed with knowledge of the candidate tables. Their purpose is to keep
+   the three arms distinct in kind, not to target a model.
+ * **[v0.4]** The eligibility facts of §4.1.5 were re-determined before freeze from level-1–3 sources (commit
+-  **6245f25**). The eligible lists are therefore known. The ranking has not been applied, and no model has been
+-  selected.
++  6245f25; re-checked under the v0.4-final2 override, e81ab5f; **[v0.4-final3]** recomputed under the
++  content-boundedness Rule B, a437225; initialization check, ca04c5b + d3563e7, in force **d3563e7**). **[v0.4-final3]**
++  The eligible lists are therefore known. The ranking has not been applied, and no model has been selected.
++* **[v0.4-final3]** The per-W G-SITE values were computed from case metadata only (commit **b987010**; §10.3).
++* **[v0.4-final2]** Offsets for the per-W sensitivity sets were computed from case metadata only (commit **adf9160**;
++  §7.2, §10.3).
+ * **[v0.4-final]** The two-level overlap rule of §4.1.1 was fixed after it was known that a strict reading would make
+   every candidate ineligible (§4.1.1, disclosure).
+ * **Written before** any DS203 frame is decoded for analysis, any representation is extracted, any synthetic action or
+@@ -41,17 +52,21 @@
+ 
+ ## 1. Purpose and claim scope
+ 
+-**Question.** When acquisition information encoded in video representations is included in, or linearly removed from,
+-the adjustment set of a sequential causal analysis, how do bias and interval validity change? The change is studied as
+-a function of:
++**Question.** **[v0.4-final2]** When site-associated information encoded in video-derived representations is included
++in, or linearly removed from, the adjustment set of a sequential causal analysis, how do bias and interval validity
++change? The change is studied as a function of:
+ * intervention duration;
+ * post-window actions;
+ * pre-window history;
+ * unmeasured confounding strength.
+ 
+ **Scope.**
+-* This is a **semi-synthetic causal benchmark**: real clinical video, real site heterogeneity, real foundation-model
+-  representations, and a known causal truth from synthesized actions and outcomes.
++* This is a **semi-synthetic causal benchmark**: real clinical video, real site heterogeneity, **[v0.4-final2]** real
++  pretrained video-derived representations, and a known causal truth from synthesized actions and outcomes. A specific
++  model is called a foundation model only where its own sources do so.
++* **[v0.4-final2] Site-associated information.** Real acquisition heterogeneity is one important source of
++  site-associated information. E1 and LEACE do not isolate acquisition information specifically: they measure and
++  linearly remove information that predicts site, whatever its origin (acquisition or other site-associated context).
+ * **[v0.4]** It is **a deliberately constructed orthogonal benchmark using real video and real acquisition
+   heterogeneity** (§7.2). It does not reproduce DS203's natural joint distribution of site, state and timing, and it is
+   not described as doing so.
+@@ -65,7 +80,8 @@
+   * secondary: "generic temporally contextualized video representation";
+   * reference: "paper-linked reconstructive/generative video representation".
+   * The primary arm is not described as a temporal video foundation model unless the selected model is itself
+-    temporally contextualized (§4.1.2). Every currently eligible primary model is frame-level (§4.1.5).
++    temporally contextualized (§4.1.2). **[v0.4-final3]** Every currently eligible primary model is frame-level
++    (§4.1.5).
+ 
+ ## 2. Data
+ 
+@@ -170,6 +186,11 @@
+ **[v0.4-final] Two-level overlap rule** (replaces the D-6 text). It is applied to every training source of the
+ released weights and of their initialisation or base weights.
+ 
++**[v0.4-final3]** "Frozen auxiliary networks used only inside a training loss (e.g., perceptual-loss or discriminator
++feature extractors) are not training sources of the released weights and are not assessed under Rules A–C. They shape
++a similarity measure; they do not supply training samples. Any network whose weights initialize, or are distilled into,
++the released model is a training source and is assessed."
++
+ **A. Direct DS203 / DS203-centre overlap.** For each training source:
+ * **YES:** DS203, a constituent DS203 dataset, or a known same-hospital clinical source (e.g., DSAD, University
+   Hospital Carl Gustav Carus Dresden) is documented;
+@@ -183,10 +204,22 @@
+ 
+ A candidate passes only if every source is NO. YES and UNK are ineligible.
+ 
+-**B. Generic web origin.**
+-* For a fixed, closed benchmark (e.g., ImageNet, Kinetics), generic web provenance alone does not change NO to UNK.
+-* It is disclosed separately as a limitation (§16): "incidental web-origin exposure cannot be excluded at the level of
+-  every source image."
++**[v0.4-final3] B. Rule B — bounded generic-web benchmark override.** (This replaces the v0.4-final2 override and its
++determinism sentence; see §18.)
++
++> Generic web provenance alone does not change NO to UNK only for a named, versioned, fixed benchmark whose level-1–3
++> documentation provides a sufficiently bounded content scope (for example, a fixed class/task ontology or equivalent
++> closed benchmark definition) that permits the relevant DS203 / clinical-overlap concern to be affirmatively
++> excluded.
++>
++> A fixed release remains UNK when it is an open-domain or broadly scraped web corpus whose clinical/content/site
++> provenance cannot be bounded from level-1–3 sources. Release date alone is not sufficient for NO.
++>
++> This override applies only to the generic-web-origin clause. It never overrides Rule A's clinical/site-provenance
++> clause.
++
++* For a source that passes this override, generic web origin is disclosed separately as a limitation (§16):
++  "incidental web-origin exposure cannot be excluded at the level of every source image."
+ 
+ **C. Same-hospital rule.**
+ * It applies to clinical / endoscopic pretraining sources, where acquisition-site provenance is meaningful.
+@@ -269,18 +302,22 @@
+ 
+ #### 4.1.5 [v0.4] Pre-freeze eligibility facts (no ranking applied, no selection)
+ 
+-* **[v0.4-final] Source:** commit **6245f25**, `out/ss_eligibility_v04.json`, under the two-level rule. 150 / 150
+-  quotes verified; all at levels 1–3. Benchmark finalization dates are quoted against DS203's release (OPARA
+-  `dc.date.issued` 2026-04-29).
++* **[v0.4-final3] Source:** commit **d3563e7** (initialization check ca04c5b plus a note correction; supersedes
++  a437225, e81ab5f and 6245f25), `out/ss_eligibility_v04.json`, under the two-level rule with the content-boundedness
++  Rule B. 203 / 203 quotes verified; all at levels 1–3.
++  * **[v0.4-final3] Initialization:** every eligible model's initialization is affirmatively stated in a level-1–3
++    source (`init_stated`, `init_quotes`). An unstated initialization is an undocumented base (Rule A UNK).
++  * For every source of every candidate the file records whether its level-1–3 documentation gives a bounded content
++    scope (`per_candidate_source_boundedness`).
++  * For each benchmark it records the ontology quote and a term check of its documented class / task list
++    (`ontology_term_check`).
+ * The memory and compute feasibility rules (rules 4–5) are applied after freeze. The size facts below are the prior
+   screen only.
+-* **Eligible primary (two-level rule)**, all frame-level:
++* **[v0.4-final3] Eligible primary**, all frame-level:
+   * SurgeNetCholec (CAFormer-S18);
+   * SurgeNetRARP (CAFormer-S18);
+-  * EndoSSL laparoscopy ViT-B;
+-  * EndoSSL laparoscopy ViT-L;
+   * SelfSupSurg ResNet-50 (MoCo v2 / SimCLR / SwAV / DINO checkpoints).
+-* **Eligible secondary (two-level rule)**, all clip-level:
++* **Eligible secondary**, all clip-level (training sources re-checked under the content-boundedness rule; unchanged):
+   * VideoMAE (Kinetics-400 / SSv2 / UCF-101 checkpoints);
+   * OmniTokenizer (ImageNet + K600);
+   * WF-VAE-L 16ch;
+@@ -292,12 +329,23 @@
+ * **Ineligible:** every other candidate.
+   * Primary class, rule A **YES** (DSAD, a same-hospital clinical source): EndoViT, SurgeNetXL, SurgeNet /
+     SurgeNetPublic.
+-  * Primary class, rule A **UNK** (web-scale source or clinical set without a stated site): Endo-FM, SurgVLP family,
+-    EndoMamba, LemonFM, SurgLIME, PL-Stitch, Basel V-JEPA, EndoSSL colonoscopy.
++  * **[v0.4-final2]** Primary class, rule A **UNK**:
++    * clinical sets without a stated site: Endo-FM, EndoMamba, EndoSSL colonoscopy;
++    * surgical web corpora with unbounded recording sites (clinical clause): SurgVLP family (SVL), LemonFM, SurgLIME,
++      PL-Stitch (LEMON);
++    * **[v0.4-final3]** a fixed release without a bounded content scope: Basel V-JEPA ViT-L. Its base data
++      (VideoMix2M) include HowTo100M, whose task ontology includes a Health category ("Health 172" tasks).
+   * SurgeNetRAMIE: laparoscopic video not affirmatively documented.
+-  * EndoSSL ViT-S: size and compute not in a level-1–3 source.
++  * **[v0.4-final3]** EndoSSL laparoscopy ViT-B / ViT-L / ViT-S: the initialization of the released checkpoints is not
++    stated in any level-1–3 source (paper, supplementary, README, released code), so it is an undocumented base
++    (Rule A UNK). The paper's ablations compare starting "from scratch or from a good SSL pretrained checkpoint on
++    ImageNet-1k" without saying which the released checkpoints used. The ViT-S size is given in the supplementary
++    (23M).
+   * Neither class: Cosmos-H ×4, MedSora, SG2VID, KVLR.
+-  * Secondary, web-scale: Open-Sora VAE, VideoMAE V2, Open-Sora-Plan VAE, CV-VAE, Reducio-VAE.
++  * **[v0.4-final2]** Secondary, rule A **UNK**:
++    * unversioned / self-collected web corpora: Open-Sora VAE, VideoMAE V2 (Instagram crawl), Open-Sora-Plan VAE,
++      Reducio-VAE;
++    * undocumented base weights: CV-VAE (Stable Diffusion VAE weights retained).
+   * Open-MAGVIT2: compute not documented.
+ 
+ ### 4.2 Extraction
+@@ -307,6 +355,8 @@
+   * The clip is the L_m most recent grid frames ending at the step's last grid frame. No frame after 5t + 5 is used.
+   * If L_m > 10, the earlier frames come from preceding steps.
+   * At the video start, the first grid frame is repeated.
++  * **[v0.4-final2]** "Clip-level models receive frames from the 2-fps grid. This may differ from each model's
++    documented temporal sampling; it standardizes acquisition across centres at the cost of temporal fidelity."
+ * **[v0.4] Reference arm (D-3)** — "paper-linked Cosmos reference using the original temporal/representation
+   definition under DS203-standardized spatial preprocessing":
+   * Input: the step's contiguous native frames in [5t, 5t + 5); at most 121, uniformly selected (package default).
+@@ -338,8 +388,8 @@
+   balanced accuracy is computed over cases.
+ * **CIs:** case bootstrap stratified by site, 2,000 resamples, seed **20261008**.
+ * **[v0.4] Two sets:**
+-  * E1 and E3 are run on the 278-case set (primary representation check) and on the 158-case primary causal set
+-    (causal-set confirmation);
++  * **[v0.4-final2]** E1 and E3-site are run on the 278-case set (primary representation check) and on the 158-case
++    primary causal set (causal-set confirmation). E3-state-retention is run on the 158-case set only (§5.3);
+   * **the 158-case results are never used for model selection.**
+ 
+ ### 5.1 E1 Site encoding
+@@ -369,11 +419,18 @@
+ 
+ ### 5.3 E3 Removal success (equivalence form; D-4)
+ 
+-Success, on each of the two sets, if both hold:
+-* (i) after removal, the **linear-probe site balanced accuracy has a one-sided 95 % upper bound ≤ 0.35**;
+-* (ii) the E2-primary ΔAUC after removal is ≥ 50 % of its pre-removal value (point estimates; on the 158-case set).
++**[v0.4-final2] Two components:**
++* **E3-site:** criterion (i), evaluated separately on the 278-case and the 158-case sets. After removal, the
++  **linear-probe site balanced accuracy has a one-sided 95 % upper bound ≤ 0.35**.
++* **E3-state-retention:** criterion (ii), evaluated on the 158-case set only. The E2-primary ΔAUC after removal is
++  ≥ 50 % of its pre-removal value (point estimates).
++  * If the E2 primary check fails (ΔAUC < 0.05 or its CI includes 0), E3-state-retention is **not applicable**. The
++    report then states that retention of state information could not be assessed.
++* **Interpretation of FM−C causal arms** (and the P1b-FM / P2-FM conditions) requires:
++  * E3-site to pass on both sets; and
++  * E3-state-retention to pass on the 158-case set, or to be not applicable.
+ 
+-**[v0.4] Wording when (i) passes:** linear site decodability "**no longer exceeds the prespecified linear
++**[v0.4] Wording when E3-site passes:** linear site decodability "**no longer exceeds the prespecified linear
+ site-encoding boundary**". It is never described as "equivalent to chance" or "eliminated", since 0.35 is 10 points
+ above chance. The representation is "linearly site-removed".
+ 
+@@ -382,7 +439,7 @@
+ * training: Adam with learning rate 10⁻³, weight decay 10⁻⁴, at most 200 epochs, early stopping (patience 20) on a
+   20 % inner validation split.
+ 
+-If (i) passes but the MLP upper bound exceeds 0.35, the claim ceiling is **"linear site information removed;
++If E3-site passes but the MLP upper bound exceeds 0.35, the claim ceiling is **"linear site information removed;
+ nonlinear site information remains"**.
+ 
+ ### 5.4 [v0.4] G-SITE: verification that the constructed benchmark satisfies its intended orthogonality condition
+@@ -394,6 +451,7 @@
+ * **Gate:** η² of S_{i, w_i} on C (one-way, primary causal set) **≤ 0.01**.
+ * **Also reported:** η² of Σ_{window ∪ post} S_it on C, for every cell.
+ * **If the gate fails:** P2-SITE and P2-ORACLE (§12) are not tested and are reported as P3.
++* **[v0.4-final3] Per-W sets:** the same quantity and threshold apply to the per-W sensitivity sets (§10.3).
+ * **Basis:**
+   * C enters only A.
+   * Under §7.2, S at window-relative step j is 1{O_i + j ≥ 0}, a function of the site-stratified offset alone.
+@@ -448,6 +506,14 @@
+ * **Offsets:** O_i ∈ {−15, …, 15}, assigned within each site from a seeded permutation (seed **20261005**).
+   * The values are in `data_audit/lead/out/ss_window_offsets.csv` (sha256 4794e139…ea6c3, commit dbd5984).
+   * **[v0.4] Each case's offset is fixed once and is unchanged across all cells, arms and replicates.**
++  * **[v0.4-final2] Per-W sensitivity sets (§10.3).** The file above has no offset for 46 cases of the W = 0 set and
++    43 cases of the W = 5 set.
++    * Rule: the 158 primary offsets are kept unchanged. The missing cases of each per-W set receive offsets by the
++      same procedure and seed (within-site seeded permutation of {−15, …, 15}, seed 20261005), applied to each per-W
++      set separately.
++    * Computed from case metadata only; file `data_audit/lead/out/ss_window_offsets_perW.csv` (sha256
++      95513df0…f38d48, commit **adf9160**).
++    * Within each per-W set, each case's offset is fixed once.
+ * **Window:**
+   * the window starts at **w_i = s_i + O_i**;
+   * window steps are w_i … w_i + K − 1;
+@@ -539,6 +605,15 @@
+ * **[v0.4] Per-W sets (D-5):** the P1b and P2 family cells with W = 0 (204 cases) and W = 5 (201 cases), for arms NV,
+   SITE, FM-P, FM-P−C, ORACLE and ORACLE−C.
+   * They are reported separately and do not enter family verdicts.
++  * **[v0.4-final2] Offsets:** `out/ss_window_offsets_perW.csv` (adf9160; rule in §7.2).
++    * W = 0: 204 cases, centres 2–5 = 37 / 40 / 57 / 70 (46 new offsets); max V(C, S_j) over relative steps 0 … 44 =
++      0.076.
++    * W = 5: 201 cases, 37 / 40 / 56 / 68 (43 new offsets); max V(C, S_j) over relative steps −5 … 44 = 0.097.
++    * The primary set has max V = 0.053.
++  * **[v0.4-final3] Per-W G-SITE** (η² of S at the window start on C; b987010): W = 0: **0.0037**; W = 5: **0.0045**
++    (primary: 0.0014). Both are ≤ 0.01.
++  * **[v0.4-final3] Rule:** per-W P2 sensitivity results are interpreted as instrument-like comparisons only if that
++    set's per-W G-SITE is ≤ 0.01. Otherwise they are labelled descriptive.
+ 
+ ### 10.4 [v0.4] Compute budget
+ 
+@@ -635,9 +710,9 @@
+ |---|---|---|---|---|
+ | P1a | **[v0.4-final] theory-motivated prespecified hypothesis** (from statement ii) | α = 0, all cells except K = 1, P = 0 (66 cells) | ORACLE \|bias\| < ORACLE−C | — |
+ | P1b-SITE | **[v0.4-final] theory-motivated prespecified hypothesis** | W = 0, P ∈ {5, 30}, all K, α, γ (48 cells) | SITE < NV | — |
+-| P1b-FM | **[v0.4-final] theory-motivated prespecified hypothesis** | the same 48 cells | FM-P < FM-P−C | E1 and E3 pass (both sets, §13) |
++| P1b-FM | **[v0.4-final] theory-motivated prespecified hypothesis** | the same 48 cells | FM-P < FM-P−C | **[v0.4-final2]** E1 passes on both sets; E3-site passes on both sets; E3-state-retention passes or is not applicable (§5.3) |
+ | P2-SITE | **[v0.4-final] theory-motivated prespecified hypothesis** (from statement i) | K = 1, P = 0, all W, α, γ (18 cells) | SITE ≥ NV | G-SITE passes |
+-| P2-FM | **[v0.4-final] theory-motivated prespecified hypothesis** (from statement i) | K = 1, P = 0, α > 0 (12 cells) | FM-P ≥ FM-P−C | G-SITE passes; E1 and E3 pass (both sets, §13) |
++| P2-FM | **[v0.4-final] theory-motivated prespecified hypothesis** (from statement i) | K = 1, P = 0, α > 0 (12 cells) | FM-P ≥ FM-P−C | G-SITE passes; **[v0.4-final2]** E1 passes on both sets; E3-site passes on both sets; E3-state-retention passes or is not applicable (§5.3) |
+ | P2-ORACLE | **[v0.4-final] theory-motivated prespecified hypothesis** (from statement i) | K = 1, P = 0, α > 0 (12 cells) | ORACLE ≥ ORACLE−C | G-SITE passes |
+ | P3 | — | all other cells and comparisons | no directional prediction; reported against the maps | — |
+ 
+@@ -667,17 +742,20 @@
+   dataset. FM-vs-FM−C comparisons are reported descriptively only.
+ * **E2 fails:** "video representations recover the confounding state" is not established. FM-vs-NV comparisons cannot
+   be read as confounder recovery.
+-* **E3 (i) fails (278-case set):** the removal manipulation failed; FM−C arms are not interpreted.
+-* **[v0.4] E1 and E3 pass on the 278-case set but fail on the 158-case set:** FM vs FM−C comparisons in the causal grid
+-  are reported descriptively only, and P1b-FM / P2-FM are not tested.
+-* **E3 (i) passes but the MLP probe exceeds the margin:** the claim ceiling is "linear site information removed;
++* **[v0.4-final2] E3-site fails on the 278-case set:** the removal manipulation failed; FM−C arms are not interpreted.
++* **[v0.4-final2] E1 and E3-site pass on the 278-case set but fail on the 158-case set:** FM vs FM−C comparisons in the
++  causal grid are reported descriptively only, and P1b-FM / P2-FM are not tested.
++* **[v0.4-final2] E3-site passes but the MLP probe exceeds the margin:** the claim ceiling is "linear site information removed;
+   nonlinear site information remains".
+-* **[v0.4] E3 (i) passes:** the wording is "no longer exceeds the prespecified linear site-encoding boundary", never
++* **[v0.4-final2] E3-site passes:** the wording is "no longer exceeds the prespecified linear site-encoding boundary", never
+   "equivalent to chance" or "eliminated".
+-* **E3 (ii) fails (state destroyed):** FM−C differences are not attributed to site removal alone.
++* **[v0.4-final2] E3-state-retention fails (state destroyed):** FM−C differences are not attributed to site removal
++  alone, and FM−C causal arms are not interpreted.
++* **[v0.4-final2] E3-state-retention not applicable (E2 primary fails):** the report states that retention of state
++  information could not be assessed. FM−C interpretation then rests on E3-site alone (§5.3).
+ * **G-SITE fails:** C is not instrument-like in the constructed design at K = 1, P = 0. P2-SITE and P2-ORACLE become
+   P3, and no amplification claim is made.
+-* **E1 and E3 pass but P1b-FM and P2-FM are INCONCLUSIVE:** a negative result, "encoded site information did not
++* **[v0.4-final2] E1 and E3 (both components, §5.3) pass but P1b-FM and P2-FM are INCONCLUSIVE:** a negative result, "encoded site information did not
+   change causal behaviour here".
+ * **[v0.4-final] Family verdicts:** stated as consistent / inconsistent with the theory-motivated direction (§12). No
+   family result is stated as a confirmation of the theory maps.
+@@ -736,13 +814,20 @@
+     K < 15;
+   * centre 2 has only 13 single-file eligible cases.
+ * **[v0.4] Model pool:**
+-  * all eligible primary models are frame-level, and all eligible secondary models are clip-level (§4.1.5);
+-  * **[v0.4-final]** the primary arm is therefore a "domain-specific surgical/endoscopic visual representation derived
+-    from video frames", not a temporal video model (§1);
++  * **[v0.4-final3]** all eligible primary models are frame-level, and all eligible secondary models are clip-level
++    (§4.1.5);
++  * the primary arm is therefore a "domain-specific surgical/endoscopic visual representation derived from video
++    frames", not a temporal video model (§1);
+   * a strict reading of the overlap rule would leave no model in either arm. The two-level rule (§4.1.1) was fixed
+     with that knowledge.
+-* **[v0.4-final] Generic web origin (rule B):** for fixed benchmarks used in pretraining or initialisation (ImageNet,
+-  Kinetics, UCF-101, SSv2), "incidental web-origin exposure cannot be excluded at the level of every source image."
++* **[v0.4-final2] Temporal sampling:** "Clip-level models receive frames from the 2-fps grid. This may differ from
++  each model's documented temporal sampling; it standardizes acquisition across centres at the cost of temporal
++  fidelity."
++* **[v0.4-final2] Site-associated, not acquisition-specific:** E1 and LEACE measure and remove site-associated
++  information, of which real acquisition heterogeneity is one source. They do not isolate acquisition information
++  (§1).
++* **[v0.4-final3] Generic web origin (rule B):** for the fixed benchmarks relied on by eligible candidates in
++  pretraining or initialisation (ImageNet, Kinetics-400, Kinetics-600, UCF-101, SSv2), "incidental web-origin exposure cannot be excluded at the level of every source image."
+ 
+ ## 17. Investigator actions before freeze / before step 4
+ 
+@@ -777,3 +862,45 @@
+   * tie-breaks replaced by the four-step order;
+   * the SDR code commit recorded at code lock;
+   * eligibility facts committed separately (6245f25).
++* **v0.4-final2 (freeze repairs; one line per change):**
++  * A1: per-W sensitivity offsets added. The 158 primary offsets are kept; the 46 / 43 missing cases are drawn by the
++    same procedure and seed per set (adf9160). Text in §7.2, §10.3, header, §0.
++  * A2: clip-level temporal-sampling sentence added to §4.2 and §16.
++  * B1: Rule-B override for named, versioned, pre-release benchmarks added to §4.1.1, with a determinism sentence
++    keeping the clinical / site-provenance clause for surgical web corpora.
++  * B1 consequence: eligibility re-checked (e81ab5f, 166 / 166 quotes). Basel V-JEPA ViT-L becomes eligible (primary,
++    clip-level) via HowTo100M in VideoMix2M. §4.1.5, §1 and §16 statements that all eligible primary models are
++    frame-level were updated; ineligibility reasons were re-labelled by clause.
++  * B2: the §1 question now reads "site-associated information … video-derived representations", and the §1 / §16
++    note says E1 / LEACE do not isolate acquisition information. No other unqualified "acquisition information"
++    occurred. "Acquisition shortcuts" (§13) and the acquisition-preprocessing headings (§3) are kept.
++  * B3: "real foundation-model representations" → "real pretrained video-derived representations" (§1), with the
++    foundation-model naming condition.
++  * B4: E3 split into E3-site (278 and 158) and E3-state-retention (158 only; not applicable if E2 primary fails).
++    §5, §5.3, §12.2 conditions and §13 use the new names.
++* **v0.4-final3 (content-boundedness rule):**
++  * "v0.4-final2 applied a broad override (a named, versioned release finalized before DS203 counts as NO). Its
++    consequence made Basel V-JEPA eligible through HowTo100M. The investigator first accepted this consequence; the
++    audit did not. The override was replaced by the content-boundedness rule because release date alone does not meet
++    the protocol's pre-existing evidentiary standard, under which NO requires affirmative level-1–3 support excluding
++    DS203 and known DS203-centre clinical material. The replacement is a general rule, not a list of named benchmarks,
++    and it was adopted with knowledge that it makes Basel V-JEPA ineligible."
++  * Item 1: Rule B replaced verbatim in §4.1.1. The v0.4-final2 override and its determinism sentence were removed, and
++    the benchmark names in the old Rule-B bullet were removed from the rule.
++  * Item 2: eligibility recomputed (a437225, 174 / 174 quotes; per-source boundedness for every candidate). Basel
++    V-JEPA becomes ineligible (HowTo100M Health category); secondary lists unchanged. §4.1.5 updated.
++  * Item 3: the §1 and §16 frame-level statements were restored. The §16 generic-web list now holds only the
++    benchmarks relied on by eligible candidates.
++  * Item 4: per-W G-SITE added: W = 0 0.0037, W = 5 0.0045 (b987010). Interpretation rule in §10.3, pointer in §5.4.
++  * The `…_accept_B1` task was never received or applied, so there was nothing to reverse.
++  * EndoSSL initialization check: EndoSSL laparoscopy ViT-B / ViT-L (and ViT-S) became ineligible, because their
++    initialization is not stated in any level-1–3 source. The initialization of every other eligible model is
++    affirmatively stated (quotes in d3563e7). Eligibility facts recommitted: ca04c5b, plus d3563e7 for a stale CV-VAE
++    note. §4.1.5, §0 and the header hashes were updated.
++  * Editing correction: the §0 sentence "The eligible lists are therefore known…", which a v0.4-final2 edit had
++    attached to the per-W offsets bullet, was returned to the eligibility bullet.
++  * Loss-network clause added to §4.1.1. Auxiliary networks of every eligible model were checked against level-1–3
++    sources (14 / 14 quotes verified). They are either loss-only (frozen LPIPS, or discriminators and LARP's
++    training-time AR prior trained jointly on the same data), or EMA copies of the model itself (DINO teacher, MoCo
++    momentum encoder), whose lineage is the already-assessed initialization. None initializes or is distilled into
++    the released model from an external source. No eligibility change; eligibility facts in force remain d3563e7.
