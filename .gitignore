@@ -1,3 +1,9 @@
 __pycache__/
 *.pyc
 lit/fulltext/
+third_party/
+results/*/work/
+results/*/code_snapshot/
+results/*/.lock
+results/codelock_gate_SMOKE/
+.pytest_cache/
