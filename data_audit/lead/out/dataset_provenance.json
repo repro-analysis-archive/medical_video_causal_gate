@@ -1,0 +1,756 @@
+{
+ "generated_utc": "2026-10-04T23:29:26+00:00",
+ "scope": "Recording-site provenance facts for public surgical/endoscopy datasets (facts only). Quotes verified as whitespace-normalised substrings of saved copies (re.sub(r'\\s+',' ',s).strip()).",
+ "saved_copies_dir": "data_audit/lead/fm_sources/datasets/",
+ "manifest": "data_audit/lead/fm_sources/datasets/_manifest.jsonl",
+ "status_counts": {
+  "QUOTED": 18,
+  "NOT_OBTAINABLE": 4,
+  "NOT_STATED": 4
+ },
+ "datasets": [
+  {
+   "name": "Cholec80",
+   "publication": "Twinanda et al., EndoNet, IEEE TMI 2017; arXiv:1602.03012",
+   "institutions": [
+    "University Hospital of Strasbourg"
+   ],
+   "city_country": "Strasbourg, France",
+   "status": "QUOTED",
+   "quotes": [
+    {
+     "quote": "we build a large dataset of cholecystectomy videos containing 80 videos recorded at the University Hospital of Strasbourg",
+     "file": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+     "kind": "recording_site",
+     "verified": true
+    },
+    {
+     "quote": "the videos in Cholec80 come from one hospital",
+     "file": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+     "kind": "recording_site",
+     "verified": true
+    }
+   ],
+   "note": "Single hospital."
+  },
+  {
+   "name": "CholecT50 / CholecT45 / CholecTriplet",
+   "publication": "Nwoye et al., Rendezvous, MedIA 2022 (arXiv:2109.03223); Nwoye & Padoy, data splits and metrics benchmark (arXiv:2204.05235)",
+   "institutions": [
+    "University Hospital of Strasbourg (inherited: 45 videos are Cholec80 videos)",
+    "5 further videos: 'in-house dataset' / 'Cholec120 - a superset of Cholec80' (recording site not restated in these papers)"
+   ],
+   "city_country": "Strasbourg, France (via Cholec80)",
+   "status": "QUOTED",
+   "quotes": [
+    {
+     "quote": "The dataset is a collection of 50 videos consisting of 45 videos from the Cholec80 dataset (Twinanda et al., 2017) and 5 videos from an in-house dataset of the same surgical procedure.",
+     "file": "data_audit/lead/fm_sources/datasets/cholect50__arxiv_pdf.txt",
+     "kind": "derivation",
+     "verified": true
+    },
+    {
+     "quote": "The videos of CholecT45 are part of the Cholec80 [6] dataset. The remaining videos of CholecT50 are part of the Cholec120 - a superset of Cholec80 dataset.",
+     "file": "data_audit/lead/fm_sources/datasets/cholect45__arxiv_pdf.txt",
+     "kind": "derivation",
+     "verified": true
+    },
+    {
+     "quote": "All the videos in the trainval are drawn from the publicly available Cholec80 [6] dataset. Nevertheless, the testing set containing 5 videos are not in the public domain.",
+     "file": "data_audit/lead/fm_sources/datasets/cholect45__arxiv_pdf.txt",
+     "kind": "derivation",
+     "verified": true
+    }
+   ],
+   "note": "Site is by inheritance from Cholec80 (quoted there). The CholecT papers do not themselves name the recording hospital; CholecT45 (public release) = 45 Cholec80 videos; the 5 extra CholecT50 videos come from Cholec120 ('in-house'), site not restated. Authors' affiliations include University Hospital of Strasbourg."
+  },
+  {
+   "name": "HeiChole",
+   "publication": "Wagner et al., 'Comparative validation of machine learning algorithms for surgical workflow and skill analysis with the HeiChole benchmark', MedIA 2023; arXiv:2109.14956",
+   "institutions": [
+    "Heidelberg University Hospital (n=15)",
+    "Salem Hospital (of the Evangelische Stadtmission Heidelberg) (n=15)",
+    "GRN-hospital Sinsheim (n=3)"
+   ],
+   "city_country": "Heidelberg and Sinsheim, Germany",
+   "status": "QUOTED",
+   "quotes": [
+    {
+     "quote": "laparoscopic cholecystectomies from three surgical centers in Germany",
+     "file": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+     "kind": "recording_site",
+     "verified": true
+    },
+    {
+     "quote": "The operation videos at Heidelberg University Hospital (n=15) were recorded with a laparoscopic 2D camera",
+     "file": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+     "kind": "recording_site",
+     "verified": true
+    },
+    {
+     "quote": "The operation videos at Salem Hospital (n=15) and the GRN-hospital Sinsheim (n=3) were recorded with the laparoscopic 2D camera ENDOCAM Logic HD",
+     "file": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+     "kind": "recording_site",
+     "verified": true
+    },
+    {
+     "quote": "Department of Surgery, Salem Hospital of the Evangelische Stadtmission Heidelberg, Zeppelinstrasse 11-33, 69121 Heidelberg, Germany",
+     "file": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+     "kind": "affiliation_context",
+     "verified": true
+    }
+   ],
+   "note": "33 videos, three German centres. City of Salem Hospital taken from the author-affiliation line (Heidelberg)."
+  },
+  {
+   "name": "HeiCo / ROBUST-MIS",
+   "publication": "Maier-Hein et al., 'Heidelberg colorectal data set for surgical data science in the sensor operating room', Sci Data 2021 (doi:10.1038/s41597-021-00882-2; arXiv:2005.03501)",
+   "institutions": [
+    "Heidelberg University Hospital, Department of Surgery"
+   ],
+   "city_country": "Heidelberg, Germany",
+   "status": "QUOTED",
+   "quotes": [
+    {
+     "quote": "Data acquisition took place during daily routine procedures in the integrated operating room KARL STORZ OR1 FUSION® (KARL STORZ SE & Co KG, Tuttlingen, Germany) at Heidelberg University Hospital, Department of Surgery",
+     "file": "data_audit/lead/fm_sources/datasets/heico__scidata.txt",
+     "kind": "recording_site",
+     "verified": true
+    },
+    {
+     "quote": "we acquired data from only one hospital",
+     "file": "data_audit/lead/fm_sources/datasets/heico__arxiv_pdf.txt",
+     "kind": "recording_site",
+     "verified": true
+    },
+    {
+     "quote": "The data set presented in this paper served as a basis for the Robust Medical Instrument Segmentation (ROBUST-MIS) challenge",
+     "file": "data_audit/lead/fm_sources/datasets/heico__scidata.txt",
+     "kind": "derivation",
+     "verified": true
+    }
+   ],
+   "note": "Single hospital; ROBUST-MIS 2019 challenge data = HeiCo."
+  },
+  {
+   "name": "PSI-AVA",
+   "publication": "Valderrama et al., 'Towards Holistic Surgical Scene Understanding' (TAPIR), MICCAI 2022; arXiv:2212.04582",
+   "institutions": [
+    "Fundación Santafé de Bogotá"
+   ],
+   "city_country": "Bogotá, Colombia",
+   "status": "QUOTED",
+   "quotes": [
+    {
+     "quote": "The endoscopic videos were collected at Fundación Santafé de Bogotá during eight radical prostatectomy surgeries",
+     "file": "data_audit/lead/fm_sources/datasets/psiava__arxiv_pdf.txt",
+     "kind": "recording_site",
+     "verified": true
+    }
+   ],
+   "note": "8 RARP surgeries."
+  },
+  {
+   "name": "GraSP",
+   "publication": "Ayobi et al., 'Pixel-Wise Recognition for Holistic Surgical Scene Understanding', MedIA (arXiv:2401.11174)",
+   "institutions": [
+    "Fundación Santa Fé de Bogotá"
+   ],
+   "city_country": "Bogotá, Colombia",
+   "status": "QUOTED",
+   "quotes": [
+    {
+     "quote": "Radical Prostatectomy at Fundación Santa Fé de Bogotá, with their explicit consent for data usage",
+     "file": "data_audit/lead/fm_sources/datasets/grasp__arxiv_pdf.txt",
+     "kind": "recording_site",
+     "verified": true
+    },
+    {
+     "quote": "We recorded 13 surgeries of patients undergoing",
+     "file": "data_audit/lead/fm_sources/datasets/grasp__arxiv_pdf.txt",
+     "kind": "recording_site",
+     "verified": true
+    }
+   ],
+   "note": "13 RARP surgeries; same institution as PSI-AVA (spelled 'Santafé' / 'Santa Fé' in the two papers). The GraSP pdftotext copy encodes the accents as combining marks (U+0301), so the stored quote uses that decomposed form."
+  },
+  {
+   "name": "ESAD (SARAS-ESAD)",
+   "publication": "Bawa et al., 'The SARAS Endoscopic Surgeon Action Detection (ESAD) dataset: Challenges and methods' (arXiv:2104.03178); Bawa et al., 'ESAD: Endoscopic Surgeon Action Detection Dataset' (arXiv:2006.07164)",
+   "institutions": [
+    "San Raffaele Hospital"
+   ],
+   "city_country": "Milan, Italy",
+   "status": "QUOTED",
+   "quotes": [
+    {
+     "quote": "ESAD is composed by four videos of radical prostatectomy procedures conducted on patients, which were collected as part of the EU funded SARAS project by San Raffaele Hospital.",
+     "file": "data_audit/lead/fm_sources/datasets/esad_saras__arxiv_pdf.txt",
+     "kind": "recording_site",
+     "verified": true
+    },
+    {
+     "quote": "San Raffaele Hospital, Milan, Italy",
+     "file": "data_audit/lead/fm_sources/datasets/esad_saras__arxiv_pdf.txt",
+     "kind": "affiliation_context",
+     "verified": true
+    },
+    {
+     "quote": "we collected four complete prostatectomy procedure with the consent of the patients and hospital",
+     "file": "data_audit/lead/fm_sources/datasets/esad__arxiv_pdf.txt",
+     "kind": "recording_site",
+     "verified": true
+    }
+   ],
+   "note": "4 RARP videos. The 2020 arXiv paper says only 'the hospital'; the 2021 SARAS-ESAD paper names San Raffaele Hospital. City from affiliation line."
+  },
+  {
+   "name": "LapGyn4",
+   "publication": "Leibetseder et al., 'LapGyn4: a dataset for 4 automatic content analysis problems in the domain of laparoscopic gynecology', ACM MMSys 2018 (doi:10.1145/3204949.3208127)",
+   "institutions": [],
+   "city_country": null,
+   "status": "NOT_OBTAINABLE",
+   "quotes": [
+    {
+     "quote": "taken from 500+ gynecologic laparoscopic surgeries",
+     "file": "data_audit/lead/fm_sources/datasets/lapgyn4__dataset_page.txt",
+     "kind": "context",
+     "verified": true
+    },
+    {
+     "quote": "you may directly contact the originator of the videos, Prof. Dr. Jörg Keckstein",
+     "file": "data_audit/lead/fm_sources/datasets/lapgyn4__dataset_page.txt",
+     "kind": "context",
+     "verified": true
+    },
+    {
+     "quote": "\"name\": \"J\\u00f6rg Keckstein\", \"affiliation\": \"University Ulm, Medizinische Fakult\\u00e4t\"",
+     "file": "data_audit/lead/fm_sources/datasets/lapgyn4__zenodo_api.txt",
+     "kind": "affiliation_context",
+     "verified": true
+    }
+   ],
+   "note": "ACM DL PDF returned HTTP 403 (Cloudflare 'Just a moment...' challenge), so the paper body could not be read. Dataset page (AAU ITEC) and Zenodo record name only the 'originator of the videos' (Prof. Dr. Jörg Keckstein; Zenodo affiliation 'University Ulm, Medizinische Fakultät'); no recording hospital or city is stated in the obtainable sources."
+  },
+  {
+   "name": "GLENDA v1.0",
+   "publication": "Leibetseder et al., 'GLENDA: Gynecologic Laparoscopy Endometriosis Dataset', MMM 2020 (doi:10.1007/978-3-030-37734-2_36); author copy arXiv:2508.21398",
+   "institutions": [],
+   "city_country": null,
+   "status": "NOT_STATED",
+   "quotes": [
+    {
+     "quote": "GLENDA is a multi-faceted endometriosis dataset that has been extracted from over 400 gynecologic laparoscopy videos",
+     "file": "data_audit/lead/fm_sources/datasets/glenda__arxiv_pdf.txt",
+     "kind": "context",
+     "verified": true
+    },
+    {
+     "quote": "you may directly contact the originator of the videos, Prof. Dr. Jörg Keckstein",
+     "file": "data_audit/lead/fm_sources/datasets/glenda__dataset_page.txt",
+     "kind": "context",
+     "verified": true
+    },
+    {
+     "quote": "Medical Faculty, Ulm University, Ulm 89081, Germany",
+     "file": "data_audit/lead/fm_sources/datasets/glenda__arxiv_pdf.txt",
+     "kind": "affiliation_context",
+     "verified": true
+    }
+   ],
+   "note": "The paper text (arXiv author copy) does not name the hospital where the videos were recorded; only author affiliations (Klagenfurt University; University Hospital LMU Munich; Medical Faculty, Ulm University) and the 'originator of the videos' (J. Keckstein) on the dataset page."
+  },
+  {
+   "name": "SurgicalActions160",
+   "publication": "Schoeffmann et al., 'Video retrieval in laparoscopic video recordings with dynamic content descriptors', Multimedia Tools and Applications 77:16813 (2018), doi:10.1007/s11042-017-5252-2",
+   "institutions": [],
+   "city_country": null,
+   "status": "NOT_OBTAINABLE",
+   "quotes": [
+    {
+     "quote": "The dataset contains 160 short video clips showing typical surgical actions in gynecologic laparoscopy.",
+     "file": "data_audit/lead/fm_sources/datasets/surgicalactions160__dataset_page.txt",
+     "kind": "context",
+     "verified": true
+    },
+    {
+     "quote": "you may directly contact the originator of the videos, Prof. Dr. Jörg Keckstein",
+     "file": "data_audit/lead/fm_sources/datasets/surgicalactions160__dataset_page.txt",
+     "kind": "context",
+     "verified": true
+    }
+   ],
+   "note": "Springer OA PDF and article page returned a 'Client Challenge' bot page; Fraunhofer publica copy behind Anubis bot challenge. Dataset page names only the originator of the videos (Prof. Dr. Jörg Keckstein); no hospital/city stated."
+  },
+  {
+   "name": "hSDB-instrument",
+   "publication": "Yoon et al., 'hSDB-instrument: Instrument Localization Database for Laparoscopic and Robotic Surgeries', arXiv:2110.12555 (MICCAI 2021)",
+   "institutions": [
+    "Cholecystectomy part: subset of Cholec80 (University Hospital of Strasbourg, by inheritance)",
+    "Gastrectomy part (24 robotic videos): recording site NOT STATED"
+   ],
+   "city_country": "Cholecystectomy: Strasbourg, France (via Cholec80); gastrectomy: not stated (authors: hutom and Yonsei University College of Medicine, Seoul, Republic of Korea)",
+   "status": "QUOTED",
+   "quotes": [
+    {
+     "quote": "The original videos of cholecystectomy included in the hSDB-instrument dataset were a subset of the Cholec80 dataset [5].",
+     "file": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+     "kind": "derivation",
+     "verified": true
+    },
+    {
+     "quote": "The original videos of gastrectomy for gastric cancer, included in the hSDBinstrument dataset, consist of 24 robotic surgery recordings by experienced specialists.",
+     "file": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+     "kind": "context",
+     "verified": true
+    },
+    {
+     "quote": "Department of Surgery, Yonsei University College of Medicine, Seoul, Republic of Korea",
+     "file": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+     "kind": "affiliation_context",
+     "verified": true
+    }
+   ],
+   "note": "Partial: cholecystectomy part quoted (Cholec80 subset); gastrectomy recording site not stated in the paper (only author affiliations)."
+  },
+  {
+   "name": "SurgToolLoc 2022",
+   "publication": "Zia et al., 'Intuitive Surgical SurgToolLoc and SurgVU Challenges Results: 2022-2025', arXiv:2305.07152v4",
+   "institutions": [],
+   "city_country": null,
+   "status": "NOT_STATED",
+   "quotes": [
+    {
+     "quote": "Video and system data were harvested from surgical training exercises performed on the da Vinci robotic system.",
+     "file": "data_audit/lead/fm_sources/datasets/surgtoolloc__arxiv_pdf.txt",
+     "kind": "context",
+     "verified": true
+    },
+    {
+     "quote": "The training exercises that generated the data were performed on two distinct animal modalities, either an anesthetized living pig, or using organs harvested from a pig.",
+     "file": "data_audit/lead/fm_sources/datasets/surgtoolloc__arxiv_pdf.txt",
+     "kind": "context",
+     "verified": true
+    }
+   ],
+   "note": "Porcine (live and ex-vivo organ) da Vinci training exercises; no institution/city of recording stated."
+  },
+  {
+   "name": "RARP-AvL (private)",
+   "publication": "Jaspers et al., SurgeNetXL 'Scaling up self-supervised learning for improved surgical foundation models', arXiv:2501.09436",
+   "institutions": [
+    "Antoni van Leeuwenhoek Hospital (AvL)"
+   ],
+   "city_country": "Amsterdam, Netherlands",
+   "status": "QUOTED",
+   "quotes": [
+    {
+     "quote": "one comprising robot-assisted radical prostatectomy (RARP) procedures sourced from the Antoni van Leeuwenhoek Hospital (AvL) in Amsterdam",
+     "file": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+     "kind": "recording_site",
+     "verified": true
+    }
+   ],
+   "note": "Private dataset; description taken from SurgeNetXL (existing saved copy in fm_sources/primary). Country not written in that sentence; the adjacent clause refers to UMCU 'in the Netherlands'."
+  },
+  {
+   "name": "SAR-RARP50",
+   "publication": "Psychogyios et al., 'SAR-RARP50: Segmentation of surgical instrumentation and Action Recognition on Robot-Assisted Radical Prostatectomy Challenge', arXiv:2401.00496",
+   "institutions": [
+    "University College Hospital at Westmoreland Street"
+   ],
+   "city_country": "London, UK",
+   "status": "QUOTED",
+   "quotes": [
+    {
+     "quote": "The data were collected at the University College Hospital at Westmoreland Street, London, UK",
+     "file": "data_audit/lead/fm_sources/datasets/sarrarp50__arxiv_pdf.txt",
+     "kind": "recording_site",
+     "verified": true
+    }
+   ],
+   "note": ""
+  },
+  {
+   "name": "AutoLaparo",
+   "publication": "Wang et al., 'AutoLaparo: A New Dataset of Integrated Multi-tasks for Image-guided Surgical Automation in Laparoscopic Hysterectomy', MICCAI 2022; arXiv:2208.02049",
+   "institutions": [
+    "Prince of Wales Hospital"
+   ],
+   "city_country": "Hong Kong",
+   "status": "QUOTED",
+   "quotes": [
+    {
+     "quote": "we collect 21 videos of laparoscopic hysterectomy from Prince of Wales Hospital, Hong Kong",
+     "file": "data_audit/lead/fm_sources/datasets/autolaparo__arxiv_pdf.txt",
+     "kind": "recording_site",
+     "verified": true
+    }
+   ],
+   "note": ""
+  },
+  {
+   "name": "SutureBot",
+   "publication": "Haworth, Chen et al., 'SutureBot: A Precision Framework & Benchmark For Autonomous End-to-End Suturing', arXiv:2510.20965",
+   "institutions": [],
+   "city_country": null,
+   "status": "NOT_STATED",
+   "quotes": [
+    {
+     "quote": "A Soft Tissue Suture Pad (3-D Med, OH) serves as the task surface",
+     "file": "data_audit/lead/fm_sources/datasets/suturebot__arxiv_pdf.txt",
+     "kind": "context",
+     "verified": true
+    },
+    {
+     "quote": "All demonstrations were collected using the standard dVRK teleoperation console",
+     "file": "data_audit/lead/fm_sources/datasets/suturebot__arxiv_pdf.txt",
+     "kind": "context",
+     "verified": true
+    }
+   ],
+   "note": "Synthetic suture-pad phantom on a dVRK; no clinical site; the paper does not state where data were recorded (authors: Johns Hopkins University, NVIDIA, Stanford University, University of Toronto)."
+  },
+  {
+   "name": "Colonoscopic (Mesejo et al.)",
+   "publication": "Mesejo et al., 'Computer-Aided Classification of Gastrointestinal Lesions in Regular Colonoscopy', IEEE TMI 35(9):2051-2063, 2016 (doi:10.1109/TMI.2016.2547947)",
+   "institutions": [],
+   "city_country": null,
+   "status": "NOT_OBTAINABLE",
+   "quotes": [
+    {
+     "quote": "(4) Department of Gastroenterology, CHU Estaing, 63100 Clermont-Ferrand, France. (5) Clinique de la Sauvegarde, 69009 Lyon, France.",
+     "file": "data_audit/lead/fm_sources/datasets/colonoscopic__wayback_page.txt",
+     "kind": "affiliation_context",
+     "verified": true
+    }
+   ],
+   "note": "IEEE version paywalled; HAL open copy (hal-01291797) behind Anubis bot challenge; live dataset page (depeca.uah.es) timed out; Wayback snapshot (2022-01-25) of the dataset page lists only author affiliations (clinical: CHU Estaing Clermont-Ferrand; Clinique de la Sauvegarde Lyon) with no recording-site sentence; PubMed abstract names no site. Recording site therefore not quoted."
+  },
+  {
+   "name": "SUN database / SUN-SEG",
+   "publication": "Misawa et al., GIE 2021;93(4):960-967 (doi:10.1016/j.gie.2020.07.060); Ji et al., 'Video Polyp Segmentation: A Deep Learning Perspective' (SUN-SEG), arXiv:2203.14291",
+   "institutions": [
+    "Showa University Northern Yokohama Hospital"
+   ],
+   "city_country": "Yokohama, Japan",
+   "status": "QUOTED",
+   "quotes": [
+    {
+     "quote": "The database comprises of still images of videos, which are collected at the Showa University Northern Yokohama Hospital.",
+     "file": "data_audit/lead/fm_sources/datasets/sun__dataset_page.txt",
+     "kind": "recording_site",
+     "verified": true
+    },
+    {
+     "quote": "consecutive colonoscopy videos taken at a university hospital between October 2018 and January 2019",
+     "file": "data_audit/lead/fm_sources/datasets/sun__pubmed_efetch.txt",
+     "kind": "recording_site",
+     "verified": true
+    },
+    {
+     "quote": "Digestive Disease Center, Showa University Northern Yokohama Hospital, Yokohama, Japan.",
+     "file": "data_audit/lead/fm_sources/datasets/sun__pubmed_efetch.txt",
+     "kind": "affiliation_context",
+     "verified": true
+    },
+    {
+     "quote": "The colonoscopy videos in our SUN-SEG are from Showa University and Nagoya University database (also named SUN-database [3])",
+     "file": "data_audit/lead/fm_sources/datasets/sunseg__arxiv_pdf.txt",
+     "kind": "derivation",
+     "verified": true
+    }
+   ],
+   "note": "GIE full text paywalled (not fetched); PubMed abstract says 'a university hospital'; official SUN database page names Showa University Northern Yokohama Hospital. (The GIE CAD training images came from 5 centres, but those are not the SUN database.)"
+  },
+  {
+   "name": "LDPolypVideo",
+   "publication": "Ma et al., 'LDPolypVideo Benchmark: A Large-Scale Colonoscopy Video Dataset of Diverse Polyps', MICCAI 2021 (doi:10.1007/978-3-030-87240-3_37)",
+   "institutions": [],
+   "city_country": null,
+   "status": "NOT_OBTAINABLE",
+   "quotes": [
+    {
+     "quote": "Our database contains 160 colonoscopy videos and 40,266 frames in total with polyp annotations",
+     "file": "data_audit/lead/fm_sources/datasets/ldpolypvideo__github_readme.txt",
+     "kind": "context",
+     "verified": true
+    }
+   ],
+   "note": "Springer chapter page returned a 'Client Challenge' bot page; no open copy found (OpenAlex: no OA location; not in Europe PMC). Official GitHub README does not name the recording hospital."
+  },
+  {
+   "name": "Hyper-Kvasir",
+   "publication": "Borgli et al., 'HyperKvasir, a comprehensive multi-class image and video dataset for gastrointestinal endoscopy', Sci Data 2020 (doi:10.1038/s41597-020-00622-y)",
+   "institutions": [
+    "Bærum Hospital, Vestre Viken Hospital Trust (Department of Gastroenterology)"
+   ],
+   "city_country": "Bærum, Norway",
+   "status": "QUOTED",
+   "quotes": [
+    {
+     "quote": "The data is collected during real gastro- and colonoscopy examinations at Bærum Hospital in Norway",
+     "file": "data_audit/lead/fm_sources/datasets/hyperkvasir__scidata.txt",
+     "kind": "recording_site",
+     "verified": true
+    },
+    {
+     "quote": "at the Department of Gastroenterology, Bærum Hospital, Vestre Viken Hospital Trust, Norway",
+     "file": "data_audit/lead/fm_sources/datasets/hyperkvasir__scidata.txt",
+     "kind": "recording_site",
+     "verified": true
+    }
+   ],
+   "note": ""
+  },
+  {
+   "name": "Kvasir-Capsule",
+   "publication": "Smedsrud et al., 'Kvasir-Capsule, a video capsule endoscopy dataset', Sci Data 2021 (doi:10.1038/s41597-021-00920-z)",
+   "institutions": [
+    "Bærum Hospital, Vestre Viken Hospital Trust (Department of Medicine)"
+   ],
+   "city_country": "Norway",
+   "status": "QUOTED",
+   "quotes": [
+    {
+     "quote": "The VCE videos were collected from consecutive clinical examinations performed at the Department of Medicine, Bærum Hospital, Vestre Viken Hospital Trust in Norway",
+     "file": "data_audit/lead/fm_sources/datasets/kvasircapsule__scidata.txt",
+     "kind": "recording_site",
+     "verified": true
+    }
+   ],
+   "note": ""
+  },
+  {
+   "name": "EndoMapper",
+   "publication": "Azagra et al., 'Endomapper dataset of complete calibrated endoscopy procedures', Sci Data 2023 (doi:10.1038/s41597-023-02564-7; arXiv:2204.14240)",
+   "institutions": [
+    "Hospital Clínico Universitario Lozano Blesa"
+   ],
+   "city_country": "Zaragoza, Spain",
+   "status": "QUOTED",
+   "quotes": [
+    {
+     "quote": "The acquisition of the sequences in the dataset was performed in the Hospital Clinico Universitario Lozano Blesa, in Zaragoza (Spain)",
+     "file": "data_audit/lead/fm_sources/datasets/endomapper__scidata.txt",
+     "kind": "recording_site",
+     "verified": true
+    }
+   ],
+   "note": ""
+  },
+  {
+   "name": "EndoMamba porcine bronchoscopy (PB)",
+   "publication": "Tian et al., 'EndoMamba: An Efficient Foundation Model for Endoscopic Videos via Hierarchical Pre-training', arXiv:2502.19090",
+   "institutions": [],
+   "city_country": null,
+   "status": "NOT_STATED",
+   "quotes": [
+    {
+     "quote": "one from our porcine bronchoscopy dataset (PB)",
+     "file": "data_audit/lead/fm_sources/primary/endomamba_arxiv_pdf.txt",
+     "kind": "context",
+     "verified": true
+    }
+   ],
+   "note": "In-house porcine dataset; no recording institution/city stated (authors: CASIA Beijing; The First Affiliated Hospital, Sun Yat-sen University, Guangzhou; CAIR HK; King's College London). Existing saved copy in fm_sources/primary."
+  },
+  {
+   "name": "Cataract-1K",
+   "publication": "Ghamsarian et al., 'Cataract-1K Dataset for Deep-Learning-Assisted Analysis of Cataract Surgery Videos', Sci Data 2024 (doi:10.1038/s41597-024-03193-4; arXiv:2312.06295)",
+   "institutions": [
+    "Klinikum Klagenfurt (eye clinic)"
+   ],
+   "city_country": "Klagenfurt, Austria",
+   "status": "QUOTED",
+   "quotes": [
+    {
+     "quote": "1000 videos of cataract surgery recorded in Klinikum Klagenfurt, Austria, between 2021 and 2023",
+     "file": "data_audit/lead/fm_sources/datasets/cataract1k__scidata.txt",
+     "kind": "recording_site",
+     "verified": true
+    },
+    {
+     "quote": "The Cataract-1K dataset consists of 1000 videos of cataract surgeries conducted in the eye clinic of Klinikum Klagenfurt from 2021 to 2023.",
+     "file": "data_audit/lead/fm_sources/datasets/cataract1k__scidata.txt",
+     "kind": "recording_site",
+     "verified": true
+    }
+   ],
+   "note": ""
+  },
+  {
+   "name": "CATARACTS",
+   "publication": "Al Hajj et al., 'CATARACTS: Challenge on automatic tool annotation for cataRACT surgery', MedIA 2019 (doi:10.1016/j.media.2018.11.008); UCL Discovery author copy",
+   "institutions": [
+    "Brest University Hospital"
+   ],
+   "city_country": "Brest, France",
+   "status": "QUOTED",
+   "quotes": [
+    {
+     "quote": "The challenge relies on a dataset of 50 videos of phacoemulsification cataract surgeries performed in Brest University Hospital between January 22, 2015 and September 10, 2015.",
+     "file": "data_audit/lead/fm_sources/datasets/cataracts__ucl_pdf.txt",
+     "kind": "recording_site",
+     "verified": true
+    }
+   ],
+   "note": "City from institution name; affiliation line also lists 'Service d’Ophtalmologie, CHRU Brest'. (arXiv:1906.11586 fetched by mistake is CaDIS, saved as cadis__arxiv_pdf.txt; not used.)"
+  },
+  {
+   "name": "MultiBypass140",
+   "publication": "Lavanchy et al., 'Challenges in multi-centric generalization: phase and step recognition in Roux-en-Y gastric bypass surgery', IJCARS 2024 (arXiv:2312.11250)",
+   "institutions": [
+    "University Hospital of Strasbourg (StrasBypass70)",
+    "Inselspital, Bern University Hospital (BernBypass70)"
+   ],
+   "city_country": "Strasbourg, France; Bern, Switzerland",
+   "status": "QUOTED",
+   "quotes": [
+    {
+     "quote": "surgeries performed at two medical centers, i.e., the University Hospital of Strasbourg, France (StrasBypass70) and Inselspital, Bern University Hospital, Switzerland (BernBypass70)",
+     "file": "data_audit/lead/fm_sources/datasets/multibypass140__arxiv_pdf.txt",
+     "kind": "recording_site",
+     "verified": true
+    }
+   ],
+   "note": "Confirms prior quote."
+  }
+ ],
+ "verified": "51/51",
+ "ds203_institution_keyword_hits": {
+  "keywords": [
+   "Dresden",
+   "Radeberg",
+   "Ravensburg",
+   "Diakonissen",
+   "Joseph-Stift",
+   "Josephstift",
+   "Joseph Stift",
+   "Elisabethen",
+   "Asklepios",
+   "Carus",
+   "Friedrichstadt"
+  ],
+  "files_searched": 47,
+  "files_note": "all *.txt saved copies in fm_sources/datasets/ plus the two fm_sources/primary copies quoted (surgenetxl_arxiv_pdf.txt, endomamba_arxiv_pdf.txt); case-insensitive substring search on whitespace-normalised text",
+  "n_hits": 19,
+  "summary": "Only the keyword Dresden matched (19 hits, in heichole/heico/sarrarp50/surgenetxl copies). Every hit is an author affiliation (National Center for Tumor Diseases Dresden; TU Dresden CeTI), a challenge leaderboard/team name (NCT Dresden), an author biography, or a reference title (The Dresden surgical anatomy dataset). None is a statement of where dataset videos were recorded. No hits for Radeberg, Ravensburg, Diakonissen, Joseph-Stift/Josephstift, Elisabethen, Asklepios, Carus, Friedrichstadt.",
+  "hits": [
+   {
+    "file": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+    "keyword": "Dresden",
+    "matched": "Dresden",
+    "context": "ld 672, 69120 Heidelberg u Div. Translational Surgical Oncology, National Center for Tumor Diseases Dresden, Fetscherstraße 74, 01307 Dresden, Germany 2 Cluster of Excellence “Centre for Tactile Internet wit"
+   },
+   {
+    "file": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+    "keyword": "Dresden",
+    "matched": "Dresden",
+    "context": "anslational Surgical Oncology, National Center for Tumor Diseases Dresden, Fetscherstraße 74, 01307 Dresden, Germany 2 Cluster of Excellence “Centre for Tactile Internet with Human-in-the-Loop” (CeTI) of v T"
+   },
+   {
+    "file": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+    "keyword": "Dresden",
+    "matched": "Dresden",
+    "context": " Excellence “Centre for Tactile Internet with Human-in-the-Loop” (CeTI) of v Technische Universität Dresden, 01062 Dresden, Germany 1 Present address: Muroran Institute of Technology, Hokkaido, 050-8585, Jap"
+   },
+   {
+    "file": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+    "keyword": "Dresden",
+    "matched": "Dresden",
+    "context": "ntre for Tactile Internet with Human-in-the-Loop” (CeTI) of v Technische Universität Dresden, 01062 Dresden, Germany 1 Present address: Muroran Institute of Technology, Hokkaido, 050-8585, Japan. *Stefanie S"
+   },
+   {
+    "file": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+    "keyword": "Dresden",
+    "matched": "Dresden",
+    "context": "rticipant average f1-score [%] 23.28 1 Konica Minolta 63.82 Konica Minolta 22.83 2 CUHK 62.95 3 NCT Dresden 22.62 3 HIKVision 58.20 63.60 4 CAMMA 1* 22.10 4 Caresyntax 50.13 MEVIS 57.30 5 VIE-PKU 5 Wintegral"
+   },
+   {
+    "file": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+    "keyword": "Dresden",
+    "matched": "Dresden",
+    "context": "ision 58.20 63.60 4 CAMMA 1* 22.10 4 Caresyntax 50.13 MEVIS 57.30 5 VIE-PKU 5 Wintegral 41.59 6 NCT Dresden 49.00 6 IGI Medical Technologies 38.86 7 Wintegral 42.47 7 VIE-PKU 38.47 8 CAMI-SIAT 38.65 8 NCT Dr"
+   },
+   {
+    "file": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+    "keyword": "Dresden",
+    "matched": "Dresden",
+    "context": "en 49.00 6 IGI Medical Technologies 38.86 7 Wintegral 42.47 7 VIE-PKU 38.47 8 CAMI-SIAT 38.65 8 NCT Dresden 27.45 9 VIE-PKU 33.29 10 IGI Medical Technologi es 23.93 21.75 Figure 9 – Leaderboard: Rankings for"
+   },
+   {
+    "file": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+    "keyword": "Dresden",
+    "matched": "Dresden",
+    "context": "ull professor for “Translational Surgical Oncology” at the National Center for Tumor Diseases (NCT) Dresden and one of the speakers of the DFG Cluster of Excellence “Centre for Tactile Internet with Human-in"
+   },
+   {
+    "file": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+    "keyword": "Dresden",
+    "matched": "Dresden",
+    "context": ". Sebastian Bodenstedt is a postdoctoral researcher at the National Center for Tumor Diseases (NCT) Dresden and member of the Centre for Tactile Internet with Human-in-theLoop (CeTI)”. His current research i"
+   },
+   {
+    "file": "data_audit/lead/fm_sources/datasets/heico__arxiv_pdf.txt",
+    "keyword": "Dresden",
+    "matched": "Dresden",
+    "context": "any 4 Division of Translational Surgical Oncology, National Center for Tumor Diseases, Partner Site Dresden, Fetscherstraße 74, 01307 Dresden, Germany 5 Division of Medical Image Computing (MIC), Im Neuenhei"
+   },
+   {
+    "file": "data_audit/lead/fm_sources/datasets/heico__arxiv_pdf.txt",
+    "keyword": "Dresden",
+    "matched": "Dresden",
+    "context": "rgical Oncology, National Center for Tumor Diseases, Partner Site Dresden, Fetscherstraße 74, 01307 Dresden, Germany 5 Division of Medical Image Computing (MIC), Im Neuenheimer Feld 223, 69120 Heidelberg, Ge"
+   },
+   {
+    "file": "data_audit/lead/fm_sources/datasets/heico__arxiv_pdf.txt",
+    "keyword": "Dresden",
+    "matched": "Dresden",
+    "context": "eld 581, 69120 Heidelberg, Germany 13 Centre for Tactile Internet with Human-in-the-Loop (CeTI), TU Dresden, 01307 Dresden, Germany Corresponding authors: Lena Maier-Hein ([e-mail address removed]) and Beat P. M"
+   },
+   {
+    "file": "data_audit/lead/fm_sources/datasets/heico__arxiv_pdf.txt",
+    "keyword": "Dresden",
+    "matched": "Dresden",
+    "context": "Heidelberg, Germany 13 Centre for Tactile Internet with Human-in-the-Loop (CeTI), TU Dresden, 01307 Dresden, Germany Corresponding authors: Lena Maier-Hein ([e-mail address removed]) and Beat P. Müller-Stich (be"
+   },
+   {
+    "file": "data_audit/lead/fm_sources/datasets/heico__scidata.txt",
+    "keyword": "Dresden",
+    "matched": "Dresden",
+    "context": " Full Division of Translational Surgical Oncology, National Center for Tumor Diseases, Partner Site Dresden, Fetscherstraße 74, 01307, Dresden, Germany Sebastian Bodenstedt & Stefanie Speidel Division of Med"
+   },
+   {
+    "file": "data_audit/lead/fm_sources/datasets/heico__scidata.txt",
+    "keyword": "Dresden",
+    "matched": "Dresden",
+    "context": "gical Oncology, National Center for Tumor Diseases, Partner Site Dresden, Fetscherstraße 74, 01307, Dresden, Germany Sebastian Bodenstedt & Stefanie Speidel Division of Medical Image Computing (MIC), Im Neue"
+   },
+   {
+    "file": "data_audit/lead/fm_sources/datasets/heico__scidata.txt",
+    "keyword": "Dresden",
+    "matched": "Dresden",
+    "context": "lberg, Germany Annette Kopp-Schneider Centre for Tactile Internet with Human-in-the-Loop (CeTI), TU Dresden, 01307, Dresden, Germany Stefanie Speidel Authors Lena Maier-Hein View author publications Search a"
+   },
+   {
+    "file": "data_audit/lead/fm_sources/datasets/heico__scidata.txt",
+    "keyword": "Dresden",
+    "matched": "Dresden",
+    "context": "nnette Kopp-Schneider Centre for Tactile Internet with Human-in-the-Loop (CeTI), TU Dresden, 01307, Dresden, Germany Stefanie Speidel Authors Lena Maier-Hein View author publications Search author on: PubMed"
+   },
+   {
+    "file": "data_audit/lead/fm_sources/datasets/sarrarp50__arxiv_pdf.txt",
+    "keyword": "Dresden",
+    "matched": "Dresden",
+    "context": "l, Korea r JD Health International Inc., Beijing, China s National Center for Tumor Diseases (NCT), Dresden, Germany t University of Los Andes, Bogota, Colombia u Intuitive Surgical, Inc., Sunnyvale, Califor"
+   },
+   {
+    "file": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+    "keyword": "Dresden",
+    "matched": "dresden",
+    "context": " F.M., Bodenstedt, S., Jenke, A.C., Weitz, J., Distler, M., Speidel, S., Kolbinger, F.R., 2023. The dresden surgical anatomy dataset for abdominal organ segmentation in surgical data science. Scientific Data"
+   }
+  ]
+ }
+}

@@ -1,0 +1,3644 @@
+{
+ "note": "Step 2 of CC_TASK_post_download_preprotocol: DS203 centre institutions x pretraining-data institutions of every\neligible FM candidate (052590c) and of the Decision-005 Cosmos reference. Facts only; no model is chosen.\nInputs: DS203 descriptor copies on LaCie; candidate quotes from out/fm_candidates_{primary,secondary}.json;\ndataset recording-site quotes from out/dataset_provenance.json; Cosmos reference from out/cosmos_reference_entry.json.\nEvery quote is re-verified here as a whitespace-normalised substring of its saved copy.\nCell rule (lineage rule of the survey: training data of the released weights + initialisation / base weights;\ndistillation teachers recorded only):\n  SAME DEPT / SAME HOSP  a named source was recorded at that centre's department / hospital (other department)\n  UNK-web    a web-scale source (YouTube, web lecture platforms, stock / social / Internet video) or a base model whose\n             training data are not documented\n  UNK-site   all sources named, but >=1 human clinical dataset has no recording site in the obtainable sources\n  NO         every source has a named recording site (or is non-clinical, or a fixed general benchmark such as\n             ImageNet / Kinetics / SSv2 / UCF-101), and none is a DS203 institution\nC1, C3, C4, C5 are four public hospitals whose centre-number mapping is not stated; a source from any of the four\nwould therefore be marked in all four columns. No source from any of them was found.",
+ "ds203_centres": {
+  "C1": {
+   "institution": "one of: Asklepios-ASB Krankenhaus Radeberg; Diakonissenkrankenhaus Dresden; Krankenhaus St. Joseph Stift Dresden; St. Elisabethen-Krankenhaus Ravensburg (centre-number mapping not stated)",
+   "table1": "public; adult; 51 recordings; Arthrex Synergy UHD4 / SynergyID; 30 fps",
+   "hospital": null,
+   "department": null,
+   "basis": "Table 1 'public'; the text lists four public hospitals without numbering them"
+  },
+  "C2": {
+   "institution": "Department of Pediatric Surgery, University Hospital Carl Gustav Carus Dresden",
+   "hospital": "Carus Dresden",
+   "department": "Pediatric Surgery",
+   "basis": "the only 'academic' centre in Table 1 and the only academic surgical department named in the text; Table 1 demographics 'pediatric'",
+   "table1": "academic; pediatric; 49 recordings; STORZ IMAGE1 S; 25 fps"
+  },
+  "C3": {
+   "institution": "one of: Asklepios-ASB Krankenhaus Radeberg; Diakonissenkrankenhaus Dresden; Krankenhaus St. Joseph Stift Dresden; St. Elisabethen-Krankenhaus Ravensburg (centre-number mapping not stated)",
+   "table1": "public; adult; 42 recordings; STORZ IMAGE1 S; 25 fps",
+   "hospital": null,
+   "department": null,
+   "basis": "Table 1 'public'; the text lists four public hospitals without numbering them"
+  },
+  "C4": {
+   "institution": "one of: Asklepios-ASB Krankenhaus Radeberg; Diakonissenkrankenhaus Dresden; Krankenhaus St. Joseph Stift Dresden; St. Elisabethen-Krankenhaus Ravensburg (centre-number mapping not stated)",
+   "table1": "public; pediatric and adult; 71 recordings; STORZ IMAGE1 S / B. Braun AESCULAP EinsteinVision; 50 fps",
+   "hospital": null,
+   "department": null,
+   "basis": "Table 1 'public'; the text lists four public hospitals without numbering them"
+  },
+  "C5": {
+   "institution": "one of: Asklepios-ASB Krankenhaus Radeberg; Diakonissenkrankenhaus Dresden; Krankenhaus St. Joseph Stift Dresden; St. Elisabethen-Krankenhaus Ravensburg (centre-number mapping not stated)",
+   "table1": "public; adult; 118 recordings; Richard Wolf ENDOCAM 4K; 50 fps",
+   "hospital": null,
+   "department": null,
+   "basis": "Table 1 'public'; the text lists four public hospitals without numbering them"
+  }
+ },
+ "centre_quotes": [
+  {
+   "quote": "The participating centers comprise four public hospitals (Asklepios-ASB Krankenhaus Radeberg, Diakonissenkrankenhaus Dresden, Krankenhaus St. Joseph Stift Dresden, St. Elisabethen-Krankenhaus Ravensburg) and one academic surgical department (Department of Pediatric Surgery, University Hospital Carl Gustav Carus Dresden).",
+   "copy": "/media/user/LaCie/medvideo_gate/DS213/appendix300_scidata_PMC13263317.txt",
+   "verified": true
+  },
+  {
+   "quote": "Table 1 Recording infrastructure and technical details of the dataset for all contributing centers. Center Characteristics Center 1 Center 2 Center 3 Center 4 Center 5 Clinical Institution public academic public public public Patient Demographics adult pediatric adult pediatric and adult adult",
+   "copy": "/media/user/LaCie/medvideo_gate/DS213/appendix300_scidata_PMC13263317.txt",
+   "verified": true
+  },
+  {
+   "quote": "video data from 325 laparoscopic appendectomies and 5 non-appendectomy laparoscopic surgeries were gathered at five German surgical centers.",
+   "copy": "/media/user/LaCie/medvideo_gate/DS213/appendix300_scidata_PMC13263317.txt",
+   "verified": true
+  },
+  {
+   "quote": "Department of General, Visceral and Thoracic Surgery, St. Elisabethen-Klinikum Ravensburg, Ravensburg, Germany",
+   "copy": "/media/user/LaCie/medvideo_gate/DS213/appendix300_scidata_PMC13263317.txt",
+   "verified": true
+  },
+  {
+   "quote": "**Multicenter Data:** Data from five distinct surgical centers.",
+   "copy": "/media/user/LaCie/medvideo_gate/DS203/archive/readme_Appendix300.md",
+   "verified": true
+  }
+ ],
+ "pdf_text_check": {
+  "The participating centers comprise four public hospitals (As": true,
+  "Table 1 Recording infrastructure and technical details of th": false
+ },
+ "descriptor_sha256": {
+  "/media/user/LaCie/medvideo_gate/DS213/appendix300_scidata_PMC13263317.txt": "c53e572cfbf3fd7806bb065b64bca7b74a2944fe73f73ff5f28402b1d9c12f57",
+  "/media/user/LaCie/medvideo_gate/DS203/s41597-026-07593-6.pdf.raw.txt": "f114c23d9bc5fdd79587acc65566c1242324649594f9afa30287cd7a0105bb7c",
+  "/media/user/LaCie/medvideo_gate/DS203/archive/readme_Appendix300.md": "67603fad0e38289339473e7f156c7c5c21fc354ac2a191abf66031eb21764ea8"
+ },
+ "rows": [
+  {
+   "candidate": "Endo-FM",
+   "arm": "primary",
+   "note": "",
+   "cells": {
+    "C1": "UNK-site",
+    "C2": "UNK-site",
+    "C3": "UNK-site",
+    "C4": "UNK-site",
+    "C5": "UNK-site"
+   },
+   "sources": [
+    {
+     "key": "colonoscopic",
+     "source": "Colonoscopic (Mesejo et al. 2016)",
+     "cls": "clinical, recording site not stated",
+     "institution": "not obtainable (archived dataset page lists only affiliations: CHU Estaing Clermont-Ferrand; Clinique de la Sauvegarde Lyon)",
+     "quotes": [
+      {
+       "quote": "(4) Department of Gastroenterology, CHU Estaing, 63100 Clermont-Ferrand, France. (5) Clinique de la Sauvegarde, 69009 Lyon, France.",
+       "copy": "data_audit/lead/fm_sources/datasets/colonoscopic__wayback_page.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "sun",
+     "source": "SUN / SUN-SEG",
+     "cls": "hospital named",
+     "institution": "Showa University Northern Yokohama Hospital (SUN-SEG also names Nagoya University)",
+     "quotes": [
+      {
+       "quote": "The database comprises of still images of videos, which are collected at the Showa University Northern Yokohama Hospital.",
+       "copy": "data_audit/lead/fm_sources/datasets/sun__dataset_page.txt",
+       "verified": true
+      },
+      {
+       "quote": "consecutive colonoscopy videos taken at a university hospital between October 2018 and January 2019",
+       "copy": "data_audit/lead/fm_sources/datasets/sun__pubmed_efetch.txt",
+       "verified": true
+      },
+      {
+       "quote": "Digestive Disease Center, Showa University Northern Yokohama Hospital, Yokohama, Japan.",
+       "copy": "data_audit/lead/fm_sources/datasets/sun__pubmed_efetch.txt",
+       "verified": true
+      },
+      {
+       "quote": "The colonoscopy videos in our SUN-SEG are from Showa University and Nagoya University database (also named SUN-database [3])",
+       "copy": "data_audit/lead/fm_sources/datasets/sunseg__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "ldpolyp",
+     "source": "LDPolypVideo",
+     "cls": "clinical, recording site not stated",
+     "institution": "not obtainable (paper behind bot challenge; README names no hospital)",
+     "quotes": [
+      {
+       "quote": "Our database contains 160 colonoscopy videos and 40,266 frames in total with polyp annotations",
+       "copy": "data_audit/lead/fm_sources/datasets/ldpolypvideo__github_readme.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "hyperkvasir",
+     "source": "Hyper-Kvasir",
+     "cls": "hospital named",
+     "institution": "Baerum Hospital, Vestre Viken Hospital Trust, Norway",
+     "quotes": [
+      {
+       "quote": "The data is collected during real gastro- and colonoscopy examinations at B\u00e6rum Hospital in Norway",
+       "copy": "data_audit/lead/fm_sources/datasets/hyperkvasir__scidata.txt",
+       "verified": true
+      },
+      {
+       "quote": "at the Department of Gastroenterology, B\u00e6rum Hospital, Vestre Viken Hospital Trust, Norway",
+       "copy": "data_audit/lead/fm_sources/datasets/hyperkvasir__scidata.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "kvasircap",
+     "source": "Kvasir-Capsule",
+     "cls": "hospital named",
+     "institution": "Baerum Hospital, Vestre Viken Hospital Trust, Norway",
+     "quotes": [
+      {
+       "quote": "The VCE videos were collected from consecutive clinical examinations performed at the Department of Medicine, B\u00e6rum Hospital, Vestre Viken Hospital Trust in Norway",
+       "copy": "data_audit/lead/fm_sources/datasets/kvasircapsule__scidata.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "cholect50",
+     "source": "CholecTriplet / CholecT50",
+     "cls": "clinical, recording site not stated",
+     "institution": "45 videos = Cholec80 (Strasbourg); 5 in-house (Cholec120) videos, site not restated",
+     "quotes": [
+      {
+       "quote": "The dataset is a collection of 50 videos consisting of 45 videos from the Cholec80 dataset (Twinanda et al., 2017) and 5 videos from an in-house dataset of the same surgical procedure.",
+       "copy": "data_audit/lead/fm_sources/datasets/cholect50__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The videos of CholecT45 are part of the Cholec80 [6] dataset. The remaining videos of CholecT50 are part of the Cholec120 - a superset of Cholec80 dataset.",
+       "copy": "data_audit/lead/fm_sources/datasets/cholect45__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "All the videos in the trainval are drawn from the publicly available Cholec80 [6] dataset. Nevertheless, the testing set containing 5 videos are not in the public domain.",
+       "copy": "data_audit/lead/fm_sources/datasets/cholect45__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "renji",
+     "source": "Endo-FM private set",
+     "cls": "hospital named",
+     "institution": "Baoshan Branch of Renji Hospital, Shanghai",
+     "quotes": [
+      {
+       "quote": "combining 9 publicly available datasets and a privately collected dataset from Baoshan Branch of Renji Hospital in Shanghai, China.",
+       "copy": "data_audit/lead/fm_sources/primary/endofm_arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "kinetics",
+     "source": "Kinetics-400/600/700",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed YouTube human-action benchmark",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "We utilize 6 public and 1 private datasets for pre-training and 3 datasets as the downstream tasks.",
+     "copy": "data_audit/lead/fm_sources/primary/endofm_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "Colonoscopic [19] SUN [20] & SUN-SEG [13] LDPolypVideo [18] Hyper-Kvasir [5] Kvasir-Capsule [31] CholecTriplet [24]",
+     "copy": "data_audit/lead/fm_sources/primary/endofm_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "We collect all possible public endoscope video datasets and a new one from Baoshan Branch of Renji Hospital for pre-training.",
+     "copy": "data_audit/lead/fm_sources/primary/endofm_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "wget -P checkpoints/ https://github.com/kahnchana/svt/releases/download/v1.0/kinetics400_vitb_ssl.pth",
+     "copy": "data_audit/lead/fm_sources/primary/endofm_github_readme.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [],
+   "site_not_stated": [
+    "Colonoscopic (Mesejo et al. 2016)",
+    "LDPolypVideo",
+    "CholecTriplet / CholecT50"
+   ]
+  },
+  {
+   "candidate": "EndoViT",
+   "arm": "primary",
+   "note": "",
+   "cells": {
+    "C1": "UNK-site",
+    "C2": "SAME HOSP (DSAD) + UNK-site",
+    "C3": "UNK-site",
+    "C4": "UNK-site",
+    "C5": "UNK-site"
+   },
+   "sources": [
+    {
+     "key": "heico",
+     "source": "HeiCo / ROBUST-MIS",
+     "cls": "hospital named",
+     "institution": "Heidelberg University Hospital, Department of Surgery",
+     "quotes": [
+      {
+       "quote": "Data acquisition took place during daily routine procedures in the integrated operating room KARL STORZ OR1 FUSION\u00ae (KARL STORZ SE & Co KG, Tuttlingen, Germany) at Heidelberg University Hospital, Department of Surgery",
+       "copy": "data_audit/lead/fm_sources/datasets/heico__scidata.txt",
+       "verified": true
+      },
+      {
+       "quote": "we acquired data from only one hospital",
+       "copy": "data_audit/lead/fm_sources/datasets/heico__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The data set presented in this paper served as a basis for the Robust Medical Instrument Segmentation (ROBUST-MIS) challenge",
+       "copy": "data_audit/lead/fm_sources/datasets/heico__scidata.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "cholec80",
+     "source": "Cholec80",
+     "cls": "hospital named",
+     "institution": "University Hospital of Strasbourg",
+     "quotes": [
+      {
+       "quote": "we build a large dataset of cholecystectomy videos containing 80 videos recorded at the University Hospital of Strasbourg",
+       "copy": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "the videos in Cholec80 come from one hospital",
+       "copy": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "psiava",
+     "source": "PSI-AVA",
+     "cls": "hospital named",
+     "institution": "Fundacion Santa Fe de Bogota",
+     "quotes": [
+      {
+       "quote": "The endoscopic videos were collected at Fundaci\u00f3n Santaf\u00e9 de Bogot\u00e1 during eight radical prostatectomy surgeries",
+       "copy": "data_audit/lead/fm_sources/datasets/psiava__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "esad",
+     "source": "ESAD",
+     "cls": "hospital named",
+     "institution": "San Raffaele Hospital, Milan",
+     "quotes": [
+      {
+       "quote": "ESAD is composed by four videos of radical prostatectomy procedures conducted on patients, which were collected as part of the EU funded SARAS project by San Raffaele Hospital.",
+       "copy": "data_audit/lead/fm_sources/datasets/esad_saras__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "San Raffaele Hospital, Milan, Italy",
+       "copy": "data_audit/lead/fm_sources/datasets/esad_saras__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "we collected four complete prostatectomy procedure with the consent of the patients and hospital",
+       "copy": "data_audit/lead/fm_sources/datasets/esad__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "lapgyn4",
+     "source": "LapGyn4",
+     "cls": "clinical, recording site not stated",
+     "institution": "not stated (dataset page: originator Prof. J. Keckstein; Zenodo affiliation Ulm University)",
+     "quotes": [
+      {
+       "quote": "taken from 500+ gynecologic laparoscopic surgeries",
+       "copy": "data_audit/lead/fm_sources/datasets/lapgyn4__dataset_page.txt",
+       "verified": true
+      },
+      {
+       "quote": "you may directly contact the originator of the videos, Prof. Dr. J\u00f6rg Keckstein",
+       "copy": "data_audit/lead/fm_sources/datasets/lapgyn4__dataset_page.txt",
+       "verified": true
+      },
+      {
+       "quote": "\"name\": \"J\\u00f6rg Keckstein\", \"affiliation\": \"University Ulm, Medizinische Fakult\\u00e4t\"",
+       "copy": "data_audit/lead/fm_sources/datasets/lapgyn4__zenodo_api.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "hsdb_chole",
+     "source": "hSDB-instrument / hSDB-Chole (cholecystectomy part)",
+     "cls": "hospital named",
+     "institution": "subset of Cholec80 (Strasbourg)",
+     "quotes": [
+      {
+       "quote": "The original videos of cholecystectomy included in the hSDB-instrument dataset were a subset of the Cholec80 dataset [5].",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The original videos of gastrectomy for gastric cancer, included in the hSDBinstrument dataset, consist of 24 robotic surgery recordings by experienced specialists.",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "Department of Surgery, Yonsei University College of Medicine, Seoul, Republic of Korea",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "hsdb_gastric",
+     "source": "hSDB-instrument / hSDB-Gastric (gastrectomy part)",
+     "cls": "clinical, recording site not stated",
+     "institution": "not stated (authors: hutom; Yonsei University College of Medicine, Seoul)",
+     "quotes": [
+      {
+       "quote": "The original videos of cholecystectomy included in the hSDB-instrument dataset were a subset of the Cholec80 dataset [5].",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The original videos of gastrectomy for gastric cancer, included in the hSDBinstrument dataset, consist of 24 robotic surgery recordings by experienced specialists.",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "Department of Surgery, Yonsei University College of Medicine, Seoul, Republic of Korea",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "dsad",
+     "source": "DSAD (Dresden Surgical Anatomy Dataset)",
+     "cls": "hospital named",
+     "institution": "University Hospital Carl Gustav Carus Dresden; Department of Visceral, Thoracic and Vascular Surgery (rectal surgery; department per author affiliation)",
+     "quotes": [
+      {
+       "quote": "video data from a total of 32 robot-assisted anterior rectal resections or rectal extirpations performed at the University Hospital Carl Gustav Carus Dresden was gathered",
+       "copy": "data_audit/lead/fm_sources/primary/dsad_scidata.txt",
+       "verified": true
+      },
+      {
+       "quote": "Department of Visceral, Thoracic and Vascular Surgery, University Hospital and Faculty of Medicine Carl Gustav Carus, Technische Universit\u00e4t Dresden, Dresden, Germany Matthias Carstens",
+       "copy": "data_audit/lead/fm_sources/primary/dsad_scidata.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "glenda",
+     "source": "GLENDA v1.0",
+     "cls": "clinical, recording site not stated",
+     "institution": "not stated (author affiliations Klagenfurt / LMU Munich / Ulm; originator J. Keckstein)",
+     "quotes": [
+      {
+       "quote": "GLENDA is a multi-faceted endometriosis dataset that has been extracted from over 400 gynecologic laparoscopy videos",
+       "copy": "data_audit/lead/fm_sources/datasets/glenda__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "you may directly contact the originator of the videos, Prof. Dr. J\u00f6rg Keckstein",
+       "copy": "data_audit/lead/fm_sources/datasets/glenda__dataset_page.txt",
+       "verified": true
+      },
+      {
+       "quote": "Medical Faculty, Ulm University, Ulm 89081, Germany",
+       "copy": "data_audit/lead/fm_sources/datasets/glenda__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "sa160",
+     "source": "SurgicalActions160",
+     "cls": "clinical, recording site not stated",
+     "institution": "not stated (originator Prof. J. Keckstein)",
+     "quotes": [
+      {
+       "quote": "The dataset contains 160 short video clips showing typical surgical actions in gynecologic laparoscopy.",
+       "copy": "data_audit/lead/fm_sources/datasets/surgicalactions160__dataset_page.txt",
+       "verified": true
+      },
+      {
+       "quote": "you may directly contact the originator of the videos, Prof. Dr. J\u00f6rg Keckstein",
+       "copy": "data_audit/lead/fm_sources/datasets/surgicalactions160__dataset_page.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "imagenet",
+     "source": "ImageNet (initialisation)",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed image benchmark",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "we introduce Endo700k, a collection of 9 publicly available endoscopic datasets comprising more than 700,000 unlabelled images.",
+     "copy": "data_audit/lead/fm_sources/primary/endovit_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "Table 1 An overview of the individual datasets that form the Endo700k dataset Dataset Surgery type # Surg. # Unique images ESAD [ 3 ] Robot-assisted radical prostatectomy 4 49,544 LapGyn4 (v1.2) [ 15 ] Gynecologic laparoscopy >500 38,192 Surgical Actions160 [ 23 ] Gynecologic laparoscopy 59 761 GLENDA (v1.0) [ 14 ] Gynecologic laparoscopy >400 1,083 hSDB instrument [ 30 ] Laparoscopic cholecystectomy 24 35,576 Robotic gastrectomy 24 HeiCo [ 18 ] Laparoscopic proctocolectomy 10 347,257 Laparoscopic rectal resection 10 Laparoscopic sigmoid resection 10 PSI-AVA [ 27 ] Robot-assisted radical prostatectomy 8 73,618 DSAD [ 4 ] Robot-assisted rectal resection 32 13,195 Cholec80 [ 26 ] Laparoscopic cholecystectomy 80 184,498",
+     "copy": "data_audit/lead/fm_sources/primary/endovit_pmc_fulltext.txt",
+     "verified": true
+    },
+    {
+     "quote": "Outside the previously mentioned exceptions, we use all of the images from the nine datasets.",
+     "copy": "data_audit/lead/fm_sources/primary/endovit_pmc_fulltext.txt",
+     "verified": true
+    },
+    {
+     "quote": "Consequently, our pre-training uses ImageNet weights as a starting point.",
+     "copy": "data_audit/lead/fm_sources/primary/endovit_github_readme.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [],
+   "site_not_stated": [
+    "LapGyn4",
+    "hSDB-instrument / hSDB-Gastric (gastrectomy part)",
+    "GLENDA v1.0",
+    "SurgicalActions160"
+   ]
+  },
+  {
+   "candidate": "SurgeNetXL",
+   "arm": "primary",
+   "note": "",
+   "cells": {
+    "C1": "UNK-web",
+    "C2": "SAME HOSP (DSAD) + UNK-web",
+    "C3": "UNK-web",
+    "C4": "UNK-web",
+    "C5": "UNK-web"
+   },
+   "sources": [
+    {
+     "key": "cholec80",
+     "source": "Cholec80",
+     "cls": "hospital named",
+     "institution": "University Hospital of Strasbourg",
+     "quotes": [
+      {
+       "quote": "we build a large dataset of cholecystectomy videos containing 80 videos recorded at the University Hospital of Strasbourg",
+       "copy": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "the videos in Cholec80 come from one hospital",
+       "copy": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "heichole",
+     "source": "HeiChole",
+     "cls": "hospital named",
+     "institution": "Heidelberg University Hospital; Salem Hospital Heidelberg; GRN-hospital Sinsheim",
+     "quotes": [
+      {
+       "quote": "laparoscopic cholecystectomies from three surgical centers in Germany",
+       "copy": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The operation videos at Heidelberg University Hospital (n=15) were recorded with a laparoscopic 2D camera",
+       "copy": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The operation videos at Salem Hospital (n=15) and the GRN-hospital Sinsheim (n=3) were recorded with the laparoscopic 2D camera ENDOCAM Logic HD",
+       "copy": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "Department of Surgery, Salem Hospital of the Evangelische Stadtmission Heidelberg, Zeppelinstrasse 11-33, 69121 Heidelberg, Germany",
+       "copy": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "hsdb_chole",
+     "source": "hSDB-instrument / hSDB-Chole (cholecystectomy part)",
+     "cls": "hospital named",
+     "institution": "subset of Cholec80 (Strasbourg)",
+     "quotes": [
+      {
+       "quote": "The original videos of cholecystectomy included in the hSDB-instrument dataset were a subset of the Cholec80 dataset [5].",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The original videos of gastrectomy for gastric cancer, included in the hSDBinstrument dataset, consist of 24 robotic surgery recordings by experienced specialists.",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "Department of Surgery, Yonsei University College of Medicine, Seoul, Republic of Korea",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "ramie",
+     "source": "RAMIE-UMCU (private)",
+     "cls": "hospital named",
+     "institution": "University Medical Center Utrecht",
+     "quotes": [
+      {
+       "quote": "another containing robot-assisted minimally invasive esophagectomy (RAMIE) procedures from the University Medical Center Utrecht (UMCU)",
+       "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "esad",
+     "source": "ESAD",
+     "cls": "hospital named",
+     "institution": "San Raffaele Hospital, Milan",
+     "quotes": [
+      {
+       "quote": "ESAD is composed by four videos of radical prostatectomy procedures conducted on patients, which were collected as part of the EU funded SARAS project by San Raffaele Hospital.",
+       "copy": "data_audit/lead/fm_sources/datasets/esad_saras__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "San Raffaele Hospital, Milan, Italy",
+       "copy": "data_audit/lead/fm_sources/datasets/esad_saras__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "we collected four complete prostatectomy procedure with the consent of the patients and hospital",
+       "copy": "data_audit/lead/fm_sources/datasets/esad__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "psiava",
+     "source": "PSI-AVA",
+     "cls": "hospital named",
+     "institution": "Fundacion Santa Fe de Bogota",
+     "quotes": [
+      {
+       "quote": "The endoscopic videos were collected at Fundaci\u00f3n Santaf\u00e9 de Bogot\u00e1 during eight radical prostatectomy surgeries",
+       "copy": "data_audit/lead/fm_sources/datasets/psiava__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "rarp_avl",
+     "source": "RARP-AvL (private)",
+     "cls": "hospital named",
+     "institution": "Antoni van Leeuwenhoek Hospital, Amsterdam",
+     "quotes": [
+      {
+       "quote": "one comprising robot-assisted radical prostatectomy (RARP) procedures sourced from the Antoni van Leeuwenhoek Hospital (AvL) in Amsterdam",
+       "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "dsad",
+     "source": "DSAD (Dresden Surgical Anatomy Dataset)",
+     "cls": "hospital named",
+     "institution": "University Hospital Carl Gustav Carus Dresden; Department of Visceral, Thoracic and Vascular Surgery (rectal surgery; department per author affiliation)",
+     "quotes": [
+      {
+       "quote": "video data from a total of 32 robot-assisted anterior rectal resections or rectal extirpations performed at the University Hospital Carl Gustav Carus Dresden was gathered",
+       "copy": "data_audit/lead/fm_sources/primary/dsad_scidata.txt",
+       "verified": true
+      },
+      {
+       "quote": "Department of Visceral, Thoracic and Vascular Surgery, University Hospital and Faculty of Medicine Carl Gustav Carus, Technische Universit\u00e4t Dresden, Dresden, Germany Matthias Carstens",
+       "copy": "data_audit/lead/fm_sources/primary/dsad_scidata.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "glenda",
+     "source": "GLENDA v1.0",
+     "cls": "clinical, recording site not stated",
+     "institution": "not stated (author affiliations Klagenfurt / LMU Munich / Ulm; originator J. Keckstein)",
+     "quotes": [
+      {
+       "quote": "GLENDA is a multi-faceted endometriosis dataset that has been extracted from over 400 gynecologic laparoscopy videos",
+       "copy": "data_audit/lead/fm_sources/datasets/glenda__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "you may directly contact the originator of the videos, Prof. Dr. J\u00f6rg Keckstein",
+       "copy": "data_audit/lead/fm_sources/datasets/glenda__dataset_page.txt",
+       "verified": true
+      },
+      {
+       "quote": "Medical Faculty, Ulm University, Ulm 89081, Germany",
+       "copy": "data_audit/lead/fm_sources/datasets/glenda__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "lapgyn4",
+     "source": "LapGyn4",
+     "cls": "clinical, recording site not stated",
+     "institution": "not stated (dataset page: originator Prof. J. Keckstein; Zenodo affiliation Ulm University)",
+     "quotes": [
+      {
+       "quote": "taken from 500+ gynecologic laparoscopic surgeries",
+       "copy": "data_audit/lead/fm_sources/datasets/lapgyn4__dataset_page.txt",
+       "verified": true
+      },
+      {
+       "quote": "you may directly contact the originator of the videos, Prof. Dr. J\u00f6rg Keckstein",
+       "copy": "data_audit/lead/fm_sources/datasets/lapgyn4__dataset_page.txt",
+       "verified": true
+      },
+      {
+       "quote": "\"name\": \"J\\u00f6rg Keckstein\", \"affiliation\": \"University Ulm, Medizinische Fakult\\u00e4t\"",
+       "copy": "data_audit/lead/fm_sources/datasets/lapgyn4__zenodo_api.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "mbp140",
+     "source": "MultiBypass140",
+     "cls": "hospital named",
+     "institution": "University Hospital of Strasbourg; Inselspital, Bern University Hospital",
+     "quotes": [
+      {
+       "quote": "surgeries performed at two medical centers, i.e., the University Hospital of Strasbourg, France (StrasBypass70) and Inselspital, Bern University Hospital, Switzerland (BernBypass70)",
+       "copy": "data_audit/lead/fm_sources/datasets/multibypass140__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "hsdb_gastric",
+     "source": "hSDB-instrument / hSDB-Gastric (gastrectomy part)",
+     "cls": "clinical, recording site not stated",
+     "institution": "not stated (authors: hutom; Yonsei University College of Medicine, Seoul)",
+     "quotes": [
+      {
+       "quote": "The original videos of cholecystectomy included in the hSDB-instrument dataset were a subset of the Cholec80 dataset [5].",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The original videos of gastrectomy for gastric cancer, included in the hSDBinstrument dataset, consist of 24 robotic surgery recordings by experienced specialists.",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "Department of Surgery, Yonsei University College of Medicine, Seoul, Republic of Korea",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "surgtoolloc",
+     "source": "SurgToolLoc2022",
+     "cls": "non-clinical (animal / phantom / bench), site not stated",
+     "institution": "porcine da Vinci training exercises; location not stated",
+     "quotes": [
+      {
+       "quote": "Video and system data were harvested from surgical training exercises performed on the da Vinci robotic system.",
+       "copy": "data_audit/lead/fm_sources/datasets/surgtoolloc__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The training exercises that generated the data were performed on two distinct animal modalities, either an anesthetized living pig, or using organs harvested from a pig.",
+       "copy": "data_audit/lead/fm_sources/datasets/surgtoolloc__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "imagenet",
+     "source": "ImageNet (initialisation)",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed image benchmark",
+     "quotes": []
+    },
+    {
+     "key": "yt_surgenet",
+     "source": "Surgical YouTube dataset (SurgeNetXL)",
+     "cls": "web-scale",
+     "institution": "YouTube; uploading institutions not itemised",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "| **SurgeNetCholec** | Cholec80 ([Twinnanda et al., 2017b](https://arxiv.org/abs/1602.03012)) | Laparoscopic Cholecystectomy | 76 | 179,164 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | HeiChole ([Maier-Hein et al., 2021](https://www.synapse.org/Synapse:syn25101790/wiki/608802)) | Laparoscopic Cholecystectomy | 30 | 53,427 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **SurgeNetRAMIE** | RAMIE-UMCU | RA Esophagectomy | 28 | 377,287 | No |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | RARP-AvL | RA Prostatectomy | 8 | 261,516 | No |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **Others** | DSAD ([Carstens et al., 2023](https://www.nature.com/articles/s41597-022-01719-2)) | RA Rectal Resection/Extirpation | 32 | 14,623 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | MultiBypass140 ([Lavanchy et al., 2024](https://github.com/CAMMA-public/MultiBypass140)) | Laparoscopic Gastric Bypass Surgery | 140 | 749,419 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | SurgToolLoc2022 ([Zia et al., 2023](https://arxiv.org/abs/2305.07152)) | 11 different RA porcine procedures | N/A | 741,516 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | YouTube [ours](https://huggingface.co/datasets/TimJaspersTue/SurgeNetYoutube) | 23 identified procedures | 3,253 | 2,074,234 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **SurgeNetXL** | All of the above | All of the above | \\>4598 | 4,711,024 | Partly |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "Following the pipeline described in Schmidgall et al. (2024), we extract 680 hours of surgical video footage from YouTube, sampled at 1 frame per second (fps).",
+     "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "We initiate pretraining from ImageNet-initialized weights as recommended by Ramesh et al. (2023)",
+     "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [
+    "Surgical YouTube dataset (SurgeNetXL)"
+   ],
+   "site_not_stated": [
+    "GLENDA v1.0",
+    "LapGyn4",
+    "hSDB-instrument / hSDB-Gastric (gastrectomy part)"
+   ]
+  },
+  {
+   "candidate": "SurgeNet / SurgeNetPublic",
+   "arm": "primary",
+   "note": "SurgeNetPublic = public sets only (DSAD included)",
+   "cells": {
+    "C1": "UNK-site",
+    "C2": "SAME HOSP (DSAD) + UNK-site",
+    "C3": "UNK-site",
+    "C4": "UNK-site",
+    "C5": "UNK-site"
+   },
+   "sources": [
+    {
+     "key": "cholec80",
+     "source": "Cholec80",
+     "cls": "hospital named",
+     "institution": "University Hospital of Strasbourg",
+     "quotes": [
+      {
+       "quote": "we build a large dataset of cholecystectomy videos containing 80 videos recorded at the University Hospital of Strasbourg",
+       "copy": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "the videos in Cholec80 come from one hospital",
+       "copy": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "heichole",
+     "source": "HeiChole",
+     "cls": "hospital named",
+     "institution": "Heidelberg University Hospital; Salem Hospital Heidelberg; GRN-hospital Sinsheim",
+     "quotes": [
+      {
+       "quote": "laparoscopic cholecystectomies from three surgical centers in Germany",
+       "copy": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The operation videos at Heidelberg University Hospital (n=15) were recorded with a laparoscopic 2D camera",
+       "copy": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The operation videos at Salem Hospital (n=15) and the GRN-hospital Sinsheim (n=3) were recorded with the laparoscopic 2D camera ENDOCAM Logic HD",
+       "copy": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "Department of Surgery, Salem Hospital of the Evangelische Stadtmission Heidelberg, Zeppelinstrasse 11-33, 69121 Heidelberg, Germany",
+       "copy": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "hsdb_chole",
+     "source": "hSDB-instrument / hSDB-Chole (cholecystectomy part)",
+     "cls": "hospital named",
+     "institution": "subset of Cholec80 (Strasbourg)",
+     "quotes": [
+      {
+       "quote": "The original videos of cholecystectomy included in the hSDB-instrument dataset were a subset of the Cholec80 dataset [5].",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The original videos of gastrectomy for gastric cancer, included in the hSDBinstrument dataset, consist of 24 robotic surgery recordings by experienced specialists.",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "Department of Surgery, Yonsei University College of Medicine, Seoul, Republic of Korea",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "ramie",
+     "source": "RAMIE-UMCU (private)",
+     "cls": "hospital named",
+     "institution": "University Medical Center Utrecht",
+     "quotes": [
+      {
+       "quote": "another containing robot-assisted minimally invasive esophagectomy (RAMIE) procedures from the University Medical Center Utrecht (UMCU)",
+       "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "esad",
+     "source": "ESAD",
+     "cls": "hospital named",
+     "institution": "San Raffaele Hospital, Milan",
+     "quotes": [
+      {
+       "quote": "ESAD is composed by four videos of radical prostatectomy procedures conducted on patients, which were collected as part of the EU funded SARAS project by San Raffaele Hospital.",
+       "copy": "data_audit/lead/fm_sources/datasets/esad_saras__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "San Raffaele Hospital, Milan, Italy",
+       "copy": "data_audit/lead/fm_sources/datasets/esad_saras__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "we collected four complete prostatectomy procedure with the consent of the patients and hospital",
+       "copy": "data_audit/lead/fm_sources/datasets/esad__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "psiava",
+     "source": "PSI-AVA",
+     "cls": "hospital named",
+     "institution": "Fundacion Santa Fe de Bogota",
+     "quotes": [
+      {
+       "quote": "The endoscopic videos were collected at Fundaci\u00f3n Santaf\u00e9 de Bogot\u00e1 during eight radical prostatectomy surgeries",
+       "copy": "data_audit/lead/fm_sources/datasets/psiava__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "rarp_avl",
+     "source": "RARP-AvL (private)",
+     "cls": "hospital named",
+     "institution": "Antoni van Leeuwenhoek Hospital, Amsterdam",
+     "quotes": [
+      {
+       "quote": "one comprising robot-assisted radical prostatectomy (RARP) procedures sourced from the Antoni van Leeuwenhoek Hospital (AvL) in Amsterdam",
+       "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "dsad",
+     "source": "DSAD (Dresden Surgical Anatomy Dataset)",
+     "cls": "hospital named",
+     "institution": "University Hospital Carl Gustav Carus Dresden; Department of Visceral, Thoracic and Vascular Surgery (rectal surgery; department per author affiliation)",
+     "quotes": [
+      {
+       "quote": "video data from a total of 32 robot-assisted anterior rectal resections or rectal extirpations performed at the University Hospital Carl Gustav Carus Dresden was gathered",
+       "copy": "data_audit/lead/fm_sources/primary/dsad_scidata.txt",
+       "verified": true
+      },
+      {
+       "quote": "Department of Visceral, Thoracic and Vascular Surgery, University Hospital and Faculty of Medicine Carl Gustav Carus, Technische Universit\u00e4t Dresden, Dresden, Germany Matthias Carstens",
+       "copy": "data_audit/lead/fm_sources/primary/dsad_scidata.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "glenda",
+     "source": "GLENDA v1.0",
+     "cls": "clinical, recording site not stated",
+     "institution": "not stated (author affiliations Klagenfurt / LMU Munich / Ulm; originator J. Keckstein)",
+     "quotes": [
+      {
+       "quote": "GLENDA is a multi-faceted endometriosis dataset that has been extracted from over 400 gynecologic laparoscopy videos",
+       "copy": "data_audit/lead/fm_sources/datasets/glenda__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "you may directly contact the originator of the videos, Prof. Dr. J\u00f6rg Keckstein",
+       "copy": "data_audit/lead/fm_sources/datasets/glenda__dataset_page.txt",
+       "verified": true
+      },
+      {
+       "quote": "Medical Faculty, Ulm University, Ulm 89081, Germany",
+       "copy": "data_audit/lead/fm_sources/datasets/glenda__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "lapgyn4",
+     "source": "LapGyn4",
+     "cls": "clinical, recording site not stated",
+     "institution": "not stated (dataset page: originator Prof. J. Keckstein; Zenodo affiliation Ulm University)",
+     "quotes": [
+      {
+       "quote": "taken from 500+ gynecologic laparoscopic surgeries",
+       "copy": "data_audit/lead/fm_sources/datasets/lapgyn4__dataset_page.txt",
+       "verified": true
+      },
+      {
+       "quote": "you may directly contact the originator of the videos, Prof. Dr. J\u00f6rg Keckstein",
+       "copy": "data_audit/lead/fm_sources/datasets/lapgyn4__dataset_page.txt",
+       "verified": true
+      },
+      {
+       "quote": "\"name\": \"J\\u00f6rg Keckstein\", \"affiliation\": \"University Ulm, Medizinische Fakult\\u00e4t\"",
+       "copy": "data_audit/lead/fm_sources/datasets/lapgyn4__zenodo_api.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "mbp140",
+     "source": "MultiBypass140",
+     "cls": "hospital named",
+     "institution": "University Hospital of Strasbourg; Inselspital, Bern University Hospital",
+     "quotes": [
+      {
+       "quote": "surgeries performed at two medical centers, i.e., the University Hospital of Strasbourg, France (StrasBypass70) and Inselspital, Bern University Hospital, Switzerland (BernBypass70)",
+       "copy": "data_audit/lead/fm_sources/datasets/multibypass140__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "hsdb_gastric",
+     "source": "hSDB-instrument / hSDB-Gastric (gastrectomy part)",
+     "cls": "clinical, recording site not stated",
+     "institution": "not stated (authors: hutom; Yonsei University College of Medicine, Seoul)",
+     "quotes": [
+      {
+       "quote": "The original videos of cholecystectomy included in the hSDB-instrument dataset were a subset of the Cholec80 dataset [5].",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The original videos of gastrectomy for gastric cancer, included in the hSDBinstrument dataset, consist of 24 robotic surgery recordings by experienced specialists.",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "Department of Surgery, Yonsei University College of Medicine, Seoul, Republic of Korea",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "surgtoolloc",
+     "source": "SurgToolLoc2022",
+     "cls": "non-clinical (animal / phantom / bench), site not stated",
+     "institution": "porcine da Vinci training exercises; location not stated",
+     "quotes": [
+      {
+       "quote": "Video and system data were harvested from surgical training exercises performed on the da Vinci robotic system.",
+       "copy": "data_audit/lead/fm_sources/datasets/surgtoolloc__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The training exercises that generated the data were performed on two distinct animal modalities, either an anesthetized living pig, or using organs harvested from a pig.",
+       "copy": "data_audit/lead/fm_sources/datasets/surgtoolloc__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "imagenet",
+     "source": "ImageNet (initialisation)",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed image benchmark",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "| **SurgeNetCholec** | Cholec80 ([Twinnanda et al., 2017b](https://arxiv.org/abs/1602.03012)) | Laparoscopic Cholecystectomy | 76 | 179,164 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | HeiChole ([Maier-Hein et al., 2021](https://www.synapse.org/Synapse:syn25101790/wiki/608802)) | Laparoscopic Cholecystectomy | 30 | 53,427 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **SurgeNetRAMIE** | RAMIE-UMCU | RA Esophagectomy | 28 | 377,287 | No |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | RARP-AvL | RA Prostatectomy | 8 | 261,516 | No |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **Others** | DSAD ([Carstens et al., 2023](https://www.nature.com/articles/s41597-022-01719-2)) | RA Rectal Resection/Extirpation | 32 | 14,623 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | MultiBypass140 ([Lavanchy et al., 2024](https://github.com/CAMMA-public/MultiBypass140)) | Laparoscopic Gastric Bypass Surgery | 140 | 749,419 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | SurgToolLoc2022 ([Zia et al., 2023](https://arxiv.org/abs/2305.07152)) | 11 different RA porcine procedures | N/A | 741,516 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **SurgeNetPublic** | All public datasets (excluding YouTube & private datasets) | All of the above (excluding YouTube & RA Esophagectomy) | \\>1238 | 1,997,987 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **SurgeNet** | All of the above (excluding YouTube) | All of the above (excluding YouTube) | \\>1345 | 2,636,790 | Partly |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [],
+   "site_not_stated": [
+    "GLENDA v1.0",
+    "LapGyn4",
+    "hSDB-instrument / hSDB-Gastric (gastrectomy part)"
+   ]
+  },
+  {
+   "candidate": "  SurgeNetCholec variant",
+   "arm": "primary",
+   "note": "procedure subset of the SurgeNet row",
+   "cells": {
+    "C1": "NO",
+    "C2": "NO",
+    "C3": "NO",
+    "C4": "NO",
+    "C5": "NO"
+   },
+   "sources": [
+    {
+     "key": "cholec80",
+     "source": "Cholec80",
+     "cls": "hospital named",
+     "institution": "University Hospital of Strasbourg",
+     "quotes": [
+      {
+       "quote": "we build a large dataset of cholecystectomy videos containing 80 videos recorded at the University Hospital of Strasbourg",
+       "copy": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "the videos in Cholec80 come from one hospital",
+       "copy": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "heichole",
+     "source": "HeiChole",
+     "cls": "hospital named",
+     "institution": "Heidelberg University Hospital; Salem Hospital Heidelberg; GRN-hospital Sinsheim",
+     "quotes": [
+      {
+       "quote": "laparoscopic cholecystectomies from three surgical centers in Germany",
+       "copy": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The operation videos at Heidelberg University Hospital (n=15) were recorded with a laparoscopic 2D camera",
+       "copy": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The operation videos at Salem Hospital (n=15) and the GRN-hospital Sinsheim (n=3) were recorded with the laparoscopic 2D camera ENDOCAM Logic HD",
+       "copy": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "Department of Surgery, Salem Hospital of the Evangelische Stadtmission Heidelberg, Zeppelinstrasse 11-33, 69121 Heidelberg, Germany",
+       "copy": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "hsdb_chole",
+     "source": "hSDB-instrument / hSDB-Chole (cholecystectomy part)",
+     "cls": "hospital named",
+     "institution": "subset of Cholec80 (Strasbourg)",
+     "quotes": [
+      {
+       "quote": "The original videos of cholecystectomy included in the hSDB-instrument dataset were a subset of the Cholec80 dataset [5].",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The original videos of gastrectomy for gastric cancer, included in the hSDBinstrument dataset, consist of 24 robotic surgery recordings by experienced specialists.",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "Department of Surgery, Yonsei University College of Medicine, Seoul, Republic of Korea",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "imagenet",
+     "source": "ImageNet (initialisation)",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed image benchmark",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "| **SurgeNetCholec** | Cholec80 ([Twinnanda et al., 2017b](https://arxiv.org/abs/1602.03012)) | Laparoscopic Cholecystectomy | 76 | 179,164 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | HeiChole ([Maier-Hein et al., 2021](https://www.synapse.org/Synapse:syn25101790/wiki/608802)) | Laparoscopic Cholecystectomy | 30 | 53,427 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **SurgeNetRAMIE** | RAMIE-UMCU | RA Esophagectomy | 28 | 377,287 | No |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | RARP-AvL | RA Prostatectomy | 8 | 261,516 | No |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **Others** | DSAD ([Carstens et al., 2023](https://www.nature.com/articles/s41597-022-01719-2)) | RA Rectal Resection/Extirpation | 32 | 14,623 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | MultiBypass140 ([Lavanchy et al., 2024](https://github.com/CAMMA-public/MultiBypass140)) | Laparoscopic Gastric Bypass Surgery | 140 | 749,419 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | SurgToolLoc2022 ([Zia et al., 2023](https://arxiv.org/abs/2305.07152)) | 11 different RA porcine procedures | N/A | 741,516 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **SurgeNetPublic** | All public datasets (excluding YouTube & private datasets) | All of the above (excluding YouTube & RA Esophagectomy) | \\>1238 | 1,997,987 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **SurgeNet** | All of the above (excluding YouTube) | All of the above (excluding YouTube) | \\>1345 | 2,636,790 | Partly |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "  SurgeNetRAMIE variant",
+   "arm": "primary",
+   "note": "procedure subset",
+   "cells": {
+    "C1": "NO",
+    "C2": "NO",
+    "C3": "NO",
+    "C4": "NO",
+    "C5": "NO"
+   },
+   "sources": [
+    {
+     "key": "ramie",
+     "source": "RAMIE-UMCU (private)",
+     "cls": "hospital named",
+     "institution": "University Medical Center Utrecht",
+     "quotes": [
+      {
+       "quote": "another containing robot-assisted minimally invasive esophagectomy (RAMIE) procedures from the University Medical Center Utrecht (UMCU)",
+       "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "imagenet",
+     "source": "ImageNet (initialisation)",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed image benchmark",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "| **SurgeNetCholec** | Cholec80 ([Twinnanda et al., 2017b](https://arxiv.org/abs/1602.03012)) | Laparoscopic Cholecystectomy | 76 | 179,164 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | HeiChole ([Maier-Hein et al., 2021](https://www.synapse.org/Synapse:syn25101790/wiki/608802)) | Laparoscopic Cholecystectomy | 30 | 53,427 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **SurgeNetRAMIE** | RAMIE-UMCU | RA Esophagectomy | 28 | 377,287 | No |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | RARP-AvL | RA Prostatectomy | 8 | 261,516 | No |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **Others** | DSAD ([Carstens et al., 2023](https://www.nature.com/articles/s41597-022-01719-2)) | RA Rectal Resection/Extirpation | 32 | 14,623 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | MultiBypass140 ([Lavanchy et al., 2024](https://github.com/CAMMA-public/MultiBypass140)) | Laparoscopic Gastric Bypass Surgery | 140 | 749,419 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | SurgToolLoc2022 ([Zia et al., 2023](https://arxiv.org/abs/2305.07152)) | 11 different RA porcine procedures | N/A | 741,516 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **SurgeNetPublic** | All public datasets (excluding YouTube & private datasets) | All of the above (excluding YouTube & RA Esophagectomy) | \\>1238 | 1,997,987 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **SurgeNet** | All of the above (excluding YouTube) | All of the above (excluding YouTube) | \\>1345 | 2,636,790 | Partly |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "  SurgeNetRARP variant",
+   "arm": "primary",
+   "note": "procedure subset",
+   "cells": {
+    "C1": "NO",
+    "C2": "NO",
+    "C3": "NO",
+    "C4": "NO",
+    "C5": "NO"
+   },
+   "sources": [
+    {
+     "key": "rarp_avl",
+     "source": "RARP-AvL (private)",
+     "cls": "hospital named",
+     "institution": "Antoni van Leeuwenhoek Hospital, Amsterdam",
+     "quotes": [
+      {
+       "quote": "one comprising robot-assisted radical prostatectomy (RARP) procedures sourced from the Antoni van Leeuwenhoek Hospital (AvL) in Amsterdam",
+       "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "imagenet",
+     "source": "ImageNet (initialisation)",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed image benchmark",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "| **SurgeNetCholec** | Cholec80 ([Twinnanda et al., 2017b](https://arxiv.org/abs/1602.03012)) | Laparoscopic Cholecystectomy | 76 | 179,164 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | HeiChole ([Maier-Hein et al., 2021](https://www.synapse.org/Synapse:syn25101790/wiki/608802)) | Laparoscopic Cholecystectomy | 30 | 53,427 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **SurgeNetRAMIE** | RAMIE-UMCU | RA Esophagectomy | 28 | 377,287 | No |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | RARP-AvL | RA Prostatectomy | 8 | 261,516 | No |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **Others** | DSAD ([Carstens et al., 2023](https://www.nature.com/articles/s41597-022-01719-2)) | RA Rectal Resection/Extirpation | 32 | 14,623 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | MultiBypass140 ([Lavanchy et al., 2024](https://github.com/CAMMA-public/MultiBypass140)) | Laparoscopic Gastric Bypass Surgery | 140 | 749,419 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| | SurgToolLoc2022 ([Zia et al., 2023](https://arxiv.org/abs/2305.07152)) | 11 different RA porcine procedures | N/A | 741,516 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **SurgeNetPublic** | All public datasets (excluding YouTube & private datasets) | All of the above (excluding YouTube & RA Esophagectomy) | \\>1238 | 1,997,987 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| **SurgeNet** | All of the above (excluding YouTube) | All of the above (excluding YouTube) | \\>1345 | 2,636,790 | Partly |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "SurgVLP / HecVL / PeskaVLP",
+   "arm": "primary",
+   "note": "",
+   "cells": {
+    "C1": "UNK-web",
+    "C2": "UNK-web",
+    "C3": "UNK-web",
+    "C4": "UNK-web",
+    "C5": "UNK-web"
+   },
+   "sources": [
+    {
+     "key": "svl",
+     "source": "SVL lectures (WebSurg, EAES, YouTube)",
+     "cls": "web-scale",
+     "institution": "web lecture platforms; originating hospitals not itemised",
+     "quotes": []
+    },
+    {
+     "key": "imagenet",
+     "source": "ImageNet (initialisation)",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed image benchmark",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "we query the videos based on keywords from three online platforms, i.e., Websurg (Websurg, 2023), EAES (EAES, 2023), and YouTube (YouTube, 2023).",
+     "copy": "data_audit/lead/fm_sources/primary/surgvlp_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "For Websurg, we use \u201cintervention\u201d and \u201claparoscopic\u201d as keywords to crawl 1, 124 surgical lectures.",
+     "copy": "data_audit/lead/fm_sources/primary/surgvlp_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "For EAES and YouTube, we manually collect 202 surgical video lectures using manually designed keywords.",
+     "copy": "data_audit/lead/fm_sources/primary/surgvlp_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "Pretraining dataset: we use the surgical lecture videos from the Surgical Video Lecture dataset (SVL) for the pretraining, which was proposed by the SurgVLP [22].",
+     "copy": "data_audit/lead/fm_sources/primary/hecvl_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "In this work, we use this hierarchical video-language pretraining dataset and perform hierarchical knowledge augmentation to improve the textual quality.",
+     "copy": "data_audit/lead/fm_sources/primary/peskavlp_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "In total, we collect 1, 326 lectures for the pre-training set.",
+     "copy": "data_audit/lead/fm_sources/primary/surgvlp_arxiv_pdf.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [
+    "SVL lectures (WebSurg, EAES, YouTube)"
+   ],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "EndoMamba",
+   "arm": "primary",
+   "note": "VideoMamba-S teacher = distillation target only",
+   "cells": {
+    "C1": "UNK-site",
+    "C2": "UNK-site",
+    "C3": "UNK-site",
+    "C4": "UNK-site",
+    "C5": "UNK-site"
+   },
+   "sources": [
+    {
+     "key": "colonoscopic",
+     "source": "Colonoscopic (Mesejo et al. 2016)",
+     "cls": "clinical, recording site not stated",
+     "institution": "not obtainable (archived dataset page lists only affiliations: CHU Estaing Clermont-Ferrand; Clinique de la Sauvegarde Lyon)",
+     "quotes": [
+      {
+       "quote": "(4) Department of Gastroenterology, CHU Estaing, 63100 Clermont-Ferrand, France. (5) Clinique de la Sauvegarde, 69009 Lyon, France.",
+       "copy": "data_audit/lead/fm_sources/datasets/colonoscopic__wayback_page.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "sun",
+     "source": "SUN / SUN-SEG",
+     "cls": "hospital named",
+     "institution": "Showa University Northern Yokohama Hospital (SUN-SEG also names Nagoya University)",
+     "quotes": [
+      {
+       "quote": "The database comprises of still images of videos, which are collected at the Showa University Northern Yokohama Hospital.",
+       "copy": "data_audit/lead/fm_sources/datasets/sun__dataset_page.txt",
+       "verified": true
+      },
+      {
+       "quote": "consecutive colonoscopy videos taken at a university hospital between October 2018 and January 2019",
+       "copy": "data_audit/lead/fm_sources/datasets/sun__pubmed_efetch.txt",
+       "verified": true
+      },
+      {
+       "quote": "Digestive Disease Center, Showa University Northern Yokohama Hospital, Yokohama, Japan.",
+       "copy": "data_audit/lead/fm_sources/datasets/sun__pubmed_efetch.txt",
+       "verified": true
+      },
+      {
+       "quote": "The colonoscopy videos in our SUN-SEG are from Showa University and Nagoya University database (also named SUN-database [3])",
+       "copy": "data_audit/lead/fm_sources/datasets/sunseg__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "ldpolyp",
+     "source": "LDPolypVideo",
+     "cls": "clinical, recording site not stated",
+     "institution": "not obtainable (paper behind bot challenge; README names no hospital)",
+     "quotes": [
+      {
+       "quote": "Our database contains 160 colonoscopy videos and 40,266 frames in total with polyp annotations",
+       "copy": "data_audit/lead/fm_sources/datasets/ldpolypvideo__github_readme.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "hyperkvasir",
+     "source": "Hyper-Kvasir",
+     "cls": "hospital named",
+     "institution": "Baerum Hospital, Vestre Viken Hospital Trust, Norway",
+     "quotes": [
+      {
+       "quote": "The data is collected during real gastro- and colonoscopy examinations at B\u00e6rum Hospital in Norway",
+       "copy": "data_audit/lead/fm_sources/datasets/hyperkvasir__scidata.txt",
+       "verified": true
+      },
+      {
+       "quote": "at the Department of Gastroenterology, B\u00e6rum Hospital, Vestre Viken Hospital Trust, Norway",
+       "copy": "data_audit/lead/fm_sources/datasets/hyperkvasir__scidata.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "kvasircap",
+     "source": "Kvasir-Capsule",
+     "cls": "hospital named",
+     "institution": "Baerum Hospital, Vestre Viken Hospital Trust, Norway",
+     "quotes": [
+      {
+       "quote": "The VCE videos were collected from consecutive clinical examinations performed at the Department of Medicine, B\u00e6rum Hospital, Vestre Viken Hospital Trust in Norway",
+       "copy": "data_audit/lead/fm_sources/datasets/kvasircapsule__scidata.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "cholect50",
+     "source": "CholecTriplet / CholecT50",
+     "cls": "clinical, recording site not stated",
+     "institution": "45 videos = Cholec80 (Strasbourg); 5 in-house (Cholec120) videos, site not restated",
+     "quotes": [
+      {
+       "quote": "The dataset is a collection of 50 videos consisting of 45 videos from the Cholec80 dataset (Twinanda et al., 2017) and 5 videos from an in-house dataset of the same surgical procedure.",
+       "copy": "data_audit/lead/fm_sources/datasets/cholect50__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The videos of CholecT45 are part of the Cholec80 [6] dataset. The remaining videos of CholecT50 are part of the Cholec120 - a superset of Cholec80 dataset.",
+       "copy": "data_audit/lead/fm_sources/datasets/cholect45__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "All the videos in the trainval are drawn from the publicly available Cholec80 [6] dataset. Nevertheless, the testing set containing 5 videos are not in the public domain.",
+       "copy": "data_audit/lead/fm_sources/datasets/cholect45__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "renji",
+     "source": "Endo-FM private set",
+     "cls": "hospital named",
+     "institution": "Baoshan Branch of Renji Hospital, Shanghai",
+     "quotes": [
+      {
+       "quote": "combining 9 publicly available datasets and a privately collected dataset from Baoshan Branch of Renji Hospital in Shanghai, China.",
+       "copy": "data_audit/lead/fm_sources/primary/endofm_arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "glenda",
+     "source": "GLENDA v1.0",
+     "cls": "clinical, recording site not stated",
+     "institution": "not stated (author affiliations Klagenfurt / LMU Munich / Ulm; originator J. Keckstein)",
+     "quotes": [
+      {
+       "quote": "GLENDA is a multi-faceted endometriosis dataset that has been extracted from over 400 gynecologic laparoscopy videos",
+       "copy": "data_audit/lead/fm_sources/datasets/glenda__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "you may directly contact the originator of the videos, Prof. Dr. J\u00f6rg Keckstein",
+       "copy": "data_audit/lead/fm_sources/datasets/glenda__dataset_page.txt",
+       "verified": true
+      },
+      {
+       "quote": "Medical Faculty, Ulm University, Ulm 89081, Germany",
+       "copy": "data_audit/lead/fm_sources/datasets/glenda__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "hsdb_chole",
+     "source": "hSDB-instrument / hSDB-Chole (cholecystectomy part)",
+     "cls": "hospital named",
+     "institution": "subset of Cholec80 (Strasbourg)",
+     "quotes": [
+      {
+       "quote": "The original videos of cholecystectomy included in the hSDB-instrument dataset were a subset of the Cholec80 dataset [5].",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The original videos of gastrectomy for gastric cancer, included in the hSDBinstrument dataset, consist of 24 robotic surgery recordings by experienced specialists.",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "Department of Surgery, Yonsei University College of Medicine, Seoul, Republic of Korea",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "hsdb_gastric",
+     "source": "hSDB-instrument / hSDB-Gastric (gastrectomy part)",
+     "cls": "clinical, recording site not stated",
+     "institution": "not stated (authors: hutom; Yonsei University College of Medicine, Seoul)",
+     "quotes": [
+      {
+       "quote": "The original videos of cholecystectomy included in the hSDB-instrument dataset were a subset of the Cholec80 dataset [5].",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The original videos of gastrectomy for gastric cancer, included in the hSDBinstrument dataset, consist of 24 robotic surgery recordings by experienced specialists.",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "Department of Surgery, Yonsei University College of Medicine, Seoul, Republic of Korea",
+       "copy": "data_audit/lead/fm_sources/datasets/hsdb__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "endomapper",
+     "source": "EndoMapper",
+     "cls": "hospital named",
+     "institution": "Hospital Clinico Universitario Lozano Blesa, Zaragoza",
+     "quotes": [
+      {
+       "quote": "The acquisition of the sequences in the dataset was performed in the Hospital Clinico Universitario Lozano Blesa, in Zaragoza (Spain)",
+       "copy": "data_audit/lead/fm_sources/datasets/endomapper__scidata.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "heico",
+     "source": "HeiCo / ROBUST-MIS",
+     "cls": "hospital named",
+     "institution": "Heidelberg University Hospital, Department of Surgery",
+     "quotes": [
+      {
+       "quote": "Data acquisition took place during daily routine procedures in the integrated operating room KARL STORZ OR1 FUSION\u00ae (KARL STORZ SE & Co KG, Tuttlingen, Germany) at Heidelberg University Hospital, Department of Surgery",
+       "copy": "data_audit/lead/fm_sources/datasets/heico__scidata.txt",
+       "verified": true
+      },
+      {
+       "quote": "we acquired data from only one hospital",
+       "copy": "data_audit/lead/fm_sources/datasets/heico__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The data set presented in this paper served as a basis for the Robust Medical Instrument Segmentation (ROBUST-MIS) challenge",
+       "copy": "data_audit/lead/fm_sources/datasets/heico__scidata.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "endomamba_pb",
+     "source": "EndoMamba porcine bronchoscopy",
+     "cls": "non-clinical (animal / phantom / bench), site not stated",
+     "institution": "authors' porcine dataset; location not stated",
+     "quotes": [
+      {
+       "quote": "one from our porcine bronchoscopy dataset (PB)",
+       "copy": "data_audit/lead/fm_sources/primary/endomamba_arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "Our full pre-training dataset MIX12 consists of 74,828 video clips, comprising a total of 11,303,853 frames.",
+     "copy": "data_audit/lead/fm_sources/primary/endomamba_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "This includes MIX7 (shared with EndoFM), four curated from public datasets, and one from our porcine bronchoscopy dataset (PB), as detailed in Table 1 and Fig. 2.",
+     "copy": "data_audit/lead/fm_sources/primary/endomamba_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "MIX7 Source CS [16] S&S [17,9] LP [15] Additional to MIX12 HK [3] KC [25] CT [18] EFM [32] G [10] hS [34] EM [1] R [23] PB",
+     "copy": "data_audit/lead/fm_sources/primary/endomamba_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "- [EndoFM](https://github.com/med-air/Endo-FM) - [GLENDA v1.0](https://ftp.itec.aau.at/datasets/GLENDA/v1_0/index.html) - [hSDB-instrument](https://hsdb-instrument.github.io/) - [EndoMapper](https://www.synapse.org/Synapse:syn26707219/wiki/615178) - [ROBUST-MIS](https://www.synapse.org/Synapse:syn18779624)",
+     "copy": "data_audit/lead/fm_sources/primary/endomamba_github_readme.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [],
+   "site_not_stated": [
+    "Colonoscopic (Mesejo et al. 2016)",
+    "LDPolypVideo",
+    "CholecTriplet / CholecT50",
+    "GLENDA v1.0",
+    "hSDB-instrument / hSDB-Gastric (gastrectomy part)"
+   ]
+  },
+  {
+   "candidate": "LemonFM",
+   "arm": "primary",
+   "note": "",
+   "cells": {
+    "C1": "UNK-web",
+    "C2": "UNK-web",
+    "C3": "UNK-web",
+    "C4": "UNK-web",
+    "C5": "UNK-web"
+   },
+   "sources": [
+    {
+     "key": "lemon",
+     "source": "LEMON (YouTube)",
+     "cls": "web-scale",
+     "institution": "YouTube; uploading institutions not itemised; oEmbed check of the 252 appendectomy entries found no DS203 institution keyword",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "Inspired by works [1, 11, 19, 50, 70], we collected our videos from YouTube. For each of the 35 procedures, we searched for videos of their robotic and non-robotic variants using the strings \u201crobotic <procedure type>\u201d and \u201claparoscopic <procedure type>\u201d, respectively.",
+     "copy": "data_audit/lead/fm_sources/primary/lemon_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "the final LEMON dataset consisted of 4194 surgical videos across 35 distinct procedure types, with 94% in 1280 \u00d7 720 resolution",
+     "copy": "data_audit/lead/fm_sources/primary/lemon_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "[*LEMON*](https://huggingface.co/datasets/visurg/LEMON) is a dataset of over 4K surgical high-resolution videos totaling 938 hours from 35 diverse surgical procedure types.",
+     "copy": "data_audit/lead/fm_sources/primary/lemon_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "\"procedureName\": [ \"appendectomy\" ], \"robotic\": false, \"title\": \"Laparoscopic Appendectomy\", \"youtubeId\": \"IG-uQUSyGC8\"",
+     "copy": "data_audit/lead/fm_sources/primary/lemon_github_labels.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [
+    "LEMON (YouTube)"
+   ],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "EndoSSL (laparoscopy weights)",
+   "arm": "primary",
+   "note": "NO rests on the geographic statement (Israel)",
+   "cells": {
+    "C1": "NO",
+    "C2": "NO",
+    "C3": "NO",
+    "C4": "NO",
+    "C5": "NO"
+   },
+   "sources": [
+    {
+     "key": "endossl_lap",
+     "source": "EndoSSL Private Laparoscopy",
+     "cls": "unnamed centres, geography stated",
+     "institution": "eight unnamed medical centres in Israel",
+     "quotes": [
+      {
+       "quote": "The dataset consists of 7,877 videos recorded at eight different medical centers in Israel.",
+       "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "The dataset consists of 7,877 videos recorded at eight different medical centers in Israel. The dataset predominantly consists of the following procedures: cholecystectomy (35%), appendectomy (20%), herniorrhaphy (12%), colectomy (6%), and bariatric surgery (5%).",
+     "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "We have curated a dataset comprising 13,979 colonoscopy videos of patients aged 18 years or older. These videos were recorded during standard colonoscopy procedures performed at six different medical centers between the years 2019 and 2022.",
+     "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "EndoSSL (colonoscopy weights)",
+   "arm": "primary",
+   "note": "",
+   "cells": {
+    "C1": "UNK-site",
+    "C2": "UNK-site",
+    "C3": "UNK-site",
+    "C4": "UNK-site",
+    "C5": "UNK-site"
+   },
+   "sources": [
+    {
+     "key": "endossl_colon",
+     "source": "EndoSSL Private Colonoscopy",
+     "cls": "clinical, recording site not stated",
+     "institution": "six unnamed medical centres, location not stated",
+     "quotes": [
+      {
+       "quote": "These videos were recorded during standard colonoscopy procedures performed at six different medical centers between the years 2019 and 2022.",
+       "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "The dataset consists of 7,877 videos recorded at eight different medical centers in Israel. The dataset predominantly consists of the following procedures: cholecystectomy (35%), appendectomy (20%), herniorrhaphy (12%), colectomy (6%), and bariatric surgery (5%).",
+     "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "We have curated a dataset comprising 13,979 colonoscopy videos of patients aged 18 years or older. These videos were recorded during standard colonoscopy procedures performed at six different medical centers between the years 2019 and 2022.",
+     "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [],
+   "site_not_stated": [
+    "EndoSSL Private Colonoscopy"
+   ]
+  },
+  {
+   "candidate": "SelfSupSurg",
+   "arm": "primary",
+   "note": "",
+   "cells": {
+    "C1": "NO",
+    "C2": "NO",
+    "C3": "NO",
+    "C4": "NO",
+    "C5": "NO"
+   },
+   "sources": [
+    {
+     "key": "cholec80",
+     "source": "Cholec80",
+     "cls": "hospital named",
+     "institution": "University Hospital of Strasbourg",
+     "quotes": [
+      {
+       "quote": "we build a large dataset of cholecystectomy videos containing 80 videos recorded at the University Hospital of Strasbourg",
+       "copy": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "the videos in Cholec80 come from one hospital",
+       "copy": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "imagenet",
+     "source": "ImageNet (initialisation)",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed image benchmark",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "In the hyperparameter study, we perform SSL pretraining on the entire pool of 40 training videos",
+     "copy": "data_audit/lead/fm_sources/primary/selfsupsurg_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "DATA_PATHS: [./datasets/cholec80/labels/train/5fps_100_0.pickle]",
+     "copy": "data_audit/lead/fm_sources/primary/selfsupsurg_cfg_dino.txt",
+     "verified": true
+    },
+    {
+     "quote": "Recommended 2 On On Off 256 300 5 Imagenet fully supervised",
+     "copy": "data_audit/lead/fm_sources/primary/selfsupsurg_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "PARAMS_FILE: \"./checkpoints/defaults/resnet_50/resnet50-19c8e357.pth\"",
+     "copy": "data_audit/lead/fm_sources/primary/selfsupsurg_cfg_dino.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "SurgLIME",
+   "arm": "primary",
+   "note": "",
+   "cells": {
+    "C1": "UNK-web",
+    "C2": "UNK-web",
+    "C3": "UNK-web",
+    "C4": "UNK-web",
+    "C5": "UNK-web"
+   },
+   "sources": [
+    {
+     "key": "lemon",
+     "source": "LEMON (YouTube)",
+     "cls": "web-scale",
+     "institution": "YouTube; uploading institutions not itemised; oEmbed check of the 252 appendectomy entries found no DS203 institution keyword",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "LEMON collection comprises 4194 surgical videos sourced from YouTube",
+     "copy": "data_audit/lead/fm_sources/primary/llmtext_vlp_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "we developed a multi-stage automated pipeline to transform these raw videos into a collection of 54k surgical clips with dense semantic annotations.",
+     "copy": "data_audit/lead/fm_sources/primary/llmtext_vlp_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "We utilize PL-Stitch [5], a surgical vision foundation model (ViT-Base) robustly pre-trained on the large-scale surgical dataset LEMON [6], as our visual foundation.",
+     "copy": "data_audit/lead/fm_sources/primary/llmtext_vlp_arxiv_pdf.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [
+    "LEMON (YouTube)"
+   ],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "PL-Stitch",
+   "arm": "primary",
+   "note": "",
+   "cells": {
+    "C1": "UNK-web",
+    "C2": "UNK-web",
+    "C3": "UNK-web",
+    "C4": "UNK-web",
+    "C5": "UNK-web"
+   },
+   "sources": [
+    {
+     "key": "lemon",
+     "source": "LEMON (YouTube)",
+     "cls": "web-scale",
+     "institution": "YouTube; uploading institutions not itemised; oEmbed check of the 252 appendectomy entries found no DS203 institution keyword",
+     "quotes": []
+    },
+    {
+     "key": "imagenet",
+     "source": "ImageNet (initialisation)",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed image benchmark",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "Initialization can use ImageNet-1K iBOT ViT-B/16",
+     "copy": "data_audit/lead/fm_sources/primary/plstitch_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "by pretraining on LEMON [6]",
+     "copy": "data_audit/lead/fm_sources/primary/plstitch_arxiv_pdf.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [
+    "LEMON (YouTube)"
+   ],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "Basel V-JEPA ViT-L",
+   "arm": "primary",
+   "note": "",
+   "cells": {
+    "C1": "UNK-web",
+    "C2": "UNK-web",
+    "C3": "UNK-web",
+    "C4": "UNK-web",
+    "C5": "UNK-web"
+   },
+   "sources": [
+    {
+     "key": "heico",
+     "source": "HeiCo / ROBUST-MIS",
+     "cls": "hospital named",
+     "institution": "Heidelberg University Hospital, Department of Surgery",
+     "quotes": [
+      {
+       "quote": "Data acquisition took place during daily routine procedures in the integrated operating room KARL STORZ OR1 FUSION\u00ae (KARL STORZ SE & Co KG, Tuttlingen, Germany) at Heidelberg University Hospital, Department of Surgery",
+       "copy": "data_audit/lead/fm_sources/datasets/heico__scidata.txt",
+       "verified": true
+      },
+      {
+       "quote": "we acquired data from only one hospital",
+       "copy": "data_audit/lead/fm_sources/datasets/heico__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The data set presented in this paper served as a basis for the Robust Medical Instrument Segmentation (ROBUST-MIS) challenge",
+       "copy": "data_audit/lead/fm_sources/datasets/heico__scidata.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "cholec80",
+     "source": "Cholec80",
+     "cls": "hospital named",
+     "institution": "University Hospital of Strasbourg",
+     "quotes": [
+      {
+       "quote": "we build a large dataset of cholecystectomy videos containing 80 videos recorded at the University Hospital of Strasbourg",
+       "copy": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "the videos in Cholec80 come from one hospital",
+       "copy": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "mbp140",
+     "source": "MultiBypass140",
+     "cls": "hospital named",
+     "institution": "University Hospital of Strasbourg; Inselspital, Bern University Hospital",
+     "quotes": [
+      {
+       "quote": "surgeries performed at two medical centers, i.e., the University Hospital of Strasbourg, France (StrasBypass70) and Inselspital, Bern University Hospital, Switzerland (BernBypass70)",
+       "copy": "data_audit/lead/fm_sources/datasets/multibypass140__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "videomix2m",
+     "source": "V-JEPA base: VideoMix2M (HowTo100M + Kinetics + SSv2)",
+     "cls": "web-scale",
+     "institution": "HowTo100M = keyword-searched YouTube instructional video",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "In addition to parts of the HeiCo data (see above), we use all videos from the Cholec80 [12] dataset (80 laparoscopic videos of cholecystectomy surgery, 51:15 h) and MultiBypass140 [6] dataset (laparoscopic videos of gastric bypass surgery; 70 videos, 87:56 h, from Inselspital Bern; 70 videos, 129:09 h, from University Hospital Strasbourg) for domain-specific finetuning of V-JEPA",
+     "copy": "data_audit/lead/fm_sources/primary/mlcds_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "V-JEPA\u2019s published weights have been trained on 2 million videos of primarily human everyday activities without special focus on the medical field.",
+     "copy": "data_audit/lead/fm_sources/primary/mlcds_arxiv_pdf.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [
+    "V-JEPA base: VideoMix2M (HowTo100M + Kinetics + SSv2)"
+   ],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "Cosmos-H-Surgical v0.3.1",
+   "arm": "primary",
+   "note": "",
+   "cells": {
+    "C1": "UNK-web",
+    "C2": "UNK-web",
+    "C3": "UNK-web",
+    "C4": "UNK-web",
+    "C5": "UNK-web"
+   },
+   "sources": [
+    {
+     "key": "grasp",
+     "source": "GraSP",
+     "cls": "hospital named",
+     "institution": "Fundacion Santa Fe de Bogota",
+     "quotes": [
+      {
+       "quote": "Radical Prostatectomy at Fundacio\u0301n Santa Fe\u0301 de Bogota\u0301, with their explicit consent for data usage",
+       "copy": "data_audit/lead/fm_sources/datasets/grasp__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "We recorded 13 surgeries of patients undergoing",
+       "copy": "data_audit/lead/fm_sources/datasets/grasp__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "synthetic",
+     "source": "Cosmos-H synthetic cholecystectomy videos",
+     "cls": "undocumented base / init weights",
+     "institution": "generated by the Cosmos-H-Surgical transfer pipeline; control/source inputs not described",
+     "quotes": []
+    },
+    {
+     "key": "cosmos3",
+     "source": "base Cosmos3-Nano",
+     "cls": "undocumented base / init weights",
+     "institution": "general-domain pretraining video not enumerated",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "Cosmos-H-Surgical was trained using GraSP real surgical video and synthetic surgical video data. The synthetic collection contains 12,600 laparoscopic cholecystectomy videos generated through the Cosmos-H-Surgical transfer pipeline. GraSP contributes 15,043 robot-assisted radical prostatectomy videos.",
+     "copy": "data_audit/lead/fm_sources/primary/cosmoshsurg_hf_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "The training collection contains approximately 24,879 videos and the held-out validation collection approximately 2,764 videos.",
+     "copy": "data_audit/lead/fm_sources/primary/cosmoshsurg_hf_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "\"model_name\": \"Qwen/Qwen3-VL-8B-Instruct\",",
+     "copy": "data_audit/lead/fm_sources/primary/cosmoshsurg_hf_config.txt",
+     "verified": true
+    },
+    {
+     "quote": "\"vae_path\": \"pretrained/tokenizers/video/wan2pt2/Wan2.2_VAE.pth\"",
+     "copy": "data_audit/lead/fm_sources/primary/cosmoshsurg_hf_config.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [
+    "Cosmos-H synthetic cholecystectomy videos",
+    "base Cosmos3-Nano"
+   ],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "Cosmos-H-Surgical Predict/Transfer 2.5",
+   "arm": "primary",
+   "note": "",
+   "cells": {
+    "C1": "UNK-web",
+    "C2": "UNK-web",
+    "C3": "UNK-web",
+    "C4": "UNK-web",
+    "C5": "UNK-web"
+   },
+   "sources": [
+    {
+     "key": "cholec80",
+     "source": "Cholec80",
+     "cls": "hospital named",
+     "institution": "University Hospital of Strasbourg",
+     "quotes": [
+      {
+       "quote": "we build a large dataset of cholecystectomy videos containing 80 videos recorded at the University Hospital of Strasbourg",
+       "copy": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "the videos in Cholec80 come from one hospital",
+       "copy": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "cholect50",
+     "source": "CholecTriplet / CholecT50",
+     "cls": "clinical, recording site not stated",
+     "institution": "45 videos = Cholec80 (Strasbourg); 5 in-house (Cholec120) videos, site not restated",
+     "quotes": [
+      {
+       "quote": "The dataset is a collection of 50 videos consisting of 45 videos from the Cholec80 dataset (Twinanda et al., 2017) and 5 videos from an in-house dataset of the same surgical procedure.",
+       "copy": "data_audit/lead/fm_sources/datasets/cholect50__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The videos of CholecT45 are part of the Cholec80 [6] dataset. The remaining videos of CholecT50 are part of the Cholec120 - a superset of Cholec80 dataset.",
+       "copy": "data_audit/lead/fm_sources/datasets/cholect45__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "All the videos in the trainval are drawn from the publicly available Cholec80 [6] dataset. Nevertheless, the testing set containing 5 videos are not in the public domain.",
+       "copy": "data_audit/lead/fm_sources/datasets/cholect45__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "heichole",
+     "source": "HeiChole",
+     "cls": "hospital named",
+     "institution": "Heidelberg University Hospital; Salem Hospital Heidelberg; GRN-hospital Sinsheim",
+     "quotes": [
+      {
+       "quote": "laparoscopic cholecystectomies from three surgical centers in Germany",
+       "copy": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The operation videos at Heidelberg University Hospital (n=15) were recorded with a laparoscopic 2D camera",
+       "copy": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The operation videos at Salem Hospital (n=15) and the GRN-hospital Sinsheim (n=3) were recorded with the laparoscopic 2D camera ENDOCAM Logic HD",
+       "copy": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "Department of Surgery, Salem Hospital of the Evangelische Stadtmission Heidelberg, Zeppelinstrasse 11-33, 69121 Heidelberg, Germany",
+       "copy": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "grasp",
+     "source": "GraSP",
+     "cls": "hospital named",
+     "institution": "Fundacion Santa Fe de Bogota",
+     "quotes": [
+      {
+       "quote": "Radical Prostatectomy at Fundacio\u0301n Santa Fe\u0301 de Bogota\u0301, with their explicit consent for data usage",
+       "copy": "data_audit/lead/fm_sources/datasets/grasp__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "We recorded 13 surgeries of patients undergoing",
+       "copy": "data_audit/lead/fm_sources/datasets/grasp__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "sarrarp50",
+     "source": "SAR-RARP50 (KVLR: KASA subset)",
+     "cls": "hospital named",
+     "institution": "University College Hospital at Westmoreland Street, London",
+     "quotes": [
+      {
+       "quote": "The data were collected at the University College Hospital at Westmoreland Street, London, UK",
+       "copy": "data_audit/lead/fm_sources/datasets/sarrarp50__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "autolaparo",
+     "source": "AutoLaparo",
+     "cls": "hospital named",
+     "institution": "Prince of Wales Hospital, Hong Kong",
+     "quotes": [
+      {
+       "quote": "we collect 21 videos of laparoscopic hysterectomy from Prince of Wales Hospital, Hong Kong",
+       "copy": "data_audit/lead/fm_sources/datasets/autolaparo__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "mbp140",
+     "source": "MultiBypass140",
+     "cls": "hospital named",
+     "institution": "University Hospital of Strasbourg; Inselspital, Bern University Hospital",
+     "quotes": [
+      {
+       "quote": "surgeries performed at two medical centers, i.e., the University Hospital of Strasbourg, France (StrasBypass70) and Inselspital, Bern University Hospital, Switzerland (BernBypass70)",
+       "copy": "data_audit/lead/fm_sources/datasets/multibypass140__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "sa160",
+     "source": "SurgicalActions160",
+     "cls": "clinical, recording site not stated",
+     "institution": "not stated (originator Prof. J. Keckstein)",
+     "quotes": [
+      {
+       "quote": "The dataset contains 160 short video clips showing typical surgical actions in gynecologic laparoscopy.",
+       "copy": "data_audit/lead/fm_sources/datasets/surgicalactions160__dataset_page.txt",
+       "verified": true
+      },
+      {
+       "quote": "you may directly contact the originator of the videos, Prof. Dr. J\u00f6rg Keckstein",
+       "copy": "data_audit/lead/fm_sources/datasets/surgicalactions160__dataset_page.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "suturebot",
+     "source": "SutureBot / dVRK tabletop suturing",
+     "cls": "non-clinical (animal / phantom / bench), site not stated",
+     "institution": "suture-pad phantom on dVRK; location not stated (authors JHU / NVIDIA / Stanford / Toronto)",
+     "quotes": [
+      {
+       "quote": "A Soft Tissue Suture Pad (3-D Med, OH) serves as the task surface",
+       "copy": "data_audit/lead/fm_sources/datasets/suturebot__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "All demonstrations were collected using the standard dVRK teleoperation console",
+       "copy": "data_audit/lead/fm_sources/datasets/suturebot__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "heico",
+     "source": "HeiCo / ROBUST-MIS",
+     "cls": "hospital named",
+     "institution": "Heidelberg University Hospital, Department of Surgery",
+     "quotes": [
+      {
+       "quote": "Data acquisition took place during daily routine procedures in the integrated operating room KARL STORZ OR1 FUSION\u00ae (KARL STORZ SE & Co KG, Tuttlingen, Germany) at Heidelberg University Hospital, Department of Surgery",
+       "copy": "data_audit/lead/fm_sources/datasets/heico__scidata.txt",
+       "verified": true
+      },
+      {
+       "quote": "we acquired data from only one hospital",
+       "copy": "data_audit/lead/fm_sources/datasets/heico__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The data set presented in this paper served as a basis for the Robust Medical Instrument Segmentation (ROBUST-MIS) challenge",
+       "copy": "data_audit/lead/fm_sources/datasets/heico__scidata.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "sata_yt",
+     "source": "SATA 'credentialed YouTube surgical channels'",
+     "cls": "web-scale",
+     "institution": "YouTube",
+     "quotes": []
+    },
+    {
+     "key": "cosmos25",
+     "source": "base Cosmos-Predict2.5-2B / Cosmos-Transfer2.5-2B",
+     "cls": "undocumented base / init weights",
+     "institution": "general-domain pretraining video not enumerated",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "The collection covers thousands of surgical videos and hundreds of thousands of annotated frames across multiple procedure types \u2014 laparoscopic cholecystectomy (Cholec80, CholecT50, HeiChole), robot-assisted radical prostatectomy (GraSP, SAR-RARP50), laparoscopic hysterectomy (AutoLaparo), laparoscopic Roux-en-Y gastric bypass (MultiBypass140), gynecologic laparoscopy (SurgicalActions160), and robotic suturing (SutureBot).",
+     "copy": "data_audit/lead/fm_sources/primary/cosmoshsurg25_hf_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "The commercial-friendly OpenMDW-1.1 checkpoints under `openmdw-1.1/` were trained using the GraSP dataset and synthetic surgical data.",
+     "copy": "data_audit/lead/fm_sources/primary/cosmoshsurg25_hf_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "SATA is curated by aggregating and re-annotating videos from credentialed YouTube surgical channels [32] and publicly available datasets, including GraSP [33], SAR-RARP50 [34], Multiypass140 [35], SurgicalActions160 [36], AutoLaparo [37], and HeiCo [38].",
+     "copy": "data_audit/lead/fm_sources/primary/surgworld_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "Dataset AutoLaparo [37] GraSP [33] HeiCo [38] Multiypass140 [35] SAR-RARP50 [34] SurgicalActions160 [36] YouTube [32] Knotting 47 37 16 1 118 7 68",
+     "copy": "data_audit/lead/fm_sources/primary/surgworld_arxiv_pdf.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [
+    "SATA 'credentialed YouTube surgical channels'",
+    "base Cosmos-Predict2.5-2B / Cosmos-Transfer2.5-2B"
+   ],
+   "site_not_stated": [
+    "CholecTriplet / CholecT50",
+    "SurgicalActions160"
+   ]
+  },
+  {
+   "candidate": "Cosmos-H-Surgical-Simulator",
+   "arm": "primary",
+   "note": "Open-H also holds TUD/NCT Dresden porcine (TUNDRA) data; not in the documented training mixture",
+   "cells": {
+    "C1": "UNK-web",
+    "C2": "UNK-web",
+    "C3": "UNK-web",
+    "C4": "UNK-web",
+    "C5": "UNK-web"
+   },
+   "sources": [
+    {
+     "key": "cmr",
+     "source": "Open-H CMR Versius clinical procedures",
+     "cls": "clinical, recording site not stated",
+     "institution": "unnamed hospitals (institution listed: CMR Surgical)",
+     "quotes": [
+      {
+       "quote": "~26,500+ surgical task demonstrations (plus CMR Versius clinical procedures) spanning 32 datasets, 9 robot embodiments, and 10+ institutions",
+       "copy": "data_audit/lead/fm_sources/primary/cosmoshsurgsim_hf_readme.txt",
+       "verified": true
+      },
+      {
+       "quote": "| CMR Versius | cholecystectomy, hysterectomy, inguinal hernia, prostatectomy | ~17M | 50% |",
+       "copy": "data_audit/lead/fm_sources/primary/cosmoshsurgsim_github_readme.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "openh_labs",
+     "source": "Open-H non-CMR groups",
+     "cls": "non-clinical (animal / phantom / bench), site not stated",
+     "institution": "JHU, JHU LSCR ARCADE, UC Berkeley, Stanford, UCSD, Hamlyn Centre, University of Turin, USTC, Moon Surgical (bench / ex vivo / animal)",
+     "quotes": [
+      {
+       "quote": "| `hamlyn_30hz` | Hamlyn Centre dVRK | **20D** | Hamlyn Centre |",
+       "copy": "data_audit/lead/fm_sources/primary/cosmoshsurgsim_github_readme.txt",
+       "verified": true
+      },
+      {
+       "quote": "| `turin_mitic_ex_vivo` | Turin MITIC | **18D** (no grippers) | University of Turin |",
+       "copy": "data_audit/lead/fm_sources/primary/cosmoshsurgsim_github_readme.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "cosmos25",
+     "source": "base Cosmos-Predict2.5-2B / Cosmos-Transfer2.5-2B",
+     "cls": "undocumented base / init weights",
+     "institution": "general-domain pretraining video not enumerated",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "Training uses **32 datasets across 9 embodiments** from the [Open-H](https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment) collection",
+     "copy": "data_audit/lead/fm_sources/primary/cosmoshsurgsim_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| CMR Versius | cholecystectomy, hysterectomy, inguinal hernia, prostatectomy | ~17M | 50% |",
+     "copy": "data_audit/lead/fm_sources/primary/cosmoshsurgsim_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| dVRK JHU | porcine chole, electrocautery, suturebot (x3), tissue, needle, suturing | ~2.8M | 25% |",
+     "copy": "data_audit/lead/fm_sources/primary/cosmoshsurgsim_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| LSCR ARCADE | Cholecystectomy, cautery | ~183K | 1.7% |",
+     "copy": "data_audit/lead/fm_sources/primary/cosmoshsurgsim_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "| Moon Surgical | moon | ~12K | 0.1% |",
+     "copy": "data_audit/lead/fm_sources/primary/cosmoshsurgsim_github_readme.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [
+    "base Cosmos-Predict2.5-2B / Cosmos-Transfer2.5-2B"
+   ],
+   "site_not_stated": [
+    "Open-H CMR Versius clinical procedures"
+   ]
+  },
+  {
+   "candidate": "Cosmos-H-Dreams",
+   "arm": "primary",
+   "note": "inherits the Simulator; TUNDRA not documented",
+   "cells": {
+    "C1": "UNK-web",
+    "C2": "UNK-web",
+    "C3": "UNK-web",
+    "C4": "UNK-web",
+    "C5": "UNK-web"
+   },
+   "sources": [
+    {
+     "key": "suturebot",
+     "source": "SutureBot / dVRK tabletop suturing",
+     "cls": "non-clinical (animal / phantom / bench), site not stated",
+     "institution": "suture-pad phantom on dVRK; location not stated (authors JHU / NVIDIA / Stanford / Toronto)",
+     "quotes": [
+      {
+       "quote": "A Soft Tissue Suture Pad (3-D Med, OH) serves as the task surface",
+       "copy": "data_audit/lead/fm_sources/datasets/suturebot__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "All demonstrations were collected using the standard dVRK teleoperation console",
+       "copy": "data_audit/lead/fm_sources/datasets/suturebot__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "cmr",
+     "source": "Open-H CMR Versius clinical procedures",
+     "cls": "clinical, recording site not stated",
+     "institution": "unnamed hospitals (institution listed: CMR Surgical)",
+     "quotes": [
+      {
+       "quote": "~26,500+ surgical task demonstrations (plus CMR Versius clinical procedures) spanning 32 datasets, 9 robot embodiments, and 10+ institutions",
+       "copy": "data_audit/lead/fm_sources/primary/cosmoshsurgsim_hf_readme.txt",
+       "verified": true
+      },
+      {
+       "quote": "| CMR Versius | cholecystectomy, hysterectomy, inguinal hernia, prostatectomy | ~17M | 50% |",
+       "copy": "data_audit/lead/fm_sources/primary/cosmoshsurgsim_github_readme.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "openh_labs",
+     "source": "Open-H non-CMR groups",
+     "cls": "non-clinical (animal / phantom / bench), site not stated",
+     "institution": "JHU, JHU LSCR ARCADE, UC Berkeley, Stanford, UCSD, Hamlyn Centre, University of Turin, USTC, Moon Surgical (bench / ex vivo / animal)",
+     "quotes": [
+      {
+       "quote": "| `hamlyn_30hz` | Hamlyn Centre dVRK | **20D** | Hamlyn Centre |",
+       "copy": "data_audit/lead/fm_sources/primary/cosmoshsurgsim_github_readme.txt",
+       "verified": true
+      },
+      {
+       "quote": "| `turin_mitic_ex_vivo` | Turin MITIC | **18D** (no grippers) | University of Turin |",
+       "copy": "data_audit/lead/fm_sources/primary/cosmoshsurgsim_github_readme.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "cosmos25",
+     "source": "base Cosmos-Predict2.5-2B / Cosmos-Transfer2.5-2B",
+     "cls": "undocumented base / init weights",
+     "institution": "general-domain pretraining video not enumerated",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "Dataset: Open-H-Embodiment community-generated dataset (pre-training) and the dVRK tabletop suturing dataset (post-training).",
+     "copy": "data_audit/lead/fm_sources/primary/cosmoshdreams_hf_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "the dVRK suturing dataset introduced by Cosmos-Surg-dVRK: JHU SutureBot suturing and knot-tying data together with converted failure and out-of-distribution episodes",
+     "copy": "data_audit/lead/fm_sources/primary/cosmoshdreams_hf_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "The released model is derived from the public NVIDIA Cosmos-Predict2.5-2B world foundation model for physical AI, and its teacher is warm-started from Cosmos-H-Surgical-Simulator (the Open-H 44D action-conditioned checkpoint).",
+     "copy": "data_audit/lead/fm_sources/primary/cosmoshdreams_hf_readme.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [
+    "base Cosmos-Predict2.5-2B / Cosmos-Transfer2.5-2B"
+   ],
+   "site_not_stated": [
+    "Open-H CMR Versius clinical procedures"
+   ]
+  },
+  {
+   "candidate": "MedSora",
+   "arm": "primary",
+   "note": "",
+   "cells": {
+    "C1": "UNK-web",
+    "C2": "UNK-web",
+    "C3": "UNK-web",
+    "C4": "UNK-web",
+    "C5": "UNK-web"
+   },
+   "sources": [
+    {
+     "key": "colonoscopic",
+     "source": "Colonoscopic (Mesejo et al. 2016)",
+     "cls": "clinical, recording site not stated",
+     "institution": "not obtainable (archived dataset page lists only affiliations: CHU Estaing Clermont-Ferrand; Clinique de la Sauvegarde Lyon)",
+     "quotes": [
+      {
+       "quote": "(4) Department of Gastroenterology, CHU Estaing, 63100 Clermont-Ferrand, France. (5) Clinique de la Sauvegarde, 69009 Lyon, France.",
+       "copy": "data_audit/lead/fm_sources/datasets/colonoscopic__wayback_page.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "cholect50",
+     "source": "CholecTriplet / CholecT50",
+     "cls": "clinical, recording site not stated",
+     "institution": "45 videos = Cholec80 (Strasbourg); 5 in-house (Cholec120) videos, site not restated",
+     "quotes": [
+      {
+       "quote": "The dataset is a collection of 50 videos consisting of 45 videos from the Cholec80 dataset (Twinanda et al., 2017) and 5 videos from an in-house dataset of the same surgical procedure.",
+       "copy": "data_audit/lead/fm_sources/datasets/cholect50__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "The videos of CholecT45 are part of the Cholec80 [6] dataset. The remaining videos of CholecT50 are part of the Cholec120 - a superset of Cholec80 dataset.",
+       "copy": "data_audit/lead/fm_sources/datasets/cholect45__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "All the videos in the trainval are drawn from the publicly available Cholec80 [6] dataset. Nevertheless, the testing set containing 5 videos are not in the public domain.",
+       "copy": "data_audit/lead/fm_sources/datasets/cholect45__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "kvasircap",
+     "source": "Kvasir-Capsule",
+     "cls": "hospital named",
+     "institution": "Baerum Hospital, Vestre Viken Hospital Trust, Norway",
+     "quotes": [
+      {
+       "quote": "The VCE videos were collected from consecutive clinical examinations performed at the Department of Medicine, B\u00e6rum Hospital, Vestre Viken Hospital Trust in Norway",
+       "copy": "data_audit/lead/fm_sources/datasets/kvasircapsule__scidata.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "medsora_vae",
+     "source": "MedSora base '3D causal VAE'",
+     "cls": "undocumented base / init weights",
+     "institution": "pretraining data not named",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "Colonoscopic (Mesejo et al., 2016). The Colonoscopic dataset comprises 210 colonoscopy videos",
+     "copy": "data_audit/lead/fm_sources/primary/medsora_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "we start by using a pre-trained optical flow prediction model RAFT (Teed & Deng, 2020) to track pixel motion across video frames, and employ a self-supervised visual model DINO",
+     "copy": "data_audit/lead/fm_sources/primary/medsora_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "built on the 3D causal VAE",
+     "copy": "data_audit/lead/fm_sources/primary/medsora_arxiv_pdf.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [
+    "MedSora base '3D causal VAE'"
+   ],
+   "site_not_stated": [
+    "Colonoscopic (Mesejo et al. 2016)",
+    "CholecTriplet / CholecT50"
+   ]
+  },
+  {
+   "candidate": "SG2VID",
+   "arm": "primary",
+   "note": "initialisation of U-Net/VQGAN not stated",
+   "cells": {
+    "C1": "NO",
+    "C2": "NO",
+    "C3": "NO",
+    "C4": "NO",
+    "C5": "NO"
+   },
+   "sources": [
+    {
+     "key": "cataract1k",
+     "source": "Cataract-1K",
+     "cls": "hospital named",
+     "institution": "Klinikum Klagenfurt",
+     "quotes": [
+      {
+       "quote": "1000 videos of cataract surgery recorded in Klinikum Klagenfurt, Austria, between 2021 and 2023",
+       "copy": "data_audit/lead/fm_sources/datasets/cataract1k__scidata.txt",
+       "verified": true
+      },
+      {
+       "quote": "The Cataract-1K dataset consists of 1000 videos of cataract surgeries conducted in the eye clinic of Klinikum Klagenfurt from 2021 to 2023.",
+       "copy": "data_audit/lead/fm_sources/datasets/cataract1k__scidata.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "cataracts",
+     "source": "CATARACTS",
+     "cls": "hospital named",
+     "institution": "Brest University Hospital",
+     "quotes": [
+      {
+       "quote": "The challenge relies on a dataset of 50 videos of phacoemulsification cataract surgeries performed in Brest University Hospital between January 22, 2015 and September 10, 2015.",
+       "copy": "data_audit/lead/fm_sources/datasets/cataracts__ucl_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "cholec80",
+     "source": "Cholec80",
+     "cls": "hospital named",
+     "institution": "University Hospital of Strasbourg",
+     "quotes": [
+      {
+       "quote": "we build a large dataset of cholecystectomy videos containing 80 videos recorded at the University Hospital of Strasbourg",
+       "copy": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+       "verified": true
+      },
+      {
+       "quote": "the videos in Cholec80 come from one hospital",
+       "copy": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "These datasets vary significantly in size, containing 1000, 50, and 80 videos, respectively",
+     "copy": "data_audit/lead/fm_sources/primary/sg2vid_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "python sg2vid/taming/main.py --base configs/vae/config_image_autoencoder_vqgan_<dataset_name>.yaml",
+     "copy": "data_audit/lead/fm_sources/primary/sg2vid_github_readme.txt",
+     "verified": true
+    },
+    {
+     "quote": "we leverage pre-trained RAFT [28] and MiDaS [22] models averaged over each component\u2019s region.",
+     "copy": "data_audit/lead/fm_sources/primary/sg2vid_arxiv_pdf.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "KVLR",
+   "arm": "primary",
+   "note": "",
+   "cells": {
+    "C1": "UNK-web",
+    "C2": "UNK-web",
+    "C3": "UNK-web",
+    "C4": "UNK-web",
+    "C5": "UNK-web"
+   },
+   "sources": [
+    {
+     "key": "sarrarp50",
+     "source": "SAR-RARP50 (KVLR: KASA subset)",
+     "cls": "hospital named",
+     "institution": "University College Hospital at Westmoreland Street, London",
+     "quotes": [
+      {
+       "quote": "The data were collected at the University College Hospital at Westmoreland Street, London, UK",
+       "copy": "data_audit/lead/fm_sources/datasets/sarrarp50__arxiv_pdf.txt",
+       "verified": true
+      }
+     ]
+    },
+    {
+     "key": "kvlr_base",
+     "source": "KVLR base video generator",
+     "cls": "undocumented base / init weights",
+     "institution": "not named; data not documented",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "We curate KASA from the SAR-RARP dataset [68], collecting 1,047 surgical scenes with 105,175 frames.",
+     "copy": "data_audit/lead/fm_sources/primary/kvlr_arxiv_pdf.txt",
+     "verified": true
+    },
+    {
+     "quote": "hunyuan_vae.safetensors google/t5-v1_1-xxl/ openai/clip-vit-large-patch14/",
+     "copy": "data_audit/lead/fm_sources/primary/kvlr_github_readme_master.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [
+    "KVLR base video generator"
+   ],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "Open-Sora VAE v1.2",
+   "arm": "secondary",
+   "note": "",
+   "cells": {
+    "C1": "UNK-web",
+    "C2": "UNK-web",
+    "C3": "UNK-web",
+    "C4": "UNK-web",
+    "C5": "UNK-web"
+   },
+   "sources": [
+    {
+     "key": "stock",
+     "source": "Pexels / Pixabay / Mixkit stock video",
+     "cls": "web-scale",
+     "institution": "stock-video websites",
+     "quotes": []
+    },
+    {
+     "key": "sd_vae",
+     "source": "SD / SDXL / SD2.1 image-VAE initialisation",
+     "cls": "undocumented base / init weights",
+     "institution": "image data not documented in the candidate sources",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "The training data is videos from pixels and pixabay, and the training video size is mainly 17 frames, 256x256 resolution.",
+     "copy": "data_audit/lead/fm_sources/secondary/opensora_github_v1.2.0_report_03.md",
+     "verified": true
+    },
+    {
+     "quote": "The 3D VAE was trained for 1.2M steps with a local batch size of 1, using videos from Pexels and Pixabay. The training data primarily consisted of 17-frame clips at a resolution of 256\u00d7256.",
+     "copy": "data_audit/lead/fm_sources/secondary/opensora_arxiv_2412.20404_fulltext.txt",
+     "verified": true
+    },
+    {
+     "quote": "2.1 Data Source The dataset used is all open-sourced to make the model training fully reproducible.",
+     "copy": "data_audit/lead/fm_sources/secondary/opensora_arxiv_2412.20404_fulltext.txt",
+     "verified": true
+    },
+    {
+     "quote": "For Open-Sora 1.2, we conduct mixed training with both images and videos. The main datasets we use are listed below.",
+     "copy": "data_audit/lead/fm_sources/secondary/opensora_github_v1.2.0_datasets.md",
+     "verified": true
+    },
+    {
+     "quote": "Free-license videos, sourced from Pexels, Pixabay, Mixkit, etc.",
+     "copy": "data_audit/lead/fm_sources/secondary/opensora_github_v1.2.0_report_03.md",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [
+    "Pexels / Pixabay / Mixkit stock video",
+    "SD / SDXL / SD2.1 image-VAE initialisation"
+   ],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "VideoMAE",
+   "arm": "secondary",
+   "note": "",
+   "cells": {
+    "C1": "NO",
+    "C2": "NO",
+    "C3": "NO",
+    "C4": "NO",
+    "C5": "NO"
+   },
+   "sources": [
+    {
+     "key": "kinetics",
+     "source": "Kinetics-400/600/700",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed YouTube human-action benchmark",
+     "quotes": []
+    },
+    {
+     "key": "ssv2",
+     "source": "Something-Something v2",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "crowd-sourced action clips",
+     "quotes": []
+    },
+    {
+     "key": "ucf101",
+     "source": "UCF-101",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed action benchmark",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "VideoMAE model pre-trained on Kinetics-400 for 1600 epochs in a self-supervised way.",
+     "copy": "data_audit/lead/fm_sources/secondary/videomae_videomae-base_README.md",
+     "verified": true
+    },
+    {
+     "quote": "VideoMAE model pre-trained on Kinetics-400 for 1600 epochs in a self-supervised way.",
+     "copy": "data_audit/lead/fm_sources/secondary/videomae_videomae-large_README.md",
+     "verified": true
+    },
+    {
+     "quote": "VideoMAE model pre-trained on Something-Something-v2 for 2400 epochs in a self-supervised way.",
+     "copy": "data_audit/lead/fm_sources/secondary/videomae_videomae-base-ssv2_README.md",
+     "verified": true
+    },
+    {
+     "quote": "Here models are self-supervised pre-trained with a masking ratio of 90% for 1600 epochs on Kinetics-400.",
+     "copy": "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+     "verified": true
+    },
+    {
+     "quote": "The Kinetics-400 contains around 240k training videos and 20k validation videos of 10s from 400 classes. The Something-Something V2 is another large-scale video dataset, having around 169k videos for training and 20k videos for validation. In contrast to Kinetics-400, this dataset contains 174 motion-centric action classes.",
+     "copy": "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+     "verified": true
+    },
+    {
+     "quote": "The dataset contains 400 human action classes, with at least 400 video clips for each action. Each clip lasts around 10s and is taken from a different YouTube video.",
+     "copy": "data_audit/lead/fm_sources/secondary/kinetics_arxiv_1705.06950_abs.txt",
+     "verified": true
+    },
+    {
+     "quote": "The database currently contains more than 100,000 videos across 174 classes, which are defined as caption-templates. We also describe the challenges in crowd-sourcing this data at scale.",
+     "copy": "data_audit/lead/fm_sources/secondary/ssv2_arxiv_1706.04261_abs.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "VideoMAE V2",
+   "arm": "secondary",
+   "note": "",
+   "cells": {
+    "C1": "UNK-web",
+    "C2": "UNK-web",
+    "C3": "UNK-web",
+    "C4": "UNK-web",
+    "C5": "UNK-web"
+   },
+   "sources": [
+    {
+     "key": "kinetics",
+     "source": "Kinetics-400/600/700",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed YouTube human-action benchmark",
+     "quotes": []
+    },
+    {
+     "key": "ssv2",
+     "source": "Something-Something v2",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "crowd-sourced action clips",
+     "quotes": []
+    },
+    {
+     "key": "ava",
+     "source": "AVA",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "movies",
+     "quotes": []
+    },
+    {
+     "key": "webvid",
+     "source": "WebVid",
+     "cls": "web-scale",
+     "institution": "scraped from the Internet",
+     "quotes": []
+    },
+    {
+     "key": "instagram",
+     "source": "self-crawled Instagram",
+     "cls": "web-scale",
+     "institution": "Instagram",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "Specifically, our dataset is built by simply selecting videos from the public available datasets of Kinetics [43], Something-Something [31], AVA [32], WebVid2M [5], and our own crawled Instagram dataset.",
+     "copy": "data_audit/lead/fm_sources/secondary/videomaev2_arxiv_2303.16727v2.txt",
+     "verified": true
+    },
+    {
+     "quote": "Table 8. Components of UnlabeledHybrid.",
+     "copy": "data_audit/lead/fm_sources/secondary/videomaev2_arxiv_2303.16727v2.txt",
+     "verified": true
+    },
+    {
+     "quote": "K710 658k YouTube",
+     "copy": "data_audit/lead/fm_sources/secondary/videomaev2_arxiv_2303.16727v2.txt.layout.txt",
+     "verified": true
+    },
+    {
+     "quote": "SSV2 169k Shot from Scripts",
+     "copy": "data_audit/lead/fm_sources/secondary/videomaev2_arxiv_2303.16727v2.txt.layout.txt",
+     "verified": true
+    },
+    {
+     "quote": "AVA 21k Movie",
+     "copy": "data_audit/lead/fm_sources/secondary/videomaev2_arxiv_2303.16727v2.txt.layout.txt",
+     "verified": true
+    },
+    {
+     "quote": "WebVid2M 250k Internet",
+     "copy": "data_audit/lead/fm_sources/secondary/videomaev2_arxiv_2303.16727v2.txt.layout.txt",
+     "verified": true
+    },
+    {
+     "quote": "self-collected 250k Instagram",
+     "copy": "data_audit/lead/fm_sources/secondary/videomaev2_arxiv_2303.16727v2.txt.layout.txt",
+     "verified": true
+    },
+    {
+     "quote": "UnlabeledHybrid 1.348M Multi-Source",
+     "copy": "data_audit/lead/fm_sources/secondary/videomaev2_arxiv_2303.16727v2.txt.layout.txt",
+     "verified": true
+    },
+    {
+     "quote": "WebVid2M. Videos in WebVid2M are scraped from the internet.",
+     "copy": "data_audit/lead/fm_sources/secondary/videomaev2_arxiv_2303.16727v2.txt",
+     "verified": true
+    },
+    {
+     "quote": "We collect videos from the public datasets of Kinetics, Something-Something, AVA, WebVid, and uncurated videos crawled from Instagram.",
+     "copy": "data_audit/lead/fm_sources/secondary/videomaev2_arxiv_2303.16727v2.txt",
+     "verified": true
+    },
+    {
+     "quote": "VideoMAEv2-giant model pre-trained for 1200 epochs in a self-supervised way on UnlabeldHybrid-1M dataset.",
+     "copy": "data_audit/lead/fm_sources/secondary/videomaev2_VideoMAEv2-giant_README.md",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [
+    "WebVid",
+    "self-crawled Instagram"
+   ],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "OmniTokenizer",
+   "arm": "secondary",
+   "note": "",
+   "cells": {
+    "C1": "NO",
+    "C2": "NO",
+    "C3": "NO",
+    "C4": "NO",
+    "C5": "NO"
+   },
+   "sources": [
+    {
+     "key": "imagenet",
+     "source": "ImageNet (initialisation)",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed image benchmark",
+     "quotes": []
+    },
+    {
+     "key": "kinetics",
+     "source": "Kinetics-400/600/700",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed YouTube human-action benchmark",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "| VQVAE | ImageNet + K600 | 1.23 | 25.97 | [imagenet_k600.ckpt](https://huggingface.co/Daniel0724/OmniTokenizer/resolve/main/imagenet_k600.ckpt) |",
+     "copy": "data_audit/lead/fm_sources/secondary/omnitok_github_README.md",
+     "verified": true
+    },
+    {
+     "quote": "| VAE | ImageNet + K600 | 0.78 | 13.02 | [imagenet_k600_vae.ckpt](https://huggingface.co/Daniel0724/OmniTokenizer/resolve/main/imagenet_k600_vae.ckpt) |",
+     "copy": "data_audit/lead/fm_sources/secondary/omnitok_github_README.md",
+     "verified": true
+    },
+    {
+     "quote": "We recommand you to try [imagenet_k600.ckpt](https://huggingface.co/Daniel0724/OmniTokenizer/resolve/main/imagenet_k600.ckpt) as it is trained on large-scale image and video data.",
+     "copy": "data_audit/lead/fm_sources/secondary/omnitok_github_README.md",
+     "verified": true
+    },
+    {
+     "quote": "The training of VQVAE includes two stages: image-only training on a fixed resolution, and image-video joint training on multiple resolutions. After this, finetune the VQVAE model w/ KL loss to obtain a VAE model.",
+     "copy": "data_audit/lead/fm_sources/secondary/omnitok_github_README.md",
+     "verified": true
+    },
+    {
+     "quote": "We evaluate the visual tokenization performance of OmniTokenizer on both image and video datasets, including ImageNet [ 9 ] , CelebA-HQ [ 21 ] , FFHQ [ 22 ] , Kinetics [ 23 , 6 ] , UCF-101 [ 44 ] , Moments-in-Time (MiT) [ 29 ] , and Something-Something v2 (SSV2) [ 15 ] .",
+     "copy": "data_audit/lead/fm_sources/secondary/omnitok_arxiv_2406.09399_fulltext.txt",
+     "verified": true
+    },
+    {
+     "quote": "Unless otherwise stated, the results reported in this paper are jointly trained on ImageNet and UCF-101.",
+     "copy": "data_audit/lead/fm_sources/secondary/omnitok_arxiv_2406.09399_fulltext.txt",
+     "verified": true
+    },
+    {
+     "quote": "We describe an extension of the DeepMind Kinetics human action dataset from 400 classes, each with at least 400 video clips, to 600 classes, each with at least 600 video clips.",
+     "copy": "data_audit/lead/fm_sources/secondary/kinetics600_arxiv_1808.01340.txt",
+     "verified": true
+    },
+    {
+     "quote": "The clips are from YouTube video, last 10s, and have a variable resolution and frame rate;",
+     "copy": "data_audit/lead/fm_sources/secondary/kinetics600_arxiv_1808.01340.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "Open-MAGVIT2 video",
+   "arm": "secondary",
+   "note": "",
+   "cells": {
+    "C1": "NO",
+    "C2": "NO",
+    "C3": "NO",
+    "C4": "NO",
+    "C5": "NO"
+   },
+   "sources": [
+    {
+     "key": "ucf101",
+     "source": "UCF-101",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed action benchmark",
+     "quotes": []
+    },
+    {
+     "key": "imagenet",
+     "source": "ImageNet (initialisation)",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed image benchmark",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "Following ( Yu et al., 2024a ) , we train our video tokenizer on UCF-101 ( Soomro, 2012 ) . We use 17-frame video clips with a spatial resolution of 128 \u00d7 \\times 128 for both training and evaluation.",
+     "copy": "data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt",
+     "verified": true
+    },
+    {
+     "quote": "Simultaneously, we inflate the image tokenizer trained at 128 \u00d7 \\times 128 imagenet for video modeling.",
+     "copy": "data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt",
+     "verified": true
+    },
+    {
+     "quote": "We use UCF-101 as our Video Dataset",
+     "copy": "data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_github_README.md",
+     "verified": true
+    },
+    {
+     "quote": "Open-MAGVIT2-V-UCF UCF-101 262144 128 \u00d7 128 128\\times 128 4 8 \u00d7 8 8\\times 8",
+     "copy": "data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt",
+     "verified": true
+    },
+    {
+     "quote": "image_pretrain_path: ../upload_ckpts/Open-MAGVIT2/in1k_128_L/imagenet_128_L.ckpt",
+     "copy": "data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_npu_ucf101_lfqgan_128_L.yaml.txt",
+     "verified": true
+    },
+    {
+     "quote": "It consists of 101 action classes, over 13k clips and 27 hours of video data. The database consists of realistic user-uploaded videos containing camera motion and cluttered background.",
+     "copy": "data_audit/lead/fm_sources/secondary/ucf101_arxiv_1212.0402.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "Open-Sora-Plan v1.2 VAE",
+   "arm": "secondary",
+   "note": "",
+   "cells": {
+    "C1": "UNK-web",
+    "C2": "UNK-web",
+    "C3": "UNK-web",
+    "C4": "UNK-web",
+    "C5": "UNK-web"
+   },
+   "sources": [
+    {
+     "key": "kinetics",
+     "source": "Kinetics-400/600/700",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed YouTube human-action benchmark",
+     "quotes": []
+    },
+    {
+     "key": "stock",
+     "source": "Pexels / Pixabay / Mixkit stock video",
+     "cls": "web-scale",
+     "institution": "stock-video websites",
+     "quotes": []
+    },
+    {
+     "key": "sd_vae",
+     "source": "SD / SDXL / SD2.1 image-VAE initialisation",
+     "cls": "undocumented base / init weights",
+     "institution": "image data not documented in the candidate sources",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "We perform the first phase of training on the Kinetic400 video dataset, then use the EMA weights from this phase to initialize the second phase, which is fine-tuned on high-quality data (collected in v1.1.0). All training is conducted on 25-frame 256\u00d7256 videos using **one A100 node**.",
+     "copy": "data_audit/lead/fm_sources/secondary/osplan_github_Report-v1.2.0.md",
+     "verified": true
+    },
+    {
+     "quote": "| 1 | K400 | 200,000 | | 2 | collected in v1.1.0 | 450,000 |",
+     "copy": "data_audit/lead/fm_sources/secondary/osplan_github_Report-v1.2.0.md",
+     "verified": true
+    },
+    {
+     "quote": "The v1.1.0 video dataset comprises approximately 3k hours, compared to only 300 hours in v1.0.0.",
+     "copy": "data_audit/lead/fm_sources/secondary/osplan_github_Report-v1.1.0.md",
+     "verified": true
+    },
+    {
+     "quote": "| [Mixkit](https://mixkit.co/) | 42.0h | 65 | 54,735 |",
+     "copy": "data_audit/lead/fm_sources/secondary/osplan_github_Report-v1.1.0.md",
+     "verified": true
+    },
+    {
+     "quote": "| [Pixabay](https://pixabay.com/) | 353.3h | 65 | 601,513 |",
+     "copy": "data_audit/lead/fm_sources/secondary/osplan_github_Report-v1.1.0.md",
+     "verified": true
+    },
+    {
+     "quote": "| [Pexel](https://www.pexels.com/) | 2561.9h | 65 | 3,832,666 |",
+     "copy": "data_audit/lead/fm_sources/secondary/osplan_github_Report-v1.1.0.md",
+     "verified": true
+    },
+    {
+     "quote": "As with v1.1.0, we initialize from the [SD2.1 VAE](https://huggingface.co/stabilityai/sd-vae-ft-mse) using tail initialization.",
+     "copy": "data_audit/lead/fm_sources/secondary/osplan_github_Report-v1.2.0.md",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [
+    "Pexels / Pixabay / Mixkit stock video",
+    "SD / SDXL / SD2.1 image-VAE initialisation"
+   ],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "WF-VAE-L",
+   "arm": "secondary",
+   "note": "",
+   "cells": {
+    "C1": "NO",
+    "C2": "NO",
+    "C3": "NO",
+    "C4": "NO",
+    "C5": "NO"
+   },
+   "sources": [
+    {
+     "key": "kinetics",
+     "source": "Kinetics-400/600/700",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed YouTube human-action benchmark",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "Dataset & Evaluation. We utilize the Kinetics-400 dataset [ 16 ] for both training and validation. For testing, we employ the Panda70M [ 7 ] and WebVid-10M [ 2 ] datasets.",
+     "copy": "data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt",
+     "verified": true
+    },
+    {
+     "quote": "(I) the first stage aligns with [ 6 ] , where we preprocess videos to 25 frames with 256 \u00d7 256 256\\times 256 resolution, and a total batch size of 8. (II) we refresh the discriminator, increase the number of frames to 49, and reduce the FPS by half to enhance motion dynamics.",
+     "copy": "data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "CV-VAE",
+   "arm": "secondary",
+   "note": "",
+   "cells": {
+    "C1": "UNK-web",
+    "C2": "UNK-web",
+    "C3": "UNK-web",
+    "C4": "UNK-web",
+    "C5": "UNK-web"
+   },
+   "sources": [
+    {
+     "key": "laion",
+     "source": "LAION-COCO / Unsplash images",
+     "cls": "web-scale",
+     "institution": "web images",
+     "quotes": []
+    },
+    {
+     "key": "webvid",
+     "source": "WebVid",
+     "cls": "web-scale",
+     "institution": "scraped from the Internet",
+     "quotes": []
+    },
+    {
+     "key": "sd_vae",
+     "source": "SD / SDXL / SD2.1 image-VAE initialisation",
+     "cls": "undocumented base / init weights",
+     "institution": "image data not documented in the candidate sources",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "Training Details. We train our CV-VAE model using image datasets including LAION-COCO [ 9 ] and Unsplash [ 23 ] , as well as the video dataset Webvid-10M [ 3 ] .",
+     "copy": "data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt",
+     "verified": true
+    },
+    {
+     "quote": "In the case of video datasets, we use two settings of frames and resolutions: 9 \u00d7 256 \u00d7 256 9 256 256 9\\times 256\\times 256 9 \u00d7 256 \u00d7 256 and 17 \u00d7 192 \u00d7 192 17 192 192 17\\times 192\\times 192 17 \u00d7 192 \u00d7 192 .",
+     "copy": "data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt",
+     "verified": true
+    },
+    {
+     "quote": "The architecture of CV-VAE is primarily derived from the VAE in Stable Diffusion [ 28 ] , with several notable differences: (1) Some or all 2D convolutions within the network are transformed into 3D convolutions, while retaining their weights.",
+     "copy": "data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [
+    "LAION-COCO / Unsplash images",
+    "WebVid",
+    "SD / SDXL / SD2.1 image-VAE initialisation"
+   ],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "LARP",
+   "arm": "secondary",
+   "note": "",
+   "cells": {
+    "C1": "NO",
+    "C2": "NO",
+    "C3": "NO",
+    "C4": "NO",
+    "C5": "NO"
+   },
+   "sources": [
+    {
+     "key": "kinetics",
+     "source": "Kinetics-400/600/700",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed YouTube human-action benchmark",
+     "quotes": []
+    },
+    {
+     "key": "ucf101",
+     "source": "UCF-101",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed action benchmark",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "--csv_file k600_train.csv+ucf101_train.csv",
+     "copy": "data_audit/lead/fm_sources/secondary/larp_github_train_larp_tokenizer_reproduce.sh.txt",
+     "verified": true
+    },
+    {
+     "quote": "# It can reproduce the pretrained model hywang66/LARP-L-long-tokenizer released on HuggingFace.",
+     "copy": "data_audit/lead/fm_sources/secondary/larp_github_train_larp_tokenizer_reproduce.sh.txt",
+     "verified": true
+    },
+    {
+     "quote": "4.1 Setup Dataset. We conduct video reconstruction and generation experiments using the Kinetics-600 (K600) ( Carreira et al., 2018 ) and UCF-101 ( Soomro, 2012 ) datasets. In all experiments, we use 16-frame video clips with a spatial resolution of 128 \u00d7 128 128{\\times}128 for both training and evaluation",
+     "copy": "data_audit/lead/fm_sources/secondary/larp_arxiv_2410.21264_fulltext.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "LeanVAE",
+   "arm": "secondary",
+   "note": "",
+   "cells": {
+    "C1": "NO",
+    "C2": "NO",
+    "C3": "NO",
+    "C4": "NO",
+    "C5": "NO"
+   },
+   "sources": [
+    {
+     "key": "kinetics",
+     "source": "Kinetics-400/600/700",
+     "cls": "fixed general benchmark (non-medical)",
+     "institution": "fixed YouTube human-action benchmark",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "Training Details We train the model using Kinetics-600 dataset [ 7 ] . The videos are resized and cropped to resolutions ranging from 96 \u00d7 128 96\\times 128 to 352 \u00d7 288 352\\times 288 , with their original aspect ratios preserved. For each training step, we randomly sample 17 consecutive frames from a video.",
+     "copy": "data_audit/lead/fm_sources/secondary/leanvae_arxiv_2503.14325_fulltext.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "Reducio-VAE",
+   "arm": "secondary",
+   "note": "",
+   "cells": {
+    "C1": "UNK-web",
+    "C2": "UNK-web",
+    "C3": "UNK-web",
+    "C4": "UNK-web",
+    "C5": "UNK-web"
+   },
+   "sources": [
+    {
+     "key": "stock",
+     "source": "Pexels / Pixabay / Mixkit stock video",
+     "cls": "web-scale",
+     "institution": "stock-video websites",
+     "quotes": []
+    },
+    {
+     "key": "sd_vae",
+     "source": "SD / SDXL / SD2.1 image-VAE initialisation",
+     "cls": "undocumented base / init weights",
+     "institution": "image data not documented in the candidate sources",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "Our Reducio -VAE is trained on a 400K video dataset collected from Pexels * * * https://www.pexels.com/ . Pexels contains a large number of free and high-quality stock videos, where each video is accompanied by a short text description. We train Reducio -VAE from scratch on 256 \u00d7 256 256\\times 256 videos with 16 FPS.",
+     "copy": "data_audit/lead/fm_sources/secondary/reducio_arxiv_2411.13552_fulltext.txt",
+     "verified": true
+    },
+    {
+     "quote": "While initializing the 2D encoder and the 3D VAE with SD-VAE pre-trained weights accelerates convergence, we find that freezing the 2D encoder leads to worse performance than training the full parameters.",
+     "copy": "data_audit/lead/fm_sources/secondary/reducio_arxiv_2411.13552_fulltext.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [
+    "Pexels / Pixabay / Mixkit stock video",
+    "SD / SDXL / SD2.1 image-VAE initialisation"
+   ],
+   "site_not_stated": []
+  },
+  {
+   "candidate": "Cosmos tokenizer CV8x8x8 (Decision 005 reference)",
+   "arm": "reference",
+   "note": "",
+   "cells": {
+    "C1": "UNK-web",
+    "C2": "UNK-web",
+    "C3": "UNK-web",
+    "C4": "UNK-web",
+    "C5": "UNK-web"
+   },
+   "sources": [
+    {
+     "key": "cosmos_web",
+     "source": "Cosmos tokenizer data: proprietary + open-domain Internet video (~20M h raw)",
+     "cls": "web-scale",
+     "institution": "undisclosed",
+     "quotes": []
+    }
+   ],
+   "candidate_quotes": [
+    {
+     "quote": "We use both proprietary video datasets and publicly available open-domain Internet videos to train our models.",
+     "copy": "data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+     "verified": true
+    },
+    {
+     "quote": "In total, we accumulate about 20M hours of raw videos with resolutions from 720p to 4k.",
+     "copy": "data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+     "verified": true
+    },
+    {
+     "quote": "We train our tokenizers directly on high-resolution images and long-duration videos without limiting the categories or aspect ratios.",
+     "copy": "data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+     "verified": true
+    },
+    {
+     "quote": "6. Nature dynamics (20%), 7. Dynamic camera movements (8%), 8. Synthetically rendered (4%), and 9. Others (7%).",
+     "copy": "data_audit/lead/fm_sources/secondary/cosmos_arxiv_2501.03575_fulltext.txt",
+     "verified": true
+    }
+   ],
+   "web_or_undocumented": [
+    "Cosmos tokenizer data: proprietary + open-domain Internet video (~20M h raw)"
+   ],
+   "site_not_stated": []
+  }
+ ],
+ "quotes_verified": "236/236",
+ "keyword_search": {
+  "dataset_copies": "Only the keyword Dresden matched (19 hits, in heichole/heico/sarrarp50/surgenetxl copies). Every hit is an author affiliation (National Center for Tumor Diseases Dresden; TU Dresden CeTI), a challenge leaderboard/team name (NCT Dresden), an author biography, or a reference title (The Dresden surgical anatomy dataset). None is a statement of where dataset videos were recorded. No hits for Radeberg, Ravensburg, Diakonissen, Joseph-Stift/Josephstift, Elisabethen, Asklepios, Carus, Friedrichstadt.",
+  "note": "fm_sources/{primary,secondary,reference}: Radeberg / Ravensburg / Diakonissen / Joseph-Stift / Elisabethen / Asklepios occur only in the survey's own keyword list inside lemon_appendectomy_oembed.txt (keyword_hits: [])"
+ }
+}
