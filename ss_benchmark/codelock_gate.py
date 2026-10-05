@@ -1,6 +1,6 @@
 """Code-lock runner stages (§9 estimator gate, §10.4 compute projection, §5.4 G-SITE, pass/fail record).
 
-    python -m ss_benchmark.codelock_gate --out DIR [--smoke] [--workers N] [--stage all|gate|projection|gsite|record]
+    python -m ss_benchmark.codelock_gate --out DIR [--smoke] [--workers N] [--stage all|gate|projection|gsite|smalltruth|record]
     python -m ss_benchmark.codelock_gate --out DIR --status
 
 (a) Estimator gate (§9): FULL arm only; cells K ∈ {1,5,15} × P ∈ {0,5}, W = 5, α = 0.5, γ = 1, φ_A = 0; M = 200;
@@ -13,8 +13,12 @@
     workers; applies reductions (a) P3 cells M = 100, (b) P3 cells linear learners only, (c) P3 cells without FM-S−C
     and REF−C, cumulatively, until the projection is ≤ 7 days.
 (c) G-SITE (§5.4) from the real design metadata (centre and offset only).
-(d) Machine-readable record of (a)-(c).
-No stage reads a DS203 frame or representation; no causal quantity is computed on the real design.
+(c2) Small-truth design check (§11, "flagged at code lock"): exact DGP truth for every cell of every analysis set over
+    the 24 site-loading permutations, from the real centre and offset only; a cell is flagged if min |truth| < 0.025.
+    Public output small_truth_flags.json (cell, flag, number flagged); the truth values are kept only in
+    provenance_small_truth_values.json. Truth only: no action, outcome, estimator or arm is involved.
+(d) Machine-readable record of (a)-(c2).
+No stage reads a DS203 frame or representation; no estimator or arm quantity is computed on the real design.
 """
 import argparse
 import json
@@ -260,10 +264,30 @@ def stage_gsite(out):
     return rec
 
 
+def stage_smalltruth(out):
+    from .grid_driver import sensitivity_cells
+    sets = {"primary": grid.all_cells(), **sensitivity_cells()}
+    public, internal = {}, {}
+    for s, cells in sets.items():
+        D = design.truth_check_design(s)
+        res = dgp.small_truth_check(D, cells)
+        public[s] = dict(n_cells=len(res), n_flagged=int(sum(r["flag"] for r in res)),
+                         cells=[dict(cell=r["cell"], flag=r["flag"]) for r in res])
+        internal[s] = res
+    rule = "flag if min over the 24 site-loading permutations of |Psi(delta) - Psi(1)| < 0.025 (§11)"
+    _write_json(os.path.join(out, "small_truth_flags.json"), dict(
+        label="REAL DESIGN METADATA (centre, offset only); truth-only design check (§11)", rule=rule, sets=public,
+        n_flagged_total=int(sum(v["n_flagged"] for v in public.values()))))
+    _write_json(os.path.join(out, "provenance_small_truth_values.json"), dict(
+        label="INTERNAL PROVENANCE: exact truth values (no estimate exists)", rule=rule, sets=internal))
+    _log(out, "[smalltruth] complete")
+
+
 def stage_record(out, plan):
     g = json.load(open(os.path.join(out, "gate_PLACEHOLDER_cells.json")))
     p = json.load(open(os.path.join(out, "projection_PLACEHOLDER.json")))
     s = json.load(open(os.path.join(out, "gsite_record.json")))
+    st = json.load(open(os.path.join(out, "small_truth_flags.json")))
     prov = json.load(open(os.path.join(out, "provenance.json"))) if os.path.exists(
         os.path.join(out, "provenance.json")) else {}
     rec = dict(smoke=plan["smoke"],
@@ -272,6 +296,9 @@ def stage_record(out, plan):
                b_compute_projection=dict(pass_=p["projection_pass"], reductions_applied=p["reductions_applied"],
                                          budget_days=p["budget_days"]),
                c_gsite=dict(pass_primary=s["gate_pass_primary"], per_W=s["per_W_instrument_like"]),
+               c2_small_truth=dict(n_flagged_total=st["n_flagged_total"],
+                                   n_flagged={k: v["n_flagged"] for k, v in st["sets"].items()},
+                                   note="flags are reported (§11); they do not stop code lock"),
                code_lock_may_proceed=bool(g["gate_pass"] and p["projection_pass"]),
                note="G-SITE does not stop code lock; if it fails, P2-SITE and P2-ORACLE are reported as P3 (§5.4).",
                provenance=prov)
@@ -304,12 +331,14 @@ def status(out):
             alive = False
     stages = {k: os.path.exists(os.path.join(out, f)) for k, f in (
         ("a_gate", "gate_PLACEHOLDER_cells.json"), ("b_projection", "projection_PLACEHOLDER.json"),
-        ("c_gsite", "gsite_record.json"), ("d_record", "codelock_passfail_record.json"))}
+        ("c_gsite", "gsite_record.json"), ("c2_smalltruth", "small_truth_flags.json"),
+        ("d_record", "codelock_passfail_record.json"))}
     print(f"run directory : {out}")
     print(f"runner alive  : {alive}")
     print(f"(a) gate      : {min(d_gate, n_gate)}/{n_gate} replicate units; complete={stages['a_gate']}")
     print(f"(b) projection: {min(d_tim, n_tim)}/{n_tim} timing units; complete={stages['b_projection']}")
     print(f"(c) G-SITE    : complete={stages['c_gsite']}")
+    print(f"(c2) small-truth design check: complete={stages['c2_smalltruth']}")
     print(f"(d) record    : written={stages['d_record']}")
     logp = os.path.join(out, "progress.log")
     if os.path.exists(logp):
@@ -324,7 +353,7 @@ def main(argv=None):
     ap.add_argument("--out", required=True)
     ap.add_argument("--smoke", action="store_true")
     ap.add_argument("--workers", type=int, default=os.cpu_count())
-    ap.add_argument("--stage", default="all", choices=["all", "gate", "projection", "gsite", "record"])
+    ap.add_argument("--stage", default="all", choices=["all", "gate", "projection", "gsite", "smalltruth", "record"])
     ap.add_argument("--status", action="store_true")
     a = ap.parse_args(argv)
     if a.status:
@@ -350,6 +379,8 @@ def main(argv=None):
         stage_projection(a.out, plan, a.workers)
     if a.stage in ("all", "gsite"):
         stage_gsite(a.out)
+    if a.stage in ("all", "smalltruth"):
+        stage_smalltruth(a.out)
     if a.stage in ("all", "record"):
         stage_record(a.out, plan)
     return 0

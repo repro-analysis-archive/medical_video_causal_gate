@@ -1,6 +1,8 @@
 """Step-3 feasibility code (§4.1.4 rules 4-5, §10.4 extraction compute fallback). Written at code lock; run at §14
 step 3 in rank order, with no DS203 frame. Run in the extraction environment (/home/user/.venvs/ss_extract).
 
+* REGISTRY keys are the extraction-spec keys (docs/codelock_extraction_spec.json); one entry per architecture
+  configuration (checkpoints sharing an architecture share an entry, e.g. the four SelfSupSurg checkpoints).
 * GPU memory feasibility (rule 4): inference only, batch size 1, bf16 on CUDA, the protocol input size and clip length
   (adapter SPEC), synthetic input; feasible iff torch.cuda.max_memory_reserved() ≤ 20.0 GB (reset before the model is
   built, so weights are included). The architecture determines memory; ``weights`` may be given but is not required.
@@ -30,11 +32,17 @@ GPU_LIMIT_GB = 20.0
 REGISTRY = {
     "SurgeNetCholec": ("prim_caformer", {}),
     "SurgeNetRARP": ("prim_caformer", {}),
-    "SelfSupSurg-ResNet50": ("prim_resnet50", {}),
-    "VideoMAE-base": ("sec_videomae", {"variant": "base"}),
-    "VideoMAE-base-ssv2": ("sec_videomae", {"variant": "base-ssv2"}),
-    "VideoMAE-base-short": ("sec_videomae", {"variant": "base-short"}),
-    "VideoMAE-large": ("sec_videomae", {"variant": "large"}),
+    "SelfSupSurg-ResNet50": ("prim_resnet50", {}),        # MoCo v2 / SimCLR / SwAV / DINO: one architecture
+    "VideoMAE:hf-base-k400-1600": ("sec_videomae", {"checkpoint": "hf-base-k400-1600"}),
+    "VideoMAE:hf-base-k400-800": ("sec_videomae", {"checkpoint": "hf-base-k400-800"}),
+    "VideoMAE:hf-base-ssv2-2400": ("sec_videomae", {"checkpoint": "hf-base-ssv2-2400"}),
+    "VideoMAE:hf-large-k400-1600": ("sec_videomae", {"checkpoint": "hf-large-k400-1600"}),
+    "VideoMAE:orig-base-k400-800": ("sec_videomae", {"checkpoint": "orig-base-k400-800"}),
+    "VideoMAE:orig-base-k400-1600": ("sec_videomae", {"checkpoint": "orig-base-k400-1600"}),
+    "VideoMAE:orig-large-k400-1600": ("sec_videomae", {"checkpoint": "orig-large-k400-1600"}),
+    "VideoMAE:orig-base-ssv2-800": ("sec_videomae", {"checkpoint": "orig-base-ssv2-800"}),
+    "VideoMAE:orig-base-ssv2-2400": ("sec_videomae", {"checkpoint": "orig-base-ssv2-2400"}),
+    "VideoMAE:orig-base-ucf101-3200": ("sec_videomae", {"checkpoint": "orig-base-ucf101-3200"}),
     "OmniTokenizer-imagenet_k600": ("sec_omnitokenizer", {}),
     "WF-VAE-L-16ch": ("sec_wfvae", {}),
     "LARP-L-Long": ("sec_larp", {}),

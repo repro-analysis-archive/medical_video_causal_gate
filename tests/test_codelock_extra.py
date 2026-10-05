@@ -3,7 +3,9 @@
     /home/user/.venvs/ss_extract/bin/python -m pytest -p no:cacheprovider tests/test_codelock_extra.py
 
 * every registry adapter builds with random initialisation (no weights) and encodes a synthetic input at its protocol
-  input size / clip length on CUDA in bf16 (the §4.1.4 rule-4 test code path); output finite;
+  input size / clip length on CUDA in bf16 (the §4.1.4 rule-4 test code path); its output dimension equals the frozen
+  extraction specification (docs/codelock_extraction_spec.json);
+* the frozen extraction specification covers exactly the registry and agrees with every adapter SPEC;
 * the extraction compute projection code runs on a measured synthetic throughput (code path only; no decision);
 * the decode path (ffprobe / ffmpeg) on a synthetic lavfi test video (not DS203): 2-fps grid by presentation time,
   standardized frames, near-uniform flag, mask-check accumulation, frame- and clip-level extraction and the Cosmos
@@ -32,7 +34,34 @@ cuda = pytest.mark.skipif(not torch.cuda.is_available(), reason="CUDA not availa
 def test_adapter_random_init_gpu_memory(key):
     res = feasibility.gpu_memory_test(key)
     print(res)
-    assert res["output_dim"] > 0 and res["peak_reserved_gb"] > 0
+    assert res["output_dim"] == SPEC_JSON["models"][key]["representation_dim"] and res["peak_reserved_gb"] > 0
+
+
+SPEC_JSON = __import__("json").load(open(os.path.join(REPO, "docs", "codelock_extraction_spec.json")))
+SPEC_FIELDS = ("model", "arm", "adapter", "checkpoint", "kind", "input_size", "clip_length", "temporal_sampling",
+               "normalisation", "representation_tensor", "pooling", "representation_dim", "stochastic_layers",
+               "config_overrides_paper", "source_priority", "sources")
+
+
+def test_extraction_spec_matches_adapters():
+    from ss_benchmark.constants import COSMOS_MAX_FRAMES
+    models = SPEC_JSON["models"]
+    assert set(models) == set(feasibility.REGISTRY)
+    assert set(SPEC_JSON["source_priority"]) == {"R1", "R2"}
+    for key, e in models.items():
+        assert all(f in e for f in SPEC_FIELDS), key
+        mod, kw = feasibility.adapter(key)
+        assert e["adapter"] == "ss_benchmark/models/" + mod.__name__.rsplit(".", 1)[1] + ".py"
+        assert e["kind"] == mod.SPEC["kind"] and tuple(e["input_size"]) == tuple(mod.SPEC["input_size"]), key
+        if e["kind"] == "frame":
+            assert e["clip_length"] is None and mod.SPEC["clip_length"] is None
+        elif e["kind"] == "clip":
+            assert e["clip_length"] == mod.SPEC["clip_length"], key
+        else:
+            assert e["clip_length"] == COSMOS_MAX_FRAMES
+        if "checkpoint" in kw:
+            assert kw["checkpoint"] in mod.CHECKPOINTS and key == f"VideoMAE:{kw['checkpoint']}"
+        assert all(os.path.exists(os.path.join(REPO, p)) for p in e["sources"]), key
 
 
 @cuda
@@ -127,7 +156,7 @@ def test_pipeline_extract_case(fake_tree):
     np.testing.assert_allclose(out, extract.frame_level_steps(E, 9), rtol=1e-4, atol=1e-5)
     v = sec_videomae.build()
     with torch.inference_mode():
-        out2, _, info2 = pipeline.extract_case(files, "VideoMAE-base", v, sec_videomae, "native", 0.45, 4, "cpu")
+        out2, _, info2 = pipeline.extract_case(files, "VideoMAE:hf-base-k400-1600", v, sec_videomae, "native", 0.45, 4, "cpu")
     assert out2.shape == (9, 768) and np.isfinite(out2).all()
 
 
@@ -162,6 +191,13 @@ def test_pipeline_build_reps_checks_grid_load(tmp_path):
     assert list(ids["primary"]) == list(designs["primary"].ids)
     roots = (int(seeds.placeholder_seq("extra", "probe").generate_state(1)[0]),
              int(seeds.placeholder_seq("extra", "boot").generate_state(1)[0]))
+    cases = cases.assign(s=rep_set.s)
     res = pipeline.run_checks({"P": out.replace(".npz", "_full_P.npz")}, str(tmp_path / "checks.json"), cases=cases,
-                              folds=rep_set.fold.to_numpy(), designs=designs, roots=roots, n_boot=100)
-    assert set(res["P"]["fm_conditions_primary"]) == {"E1", "E3-site", "E3-state"}
+                              folds=rep_set.fold.to_numpy(), designs=designs, roots=roots, n_boot=100,
+                              replicate_root=int(seeds.placeholder_seq("extra", "e2h").generate_state(1)[0]))
+    r = res["P"]
+    assert set(r["fm_conditions_primary"]) == {"E1", "E3-site", "E3-state"}
+    for k in ("E1_MLP_278", "E1_MLP_primary", "E1_MLP_single_file", "E2_278", "E2_278_normtime",
+              "E2_primary_normtime", "E2_single_file_normtime", "E2_primary_history"):
+        assert r[k]["reporting_only"] is True and "pass" not in r[k], k
+    assert "pass" in r["E2_primary"] and "pass" in r["E1_278"]

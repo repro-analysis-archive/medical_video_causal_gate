@@ -8,7 +8,13 @@ Replicate draws (§10.2): named child streams of the replicate SeedSequence: "c-
 "epsilon-A", "epsilon-Y". c(C): (-3,-1,1,3)/√5 assigned to the four centres (sorted labels) as values[perm[k]].
 Truth Ψ(δ) − Ψ(1) for d(a) = δa on the K window steps (pre- and post-window natural), conditional on the design's
 (C_i, S_i·) and averaged over cases: closed form for φ = 0, exact mean recursion for φ ≠ 0.
+
+Small-truth design check (§11, at code lock): the truth depends on a replicate only through its c permutation, so it
+is computed exactly for all 24 permutations of the site loadings (no seed drawn); a cell is flagged if
+min over permutations |Ψ(δ) − Ψ(1)| < 0.025, which bounds every replicate. Truth only: no action, outcome or estimate.
 """
+import itertools
+
 import numpy as np
 
 from . import seeds
@@ -89,3 +95,28 @@ def truth(design, cell, d, delta=DELTA) -> float:
     if cell.phi == 0:
         return truth_closed_form(d["c"], S[:, cell.W:cell.W + cell.K], cell, delta)
     return truth_recursion(d["c"], S, cell, delta)
+
+
+def truth_for_permutation(design, cell, perm, delta=DELTA) -> float:
+    """Exact truth when the four sorted centres receive SITE_LOADINGS[perm[k]]."""
+    _, codes = design.centre_codes()
+    c = np.asarray(SITE_LOADINGS)[np.asarray(perm)][codes]
+    S = design.state(rel_steps(cell))
+    if cell.phi == 0:
+        return truth_closed_form(c, S[:, cell.W:cell.W + cell.K], cell, delta)
+    return truth_recursion(c, S, cell, delta)
+
+
+SMALL_TRUTH = 0.025
+
+
+def small_truth_check(design, cells, threshold=SMALL_TRUTH):
+    """Per cell: exact truth over the 24 site-loading permutations; flag = min |truth| < threshold."""
+    perms = list(itertools.permutations(range(4)))
+    out = []
+    for c in cells:
+        vals = np.array([truth_for_permutation(design, c, p) for p in perms])
+        out.append(dict(cell=int(c.index), flag=bool(np.abs(vals).min() < threshold),
+                        min_abs=float(np.abs(vals).min()), min=float(vals.min()), max=float(vals.max()),
+                        mean=float(vals.mean())))
+    return out

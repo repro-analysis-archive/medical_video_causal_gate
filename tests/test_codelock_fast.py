@@ -10,7 +10,7 @@ test 4 (protocol fold seed 20261006 on real case IDs) and test 7 (real centre + 
 | 3 LEACE | synthetic Gaussian features, d = 16, planted linear 4-level label (class means 2.5·e_k) | SeedSequence(99990001) child "test3" (data, split), probe streams child "test3-probe" | 2,000 train + 2,000 test rows |
 | 4 folds | real case IDs only (278-case set; primary 158, W0 204, W5 201, single-file 123) | protocol fold seed 20261006 | 278 cases |
 | 5 time order | synthetic frame timestamps: CFR 25, 30, 30000/1001 and 50 fps; jittered VFR (gaps < 0.5 s); a two-file case | SeedSequence(99990001) child "test5" (jitter) | 600 s per video; L ∈ {1, 8, 10, 16, 17, 33, 64} |
-| 6 determinism | gate stage (--smoke: 6 gate cells × 2 replicates) twice with 3 and 5 workers; PLACEHOLDER dry run twice (n_boot = 200); G-SITE twice | as in the code (99990001 streams; G-SITE none) | — |
+| 6 determinism | gate stage (--smoke: 6 gate cells × 2 replicates) twice with 3 and 5 workers; PLACEHOLDER dry run twice (n_boot = 200; includes the reporting-only paths through pipeline.run_checks / near_uniform, added by the remediation); G-SITE and the small-truth design check twice (real centre + offset only; added by the remediation) | as in the code (99990001 streams; G-SITE and small-truth none) | — |
 | 7 G-SITE | real primary set: centre and offset only | none | 158 cases |
 """
 import hashlib
@@ -90,8 +90,10 @@ def test_2_sdr_smoke():
     se = np.array([r["se"] for _, r in out])
     ratios_ok = [r["ratio_all_finite_positive"] for _, r in out]
     bias = float(np.mean(est - truth))
+    coverage = float(np.mean([r["ci_lo"] <= t <= r["ci_hi"] for t, (_, r) in zip(truth, out)]))  # reported only
     print(f"mean truth {truth.mean():.4f}  mean bias {bias:.4f}  rel {bias / truth.mean():.3f}  "
-          f"ratio range [{min(r['ratio_min'] for _, r in out):.3f}, {max(r['ratio_max'] for _, r in out):.3f}]")
+          f"ratio range [{min(r['ratio_min'] for _, r in out):.3f}, {max(r['ratio_max'] for _, r in out):.3f}]  "
+          f"empirical 95% coverage (reported only, not a criterion) {coverage:.2f}")
     assert np.isfinite(est).all()
     assert np.isfinite(se).all() and (se > 0).all()
     assert all(ratios_ok)
@@ -212,12 +214,15 @@ def test_6_determinism(tmp_path):
                                       stderr=subprocess.STDOUT))
     assert all(p.wait() == 0 for p in procs)
     for k in (1, 2):
-        assert subprocess.run([PY, "-m", "ss_benchmark.codelock_gate", "--out", str(tmp_path / f"run{k}"),
-                               "--smoke", "--stage", "gsite"], cwd=REPO, env=ENV, capture_output=True).returncode == 0
-    rels = ["gate_PLACEHOLDER_replicates.csv", "gate_PLACEHOLDER_cells.json", "gsite_record.json", "work/gate"]
+        for stage in ("gsite", "smalltruth"):
+            assert subprocess.run([PY, "-m", "ss_benchmark.codelock_gate", "--out", str(tmp_path / f"run{k}"),
+                                   "--smoke", "--stage", stage], cwd=REPO, env=ENV,
+                                  capture_output=True).returncode == 0
+    rels = ["gate_PLACEHOLDER_replicates.csv", "gate_PLACEHOLDER_cells.json", "gsite_record.json",
+            "small_truth_flags.json", "provenance_small_truth_values.json", "work/gate"]
     h1 = _tree_hashes(tmp_path / "run1", rels)
     h2 = _tree_hashes(tmp_path / "run2", rels)
-    assert len(h1) == 3 + 12 and h1 == h2
+    assert len(h1) == 5 + 12 and h1 == h2
     assert _sha(tmp_path / "dry1.json") == _sha(tmp_path / "dry2.json")
 
 

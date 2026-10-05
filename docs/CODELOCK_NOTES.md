@@ -14,6 +14,9 @@
 | §4.1.5 eligible models and the reference | `ss_benchmark/models/` (random initialisation at code lock), `ss_benchmark/feasibility.py` (registry; §4.1.4 rule-4 test; §10.4 extraction projection) |
 | §4.2–4.3 PCA (64) and LEACE | `ss_benchmark/reduce.py` |
 | §5 E1, E2, E3, MLP probe, bootstrap; §5.4 G-SITE | `ss_benchmark/checks.py`; step-5 orchestration `ss_benchmark/pipeline.py` |
+| reporting-only paths, all wired into `pipeline.run_checks` / `pipeline.near_uniform`: pre-removal MLP site probe (§4.3), E2 on all 278 videos, E2 with past actions, normalised-time reference (§5.2), near-uniform summary (§3.1 step 4) | `ss_benchmark/checks.py` |
+| §11 small-truth flag "at code lock" (truth only, real centre + offset) | `ss_benchmark/dgp.py` `small_truth_check`; runner stage (c2) |
+| frozen per-model extraction specification | `docs/CODELOCK_EXTRACTION_SPEC.md`, `docs/codelock_extraction_spec.json` |
 | §6–7 DGP and truth | `ss_benchmark/dgp.py` |
 | §8 arms | `ss_benchmark/arms.py` |
 | §9 SDR estimator and nuisance learners | `ss_benchmark/sdr.py`, `ss_benchmark/learners.py` |
@@ -21,7 +24,8 @@
 | §14 step 2: estimator gate, compute projection, G-SITE record | `ss_benchmark/codelock_gate.py`, `scripts/run_codelock_gate.sh` |
 | §14 step 2: dry run on PLACEHOLDER features | `ss_benchmark/dryrun.py`; also the projection stage, which runs every arm on PLACEHOLDER features |
 | fast tests (task A2) | `tests/test_codelock_fast.py` |
-| extra engineering checks | `tests/test_codelock_extra.py` (run in the extraction venv) |
+| reporting-path and small-truth tests | `tests/test_codelock_reporting.py` |
+| extra engineering checks, including extraction-spec consistency | `tests/test_codelock_extra.py` (run in the extraction venv) |
 
 **Environments:**
 * Causal code: `/home/user/miniconda3/bin/python3`.
@@ -62,30 +66,38 @@
 
 **Placeholder design.** Synthetic centres 101–104, switch steps, lengths, offsets and folds, all drawn from SeedSequence(99990001) streams. The set sizes match the protocol (278 / 158 / 204 / 201 / 123).
 
-**Per-model input settings.** Source quotes are in each adapter's `SPEC["sources"]`:
+**Per-model input settings.** The full frozen specification, with checkpoint identifiers, source priority (R1: released code / config over paper prose; R2: never chosen by DS203 output), layers, pooling and stochastic layers, is `docs/CODELOCK_EXTRACTION_SPEC.md` / `docs/codelock_extraction_spec.json`. Summary:
 
 | model | kind | input | clip L | representation | judgement calls |
 |---|---|---|---|---|---|
 | SurgeNetCholec / RARP | frame | 224² | — | CAFormer-S18 pooled normalised features (512) | input 224 and ImageNet normalisation; no level-1–3 SurgeNet source states the pretraining input or normalisation (224×399 is for downstream fine-tuning) |
 | SelfSupSurg ResNet-50 | frame | 224² | — | pooled trunk (2048) | — |
-| VideoMAE (base, ssv2, short, large) | clip | 224² | 16 | token mean of last hidden state | normalisation read from the checkpoint's `preprocessor_config.json` at load; ImageNet as the fallback |
+| VideoMAE (ViT-B / ViT-L; HF and original-repository K400 / SSv2 / UCF101 pre-training checkpoints) | clip | 224² | 16 | final-LayerNorm last hidden state, mean over all 1,568 patch tokens (no CLS token) | normalisation from the checkpoint's `preprocessor_config.json` (HF) or ImageNet; ViT-S / ViT-H not covered |
 | OmniTokenizer imagenet_k600 | clip | 256² | 17 | L2-normalised pre-VQ latent (8×32×32) | enc_block "ttww" follows the eval script; the paper text says 4 window layers |
 | WF-VAE-L 16ch | clip | 256² | 33 | posterior mean (16×32×32) | 33 frames = the authors' evaluation clip; training used 25, then 49 |
 | LARP-L-Long | clip | 128² | 16 | L2-normalised SVQ input (1024×16); no latent time axis | released config `bottleneck_dim` 16 versus paper d′ = 8; 16 used |
 | LeanVAE 16ch / 4ch | clip | 256² | 17 | posterior mean (16 or 4 × 32×32) | — |
 | Cosmos CV8x8x8 (reference) | native clip | 320² | ≤ 121 | post_quant_conv mean over latent time (16×40×40) | diffusers default config = CV8x8x8; the gated HF config was not read |
 
-## 3. Differences between the task file and the protocol (reported, not acted on)
+## 3. Differences between the task file and the protocol
 
-1. **§11 small-truth flag.**
-   * §11 says cells with |truth| < 0.025 "are flagged at code lock". Computing the truth on the real design needs offsets, and hard limit 2 permits real metadata for G-SITE only.
-   * The flag is implemented in `grid.cell_metrics` (`small_truth_flag`). It is raised when the real grid runs (step 6) and is exercised on PLACEHOLDER only.
-2. **§14 step 2 dry run.** The dry run on PLACEHOLDER features runs in Part A (the `dryrun` module and fast test 6). The runner's projection stage is itself an all-arm SDR dry run on PLACEHOLDER features.
+1. **§11 small-truth flag (resolved by the audit remediation).**
+   * §11 says cells with |truth| < 0.025 "are flagged at code lock".
+   * Following the audit (`SS_CODELOCK_PARTA_AUDIT_REMEDIATION.md`, blocker 2), the runner computes this truth-only design check at code lock as stage (c2). It uses the real centre and offset only; the audit added this as a narrow exception to the metadata hard limit.
+   * The truth depends on a replicate only through its c permutation. It is therefore computed exactly for all 24 permutations, with no seed drawn, and a cell is flagged if min |truth| < 0.025.
+   * The public output holds flags and counts only. The truth values are kept in a provenance file.
+   * `grid.cell_metrics` also flags cells when the real grid runs.
+2. **§14 step 2 dry run.**
+   * The dry run on PLACEHOLDER features runs in Part A: the `dryrun` module, which now drives `pipeline.run_checks` / `near_uniform`, and fast test 6.
+   * The runner's projection stage is itself an all-arm SDR dry run on PLACEHOLDER features.
+   * The audit accepts this, provided its execution and PASS are recorded: see `decisions/CODELOCK_PARTA_TEST_RECORD.md`.
 3. **Grid-frame time order.**
    * The §3.1 grid rule ("first decoded frame whose presentation time is ≥ the grid time") selects a frame after the step end only when a source has a frame gap > 0.5 s. DS203 streams are constant-frame-rate at 25–50 fps.
    * The extraction counts such frames (`grid_frames_after_step_end`) and does not alter the rule.
 
 ## 4. Incidents
 
-* **Weight files from shallow clones.** The four secondary repositories contain weight files for their evaluation code: FVD I3D networks (about 51 MB each) and LPIPS VGG linear layers (7 kB). These came in with the shallow clones. They were deleted immediately, are not used, and `scripts/fetch_third_party.sh` deletes them on every fetch. No weights of any eligible model or of the reference were downloaded.
+* **Incident 001 (procedural hard-limit incident):** evaluation-tool weight files arrived bundled with the third-party source code and were deleted. Full record: `decisions/CODELOCK_INCIDENT_001_third_party_weight_files.md`.
+  * No weights of any eligible model or of the reference were downloaded.
+  * No further third-party retrieval is permitted before the final code-lock commit. `scripts/fetch_third_party.sh` now refuses to run without `--after-final-code-lock`, and it uses a partial, sparse fetch that never materialises weight blobs.
 * **Packages installed.** Python packages (timm, transformers, diffusers, einops) were installed into the separate venv only. The base environment is unchanged.

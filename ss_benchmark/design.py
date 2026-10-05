@@ -61,6 +61,24 @@ def representation_cases() -> pd.DataFrame:
     return d[["case_id", "center"]]
 
 
+def representation_switch_steps() -> pd.Series:
+    """Real switch steps s_i = max(ceil(T_i / 5) − 1, 0) of the 278 cases (§2; used from §14 step 5 on)."""
+    d = pd.read_csv(D8_CASES, usecols=["center", "op", "timestamp_s"])
+    d = d[d.center.isin(REPRESENTATION_CENTRES)]
+    ids = [case_id(c, o) for c, o in zip(d.center, d.op)]
+    s = np.maximum(np.ceil(d.timestamp_s.to_numpy() / 5.0) - 1, 0).astype(np.int64)
+    out = pd.Series(s, index=ids, name="s").sort_index()
+    assert len(out) == N_REPRESENTATION_CASES
+    return out
+
+
+def truth_check_design(set_name: str) -> "Design":
+    """Centre + offset only design for the small-truth check (§11); no other field is read."""
+    centre, offset = gsite_inputs(set_name)
+    return Design(label=f"REAL:{set_name} (centre and offset only)", ids=np.arange(len(centre)), centre=centre,
+                  offset=offset, folds=np.zeros(len(centre), dtype=np.int64))
+
+
 def representation_folds() -> pd.Series:
     d = representation_cases()
     return pd.Series(make_folds(d.case_id.values, d.center.values, SEED_FOLDS), index=d.case_id.values, name="fold")
@@ -140,9 +158,11 @@ def load_real_design(set_name: str) -> Design:
 
 
 def gsite_inputs(set_name: str):
-    """Centre and offset only (G-SITE, §5.4)."""
-    if set_name == "primary":
-        d = pd.read_csv(OFFSETS, usecols=["center", "op", "O"])
+    """Centre and offset only (G-SITE, §5.4; small-truth design check, §11)."""
+    if set_name in ("primary", "single_file"):
+        d = pd.read_csv(OFFSETS, usecols=["center", "op", "n_files", "O"])
+        if set_name == "single_file":
+            d = d[d.n_files == 1]
     else:
         d = pd.read_csv(OFFSETS_PERW, usecols=["set", "center", "op", "O"])
         d = d[d["set"] == set_name]

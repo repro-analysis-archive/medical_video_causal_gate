@@ -10,6 +10,18 @@ initialisation use streams of SeedSequence(20261006) child "probe" (check, set, 
 E2 base: natural cubic spline of elapsed time (step index; spline span is invariant to the affine map to seconds), 4 df:
 boundary knots at the training-fold min / max and interior knots at the training-fold 25 / 50 / 75 % quantiles
 (truncated-power basis of Hastie et al., ESL eq. 5.4-5.5, without the constant).
+
+Reporting-only quantities (never used by a pass / fail rule, model selection, nuisance fitting or family verdict):
+* pre-removal MLP site probe (§4.3 "site decodability before and after (linear probe and 2-layer MLP probe)");
+* E2 secondary on all steps of the 278 videos (§5.2), with S_t = 1{t ≥ s_i};
+* E2 secondary with past synthetic actions in the baseline (§5.2): reference DGP cell K = 5, P = 0, W = 5,
+  α = 0.5, γ = 1, φ_A = 0, "replicate 1" = the first replicate (spawn index 0) of that grid cell; rows = the K window
+  steps of the primary set; H_t = the past actions as lags 1..W+K−1 (lag ℓ = A at window-relative step t − ℓ),
+  lags before the trajectory start set to the DGP's initial value 0 (§6); base = spline(elapsed time) + H_t,
+  full = base + R_t;
+* the normalised-time stricter reference (§5.2): the E2 comparison with elapsed time replaced by t / n_i (n_i = the
+  case's number of steps; uses future information, not a valid baseline);
+* near-uniform frames (§3.1 step 4): proportion of flagged grid frames by centre, by S and by centre × S.
 """
 import numpy as np
 import pandas as pd
@@ -189,6 +201,78 @@ def fm_conditions(e1_278, e1_158, e3_278, e3_158, e3_state):
     """Conditions of P1b-FM / P2-FM (§5.3, §12.2)."""
     return {"E1": bool(e1_278["pass"] and e1_158["pass"]), "E3-site": bool(e3_278["pass"] and e3_158["pass"]),
             "E3-state": bool((not e3_state["applicable"]) or e3_state["pass_"])}
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+# reporting-only paths
+# ---------------------------------------------------------------------------------------------------------------------
+def mlp_site_probe(rep_by_fold, case_idx, case_sites, case_folds, steps_of, tag, roots=(SEED_FOLDS, SEED_BOOTSTRAP)):
+    """Pre-removal 2-layer MLP site probe (reporting only; §4.3)."""
+    s, p = site_probe_case_predictions(rep_by_fold, case_idx, case_sites, case_folds, steps_of, "mlp",
+                                       f"E1-MLP:{tag}", roots[0])
+    out = ba_with_ci(s, p, f"E1-MLP:{tag}", root=roots[1])
+    out["reporting_only"] = True
+    return out
+
+
+def e2_rows(case_idx, steps_of, switch_step, n_steps=None):
+    """E2 rows (case, step, time, S) with S = 1{step ≥ s_i}; with n_steps also ntime = step / n_i."""
+    recs = [(int(i), int(t), int(t), int(t >= switch_step[i])) for i in case_idx for t in steps_of(i)]
+    rows = pd.DataFrame(recs, columns=["case", "step", "time", "S"])
+    if n_steps is not None:
+        rows["ntime"] = rows.step / np.asarray(n_steps)[rows.case.to_numpy()]
+    return rows
+
+
+def normalized_time_rows(rows):
+    """The same rows with elapsed time replaced by t / n_i (stricter reference; §5.2)."""
+    return rows.assign(time=rows["ntime"])
+
+
+def history_rows(rep_case_idx, design, A, W, K):
+    """E2-with-H rows on the K window steps and the lag matrix H (zero before the trajectory start; §6 initial 0)."""
+    w = design.window_start()
+    n_lags = W + K - 1
+    recs, H = [], []
+    for k, i in enumerate(rep_case_idx):
+        for t in range(K):
+            step = int(w[k] + t)
+            recs.append((int(i), step, step, int(design.offset[k] + t >= 0)))
+            lags = np.zeros(n_lags)
+            for ell in range(1, n_lags + 1):
+                col = W + t - ell
+                if col >= 0:
+                    lags[ell - 1] = A[k, col]
+            H.append(lags)
+    return pd.DataFrame(recs, columns=["case", "step", "time", "S"]), np.asarray(H)
+
+
+def near_uniform_summary(flags_by_case, centres, switch_steps):
+    """Proportion of near-uniform grid frames by centre, by S and by centre × S (§3.1 step 4; reporting only).
+
+    flags_by_case[i]: bool array over the case's grid frames 0..; frame k belongs to step k // 10, S = 1{step ≥ s_i}.
+    """
+    rows = []
+    for f, c, s in zip(flags_by_case, centres, switch_steps):
+        f = np.asarray(f, bool)
+        S = (np.arange(len(f)) // 10 >= s).astype(int)
+        for sv in (0, 1):
+            m = S == sv
+            rows.append((c, sv, int(m.sum()), int(f[m].sum())))
+    d = pd.DataFrame(rows, columns=["centre", "S", "n_frames", "n_near_uniform"])
+
+    def table(by):
+        g = d.groupby(by, sort=True)[["n_frames", "n_near_uniform"]].sum()
+        g["proportion"] = g.n_near_uniform / g.n_frames.where(g.n_frames > 0)
+        return [dict(zip(([by] if isinstance(by, str) else by), (k if isinstance(k, tuple) else (k,))),
+                     n_frames=int(r.n_frames), n_near_uniform=int(r.n_near_uniform),
+                     proportion=None if pd.isna(r.proportion) else float(r.proportion)) for k, r in g.iterrows()]
+
+    tot = d[["n_frames", "n_near_uniform"]].sum()
+    return dict(by_centre=table("centre"), by_S=table("S"), by_centre_S=table(["centre", "S"]),
+                overall=dict(n_frames=int(tot.n_frames), n_near_uniform=int(tot.n_near_uniform),
+                             proportion=float(tot.n_near_uniform / tot.n_frames) if tot.n_frames else None),
+                reporting_only=True)
 
 
 # ---------------------------------------------------------------------------------------------------------------------

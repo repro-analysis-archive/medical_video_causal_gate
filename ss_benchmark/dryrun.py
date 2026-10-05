@@ -1,10 +1,12 @@
 """PLACEHOLDER dry run of the representation-level checks and the family aggregation (§14 step 2: "a dry run on fully
 synthetic placeholder features (no DS203 frames)").
 
-Runs, on the PLACEHOLDER 278-case set and its 158-case primary set: fold-wise PCA / LEACE (placeholder.build), E1
-(278 and 158), E2 primary (158, analysis region) and secondary (278, all steps), E3-site (linear and MLP probes, both
-sets), E3-state-retention, the FM conditions; and a small causal run (two family cells, six arms, three replicates,
-linear learners) followed by the §12.3 aggregation code. All seeds derive from 99990001. Output: one JSON file.
+Runs, on the PLACEHOLDER 278-case set and its 158-case primary / 123-case single-file sets, through the step-5 code
+path (pipeline.run_checks on PLACEHOLDER files written to a temporary directory): fold-wise PCA / LEACE, E1, E2,
+E3-site (linear and MLP), E3-state-retention, the FM conditions and the reporting-only paths (pre-removal MLP probe,
+E2 on all 278 videos, E2 with past actions, normalised-time reference); the near-uniform summary (pipeline.
+near_uniform) on synthetic flags; and a small causal run (two family cells, six arms, three replicates, linear
+learners) followed by the §12.3 aggregation code. All seeds derive from 99990001. Output: one JSON file.
 
     python -m ss_benchmark.dryrun --out FILE [--n-boot B]
 """
@@ -18,7 +20,7 @@ import pandas as pd
 
 from . import arms as arms_mod
 from . import checks, dgp, grid, placeholder, sdr, seeds
-from .constants import ANALYSIS_REGION, PLACEHOLDER_LABEL
+from .constants import PLACEHOLDER_LABEL
 
 
 def _roots():
@@ -27,40 +29,26 @@ def _roots():
 
 
 def run(n_boot=2000):
+    import tempfile
+    from . import pipeline
     rep_set, designs, reps, reports, full = placeholder.build()
     roots = _roots()
-    sites = rep_set.centre.to_numpy()
-    folds = rep_set.fold.to_numpy()
-    n_steps = rep_set.n.to_numpy()
-    s = rep_set.s.to_numpy()
-    w = (rep_set.s + rep_set.O).to_numpy()
-    prim = np.flatnonzero(rep_set.primary.to_numpy())
-    all_idx = np.arange(len(rep_set))
-    lo, hi = ANALYSIS_REGION
-
-    def all_steps(i):
-        return np.arange(n_steps[i])
-
-    def region(i):
-        return np.arange(w[i] + lo, w[i] + hi + 1)
-
-    R, RC = full["P"]["R"], full["P"]["R-C"]
     out = dict(label=PLACEHOLDER_LABEL, reduction_reports={k: v for k, v in reports.items()})
-    e1_278 = checks.e1(R, all_idx, sites, folds, all_steps, "PH:278:FM-P", roots)
-    e1_158 = checks.e1(R, prim, sites, folds, region, "PH:158:FM-P", roots)
-    rows158 = pd.DataFrame([(i, t, t, int(t >= s[i])) for i in prim for t in region(i)],
-                           columns=["case", "step", "time", "S"])
-    rows278 = pd.DataFrame([(i, t, t, int(t >= s[i])) for i in all_idx for t in all_steps(i)],
-                           columns=["case", "step", "time", "S"])
-    e2_pre = checks.e2_auc(rows158, R, folds, sites, "PH:158:FM-P", roots=roots, n_boot=n_boot)
-    e2_post = checks.e2_auc(rows158, RC, folds, sites, "PH:158:FM-P-C", roots=roots, n_boot=n_boot)
-    e2_sec = checks.e2_auc(rows278, R, folds, sites, "PH:278:FM-P", roots=roots, n_boot=n_boot)
-    e3_278 = checks.e3_site(RC, all_idx, sites, folds, all_steps, "PH:278:FM-P-C", roots)
-    e3_158 = checks.e3_site(RC, prim, sites, folds, region, "PH:158:FM-P-C", roots)
-    e3_state = checks.e3_state_retention(e2_pre, e2_post)
-    out.update(E1_278=e1_278, E1_158=e1_158, E2_primary=e2_pre, E2_primary_after_removal=e2_post,
-               E2_secondary_278=e2_sec, E3_site_278=e3_278, E3_site_158=e3_158, E3_state_retention=e3_state,
-               fm_conditions=checks.fm_conditions(e1_278, e1_158, e3_278, e3_158, e3_state))
+    cases = pd.DataFrame(dict(case_id=rep_set.case_id, center=rep_set.centre, s=rep_set.s))
+    with tempfile.TemporaryDirectory() as tmp:
+        f = full["P"]
+        lens = np.array([len(x) for x in f["R"][0]])
+        path = os.path.join(tmp, "reps_full_P.npz")
+        np.savez(path, lengths=lens, **{f"R_{v}": np.concatenate(f["R"][v]) for v in range(5)},
+                 **{f"RC_{v}": np.concatenate(f["R-C"][v]) for v in range(5)})
+        chk = pipeline.run_checks({"P": path}, os.path.join(tmp, "checks.json"), cases=cases,
+                                  folds=rep_set.fold.to_numpy(), designs=designs, roots=roots, n_boot=n_boot,
+                                  replicate_root=int(seeds.placeholder_seq("dryrun", "e2-history").generate_state(1)[0]))
+        out["checks"] = chk["P"]
+        frng = seeds.rng(seeds.placeholder_seq("dryrun", "near-uniform"))
+        for cid, n in zip(rep_set.case_id, rep_set.n):
+            np.save(os.path.join(tmp, f"{cid}.near_uniform.npy"), frng.random(10 * int(n)) < 0.02)
+        out["near_uniform"] = pipeline.near_uniform(tmp, os.path.join(tmp, "nu.json"), cases=cases)
 
     # small causal run + aggregation (exercise path only)
     D = designs["primary"]

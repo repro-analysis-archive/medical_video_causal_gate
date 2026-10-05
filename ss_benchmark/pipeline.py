@@ -6,6 +6,7 @@ supported; during code lock exercised only on synthetic test videos and PLACEHOL
                                                 --r R --out DIR [--weights PATH] [--batch B]
     python -m ss_benchmark.pipeline build-reps  --extract P=DIR [S=DIR REF=DIR P-nat=DIR] --out reps.npz
     python -m ss_benchmark.pipeline checks      --reps-full reps_full_P.npz [...] --out checks.json
+    python -m ss_benchmark.pipeline near-uniform --extract DIR(standardized extraction) --out near_uniform.json
 
 * Case files: FULL_VIDEOS_DIR/Center<c>/<any>/Center<c>_<op:03d>.mp4 or ..._v<NN>.mp4; multi-file cases ordered by
   version and placed end to end on the physical time axis (§2); local times are presentation times relative to the
@@ -254,49 +255,101 @@ def _unpack_full(path):
     return R, RC
 
 
-def run_checks(full_paths, out_json, cases=None, folds=None, designs=None, roots=None, n_boot=None):
-    """E1 / E2 / E3 for every representation key (§5, §10.3 single-file); real design unless injected (dry run)."""
-    import pandas as pd
+def _reporting(d):
+    """Mark a reporting-only result: no pass / fail field, never used by a rule (§5.2 secondary, §4.3)."""
+    d = dict(d)
+    d.pop("pass", None)
+    d["reporting_only"] = True
+    return d
+
+
+def run_checks(full_paths, out_json, cases=None, folds=None, designs=None, roots=None, n_boot=None,
+               replicate_root=None):
+    """E1 / E2 / E3 (§5, §10.3 single-file) and the reporting-only paths, for every representation key.
+
+    Real design unless injected (dry run): ``cases`` needs columns case_id, center, s (switch step); ``designs`` the
+    primary and single-file Design objects; ``replicate_root`` the SeedSequence root of the E2-with-H reference
+    replicate (default 20261007).
+    Gate-relevant: E1_278, E1_<set>, E2_<set>, E2_<set>_after_removal, E3_site_<set|278>, E3_state_<set>,
+    fm_conditions_primary. Reporting only (no pass field): E1_MLP_<278|set> (pre-removal MLP probe), E2_278,
+    E2_278_normtime, E2_<set>_normtime, E2_primary_history.
+    """
+    from . import dgp, grid, seeds
+    from .constants import SEED_REPLICATES
     if cases is None:
         cases = design.representation_cases()
+        cases = cases.assign(s=design.representation_switch_steps().loc[cases.case_id].to_numpy())
         folds = design.representation_folds().loc[cases.case_id].to_numpy()
         designs = {s: design.load_real_design(s) for s in ("primary", "single_file")}
+    root = SEED_REPLICATES if replicate_root is None else replicate_root
     kw = {} if roots is None else dict(roots=roots)
     kb = {} if n_boot is None else dict(n_boot=n_boot)
     sites = cases.center.to_numpy()
+    s_all = cases.s.to_numpy()
     pos = {cid: i for i, cid in enumerate(cases.case_id)}
     lo, hi = ANALYSIS_REGION
+    ref_cell = grid.find_cell(5, 0, 5, 0.5, 1.0)                       # §5.2 secondary reference DGP cell
+    Dp = designs["primary"]
+    d_ref = dgp.draw(Dp, ref_cell, seeds.replicate_seq(ref_cell.index, 0, root))
+    A_ref, _ = dgp.simulate(Dp, ref_cell, d_ref)
     res = {}
     for key, path in full_paths.items():
         R, RC = _unpack_full(path)
         lens = np.array([len(x) for x in R[0]])
         all_idx = np.arange(len(cases))
-        r = {"E1_278": checks.e1(R, all_idx, sites, folds, lambda i: np.arange(lens[i]), f"278:{key}", **kw)}
+
+        def all_steps(i):
+            return np.arange(lens[i])
+
+        r = {"E1_278": checks.e1(R, all_idx, sites, folds, all_steps, f"278:{key}", **kw),
+             "E1_MLP_278": checks.mlp_site_probe(R, all_idx, sites, folds, all_steps, f"278:{key}", **kw)}
+        rows278 = checks.e2_rows(all_idx, all_steps, s_all, lens)
+        r["E2_278"] = _reporting(checks.e2_auc(rows278, R, folds, sites, f"278:{key}", **kw, **kb))
+        r["E2_278_normtime"] = _reporting(checks.e2_auc(checks.normalized_time_rows(rows278), R, folds, sites,
+                                                        f"278:{key}:normtime", **kw, **kb))
         for s in ("primary", "single_file"):
             D = designs[s]
             idx = np.array([pos[c] for c in D.ids])
             w = dict(zip(idx, D.window_start()))
-            sw = dict(zip(idx, D.switch_step))
 
             def region(i, w=w):
                 return np.arange(w[i] + lo, w[i] + hi + 1)
 
             r[f"E1_{s}"] = checks.e1(R, idx, sites, folds, region, f"{s}:{key}", **kw)
-            rows = [(i, t, t, int(t >= sw[i])) for i in idx for t in region(i)]
-            rows = pd.DataFrame(rows, columns=["case", "step", "time", "S"])
+            r[f"E1_MLP_{s}"] = checks.mlp_site_probe(R, idx, sites, folds, region, f"{s}:{key}", **kw)
+            rows = checks.e2_rows(idx, region, s_all, lens)
             r[f"E2_{s}"] = checks.e2_auc(rows, R, folds, sites, f"{s}:{key}", **kw, **kb)
+            r[f"E2_{s}_normtime"] = _reporting(checks.e2_auc(checks.normalized_time_rows(rows), R, folds, sites,
+                                                             f"{s}:{key}:normtime", **kw, **kb))
             if RC is not None:
                 r[f"E2_{s}_after_removal"] = checks.e2_auc(rows, RC, folds, sites, f"{s}:{key}-C", **kw, **kb)
                 r[f"E3_site_{s}"] = checks.e3_site(RC, idx, sites, folds, region, f"{s}:{key}-C", **kw)
                 r[f"E3_state_{s}"] = checks.e3_state_retention(r[f"E2_{s}"], r[f"E2_{s}_after_removal"])
+        idx_p = np.array([pos[c] for c in Dp.ids])
+        hrows, H = checks.history_rows(idx_p, Dp, A_ref, ref_cell.W, ref_cell.K)
+        r["E2_primary_history"] = _reporting(checks.e2_auc(hrows, R, folds, sites, f"primary:{key}:history",
+                                                           extra=H, **kw, **kb))
+        r["E2_primary_history"]["reference_cell"] = dict(cell=ref_cell.index, replicate_spawn_index=0,
+                                                         **ref_cell.as_dict())
         if RC is not None:
-            r["E3_site_278"] = checks.e3_site(RC, all_idx, sites, folds, lambda i: np.arange(lens[i]), f"278:{key}-C",
-                                              **kw)
+            r["E3_site_278"] = checks.e3_site(RC, all_idx, sites, folds, all_steps, f"278:{key}-C", **kw)
             r["fm_conditions_primary"] = checks.fm_conditions(r["E1_278"], r["E1_primary"], r["E3_site_278"],
                                                               r["E3_site_primary"], r["E3_state_primary"])
         res[key] = r
     with open(out_json, "w") as f:
         json.dump(res, f, indent=1, sort_keys=True, default=float)
+    return res
+
+
+def near_uniform(extract_dir, out_json, cases=None):
+    """Near-uniform grid-frame proportions by centre, S and centre × S (§3.1 step 4; reporting only)."""
+    if cases is None:
+        cases = design.representation_cases()
+        cases = cases.assign(s=design.representation_switch_steps().loc[cases.case_id].to_numpy())
+    flags = [np.load(os.path.join(extract_dir, f"{cid}.near_uniform.npy")) for cid in cases.case_id]
+    res = checks.near_uniform_summary(flags, cases.center.to_numpy(), cases.s.to_numpy())
+    with open(out_json, "w") as f:
+        json.dump(res, f, indent=1, sort_keys=True)
     return res
 
 
@@ -311,6 +364,7 @@ def main(argv=None):
     a2.add_argument("--weights"); a2.add_argument("--batch", type=int, default=64); a2.add_argument("--device", default="cuda")
     a3 = sub.add_parser("build-reps"); a3.add_argument("--extract", nargs="+", required=True); a3.add_argument("--out", required=True)
     a4 = sub.add_parser("checks"); a4.add_argument("--reps-full", nargs="+", required=True); a4.add_argument("--out", required=True)
+    a5 = sub.add_parser("near-uniform"); a5.add_argument("--extract", required=True); a5.add_argument("--out", required=True)
     a = ap.parse_args(argv)
     if a.cmd == "mask-check":
         mask_check(a.videos, a.out)
@@ -318,8 +372,10 @@ def main(argv=None):
         extract_all(a.videos, a.model, a.acq, a.r, a.out, a.weights, a.batch, a.device)
     elif a.cmd == "build-reps":
         build_reps(dict(x.split("=", 1) for x in a.extract), a.out)
-    else:
+    elif a.cmd == "checks":
         run_checks({os.path.basename(p).split("_full_")[1][:-4]: p for p in a.reps_full}, a.out)
+    else:
+        near_uniform(a.extract, a.out)
     return 0
 
 
