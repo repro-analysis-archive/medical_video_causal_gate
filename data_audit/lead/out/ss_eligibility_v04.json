@@ -1,5 +1,5 @@
 {
- "note": "Pre-freeze fact task for SS protocol v0.4 (consolidated task Part 2 item 5; final pre-freeze task items 1, 4, 6):\nre-determine the eligibility of every 052590c-eligible candidate under the source hierarchy, the clip-level definition,\nthe mutually exclusive classes and the TWO-LEVEL OVERLAP RULE. NO ranking is applied and NO model is selected.\n* Source levels: 1 original paper (incl. a dataset's own paper); 2 official model card / official repository README or\n  file listing; 3 documented pretraining-data list (official configs / training scripts); 4 secondary; 5 internal\n  tables (052590c, cb07e93). A required fact holds only if a level-1-3 source affirmatively supports it; otherwise it\n  is UNK and the candidate is ineligible. Level-4/5 material is shown for context only.\n* Two-level overlap rule, per training source of the released weights and of their initialisation / base weights:\n  A (direct DS203 / DS203-centre overlap): YES if DS203, a constituent DS203 dataset or a known same-hospital clinical\n    source (DSAD) is documented; NO if a level-1-3 source establishes a closed or sufficiently defined corpus whose\n    documented scope excludes DS203 and the known DS203 clinical sources (a clinical set with a named non-DS203\n    recording site or non-German geography; a versioned non-surgical benchmark with fixed classes finalized before\n    DS203's release on 2026-04-29); UNK if open-ended / web-scale or the clinical/site provenance cannot be bounded.\n  B (generic web origin): for a fixed closed benchmark, generic web provenance does not change NO to UNK; it is\n    disclosed as a limitation (\"incidental web-origin exposure cannot be excluded at the level of every source image\").\n    [freeze-repair B1] OVERRIDE: a named, versioned benchmark with a fixed sample list or fixed release, finalized\n    before DS203's release (level-1-3 source), is treated under B even if its media came from YouTube or another\n    generic web source; A's \"open-ended / web-scale -> UNK\" clause applies only to open-ended, continuously scraped,\n    unversioned or otherwise unbounded web corpora. The override concerns generic web provenance only: A's\n    clinical/site-provenance clause still makes UNK any corpus of clinical or surgical video whose recording sites\n    cannot be bounded (e.g., LEMON, SVL).\n  C (same-hospital): applies to clinical / endoscopic sources only.\n  A candidate is eligible on overlap only if every source is NO under A. The strict reading (every web-derived source\n  UNK) is reported as a counterfactual only.\n* \"Fits 24 GB\" here is the PRIOR SCREEN (parameter count / checkpoint size); the final determination is the frozen\n  synthetic-input feasibility test run after freeze (protocol §4.1).\nEvery quote is verified as a whitespace-normalised substring of its saved copy.",
+ "note": "Pre-freeze fact task for SS protocol v0.4 (consolidated task Part 2 item 5; final pre-freeze task items 1, 4, 6):\nre-determine the eligibility of every 052590c-eligible candidate under the source hierarchy, the clip-level definition,\nthe mutually exclusive classes and the TWO-LEVEL OVERLAP RULE. NO ranking is applied and NO model is selected.\n* Source levels: 1 original paper (incl. a dataset's own paper); 2 official model card / official repository README or\n  file listing; 3 documented pretraining-data list (official configs / training scripts); 4 secondary; 5 internal\n  tables (052590c, cb07e93). A required fact holds only if a level-1-3 source affirmatively supports it; otherwise it\n  is UNK and the candidate is ineligible. Level-4/5 material is shown for context only.\n* Two-level overlap rule, per training source of the released weights and of their initialisation / base weights:\n  A (direct DS203 / DS203-centre overlap): YES if DS203, a constituent DS203 dataset or a known same-hospital clinical\n    source (DSAD) is documented; NO if a level-1-3 source establishes a closed or sufficiently defined corpus whose\n    documented scope excludes DS203 and the known DS203 clinical sources (a clinical set with a named non-DS203\n    recording site or non-German geography; a versioned non-surgical benchmark with fixed classes finalized before\n    DS203's release on 2026-04-29); UNK if open-ended / web-scale or the clinical/site provenance cannot be bounded.\n  B (generic web origin): for a fixed closed benchmark, generic web provenance does not change NO to UNK; it is\n    disclosed as a limitation (\"incidental web-origin exposure cannot be excluded at the level of every source image\").\n    [v0.4-final3] BOUNDED GENERIC-WEB BENCHMARK OVERRIDE (replaces the v0.4-final2 release-date override): generic\n    web provenance alone does not change NO to UNK only for a named, versioned, fixed benchmark whose level-1-3\n    documentation provides a sufficiently bounded content scope (a fixed class / task ontology or equivalent closed\n    benchmark definition) that permits the DS203 / clinical-overlap concern to be affirmatively excluded. A fixed\n    release remains UNK when it is an open-domain or broadly scraped web corpus whose clinical / content / site\n    provenance cannot be bounded. Release date alone is not sufficient for NO. The override never overrides A's\n    clinical / site-provenance clause. Every benchmark source below carries its ontology quote and the result of a\n    term check of its documented class list for clinical / surgical content.\n  C (same-hospital): applies to clinical / endoscopic sources only.\n  A candidate is eligible on overlap only if every source is NO under A. The strict reading (every web-derived source\n  UNK) is reported as a counterfactual only.\n* \"Fits 24 GB\" here is the PRIOR SCREEN (parameter count / checkpoint size); the final determination is the frozen\n  synthetic-input feasibility test run after freeze (protocol §4.1).\nEvery quote is verified as a whitespace-normalised substring of its saved copy.",
  "level4_context": "mmaction2 label maps (level 4, context only): no Kinetics-400/600/700 class name contains surg/operat/laparo/endoscop/hospital/medic/doctor/patient/clinic",
  "ds203_release": {
   "quote": "\"dc.date.issued\" : [ { \"value\" : \"2026-04-29\"",
@@ -7,7 +7,7 @@
   "level": 2,
   "verified": true
  },
- "quotes_verified": "166/166",
+ "quotes_verified": "174/174",
  "quotes_above_level3": 0,
  "tie_break_order": [
   "scientific rank criteria of protocol §4.1.4 (not applied here)",
@@ -17,7 +17,6 @@
   "4. lexical order of the model / checkpoint identifier"
  ],
  "eligible_primary": [
-  "Basel V-JEPA ViT-L (jepa-12h)",
   "SurgeNetCholec (CAFormer-S18)",
   "SurgeNetRARP (CAFormer-S18)",
   "EndoSSL laparoscopy ViT-B",
@@ -34,6 +33,861 @@
  "strict_reading_counterfactual": {
   "primary": [],
   "secondary": []
+ },
+ "ontology_term_check": {
+  "imagenet": [
+   "medicine cabinet",
+   "medicine chest",
+   "nursery",
+   "snake doctor",
+   "stethoscope",
+   "syringe"
+  ],
+  "k400": [],
+  "k600": [],
+  "k700": [],
+  "ucf101": [],
+  "ssv2": [],
+  "howto100m": [
+   "alternative health",
+   "emotional health",
+   "general pet health",
+   "health",
+   "health hygiene",
+   "medical information",
+   "medication and equipment",
+   "reproductive health",
+   "s health"
+  ]
+ },
+ "per_candidate_source_boundedness": {
+  "Endo-FM": [
+   {
+    "source": "Colonoscopic (Mesejo et al. 2016)",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "not obtainable (archived dataset page lists only affiliations: CHU Estaing Clermont-Ferrand; Clinique de la Sauvegarde Lyon)"
+   },
+   {
+    "source": "SUN / SUN-SEG",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Showa University Northern Yokohama Hospital (SUN-SEG also names Nagoya University)"
+   },
+   {
+    "source": "LDPolypVideo",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "not obtainable (paper behind bot challenge; README names no hospital)"
+   },
+   {
+    "source": "Hyper-Kvasir",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Baerum Hospital, Vestre Viken Hospital Trust, Norway"
+   },
+   {
+    "source": "Kvasir-Capsule",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Baerum Hospital, Vestre Viken Hospital Trust, Norway"
+   },
+   {
+    "source": "CholecTriplet / CholecT50",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "45 videos = Cholec80 (Strasbourg); 5 in-house (Cholec120) videos, site not restated"
+   },
+   {
+    "source": "Endo-FM private set",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Baoshan Branch of Renji Hospital, Shanghai"
+   },
+   {
+    "source": "Kinetics-400/600/700",
+    "verdict": "bounded: fixed ontology",
+    "what": "fixed YouTube human-action benchmark"
+   }
+  ],
+  "EndoViT": [
+   {
+    "source": "HeiCo / ROBUST-MIS",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Heidelberg University Hospital, Department of Surgery"
+   },
+   {
+    "source": "Cholec80",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "University Hospital of Strasbourg"
+   },
+   {
+    "source": "PSI-AVA",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Fundacion Santa Fe de Bogota"
+   },
+   {
+    "source": "ESAD",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "San Raffaele Hospital, Milan"
+   },
+   {
+    "source": "LapGyn4",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "not stated (dataset page: originator Prof. J. Keckstein; Zenodo affiliation Ulm University)"
+   },
+   {
+    "source": "hSDB-instrument / hSDB-Chole (cholecystectomy part)",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "subset of Cholec80 (Strasbourg)"
+   },
+   {
+    "source": "hSDB-instrument / hSDB-Gastric (gastrectomy part)",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "not stated (authors: hutom; Yonsei University College of Medicine, Seoul)"
+   },
+   {
+    "source": "DSAD (Dresden Surgical Anatomy Dataset)",
+    "verdict": "known same-hospital clinical source (Rule A YES)",
+    "what": "University Hospital Carl Gustav Carus Dresden; Department of Visceral, Thoracic and Vascular Surgery (rectal surgery; department per author affiliation)"
+   },
+   {
+    "source": "GLENDA v1.0",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "not stated (author affiliations Klagenfurt / LMU Munich / Ulm; originator J. Keckstein)"
+   },
+   {
+    "source": "SurgicalActions160",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "not stated (originator Prof. J. Keckstein)"
+   },
+   {
+    "source": "ImageNet (initialisation)",
+    "verdict": "bounded: fixed ontology",
+    "what": "fixed image benchmark"
+   }
+  ],
+  "SurgeNetXL": [
+   {
+    "source": "Cholec80",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "University Hospital of Strasbourg"
+   },
+   {
+    "source": "HeiChole",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Heidelberg University Hospital; Salem Hospital Heidelberg; GRN-hospital Sinsheim"
+   },
+   {
+    "source": "hSDB-instrument / hSDB-Chole (cholecystectomy part)",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "subset of Cholec80 (Strasbourg)"
+   },
+   {
+    "source": "RAMIE-UMCU (private)",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "University Medical Center Utrecht"
+   },
+   {
+    "source": "ESAD",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "San Raffaele Hospital, Milan"
+   },
+   {
+    "source": "PSI-AVA",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Fundacion Santa Fe de Bogota"
+   },
+   {
+    "source": "RARP-AvL (private)",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Antoni van Leeuwenhoek Hospital, Amsterdam"
+   },
+   {
+    "source": "DSAD (Dresden Surgical Anatomy Dataset)",
+    "verdict": "known same-hospital clinical source (Rule A YES)",
+    "what": "University Hospital Carl Gustav Carus Dresden; Department of Visceral, Thoracic and Vascular Surgery (rectal surgery; department per author affiliation)"
+   },
+   {
+    "source": "GLENDA v1.0",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "not stated (author affiliations Klagenfurt / LMU Munich / Ulm; originator J. Keckstein)"
+   },
+   {
+    "source": "LapGyn4",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "not stated (dataset page: originator Prof. J. Keckstein; Zenodo affiliation Ulm University)"
+   },
+   {
+    "source": "MultiBypass140",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "University Hospital of Strasbourg; Inselspital, Bern University Hospital"
+   },
+   {
+    "source": "hSDB-instrument / hSDB-Gastric (gastrectomy part)",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "not stated (authors: hutom; Yonsei University College of Medicine, Seoul)"
+   },
+   {
+    "source": "SurgToolLoc2022",
+    "verdict": "not bounded: site not stated (Rule A UNK, conservative)",
+    "what": "porcine da Vinci training exercises; location not stated"
+   },
+   {
+    "source": "ImageNet (initialisation)",
+    "verdict": "bounded: fixed ontology",
+    "what": "fixed image benchmark"
+   },
+   {
+    "source": "Surgical YouTube dataset (SurgeNetXL)",
+    "verdict": "not bounded: open-domain / scraped web or surgical web corpus (Rule A UNK)",
+    "what": "YouTube; uploading institutions not itemised"
+   }
+  ],
+  "SurgeNet / SurgeNetPublic": [
+   {
+    "source": "Cholec80",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "University Hospital of Strasbourg"
+   },
+   {
+    "source": "HeiChole",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Heidelberg University Hospital; Salem Hospital Heidelberg; GRN-hospital Sinsheim"
+   },
+   {
+    "source": "hSDB-instrument / hSDB-Chole (cholecystectomy part)",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "subset of Cholec80 (Strasbourg)"
+   },
+   {
+    "source": "RAMIE-UMCU (private)",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "University Medical Center Utrecht"
+   },
+   {
+    "source": "ESAD",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "San Raffaele Hospital, Milan"
+   },
+   {
+    "source": "PSI-AVA",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Fundacion Santa Fe de Bogota"
+   },
+   {
+    "source": "RARP-AvL (private)",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Antoni van Leeuwenhoek Hospital, Amsterdam"
+   },
+   {
+    "source": "DSAD (Dresden Surgical Anatomy Dataset)",
+    "verdict": "known same-hospital clinical source (Rule A YES)",
+    "what": "University Hospital Carl Gustav Carus Dresden; Department of Visceral, Thoracic and Vascular Surgery (rectal surgery; department per author affiliation)"
+   },
+   {
+    "source": "GLENDA v1.0",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "not stated (author affiliations Klagenfurt / LMU Munich / Ulm; originator J. Keckstein)"
+   },
+   {
+    "source": "LapGyn4",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "not stated (dataset page: originator Prof. J. Keckstein; Zenodo affiliation Ulm University)"
+   },
+   {
+    "source": "MultiBypass140",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "University Hospital of Strasbourg; Inselspital, Bern University Hospital"
+   },
+   {
+    "source": "hSDB-instrument / hSDB-Gastric (gastrectomy part)",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "not stated (authors: hutom; Yonsei University College of Medicine, Seoul)"
+   },
+   {
+    "source": "SurgToolLoc2022",
+    "verdict": "not bounded: site not stated (Rule A UNK, conservative)",
+    "what": "porcine da Vinci training exercises; location not stated"
+   },
+   {
+    "source": "ImageNet (initialisation)",
+    "verdict": "bounded: fixed ontology",
+    "what": "fixed image benchmark"
+   }
+  ],
+  "SurgVLP / HecVL / PeskaVLP": [
+   {
+    "source": "SVL lectures (WebSurg, EAES, YouTube)",
+    "verdict": "not bounded: open-domain / scraped web or surgical web corpus (Rule A UNK)",
+    "what": "web lecture platforms; originating hospitals not itemised"
+   },
+   {
+    "source": "ImageNet (initialisation)",
+    "verdict": "bounded: fixed ontology",
+    "what": "fixed image benchmark"
+   }
+  ],
+  "EndoMamba": [
+   {
+    "source": "Colonoscopic (Mesejo et al. 2016)",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "not obtainable (archived dataset page lists only affiliations: CHU Estaing Clermont-Ferrand; Clinique de la Sauvegarde Lyon)"
+   },
+   {
+    "source": "SUN / SUN-SEG",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Showa University Northern Yokohama Hospital (SUN-SEG also names Nagoya University)"
+   },
+   {
+    "source": "LDPolypVideo",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "not obtainable (paper behind bot challenge; README names no hospital)"
+   },
+   {
+    "source": "Hyper-Kvasir",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Baerum Hospital, Vestre Viken Hospital Trust, Norway"
+   },
+   {
+    "source": "Kvasir-Capsule",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Baerum Hospital, Vestre Viken Hospital Trust, Norway"
+   },
+   {
+    "source": "CholecTriplet / CholecT50",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "45 videos = Cholec80 (Strasbourg); 5 in-house (Cholec120) videos, site not restated"
+   },
+   {
+    "source": "Endo-FM private set",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Baoshan Branch of Renji Hospital, Shanghai"
+   },
+   {
+    "source": "GLENDA v1.0",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "not stated (author affiliations Klagenfurt / LMU Munich / Ulm; originator J. Keckstein)"
+   },
+   {
+    "source": "hSDB-instrument / hSDB-Chole (cholecystectomy part)",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "subset of Cholec80 (Strasbourg)"
+   },
+   {
+    "source": "hSDB-instrument / hSDB-Gastric (gastrectomy part)",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "not stated (authors: hutom; Yonsei University College of Medicine, Seoul)"
+   },
+   {
+    "source": "EndoMapper",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Hospital Clinico Universitario Lozano Blesa, Zaragoza"
+   },
+   {
+    "source": "HeiCo / ROBUST-MIS",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Heidelberg University Hospital, Department of Surgery"
+   },
+   {
+    "source": "EndoMamba porcine bronchoscopy",
+    "verdict": "not bounded: site not stated (Rule A UNK, conservative)",
+    "what": "authors' porcine dataset; location not stated"
+   }
+  ],
+  "LemonFM": [
+   {
+    "source": "LEMON (YouTube)",
+    "verdict": "not bounded: open-domain / scraped web or surgical web corpus (Rule A UNK)",
+    "what": "YouTube; uploading institutions not itemised; oEmbed check of the 252 appendectomy entries found no DS203 institution keyword"
+   }
+  ],
+  "SurgLIME": [
+   {
+    "source": "LEMON (YouTube)",
+    "verdict": "not bounded: open-domain / scraped web or surgical web corpus (Rule A UNK)",
+    "what": "YouTube; uploading institutions not itemised; oEmbed check of the 252 appendectomy entries found no DS203 institution keyword"
+   }
+  ],
+  "PL-Stitch": [
+   {
+    "source": "LEMON (YouTube)",
+    "verdict": "not bounded: open-domain / scraped web or surgical web corpus (Rule A UNK)",
+    "what": "YouTube; uploading institutions not itemised; oEmbed check of the 252 appendectomy entries found no DS203 institution keyword"
+   },
+   {
+    "source": "ImageNet (initialisation)",
+    "verdict": "bounded: fixed ontology",
+    "what": "fixed image benchmark"
+   }
+  ],
+  "Basel V-JEPA ViT-L (jepa-12h)": [
+   {
+    "source": "heico",
+    "verdict": "bounded: named non-DS203 recording site",
+    "what": "Heidelberg University Hospital, Department of Surgery"
+   },
+   {
+    "source": "cholec80",
+    "verdict": "bounded: named non-DS203 recording site",
+    "what": "University Hospital of Strasbourg"
+   },
+   {
+    "source": "mbp140",
+    "verdict": "bounded: named non-DS203 recording site",
+    "what": "University Hospital of Strasbourg; Inselspital, Bern University Hospital"
+   },
+   {
+    "source": "k400",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "Kinetics-400: fixed list of 400 human action classes (full list in the paper); no clinical / surgical class"
+   },
+   {
+    "source": "k600",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "Kinetics-600: Kinetics-400 list plus the listed new human action classes; no clinical / surgical class"
+   },
+   {
+    "source": "k700",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "Kinetics-700: Kinetics-600 list plus the listed new human action classes; no clinical / surgical class"
+   },
+   {
+    "source": "ssv2",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "SSv2: 174 caption templates of object manipulations recorded by crowd workers themselves; no clinical / surgical class"
+   },
+   {
+    "source": "howto100m",
+    "verdict": "not bounded (Rule A UNK)",
+    "what": "HowTo100M: fixed release, but its task ontology includes a Health category (WikiHow), so clinical / medical content cannot be excluded -> content scope not bounded for the DS203 / clinical-overlap concern"
+   }
+  ],
+  "EndoSSL (colonoscopy weights)": [
+   {
+    "source": "EndoSSL Private Colonoscopy",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "six unnamed medical centres, location not stated"
+   }
+  ],
+  "SurgeNetCholec (CAFormer-S18)": [
+   {
+    "source": "cholec80",
+    "verdict": "bounded: named non-DS203 recording site",
+    "what": "University Hospital of Strasbourg"
+   },
+   {
+    "source": "heichole",
+    "verdict": "bounded: named non-DS203 recording site",
+    "what": "Heidelberg University Hospital; Salem Hospital Heidelberg; GRN-hospital Sinsheim"
+   },
+   {
+    "source": "hsdb_chole",
+    "verdict": "bounded: named non-DS203 recording site",
+    "what": "Cholec80 subset (Strasbourg)"
+   },
+   {
+    "source": "imagenet",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
+   }
+  ],
+  "SurgeNetRARP (CAFormer-S18)": [
+   {
+    "source": "esad",
+    "verdict": "bounded: named non-DS203 recording site",
+    "what": "San Raffaele Hospital, Milan"
+   },
+   {
+    "source": "psiava",
+    "verdict": "bounded: named non-DS203 recording site",
+    "what": "Fundacion Santa Fe de Bogota"
+   },
+   {
+    "source": "rarp_avl",
+    "verdict": "bounded: named non-DS203 recording site",
+    "what": "Antoni van Leeuwenhoek Hospital, Amsterdam"
+   },
+   {
+    "source": "imagenet",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
+   }
+  ],
+  "SurgeNetRAMIE (CAFormer-S18)": [
+   {
+    "source": "ramie",
+    "verdict": "bounded: named non-DS203 recording site",
+    "what": "University Medical Center Utrecht"
+   },
+   {
+    "source": "imagenet",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
+   }
+  ],
+  "EndoSSL laparoscopy ViT-B": [
+   {
+    "source": "israel8",
+    "verdict": "bounded: stated non-German geography",
+    "what": "eight unnamed centres in Israel"
+   },
+   {
+    "source": "imagenet",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
+   }
+  ],
+  "EndoSSL laparoscopy ViT-L": [
+   {
+    "source": "israel8",
+    "verdict": "bounded: stated non-German geography",
+    "what": "eight unnamed centres in Israel"
+   },
+   {
+    "source": "imagenet",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
+   }
+  ],
+  "EndoSSL laparoscopy ViT-S": [
+   {
+    "source": "israel8",
+    "verdict": "bounded: stated non-German geography",
+    "what": "eight unnamed centres in Israel"
+   },
+   {
+    "source": "imagenet",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
+   }
+  ],
+  "SelfSupSurg (ResNet-50; MoCo v2 / SimCLR / SwAV / DINO)": [
+   {
+    "source": "cholec80",
+    "verdict": "bounded: named non-DS203 recording site",
+    "what": "University Hospital of Strasbourg"
+   },
+   {
+    "source": "imagenet",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
+   }
+  ],
+  "Cosmos-H-Surgical v0.3.1": [
+   {
+    "source": "GraSP",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Fundacion Santa Fe de Bogota"
+   },
+   {
+    "source": "Cosmos-H synthetic cholecystectomy videos",
+    "verdict": "not bounded: undocumented base data (Rule A UNK)",
+    "what": "generated by the Cosmos-H-Surgical transfer pipeline; control/source inputs not described"
+   },
+   {
+    "source": "base Cosmos3-Nano",
+    "verdict": "not bounded: undocumented base data (Rule A UNK)",
+    "what": "general-domain pretraining video not enumerated"
+   }
+  ],
+  "Cosmos-H-Surgical Predict/Transfer 2.5": [
+   {
+    "source": "Cholec80",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "University Hospital of Strasbourg"
+   },
+   {
+    "source": "CholecTriplet / CholecT50",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "45 videos = Cholec80 (Strasbourg); 5 in-house (Cholec120) videos, site not restated"
+   },
+   {
+    "source": "HeiChole",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Heidelberg University Hospital; Salem Hospital Heidelberg; GRN-hospital Sinsheim"
+   },
+   {
+    "source": "GraSP",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Fundacion Santa Fe de Bogota"
+   },
+   {
+    "source": "SAR-RARP50 (KVLR: KASA subset)",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "University College Hospital at Westmoreland Street, London"
+   },
+   {
+    "source": "AutoLaparo",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Prince of Wales Hospital, Hong Kong"
+   },
+   {
+    "source": "MultiBypass140",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "University Hospital of Strasbourg; Inselspital, Bern University Hospital"
+   },
+   {
+    "source": "SurgicalActions160",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "not stated (originator Prof. J. Keckstein)"
+   },
+   {
+    "source": "SutureBot / dVRK tabletop suturing",
+    "verdict": "not bounded: site not stated (Rule A UNK, conservative)",
+    "what": "suture-pad phantom on dVRK; location not stated (authors JHU / NVIDIA / Stanford / Toronto)"
+   },
+   {
+    "source": "HeiCo / ROBUST-MIS",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Heidelberg University Hospital, Department of Surgery"
+   },
+   {
+    "source": "SATA 'credentialed YouTube surgical channels'",
+    "verdict": "not bounded: open-domain / scraped web or surgical web corpus (Rule A UNK)",
+    "what": "YouTube"
+   },
+   {
+    "source": "base Cosmos-Predict2.5-2B / Cosmos-Transfer2.5-2B",
+    "verdict": "not bounded: undocumented base data (Rule A UNK)",
+    "what": "general-domain pretraining video not enumerated"
+   }
+  ],
+  "Cosmos-H-Surgical-Simulator": [
+   {
+    "source": "Open-H CMR Versius clinical procedures",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "unnamed hospitals (institution listed: CMR Surgical)"
+   },
+   {
+    "source": "Open-H non-CMR groups",
+    "verdict": "not bounded: site not stated (Rule A UNK, conservative)",
+    "what": "JHU, JHU LSCR ARCADE, UC Berkeley, Stanford, UCSD, Hamlyn Centre, University of Turin, USTC, Moon Surgical (bench / ex vivo / animal)"
+   },
+   {
+    "source": "base Cosmos-Predict2.5-2B / Cosmos-Transfer2.5-2B",
+    "verdict": "not bounded: undocumented base data (Rule A UNK)",
+    "what": "general-domain pretraining video not enumerated"
+   }
+  ],
+  "Cosmos-H-Dreams": [
+   {
+    "source": "SutureBot / dVRK tabletop suturing",
+    "verdict": "not bounded: site not stated (Rule A UNK, conservative)",
+    "what": "suture-pad phantom on dVRK; location not stated (authors JHU / NVIDIA / Stanford / Toronto)"
+   },
+   {
+    "source": "Open-H CMR Versius clinical procedures",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "unnamed hospitals (institution listed: CMR Surgical)"
+   },
+   {
+    "source": "Open-H non-CMR groups",
+    "verdict": "not bounded: site not stated (Rule A UNK, conservative)",
+    "what": "JHU, JHU LSCR ARCADE, UC Berkeley, Stanford, UCSD, Hamlyn Centre, University of Turin, USTC, Moon Surgical (bench / ex vivo / animal)"
+   },
+   {
+    "source": "base Cosmos-Predict2.5-2B / Cosmos-Transfer2.5-2B",
+    "verdict": "not bounded: undocumented base data (Rule A UNK)",
+    "what": "general-domain pretraining video not enumerated"
+   }
+  ],
+  "MedSora": [
+   {
+    "source": "Colonoscopic (Mesejo et al. 2016)",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "not obtainable (archived dataset page lists only affiliations: CHU Estaing Clermont-Ferrand; Clinique de la Sauvegarde Lyon)"
+   },
+   {
+    "source": "CholecTriplet / CholecT50",
+    "verdict": "not bounded: clinical set without stated site (Rule A UNK)",
+    "what": "45 videos = Cholec80 (Strasbourg); 5 in-house (Cholec120) videos, site not restated"
+   },
+   {
+    "source": "Kvasir-Capsule",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Baerum Hospital, Vestre Viken Hospital Trust, Norway"
+   },
+   {
+    "source": "MedSora base '3D causal VAE'",
+    "verdict": "not bounded: undocumented base data (Rule A UNK)",
+    "what": "pretraining data not named"
+   }
+  ],
+  "SG2VID": [
+   {
+    "source": "Cataract-1K",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Klinikum Klagenfurt"
+   },
+   {
+    "source": "CATARACTS",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "Brest University Hospital"
+   },
+   {
+    "source": "Cholec80",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "University Hospital of Strasbourg"
+   }
+  ],
+  "KVLR": [
+   {
+    "source": "SAR-RARP50 (KVLR: KASA subset)",
+    "verdict": "bounded: named recording site (non-DS203 unless DSAD)",
+    "what": "University College Hospital at Westmoreland Street, London"
+   },
+   {
+    "source": "KVLR base video generator",
+    "verdict": "not bounded: undocumented base data (Rule A UNK)",
+    "what": "not named; data not documented"
+   }
+  ],
+  "Open-Sora VAE v1.2": [
+   {
+    "source": "Pexels / Pixabay / Mixkit stock video",
+    "verdict": "not bounded: open-domain / scraped web or surgical web corpus (Rule A UNK)",
+    "what": "stock-video websites"
+   },
+   {
+    "source": "SD / SDXL / SD2.1 image-VAE initialisation",
+    "verdict": "not bounded: undocumented base data (Rule A UNK)",
+    "what": "image data not documented in the candidate sources"
+   }
+  ],
+  "VideoMAE V2": [
+   {
+    "source": "Kinetics-400/600/700",
+    "verdict": "bounded: fixed ontology",
+    "what": "fixed YouTube human-action benchmark"
+   },
+   {
+    "source": "Something-Something v2",
+    "verdict": "bounded: fixed ontology",
+    "what": "crowd-sourced action clips"
+   },
+   {
+    "source": "AVA",
+    "verdict": "see benchmark entry (bounded ontology unless stated otherwise)",
+    "what": "movies"
+   },
+   {
+    "source": "WebVid",
+    "verdict": "not bounded: open-domain / scraped web or surgical web corpus (Rule A UNK)",
+    "what": "scraped from the Internet"
+   },
+   {
+    "source": "self-crawled Instagram",
+    "verdict": "not bounded: open-domain / scraped web or surgical web corpus (Rule A UNK)",
+    "what": "Instagram"
+   }
+  ],
+  "Open-Sora-Plan v1.2 VAE": [
+   {
+    "source": "Kinetics-400/600/700",
+    "verdict": "bounded: fixed ontology",
+    "what": "fixed YouTube human-action benchmark"
+   },
+   {
+    "source": "Pexels / Pixabay / Mixkit stock video",
+    "verdict": "not bounded: open-domain / scraped web or surgical web corpus (Rule A UNK)",
+    "what": "stock-video websites"
+   },
+   {
+    "source": "SD / SDXL / SD2.1 image-VAE initialisation",
+    "verdict": "not bounded: undocumented base data (Rule A UNK)",
+    "what": "image data not documented in the candidate sources"
+   }
+  ],
+  "CV-VAE": [
+   {
+    "source": "LAION-COCO / Unsplash images",
+    "verdict": "not bounded: open-domain / scraped web or surgical web corpus (Rule A UNK)",
+    "what": "web images"
+   },
+   {
+    "source": "WebVid",
+    "verdict": "not bounded: open-domain / scraped web or surgical web corpus (Rule A UNK)",
+    "what": "scraped from the Internet"
+   },
+   {
+    "source": "SD / SDXL / SD2.1 image-VAE initialisation",
+    "verdict": "not bounded: undocumented base data (Rule A UNK)",
+    "what": "image data not documented in the candidate sources"
+   }
+  ],
+  "Reducio-VAE": [
+   {
+    "source": "Pexels / Pixabay / Mixkit stock video",
+    "verdict": "not bounded: open-domain / scraped web or surgical web corpus (Rule A UNK)",
+    "what": "stock-video websites"
+   },
+   {
+    "source": "SD / SDXL / SD2.1 image-VAE initialisation",
+    "verdict": "not bounded: undocumented base data (Rule A UNK)",
+    "what": "image data not documented in the candidate sources"
+   }
+  ],
+  "VideoMAE (K400 / SSv2 / UCF101 checkpoints)": [
+   {
+    "source": "k400",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "Kinetics-400: fixed list of 400 human action classes (full list in the paper); no clinical / surgical class"
+   },
+   {
+    "source": "ssv2",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "SSv2: 174 caption templates of object manipulations recorded by crowd workers themselves; no clinical / surgical class"
+   },
+   {
+    "source": "ucf101",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "UCF-101: fixed list of 101 human action classes; no clinical / surgical class"
+   }
+  ],
+  "OmniTokenizer (ImageNet + K600)": [
+   {
+    "source": "imagenet",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
+   },
+   {
+    "source": "k600",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "Kinetics-600: Kinetics-400 list plus the listed new human action classes; no clinical / surgical class"
+   }
+  ],
+  "WF-VAE-L 16ch": [
+   {
+    "source": "k400",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "Kinetics-400: fixed list of 400 human action classes (full list in the paper); no clinical / surgical class"
+   }
+  ],
+  "LARP-L-Long tokenizer": [
+   {
+    "source": "k600",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "Kinetics-600: Kinetics-400 list plus the listed new human action classes; no clinical / surgical class"
+   },
+   {
+    "source": "ucf101",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "UCF-101: fixed list of 101 human action classes; no clinical / surgical class"
+   }
+  ],
+  "LeanVAE": [
+   {
+    "source": "k600",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "Kinetics-600: Kinetics-400 list plus the listed new human action classes; no clinical / surgical class"
+   }
+  ],
+  "Open-MAGVIT2 video tokenizer": [
+   {
+    "source": "ucf101",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "UCF-101: fixed list of 101 human action classes; no clinical / surgical class"
+   },
+   {
+    "source": "imagenet",
+    "verdict": "bounded: fixed ontology (Rule B override applies)",
+    "what": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
+   }
+  ]
  },
  "rows": [
   {
@@ -130,17 +984,16 @@
    "name": "Basel V-JEPA ViT-L (jepa-12h)",
    "cls": "primary (medical/endoscopic representation-learning encoder)",
    "clip_level": true,
-   "note": "eligible only through the B1 override (HowTo100M in the V-JEPA base data VideoMix2M); finetuning list on the official model card = HeiCo, Cholec80, MultiBypass140; the in-house liver videos are not on it",
-   "overlap_A": "NO",
-   "eligible": true,
-   "failing": "-",
+   "note": "v0.4-final3: ineligible - HowTo100M (in the V-JEPA base data VideoMix2M) has an unbounded content scope (Health category); finetuning sets HeiCo / Cholec80 / MultiBypass140 are named non-DS203 sites",
+   "overlap_A": "UNK",
+   "eligible": false,
+   "failing": "direct overlap UNK under rule A",
    "eligible_strict_counterfactual": false,
    "web_origin_disclosure_B": [
-    "Kinetics-400: human actions",
-    "Kinetics-600: human actions",
-    "Kinetics-700: human actions",
-    "SSv2: crowd-sourced caption templates",
-    "HowTo100M: narrated instructional web videos of everyday visual tasks (fixed release)"
+    "Kinetics-400: fixed list of 400 human action classes (full list in the paper); no clinical / surgical class",
+    "Kinetics-600: Kinetics-400 list plus the listed new human action classes; no clinical / surgical class",
+    "Kinetics-700: Kinetics-600 list plus the listed new human action classes; no clinical / surgical class",
+    "SSv2: 174 caption templates of object manipulations recorded by crowd workers themselves; no clinical / surgical class"
    ],
    "sources": [
     {
@@ -161,27 +1014,27 @@
     {
      "source": "k400",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "Kinetics-400: human actions"
+     "institution_or_content": "Kinetics-400: fixed list of 400 human action classes (full list in the paper); no clinical / surgical class"
     },
     {
      "source": "k600",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "Kinetics-600: human actions"
+     "institution_or_content": "Kinetics-600: Kinetics-400 list plus the listed new human action classes; no clinical / surgical class"
     },
     {
      "source": "k700",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "Kinetics-700: human actions"
+     "institution_or_content": "Kinetics-700: Kinetics-600 list plus the listed new human action classes; no clinical / surgical class"
     },
     {
      "source": "ssv2",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "SSv2: crowd-sourced caption templates"
+     "institution_or_content": "SSv2: 174 caption templates of object manipulations recorded by crowd workers themselves; no clinical / surgical class"
     },
     {
      "source": "howto100m",
-     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "HowTo100M: narrated instructional web videos of everyday visual tasks (fixed release)"
+     "status": "A-UNK",
+     "institution_or_content": "HowTo100M: fixed release, but its task ontology includes a Health category (WikiHow), so clinical / medical content cannot be excluded -> content scope not bounded for the DS203 / clinical-overlap concern"
     }
    ],
    "prior_screen_24gb": "YES"
@@ -206,7 +1059,7 @@
    "failing": "-",
    "eligible_strict_counterfactual": false,
    "web_origin_disclosure_B": [
-    "ImageNet: object categories"
+    "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
    ],
    "sources": [
     {
@@ -227,7 +1080,7 @@
     {
      "source": "imagenet",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "ImageNet: object categories"
+     "institution_or_content": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
     }
    ],
    "prior_screen_24gb": "YES"
@@ -242,7 +1095,7 @@
    "failing": "-",
    "eligible_strict_counterfactual": false,
    "web_origin_disclosure_B": [
-    "ImageNet: object categories"
+    "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
    ],
    "sources": [
     {
@@ -263,7 +1116,7 @@
     {
      "source": "imagenet",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "ImageNet: object categories"
+     "institution_or_content": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
     }
    ],
    "prior_screen_24gb": "YES"
@@ -278,7 +1131,7 @@
    "failing": "laparoscopic video not affirmatively documented",
    "eligible_strict_counterfactual": false,
    "web_origin_disclosure_B": [
-    "ImageNet: object categories"
+    "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
    ],
    "sources": [
     {
@@ -289,7 +1142,7 @@
     {
      "source": "imagenet",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "ImageNet: object categories"
+     "institution_or_content": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
     }
    ],
    "prior_screen_24gb": "YES"
@@ -304,7 +1157,7 @@
    "failing": "-",
    "eligible_strict_counterfactual": false,
    "web_origin_disclosure_B": [
-    "ImageNet: object categories"
+    "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
    ],
    "sources": [
     {
@@ -315,7 +1168,7 @@
     {
      "source": "imagenet",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "ImageNet: object categories"
+     "institution_or_content": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
     }
    ],
    "prior_screen_24gb": "YES"
@@ -330,7 +1183,7 @@
    "failing": "-",
    "eligible_strict_counterfactual": false,
    "web_origin_disclosure_B": [
-    "ImageNet: object categories"
+    "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
    ],
    "sources": [
     {
@@ -341,7 +1194,7 @@
     {
      "source": "imagenet",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "ImageNet: object categories"
+     "institution_or_content": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
     }
    ],
    "prior_screen_24gb": "YES"
@@ -356,7 +1209,7 @@
    "failing": "prior 24-GB screen: size not documented; compute not documented",
    "eligible_strict_counterfactual": false,
    "web_origin_disclosure_B": [
-    "ImageNet: object categories"
+    "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
    ],
    "sources": [
     {
@@ -367,7 +1220,7 @@
     {
      "source": "imagenet",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "ImageNet: object categories"
+     "institution_or_content": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
     }
    ],
    "prior_screen_24gb": "UNK"
@@ -382,7 +1235,7 @@
    "failing": "-",
    "eligible_strict_counterfactual": false,
    "web_origin_disclosure_B": [
-    "ImageNet: object categories"
+    "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
    ],
    "sources": [
     {
@@ -393,7 +1246,7 @@
     {
      "source": "imagenet",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "ImageNet: object categories"
+     "institution_or_content": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
     }
    ],
    "prior_screen_24gb": "YES"
@@ -521,25 +1374,25 @@
    "failing": "-",
    "eligible_strict_counterfactual": false,
    "web_origin_disclosure_B": [
-    "Kinetics-400: human actions",
-    "SSv2: crowd-sourced caption templates",
-    "UCF-101: human actions"
+    "Kinetics-400: fixed list of 400 human action classes (full list in the paper); no clinical / surgical class",
+    "SSv2: 174 caption templates of object manipulations recorded by crowd workers themselves; no clinical / surgical class",
+    "UCF-101: fixed list of 101 human action classes; no clinical / surgical class"
    ],
    "sources": [
     {
      "source": "k400",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "Kinetics-400: human actions"
+     "institution_or_content": "Kinetics-400: fixed list of 400 human action classes (full list in the paper); no clinical / surgical class"
     },
     {
      "source": "ssv2",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "SSv2: crowd-sourced caption templates"
+     "institution_or_content": "SSv2: 174 caption templates of object manipulations recorded by crowd workers themselves; no clinical / surgical class"
     },
     {
      "source": "ucf101",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "UCF-101: human actions"
+     "institution_or_content": "UCF-101: fixed list of 101 human action classes; no clinical / surgical class"
     }
    ],
    "prior_screen_24gb": "YES"
@@ -554,19 +1407,19 @@
    "failing": "-",
    "eligible_strict_counterfactual": false,
    "web_origin_disclosure_B": [
-    "ImageNet: object categories",
-    "Kinetics-600: human actions"
+    "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class",
+    "Kinetics-600: Kinetics-400 list plus the listed new human action classes; no clinical / surgical class"
    ],
    "sources": [
     {
      "source": "imagenet",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "ImageNet: object categories"
+     "institution_or_content": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
     },
     {
      "source": "k600",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "Kinetics-600: human actions"
+     "institution_or_content": "Kinetics-600: Kinetics-400 list plus the listed new human action classes; no clinical / surgical class"
     }
    ],
    "prior_screen_24gb": "YES"
@@ -581,13 +1434,13 @@
    "failing": "-",
    "eligible_strict_counterfactual": false,
    "web_origin_disclosure_B": [
-    "Kinetics-400: human actions"
+    "Kinetics-400: fixed list of 400 human action classes (full list in the paper); no clinical / surgical class"
    ],
    "sources": [
     {
      "source": "k400",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "Kinetics-400: human actions"
+     "institution_or_content": "Kinetics-400: fixed list of 400 human action classes (full list in the paper); no clinical / surgical class"
     }
    ],
    "prior_screen_24gb": "YES"
@@ -602,19 +1455,19 @@
    "failing": "-",
    "eligible_strict_counterfactual": false,
    "web_origin_disclosure_B": [
-    "Kinetics-600: human actions",
-    "UCF-101: human actions"
+    "Kinetics-600: Kinetics-400 list plus the listed new human action classes; no clinical / surgical class",
+    "UCF-101: fixed list of 101 human action classes; no clinical / surgical class"
    ],
    "sources": [
     {
      "source": "k600",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "Kinetics-600: human actions"
+     "institution_or_content": "Kinetics-600: Kinetics-400 list plus the listed new human action classes; no clinical / surgical class"
     },
     {
      "source": "ucf101",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "UCF-101: human actions"
+     "institution_or_content": "UCF-101: fixed list of 101 human action classes; no clinical / surgical class"
     }
    ],
    "prior_screen_24gb": "YES"
@@ -629,13 +1482,13 @@
    "failing": "-",
    "eligible_strict_counterfactual": false,
    "web_origin_disclosure_B": [
-    "Kinetics-600: human actions"
+    "Kinetics-600: Kinetics-400 list plus the listed new human action classes; no clinical / surgical class"
    ],
    "sources": [
     {
      "source": "k600",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "Kinetics-600: human actions"
+     "institution_or_content": "Kinetics-600: Kinetics-400 list plus the listed new human action classes; no clinical / surgical class"
     }
    ],
    "prior_screen_24gb": "YES"
@@ -650,19 +1503,19 @@
    "failing": "compute not documented",
    "eligible_strict_counterfactual": false,
    "web_origin_disclosure_B": [
-    "UCF-101: human actions",
-    "ImageNet: object categories"
+    "UCF-101: fixed list of 101 human action classes; no clinical / surgical class",
+    "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
    ],
    "sources": [
     {
      "source": "ucf101",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "UCF-101: human actions"
+     "institution_or_content": "UCF-101: fixed list of 101 human action classes; no clinical / surgical class"
     },
     {
      "source": "imagenet",
      "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "ImageNet: object categories"
+     "institution_or_content": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
     }
    ],
    "prior_screen_24gb": "YES"
@@ -1060,7 +1913,7 @@
    },
    "unk": null,
    "unk_quotes": [],
-   "note": "eligible only through the B1 override (HowTo100M in the V-JEPA base data VideoMix2M); finetuning list on the official model card = HeiCo, Cholec80, MultiBypass140; the in-house liver videos are not on it"
+   "note": "v0.4-final3: ineligible - HowTo100M (in the V-JEPA base data VideoMix2M) has an unbounded content scope (Health category); finetuning sets HeiCo / Cholec80 / MultiBypass140 are named non-DS203 sites"
   },
   {
    "name": "EndoSSL (colonoscopy weights)",
@@ -2453,8 +3306,20 @@
   },
   "imagenet": {
    "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-   "what": "ImageNet: object categories",
+   "what": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class",
    "quotes": [
+    {
+     "quote": "The 1000 categories used for the image classification task were selected from the ImageNet (Deng et al., 2009) categories. The 1000 synsets are selected such that there is no overlap between synsets",
+     "copy": "data_audit/lead/fm_sources/eligibility_v04/imagenet_ilsvrc_arxiv_1409.0575_pdf_reading.txt",
+     "level": 1,
+     "verified": true
+    },
+    {
+     "quote": "n04317175: stethoscope n04376876: syringe",
+     "copy": "data_audit/lead/fm_sources/eligibility_v04/imagenet_ilsvrc2012_browse_synsets_page.txt",
+     "level": 2,
+     "verified": true
+    },
     {
      "quote": "The ImageNet Large Scale Visual Recognition Challenge is a benchmark in object category classification and detection on hundreds of object categories and millions of images.",
      "copy": "data_audit/lead/fm_sources/eligibility_v04/imagenet_ilsvrc_arxiv_1409.0575_api.txt",
@@ -2471,8 +3336,14 @@
   },
   "k400": {
    "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-   "what": "Kinetics-400: human actions",
+   "what": "Kinetics-400: fixed list of 400 human action classes (full list in the paper); no clinical / surgical class",
    "quotes": [
+    {
+     "quote": "This is the list of classes included in the human action video dataset.",
+     "copy": "data_audit/lead/fm_sources/secondary/kinetics400_arxiv_1705.06950.txt",
+     "level": 1,
+     "verified": true
+    },
     {
      "quote": "The dataset contains 400 human action classes, with at least 400 video clips for each action. Each clip lasts around 10s and is taken from a different YouTube video.",
      "copy": "data_audit/lead/fm_sources/secondary/kinetics_arxiv_1705.06950_abs.txt",
@@ -2489,8 +3360,14 @@
   },
   "k600": {
    "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-   "what": "Kinetics-600: human actions",
+   "what": "Kinetics-600: Kinetics-400 list plus the listed new human action classes; no clinical / surgical class",
    "quotes": [
+    {
+     "quote": "This is the list of classes in Kinetics-600 that were not in Kinetics-400, or that have been renamed.",
+     "copy": "data_audit/lead/fm_sources/secondary/kinetics600_arxiv_1808.01340.txt",
+     "level": 1,
+     "verified": true
+    },
     {
      "quote": "We describe an extension of the DeepMind Kinetics human action dataset from 400 classes, each with at least 400 video clips, to 600 classes, each with at least 600 video clips.",
      "copy": "data_audit/lead/fm_sources/secondary/kinetics600_arxiv_1808.01340.txt",
@@ -2507,7 +3384,7 @@
   },
   "ucf101": {
    "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-   "what": "UCF-101: human actions",
+   "what": "UCF-101: fixed list of 101 human action classes; no clinical / surgical class",
    "quotes": [
     {
      "quote": "It consists of 101 action classes, over 13k clips and 27 hours of video data. The database consists of realistic user-uploaded videos containing camera motion and cluttered background.",
@@ -2525,8 +3402,14 @@
   },
   "k700": {
    "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-   "what": "Kinetics-700: human actions",
+   "what": "Kinetics-700: Kinetics-600 list plus the listed new human action classes; no clinical / surgical class",
    "quotes": [
+    {
+     "quote": "This is the list of classes in Kinetics-700 that were not in Kinetics-600, or that have been renamed.",
+     "copy": "data_audit/lead/fm_sources/eligibility_v04/kinetics700_arxiv_1907.06987_pdf_reading.txt",
+     "level": 1,
+     "verified": true
+    },
     {
      "quote": "We describe an extension of the DeepMind Kinetics human action dataset from 600 classes to 700 classes, where for each class there are at least 600 video clips from different YouTube videos.",
      "copy": "data_audit/lead/fm_sources/eligibility_v04/kinetics700_arxiv_1907.06987_api.txt",
@@ -2542,9 +3425,21 @@
    ]
   },
   "howto100m": {
-   "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-   "what": "HowTo100M: narrated instructional web videos of everyday visual tasks (fixed release)",
+   "status": "A-UNK",
+   "what": "HowTo100M: fixed release, but its task ontology includes a Health category (WikiHow), so clinical / medical content cannot be excluded -> content scope not bounded for the DS203 / clinical-overlap concern",
    "quotes": [
+    {
+     "quote": "To obtain predominantly visual tasks, we limit them to one of 12 categories (listed in Table 2).",
+     "copy": "data_audit/lead/fm_sources/eligibility_v04/howto100m_arxiv_1906.03327_pdf_reading.txt",
+     "level": 1,
+     "verified": true
+    },
+    {
+     "quote": "Sports and Fitness 205 Health 172 Education and Communications 239",
+     "copy": "data_audit/lead/fm_sources/eligibility_v04/howto100m_arxiv_1906.03327_pdf_reading.txt",
+     "level": 1,
+     "verified": true
+    },
     {
      "quote": "we introduce HowTo100M: a large-scale dataset of 136 million video clips sourced from 1.22M narrated instructional web videos depicting humans performing and describing over 23k different visual tasks.",
      "copy": "data_audit/lead/fm_sources/eligibility_v04/howto100m_arxiv_1906.03327_api.txt",
@@ -2591,8 +3486,14 @@
   },
   "ssv2": {
    "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-   "what": "SSv2: crowd-sourced caption templates",
+   "what": "SSv2: 174 caption templates of object manipulations recorded by crowd workers themselves; no clinical / surgical class",
    "quotes": [
+    {
+     "quote": "Crowdworkers are asked to record videos and to complete captiontemplates, by providing appropriate input-text for placeholders.",
+     "copy": "data_audit/lead/fm_sources/eligibility_v04/ssv2_arxiv_1706.04261_pdf_reading.txt",
+     "level": 1,
+     "verified": true
+    },
     {
      "quote": "The database currently contains more than 100,000 videos across 174 classes, which are defined as caption-templates. We also describe the challenges in crowd-sourcing this data at scale.",
      "copy": "data_audit/lead/fm_sources/secondary/ssv2_arxiv_1706.04261_abs.txt",

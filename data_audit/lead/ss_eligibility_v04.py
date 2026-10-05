@@ -13,12 +13,14 @@ the mutually exclusive classes and the TWO-LEVEL OVERLAP RULE. NO ranking is app
     DS203's release on 2026-04-29); UNK if open-ended / web-scale or the clinical/site provenance cannot be bounded.
   B (generic web origin): for a fixed closed benchmark, generic web provenance does not change NO to UNK; it is
     disclosed as a limitation ("incidental web-origin exposure cannot be excluded at the level of every source image").
-    [freeze-repair B1] OVERRIDE: a named, versioned benchmark with a fixed sample list or fixed release, finalized
-    before DS203's release (level-1-3 source), is treated under B even if its media came from YouTube or another
-    generic web source; A's "open-ended / web-scale -> UNK" clause applies only to open-ended, continuously scraped,
-    unversioned or otherwise unbounded web corpora. The override concerns generic web provenance only: A's
-    clinical/site-provenance clause still makes UNK any corpus of clinical or surgical video whose recording sites
-    cannot be bounded (e.g., LEMON, SVL).
+    [v0.4-final3] BOUNDED GENERIC-WEB BENCHMARK OVERRIDE (replaces the v0.4-final2 release-date override): generic
+    web provenance alone does not change NO to UNK only for a named, versioned, fixed benchmark whose level-1-3
+    documentation provides a sufficiently bounded content scope (a fixed class / task ontology or equivalent closed
+    benchmark definition) that permits the DS203 / clinical-overlap concern to be affirmatively excluded. A fixed
+    release remains UNK when it is an open-domain or broadly scraped web corpus whose clinical / content / site
+    provenance cannot be bounded. Release date alone is not sufficient for NO. The override never overrides A's
+    clinical / site-provenance clause. Every benchmark source below carries its ontology quote and the result of a
+    term check of its documented class list for clinical / surgical content.
   C (same-hospital): applies to clinical / endoscopic sources only.
   A candidate is eligible on overlap only if every source is NO under A. The strict reading (every web-derived source
   UNK) is reported as a counterfactual only.
@@ -42,7 +44,7 @@ def Q(quote, rel):
     return dict(quote=quote, copy=os.path.relpath(p, REPO), level=level(p), verified=norm(quote) in _c[p])
 prov = {d["name"]: d for d in json.load(open(os.path.join(OUT, "dataset_provenance.json")))["datasets"]}
 def PV(name): return [Q(q["quote"], os.path.join(REPO, q["file"])) for q in prov[name]["quotes"] if q.get("kind", "recording_site") == "recording_site"][:2]
-P, S = "primary/", "secondary/"
+P, S, E = "primary/", "secondary/", "eligibility_v04/"
 # ---- training sources: status under the two readings ----------------------------------------------------------
 NAMED, GEN, GEO, UNK, YES = "A-NO: named non-DS203 recording site", "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)", "A-NO: non-German geography", "A-UNK", "A-YES: known same-hospital clinical source"
 DS203_RELEASE = Q("\"dc.date.issued\" : [ { \"value\" : \"2026-04-29\"", "/media/user/LaCie/medvideo_gate/DS203/opara_item.json")
@@ -56,15 +58,15 @@ SRC = {
  "ramie": (NAMED, "University Medical Center Utrecht", [Q("another containing robot-assisted minimally invasive esophagectomy (RAMIE) procedures from the University Medical Center Utrecht (UMCU)", P + "surgenetxl_arxiv_pdf.txt")]),
  "dsad": (YES, "University Hospital Carl Gustav Carus Dresden (Dept. of Visceral, Thoracic and Vascular Surgery); C2 = Carus Pediatric Surgery", [Q("video data from a total of 32 robot-assisted anterior rectal resections or rectal extirpations performed at the University Hospital Carl Gustav Carus Dresden was gathered", P + "dsad_scidata.txt")]),
  "israel8": (GEO, "eight unnamed centres in Israel", [Q("The dataset consists of 7,877 videos recorded at eight different medical centers in Israel.", P + "endossl_arxiv_pdf.txt")]),
- "imagenet": (GEN, "ImageNet: object categories", [Q("The ImageNet Large Scale Visual Recognition Challenge is a benchmark in object category classification and detection on hundreds of object categories and millions of images.", "eligibility_v04/imagenet_ilsvrc_arxiv_1409.0575_api.txt"), Q("<published>2014-09-01T22:29:38Z</published>", "eligibility_v04/imagenet_ilsvrc_arxiv_1409.0575_api.txt")]),
- "k400": (GEN, "Kinetics-400: human actions", [Q("The dataset contains 400 human action classes, with at least 400 video clips for each action. Each clip lasts around 10s and is taken from a different YouTube video.", S + "kinetics_arxiv_1705.06950_abs.txt"), Q("[v1] Fri, 19 May 2017 12:07:01 UTC", S + "kinetics_arxiv_1705.06950_abs.txt")]),
- "k600": (GEN, "Kinetics-600: human actions", [Q("We describe an extension of the DeepMind Kinetics human action dataset from 400 classes, each with at least 400 video clips, to 600 classes, each with at least 600 video clips.", S + "kinetics600_arxiv_1808.01340.txt"), Q("arXiv:1808.01340v1 [cs.CV] 3 Aug 2018", S + "kinetics600_arxiv_1808.01340.txt")]),
- "ucf101": (GEN, "UCF-101: human actions", [Q("It consists of 101 action classes, over 13k clips and 27 hours of video data. The database consists of realistic user-uploaded videos containing camera motion and cluttered background.", S + "ucf101_arxiv_1212.0402.txt"), Q("arXiv:1212.0402v1 [cs.CV] 3 Dec 2012", S + "ucf101_arxiv_1212.0402.txt")]),
- "k700": (GEN, "Kinetics-700: human actions", [Q("We describe an extension of the DeepMind Kinetics human action dataset from 600 classes to 700 classes, where for each class there are at least 600 video clips from different YouTube videos.", "eligibility_v04/kinetics700_arxiv_1907.06987_api.txt"), Q("<published>2019-07-15T12:58:21Z</published>", "eligibility_v04/kinetics700_arxiv_1907.06987_api.txt")]),
- "howto100m": (GEN, "HowTo100M: narrated instructional web videos of everyday visual tasks (fixed release)", [Q("we introduce HowTo100M: a large-scale dataset of 136 million video clips sourced from 1.22M narrated instructional web videos depicting humans performing and describing over 23k different visual tasks.", "eligibility_v04/howto100m_arxiv_1906.03327_api.txt"), Q("<published>2019-06-07T20:48:19Z</published>", "eligibility_v04/howto100m_arxiv_1906.03327_api.txt")]),
+ "imagenet": (GEN, "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class", [Q("The 1000 categories used for the image classification task were selected from the ImageNet (Deng et al., 2009) categories. The 1000 synsets are selected such that there is no overlap between synsets", E + "imagenet_ilsvrc_arxiv_1409.0575_pdf_reading.txt"), Q("n04317175: stethoscope n04376876: syringe", E + "imagenet_ilsvrc2012_browse_synsets_page.txt"), Q("The ImageNet Large Scale Visual Recognition Challenge is a benchmark in object category classification and detection on hundreds of object categories and millions of images.", "eligibility_v04/imagenet_ilsvrc_arxiv_1409.0575_api.txt"), Q("<published>2014-09-01T22:29:38Z</published>", "eligibility_v04/imagenet_ilsvrc_arxiv_1409.0575_api.txt")]),
+ "k400": (GEN, "Kinetics-400: fixed list of 400 human action classes (full list in the paper); no clinical / surgical class", [Q("This is the list of classes included in the human action video dataset.", S + "kinetics400_arxiv_1705.06950.txt"), Q("The dataset contains 400 human action classes, with at least 400 video clips for each action. Each clip lasts around 10s and is taken from a different YouTube video.", S + "kinetics_arxiv_1705.06950_abs.txt"), Q("[v1] Fri, 19 May 2017 12:07:01 UTC", S + "kinetics_arxiv_1705.06950_abs.txt")]),
+ "k600": (GEN, "Kinetics-600: Kinetics-400 list plus the listed new human action classes; no clinical / surgical class", [Q("This is the list of classes in Kinetics-600 that were not in Kinetics-400, or that have been renamed.", S + "kinetics600_arxiv_1808.01340.txt"), Q("We describe an extension of the DeepMind Kinetics human action dataset from 400 classes, each with at least 400 video clips, to 600 classes, each with at least 600 video clips.", S + "kinetics600_arxiv_1808.01340.txt"), Q("arXiv:1808.01340v1 [cs.CV] 3 Aug 2018", S + "kinetics600_arxiv_1808.01340.txt")]),
+ "ucf101": (GEN, "UCF-101: fixed list of 101 human action classes; no clinical / surgical class", [Q("It consists of 101 action classes, over 13k clips and 27 hours of video data. The database consists of realistic user-uploaded videos containing camera motion and cluttered background.", S + "ucf101_arxiv_1212.0402.txt"), Q("arXiv:1212.0402v1 [cs.CV] 3 Dec 2012", S + "ucf101_arxiv_1212.0402.txt")]),
+ "k700": (GEN, "Kinetics-700: Kinetics-600 list plus the listed new human action classes; no clinical / surgical class", [Q("This is the list of classes in Kinetics-700 that were not in Kinetics-600, or that have been renamed.", E + "kinetics700_arxiv_1907.06987_pdf_reading.txt"), Q("We describe an extension of the DeepMind Kinetics human action dataset from 600 classes to 700 classes, where for each class there are at least 600 video clips from different YouTube videos.", "eligibility_v04/kinetics700_arxiv_1907.06987_api.txt"), Q("<published>2019-07-15T12:58:21Z</published>", "eligibility_v04/kinetics700_arxiv_1907.06987_api.txt")]),
+ "howto100m": (UNK, "HowTo100M: fixed release, but its task ontology includes a Health category (WikiHow), so clinical / medical content cannot be excluded -> content scope not bounded for the DS203 / clinical-overlap concern", [Q("To obtain predominantly visual tasks, we limit them to one of 12 categories (listed in Table 2).", E + "howto100m_arxiv_1906.03327_pdf_reading.txt"), Q("Sports and Fitness 205 Health 172 Education and Communications 239", E + "howto100m_arxiv_1906.03327_pdf_reading.txt"), Q("we introduce HowTo100M: a large-scale dataset of 136 million video clips sourced from 1.22M narrated instructional web videos depicting humans performing and describing over 23k different visual tasks.", "eligibility_v04/howto100m_arxiv_1906.03327_api.txt"), Q("<published>2019-06-07T20:48:19Z</published>", "eligibility_v04/howto100m_arxiv_1906.03327_api.txt")]),
  "heico": (NAMED, "Heidelberg University Hospital, Department of Surgery", PV("HeiCo / ROBUST-MIS")),
  "mbp140": (NAMED, "University Hospital of Strasbourg; Inselspital, Bern University Hospital", PV("MultiBypass140")),
- "ssv2": (GEN, "SSv2: crowd-sourced caption templates", [Q("The database currently contains more than 100,000 videos across 174 classes, which are defined as caption-templates. We also describe the challenges in crowd-sourcing this data at scale.", S + "ssv2_arxiv_1706.04261_abs.txt"), Q("[v1] Tue, 13 Jun 2017 21:26:19 UTC", S + "ssv2_arxiv_1706.04261_abs.txt")]),
+ "ssv2": (GEN, "SSv2: 174 caption templates of object manipulations recorded by crowd workers themselves; no clinical / surgical class", [Q("Crowdworkers are asked to record videos and to complete captiontemplates, by providing appropriate input-text for placeholders.", E + "ssv2_arxiv_1706.04261_pdf_reading.txt"), Q("The database currently contains more than 100,000 videos across 174 classes, which are defined as caption-templates. We also describe the challenges in crowd-sourcing this data at scale.", S + "ssv2_arxiv_1706.04261_abs.txt"), Q("[v1] Tue, 13 Jun 2017 21:26:19 UTC", S + "ssv2_arxiv_1706.04261_abs.txt")]),
 }
 UNK_REASON = {  # decisive reasons for overlap-ineligible candidates
  "dsad_yes": "direct overlap YES under rule A: DSAD, a known same-hospital clinical source (University Hospital Carl Gustav Carus Dresden; C2 = its Department of Pediatric Surgery); other sources are also UNK",
@@ -114,7 +116,7 @@ cand("Basel V-JEPA ViT-L (jepa-12h)", "Finetuned V-JEPA", ENC, [Q("We finetuned 
     init=[Q("By pretrained V-JEPA, we refer to the weights provided by Bardes et al. [1].", P + "mlcds_arxiv_pdf.txt"),
           Q("Specifically, we combine the videos from HowTo100M (HT) (Miech et al., 2019), Kinetics-400/600/700 (K710) (Kay et al., 2017), and Something-Something-v2 (SSv2) (Goyal et al., 2017)", P + "vjepa_arxiv_pdf.txt"),
           Q("Videos from the following datasets were used for finetuning:", P + "mlcds_hf_readme.txt")]),
-    note="eligible only through the B1 override (HowTo100M in the V-JEPA base data VideoMix2M); finetuning list on the official model card = HeiCo, Cholec80, MultiBypass140; the in-house liver videos are not on it")
+    note="v0.4-final3: ineligible - HowTo100M (in the V-JEPA base data VideoMix2M) has an unbounded content scope (Health category); finetuning sets HeiCo / Cholec80 / MultiBypass140 are named non-DS203 sites")
 cand("EndoSSL (colonoscopy weights)", "EndoSSL", ENC, [Q("we study the use of a leading SSL framework, namely Masked Siamese Networks (MSNs), for endoscopic video analysis such as colonoscopy and laparoscopy.", P + "endossl_arxiv_pdf.txt")], False, [],
      unk="site_not_stated", unk_q=[Q("These videos were recorded during standard colonoscopy procedures performed at six different medical centers between the years 2019 and 2022.", P + "endossl_arxiv_pdf.txt")], note="also fails the laparoscopic rule (colonoscopy only)")
 # primary class, candidates for eligibility (full rule evaluation)
@@ -240,13 +242,45 @@ for c in C:
     rows.append(r)
 allq = [DS203_RELEASE] + [q for c in C for q in c["class_quotes"] + c["clip_quotes"] + c["unk_quotes"] + [x for k, v in c["rules"].items() if isinstance(v, tuple) for x in v[1]] + c["rules"].get("init", [])] + [q for v in SRC.values() for q in v[2]]
 bad = [q for q in allq if not q["verified"]]; low = [q for q in allq if q["level"] > 3]
+# ---- [v0.4-final3] term check of documented ontologies + boundedness of every source of every candidate --------
+import re as _re
+TERMS = r"surg|laparo|endoscop|hospital|operating room|medic|doctor|patient|clinic|dentist|health|stethoscope|syringe|nurse|injection"
+ONTO = {"imagenet": E + "imagenet_ilsvrc2012_browse_synsets_page.txt", "k400": S + "kinetics400_arxiv_1705.06950.txt", "k600": S + "kinetics600_arxiv_1808.01340.txt",
+        "k700": E + "kinetics700_arxiv_1907.06987_pdf_reading.txt", "ucf101": S + "ucf101_arxiv_1212.0402.txt", "ssv2": E + "ssv2_arxiv_1706.04261_pdf_reading.txt",
+        "howto100m": E + "howto100m_arxiv_1906.03327_pdf_reading.txt"}
+term_check = {k_: sorted(set(m.group(0).strip().lower() for m in _re.finditer(r"[a-z\- ]{0,20}(" + TERMS + r")[a-z\- ]{0,20}", open(os.path.join(FS, v_), errors="replace").read(), _re.I)))[:20] for k_, v_ in ONTO.items()}
+BOUND_OF = {NAMED: "bounded: named non-DS203 recording site", GEO: "bounded: stated non-German geography", GEN: "bounded: fixed ontology (Rule B override applies)",
+            YES: "known same-hospital clinical source (Rule A YES)", UNK: "not bounded (Rule A UNK)"}
+SO = json.load(open(os.path.join(OUT, "site_overlap.json")))["rows"]
+SO_MAP = {"SURGICAL": None}
+SO_CLASS = {"hospital named": "bounded: named recording site (non-DS203 unless DSAD)", "unnamed centres, geography stated": "bounded: stated non-German geography",
+            "clinical, recording site not stated": "not bounded: clinical set without stated site (Rule A UNK)",
+            "non-clinical (animal / phantom / bench), site not stated": "not bounded: site not stated (Rule A UNK, conservative)",
+            "web-scale": "not bounded: open-domain / scraped web or surgical web corpus (Rule A UNK)", "undocumented base / init weights": "not bounded: undocumented base data (Rule A UNK)",
+            "fixed general benchmark (non-medical)": "see benchmark entry (bounded ontology unless stated otherwise)"}
+SO_NAME = {"Endo-FM": "Endo-FM", "EndoViT": "EndoViT", "SurgeNetXL": "SurgeNetXL", "SurgeNet / SurgeNetPublic": "SurgeNet / SurgeNetPublic",
+           "SurgVLP / HecVL / PeskaVLP": "SurgVLP / HecVL / PeskaVLP", "EndoMamba": "EndoMamba", "LemonFM": "LemonFM", "SurgLIME": "SurgLIME",
+           "PL-Stitch": "PL-Stitch", "EndoSSL (colonoscopy weights)": "EndoSSL (colonoscopy weights)", "Cosmos-H-Surgical v0.3.1": "Cosmos-H-Surgical v0.3.1",
+           "Cosmos-H-Surgical Predict/Transfer 2.5": "Cosmos-H-Surgical Predict/Transfer 2.5", "Cosmos-H-Surgical-Simulator": "Cosmos-H-Surgical-Simulator",
+           "Cosmos-H-Dreams": "Cosmos-H-Dreams", "MedSora": "MedSora", "SG2VID": "SG2VID", "KVLR": "KVLR", "Open-Sora VAE v1.2": "Open-Sora VAE v1.2",
+           "VideoMAE V2": "VideoMAE V2", "Open-Sora-Plan v1.2 VAE": "Open-Sora-Plan v1.2 VAE", "CV-VAE": "CV-VAE", "Reducio-VAE": "Reducio-VAE"}
+def so_row(name):
+    lab = SO_NAME.get(name)
+    return next((r_ for r_ in SO if r_["candidate"].strip() == lab), None)
+per_candidate = {}
+for c in C:
+    if c["rules"].get("sources"):
+        per_candidate[c["name"]] = [dict(source=s_, verdict=BOUND_OF[SRC[s_][0]], what=SRC[s_][1]) for s_ in c["rules"]["sources"]]
+    else:
+        r_ = so_row(c["name"])
+        per_candidate[c["name"]] = [dict(source=x["source"], verdict=("bounded: fixed ontology" if x["key"] in ("imagenet", "kinetics", "ssv2", "ucf101") else ("known same-hospital clinical source (Rule A YES)" if x["key"] == "dsad" else SO_CLASS.get(x["cls"], x["cls"]))), what=x["institution"]) for x in (r_["sources"] if r_ else [])] or [dict(source="(see decisive quote)", verdict=UNK_REASON.get(c["unk"], c["cls"]))]
 res = dict(note=__doc__, level4_context=LEVEL4_CONTEXT, ds203_release=DS203_RELEASE, quotes_verified=f"{len(allq) - len(bad)}/{len(allq)}",
            quotes_above_level3=len(low), tie_break_order=TIEBREAK_ORDER,
            eligible_primary=[r["name"] for r in rows if r["cls"] == ENC and r["eligible"]],
            eligible_secondary=[r["name"] for r in rows if r["cls"] == GENERIC and r["eligible"]],
            strict_reading_counterfactual=dict(primary=[r["name"] for r in rows if r["cls"] == ENC and r["eligible_strict_counterfactual"]],
                                               secondary=[r["name"] for r in rows if r["cls"] == GENERIC and r["eligible_strict_counterfactual"]]),
-           rows=rows, candidates=C, sources={k: dict(status=v[0], what=v[1], quotes=v[2]) for k, v in SRC.items()})
+           ontology_term_check=term_check, per_candidate_source_boundedness=per_candidate, rows=rows, candidates=C, sources={k: dict(status=v[0], what=v[1], quotes=v[2]) for k, v in SRC.items()})
 json.dump(res, open(os.path.join(OUT, "ss_eligibility_v04.json"), "w"), indent=1, ensure_ascii=False)
 print(res["quotes_verified"], "above level 3:", len(low))
 print("eligible_primary", res["eligible_primary"]); print("eligible_secondary", res["eligible_secondary"]); print("strict counterfactual", res["strict_reading_counterfactual"])
