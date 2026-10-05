@@ -1,5 +1,5 @@
 {
- "note": "Pre-freeze fact task for SS protocol v0.4 (consolidated task Part 2 item 5; final pre-freeze task items 1, 4, 6):\nre-determine the eligibility of every 052590c-eligible candidate under the source hierarchy, the clip-level definition,\nthe mutually exclusive classes and the TWO-LEVEL OVERLAP RULE. NO ranking is applied and NO model is selected.\n* Source levels: 1 original paper (incl. a dataset's own paper); 2 official model card / official repository README or\n  file listing; 3 documented pretraining-data list (official configs / training scripts); 4 secondary; 5 internal\n  tables (052590c, cb07e93). A required fact holds only if a level-1-3 source affirmatively supports it; otherwise it\n  is UNK and the candidate is ineligible. Level-4/5 material is shown for context only.\n* Two-level overlap rule, per training source of the released weights and of their initialisation / base weights:\n  A (direct DS203 / DS203-centre overlap): YES if DS203, a constituent DS203 dataset or a known same-hospital clinical\n    source (DSAD) is documented; NO if a level-1-3 source establishes a closed or sufficiently defined corpus whose\n    documented scope excludes DS203 and the known DS203 clinical sources (a clinical set with a named non-DS203\n    recording site or non-German geography; a versioned non-surgical benchmark with fixed classes finalized before\n    DS203's release on 2026-04-29); UNK if open-ended / web-scale or the clinical/site provenance cannot be bounded.\n  B (generic web origin): for a fixed closed benchmark, generic web provenance does not change NO to UNK; it is\n    disclosed as a limitation (\"incidental web-origin exposure cannot be excluded at the level of every source image\").\n    [v0.4-final3] BOUNDED GENERIC-WEB BENCHMARK OVERRIDE (replaces the v0.4-final2 release-date override): generic\n    web provenance alone does not change NO to UNK only for a named, versioned, fixed benchmark whose level-1-3\n    documentation provides a sufficiently bounded content scope (a fixed class / task ontology or equivalent closed\n    benchmark definition) that permits the DS203 / clinical-overlap concern to be affirmatively excluded. A fixed\n    release remains UNK when it is an open-domain or broadly scraped web corpus whose clinical / content / site\n    provenance cannot be bounded. Release date alone is not sufficient for NO. The override never overrides A's\n    clinical / site-provenance clause. Every benchmark source below carries its ontology quote and the result of a\n    term check of its documented class list for clinical / surgical content.\n  C (same-hospital): applies to clinical / endoscopic sources only.\n  A candidate is eligible on overlap only if every source is NO under A. The strict reading (every web-derived source\n  UNK) is reported as a counterfactual only.\n* \"Fits 24 GB\" here is the PRIOR SCREEN (parameter count / checkpoint size); the final determination is the frozen\n  synthetic-input feasibility test run after freeze (protocol §4.1).\nEvery quote is verified as a whitespace-normalised substring of its saved copy.",
+ "note": "Pre-freeze fact task for SS protocol v0.4 (consolidated task Part 2 item 5; final pre-freeze task items 1, 4, 6):\nre-determine the eligibility of every 052590c-eligible candidate under the source hierarchy, the clip-level definition,\nthe mutually exclusive classes and the TWO-LEVEL OVERLAP RULE. NO ranking is applied and NO model is selected.\n* Source levels: 1 original paper (incl. a dataset's own paper); 2 official model card / official repository README or\n  file listing; 3 documented pretraining-data list (official configs / training scripts); 4 secondary; 5 internal\n  tables (052590c, cb07e93). A required fact holds only if a level-1-3 source affirmatively supports it; otherwise it\n  is UNK and the candidate is ineligible. Level-4/5 material is shown for context only.\n* Two-level overlap rule, per training source of the released weights and of their initialisation / base weights:\n  A (direct DS203 / DS203-centre overlap): YES if DS203, a constituent DS203 dataset or a known same-hospital clinical\n    source (DSAD) is documented; NO if a level-1-3 source establishes a closed or sufficiently defined corpus whose\n    documented scope excludes DS203 and the known DS203 clinical sources (a clinical set with a named non-DS203\n    recording site or non-German geography; a versioned non-surgical benchmark with fixed classes finalized before\n    DS203's release on 2026-04-29); UNK if open-ended / web-scale or the clinical/site provenance cannot be bounded.\n  B (generic web origin): for a fixed closed benchmark, generic web provenance does not change NO to UNK; it is\n    disclosed as a limitation (\"incidental web-origin exposure cannot be excluded at the level of every source image\").\n    [v0.4-final3] BOUNDED GENERIC-WEB BENCHMARK OVERRIDE (replaces the v0.4-final2 release-date override): generic\n    web provenance alone does not change NO to UNK only for a named, versioned, fixed benchmark whose level-1-3\n    documentation provides a sufficiently bounded content scope (a fixed class / task ontology or equivalent closed\n    benchmark definition) that permits the DS203 / clinical-overlap concern to be affirmatively excluded. A fixed\n    release remains UNK when it is an open-domain or broadly scraped web corpus whose clinical / content / site\n    provenance cannot be bounded. Release date alone is not sufficient for NO. The override never overrides A's\n    clinical / site-provenance clause. Every benchmark source below carries its ontology quote and the result of a\n    term check of its documented class list for clinical / surgical content.\n  C (same-hospital): applies to clinical / endoscopic sources only.\n  A candidate is eligible on overlap only if every source is NO under A. The strict reading (every web-derived source\n  UNK) is reported as a counterfactual only.\n* [v0.4-final3, EndoSSL init check] Initialization must be affirmatively stated in a level-1-3 source (pretrained\n  checkpoint named, or training from scratch / random initialization); otherwise the initialization is a UNK source and\n  the candidate is ineligible. Each eligible model carries its initialization quotes (\"init_stated\").\n* \"Fits 24 GB\" here is the PRIOR SCREEN (parameter count / checkpoint size); the final determination is the frozen\n  synthetic-input feasibility test run after freeze (protocol §4.1).\nEvery quote is verified as a whitespace-normalised substring of its saved copy.",
  "level4_context": "mmaction2 label maps (level 4, context only): no Kinetics-400/600/700 class name contains surg/operat/laparo/endoscop/hospital/medic/doctor/patient/clinic",
  "ds203_release": {
   "quote": "\"dc.date.issued\" : [ { \"value\" : \"2026-04-29\"",
@@ -7,7 +7,7 @@
   "level": 2,
   "verified": true
  },
- "quotes_verified": "174/174",
+ "quotes_verified": "203/203",
  "quotes_above_level3": 0,
  "tie_break_order": [
   "scientific rank criteria of protocol §4.1.4 (not applied here)",
@@ -19,8 +19,6 @@
  "eligible_primary": [
   "SurgeNetCholec (CAFormer-S18)",
   "SurgeNetRARP (CAFormer-S18)",
-  "EndoSSL laparoscopy ViT-B",
-  "EndoSSL laparoscopy ViT-L",
   "SelfSupSurg (ResNet-50; MoCo v2 / SimCLR / SwAV / DINO)"
  ],
  "eligible_secondary": [
@@ -526,9 +524,9 @@
     "what": "eight unnamed centres in Israel"
    },
    {
-    "source": "imagenet",
-    "verdict": "bounded: fixed ontology (Rule B override applies)",
-    "what": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
+    "source": "endossl_init",
+    "verdict": "not bounded (Rule A UNK)",
+    "what": "EndoSSL released-checkpoint initialization: not stated in any level-1-3 source (paper ablations compare starting from scratch and from an ImageNet-1k SSL checkpoint; supplementary Table 4 lists MSN hyper-parameters only)"
    }
   ],
   "EndoSSL laparoscopy ViT-L": [
@@ -538,9 +536,9 @@
     "what": "eight unnamed centres in Israel"
    },
    {
-    "source": "imagenet",
-    "verdict": "bounded: fixed ontology (Rule B override applies)",
-    "what": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
+    "source": "endossl_init",
+    "verdict": "not bounded (Rule A UNK)",
+    "what": "EndoSSL released-checkpoint initialization: not stated in any level-1-3 source (paper ablations compare starting from scratch and from an ImageNet-1k SSL checkpoint; supplementary Table 4 lists MSN hyper-parameters only)"
    }
   ],
   "EndoSSL laparoscopy ViT-S": [
@@ -550,9 +548,9 @@
     "what": "eight unnamed centres in Israel"
    },
    {
-    "source": "imagenet",
-    "verdict": "bounded: fixed ontology (Rule B override applies)",
-    "what": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
+    "source": "endossl_init",
+    "verdict": "not bounded (Rule A UNK)",
+    "what": "EndoSSL released-checkpoint initialization: not stated in any level-1-3 source (paper ablations compare starting from scratch and from an ImageNet-1k SSL checkpoint; supplementary Table 4 lists MSN hyper-parameters only)"
    }
   ],
   "SelfSupSurg (ResNet-50; MoCo v2 / SimCLR / SwAV / DINO)": [
@@ -938,7 +936,7 @@
    "eligible": false,
    "eligible_strict_counterfactual": false,
    "overlap_A": "UNK",
-   "failing": "direct overlap UNK under rule A: a training source is surgical / clinical video from web platforms whose recording sites cannot be bounded (rule A clinical/site-provenance clause; the B1 override covers generic web provenance only)"
+   "failing": "direct overlap UNK under rule A: a training source is surgical / clinical video from web platforms whose recording sites cannot be bounded (Rule A clinical/site-provenance clause, which Rule B never overrides)"
   },
   {
    "name": "EndoMamba",
@@ -958,7 +956,7 @@
    "eligible": false,
    "eligible_strict_counterfactual": false,
    "overlap_A": "UNK",
-   "failing": "direct overlap UNK under rule A: a training source is surgical / clinical video from web platforms whose recording sites cannot be bounded (rule A clinical/site-provenance clause; the B1 override covers generic web provenance only)"
+   "failing": "direct overlap UNK under rule A: a training source is surgical / clinical video from web platforms whose recording sites cannot be bounded (Rule A clinical/site-provenance clause, which Rule B never overrides)"
   },
   {
    "name": "SurgLIME",
@@ -968,7 +966,7 @@
    "eligible": false,
    "eligible_strict_counterfactual": false,
    "overlap_A": "UNK",
-   "failing": "direct overlap UNK under rule A: a training source is surgical / clinical video from web platforms whose recording sites cannot be bounded (rule A clinical/site-provenance clause; the B1 override covers generic web provenance only)"
+   "failing": "direct overlap UNK under rule A: a training source is surgical / clinical video from web platforms whose recording sites cannot be bounded (Rule A clinical/site-provenance clause, which Rule B never overrides)"
   },
   {
    "name": "PL-Stitch",
@@ -978,7 +976,7 @@
    "eligible": false,
    "eligible_strict_counterfactual": false,
    "overlap_A": "UNK",
-   "failing": "direct overlap UNK under rule A: a training source is surgical / clinical video from web platforms whose recording sites cannot be bounded (rule A clinical/site-provenance clause; the B1 override covers generic web provenance only)"
+   "failing": "direct overlap UNK under rule A: a training source is surgical / clinical video from web platforms whose recording sites cannot be bounded (Rule A clinical/site-provenance clause, which Rule B never overrides)"
   },
   {
    "name": "Basel V-JEPA ViT-L (jepa-12h)",
@@ -1037,7 +1035,11 @@
      "institution_or_content": "HowTo100M: fixed release, but its task ontology includes a Health category (WikiHow), so clinical / medical content cannot be excluded -> content scope not bounded for the DS203 / clinical-overlap concern"
     }
    ],
-   "prior_screen_24gb": "YES"
+   "prior_screen_24gb": "YES",
+   "init_stated": "STATED",
+   "init_quotes": [
+    "By pretrained V-JEPA, we refer to the weights provided by Bardes et al. [1]."
+   ]
   },
   {
    "name": "EndoSSL (colonoscopy weights)",
@@ -1083,7 +1085,12 @@
      "institution_or_content": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
     }
    ],
-   "prior_screen_24gb": "YES"
+   "prior_screen_24gb": "YES",
+   "init_stated": "STATED",
+   "init_quotes": [
+    "We initiate pretraining from ImageNet-initialized weights as recommended by Ramesh et al. (2023)",
+    "\"ImageNet1k\": \"https://huggingface.co/sail/dl/resolve/main/caformer/caformer_s18.pth\""
+   ]
   },
   {
    "name": "SurgeNetRARP (CAFormer-S18)",
@@ -1119,7 +1126,12 @@
      "institution_or_content": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
     }
    ],
-   "prior_screen_24gb": "YES"
+   "prior_screen_24gb": "YES",
+   "init_stated": "STATED",
+   "init_quotes": [
+    "We initiate pretraining from ImageNet-initialized weights as recommended by Ramesh et al. (2023)",
+    "\"ImageNet1k\": \"https://huggingface.co/sail/dl/resolve/main/caformer/caformer_s18.pth\""
+   ]
   },
   {
    "name": "SurgeNetRAMIE (CAFormer-S18)",
@@ -1145,20 +1157,22 @@
      "institution_or_content": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
     }
    ],
-   "prior_screen_24gb": "YES"
+   "prior_screen_24gb": "YES",
+   "init_stated": "STATED",
+   "init_quotes": [
+    "We initiate pretraining from ImageNet-initialized weights as recommended by Ramesh et al. (2023)"
+   ]
   },
   {
    "name": "EndoSSL laparoscopy ViT-B",
    "cls": "primary (medical/endoscopic representation-learning encoder)",
    "clip_level": false,
-   "note": "initialisation of the released checkpoints not stated: scratch or an ImageNet-1k SSL checkpoint (both non-surgical); ImageNet counted as a possible source",
-   "overlap_A": "NO",
-   "eligible": true,
-   "failing": "-",
+   "note": "v0.4-final3 init check: initialization of the released checkpoints is not stated in the paper, its supplementary, the README or the released code (inference / downstream only) -> UNK; ineligible. Sizes from supplementary Table 3 (ViT-S 23M, ViT-B 86M, ViT-L 307M)",
+   "overlap_A": "UNK",
+   "eligible": false,
+   "failing": "initialization not stated in any level-1-3 source; direct overlap UNK under rule A",
    "eligible_strict_counterfactual": false,
-   "web_origin_disclosure_B": [
-    "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
-   ],
+   "web_origin_disclosure_B": [],
    "sources": [
     {
      "source": "israel8",
@@ -1166,25 +1180,25 @@
      "institution_or_content": "eight unnamed centres in Israel"
     },
     {
-     "source": "imagenet",
-     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
+     "source": "endossl_init",
+     "status": "A-UNK",
+     "institution_or_content": "EndoSSL released-checkpoint initialization: not stated in any level-1-3 source (paper ablations compare starting from scratch and from an ImageNet-1k SSL checkpoint; supplementary Table 4 lists MSN hyper-parameters only)"
     }
    ],
-   "prior_screen_24gb": "YES"
+   "prior_screen_24gb": "YES",
+   "init_stated": "UNK",
+   "init_quotes": []
   },
   {
    "name": "EndoSSL laparoscopy ViT-L",
    "cls": "primary (medical/endoscopic representation-learning encoder)",
    "clip_level": false,
-   "note": "initialisation of the released checkpoints not stated: scratch or an ImageNet-1k SSL checkpoint (both non-surgical); ImageNet counted as a possible source",
-   "overlap_A": "NO",
-   "eligible": true,
-   "failing": "-",
+   "note": "v0.4-final3 init check: initialization of the released checkpoints is not stated in the paper, its supplementary, the README or the released code (inference / downstream only) -> UNK; ineligible. Sizes from supplementary Table 3 (ViT-S 23M, ViT-B 86M, ViT-L 307M)",
+   "overlap_A": "UNK",
+   "eligible": false,
+   "failing": "initialization not stated in any level-1-3 source; direct overlap UNK under rule A",
    "eligible_strict_counterfactual": false,
-   "web_origin_disclosure_B": [
-    "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
-   ],
+   "web_origin_disclosure_B": [],
    "sources": [
     {
      "source": "israel8",
@@ -1192,25 +1206,25 @@
      "institution_or_content": "eight unnamed centres in Israel"
     },
     {
-     "source": "imagenet",
-     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
+     "source": "endossl_init",
+     "status": "A-UNK",
+     "institution_or_content": "EndoSSL released-checkpoint initialization: not stated in any level-1-3 source (paper ablations compare starting from scratch and from an ImageNet-1k SSL checkpoint; supplementary Table 4 lists MSN hyper-parameters only)"
     }
    ],
-   "prior_screen_24gb": "YES"
+   "prior_screen_24gb": "YES",
+   "init_stated": "UNK",
+   "init_quotes": []
   },
   {
    "name": "EndoSSL laparoscopy ViT-S",
    "cls": "primary (medical/endoscopic representation-learning encoder)",
    "clip_level": false,
-   "note": "initialisation of the released checkpoints not stated: scratch or an ImageNet-1k SSL checkpoint (both non-surgical); ImageNet counted as a possible source; ViT-S size is not in the ViT paper's table, so size/compute are UNK",
-   "overlap_A": "NO",
+   "note": "v0.4-final3 init check: initialization of the released checkpoints is not stated in the paper, its supplementary, the README or the released code (inference / downstream only) -> UNK; ineligible. Sizes from supplementary Table 3 (ViT-S 23M, ViT-B 86M, ViT-L 307M)",
+   "overlap_A": "UNK",
    "eligible": false,
-   "failing": "prior 24-GB screen: size not documented; compute not documented",
+   "failing": "initialization not stated in any level-1-3 source; direct overlap UNK under rule A",
    "eligible_strict_counterfactual": false,
-   "web_origin_disclosure_B": [
-    "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
-   ],
+   "web_origin_disclosure_B": [],
    "sources": [
     {
      "source": "israel8",
@@ -1218,12 +1232,14 @@
      "institution_or_content": "eight unnamed centres in Israel"
     },
     {
-     "source": "imagenet",
-     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
-     "institution_or_content": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
+     "source": "endossl_init",
+     "status": "A-UNK",
+     "institution_or_content": "EndoSSL released-checkpoint initialization: not stated in any level-1-3 source (paper ablations compare starting from scratch and from an ImageNet-1k SSL checkpoint; supplementary Table 4 lists MSN hyper-parameters only)"
     }
    ],
-   "prior_screen_24gb": "UNK"
+   "prior_screen_24gb": "YES",
+   "init_stated": "UNK",
+   "init_quotes": []
   },
   {
    "name": "SelfSupSurg (ResNet-50; MoCo v2 / SimCLR / SwAV / DINO)",
@@ -1249,7 +1265,18 @@
      "institution_or_content": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
     }
    ],
-   "prior_screen_24gb": "YES"
+   "prior_screen_24gb": "YES",
+   "init_stated": "STATED",
+   "init_quotes": [
+    "Recommended 2 On On Off 256 300 5 Imagenet fully supervised",
+    "PARAMS_FILE: \"./checkpoints/defaults/resnet_50/resnet50-19c8e357.pth\"",
+    "PARAMS_FILE: \"./checkpoints/defaults/resnet_50/resnet50-19c8e357.pth\"",
+    "PARAMS_FILE: \"./checkpoints/defaults/resnet_50/resnet50-19c8e357.pth\"",
+    "PARAMS_FILE: \"./checkpoints/defaults/resnet_50/resnet50-19c8e357.pth\"",
+    "'resnet50': 'https://download.pytorch.org/models/resnet50-19c8e357.pth',",
+    "pretrained (bool): If True, returns a model pre-trained on ImageNet",
+    "We evaluate our method on the ImageNet 2012 classification dataset [36] that consists of 1000 classes."
+   ]
   },
   {
    "name": "Cosmos-H-Surgical v0.3.1",
@@ -1395,7 +1422,11 @@
      "institution_or_content": "UCF-101: fixed list of 101 human action classes; no clinical / surgical class"
     }
    ],
-   "prior_screen_24gb": "YES"
+   "prior_screen_24gb": "YES",
+   "init_stated": "STATED",
+   "init_quotes": [
+    "effectively and efficiently train a vanilla vision transformer on the video dataset itself without using any pre-trained model"
+   ]
   },
   {
    "name": "OmniTokenizer (ImageNet + K600)",
@@ -1422,7 +1453,15 @@
      "institution_or_content": "Kinetics-600: Kinetics-400 list plus the listed new human action classes; no clinical / surgical class"
     }
    ],
-   "prior_screen_24gb": "YES"
+   "prior_screen_24gb": "YES",
+   "init_stated": "STATED",
+   "init_quotes": [
+    "# Stage1: Image-only training on a fixed resolution",
+    "--logitslaplace_weight 0.4 --initialize_vit --disloss_check_thres 0.001",
+    "if initialize: self.apply(self._init_weights)",
+    "trunc_normal_(m.weight, std=.02)",
+    "--pretrained {CKPT_OF_PREVIOUS_STAGE}"
+   ]
   },
   {
    "name": "WF-VAE-L 16ch",
@@ -1443,7 +1482,12 @@
      "institution_or_content": "Kinetics-400: fixed list of 400 human action classes (full list in the paper); no clinical / surgical class"
     }
    ],
-   "prior_screen_24gb": "YES"
+   "prior_screen_24gb": "YES",
+   "init_stated": "STATED",
+   "init_quotes": [
+    "The model config of VAE. If you want to train from scratch use this parameter.",
+    "--model_config examples/wfvae-large-16chn.json"
+   ]
   },
   {
    "name": "LARP-L-Long tokenizer",
@@ -1470,7 +1514,12 @@
      "institution_or_content": "UCF-101: fixed list of 101 human action classes; no clinical / surgical class"
     }
    ],
-   "prior_screen_24gb": "YES"
+   "prior_screen_24gb": "YES",
+   "init_stated": "STATED",
+   "init_quotes": [
+    "# If you want to initialize the model with a checkpoint, set the path here init_checkpoint: ''",
+    "# It can reproduce the pretrained model hywang66/LARP-L-long-tokenizer released on HuggingFace. python3 \\ train.py --cfg cfgs/larp_tokenizer.yaml"
+   ]
   },
   {
    "name": "LeanVAE",
@@ -1491,7 +1540,13 @@
      "institution_or_content": "Kinetics-600: Kinetics-400 list plus the listed new human action classes; no clinical / surgical class"
     }
    ],
-   "prior_screen_24gb": "YES"
+   "prior_screen_24gb": "YES",
+   "init_stated": "STATED",
+   "init_quotes": [
+    "Unlike previous methods that either inherited the Video VAE from the SD VAE or employed ViT [ 3 ] architectures, we use two key designs to ensure a lightweight network.",
+    "parser.add_argument('--pretrained', type=str, default=None)",
+    "CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python leanvae_train.py"
+   ]
   },
   {
    "name": "Open-MAGVIT2 video tokenizer",
@@ -1518,7 +1573,11 @@
      "institution_or_content": "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class"
     }
    ],
-   "prior_screen_24gb": "YES"
+   "prior_screen_24gb": "YES",
+   "init_stated": "STATED",
+   "init_quotes": [
+    "Simultaneously, we inflate the image tokenizer trained at 128 × \\times 128 imagenet for video modeling."
+   ]
   }
  ],
  "candidates": [
@@ -1831,6 +1890,17 @@
     }
    ],
    "rules": {
+    "init_stated": [
+     "STATED",
+     [
+      {
+       "quote": "By pretrained V-JEPA, we refer to the weights provided by Bardes et al. [1].",
+       "copy": "data_audit/lead/fm_sources/primary/mlcds_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
     "sources": [
      "heico",
      "cholec80",
@@ -1963,6 +2033,23 @@
     }
    ],
    "rules": {
+    "init_stated": [
+     "STATED",
+     [
+      {
+       "quote": "We initiate pretraining from ImageNet-initialized weights as recommended by Ramesh et al. (2023)",
+       "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      },
+      {
+       "quote": "\"ImageNet1k\": \"https://huggingface.co/sail/dl/resolve/main/caformer/caformer_s18.pth\"",
+       "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+       "level": 2,
+       "verified": true
+      }
+     ]
+    ],
     "sources": [
      "cholec80",
      "heichole",
@@ -2047,6 +2134,23 @@
     }
    ],
    "rules": {
+    "init_stated": [
+     "STATED",
+     [
+      {
+       "quote": "We initiate pretraining from ImageNet-initialized weights as recommended by Ramesh et al. (2023)",
+       "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      },
+      {
+       "quote": "\"ImageNet1k\": \"https://huggingface.co/sail/dl/resolve/main/caformer/caformer_s18.pth\"",
+       "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+       "level": 2,
+       "verified": true
+      }
+     ]
+    ],
     "sources": [
      "esad",
      "psiava",
@@ -2137,6 +2241,17 @@
     }
    ],
    "rules": {
+    "init_stated": [
+     "STATED",
+     [
+      {
+       "quote": "We initiate pretraining from ImageNet-initialized weights as recommended by Ramesh et al. (2023)",
+       "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
     "sources": [
      "ramie",
      "imagenet"
@@ -2215,7 +2330,7 @@
    "rules": {
     "sources": [
      "israel8",
-     "imagenet"
+     "endossl_init"
     ],
     "laparoscopic": [
      "YES",
@@ -2242,8 +2357,8 @@
        "verified": true
       },
       {
-       "quote": "Model Layers Hidden size D MLP size Heads Params ViT-Base 12 768 3072 12 86M ViT-Large 24 1024 4096 16 307M",
-       "copy": "data_audit/lead/fm_sources/eligibility_v04/vit_arxiv_2010.11929_pdf.txt",
+       "quote": "ViT-S ViT-B ViT-L 12 12 24 384 768 1024 1536 3072 4096 6 12 16 23M 86M 307M",
+       "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
        "level": 1,
        "verified": true
       }
@@ -2259,8 +2374,8 @@
        "verified": true
       },
       {
-       "quote": "Model Layers Hidden size D MLP size Heads Params ViT-Base 12 768 3072 12 86M ViT-Large 24 1024 4096 16 307M",
-       "copy": "data_audit/lead/fm_sources/eligibility_v04/vit_arxiv_2010.11929_pdf.txt",
+       "quote": "ViT-S ViT-B ViT-L 12 12 24 384 768 1024 1536 3072 4096 6 12 16 23M 86M 307M",
+       "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
        "level": 1,
        "verified": true
       }
@@ -2273,11 +2388,15 @@
       "level": 1,
       "verified": true
      }
+    ],
+    "init_stated": [
+     "UNK",
+     []
     ]
    },
    "unk": null,
    "unk_quotes": [],
-   "note": "initialisation of the released checkpoints not stated: scratch or an ImageNet-1k SSL checkpoint (both non-surgical); ImageNet counted as a possible source"
+   "note": "v0.4-final3 init check: initialization of the released checkpoints is not stated in the paper, its supplementary, the README or the released code (inference / downstream only) -> UNK; ineligible. Sizes from supplementary Table 3 (ViT-S 23M, ViT-B 86M, ViT-L 307M)"
   },
   {
    "name": "EndoSSL laparoscopy ViT-L",
@@ -2303,7 +2422,7 @@
    "rules": {
     "sources": [
      "israel8",
-     "imagenet"
+     "endossl_init"
     ],
     "laparoscopic": [
      "YES",
@@ -2330,8 +2449,8 @@
        "verified": true
       },
       {
-       "quote": "Model Layers Hidden size D MLP size Heads Params ViT-Base 12 768 3072 12 86M ViT-Large 24 1024 4096 16 307M",
-       "copy": "data_audit/lead/fm_sources/eligibility_v04/vit_arxiv_2010.11929_pdf.txt",
+       "quote": "ViT-S ViT-B ViT-L 12 12 24 384 768 1024 1536 3072 4096 6 12 16 23M 86M 307M",
+       "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
        "level": 1,
        "verified": true
       }
@@ -2347,8 +2466,8 @@
        "verified": true
       },
       {
-       "quote": "Model Layers Hidden size D MLP size Heads Params ViT-Base 12 768 3072 12 86M ViT-Large 24 1024 4096 16 307M",
-       "copy": "data_audit/lead/fm_sources/eligibility_v04/vit_arxiv_2010.11929_pdf.txt",
+       "quote": "ViT-S ViT-B ViT-L 12 12 24 384 768 1024 1536 3072 4096 6 12 16 23M 86M 307M",
+       "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
        "level": 1,
        "verified": true
       }
@@ -2361,11 +2480,15 @@
       "level": 1,
       "verified": true
      }
+    ],
+    "init_stated": [
+     "UNK",
+     []
     ]
    },
    "unk": null,
    "unk_quotes": [],
-   "note": "initialisation of the released checkpoints not stated: scratch or an ImageNet-1k SSL checkpoint (both non-surgical); ImageNet counted as a possible source"
+   "note": "v0.4-final3 init check: initialization of the released checkpoints is not stated in the paper, its supplementary, the README or the released code (inference / downstream only) -> UNK; ineligible. Sizes from supplementary Table 3 (ViT-S 23M, ViT-B 86M, ViT-L 307M)"
   },
   {
    "name": "EndoSSL laparoscopy ViT-S",
@@ -2391,7 +2514,7 @@
    "rules": {
     "sources": [
      "israel8",
-     "imagenet"
+     "endossl_init"
     ],
     "laparoscopic": [
      "YES",
@@ -2409,7 +2532,7 @@
      []
     ],
     "fits_24gb": [
-     "UNK",
+     "YES",
      [
       {
        "quote": "As our image encoders we train Vision Transformer (ViT [16]) of different sizes, abbreviated as ViT-S/B/L",
@@ -2418,15 +2541,15 @@
        "verified": true
       },
       {
-       "quote": "Model Layers Hidden size D MLP size Heads Params ViT-Base 12 768 3072 12 86M ViT-Large 24 1024 4096 16 307M",
-       "copy": "data_audit/lead/fm_sources/eligibility_v04/vit_arxiv_2010.11929_pdf.txt",
+       "quote": "ViT-S ViT-B ViT-L 12 12 24 384 768 1024 1536 3072 4096 6 12 16 23M 86M 307M",
+       "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
        "level": 1,
        "verified": true
       }
      ]
     ],
     "compute": [
-     "UNK",
+     "YES",
      [
       {
        "quote": "As our image encoders we train Vision Transformer (ViT [16]) of different sizes, abbreviated as ViT-S/B/L",
@@ -2435,8 +2558,8 @@
        "verified": true
       },
       {
-       "quote": "Model Layers Hidden size D MLP size Heads Params ViT-Base 12 768 3072 12 86M ViT-Large 24 1024 4096 16 307M",
-       "copy": "data_audit/lead/fm_sources/eligibility_v04/vit_arxiv_2010.11929_pdf.txt",
+       "quote": "ViT-S ViT-B ViT-L 12 12 24 384 768 1024 1536 3072 4096 6 12 16 23M 86M 307M",
+       "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
        "level": 1,
        "verified": true
       }
@@ -2449,11 +2572,15 @@
       "level": 1,
       "verified": true
      }
+    ],
+    "init_stated": [
+     "UNK",
+     []
     ]
    },
    "unk": null,
    "unk_quotes": [],
-   "note": "initialisation of the released checkpoints not stated: scratch or an ImageNet-1k SSL checkpoint (both non-surgical); ImageNet counted as a possible source; ViT-S size is not in the ViT paper's table, so size/compute are UNK"
+   "note": "v0.4-final3 init check: initialization of the released checkpoints is not stated in the paper, its supplementary, the README or the released code (inference / downstream only) -> UNK; ineligible. Sizes from supplementary Table 3 (ViT-S 23M, ViT-B 86M, ViT-L 307M)"
   },
   {
    "name": "SelfSupSurg (ResNet-50; MoCo v2 / SimCLR / SwAV / DINO)",
@@ -2477,6 +2604,59 @@
     }
    ],
    "rules": {
+    "init_stated": [
+     "STATED",
+     [
+      {
+       "quote": "Recommended 2 On On Off 256 300 5 Imagenet fully supervised",
+       "copy": "data_audit/lead/fm_sources/primary/selfsupsurg_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      },
+      {
+       "quote": "PARAMS_FILE: \"./checkpoints/defaults/resnet_50/resnet50-19c8e357.pth\"",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/selfsupsurg_cfg_h001_yaml.txt",
+       "level": 3,
+       "verified": true
+      },
+      {
+       "quote": "PARAMS_FILE: \"./checkpoints/defaults/resnet_50/resnet50-19c8e357.pth\"",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/selfsupsurg_cfg_h002_yaml.txt",
+       "level": 3,
+       "verified": true
+      },
+      {
+       "quote": "PARAMS_FILE: \"./checkpoints/defaults/resnet_50/resnet50-19c8e357.pth\"",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/selfsupsurg_cfg_h003_yaml.txt",
+       "level": 3,
+       "verified": true
+      },
+      {
+       "quote": "PARAMS_FILE: \"./checkpoints/defaults/resnet_50/resnet50-19c8e357.pth\"",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/selfsupsurg_cfg_h004_yaml.txt",
+       "level": 3,
+       "verified": true
+      },
+      {
+       "quote": "'resnet50': 'https://download.pytorch.org/models/resnet50-19c8e357.pth',",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/torchvision_v0.8.0_resnet_py.txt",
+       "level": 2,
+       "verified": true
+      },
+      {
+       "quote": "pretrained (bool): If True, returns a model pre-trained on ImageNet",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/torchvision_v0.8.0_resnet_py.txt",
+       "level": 2,
+       "verified": true
+      },
+      {
+       "quote": "We evaluate our method on the ImageNet 2012 classification dataset [36] that consists of 1000 classes.",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/resnet_arxiv_1512.03385_pdf_reading.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
     "sources": [
      "cholec80",
      "imagenet"
@@ -2834,6 +3014,17 @@
     }
    ],
    "rules": {
+    "init_stated": [
+     "STATED",
+     [
+      {
+       "quote": "effectively and efficiently train a vanilla vision transformer on the video dataset itself without using any pre-trained model",
+       "copy": "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
     "sources": [
      "k400",
      "ssv2",
@@ -2917,6 +3108,41 @@
    "clip_level": true,
    "clip_quotes": [],
    "rules": {
+    "init_stated": [
+     "STATED",
+     [
+      {
+       "quote": "# Stage1: Image-only training on a fixed resolution",
+       "copy": "data_audit/lead/fm_sources/secondary/omnitok_github_scripts_recons_train.sh.txt",
+       "level": 3,
+       "verified": true
+      },
+      {
+       "quote": "--logitslaplace_weight 0.4 --initialize_vit --disloss_check_thres 0.001",
+       "copy": "data_audit/lead/fm_sources/secondary/omnitok_github_scripts_recons_train.sh.txt",
+       "level": 3,
+       "verified": true
+      },
+      {
+       "quote": "if initialize: self.apply(self._init_weights)",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/omnitok_omnitokenizer_py.txt",
+       "level": 2,
+       "verified": true
+      },
+      {
+       "quote": "trunc_normal_(m.weight, std=.02)",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/omnitok_omnitokenizer_py.txt",
+       "level": 2,
+       "verified": true
+      },
+      {
+       "quote": "--pretrained {CKPT_OF_PREVIOUS_STAGE}",
+       "copy": "data_audit/lead/fm_sources/secondary/omnitok_github_scripts_recons_train.sh.txt",
+       "level": 3,
+       "verified": true
+      }
+     ]
+    ],
     "sources": [
      "imagenet",
      "k600"
@@ -2975,6 +3201,23 @@
    "clip_level": true,
    "clip_quotes": [],
    "rules": {
+    "init_stated": [
+     "STATED",
+     [
+      {
+       "quote": "The model config of VAE. If you want to train from scratch use this parameter.",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/wfvae_TRAIN_AND_VALIDATE_md.txt",
+       "level": 2,
+       "verified": true
+      },
+      {
+       "quote": "--model_config examples/wfvae-large-16chn.json",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/wfvae_train_ddp_sh.txt",
+       "level": 2,
+       "verified": true
+      }
+     ]
+    ],
     "sources": [
      "k400"
     ],
@@ -3032,6 +3275,23 @@
    "clip_level": true,
    "clip_quotes": [],
    "rules": {
+    "init_stated": [
+     "STATED",
+     [
+      {
+       "quote": "# If you want to initialize the model with a checkpoint, set the path here init_checkpoint: ''",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/larp_cfg_larp_tokenizer_yaml.txt",
+       "level": 3,
+       "verified": true
+      },
+      {
+       "quote": "# It can reproduce the pretrained model hywang66/LARP-L-long-tokenizer released on HuggingFace. python3 \\ train.py --cfg cfgs/larp_tokenizer.yaml",
+       "copy": "data_audit/lead/fm_sources/secondary/larp_github_train_larp_tokenizer_reproduce.sh.txt",
+       "level": 3,
+       "verified": true
+      }
+     ]
+    ],
     "sources": [
      "k600",
      "ucf101"
@@ -3090,6 +3350,29 @@
    "clip_level": true,
    "clip_quotes": [],
    "rules": {
+    "init_stated": [
+     "STATED",
+     [
+      {
+       "quote": "Unlike previous methods that either inherited the Video VAE from the SD VAE or employed ViT [ 3 ] architectures, we use two key designs to ensure a lightweight network.",
+       "copy": "data_audit/lead/fm_sources/secondary/leanvae_arxiv_2503.14325_fulltext.txt",
+       "level": 1,
+       "verified": true
+      },
+      {
+       "quote": "parser.add_argument('--pretrained', type=str, default=None)",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/leanvae_train_py.txt",
+       "level": 2,
+       "verified": true
+      },
+      {
+       "quote": "CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python leanvae_train.py",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/leanvae_train_sh.txt",
+       "level": 2,
+       "verified": true
+      }
+     ]
+    ],
     "sources": [
      "k600"
     ],
@@ -3147,6 +3430,17 @@
    "clip_level": true,
    "clip_quotes": [],
    "rules": {
+    "init_stated": [
+     "STATED",
+     [
+      {
+       "quote": "Simultaneously, we inflate the image tokenizer trained at 128 × \\times 128 imagenet for video modeling.",
+       "copy": "data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
     "sources": [
      "ucf101",
      "imagenet"
@@ -3287,6 +3581,18 @@
     {
      "quote": "video data from a total of 32 robot-assisted anterior rectal resections or rectal extirpations performed at the University Hospital Carl Gustav Carus Dresden was gathered",
      "copy": "data_audit/lead/fm_sources/primary/dsad_scidata.txt",
+     "level": 1,
+     "verified": true
+    }
+   ]
+  },
+  "endossl_init": {
+   "status": "A-UNK",
+   "what": "EndoSSL released-checkpoint initialization: not stated in any level-1-3 source (paper ablations compare starting from scratch and from an ImageNet-1k SSL checkpoint; supplementary Table 4 lists MSN hyper-parameters only)",
+   "quotes": [
+    {
+     "quote": "In Tab.2e), we look at the effect of the training length when starting from scratch or from a good SSL pretrained checkpoint on ImageNet-1k.",
+     "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
      "level": 1,
      "verified": true
     }

@@ -24,6 +24,9 @@ the mutually exclusive classes and the TWO-LEVEL OVERLAP RULE. NO ranking is app
   C (same-hospital): applies to clinical / endoscopic sources only.
   A candidate is eligible on overlap only if every source is NO under A. The strict reading (every web-derived source
   UNK) is reported as a counterfactual only.
+* [v0.4-final3, EndoSSL init check] Initialization must be affirmatively stated in a level-1-3 source (pretrained
+  checkpoint named, or training from scratch / random initialization); otherwise the initialization is a UNK source and
+  the candidate is ineligible. Each eligible model carries its initialization quotes ("init_stated").
 * "Fits 24 GB" here is the PRIOR SCREEN (parameter count / checkpoint size); the final determination is the frozen
   synthetic-input feasibility test run after freeze (protocol §4.1).
 Every quote is verified as a whitespace-normalised substring of its saved copy."""
@@ -57,6 +60,7 @@ SRC = {
  "rarp_avl": (NAMED, "Antoni van Leeuwenhoek Hospital, Amsterdam", PV("RARP-AvL (private)")),
  "ramie": (NAMED, "University Medical Center Utrecht", [Q("another containing robot-assisted minimally invasive esophagectomy (RAMIE) procedures from the University Medical Center Utrecht (UMCU)", P + "surgenetxl_arxiv_pdf.txt")]),
  "dsad": (YES, "University Hospital Carl Gustav Carus Dresden (Dept. of Visceral, Thoracic and Vascular Surgery); C2 = Carus Pediatric Surgery", [Q("video data from a total of 32 robot-assisted anterior rectal resections or rectal extirpations performed at the University Hospital Carl Gustav Carus Dresden was gathered", P + "dsad_scidata.txt")]),
+ "endossl_init": (UNK, "EndoSSL released-checkpoint initialization: not stated in any level-1-3 source (paper ablations compare starting from scratch and from an ImageNet-1k SSL checkpoint; supplementary Table 4 lists MSN hyper-parameters only)", [Q("In Tab.2e), we look at the effect of the training length when starting from scratch or from a good SSL pretrained checkpoint on ImageNet-1k.", P + "endossl_arxiv_pdf.txt")]),
  "israel8": (GEO, "eight unnamed centres in Israel", [Q("The dataset consists of 7,877 videos recorded at eight different medical centers in Israel.", P + "endossl_arxiv_pdf.txt")]),
  "imagenet": (GEN, "ImageNet (ILSVRC-2012): fixed ontology of 1000 object synsets; medical terms occur only as object classes (stethoscope, syringe, medicine chest), no clinical scene / procedure class", [Q("The 1000 categories used for the image classification task were selected from the ImageNet (Deng et al., 2009) categories. The 1000 synsets are selected such that there is no overlap between synsets", E + "imagenet_ilsvrc_arxiv_1409.0575_pdf_reading.txt"), Q("n04317175: stethoscope n04376876: syringe", E + "imagenet_ilsvrc2012_browse_synsets_page.txt"), Q("The ImageNet Large Scale Visual Recognition Challenge is a benchmark in object category classification and detection on hundreds of object categories and millions of images.", "eligibility_v04/imagenet_ilsvrc_arxiv_1409.0575_api.txt"), Q("<published>2014-09-01T22:29:38Z</published>", "eligibility_v04/imagenet_ilsvrc_arxiv_1409.0575_api.txt")]),
  "k400": (GEN, "Kinetics-400: fixed list of 400 human action classes (full list in the paper); no clinical / surgical class", [Q("This is the list of classes included in the human action video dataset.", S + "kinetics400_arxiv_1705.06950.txt"), Q("The dataset contains 400 human action classes, with at least 400 video clips for each action. Each clip lasts around 10s and is taken from a different YouTube video.", S + "kinetics_arxiv_1705.06950_abs.txt"), Q("[v1] Fri, 19 May 2017 12:07:01 UTC", S + "kinetics_arxiv_1705.06950_abs.txt")]),
@@ -72,7 +76,7 @@ UNK_REASON = {  # decisive reasons for overlap-ineligible candidates
  "dsad_yes": "direct overlap YES under rule A: DSAD, a known same-hospital clinical source (University Hospital Carl Gustav Carus Dresden; C2 = its Department of Pediatric Surgery); other sources are also UNK",
  "site_not_stated": "a clinical training set has no recording site in any obtainable level-1-3 source (out/dataset_provenance.json status NOT_STATED / NOT_OBTAINABLE)",
  "web": "a training source is an open-ended / unversioned web corpus (stock / social / self-crawled Internet video; not a named versioned benchmark)",
- "clinical_web": "a training source is surgical / clinical video from web platforms whose recording sites cannot be bounded (rule A clinical/site-provenance clause; the B1 override covers generic web provenance only)",
+ "clinical_web": "a training source is surgical / clinical video from web platforms whose recording sites cannot be bounded (Rule A clinical/site-provenance clause, which Rule B never overrides)",
  "base_undoc": "a base or initialisation model's training data are not documented",
 }
 LEVEL4_CONTEXT = "mmaction2 label maps (level 4, context only): no Kinetics-400/600/700 class name contains surg/operat/laparo/endoscop/hospital/medic/doctor/patient/clinic"
@@ -108,6 +112,7 @@ cand("PL-Stitch", "PL-Stitch", ENC, [Q("Learning Procedural Workflow via Self-Su
      unk_q=[Q("Download the pretraining dataset ([LEMON](https://github.com/visurg-ai/LEMON))", P + "plstitch_github_readme.txt")])
 cand("Basel V-JEPA ViT-L (jepa-12h)", "Finetuned V-JEPA", ENC, [Q("We finetuned *V-JEPA ViT-L* on unlabeled endoscopic surgical videos, as described in the paper.", P + "mlcds_hf_readme.txt")], True,
      [Q("Each model takes as input a video clip of 16 frames sampled with a frameskip of 4, corresponding to roughly 3 second clips on average.", P + "vjepa_arxiv_pdf.txt")], rules=dict(
+    init_stated=("STATED", [Q("By pretrained V-JEPA, we refer to the weights provided by Bardes et al. [1].", P + "mlcds_arxiv_pdf.txt")]),
     sources=["heico", "cholec80", "mbp140", "k400", "k600", "k700", "ssv2", "howto100m"],
     laparoscopic=("YES", [Q("we use all videos from the Cholec80 [12] dataset (80 laparoscopic videos of cholecystectomy surgery, 51:15 h)", P + "mlcds_arxiv_pdf.txt")]),
     same_hospital=("NO", []),
@@ -124,12 +129,14 @@ SN_ARCH = [Q("Backbone CaFormerS18 Number of parameters 24.3M", P + "surgenetxl_
 SN_CLS = [Q("Scaling up self-supervised learning for improved surgical foundation models", P + "surgenetxl_arxiv_pdf.txt")]
 SN_CLIP = [Q("Input frames are resized to a resolution of 224×399 pixels using bicubic interpolation.", P + "surgenetxl_arxiv_pdf.txt")]
 cand("SurgeNetCholec (CAFormer-S18)", "SurgeNet /", ENC, SN_CLS, False, SN_CLIP, rules=dict(
+    init_stated=("STATED", SN_ARCH[1:] + [Q('"ImageNet1k": "https://huggingface.co/sail/dl/resolve/main/caformer/caformer_s18.pth"', P + "surgenet_github_readme.txt")]),
     sources=["cholec80", "heichole", "hsdb_chole", "imagenet"],
     laparoscopic=("YES", [Q("SurgeNetCholec: this subset contains 250,655 frames extracted from laparoscopic cholecystectomy procedures.", P + "surgenetxl_arxiv_pdf.txt")]),
     same_hospital=("NO", []),
     fits_24gb=("YES", [Q('"rfilename":"CHOLEC_checkpoint_epoch0050_teacher.pth","blobId":"01ae6ac519157210df9c21dc8e69a20dbdebeda7","size":93022798', P + "surgenet_hf_api_blobs.txt")] + SN_ARCH[:1]),
     compute=("YES", SN_ARCH[:1]), init=SN_ARCH[1:]))
 cand("SurgeNetRARP (CAFormer-S18)", "SurgeNet /", ENC, SN_CLS, False, SN_CLIP, rules=dict(
+    init_stated=("STATED", SN_ARCH[1:] + [Q('"ImageNet1k": "https://huggingface.co/sail/dl/resolve/main/caformer/caformer_s18.pth"', P + "surgenet_github_readme.txt")]),
     sources=["esad", "psiava", "rarp_avl", "imagenet"],
     laparoscopic=("YES", [Q("In the images, it can been seen that bounding boxes are centred around the tool as laparoscopic tools represent the subject of action", "datasets/esad__arxiv_pdf.txt"),
                           Q("SurgeNetRARP: this subset comprises 382,416 frames from RARP procedures.", P + "surgenetxl_arxiv_pdf.txt")]),
@@ -137,6 +144,7 @@ cand("SurgeNetRARP (CAFormer-S18)", "SurgeNet /", ENC, SN_CLS, False, SN_CLIP, r
     fits_24gb=("YES", [Q('"rfilename":"RARP_checkpoint_epoch0050_teacher.pth","blobId":"883acd7aa73006b3d55d356e18c871df51e772d0","size":93022798', P + "surgenet_hf_api_blobs.txt")] + SN_ARCH[:1]),
     compute=("YES", SN_ARCH[:1]), init=SN_ARCH[1:]), note="SurgeNetRARP = ESAD + PSI-AVA + RARP-AvL (paper Table 1)")
 cand("SurgeNetRAMIE (CAFormer-S18)", "SurgeNet /", ENC, SN_CLS, False, SN_CLIP, rules=dict(
+    init_stated=("STATED", SN_ARCH[1:]),
     sources=["ramie", "imagenet"],
     laparoscopic=("UNK", [Q("SurgeNetRAMIE: a total of 377,287 frames are included from RAMIE procedures.", P + "surgenetxl_arxiv_pdf.txt")]),
     same_hospital=("NO", []), fits_24gb=("YES", SN_ARCH[:1]), compute=("YES", SN_ARCH[:1]), init=SN_ARCH[1:]),
@@ -144,15 +152,18 @@ cand("SurgeNetRAMIE (CAFormer-S18)", "SurgeNet /", ENC, SN_CLS, False, SN_CLIP, 
 ESSL_CLS = [Q("we study the use of a leading SSL framework, namely Masked Siamese Networks (MSNs), for endoscopic video analysis such as colonoscopy and laparoscopy.", P + "endossl_arxiv_pdf.txt")]
 ESSL_ARCH = Q("As our image encoders we train Vision Transformer (ViT [16]) of different sizes, abbreviated as ViT-S/B/L", P + "endossl_arxiv_pdf.txt")
 ESSL_INIT = [Q("In Tab.2e), we look at the effect of the training length when starting from scratch or from a good SSL pretrained checkpoint on ImageNet-1k.", P + "endossl_arxiv_pdf.txt")]
-for sz, ok in (("ViT-B", "YES"), ("ViT-L", "YES"), ("ViT-S", "UNK")):
+ESSL_T3 = Q("ViT-S ViT-B ViT-L 12 12 24 384 768 1024 1536 3072 4096 6 12 16 23M 86M 307M", P + "endossl_arxiv_pdf.txt")
+for sz in ("ViT-B", "ViT-L", "ViT-S"):
     cand(f"EndoSSL laparoscopy {sz}", "EndoSSL", ENC, ESSL_CLS, False, [Q("Each video recording was sampled at a rate of 1 frame per second (FPS)", P + "endossl_arxiv_pdf.txt")], rules=dict(
-        sources=["israel8", "imagenet"],
+        sources=["israel8", "endossl_init"],
         laparoscopic=("YES", [Q("The dataset predominantly consists of the following procedures: cholecystectomy (35%), appendectomy (20%), herniorrhaphy (12%), colectomy (6%), and bariatric surgery (5%).", P + "endossl_arxiv_pdf.txt")]),
-        same_hospital=("NO", []), fits_24gb=(ok, [ESSL_ARCH, VIT_TAB]), compute=(ok, [ESSL_ARCH, VIT_TAB]), init=ESSL_INIT),
-        note="initialisation of the released checkpoints not stated: scratch or an ImageNet-1k SSL checkpoint (both non-surgical); ImageNet counted as a possible source" + ("; ViT-S size is not in the ViT paper's table, so size/compute are UNK" if sz == "ViT-S" else ""))
+        same_hospital=("NO", []), fits_24gb=("YES", [ESSL_ARCH, ESSL_T3]), compute=("YES", [ESSL_ARCH, ESSL_T3]), init=ESSL_INIT,
+        init_stated=("UNK", [])),
+        note="v0.4-final3 init check: initialization of the released checkpoints is not stated in the paper, its supplementary, the README or the released code (inference / downstream only) -> UNK; ineligible. Sizes from supplementary Table 3 (ViT-S 23M, ViT-B 86M, ViT-L 307M)")
 RN = Q("This model has 3.8 billion FLOPs.", "eligibility_v04/resnet_arxiv_1512.03385_pdf.txt")
 cand("SelfSupSurg (ResNet-50; MoCo v2 / SimCLR / SwAV / DINO)", "SelfSupSurg", ENC, [Q("Self-supervised weights trained on cholec80 dataset using four state-of-the-art SSL methods (MOCO V2, SimCLR, SwAV, and DINO).", P + "selfsupsurg_github_readme.txt")], False,
      [Q("replaced by a linear head that maps the feature vector (2048) to the number of outputs", P + "selfsupsurg_arxiv_pdf.txt")], rules=dict(
+    init_stated=("STATED", [Q("Recommended 2 On On Off 256 300 5 Imagenet fully supervised", P + "selfsupsurg_arxiv_pdf.txt")] + [Q('PARAMS_FILE: "./checkpoints/defaults/resnet_50/resnet50-19c8e357.pth"', E + f"selfsupsurg_cfg_h00{k}_yaml.txt") for k in (1, 2, 3, 4)] + [Q("'resnet50': 'https://download.pytorch.org/models/resnet50-19c8e357.pth',", E + "torchvision_v0.8.0_resnet_py.txt"), Q("pretrained (bool): If True, returns a model pre-trained on ImageNet", E + "torchvision_v0.8.0_resnet_py.txt"), Q("We evaluate our method on the ImageNet 2012 classification dataset [36] that consists of 1000 classes.", E + "resnet_arxiv_1512.03385_pdf_reading.txt")]),
     sources=["cholec80", "imagenet"],
     laparoscopic=("YES", [Q("This dataset contains 80 videos of complete laparoscopic cholecystectomy procedures", P + "selfsupsurg_arxiv_pdf.txt")]),
     same_hospital=("NO", []),
@@ -182,32 +193,38 @@ cand("Reducio-VAE", "Reducio", GENERIC, [Q("This model is a 3D VAE that encodes 
 VMAE_T7 = [Q("VideoMAE ViT-B 7 16 180×5×3 87 81.5 95.1", S + "videomae_arxiv_2203.12602v3.txt"), Q("VideoMAE ViT-L 7 16 597×5×3 305 85.2 96.8", S + "videomae_arxiv_2203.12602v3.txt")]
 cand("VideoMAE (K400 / SSv2 / UCF101 checkpoints)", "VideoMAE (", GENERIC, [Q("VideoMAE is an extension of [Masked Autoencoders (MAE)](https://arxiv.org/abs/2111.06377) to video.", S + "videomae_videomae-base_README.md")], True,
      [Q('"num_frames": 16,', S + "videomae_videomae-base_config.json")], rules=dict(
+    init_stated=("STATED", [Q("effectively and efficiently train a vanilla vision transformer on the video dataset itself without using any pre-trained model", S + "videomae_arxiv_2203.12602v3.txt")]),
     sources=["k400", "ssv2", "ucf101"], same_hospital=("NO", []), fits_24gb=("YES", VMAE_T7), compute=("YES", VMAE_T7),
     init=[Q("VideoMAE achieves impressive results on very small datasets (i.e., around 3k-4k videos) without using any extra data.", S + "videomae_arxiv_2203.12602v3.txt"),
           Q("VideoMAE model pre-trained on Kinetics-400 for 1600 epochs in a self-supervised way.", S + "videomae_videomae-base_README.md"),
           Q("VideoMAE model pre-trained on Something-Something-v2 for 2400 epochs in a self-supervised way.", S + "videomae_videomae-base-ssv2_README.md")]),
     note="each checkpoint is trained on one benchmark; the eligibility holds per checkpoint")
 cand("OmniTokenizer (ImageNet + K600)", "OmniTokenizer", GENERIC, [Q("We introduce OmniTokenizer, a joint image-video tokenizer which features the following properties:", S + "omnitok_github_README.md")], True, [], rules=dict(
+    init_stated=("STATED", [Q("# Stage1: Image-only training on a fixed resolution", S + "omnitok_github_scripts_recons_train.sh.txt"), Q("--logitslaplace_weight 0.4 --initialize_vit --disloss_check_thres 0.001", S + "omnitok_github_scripts_recons_train.sh.txt"), Q("if initialize: self.apply(self._init_weights)", E + "omnitok_omnitokenizer_py.txt"), Q("trunc_normal_(m.weight, std=.02)", E + "omnitok_omnitokenizer_py.txt"), Q("--pretrained {CKPT_OF_PREVIOUS_STAGE}", S + "omnitok_github_scripts_recons_train.sh.txt")]),
     sources=["imagenet", "k600"], same_hospital=("NO", []),
     fits_24gb=("YES", [Q('"rfilename": "imagenet_k600.ckpt", "blobId": "64aa8ed0997c4f8d25b1d911a57a31c957a26852", "size": 742455697,', S + "omnitok_Daniel0724__OmniTokenizer_hfapi.json")]),
     compute=("YES", [Q("Ours 51 262 1.28", S + "omnitok_arxiv_2406.09399_fulltext.txt")]),
     init=[Q("| VQVAE | ImageNet + K600 | 1.23 | 25.97 | [imagenet_k600.ckpt](https://huggingface.co/Daniel0724/OmniTokenizer/resolve/main/imagenet_k600.ckpt) |", S + "omnitok_github_README.md")]))
 cand("WF-VAE-L 16ch", "WF-VAE", GENERIC, [Q("WF-VAE: Enhancing Video VAE by Wavelet-Driven Energy Flow for Latent Video Diffusion Model", S + "osplan_hf_WF-VAE-L-16Chn_README.md")], True, [], rules=dict(
+    init_stated=("STATED", [Q("The model config of VAE. If you want to train from scratch use this parameter.", E + "wfvae_TRAIN_AND_VALIDATE_md.txt"), Q("--model_config examples/wfvae-large-16chn.json", E + "wfvae_train_ddp_sh.txt")]),
     sources=["k400"], same_hospital=("NO", []),
     fits_24gb=("YES", [Q("We have released our **16-channel WF-VAE-L (316M)** model along with the training code.", S + "wfvae_github_README.md")]),
     compute=("YES", [Q("We have released our **16-channel WF-VAE-L (316M)** model along with the training code.", S + "wfvae_github_README.md")]),
     init=[Q("Dataset & Evaluation. We utilize the Kinetics-400 dataset [ 16 ] for both training and validation.", S + "wfvae_arxiv_2411.17459_fulltext.txt")]), note="no pretrained initialisation named in the paper")
 cand("LARP-L-Long tokenizer", "LARP", GENERIC, [Q("We present LARP, a novel video tokenizer inherently aligned with autoregressive (AR) generative models.", S + "larp_github_README.md")], True, [], rules=dict(
+    init_stated=("STATED", [Q("# If you want to initialize the model with a checkpoint, set the path here init_checkpoint: ''", E + "larp_cfg_larp_tokenizer_yaml.txt"), Q("# It can reproduce the pretrained model hywang66/LARP-L-long-tokenizer released on HuggingFace. python3 \\ train.py --cfg cfgs/larp_tokenizer.yaml", S + "larp_github_train_larp_tokenizer_reproduce.sh.txt")]),
     sources=["k600", "ucf101"], same_hospital=("NO", []),
     fits_24gb=("YES", [Q("| LARP-L-Long-tokenizer | 173M | 20 (recon.) |", S + "larp_github_README.md")]),
     compute=("YES", [Q("| LARP-L-Long-tokenizer | 173M | 20 (recon.) |", S + "larp_github_README.md")]),
     init=[Q("--csv_file k600_train.csv+ucf101_train.csv", S + "larp_github_train_larp_tokenizer_reproduce.sh.txt")]), note="no pretrained initialisation named in the paper")
 cand("LeanVAE", "LeanVAE", GENERIC, [Q("We present **LeanVAE**, a lightweight Video VAE designed for ultra-efficient video compression and scalable generation in Latent Video Diffusion Models (LVDMs).", S + "leanvae_github_README.md")], True, [], rules=dict(
+    init_stated=("STATED", [Q("Unlike previous methods that either inherited the Video VAE from the SD VAE or employed ViT [ 3 ] architectures, we use two key designs to ensure a lightweight network.", S + "leanvae_arxiv_2503.14325_fulltext.txt"), Q("parser.add_argument('--pretrained', type=str, default=None)", E + "leanvae_train_py.txt"), Q("CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python leanvae_train.py", E + "leanvae_train_sh.txt")]),
     sources=["k600"], same_hospital=("NO", []),
     fits_24gb=("YES", [Q("| **LeanVAE-16ch** | 30.15 | 0.0461 | 39.8M | 0.203 |", S + "leanvae_hf_README.md")]),
     compute=("YES", [Q("| **LeanVAE-16ch** | 30.15 | 0.0461 | 39.8M | 0.203 |", S + "leanvae_hf_README.md")]),
     init=[Q("Training Details We train the model using Kinetics-600 dataset [ 7 ] .", S + "leanvae_arxiv_2503.14325_fulltext.txt")]), note="no pretrained initialisation named in the paper")
 cand("Open-MAGVIT2 video tokenizer", "Open-MAGVIT2", GENERIC, [Q("This is the official repository for Open-MAGVIT2, an open-source project re-implementing Google's MAGVIT-v2 tokenizer", S + "openmagvit2_seedvoken_docs_Open-MAGVIT2.md")], True, [], rules=dict(
+    init_stated=("STATED", [Q("Simultaneously, we inflate the image tokenizer trained at 128 × \\times 128 imagenet for video modeling.", S + "openmagvit2_arxiv_2409.04410_fulltext.txt")]),
     sources=["ucf101", "imagenet"], same_hospital=("NO", []),
     fits_24gb=("YES", [Q('"rfilename": "video_128_262144.ckpt", "blobId": "bd81d824e18c8114c30558cae57481da9d0ab845", "size": 2964564510,', S + "openmagvit2_TencentARC__Open-MAGVIT2-Tokenizer-262144-Video_hfapi.json")]),
     compute=("UNK", []),
@@ -233,12 +250,14 @@ for c in C:
         if c["cls"] == ENC and R["laparoscopic"][0] != "YES": fails.append("laparoscopic video not affirmatively documented")
         if R["fits_24gb"][0] != "YES": fails.append("prior 24-GB screen: size not documented")
         if R["compute"][0] != "YES": fails.append("compute not documented")
+        if R.get("init_stated", ("UNK",))[0] != "STATED": fails.append("initialization not stated in any level-1-3 source")
         a = rule_a(R["sources"]); r["overlap_A"] = a
         f = fails + ([] if a == "NO" else [f"direct overlap {a} under rule A"])
         r.update(eligible=not f, failing="; ".join(f) or "-", eligible_strict_counterfactual=(not fails) and strict(R["sources"]) == "NO",
                  web_origin_disclosure_B=[SRC[s][1] for s in R["sources"] if SRC[s][0] == GEN],
                  sources=[dict(source=s, status=SRC[s][0], institution_or_content=SRC[s][1]) for s in R["sources"]],
-                 prior_screen_24gb=R["fits_24gb"][0])
+                 prior_screen_24gb=R["fits_24gb"][0], init_stated=R.get("init_stated", ("UNK", []))[0],
+                 init_quotes=[q["quote"] for q in R.get("init_stated", ("UNK", []))[1]])
     rows.append(r)
 allq = [DS203_RELEASE] + [q for c in C for q in c["class_quotes"] + c["clip_quotes"] + c["unk_quotes"] + [x for k, v in c["rules"].items() if isinstance(v, tuple) for x in v[1]] + c["rules"].get("init", [])] + [q for v in SRC.values() for q in v[2]]
 bad = [q for q in allq if not q["verified"]]; low = [q for q in allq if q["level"] > 3]
