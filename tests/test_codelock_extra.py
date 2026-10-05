@@ -7,7 +7,8 @@
   extraction specification (docs/codelock_extraction_spec.json);
 * the frozen extraction specification covers exactly the registry and agrees with every adapter SPEC;
 * the VideoMAE adapter (transformers VideoMAEModel configured from the official definitions) reproduces the official
-  encoder code (third_party/VideoMAE, CODELOCK_AUTH_002) for ViT-S / B / L / H on shared random weights;
+  encoder code (third_party/VideoMAE, CODELOCK_AUTH_002) for ViT-S / B / L / H on shared random weights, and its
+  input mean / std equal the pre-training pipeline's literals (datasets.py, CODELOCK_AUTH_003; hash-pinned);
 * the extraction compute projection code runs on a measured synthetic throughput (code path only; no decision);
 * the decode path (ffprobe / ffmpeg) on a synthetic lavfi test video (not DS203): 2-fps grid by presentation time,
   standardized frames, near-uniform flag, mask-check accumulation, frame- and clip-level extraction and the Cosmos
@@ -224,3 +225,24 @@ def test_videomae_adapter_matches_official_encoder(size, key, tmp_path):
         a = orig.encoder.forward_features(x, torch.zeros(1, 1568, dtype=torch.bool))
         b = hf(pixel_values=x.permute(0, 2, 1, 3, 4)).last_hidden_state
     assert a.shape == b.shape and float((a - b).abs().max()) < 1e-4
+
+
+def test_videomae_normalisation_matches_pretraining_pipeline():
+    """The adapter's mean / std equal the literals of DataAugmentationForVideoMAE in the retrieved datasets.py, whose
+    SHA-256 equals the value pinned in scripts/fetch_third_party.sh (CODELOCK_AUTH_003)."""
+    import hashlib
+    import re
+    from ss_benchmark.models import sec_videomae
+    path = os.path.join(REPO, "third_party", "VideoMAE", "datasets.py")
+    text = open(path).read()
+    pinned = re.search(r"\[datasets\.py\]=([0-9a-f]{64})", open(os.path.join(REPO, "scripts", "fetch_third_party.sh")).read())
+    assert pinned and hashlib.sha256(text.encode()).hexdigest() == pinned.group(1)
+    mean = re.search(r"self\.input_mean = \[([^\]]+)\]", text).group(1)
+    std = re.search(r"self\.input_std = \[([^\]]+)\]", text).group(1)
+    assert tuple(float(v) for v in mean.split(",")) == sec_videomae.MEAN
+    assert tuple(float(v) for v in std.split(",")) == sec_videomae.STD
+    assert "normalize = GroupNormalize(self.input_mean, self.input_std)" in text
+    assert "transform = DataAugmentationForVideoMAE(args)" in text
+    for key, e in SPEC_JSON["models"].items():
+        if key.startswith("VideoMAE:"):
+            assert "0.485, 0.456, 0.406" in e["normalisation"] and "0.229, 0.224, 0.225" in e["normalisation"]

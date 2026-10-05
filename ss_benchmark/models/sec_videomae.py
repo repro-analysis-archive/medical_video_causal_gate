@@ -19,10 +19,17 @@ reconstructive/generative class."
   convert_videomae_to_pytorch.py. Equivalence with the original encoder code is checked in
   tests/test_codelock_extra.py on random weights.
 * Input: L = 16 grid frames, 224 × 224, layout (B, T, 3, H, W).
-* Normalisation: x / 255, then mean (0.5, 0.5, 0.5) / std (0.5, 0.5, 0.5): the default_cfg the official code attaches
-  to every pre-training model (modeling_finetune.py `_cfg`: "'mean': (0.5, 0.5, 0.5), 'std': (0.5, 0.5, 0.5)";
-  modeling_pretrain.py `model.default_cfg = _cfg()`), the only level-1–3 statement of the input normalisation among
-  the saved and authorised sources (rule R1).
+* Normalisation (the pre-training data pipeline governs; rule R1): RGB frames / 255, then per channel
+  (x − mean) / std with mean (0.485, 0.456, 0.406) and std (0.229, 0.224, 0.225), the values applied to every
+  pre-training input by DataAugmentationForVideoMAE (datasets.py @ 14ef8d85, retrieved under
+  decisions/CODELOCK_AUTH_003: "self.input_mean = [0.485, 0.456, 0.406]  # IMAGENET_DEFAULT_MEAN",
+  "self.input_std = [0.229, 0.224, 0.225]  # IMAGENET_DEFAULT_STD", "normalize = GroupNormalize(self.input_mean,
+  self.input_std)", composed after "Stack(roll=False)" and "ToTorchFormatTensor(div=True)"; transforms.py:
+  Stack keeps RGB order when roll=False, ToTorchFormatTensor divides by 255, GroupNormalize applies "t.sub_(m).div_(s)"
+  per channel). build_pretraining_dataset uses this transform for every pre-training dataset, so the values are the
+  same for all nine checkpoints. Note: modeling_finetune.py::_cfg() reports mean / std 0.5 as model default_cfg
+  metadata, but the pre-training data pipeline is the source that trained the pre-training checkpoints and governs
+  under the source-priority rule.
 * Representation: the encoder's forward_features output with no token masked, i.e. the final LayerNorm (encoder
   `self.norm`, = videomae.layernorm) applied to the last block's output, averaged over all 1,568 patch tokens
   (8 temporal × 14 × 14 spatial); VideoMAE has no CLS token. 384 (S), 768 (B), 1,024 (L) or 1,280 (H) values.
@@ -50,7 +57,7 @@ CHECKPOINTS = {  # key: (size, dataset, pre-training epochs, MODEL_ZOO Google-Dr
                         "MCG-NJU/videomae-base-ssv2"),
     "ucf101-vit-b-3200": ("base", "UCF101", 3200, "1BHev4meNgKM0o_8DMRbuzAsKSP3IpQ3o", None),
 }
-MEAN, STD = (0.5, 0.5, 0.5), (0.5, 0.5, 0.5)
+MEAN, STD = (0.485, 0.456, 0.406), (0.229, 0.224, 0.225)   # datasets.py DataAugmentationForVideoMAE
 CLASS_LINE = ("VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; "
               "supervised fine-tuned classification/action-recognition checkpoints are outside the secondary "
               "reconstructive/generative class.")
@@ -58,7 +65,8 @@ CLASS_LINE = ("VideoMAE eligibility applies to official pre-training checkpoints
 SPEC = dict(name="VideoMAE", arm="secondary", kind="clip", input_size=(224, 224), clip_length=16,
             representation="encoder forward_features (final LayerNorm of the last block) with no token masked, "
                            "mean over all 1568 patch tokens (8 x 14 x 14; no CLS token)",
-            normalisation="x/255, mean (0.5, 0.5, 0.5), std (0.5, 0.5, 0.5) (official default_cfg)",
+            normalisation="RGB x/255, mean (0.485, 0.456, 0.406), std (0.229, 0.224, 0.225): the pre-training data "
+                          "pipeline (datasets.py DataAugmentationForVideoMAE); _cfg() 0.5 is default_cfg metadata only",
             checkpoints=CHECKPOINTS, class_line=CLASS_LINE,
             sources=[dict(quote="encoder_embed_dim=384, encoder_depth=12, encoder_num_heads=6,",
                           copy="third_party/VideoMAE/modeling_pretrain.py", level=3),
@@ -66,6 +74,20 @@ SPEC = dict(name="VideoMAE", arm="secondary", kind="clip", input_size=(224, 224)
                           copy="third_party/VideoMAE/modeling_pretrain.py", level=3),
                      dict(quote="norm_layer=partial(nn.LayerNorm, eps=1e-6),",
                           copy="third_party/VideoMAE/modeling_pretrain.py", level=3),
+                     dict(quote="self.input_mean = [0.485, 0.456, 0.406]  # IMAGENET_DEFAULT_MEAN",
+                          copy="third_party/VideoMAE/datasets.py", level=3),
+                     dict(quote="self.input_std = [0.229, 0.224, 0.225]  # IMAGENET_DEFAULT_STD",
+                          copy="third_party/VideoMAE/datasets.py", level=3),
+                     dict(quote="normalize = GroupNormalize(self.input_mean, self.input_std)",
+                          copy="third_party/VideoMAE/datasets.py", level=3),
+                     dict(quote="ToTorchFormatTensor(div=True),", copy="third_party/VideoMAE/datasets.py", level=3),
+                     dict(quote="transform = DataAugmentationForVideoMAE(args)",
+                          copy="third_party/VideoMAE/datasets.py", level=3),
+                     dict(quote="t.sub_(m).div_(s)", copy="third_party/VideoMAE/transforms.py", level=3),
+                     dict(quote="return (img.float().div(255.) if self.div else img.float(), label)",
+                          copy="third_party/VideoMAE/transforms.py", level=3),
+                     dict(quote="elif img_group[0].mode == 'RGB': if self.roll:",
+                          copy="third_party/VideoMAE/transforms.py", level=3),
                      dict(quote="'mean': (0.5, 0.5, 0.5), 'std': (0.5, 0.5, 0.5),",
                           copy="third_party/VideoMAE/modeling_finetune.py", level=3),
                      dict(quote="\"num_frames\": 16,",
@@ -73,6 +95,10 @@ SPEC = dict(name="VideoMAE", arm="secondary", kind="clip", input_size=(224, 224)
                      dict(quote="VideoMAE ViT-S 7 16 57×5×3 22 79.0 93.8",
                           copy="data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt.layout.txt",
                           level=1)],
+            normalisation_note=("modeling_finetune.py::_cfg() reports mean/std 0.5 as model default_cfg metadata, but "
+                                "the pre-training data pipeline is the source that trained the pre-training "
+                                "checkpoints, and it governs under the source-priority rule. Fine-tuned checkpoints "
+                                "remain outside the secondary class."),
             third_party=dict(repo="MCG-NJU/VideoMAE", commit="14ef8d856287c94ef1f985fe30f958eb4ec2c55d"))
 
 

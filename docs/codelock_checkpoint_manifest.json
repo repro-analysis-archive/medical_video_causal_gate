@@ -36,7 +36,8 @@
    "pooling": "global average over the stage-4 spatial grid (7 x 7 at 224); then the ten-frame step mean",
    "representation_dim": 512,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "x/255, ImageNet mean (0.485, 0.456, 0.406) / std (0.229, 0.224, 0.225)"
   },
   {
    "candidate": "SurgeNetRARP (CAFormer-S18)",
@@ -56,7 +57,8 @@
    "pooling": "global average over the stage-4 spatial grid (7 x 7 at 224); then the ten-frame step mean",
    "representation_dim": 512,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "x/255, ImageNet mean (0.485, 0.456, 0.406) / std (0.229, 0.224, 0.225)"
   },
   {
    "candidate": "SelfSupSurg (ResNet-50; MoCo v2 / SimCLR / SwAV / DINO)",
@@ -74,7 +76,8 @@
    "pooling": "global average over the 7 x 7 layer4 grid; then the ten-frame step mean",
    "representation_dim": 2048,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "x/255, ImageNet mean / std (configs h001-h004: mean [0.485, 0.456, 0.406], std [0.229, 0.224, 0.225])"
   },
   {
    "candidate": "SelfSupSurg (ResNet-50; MoCo v2 / SimCLR / SwAV / DINO)",
@@ -92,7 +95,8 @@
    "pooling": "global average over the 7 x 7 layer4 grid; then the ten-frame step mean",
    "representation_dim": 2048,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "x/255, ImageNet mean / std (configs h001-h004: mean [0.485, 0.456, 0.406], std [0.229, 0.224, 0.225])"
   },
   {
    "candidate": "SelfSupSurg (ResNet-50; MoCo v2 / SimCLR / SwAV / DINO)",
@@ -110,7 +114,8 @@
    "pooling": "global average over the 7 x 7 layer4 grid; then the ten-frame step mean",
    "representation_dim": 2048,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "x/255, ImageNet mean / std (configs h001-h004: mean [0.485, 0.456, 0.406], std [0.229, 0.224, 0.225])"
   },
   {
    "candidate": "SelfSupSurg (ResNet-50; MoCo v2 / SimCLR / SwAV / DINO)",
@@ -128,7 +133,8 @@
    "pooling": "global average over the 7 x 7 layer4 grid; then the ten-frame step mean",
    "representation_dim": 2048,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "x/255, ImageNet mean / std (configs h001-h004: mean [0.485, 0.456, 0.406], std [0.229, 0.224, 0.225])"
   },
   {
    "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
@@ -146,7 +152,8 @@
    "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
    "representation_dim": 384,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "RGB frames / 255, then per channel (x - mean) / std with mean (0.485, 0.456, 0.406), std (0.229, 0.224, 0.225): the values DataAugmentationForVideoMAE applies to every pre-training input (datasets.py @ 14ef8d85: 'self.input_mean = [0.485, 0.456, 0.406]  # IMAGENET_DEFAULT_MEAN', 'self.input_std = [0.229, 0.224, 0.225]  # IMAGENET_DEFAULT_STD', GroupNormalize after Stack(roll=False) and ToTorchFormatTensor(div=True); transforms.py semantics); the same transform for every pre-training dataset (build_pretraining_dataset), hence all nine checkpoints"
   },
   {
    "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
@@ -166,7 +173,8 @@
    "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
    "representation_dim": 768,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "RGB frames / 255, then per channel (x - mean) / std with mean (0.485, 0.456, 0.406), std (0.229, 0.224, 0.225): the values DataAugmentationForVideoMAE applies to every pre-training input (datasets.py @ 14ef8d85: 'self.input_mean = [0.485, 0.456, 0.406]  # IMAGENET_DEFAULT_MEAN', 'self.input_std = [0.229, 0.224, 0.225]  # IMAGENET_DEFAULT_STD', GroupNormalize after Stack(roll=False) and ToTorchFormatTensor(div=True); transforms.py semantics); the same transform for every pre-training dataset (build_pretraining_dataset), hence all nine checkpoints"
   },
   {
    "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
@@ -186,7 +194,8 @@
    "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
    "representation_dim": 768,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "RGB frames / 255, then per channel (x - mean) / std with mean (0.485, 0.456, 0.406), std (0.229, 0.224, 0.225): the values DataAugmentationForVideoMAE applies to every pre-training input (datasets.py @ 14ef8d85: 'self.input_mean = [0.485, 0.456, 0.406]  # IMAGENET_DEFAULT_MEAN', 'self.input_std = [0.229, 0.224, 0.225]  # IMAGENET_DEFAULT_STD', GroupNormalize after Stack(roll=False) and ToTorchFormatTensor(div=True); transforms.py semantics); the same transform for every pre-training dataset (build_pretraining_dataset), hence all nine checkpoints"
   },
   {
    "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
@@ -206,7 +215,8 @@
    "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
    "representation_dim": 1024,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "RGB frames / 255, then per channel (x - mean) / std with mean (0.485, 0.456, 0.406), std (0.229, 0.224, 0.225): the values DataAugmentationForVideoMAE applies to every pre-training input (datasets.py @ 14ef8d85: 'self.input_mean = [0.485, 0.456, 0.406]  # IMAGENET_DEFAULT_MEAN', 'self.input_std = [0.229, 0.224, 0.225]  # IMAGENET_DEFAULT_STD', GroupNormalize after Stack(roll=False) and ToTorchFormatTensor(div=True); transforms.py semantics); the same transform for every pre-training dataset (build_pretraining_dataset), hence all nine checkpoints"
   },
   {
    "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
@@ -224,7 +234,8 @@
    "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
    "representation_dim": 1280,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "RGB frames / 255, then per channel (x - mean) / std with mean (0.485, 0.456, 0.406), std (0.229, 0.224, 0.225): the values DataAugmentationForVideoMAE applies to every pre-training input (datasets.py @ 14ef8d85: 'self.input_mean = [0.485, 0.456, 0.406]  # IMAGENET_DEFAULT_MEAN', 'self.input_std = [0.229, 0.224, 0.225]  # IMAGENET_DEFAULT_STD', GroupNormalize after Stack(roll=False) and ToTorchFormatTensor(div=True); transforms.py semantics); the same transform for every pre-training dataset (build_pretraining_dataset), hence all nine checkpoints"
   },
   {
    "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
@@ -242,7 +253,8 @@
    "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
    "representation_dim": 384,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "RGB frames / 255, then per channel (x - mean) / std with mean (0.485, 0.456, 0.406), std (0.229, 0.224, 0.225): the values DataAugmentationForVideoMAE applies to every pre-training input (datasets.py @ 14ef8d85: 'self.input_mean = [0.485, 0.456, 0.406]  # IMAGENET_DEFAULT_MEAN', 'self.input_std = [0.229, 0.224, 0.225]  # IMAGENET_DEFAULT_STD', GroupNormalize after Stack(roll=False) and ToTorchFormatTensor(div=True); transforms.py semantics); the same transform for every pre-training dataset (build_pretraining_dataset), hence all nine checkpoints"
   },
   {
    "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
@@ -260,7 +272,8 @@
    "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
    "representation_dim": 768,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "RGB frames / 255, then per channel (x - mean) / std with mean (0.485, 0.456, 0.406), std (0.229, 0.224, 0.225): the values DataAugmentationForVideoMAE applies to every pre-training input (datasets.py @ 14ef8d85: 'self.input_mean = [0.485, 0.456, 0.406]  # IMAGENET_DEFAULT_MEAN', 'self.input_std = [0.229, 0.224, 0.225]  # IMAGENET_DEFAULT_STD', GroupNormalize after Stack(roll=False) and ToTorchFormatTensor(div=True); transforms.py semantics); the same transform for every pre-training dataset (build_pretraining_dataset), hence all nine checkpoints"
   },
   {
    "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
@@ -280,7 +293,8 @@
    "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
    "representation_dim": 768,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "RGB frames / 255, then per channel (x - mean) / std with mean (0.485, 0.456, 0.406), std (0.229, 0.224, 0.225): the values DataAugmentationForVideoMAE applies to every pre-training input (datasets.py @ 14ef8d85: 'self.input_mean = [0.485, 0.456, 0.406]  # IMAGENET_DEFAULT_MEAN', 'self.input_std = [0.229, 0.224, 0.225]  # IMAGENET_DEFAULT_STD', GroupNormalize after Stack(roll=False) and ToTorchFormatTensor(div=True); transforms.py semantics); the same transform for every pre-training dataset (build_pretraining_dataset), hence all nine checkpoints"
   },
   {
    "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
@@ -298,7 +312,8 @@
    "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
    "representation_dim": 768,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "RGB frames / 255, then per channel (x - mean) / std with mean (0.485, 0.456, 0.406), std (0.229, 0.224, 0.225): the values DataAugmentationForVideoMAE applies to every pre-training input (datasets.py @ 14ef8d85: 'self.input_mean = [0.485, 0.456, 0.406]  # IMAGENET_DEFAULT_MEAN', 'self.input_std = [0.229, 0.224, 0.225]  # IMAGENET_DEFAULT_STD', GroupNormalize after Stack(roll=False) and ToTorchFormatTensor(div=True); transforms.py semantics); the same transform for every pre-training dataset (build_pretraining_dataset), hence all nine checkpoints"
   },
   {
    "candidate": "OmniTokenizer (ImageNet + K600)",
@@ -316,7 +331,8 @@
    "pooling": "mean over latent time (T' = 5 at 17 frames), flattened (c, h, w) = 8 x 32 x 32",
    "representation_dim": 8192,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "x/255 - 0.5 -> [-0.5, 0.5], layout (B, 3, T, H, W) (data.py VideoNorm mean 0.5, std 1.0)"
   },
   {
    "candidate": "OmniTokenizer (ImageNet + K600)",
@@ -334,7 +350,8 @@
    "pooling": "mean over latent time (T' = 5 at 17 frames), flattened 8 x 32 x 32",
    "representation_dim": 8192,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "x/255 - 0.5 -> [-0.5, 0.5], layout (B, 3, T, H, W) (data.py VideoNorm mean 0.5, std 1.0)"
   },
   {
    "candidate": "WF-VAE-L 16ch",
@@ -352,7 +369,8 @@
    "pooling": "mean over latent time (T' = 9 at 33 frames), flattened 16 x 32 x 32",
    "representation_dim": 16384,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "x/255 -> [0, 1] -> 2x - 1 -> [-1, 1], layout (B, 3, T, H, W)"
   },
   {
    "candidate": "LARP-L-Long tokenizer",
@@ -370,7 +388,8 @@
    "pooling": "none over time (holistic query tokens have no latent time axis); flattened 1024 x 16",
    "representation_dim": 16384,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "x/255 -> [0, 1], no mean / std, layout (B, 3, T, H, W)"
   },
   {
    "candidate": "LeanVAE",
@@ -388,7 +407,8 @@
    "pooling": "mean over latent time (T' = 5 at 17 frames), flattened 16 x 32 x 32",
    "representation_dim": 16384,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "x/255 - 0.5 -> [-0.5, 0.5] (leanvae_inference.py regular_size = 2)"
   },
   {
    "candidate": "LeanVAE",
@@ -406,7 +426,8 @@
    "pooling": "mean over latent time (T' = 5 at 17 frames), flattened 4 x 32 x 32",
    "representation_dim": 4096,
    "ranking_reachable": true,
-   "excluded_reason": null
+   "excluded_reason": null,
+   "normalisation": "x/255 - 0.5 -> [-0.5, 0.5] (leanvae_inference.py regular_size = 2)"
   }
  ],
  "excluded": [
@@ -618,5 +639,6 @@
   "adapter": "ss_benchmark/models/ref_cosmos.py",
   "ranking_reachable": false,
   "note": "fixed reference arm, not subject to the §4.1.4 rules or ranking"
- }
+ },
+ "videomae_normalisation_note": "modeling_finetune.py::_cfg() reports mean/std 0.5 as model default_cfg metadata, but the pre-training data pipeline is the source that trained the pre-training checkpoints, and it governs under the source-priority rule. Fine-tuned checkpoints remain outside the secondary class."
 }

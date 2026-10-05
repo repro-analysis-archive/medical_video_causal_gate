@@ -85,3 +85,11 @@ third_party/ total: 67 MB, source code only
 * **How it was done.** They were retrieved with `curl` from raw.githubusercontent.com, with no clone, archive, LFS object or weight. The record is `decisions/CODELOCK_AUTH_002_videomae_source.md`.
 * **Script change.** `scripts/fetch_third_party.sh --authorized-videomae-source` permits exactly that retrieval and verifies the pinned SHA-256 values.
 * **Rule restored.** After it, the no-third-party-retrieval rule is restored until the final code-lock commit.
+
+## Pointer added 2026-10-05 at the investigator's instruction (`CC_TASK_SS_code_lock_videomae_norm.md` item 1)
+
+* This section is appended only. No text above it was changed.
+* **Second approved exception.** The investigator approved a second source-only exception: `datasets.py` and `transforms.py` (the VideoMAE pre-training pipeline) from MCG-NJU/VideoMAE at `14ef8d856287c94ef1f985fe30f958eb4ec2c55d`.
+* **How it was done.** They were retrieved as raw files with `curl`, with no clone, archive, LFS object or weight. The record is `decisions/CODELOCK_AUTH_003_videomae_datasets.md`.
+* **Script change.** The SHA-256 values are pinned in `scripts/fetch_third_party.sh` (`--authorized-videomae-datasets`).
+* **Rule restored.** The no-third-party-retrieval rule is restored until the final code-lock commit.

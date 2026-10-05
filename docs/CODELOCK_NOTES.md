@@ -75,7 +75,7 @@
 |---|---|---|---|---|---|
 | SurgeNetCholec / RARP | frame | 224² | — | CAFormer-S18 pooled normalised features (512) | input 224 and ImageNet normalisation; no level-1–3 SurgeNet source states the pretraining input or normalisation (224×399 is for downstream fine-tuning) |
 | SelfSupSurg ResNet-50 (moco_v2 / simclr / swav / dino; one registry entry each) | frame | 224² | — | pooled trunk (2048) | — |
-| VideoMAE (the nine official MODEL_ZOO pre-training checkpoints: K400 ViT-S/B/B/L/H, SSv2 ViT-S/B/B, UCF101 ViT-B) | clip | 224² | 16 | final-LayerNorm encoder output, mean over all 1,568 patch tokens (no CLS token) | architecture from the official definitions (CODELOCK_AUTH_002); normalisation mean / std (0.5, 0.5, 0.5) from the official `default_cfg`; HF copies are aliases, not used |
+| VideoMAE (the nine official MODEL_ZOO pre-training checkpoints: K400 ViT-S/B/B/L/H, SSv2 ViT-S/B/B, UCF101 ViT-B) | clip | 224² | 16 | final-LayerNorm encoder output, mean over all 1,568 patch tokens (no CLS token) | architecture from the official definitions (CODELOCK_AUTH_002); normalisation mean (0.485, 0.456, 0.406) / std (0.229, 0.224, 0.225) from the pre-training data pipeline (CODELOCK_AUTH_003; `_cfg()` 0.5 is default_cfg metadata only); HF copies are aliases, not used |
 | OmniTokenizer imagenet_k600 | clip | 256² | 17 | L2-normalised pre-VQ latent (8×32×32) | enc_block "ttww" follows the eval script; the paper text says 4 window layers |
 | OmniTokenizer imagenet_k600_vae | clip | 256² | 17 | posterior mean (8×32×32) | the same encoder and evaluation hyperparameters plus `--use_vae` |
 | WF-VAE-L 16ch | clip | 256² | 33 | posterior mean (16×32×32) | 33 frames = the authors' evaluation clip; training used 25, then 49 |
@@ -113,6 +113,7 @@
   * No weights of any eligible model or of the reference were downloaded.
   * No further third-party retrieval is permitted before the final code-lock commit. `scripts/fetch_third_party.sh` now refuses to run without `--after-final-code-lock`, and it uses a partial, sparse fetch that never materialises weight blobs.
 * **Authorisation 002:** a source-only retrieval of the two official VideoMAE architecture files (`modeling_pretrain.py`, `modeling_finetune.py` @ MCG-NJU/VideoMAE 14ef8d85) as raw files, with no weights. Record: `decisions/CODELOCK_AUTH_002_videomae_source.md`. The no-retrieval rule is restored afterwards.
+* **Authorisation 003:** a source-only retrieval of the VideoMAE pre-training data pipeline (`datasets.py`, `transforms.py` @ 14ef8d85) as raw files, with no weights. Record: `decisions/CODELOCK_AUTH_003_videomae_datasets.md`. The no-retrieval rule is restored afterwards.
 * **Packages installed.** Python packages (timm, transformers, diffusers, einops) were installed into the separate venv only. The base environment is unchanged.
 
 ## 5. Supersession of pre-gate implementation commits (no Part B was ever run on a superseded commit)
@@ -133,3 +134,8 @@
   * records.
 
   While re-deriving the VideoMAE configuration from the official code, the VideoMAE input normalisation was changed. ImageNet mean / std had been cited in 338768c without a saved source; it became mean / std (0.5, 0.5, 0.5), the official `default_cfg`, which is the only level-1–3 statement among the saved and authorised sources. No estimator, gate, projection, G-SITE or small-truth code changed.
+* **`05822ee`:** superseded before any Part B run, by the commit that adds this entry. The reason:
+  * Under the frozen source-priority rule (official released reproduction code governs executable configuration over defaults and prose), the VideoMAE pre-training normalisation is defined by the pre-training data pipeline, not by the model-registration default `_cfg()` (0.5) that 05822ee had used.
+  * With the investigator's authorisation 003, the pipeline was retrieved: `DataAugmentationForVideoMAE` applies mean (0.485, 0.456, 0.406) / std (0.229, 0.224, 0.225) to RGB / 255. This confirms the audit's quoted lines.
+  * The VideoMAE adapter, extraction spec, manifest, tests and records were updated accordingly.
+  * No estimator, gate, projection, G-SITE, small-truth or runner file changed.

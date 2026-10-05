@@ -10,6 +10,13 @@
 
 "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class."
 
+## VideoMAE input normalisation
+
+* **All nine pre-training checkpoints:** mean (0.485, 0.456, 0.406), std (0.229, 0.224, 0.225), on RGB frames / 255.
+* **Source:** the pre-training data pipeline (`datasets.py` `DataAugmentationForVideoMAE` @ 14ef8d85; `decisions/CODELOCK_AUTH_003_videomae_datasets.md`).
+* **Note:** modeling_finetune.py::_cfg() reports mean/std 0.5 as model default_cfg metadata, but the pre-training data pipeline is the source that trained the pre-training checkpoints, and it governs under the source-priority rule. Fine-tuned checkpoints remain outside the secondary class.
+* Every row's frozen `normalisation` is in the JSON.
+
 ## 1. Selectable checkpoints (can enter the frozen ranking)
 
 | candidate | checkpoint | stage | data | architecture | documented compute | registry key | D |

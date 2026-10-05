@@ -4,10 +4,11 @@
 # PROHIBITED before the final code-lock commit (decisions/CODELOCK_INCIDENT_001_third_party_weight_files.md): the
 # script refuses to run unless --after-final-code-lock is given. third_party/ as used at code lock already exists.
 #
-# Single authorised exception (decisions/CODELOCK_AUTH_002_videomae_source.md): --authorized-videomae-source fetches
-# exactly the two VideoMAE architecture source files listed in VIDEOMAE_FILES, as raw files from
-# raw.githubusercontent.com at the pinned commit (no clone, no archive, no LFS), into third_party/VideoMAE/; only *.py
-# names on that list, at most 1 MB each, no NUL bytes, SHA-256 equal to the recorded values.
+# Authorised source-only exceptions (raw files from raw.githubusercontent.com at the pinned VideoMAE commit; no clone,
+# no archive, no LFS; only *.py names on the explicit list; at most 1 MB each; no NUL bytes; SHA-256 equal to the
+# recorded values; a file already present with its pinned SHA-256 is not fetched again), into third_party/VideoMAE/:
+#   --authorized-videomae-source    VIDEOMAE_FILES          (decisions/CODELOCK_AUTH_002_videomae_source.md)
+#   --authorized-videomae-datasets  VIDEOMAE_DATASETS_FILES (decisions/CODELOCK_AUTH_003_videomae_datasets.md)
 #
 # Mechanism (incident prevention; no "download then strip"): a depth-1 partial fetch of the pinned commit with
 # --filter=blob:none, then a non-cone sparse checkout whose patterns exclude every weight-type file, so the blobs of
@@ -16,7 +17,7 @@
 # the script aborts and deletes the directory.
 #
 #   scripts/fetch_third_party.sh --after-final-code-lock [--dest DIR] [--list FILE]
-#   scripts/fetch_third_party.sh --authorized-videomae-source [--dest DIR]
+#   scripts/fetch_third_party.sh --authorized-videomae-source | --authorized-videomae-datasets [--dest DIR]
 #   (--list: lines "name url commit"; default: the four repositories below)
 set -euo pipefail
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -24,21 +25,27 @@ DEST="$REPO/third_party"; LIST=""; OK=0; VMAE=0
 VIDEOMAE_REPO="MCG-NJU/VideoMAE"
 VIDEOMAE_COMMIT="14ef8d856287c94ef1f985fe30f958eb4ec2c55d"
 VIDEOMAE_FILES=("modeling_pretrain.py" "modeling_finetune.py")
-declare -A VIDEOMAE_SHA256=([modeling_pretrain.py]=5689f93f72d7764d13e27f17ca3a6a096c89e7ee0e3fd8e63dffde6ab11ad593 [modeling_finetune.py]=ce9a11ff05c7a1b5085addf6c73b71ffb68933564164f7b250dedad91f6e29b8)  # CODELOCK_AUTH_002
+VIDEOMAE_DATASETS_FILES=("datasets.py" "transforms.py")
+declare -A VIDEOMAE_SHA256=([modeling_pretrain.py]=5689f93f72d7764d13e27f17ca3a6a096c89e7ee0e3fd8e63dffde6ab11ad593 [modeling_finetune.py]=ce9a11ff05c7a1b5085addf6c73b71ffb68933564164f7b250dedad91f6e29b8 [datasets.py]=3bfa677831615a95f835f7c4b235eb18ba0cb29d6acd42ff335f334f75ee9f7e [transforms.py]=f7f37f8e628bb65c08d9c6bf1f9f88dcc4c13557613895cb2db401a51fae5d54)  # CODELOCK_AUTH_002 / _003
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --authorized-videomae-source) VMAE=1; shift;;
+    --authorized-videomae-datasets) VMAE=2; shift;;
     --after-final-code-lock) OK=1; shift;;
     --dest) DEST="$2"; shift 2;;
     --list) LIST="$2"; shift 2;;
     *) echo "unknown argument: $1" >&2; exit 2;;
   esac
 done
-if [[ $VMAE -eq 1 ]]; then
-  [[ $OK -eq 0 && -z "$LIST" ]] || { echo "--authorized-videomae-source cannot be combined" >&2; exit 2; }
+if [[ $VMAE -ne 0 ]]; then
+  [[ $OK -eq 0 && -z "$LIST" ]] || { echo "--authorized-videomae-* cannot be combined" >&2; exit 2; }
+  if [[ $VMAE -eq 1 ]]; then FILES=("${VIDEOMAE_FILES[@]}"); else FILES=("${VIDEOMAE_DATASETS_FILES[@]}"); fi
   d="$DEST/VideoMAE"; mkdir -p "$d"
-  for f in "${VIDEOMAE_FILES[@]}"; do
+  for f in "${FILES[@]}"; do
     [[ "$f" == *.py && "$f" != */* ]] || { echo "refused: $f" >&2; exit 2; }
+    if [[ -f "$d/$f" && -n "${VIDEOMAE_SHA256[$f]:-}" && "$(sha256sum "$d/$f" | cut -d' ' -f1)" == "${VIDEOMAE_SHA256[$f]}" ]]; then
+      echo "present with pinned sha256, not fetched: $f"; continue
+    fi
     url="https://raw.githubusercontent.com/$VIDEOMAE_REPO/$VIDEOMAE_COMMIT/$f"
     curl -fsSL --max-filesize 1048576 -o "$d/$f.part" "$url"
     if LC_ALL=C grep -qaP '\x00' "$d/$f.part"; then rm -f "$d/$f.part"; echo "binary content refused: $f" >&2; exit 3; fi
