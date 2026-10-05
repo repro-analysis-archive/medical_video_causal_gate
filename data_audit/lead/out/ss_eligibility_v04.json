@@ -1,0 +1,2408 @@
+{
+ "note": "Pre-freeze fact task for SS protocol v0.4 (consolidated task Part 2 item 5; final pre-freeze task items 1, 4, 6):\nre-determine the eligibility of every 052590c-eligible candidate under the source hierarchy, the clip-level definition,\nthe mutually exclusive classes and the TWO-LEVEL OVERLAP RULE. NO ranking is applied and NO model is selected.\n* Source levels: 1 original paper (incl. a dataset's own paper); 2 official model card / official repository README or\n  file listing; 3 documented pretraining-data list (official configs / training scripts); 4 secondary; 5 internal\n  tables (052590c, cb07e93). A required fact holds only if a level-1-3 source affirmatively supports it; otherwise it\n  is UNK and the candidate is ineligible. Level-4/5 material is shown for context only.\n* Two-level overlap rule, per training source of the released weights and of their initialisation / base weights:\n  A (direct DS203 / DS203-centre overlap): YES if DS203, a constituent DS203 dataset or a known same-hospital clinical\n    source (DSAD) is documented; NO if a level-1-3 source establishes a closed or sufficiently defined corpus whose\n    documented scope excludes DS203 and the known DS203 clinical sources (a clinical set with a named non-DS203\n    recording site or non-German geography; a versioned non-surgical benchmark with fixed classes finalized before\n    DS203's release on 2026-04-29); UNK if open-ended / web-scale or the clinical/site provenance cannot be bounded.\n  B (generic web origin): for a fixed closed benchmark, generic web provenance does not change NO to UNK; it is\n    disclosed as a limitation (\"incidental web-origin exposure cannot be excluded at the level of every source image\").\n  C (same-hospital): applies to clinical / endoscopic sources only.\n  A candidate is eligible on overlap only if every source is NO under A. The strict reading (every web-derived source\n  UNK) is reported as a counterfactual only.\n* \"Fits 24 GB\" here is the PRIOR SCREEN (parameter count / checkpoint size); the final determination is the frozen\n  synthetic-input feasibility test run after freeze (protocol §4.1).\nEvery quote is verified as a whitespace-normalised substring of its saved copy.",
+ "level4_context": "mmaction2 label maps (level 4, context only): no Kinetics-400/600/700 class name contains surg/operat/laparo/endoscop/hospital/medic/doctor/patient/clinic",
+ "ds203_release": {
+  "quote": "\"dc.date.issued\" : [ { \"value\" : \"2026-04-29\"",
+  "copy": "../../../../media/user/LaCie/medvideo_gate/DS203/opara_item.json",
+  "level": 2,
+  "verified": true
+ },
+ "quotes_verified": "150/150",
+ "quotes_above_level3": 0,
+ "tie_break_order": [
+  "scientific rank criteria of protocol §4.1.4 (not applied here)",
+  "1. authors' explicitly documented default / recommended checkpoint (level-1 source; not inferred)",
+  "2. lower protocol-relevant compute",
+  "3. lower measured synthetic-input peak memory (§4.1 feasibility test, after freeze)",
+  "4. lexical order of the model / checkpoint identifier"
+ ],
+ "eligible_primary": [
+  "SurgeNetCholec (CAFormer-S18)",
+  "SurgeNetRARP (CAFormer-S18)",
+  "EndoSSL laparoscopy ViT-B",
+  "EndoSSL laparoscopy ViT-L",
+  "SelfSupSurg (ResNet-50; MoCo v2 / SimCLR / SwAV / DINO)"
+ ],
+ "eligible_secondary": [
+  "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+  "OmniTokenizer (ImageNet + K600)",
+  "WF-VAE-L 16ch",
+  "LARP-L-Long tokenizer",
+  "LeanVAE"
+ ],
+ "strict_reading_counterfactual": {
+  "primary": [],
+  "secondary": []
+ },
+ "rows": [
+  {
+   "name": "Endo-FM",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "clip_level": true,
+   "note": "LDPolypVideo, Colonoscopic: recording site not obtainable",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "overlap_A": "UNK",
+   "failing": "direct overlap UNK under rule A: a clinical training set has no recording site in any obtainable level-1-3 source (out/dataset_provenance.json status NOT_STATED / NOT_OBTAINABLE)"
+  },
+  {
+   "name": "EndoViT",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "clip_level": false,
+   "note": "DSAD (same hospital as C2) -> A-YES; LapGyn4 / GLENDA / SurgicalActions160 / hSDB gastrectomy also A-UNK (site not stated)",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "overlap_A": "YES",
+   "failing": "direct overlap YES under rule A: DSAD, a known same-hospital clinical source (University Hospital Carl Gustav Carus Dresden; C2 = its Department of Pediatric Surgery); other sources are also UNK"
+  },
+  {
+   "name": "SurgeNetXL",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "clip_level": false,
+   "note": "DSAD -> A-YES; YouTube portion also A-UNK",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "overlap_A": "YES",
+   "failing": "direct overlap YES under rule A: DSAD, a known same-hospital clinical source (University Hospital Carl Gustav Carus Dresden; C2 = its Department of Pediatric Surgery); other sources are also UNK"
+  },
+  {
+   "name": "SurgeNet / SurgeNetPublic",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "clip_level": false,
+   "note": "DSAD -> A-YES; GLENDA / LapGyn4 / hSDB-Gastric / SurgToolLoc also A-UNK",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "overlap_A": "YES",
+   "failing": "direct overlap YES under rule A: DSAD, a known same-hospital clinical source (University Hospital Carl Gustav Carus Dresden; C2 = its Department of Pediatric Surgery); other sources are also UNK"
+  },
+  {
+   "name": "SurgVLP / HecVL / PeskaVLP",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "clip_level": false,
+   "note": "clip embedding = average of per-frame embeddings: not conditioned on temporal order, so frame-level under the v0.4 definition",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "overlap_A": "UNK",
+   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+  },
+  {
+   "name": "EndoMamba",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "clip_level": true,
+   "note": "inherits Endo-FM's LDPolypVideo / Colonoscopic; GLENDA",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "overlap_A": "UNK",
+   "failing": "direct overlap UNK under rule A: a clinical training set has no recording site in any obtainable level-1-3 source (out/dataset_provenance.json status NOT_STATED / NOT_OBTAINABLE)"
+  },
+  {
+   "name": "LemonFM",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "clip_level": false,
+   "note": "",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "overlap_A": "UNK",
+   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+  },
+  {
+   "name": "SurgLIME",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "clip_level": null,
+   "note": "",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "overlap_A": "UNK",
+   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+  },
+  {
+   "name": "PL-Stitch",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "clip_level": false,
+   "note": "",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "overlap_A": "UNK",
+   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+  },
+  {
+   "name": "Basel V-JEPA ViT-L",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "clip_level": true,
+   "note": "base VideoMix2M includes HowTo100M (keyword-searched YouTube)",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "overlap_A": "UNK",
+   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+  },
+  {
+   "name": "EndoSSL (colonoscopy weights)",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "clip_level": false,
+   "note": "also fails the laparoscopic rule (colonoscopy only)",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "overlap_A": "UNK",
+   "failing": "direct overlap UNK under rule A: a clinical training set has no recording site in any obtainable level-1-3 source (out/dataset_provenance.json status NOT_STATED / NOT_OBTAINABLE)"
+  },
+  {
+   "name": "SurgeNetCholec (CAFormer-S18)",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "clip_level": false,
+   "note": "",
+   "overlap_A": "NO",
+   "eligible": true,
+   "failing": "-",
+   "eligible_strict_counterfactual": false,
+   "web_origin_disclosure_B": [
+    "ImageNet: object categories"
+   ],
+   "sources": [
+    {
+     "source": "cholec80",
+     "status": "A-NO: named non-DS203 recording site",
+     "institution_or_content": "University Hospital of Strasbourg"
+    },
+    {
+     "source": "heichole",
+     "status": "A-NO: named non-DS203 recording site",
+     "institution_or_content": "Heidelberg University Hospital; Salem Hospital Heidelberg; GRN-hospital Sinsheim"
+    },
+    {
+     "source": "hsdb_chole",
+     "status": "A-NO: named non-DS203 recording site",
+     "institution_or_content": "Cholec80 subset (Strasbourg)"
+    },
+    {
+     "source": "imagenet",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "ImageNet: object categories"
+    }
+   ],
+   "prior_screen_24gb": "YES"
+  },
+  {
+   "name": "SurgeNetRARP (CAFormer-S18)",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "clip_level": false,
+   "note": "SurgeNetRARP = ESAD + PSI-AVA + RARP-AvL (paper Table 1)",
+   "overlap_A": "NO",
+   "eligible": true,
+   "failing": "-",
+   "eligible_strict_counterfactual": false,
+   "web_origin_disclosure_B": [
+    "ImageNet: object categories"
+   ],
+   "sources": [
+    {
+     "source": "esad",
+     "status": "A-NO: named non-DS203 recording site",
+     "institution_or_content": "San Raffaele Hospital, Milan"
+    },
+    {
+     "source": "psiava",
+     "status": "A-NO: named non-DS203 recording site",
+     "institution_or_content": "Fundacion Santa Fe de Bogota"
+    },
+    {
+     "source": "rarp_avl",
+     "status": "A-NO: named non-DS203 recording site",
+     "institution_or_content": "Antoni van Leeuwenhoek Hospital, Amsterdam"
+    },
+    {
+     "source": "imagenet",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "ImageNet: object categories"
+    }
+   ],
+   "prior_screen_24gb": "YES"
+  },
+  {
+   "name": "SurgeNetRAMIE (CAFormer-S18)",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "clip_level": false,
+   "note": "no level-1-3 source calls the RAMIE videos laparoscopic ('robot-assisted minimally invasive esophagectomy')",
+   "overlap_A": "NO",
+   "eligible": false,
+   "failing": "laparoscopic video not affirmatively documented",
+   "eligible_strict_counterfactual": false,
+   "web_origin_disclosure_B": [
+    "ImageNet: object categories"
+   ],
+   "sources": [
+    {
+     "source": "ramie",
+     "status": "A-NO: named non-DS203 recording site",
+     "institution_or_content": "University Medical Center Utrecht"
+    },
+    {
+     "source": "imagenet",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "ImageNet: object categories"
+    }
+   ],
+   "prior_screen_24gb": "YES"
+  },
+  {
+   "name": "EndoSSL laparoscopy ViT-B",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "clip_level": false,
+   "note": "initialisation of the released checkpoints not stated: scratch or an ImageNet-1k SSL checkpoint (both non-surgical); ImageNet counted as a possible source",
+   "overlap_A": "NO",
+   "eligible": true,
+   "failing": "-",
+   "eligible_strict_counterfactual": false,
+   "web_origin_disclosure_B": [
+    "ImageNet: object categories"
+   ],
+   "sources": [
+    {
+     "source": "israel8",
+     "status": "A-NO: non-German geography",
+     "institution_or_content": "eight unnamed centres in Israel"
+    },
+    {
+     "source": "imagenet",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "ImageNet: object categories"
+    }
+   ],
+   "prior_screen_24gb": "YES"
+  },
+  {
+   "name": "EndoSSL laparoscopy ViT-L",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "clip_level": false,
+   "note": "initialisation of the released checkpoints not stated: scratch or an ImageNet-1k SSL checkpoint (both non-surgical); ImageNet counted as a possible source",
+   "overlap_A": "NO",
+   "eligible": true,
+   "failing": "-",
+   "eligible_strict_counterfactual": false,
+   "web_origin_disclosure_B": [
+    "ImageNet: object categories"
+   ],
+   "sources": [
+    {
+     "source": "israel8",
+     "status": "A-NO: non-German geography",
+     "institution_or_content": "eight unnamed centres in Israel"
+    },
+    {
+     "source": "imagenet",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "ImageNet: object categories"
+    }
+   ],
+   "prior_screen_24gb": "YES"
+  },
+  {
+   "name": "EndoSSL laparoscopy ViT-S",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "clip_level": false,
+   "note": "initialisation of the released checkpoints not stated: scratch or an ImageNet-1k SSL checkpoint (both non-surgical); ImageNet counted as a possible source; ViT-S size is not in the ViT paper's table, so size/compute are UNK",
+   "overlap_A": "NO",
+   "eligible": false,
+   "failing": "prior 24-GB screen: size not documented; compute not documented",
+   "eligible_strict_counterfactual": false,
+   "web_origin_disclosure_B": [
+    "ImageNet: object categories"
+   ],
+   "sources": [
+    {
+     "source": "israel8",
+     "status": "A-NO: non-German geography",
+     "institution_or_content": "eight unnamed centres in Israel"
+    },
+    {
+     "source": "imagenet",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "ImageNet: object categories"
+    }
+   ],
+   "prior_screen_24gb": "UNK"
+  },
+  {
+   "name": "SelfSupSurg (ResNet-50; MoCo v2 / SimCLR / SwAV / DINO)",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "clip_level": false,
+   "note": "",
+   "overlap_A": "NO",
+   "eligible": true,
+   "failing": "-",
+   "eligible_strict_counterfactual": false,
+   "web_origin_disclosure_B": [
+    "ImageNet: object categories"
+   ],
+   "sources": [
+    {
+     "source": "cholec80",
+     "status": "A-NO: named non-DS203 recording site",
+     "institution_or_content": "University Hospital of Strasbourg"
+    },
+    {
+     "source": "imagenet",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "ImageNet: object categories"
+    }
+   ],
+   "prior_screen_24gb": "YES"
+  },
+  {
+   "name": "Cosmos-H-Surgical v0.3.1",
+   "cls": "neither (surgical-domain generative model)",
+   "clip_level": null,
+   "note": "",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "failing": "class: surgical-domain generative (neither arm)"
+  },
+  {
+   "name": "Cosmos-H-Surgical Predict/Transfer 2.5",
+   "cls": "neither (surgical-domain generative model)",
+   "clip_level": null,
+   "note": "",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "failing": "class: surgical-domain generative (neither arm)"
+  },
+  {
+   "name": "Cosmos-H-Surgical-Simulator",
+   "cls": "neither (surgical-domain generative model)",
+   "clip_level": null,
+   "note": "",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "failing": "class: surgical-domain generative (neither arm)"
+  },
+  {
+   "name": "Cosmos-H-Dreams",
+   "cls": "neither (surgical-domain generative model)",
+   "clip_level": null,
+   "note": "",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "failing": "class: surgical-domain generative (neither arm)"
+  },
+  {
+   "name": "MedSora",
+   "cls": "neither (surgical-domain generative model)",
+   "clip_level": null,
+   "note": "",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "failing": "class: surgical-domain generative (neither arm)"
+  },
+  {
+   "name": "SG2VID",
+   "cls": "neither (surgical-domain generative model)",
+   "clip_level": null,
+   "note": "",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "failing": "class: surgical-domain generative (neither arm)"
+  },
+  {
+   "name": "KVLR",
+   "cls": "neither (surgical-domain generative model)",
+   "clip_level": null,
+   "note": "",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "failing": "class: surgical-domain generative (neither arm)"
+  },
+  {
+   "name": "Open-Sora VAE v1.2",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "clip_level": true,
+   "note": "also SDXL image-VAE initialisation (undocumented data)",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "overlap_A": "UNK",
+   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+  },
+  {
+   "name": "VideoMAE V2",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "clip_level": true,
+   "note": "",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "overlap_A": "UNK",
+   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+  },
+  {
+   "name": "Open-Sora-Plan v1.2 VAE",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "clip_level": true,
+   "note": "v1.1.0 data = Mixkit / Pixabay / Pexels stock video; SD2.1 VAE initialisation",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "overlap_A": "UNK",
+   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+  },
+  {
+   "name": "CV-VAE",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "clip_level": true,
+   "note": "",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "overlap_A": "UNK",
+   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+  },
+  {
+   "name": "Reducio-VAE",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "clip_level": true,
+   "note": "",
+   "eligible": false,
+   "eligible_strict_counterfactual": false,
+   "overlap_A": "UNK",
+   "failing": "direct overlap UNK under rule A: a training source is web-scale (YouTube / web lecture platforms / stock / social / Internet video)"
+  },
+  {
+   "name": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "clip_level": true,
+   "note": "each checkpoint is trained on one benchmark; the eligibility holds per checkpoint",
+   "overlap_A": "NO",
+   "eligible": true,
+   "failing": "-",
+   "eligible_strict_counterfactual": false,
+   "web_origin_disclosure_B": [
+    "Kinetics-400: human actions",
+    "SSv2: crowd-sourced caption templates",
+    "UCF-101: human actions"
+   ],
+   "sources": [
+    {
+     "source": "k400",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "Kinetics-400: human actions"
+    },
+    {
+     "source": "ssv2",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "SSv2: crowd-sourced caption templates"
+    },
+    {
+     "source": "ucf101",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "UCF-101: human actions"
+    }
+   ],
+   "prior_screen_24gb": "YES"
+  },
+  {
+   "name": "OmniTokenizer (ImageNet + K600)",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "clip_level": true,
+   "note": "",
+   "overlap_A": "NO",
+   "eligible": true,
+   "failing": "-",
+   "eligible_strict_counterfactual": false,
+   "web_origin_disclosure_B": [
+    "ImageNet: object categories",
+    "Kinetics-600: human actions"
+   ],
+   "sources": [
+    {
+     "source": "imagenet",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "ImageNet: object categories"
+    },
+    {
+     "source": "k600",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "Kinetics-600: human actions"
+    }
+   ],
+   "prior_screen_24gb": "YES"
+  },
+  {
+   "name": "WF-VAE-L 16ch",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "clip_level": true,
+   "note": "no pretrained initialisation named in the paper",
+   "overlap_A": "NO",
+   "eligible": true,
+   "failing": "-",
+   "eligible_strict_counterfactual": false,
+   "web_origin_disclosure_B": [
+    "Kinetics-400: human actions"
+   ],
+   "sources": [
+    {
+     "source": "k400",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "Kinetics-400: human actions"
+    }
+   ],
+   "prior_screen_24gb": "YES"
+  },
+  {
+   "name": "LARP-L-Long tokenizer",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "clip_level": true,
+   "note": "no pretrained initialisation named in the paper",
+   "overlap_A": "NO",
+   "eligible": true,
+   "failing": "-",
+   "eligible_strict_counterfactual": false,
+   "web_origin_disclosure_B": [
+    "Kinetics-600: human actions",
+    "UCF-101: human actions"
+   ],
+   "sources": [
+    {
+     "source": "k600",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "Kinetics-600: human actions"
+    },
+    {
+     "source": "ucf101",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "UCF-101: human actions"
+    }
+   ],
+   "prior_screen_24gb": "YES"
+  },
+  {
+   "name": "LeanVAE",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "clip_level": true,
+   "note": "no pretrained initialisation named in the paper",
+   "overlap_A": "NO",
+   "eligible": true,
+   "failing": "-",
+   "eligible_strict_counterfactual": false,
+   "web_origin_disclosure_B": [
+    "Kinetics-600: human actions"
+   ],
+   "sources": [
+    {
+     "source": "k600",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "Kinetics-600: human actions"
+    }
+   ],
+   "prior_screen_24gb": "YES"
+  },
+  {
+   "name": "Open-MAGVIT2 video tokenizer",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "clip_level": true,
+   "note": "no parameter count or FLOPs in any level-1-3 source (the paper's counts are for the AR transformers)",
+   "overlap_A": "NO",
+   "eligible": false,
+   "failing": "compute not documented",
+   "eligible_strict_counterfactual": false,
+   "web_origin_disclosure_B": [
+    "UCF-101: human actions",
+    "ImageNet: object categories"
+   ],
+   "sources": [
+    {
+     "source": "ucf101",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "UCF-101: human actions"
+    },
+    {
+     "source": "imagenet",
+     "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+     "institution_or_content": "ImageNet: object categories"
+    }
+   ],
+   "prior_screen_24gb": "YES"
+  }
+ ],
+ "candidates": [
+  {
+   "name": "Endo-FM",
+   "survey_entry": "Endo-FM",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "class_quotes": [
+    {
+     "quote": "Foundation Model for Endoscopy Video Analysis via Large-scale Self-supervised Pre-train",
+     "copy": "data_audit/lead/fm_sources/primary/endofm_arxiv_abs.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "clip_level": true,
+   "clip_quotes": [
+    {
+     "quote": "we develop a video transformer, based on ViT B/16 [8]",
+     "copy": "data_audit/lead/fm_sources/primary/endofm_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "rules": {},
+   "unk": "site_not_stated",
+   "unk_quotes": [
+    {
+     "quote": "Colonoscopic [19] SUN [20] & SUN-SEG [13] LDPolypVideo [18] Hyper-Kvasir [5] Kvasir-Capsule [31] CholecTriplet [24]",
+     "copy": "data_audit/lead/fm_sources/primary/endofm_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "note": "LDPolypVideo, Colonoscopic: recording site not obtainable"
+  },
+  {
+   "name": "EndoViT",
+   "survey_entry": "EndoViT",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "class_quotes": [
+    {
+     "quote": "For pretraining, we closely follow the approach of MAE [ 9 ] and employ the Masked Image Modeling strategy.",
+     "copy": "data_audit/lead/fm_sources/primary/endovit_pmc_fulltext.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "clip_level": false,
+   "clip_quotes": [
+    {
+     "quote": "For consistency, we always downsample to 1 FPS.",
+     "copy": "data_audit/lead/fm_sources/primary/endovit_pmc_fulltext.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "rules": {},
+   "unk": "dsad_yes",
+   "unk_quotes": [
+    {
+     "quote": "we introduce Endo700k, a collection of 9 publicly available endoscopic datasets comprising more than 700,000 unlabelled images.",
+     "copy": "data_audit/lead/fm_sources/primary/endovit_github_readme.txt",
+     "level": 2,
+     "verified": true
+    },
+    {
+     "quote": "DSAD [ 4 ] Robot-assisted rectal resection 32 13,195",
+     "copy": "data_audit/lead/fm_sources/primary/endovit_pmc_fulltext.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "note": "DSAD (same hospital as C2) -> A-YES; LapGyn4 / GLENDA / SurgicalActions160 / hSDB gastrectomy also A-UNK (site not stated)"
+  },
+  {
+   "name": "SurgeNetXL",
+   "survey_entry": "SurgeNetXL",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "class_quotes": [
+    {
+     "quote": "Scaling up self-supervised learning for improved surgical foundation models",
+     "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "clip_level": false,
+   "clip_quotes": [
+    {
+     "quote": "Input frames are resized to a resolution of 224×399 pixels using bicubic interpolation.",
+     "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "rules": {},
+   "unk": "dsad_yes",
+   "unk_quotes": [
+    {
+     "quote": "we extract 680 hours of surgical video footage from YouTube, sampled at 1 frame per second (fps).",
+     "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    },
+    {
+     "quote": "| **Others** | DSAD ([Carstens et al., 2023](https://www.nature.com/articles/s41597-022-01719-2)) | RA Rectal Resection/Extirpation | 32 | 14,623 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "note": "DSAD -> A-YES; YouTube portion also A-UNK"
+  },
+  {
+   "name": "SurgeNet / SurgeNetPublic",
+   "survey_entry": "SurgeNet /",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "class_quotes": [
+    {
+     "quote": "Scaling up self-supervised learning for improved surgical foundation models",
+     "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "clip_level": false,
+   "clip_quotes": [],
+   "rules": {},
+   "unk": "dsad_yes",
+   "unk_quotes": [
+    {
+     "quote": "| **Others** | DSAD ([Carstens et al., 2023](https://www.nature.com/articles/s41597-022-01719-2)) | RA Rectal Resection/Extirpation | 32 | 14,623 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "level": 2,
+     "verified": true
+    },
+    {
+     "quote": "| **SurgeNetPublic** | All public datasets (excluding YouTube & private datasets) | All of the above (excluding YouTube & RA Esophagectomy) | \\>1238 | 1,997,987 | Yes |",
+     "copy": "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "note": "DSAD -> A-YES; GLENDA / LapGyn4 / hSDB-Gastric / SurgToolLoc also A-UNK"
+  },
+  {
+   "name": "SurgVLP / HecVL / PeskaVLP",
+   "survey_entry": "SurgVLP",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "class_quotes": [
+    {
+     "quote": "We utilize the dual-encoder architecture with ResNet50 [21] as visual encoder and ClinicalBert [22] as textual encoder, respectively.",
+     "copy": "data_audit/lead/fm_sources/primary/peskavlp_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "clip_level": false,
+   "clip_quotes": [
+    {
+     "quote": "For a given video clip v, we first sample a fixed number of frames {z0 , ..., zT } and then feed them through F",
+     "copy": "data_audit/lead/fm_sources/primary/surgvlp_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "rules": {},
+   "unk": "web",
+   "unk_quotes": [
+    {
+     "quote": "we query the videos based on keywords from three online platforms, i.e., Websurg (Websurg, 2023), EAES (EAES, 2023), and YouTube (YouTube, 2023).",
+     "copy": "data_audit/lead/fm_sources/primary/surgvlp_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "note": "clip embedding = average of per-frame embeddings: not conditioned on temporal order, so frame-level under the v0.4 definition"
+  },
+  {
+   "name": "EndoMamba",
+   "survey_entry": "EndoMamba",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "class_quotes": [
+    {
+     "quote": "we propose a self-supervised hierarchical pre-training diagram to enhance EndoMamba’s representation learning using endoscopic videos",
+     "copy": "data_audit/lead/fm_sources/primary/endomamba_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "clip_level": true,
+   "clip_quotes": [],
+   "rules": {},
+   "unk": "site_not_stated",
+   "unk_quotes": [
+    {
+     "quote": "This includes MIX7 (shared with EndoFM), four curated from public datasets, and one from our porcine bronchoscopy dataset (PB), as detailed in Table 1 and Fig. 2.",
+     "copy": "data_audit/lead/fm_sources/primary/endomamba_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "note": "inherits Endo-FM's LDPolypVideo / Colonoscopic; GLENDA"
+  },
+  {
+   "name": "LemonFM",
+   "survey_entry": "LemonFM",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "class_quotes": [
+    {
+     "quote": "*LemonFM* is an image foundation model for surgery, it receives an image as input and produces a feature vector of 1536 features as output.",
+     "copy": "data_audit/lead/fm_sources/primary/lemonfm_hf_readme.txt",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "clip_level": false,
+   "clip_quotes": [
+    {
+     "quote": "*LemonFM* is an image foundation model for surgery, it receives an image as input and produces a feature vector of 1536 features as output.",
+     "copy": "data_audit/lead/fm_sources/primary/lemonfm_hf_readme.txt",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "rules": {},
+   "unk": "web",
+   "unk_quotes": [
+    {
+     "quote": "Inspired by works [1, 11, 19, 50, 70], we collected our videos from YouTube.",
+     "copy": "data_audit/lead/fm_sources/primary/lemon_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "note": ""
+  },
+  {
+   "name": "SurgLIME",
+   "survey_entry": "SurgLIME",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "class_quotes": [
+    {
+     "quote": "Can LLM-Generated Text Empower Surgical Vision-Language Pre-training?",
+     "copy": "data_audit/lead/fm_sources/primary/llmtext_vlp_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "clip_level": null,
+   "clip_quotes": [],
+   "rules": {},
+   "unk": "web",
+   "unk_quotes": [
+    {
+     "quote": "LEMON collection comprises 4194 surgical videos sourced from YouTube",
+     "copy": "data_audit/lead/fm_sources/primary/llmtext_vlp_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "note": ""
+  },
+  {
+   "name": "PL-Stitch",
+   "survey_entry": "PL-Stitch",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "class_quotes": [
+    {
+     "quote": "Learning Procedural Workflow via Self-Supervised Plackett-Luce Ranking",
+     "copy": "data_audit/lead/fm_sources/primary/plstitch_github_readme.txt",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "clip_level": false,
+   "clip_quotes": [],
+   "rules": {},
+   "unk": "web",
+   "unk_quotes": [
+    {
+     "quote": "Download the pretraining dataset ([LEMON](https://github.com/visurg-ai/LEMON))",
+     "copy": "data_audit/lead/fm_sources/primary/plstitch_github_readme.txt",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "note": ""
+  },
+  {
+   "name": "Basel V-JEPA ViT-L",
+   "survey_entry": "Finetuned V-JEPA",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "class_quotes": [
+    {
+     "quote": "We finetuned *V-JEPA ViT-L* on unlabeled endoscopic surgical videos, as described in the paper.",
+     "copy": "data_audit/lead/fm_sources/primary/mlcds_hf_readme.txt",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "clip_level": true,
+   "clip_quotes": [],
+   "rules": {},
+   "unk": "web",
+   "unk_quotes": [
+    {
+     "quote": "V-JEPA’s published weights have been trained on 2 million videos of primarily human everyday activities without special focus on the medical field.",
+     "copy": "data_audit/lead/fm_sources/primary/mlcds_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "note": "base VideoMix2M includes HowTo100M (keyword-searched YouTube)"
+  },
+  {
+   "name": "EndoSSL (colonoscopy weights)",
+   "survey_entry": "EndoSSL",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "class_quotes": [
+    {
+     "quote": "we study the use of a leading SSL framework, namely Masked Siamese Networks (MSNs), for endoscopic video analysis such as colonoscopy and laparoscopy.",
+     "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "clip_level": false,
+   "clip_quotes": [],
+   "rules": {},
+   "unk": "site_not_stated",
+   "unk_quotes": [
+    {
+     "quote": "These videos were recorded during standard colonoscopy procedures performed at six different medical centers between the years 2019 and 2022.",
+     "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "note": "also fails the laparoscopic rule (colonoscopy only)"
+  },
+  {
+   "name": "SurgeNetCholec (CAFormer-S18)",
+   "survey_entry": "SurgeNet /",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "class_quotes": [
+    {
+     "quote": "Scaling up self-supervised learning for improved surgical foundation models",
+     "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "clip_level": false,
+   "clip_quotes": [
+    {
+     "quote": "Input frames are resized to a resolution of 224×399 pixels using bicubic interpolation.",
+     "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "rules": {
+    "sources": [
+     "cholec80",
+     "heichole",
+     "hsdb_chole",
+     "imagenet"
+    ],
+    "laparoscopic": [
+     "YES",
+     [
+      {
+       "quote": "SurgeNetCholec: this subset contains 250,655 frames extracted from laparoscopic cholecystectomy procedures.",
+       "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "same_hospital": [
+     "NO",
+     []
+    ],
+    "fits_24gb": [
+     "YES",
+     [
+      {
+       "quote": "\"rfilename\":\"CHOLEC_checkpoint_epoch0050_teacher.pth\",\"blobId\":\"01ae6ac519157210df9c21dc8e69a20dbdebeda7\",\"size\":93022798",
+       "copy": "data_audit/lead/fm_sources/primary/surgenet_hf_api_blobs.txt",
+       "level": 2,
+       "verified": true
+      },
+      {
+       "quote": "Backbone CaFormerS18 Number of parameters 24.3M",
+       "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "compute": [
+     "YES",
+     [
+      {
+       "quote": "Backbone CaFormerS18 Number of parameters 24.3M",
+       "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "init": [
+     {
+      "quote": "We initiate pretraining from ImageNet-initialized weights as recommended by Ramesh et al. (2023)",
+      "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+      "level": 1,
+      "verified": true
+     }
+    ]
+   },
+   "unk": null,
+   "unk_quotes": [],
+   "note": ""
+  },
+  {
+   "name": "SurgeNetRARP (CAFormer-S18)",
+   "survey_entry": "SurgeNet /",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "class_quotes": [
+    {
+     "quote": "Scaling up self-supervised learning for improved surgical foundation models",
+     "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "clip_level": false,
+   "clip_quotes": [
+    {
+     "quote": "Input frames are resized to a resolution of 224×399 pixels using bicubic interpolation.",
+     "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "rules": {
+    "sources": [
+     "esad",
+     "psiava",
+     "rarp_avl",
+     "imagenet"
+    ],
+    "laparoscopic": [
+     "YES",
+     [
+      {
+       "quote": "In the images, it can been seen that bounding boxes are centred around the tool as laparoscopic tools represent the subject of action",
+       "copy": "data_audit/lead/fm_sources/datasets/esad__arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      },
+      {
+       "quote": "SurgeNetRARP: this subset comprises 382,416 frames from RARP procedures.",
+       "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "same_hospital": [
+     "NO",
+     []
+    ],
+    "fits_24gb": [
+     "YES",
+     [
+      {
+       "quote": "\"rfilename\":\"RARP_checkpoint_epoch0050_teacher.pth\",\"blobId\":\"883acd7aa73006b3d55d356e18c871df51e772d0\",\"size\":93022798",
+       "copy": "data_audit/lead/fm_sources/primary/surgenet_hf_api_blobs.txt",
+       "level": 2,
+       "verified": true
+      },
+      {
+       "quote": "Backbone CaFormerS18 Number of parameters 24.3M",
+       "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "compute": [
+     "YES",
+     [
+      {
+       "quote": "Backbone CaFormerS18 Number of parameters 24.3M",
+       "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "init": [
+     {
+      "quote": "We initiate pretraining from ImageNet-initialized weights as recommended by Ramesh et al. (2023)",
+      "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+      "level": 1,
+      "verified": true
+     }
+    ]
+   },
+   "unk": null,
+   "unk_quotes": [],
+   "note": "SurgeNetRARP = ESAD + PSI-AVA + RARP-AvL (paper Table 1)"
+  },
+  {
+   "name": "SurgeNetRAMIE (CAFormer-S18)",
+   "survey_entry": "SurgeNet /",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "class_quotes": [
+    {
+     "quote": "Scaling up self-supervised learning for improved surgical foundation models",
+     "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "clip_level": false,
+   "clip_quotes": [
+    {
+     "quote": "Input frames are resized to a resolution of 224×399 pixels using bicubic interpolation.",
+     "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "rules": {
+    "sources": [
+     "ramie",
+     "imagenet"
+    ],
+    "laparoscopic": [
+     "UNK",
+     [
+      {
+       "quote": "SurgeNetRAMIE: a total of 377,287 frames are included from RAMIE procedures.",
+       "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "same_hospital": [
+     "NO",
+     []
+    ],
+    "fits_24gb": [
+     "YES",
+     [
+      {
+       "quote": "Backbone CaFormerS18 Number of parameters 24.3M",
+       "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "compute": [
+     "YES",
+     [
+      {
+       "quote": "Backbone CaFormerS18 Number of parameters 24.3M",
+       "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "init": [
+     {
+      "quote": "We initiate pretraining from ImageNet-initialized weights as recommended by Ramesh et al. (2023)",
+      "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+      "level": 1,
+      "verified": true
+     }
+    ]
+   },
+   "unk": null,
+   "unk_quotes": [],
+   "note": "no level-1-3 source calls the RAMIE videos laparoscopic ('robot-assisted minimally invasive esophagectomy')"
+  },
+  {
+   "name": "EndoSSL laparoscopy ViT-B",
+   "survey_entry": "EndoSSL",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "class_quotes": [
+    {
+     "quote": "we study the use of a leading SSL framework, namely Masked Siamese Networks (MSNs), for endoscopic video analysis such as colonoscopy and laparoscopy.",
+     "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "clip_level": false,
+   "clip_quotes": [
+    {
+     "quote": "Each video recording was sampled at a rate of 1 frame per second (FPS)",
+     "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "rules": {
+    "sources": [
+     "israel8",
+     "imagenet"
+    ],
+    "laparoscopic": [
+     "YES",
+     [
+      {
+       "quote": "The dataset predominantly consists of the following procedures: cholecystectomy (35%), appendectomy (20%), herniorrhaphy (12%), colectomy (6%), and bariatric surgery (5%).",
+       "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "same_hospital": [
+     "NO",
+     []
+    ],
+    "fits_24gb": [
+     "YES",
+     [
+      {
+       "quote": "As our image encoders we train Vision Transformer (ViT [16]) of different sizes, abbreviated as ViT-S/B/L",
+       "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      },
+      {
+       "quote": "Model Layers Hidden size D MLP size Heads Params ViT-Base 12 768 3072 12 86M ViT-Large 24 1024 4096 16 307M",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/vit_arxiv_2010.11929_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "compute": [
+     "YES",
+     [
+      {
+       "quote": "As our image encoders we train Vision Transformer (ViT [16]) of different sizes, abbreviated as ViT-S/B/L",
+       "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      },
+      {
+       "quote": "Model Layers Hidden size D MLP size Heads Params ViT-Base 12 768 3072 12 86M ViT-Large 24 1024 4096 16 307M",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/vit_arxiv_2010.11929_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "init": [
+     {
+      "quote": "In Tab.2e), we look at the effect of the training length when starting from scratch or from a good SSL pretrained checkpoint on ImageNet-1k.",
+      "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+      "level": 1,
+      "verified": true
+     }
+    ]
+   },
+   "unk": null,
+   "unk_quotes": [],
+   "note": "initialisation of the released checkpoints not stated: scratch or an ImageNet-1k SSL checkpoint (both non-surgical); ImageNet counted as a possible source"
+  },
+  {
+   "name": "EndoSSL laparoscopy ViT-L",
+   "survey_entry": "EndoSSL",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "class_quotes": [
+    {
+     "quote": "we study the use of a leading SSL framework, namely Masked Siamese Networks (MSNs), for endoscopic video analysis such as colonoscopy and laparoscopy.",
+     "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "clip_level": false,
+   "clip_quotes": [
+    {
+     "quote": "Each video recording was sampled at a rate of 1 frame per second (FPS)",
+     "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "rules": {
+    "sources": [
+     "israel8",
+     "imagenet"
+    ],
+    "laparoscopic": [
+     "YES",
+     [
+      {
+       "quote": "The dataset predominantly consists of the following procedures: cholecystectomy (35%), appendectomy (20%), herniorrhaphy (12%), colectomy (6%), and bariatric surgery (5%).",
+       "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "same_hospital": [
+     "NO",
+     []
+    ],
+    "fits_24gb": [
+     "YES",
+     [
+      {
+       "quote": "As our image encoders we train Vision Transformer (ViT [16]) of different sizes, abbreviated as ViT-S/B/L",
+       "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      },
+      {
+       "quote": "Model Layers Hidden size D MLP size Heads Params ViT-Base 12 768 3072 12 86M ViT-Large 24 1024 4096 16 307M",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/vit_arxiv_2010.11929_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "compute": [
+     "YES",
+     [
+      {
+       "quote": "As our image encoders we train Vision Transformer (ViT [16]) of different sizes, abbreviated as ViT-S/B/L",
+       "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      },
+      {
+       "quote": "Model Layers Hidden size D MLP size Heads Params ViT-Base 12 768 3072 12 86M ViT-Large 24 1024 4096 16 307M",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/vit_arxiv_2010.11929_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "init": [
+     {
+      "quote": "In Tab.2e), we look at the effect of the training length when starting from scratch or from a good SSL pretrained checkpoint on ImageNet-1k.",
+      "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+      "level": 1,
+      "verified": true
+     }
+    ]
+   },
+   "unk": null,
+   "unk_quotes": [],
+   "note": "initialisation of the released checkpoints not stated: scratch or an ImageNet-1k SSL checkpoint (both non-surgical); ImageNet counted as a possible source"
+  },
+  {
+   "name": "EndoSSL laparoscopy ViT-S",
+   "survey_entry": "EndoSSL",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "class_quotes": [
+    {
+     "quote": "we study the use of a leading SSL framework, namely Masked Siamese Networks (MSNs), for endoscopic video analysis such as colonoscopy and laparoscopy.",
+     "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "clip_level": false,
+   "clip_quotes": [
+    {
+     "quote": "Each video recording was sampled at a rate of 1 frame per second (FPS)",
+     "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "rules": {
+    "sources": [
+     "israel8",
+     "imagenet"
+    ],
+    "laparoscopic": [
+     "YES",
+     [
+      {
+       "quote": "The dataset predominantly consists of the following procedures: cholecystectomy (35%), appendectomy (20%), herniorrhaphy (12%), colectomy (6%), and bariatric surgery (5%).",
+       "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "same_hospital": [
+     "NO",
+     []
+    ],
+    "fits_24gb": [
+     "UNK",
+     [
+      {
+       "quote": "As our image encoders we train Vision Transformer (ViT [16]) of different sizes, abbreviated as ViT-S/B/L",
+       "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      },
+      {
+       "quote": "Model Layers Hidden size D MLP size Heads Params ViT-Base 12 768 3072 12 86M ViT-Large 24 1024 4096 16 307M",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/vit_arxiv_2010.11929_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "compute": [
+     "UNK",
+     [
+      {
+       "quote": "As our image encoders we train Vision Transformer (ViT [16]) of different sizes, abbreviated as ViT-S/B/L",
+       "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      },
+      {
+       "quote": "Model Layers Hidden size D MLP size Heads Params ViT-Base 12 768 3072 12 86M ViT-Large 24 1024 4096 16 307M",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/vit_arxiv_2010.11929_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "init": [
+     {
+      "quote": "In Tab.2e), we look at the effect of the training length when starting from scratch or from a good SSL pretrained checkpoint on ImageNet-1k.",
+      "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+      "level": 1,
+      "verified": true
+     }
+    ]
+   },
+   "unk": null,
+   "unk_quotes": [],
+   "note": "initialisation of the released checkpoints not stated: scratch or an ImageNet-1k SSL checkpoint (both non-surgical); ImageNet counted as a possible source; ViT-S size is not in the ViT paper's table, so size/compute are UNK"
+  },
+  {
+   "name": "SelfSupSurg (ResNet-50; MoCo v2 / SimCLR / SwAV / DINO)",
+   "survey_entry": "SelfSupSurg",
+   "cls": "primary (medical/endoscopic representation-learning encoder)",
+   "class_quotes": [
+    {
+     "quote": "Self-supervised weights trained on cholec80 dataset using four state-of-the-art SSL methods (MOCO V2, SimCLR, SwAV, and DINO).",
+     "copy": "data_audit/lead/fm_sources/primary/selfsupsurg_github_readme.txt",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "clip_level": false,
+   "clip_quotes": [
+    {
+     "quote": "replaced by a linear head that maps the feature vector (2048) to the number of outputs",
+     "copy": "data_audit/lead/fm_sources/primary/selfsupsurg_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "rules": {
+    "sources": [
+     "cholec80",
+     "imagenet"
+    ],
+    "laparoscopic": [
+     "YES",
+     [
+      {
+       "quote": "This dataset contains 80 videos of complete laparoscopic cholecystectomy procedures",
+       "copy": "data_audit/lead/fm_sources/primary/selfsupsurg_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "same_hospital": [
+     "NO",
+     []
+    ],
+    "fits_24gb": [
+     "YES",
+     [
+      {
+       "quote": "We use ResNet-50 (He et al., 2016) as the base encoder architecture",
+       "copy": "data_audit/lead/fm_sources/primary/selfsupsurg_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      },
+      {
+       "quote": "\"content_length\": \"352288944\"",
+       "copy": "data_audit/lead/fm_sources/primary/selfsupsurg_weights_dino_check.txt",
+       "level": 2,
+       "verified": true
+      }
+     ]
+    ],
+    "compute": [
+     "YES",
+     [
+      {
+       "quote": "We use ResNet-50 (He et al., 2016) as the base encoder architecture",
+       "copy": "data_audit/lead/fm_sources/primary/selfsupsurg_arxiv_pdf.txt",
+       "level": 1,
+       "verified": true
+      },
+      {
+       "quote": "This model has 3.8 billion FLOPs.",
+       "copy": "data_audit/lead/fm_sources/eligibility_v04/resnet_arxiv_1512.03385_pdf.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "init": [
+     {
+      "quote": "PARAMS_FILE: \"./checkpoints/defaults/resnet_50/resnet50-19c8e357.pth\"",
+      "copy": "data_audit/lead/fm_sources/primary/selfsupsurg_cfg_dino.txt",
+      "level": 3,
+      "verified": true
+     }
+    ]
+   },
+   "unk": null,
+   "unk_quotes": [],
+   "note": ""
+  },
+  {
+   "name": "Cosmos-H-Surgical v0.3.1",
+   "survey_entry": "Cosmos-H-Surgical v0.3.1",
+   "cls": "neither (surgical-domain generative model)",
+   "class_quotes": [
+    {
+     "quote": "Cosmos-H-Surgical delivers high-quality video prediction and transfer for surgical scenes, including future-state simulation and control-conditioned generation across modalities.",
+     "copy": "data_audit/lead/fm_sources/primary/cosmoshsurg_github_readme.txt",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "clip_level": null,
+   "clip_quotes": [],
+   "rules": {},
+   "unk": null,
+   "unk_quotes": [],
+   "note": ""
+  },
+  {
+   "name": "Cosmos-H-Surgical Predict/Transfer 2.5",
+   "survey_entry": "Cosmos-H-Surgical-Predict",
+   "cls": "neither (surgical-domain generative model)",
+   "class_quotes": [
+    {
+     "quote": "Fine-tuned from Cosmos-Predict2.5-2B, the model takes a first frame image and a text description as input and predicts the next 92 future frames of surgical video.",
+     "copy": "data_audit/lead/fm_sources/primary/cosmoshsurg25_hf_readme.txt",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "clip_level": null,
+   "clip_quotes": [],
+   "rules": {},
+   "unk": null,
+   "unk_quotes": [],
+   "note": ""
+  },
+  {
+   "name": "Cosmos-H-Surgical-Simulator",
+   "survey_entry": "Cosmos-H-Surgical-Simulator",
+   "cls": "neither (surgical-domain generative model)",
+   "class_quotes": [
+    {
+     "quote": "Cosmos-H-Surgical-Simulator is a kinematic action-conditioned surgical world foundation model",
+     "copy": "data_audit/lead/fm_sources/primary/cosmoshsurgsim_hf_readme.txt",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "clip_level": null,
+   "clip_quotes": [],
+   "rules": {},
+   "unk": null,
+   "unk_quotes": [],
+   "note": ""
+  },
+  {
+   "name": "Cosmos-H-Dreams",
+   "survey_entry": "Cosmos-H-Dreams",
+   "cls": "neither (surgical-domain generative model)",
+   "class_quotes": [
+    {
+     "quote": "Cosmos-H-Dreams is a real-time, action-conditioned generative surgical world model",
+     "copy": "data_audit/lead/fm_sources/primary/cosmoshdreams_hf_readme.txt",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "clip_level": null,
+   "clip_quotes": [],
+   "rules": {},
+   "unk": null,
+   "unk_quotes": [],
+   "note": ""
+  },
+  {
+   "name": "MedSora",
+   "survey_entry": "MedSora",
+   "cls": "neither (surgical-domain generative model)",
+   "class_quotes": [
+    {
+     "quote": "MedSora: Optical Flow Representation Alignment Mamba Diffusion Model for Medical Video Generation",
+     "copy": "data_audit/lead/fm_sources/primary/medsora_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "clip_level": null,
+   "clip_quotes": [],
+   "rules": {},
+   "unk": null,
+   "unk_quotes": [],
+   "note": ""
+  },
+  {
+   "name": "SG2VID",
+   "survey_entry": "SG2VID",
+   "cls": "neither (surgical-domain generative model)",
+   "class_quotes": [
+    {
+     "quote": "we introduce SG2VID, the first diffusion-based video model that leverages Scene Graphs for both precise video synthesis and fine-grained human control.",
+     "copy": "data_audit/lead/fm_sources/primary/sg2vid_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "clip_level": null,
+   "clip_quotes": [],
+   "rules": {},
+   "unk": null,
+   "unk_quotes": [],
+   "note": ""
+  },
+  {
+   "name": "KVLR",
+   "survey_entry": "KVLR",
+   "cls": "neither (surgical-domain generative model)",
+   "class_quotes": [
+    {
+     "quote": "From Articulated Kinematics to Routed Visual Control for Action-Conditioned Surgical Video Generation",
+     "copy": "data_audit/lead/fm_sources/primary/kvlr_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "clip_level": null,
+   "clip_quotes": [],
+   "rules": {},
+   "unk": null,
+   "unk_quotes": [],
+   "note": ""
+  },
+  {
+   "name": "Open-Sora VAE v1.2",
+   "survey_entry": "Open-Sora VAE",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "class_quotes": [
+    {
+     "quote": "This repository stores the weights of the VAE released by the Open-Sora team.",
+     "copy": "data_audit/lead/fm_sources/secondary/opensora_OpenSora-VAE-v1.2_README.md",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "clip_level": true,
+   "clip_quotes": [],
+   "rules": {},
+   "unk": "web",
+   "unk_quotes": [
+    {
+     "quote": "The training data is videos from pixels and pixabay, and the training video size is mainly 17 frames, 256x256 resolution.",
+     "copy": "data_audit/lead/fm_sources/secondary/opensora_github_v1.2.0_report_03.md",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "note": "also SDXL image-VAE initialisation (undocumented data)"
+  },
+  {
+   "name": "VideoMAE V2",
+   "survey_entry": "VideoMAE V2",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "class_quotes": [
+    {
+     "quote": "we propose to mask the decoder as well and devise the dual masking strategy.",
+     "copy": "data_audit/lead/fm_sources/secondary/videomaev2_arxiv_2303.16727v2.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "clip_level": true,
+   "clip_quotes": [],
+   "rules": {},
+   "unk": "web",
+   "unk_quotes": [
+    {
+     "quote": "Specifically, our dataset is built by simply selecting videos from the public available datasets of Kinetics [43], Something-Something [31], AVA [32], WebVid2M [5], and our own crawled Instagram dataset.",
+     "copy": "data_audit/lead/fm_sources/secondary/videomaev2_arxiv_2303.16727v2.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "note": ""
+  },
+  {
+   "name": "Open-Sora-Plan v1.2 VAE",
+   "survey_entry": "Open-Sora-Plan",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "class_quotes": [
+    {
+     "quote": "The VAE in version 1.2.0 maintains the overall architecture of the previous version but merges the temporal and spatial downsampling layers.",
+     "copy": "data_audit/lead/fm_sources/secondary/osplan_github_Report-v1.2.0.md",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "clip_level": true,
+   "clip_quotes": [],
+   "rules": {},
+   "unk": "web",
+   "unk_quotes": [
+    {
+     "quote": "We perform the first phase of training on the Kinetic400 video dataset, then use the EMA weights from this phase to initialize the second phase, which is fine-tuned on high-quality data (collected in v1.1.0).",
+     "copy": "data_audit/lead/fm_sources/secondary/osplan_github_Report-v1.2.0.md",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "note": "v1.1.0 data = Mixkit / Pixabay / Pexels stock video; SD2.1 VAE initialisation"
+  },
+  {
+   "name": "CV-VAE",
+   "survey_entry": "CV-VAE",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "class_quotes": [
+    {
+     "quote": "A video VAE for latent generative video models, which is compatible with pretrained image and video models, e.g., SD 2.1 and SVD",
+     "copy": "data_audit/lead/fm_sources/secondary/cvvae_github_README.md",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "clip_level": true,
+   "clip_quotes": [],
+   "rules": {},
+   "unk": "web",
+   "unk_quotes": [
+    {
+     "quote": "Training Details. We train our CV-VAE model using image datasets including LAION-COCO [ 9 ] and Unsplash [ 23 ] , as well as the video dataset Webvid-10M [ 3 ] .",
+     "copy": "data_audit/lead/fm_sources/secondary/cvvae_arxiv_2405.20279_fulltext.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "note": ""
+  },
+  {
+   "name": "Reducio-VAE",
+   "survey_entry": "Reducio",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "class_quotes": [
+    {
+     "quote": "This model is a 3D VAE that encodes video into a compact latent space conditioned on a content frame.",
+     "copy": "data_audit/lead/fm_sources/secondary/reducio_hf_README.md",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "clip_level": true,
+   "clip_quotes": [],
+   "rules": {},
+   "unk": "web",
+   "unk_quotes": [
+    {
+     "quote": "Our Reducio -VAE is trained on a 400K video dataset collected from Pexels",
+     "copy": "data_audit/lead/fm_sources/secondary/reducio_arxiv_2411.13552_fulltext.txt",
+     "level": 1,
+     "verified": true
+    }
+   ],
+   "note": ""
+  },
+  {
+   "name": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "survey_entry": "VideoMAE (",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "class_quotes": [
+    {
+     "quote": "VideoMAE is an extension of [Masked Autoencoders (MAE)](https://arxiv.org/abs/2111.06377) to video.",
+     "copy": "data_audit/lead/fm_sources/secondary/videomae_videomae-base_README.md",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "clip_level": true,
+   "clip_quotes": [
+    {
+     "quote": "\"num_frames\": 16,",
+     "copy": "data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json",
+     "level": 3,
+     "verified": true
+    }
+   ],
+   "rules": {
+    "sources": [
+     "k400",
+     "ssv2",
+     "ucf101"
+    ],
+    "same_hospital": [
+     "NO",
+     []
+    ],
+    "fits_24gb": [
+     "YES",
+     [
+      {
+       "quote": "VideoMAE ViT-B 7 16 180×5×3 87 81.5 95.1",
+       "copy": "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+       "level": 1,
+       "verified": true
+      },
+      {
+       "quote": "VideoMAE ViT-L 7 16 597×5×3 305 85.2 96.8",
+       "copy": "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "compute": [
+     "YES",
+     [
+      {
+       "quote": "VideoMAE ViT-B 7 16 180×5×3 87 81.5 95.1",
+       "copy": "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+       "level": 1,
+       "verified": true
+      },
+      {
+       "quote": "VideoMAE ViT-L 7 16 597×5×3 305 85.2 96.8",
+       "copy": "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "init": [
+     {
+      "quote": "VideoMAE achieves impressive results on very small datasets (i.e., around 3k-4k videos) without using any extra data.",
+      "copy": "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
+      "level": 1,
+      "verified": true
+     },
+     {
+      "quote": "VideoMAE model pre-trained on Kinetics-400 for 1600 epochs in a self-supervised way.",
+      "copy": "data_audit/lead/fm_sources/secondary/videomae_videomae-base_README.md",
+      "level": 2,
+      "verified": true
+     },
+     {
+      "quote": "VideoMAE model pre-trained on Something-Something-v2 for 2400 epochs in a self-supervised way.",
+      "copy": "data_audit/lead/fm_sources/secondary/videomae_videomae-base-ssv2_README.md",
+      "level": 2,
+      "verified": true
+     }
+    ]
+   },
+   "unk": null,
+   "unk_quotes": [],
+   "note": "each checkpoint is trained on one benchmark; the eligibility holds per checkpoint"
+  },
+  {
+   "name": "OmniTokenizer (ImageNet + K600)",
+   "survey_entry": "OmniTokenizer",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "class_quotes": [
+    {
+     "quote": "We introduce OmniTokenizer, a joint image-video tokenizer which features the following properties:",
+     "copy": "data_audit/lead/fm_sources/secondary/omnitok_github_README.md",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "clip_level": true,
+   "clip_quotes": [],
+   "rules": {
+    "sources": [
+     "imagenet",
+     "k600"
+    ],
+    "same_hospital": [
+     "NO",
+     []
+    ],
+    "fits_24gb": [
+     "YES",
+     [
+      {
+       "quote": "\"rfilename\": \"imagenet_k600.ckpt\", \"blobId\": \"64aa8ed0997c4f8d25b1d911a57a31c957a26852\", \"size\": 742455697,",
+       "copy": "data_audit/lead/fm_sources/secondary/omnitok_Daniel0724__OmniTokenizer_hfapi.json",
+       "level": 2,
+       "verified": true
+      }
+     ]
+    ],
+    "compute": [
+     "YES",
+     [
+      {
+       "quote": "Ours 51 262 1.28",
+       "copy": "data_audit/lead/fm_sources/secondary/omnitok_arxiv_2406.09399_fulltext.txt",
+       "level": 1,
+       "verified": true
+      }
+     ]
+    ],
+    "init": [
+     {
+      "quote": "| VQVAE | ImageNet + K600 | 1.23 | 25.97 | [imagenet_k600.ckpt](https://huggingface.co/Daniel0724/OmniTokenizer/resolve/main/imagenet_k600.ckpt) |",
+      "copy": "data_audit/lead/fm_sources/secondary/omnitok_github_README.md",
+      "level": 2,
+      "verified": true
+     }
+    ]
+   },
+   "unk": null,
+   "unk_quotes": [],
+   "note": ""
+  },
+  {
+   "name": "WF-VAE-L 16ch",
+   "survey_entry": "WF-VAE",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "class_quotes": [
+    {
+     "quote": "WF-VAE: Enhancing Video VAE by Wavelet-Driven Energy Flow for Latent Video Diffusion Model",
+     "copy": "data_audit/lead/fm_sources/secondary/osplan_hf_WF-VAE-L-16Chn_README.md",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "clip_level": true,
+   "clip_quotes": [],
+   "rules": {
+    "sources": [
+     "k400"
+    ],
+    "same_hospital": [
+     "NO",
+     []
+    ],
+    "fits_24gb": [
+     "YES",
+     [
+      {
+       "quote": "We have released our **16-channel WF-VAE-L (316M)** model along with the training code.",
+       "copy": "data_audit/lead/fm_sources/secondary/wfvae_github_README.md",
+       "level": 2,
+       "verified": true
+      }
+     ]
+    ],
+    "compute": [
+     "YES",
+     [
+      {
+       "quote": "We have released our **16-channel WF-VAE-L (316M)** model along with the training code.",
+       "copy": "data_audit/lead/fm_sources/secondary/wfvae_github_README.md",
+       "level": 2,
+       "verified": true
+      }
+     ]
+    ],
+    "init": [
+     {
+      "quote": "Dataset & Evaluation. We utilize the Kinetics-400 dataset [ 16 ] for both training and validation.",
+      "copy": "data_audit/lead/fm_sources/secondary/wfvae_arxiv_2411.17459_fulltext.txt",
+      "level": 1,
+      "verified": true
+     }
+    ]
+   },
+   "unk": null,
+   "unk_quotes": [],
+   "note": "no pretrained initialisation named in the paper"
+  },
+  {
+   "name": "LARP-L-Long tokenizer",
+   "survey_entry": "LARP",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "class_quotes": [
+    {
+     "quote": "We present LARP, a novel video tokenizer inherently aligned with autoregressive (AR) generative models.",
+     "copy": "data_audit/lead/fm_sources/secondary/larp_github_README.md",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "clip_level": true,
+   "clip_quotes": [],
+   "rules": {
+    "sources": [
+     "k600",
+     "ucf101"
+    ],
+    "same_hospital": [
+     "NO",
+     []
+    ],
+    "fits_24gb": [
+     "YES",
+     [
+      {
+       "quote": "| LARP-L-Long-tokenizer | 173M | 20 (recon.) |",
+       "copy": "data_audit/lead/fm_sources/secondary/larp_github_README.md",
+       "level": 2,
+       "verified": true
+      }
+     ]
+    ],
+    "compute": [
+     "YES",
+     [
+      {
+       "quote": "| LARP-L-Long-tokenizer | 173M | 20 (recon.) |",
+       "copy": "data_audit/lead/fm_sources/secondary/larp_github_README.md",
+       "level": 2,
+       "verified": true
+      }
+     ]
+    ],
+    "init": [
+     {
+      "quote": "--csv_file k600_train.csv+ucf101_train.csv",
+      "copy": "data_audit/lead/fm_sources/secondary/larp_github_train_larp_tokenizer_reproduce.sh.txt",
+      "level": 3,
+      "verified": true
+     }
+    ]
+   },
+   "unk": null,
+   "unk_quotes": [],
+   "note": "no pretrained initialisation named in the paper"
+  },
+  {
+   "name": "LeanVAE",
+   "survey_entry": "LeanVAE",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "class_quotes": [
+    {
+     "quote": "We present **LeanVAE**, a lightweight Video VAE designed for ultra-efficient video compression and scalable generation in Latent Video Diffusion Models (LVDMs).",
+     "copy": "data_audit/lead/fm_sources/secondary/leanvae_github_README.md",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "clip_level": true,
+   "clip_quotes": [],
+   "rules": {
+    "sources": [
+     "k600"
+    ],
+    "same_hospital": [
+     "NO",
+     []
+    ],
+    "fits_24gb": [
+     "YES",
+     [
+      {
+       "quote": "| **LeanVAE-16ch** | 30.15 | 0.0461 | 39.8M | 0.203 |",
+       "copy": "data_audit/lead/fm_sources/secondary/leanvae_hf_README.md",
+       "level": 2,
+       "verified": true
+      }
+     ]
+    ],
+    "compute": [
+     "YES",
+     [
+      {
+       "quote": "| **LeanVAE-16ch** | 30.15 | 0.0461 | 39.8M | 0.203 |",
+       "copy": "data_audit/lead/fm_sources/secondary/leanvae_hf_README.md",
+       "level": 2,
+       "verified": true
+      }
+     ]
+    ],
+    "init": [
+     {
+      "quote": "Training Details We train the model using Kinetics-600 dataset [ 7 ] .",
+      "copy": "data_audit/lead/fm_sources/secondary/leanvae_arxiv_2503.14325_fulltext.txt",
+      "level": 1,
+      "verified": true
+     }
+    ]
+   },
+   "unk": null,
+   "unk_quotes": [],
+   "note": "no pretrained initialisation named in the paper"
+  },
+  {
+   "name": "Open-MAGVIT2 video tokenizer",
+   "survey_entry": "Open-MAGVIT2",
+   "cls": "secondary (generic reconstructive / generative video model)",
+   "class_quotes": [
+    {
+     "quote": "This is the official repository for Open-MAGVIT2, an open-source project re-implementing Google's MAGVIT-v2 tokenizer",
+     "copy": "data_audit/lead/fm_sources/secondary/openmagvit2_seedvoken_docs_Open-MAGVIT2.md",
+     "level": 2,
+     "verified": true
+    }
+   ],
+   "clip_level": true,
+   "clip_quotes": [],
+   "rules": {
+    "sources": [
+     "ucf101",
+     "imagenet"
+    ],
+    "same_hospital": [
+     "NO",
+     []
+    ],
+    "fits_24gb": [
+     "YES",
+     [
+      {
+       "quote": "\"rfilename\": \"video_128_262144.ckpt\", \"blobId\": \"bd81d824e18c8114c30558cae57481da9d0ab845\", \"size\": 2964564510,",
+       "copy": "data_audit/lead/fm_sources/secondary/openmagvit2_TencentARC__Open-MAGVIT2-Tokenizer-262144-Video_hfapi.json",
+       "level": 2,
+       "verified": true
+      }
+     ]
+    ],
+    "compute": [
+     "UNK",
+     []
+    ],
+    "init": [
+     {
+      "quote": "Simultaneously, we inflate the image tokenizer trained at 128 × \\times 128 imagenet for video modeling.",
+      "copy": "data_audit/lead/fm_sources/secondary/openmagvit2_arxiv_2409.04410_fulltext.txt",
+      "level": 1,
+      "verified": true
+     }
+    ]
+   },
+   "unk": null,
+   "unk_quotes": [],
+   "note": "no parameter count or FLOPs in any level-1-3 source (the paper's counts are for the AR transformers)"
+  }
+ ],
+ "sources": {
+  "cholec80": {
+   "status": "A-NO: named non-DS203 recording site",
+   "what": "University Hospital of Strasbourg",
+   "quotes": [
+    {
+     "quote": "we build a large dataset of cholecystectomy videos containing 80 videos recorded at the University Hospital of Strasbourg",
+     "copy": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    },
+    {
+     "quote": "the videos in Cholec80 come from one hospital",
+     "copy": "data_audit/lead/fm_sources/datasets/cholec80__arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ]
+  },
+  "heichole": {
+   "status": "A-NO: named non-DS203 recording site",
+   "what": "Heidelberg University Hospital; Salem Hospital Heidelberg; GRN-hospital Sinsheim",
+   "quotes": [
+    {
+     "quote": "laparoscopic cholecystectomies from three surgical centers in Germany",
+     "copy": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    },
+    {
+     "quote": "The operation videos at Heidelberg University Hospital (n=15) were recorded with a laparoscopic 2D camera",
+     "copy": "data_audit/lead/fm_sources/datasets/heichole__arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ]
+  },
+  "hsdb_chole": {
+   "status": "A-NO: named non-DS203 recording site",
+   "what": "Cholec80 subset (Strasbourg)",
+   "quotes": []
+  },
+  "esad": {
+   "status": "A-NO: named non-DS203 recording site",
+   "what": "San Raffaele Hospital, Milan",
+   "quotes": [
+    {
+     "quote": "ESAD is composed by four videos of radical prostatectomy procedures conducted on patients, which were collected as part of the EU funded SARAS project by San Raffaele Hospital.",
+     "copy": "data_audit/lead/fm_sources/datasets/esad_saras__arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    },
+    {
+     "quote": "we collected four complete prostatectomy procedure with the consent of the patients and hospital",
+     "copy": "data_audit/lead/fm_sources/datasets/esad__arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ]
+  },
+  "psiava": {
+   "status": "A-NO: named non-DS203 recording site",
+   "what": "Fundacion Santa Fe de Bogota",
+   "quotes": [
+    {
+     "quote": "The endoscopic videos were collected at Fundación Santafé de Bogotá during eight radical prostatectomy surgeries",
+     "copy": "data_audit/lead/fm_sources/datasets/psiava__arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ]
+  },
+  "rarp_avl": {
+   "status": "A-NO: named non-DS203 recording site",
+   "what": "Antoni van Leeuwenhoek Hospital, Amsterdam",
+   "quotes": [
+    {
+     "quote": "one comprising robot-assisted radical prostatectomy (RARP) procedures sourced from the Antoni van Leeuwenhoek Hospital (AvL) in Amsterdam",
+     "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ]
+  },
+  "ramie": {
+   "status": "A-NO: named non-DS203 recording site",
+   "what": "University Medical Center Utrecht",
+   "quotes": [
+    {
+     "quote": "another containing robot-assisted minimally invasive esophagectomy (RAMIE) procedures from the University Medical Center Utrecht (UMCU)",
+     "copy": "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ]
+  },
+  "dsad": {
+   "status": "A-YES: known same-hospital clinical source",
+   "what": "University Hospital Carl Gustav Carus Dresden (Dept. of Visceral, Thoracic and Vascular Surgery); C2 = Carus Pediatric Surgery",
+   "quotes": [
+    {
+     "quote": "video data from a total of 32 robot-assisted anterior rectal resections or rectal extirpations performed at the University Hospital Carl Gustav Carus Dresden was gathered",
+     "copy": "data_audit/lead/fm_sources/primary/dsad_scidata.txt",
+     "level": 1,
+     "verified": true
+    }
+   ]
+  },
+  "israel8": {
+   "status": "A-NO: non-German geography",
+   "what": "eight unnamed centres in Israel",
+   "quotes": [
+    {
+     "quote": "The dataset consists of 7,877 videos recorded at eight different medical centers in Israel.",
+     "copy": "data_audit/lead/fm_sources/primary/endossl_arxiv_pdf.txt",
+     "level": 1,
+     "verified": true
+    }
+   ]
+  },
+  "imagenet": {
+   "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+   "what": "ImageNet: object categories",
+   "quotes": [
+    {
+     "quote": "The ImageNet Large Scale Visual Recognition Challenge is a benchmark in object category classification and detection on hundreds of object categories and millions of images.",
+     "copy": "data_audit/lead/fm_sources/eligibility_v04/imagenet_ilsvrc_arxiv_1409.0575_api.txt",
+     "level": 1,
+     "verified": true
+    },
+    {
+     "quote": "<published>2014-09-01T22:29:38Z</published>",
+     "copy": "data_audit/lead/fm_sources/eligibility_v04/imagenet_ilsvrc_arxiv_1409.0575_api.txt",
+     "level": 1,
+     "verified": true
+    }
+   ]
+  },
+  "k400": {
+   "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+   "what": "Kinetics-400: human actions",
+   "quotes": [
+    {
+     "quote": "The dataset contains 400 human action classes, with at least 400 video clips for each action. Each clip lasts around 10s and is taken from a different YouTube video.",
+     "copy": "data_audit/lead/fm_sources/secondary/kinetics_arxiv_1705.06950_abs.txt",
+     "level": 1,
+     "verified": true
+    },
+    {
+     "quote": "[v1] Fri, 19 May 2017 12:07:01 UTC",
+     "copy": "data_audit/lead/fm_sources/secondary/kinetics_arxiv_1705.06950_abs.txt",
+     "level": 1,
+     "verified": true
+    }
+   ]
+  },
+  "k600": {
+   "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+   "what": "Kinetics-600: human actions",
+   "quotes": [
+    {
+     "quote": "We describe an extension of the DeepMind Kinetics human action dataset from 400 classes, each with at least 400 video clips, to 600 classes, each with at least 600 video clips.",
+     "copy": "data_audit/lead/fm_sources/secondary/kinetics600_arxiv_1808.01340.txt",
+     "level": 1,
+     "verified": true
+    },
+    {
+     "quote": "arXiv:1808.01340v1 [cs.CV] 3 Aug 2018",
+     "copy": "data_audit/lead/fm_sources/secondary/kinetics600_arxiv_1808.01340.txt",
+     "level": 1,
+     "verified": true
+    }
+   ]
+  },
+  "ucf101": {
+   "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+   "what": "UCF-101: human actions",
+   "quotes": [
+    {
+     "quote": "It consists of 101 action classes, over 13k clips and 27 hours of video data. The database consists of realistic user-uploaded videos containing camera motion and cluttered background.",
+     "copy": "data_audit/lead/fm_sources/secondary/ucf101_arxiv_1212.0402.txt",
+     "level": 1,
+     "verified": true
+    },
+    {
+     "quote": "arXiv:1212.0402v1 [cs.CV] 3 Dec 2012",
+     "copy": "data_audit/lead/fm_sources/secondary/ucf101_arxiv_1212.0402.txt",
+     "level": 1,
+     "verified": true
+    }
+   ]
+  },
+  "ssv2": {
+   "status": "A-NO: versioned non-surgical benchmark finalized before 2026-04 (B: generic web origin disclosed)",
+   "what": "SSv2: crowd-sourced caption templates",
+   "quotes": [
+    {
+     "quote": "The database currently contains more than 100,000 videos across 174 classes, which are defined as caption-templates. We also describe the challenges in crowd-sourcing this data at scale.",
+     "copy": "data_audit/lead/fm_sources/secondary/ssv2_arxiv_1706.04261_abs.txt",
+     "level": 1,
+     "verified": true
+    },
+    {
+     "quote": "[v1] Tue, 13 Jun 2017 21:26:19 UTC",
+     "copy": "data_audit/lead/fm_sources/secondary/ssv2_arxiv_1706.04261_abs.txt",
+     "level": 1,
+     "verified": true
+    }
+   ]
+  }
+ }
+}
