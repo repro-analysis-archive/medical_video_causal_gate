@@ -1,0 +1,186 @@
+{
+ "note": "Generate synthetic H.264 test videos matching each DS203 centre format (codec, resolution, frame rate, median\nbitrate, median keyframe interval from out/DS203_codec_facts.json). Source = ffmpeg testsrc2 + temporal noise only:\nno DS203 byte or frame is used. Files go to the session scratchpad (not committed); commands, sha256 and ffprobe facts\nare recorded in out/synthetic_videos.json.",
+ "duration_s": 60,
+ "videos": {
+  "C1_1080p30": {
+   "stands_for": "Center 1, 1920x1080 ~30 fps",
+   "target": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "mbps": 6.2,
+    "gop_frames": 135
+   },
+   "command": "ffmpeg -hide_banner -loglevel error -y -f lavfi -i testsrc2=size=1920x1080:rate=30:duration=60 -vf noise=alls=14:allf=t+u -c:v libx264 -preset veryfast -profile:v high -pix_fmt yuv420p -b:v 6.2M -maxrate 9.3M -bufsize 12.4M -g 135 -keyint_min 135 -sc_threshold 0 -bf 3 -refs 5 -movflags +faststart /tmp/claude-1000/-home-user/8e61e1d1-14de-446a-a848-8bd699ca6e04/scratchpad/synth/C1_1080p30.mp4",
+   "bytes": 45307001,
+   "sha256": "1db4bd13a87cf69103fa3a06803af63f150877b945c7f7e5114e5b972e5d0b2f",
+   "achieved_mbps": 6.04,
+   "packets": 1800,
+   "keyframes": 14,
+   "achieved_gop_frames": 128.6,
+   "ffprobe": {
+    "codec_name": "h264",
+    "profile": "High",
+    "width": 1920,
+    "height": 1080,
+    "has_b_frames": 2,
+    "pix_fmt": "yuv420p",
+    "level": 50,
+    "refs": 1,
+    "r_frame_rate": "30/1",
+    "bit_rate": "6037837",
+    "nb_frames": "1800"
+   }
+  },
+  "C2_1080p25": {
+   "stands_for": "Center 2, 1920x1080 25 fps (74/82 files)",
+   "target": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 25,
+    "mbps": 16.0,
+    "gop_frames": 60
+   },
+   "command": "ffmpeg -hide_banner -loglevel error -y -f lavfi -i testsrc2=size=1920x1080:rate=25:duration=60 -vf noise=alls=14:allf=t+u -c:v libx264 -preset veryfast -profile:v high -pix_fmt yuv420p -b:v 16.0M -maxrate 24.0M -bufsize 32.0M -g 60 -keyint_min 60 -sc_threshold 0 -bf 3 -refs 5 -movflags +faststart /tmp/claude-1000/-home-user/8e61e1d1-14de-446a-a848-8bd699ca6e04/scratchpad/synth/C2_1080p25.mp4",
+   "bytes": 118528788,
+   "sha256": "21e42c5766054bd6925b2f67dec754f5272c55e562a2f28a452a711034dcf475",
+   "achieved_mbps": 15.8,
+   "packets": 1500,
+   "keyframes": 25,
+   "achieved_gop_frames": 60.0,
+   "ffprobe": {
+    "codec_name": "h264",
+    "profile": "High",
+    "width": 1920,
+    "height": 1080,
+    "has_b_frames": 2,
+    "pix_fmt": "yuv420p",
+    "level": 50,
+    "refs": 1,
+    "r_frame_rate": "25/1",
+    "bit_rate": "15801096",
+    "nb_frames": "1500"
+   }
+  },
+  "C2_2160p25": {
+   "stands_for": "Center 2, 3840x2160 25 fps (8/82 files)",
+   "target": {
+    "width": 3840,
+    "height": 2160,
+    "fps": 25,
+    "mbps": 73.1,
+    "gop_frames": 30
+   },
+   "command": "ffmpeg -hide_banner -loglevel error -y -f lavfi -i testsrc2=size=3840x2160:rate=25:duration=60 -vf noise=alls=14:allf=t+u -c:v libx264 -preset veryfast -profile:v high -pix_fmt yuv420p -b:v 73.1M -maxrate 109.6M -bufsize 146.2M -g 30 -keyint_min 30 -sc_threshold 0 -bf 3 -refs 5 -movflags +faststart /tmp/claude-1000/-home-user/8e61e1d1-14de-446a-a848-8bd699ca6e04/scratchpad/synth/C2_2160p25.mp4",
+   "bytes": 550963461,
+   "sha256": "ec0752848dbc226aaf5798ac0c5e9f53967abe4f4997c98551ca258374d2a80a",
+   "achieved_mbps": 73.46,
+   "packets": 1500,
+   "keyframes": 50,
+   "achieved_gop_frames": 30.0,
+   "ffprobe": {
+    "codec_name": "h264",
+    "profile": "High",
+    "width": 3840,
+    "height": 2160,
+    "has_b_frames": 2,
+    "pix_fmt": "yuv420p",
+    "level": 51,
+    "refs": 1,
+    "r_frame_rate": "25/1",
+    "bit_rate": "73458331",
+    "nb_frames": "1500"
+   }
+  },
+  "C3_2160p25": {
+   "stands_for": "Center 3, 3840x2160 25 fps (41/42 files)",
+   "target": {
+    "width": 3840,
+    "height": 2160,
+    "fps": 25,
+    "mbps": 75.0,
+    "gop_frames": 36
+   },
+   "command": "ffmpeg -hide_banner -loglevel error -y -f lavfi -i testsrc2=size=3840x2160:rate=25:duration=60 -vf noise=alls=14:allf=t+u -c:v libx264 -preset veryfast -profile:v high -pix_fmt yuv420p -b:v 75.0M -maxrate 112.5M -bufsize 150.0M -g 36 -keyint_min 36 -sc_threshold 0 -bf 3 -refs 5 -movflags +faststart /tmp/claude-1000/-home-user/8e61e1d1-14de-446a-a848-8bd699ca6e04/scratchpad/synth/C3_2160p25.mp4",
+   "bytes": 558684697,
+   "sha256": "d1c336b4c3dcad29a4f5569ef03b3863bea24a4627d56ea4b0141c9451ebeee9",
+   "achieved_mbps": 74.49,
+   "packets": 1500,
+   "keyframes": 42,
+   "achieved_gop_frames": 35.7,
+   "ffprobe": {
+    "codec_name": "h264",
+    "profile": "High",
+    "width": 3840,
+    "height": 2160,
+    "has_b_frames": 2,
+    "pix_fmt": "yuv420p",
+    "level": 51,
+    "refs": 1,
+    "r_frame_rate": "25/1",
+    "bit_rate": "74487865",
+    "nb_frames": "1500"
+   }
+  },
+  "C4_1080p50": {
+   "stands_for": "Center 4, 1920x1080 50 fps",
+   "target": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 50,
+    "mbps": 7.8,
+    "gop_frames": 96
+   },
+   "command": "ffmpeg -hide_banner -loglevel error -y -f lavfi -i testsrc2=size=1920x1080:rate=50:duration=60 -vf noise=alls=14:allf=t+u -c:v libx264 -preset veryfast -profile:v high -pix_fmt yuv420p -b:v 7.8M -maxrate 11.7M -bufsize 15.6M -g 96 -keyint_min 96 -sc_threshold 0 -bf 3 -refs 5 -movflags +faststart /tmp/claude-1000/-home-user/8e61e1d1-14de-446a-a848-8bd699ca6e04/scratchpad/synth/C4_1080p50.mp4",
+   "bytes": 58553391,
+   "sha256": "44eb5ab66384c1ca019205730a00d5ccecdf11e1de772e9e5a8cb54f16397436",
+   "achieved_mbps": 7.81,
+   "packets": 3000,
+   "keyframes": 32,
+   "achieved_gop_frames": 93.8,
+   "ffprobe": {
+    "codec_name": "h264",
+    "profile": "High",
+    "width": 1920,
+    "height": 1080,
+    "has_b_frames": 2,
+    "pix_fmt": "yuv420p",
+    "level": 50,
+    "refs": 1,
+    "r_frame_rate": "50/1",
+    "bit_rate": "7802099",
+    "nb_frames": "3000"
+   }
+  },
+  "C5_1080p50": {
+   "stands_for": "Center 5, 1920x1080 50 fps",
+   "target": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 50,
+    "mbps": 8.5,
+    "gop_frames": 214
+   },
+   "command": "ffmpeg -hide_banner -loglevel error -y -f lavfi -i testsrc2=size=1920x1080:rate=50:duration=60 -vf noise=alls=14:allf=t+u -c:v libx264 -preset veryfast -profile:v high -pix_fmt yuv420p -b:v 8.5M -maxrate 12.8M -bufsize 17.0M -g 214 -keyint_min 214 -sc_threshold 0 -bf 3 -refs 5 -movflags +faststart /tmp/claude-1000/-home-user/8e61e1d1-14de-446a-a848-8bd699ca6e04/scratchpad/synth/C5_1080p50.mp4",
+   "bytes": 63410219,
+   "sha256": "3e8c10367a4cbc9db521728860511d5dd2cea3e243e846f72080d5013f8ef979",
+   "achieved_mbps": 8.45,
+   "packets": 3000,
+   "keyframes": 15,
+   "achieved_gop_frames": 200.0,
+   "ffprobe": {
+    "codec_name": "h264",
+    "profile": "High",
+    "width": 1920,
+    "height": 1080,
+    "has_b_frames": 2,
+    "pix_fmt": "yuv420p",
+    "level": 50,
+    "refs": 1,
+    "r_frame_rate": "50/1",
+    "bit_rate": "8449665",
+    "nb_frames": "3000"
+   }
+  }
+ }
+}

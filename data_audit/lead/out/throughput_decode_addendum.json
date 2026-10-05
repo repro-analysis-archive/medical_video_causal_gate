@@ -1,0 +1,2954 @@
+{
+ "note": "Addendum to run_decode_bench.py (synthetic test videos only), run after the main matrix finished:\n(1) re-measure the rows that overlapped a ~15 s correctness check of the new 'skip' strategy during the main run\n    (C2_1080p25: CPU seek at all rates, CPU keyonly, NVDEC seq at all rates);\n(2) 'skip' strategy (forward jump by discarding packets, no seek / flush): single stream and aggregate, CPU and NVDEC;\n(3) CPU and NVDEC together: 5 CPU processes x 4 threads plus 4 NVDEC sessions at the same time, seq R=1 and skip.\nOutput: out/throughput_decode_addendum.json.",
+ "remeasured_rows": [
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 780,
+   "seeks": 30,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0536,
+   "wall_s": 2.672,
+   "x_realtime": 22.455,
+   "reps": [
+    2.672
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1710,
+   "seeks": 60,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0533,
+   "wall_s": 5.4372,
+   "x_realtime": 11.035,
+   "reps": [
+    5.4372
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 3600,
+   "seeks": 120,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0533,
+   "wall_s": 11.0634,
+   "x_realtime": 5.423,
+   "reps": [
+    11.0634
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 7380,
+   "seeks": 240,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.053,
+   "wall_s": 22.2851,
+   "x_realtime": 2.692,
+   "reps": [
+    22.2851
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "keyonly",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 0,
+   "selected": 25,
+   "decoded": 25,
+   "seeks": 0,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0533,
+   "wall_s": 0.1081,
+   "x_realtime": 554.81
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1500,
+   "seeks": 0,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.2274,
+   "wall_s": 1.9201,
+   "x_realtime": 31.248,
+   "reps": [
+    1.9254,
+    1.9137,
+    1.9201
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1500,
+   "seeks": 0,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1858,
+   "wall_s": 1.93,
+   "x_realtime": 31.088,
+   "reps": [
+    1.93,
+    1.9432,
+    1.9273
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1500,
+   "seeks": 0,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1905,
+   "wall_s": 1.9366,
+   "x_realtime": 30.982,
+   "reps": [
+    1.9481,
+    1.9366,
+    1.9357
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1500,
+   "seeks": 0,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1868,
+   "wall_s": 1.9554,
+   "x_realtime": 30.684,
+   "reps": [
+    1.9554,
+    1.9547,
+    1.9572
+   ]
+  }
+ ],
+ "single": [
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1534,
+   "seeks": 10,
+   "skipped_packets": 207,
+   "xfer_fail": 0,
+   "init_s": 0.0242,
+   "wall_s": 0.9485,
+   "x_realtime": 63.258,
+   "reps": [
+    0.9338,
+    0.9485,
+    0.953
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1723,
+   "seeks": 7,
+   "skipped_packets": 48,
+   "xfer_fail": 0,
+   "init_s": 0.0239,
+   "wall_s": 1.0429,
+   "x_realtime": 57.532,
+   "reps": [
+    1.0429,
+    1.0623,
+    1.0334
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1786,
+   "seeks": 1,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.024,
+   "wall_s": 1.0702,
+   "x_realtime": 56.064,
+   "reps": [
+    1.0739,
+    1.0702,
+    1.0539
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1794,
+   "seeks": 1,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.024,
+   "wall_s": 1.0797,
+   "x_realtime": 55.571,
+   "reps": [
+    1.089,
+    1.0697,
+    1.0797
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1327,
+   "seeks": 13,
+   "skipped_packets": 414,
+   "xfer_fail": 0,
+   "init_s": 0.2035,
+   "wall_s": 1.4566,
+   "x_realtime": 41.192,
+   "reps": [
+    1.4618,
+    1.4566,
+    1.4461
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1525,
+   "seeks": 14,
+   "skipped_packets": 246,
+   "xfer_fail": 0,
+   "init_s": 0.1549,
+   "wall_s": 1.665,
+   "x_realtime": 36.036,
+   "reps": [
+    1.6653,
+    1.6578,
+    1.665
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1630,
+   "seeks": 14,
+   "skipped_packets": 156,
+   "xfer_fail": 0,
+   "init_s": 0.1565,
+   "wall_s": 1.782,
+   "x_realtime": 33.67,
+   "reps": [
+    1.782,
+    1.7854,
+    1.7811
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1742,
+   "seeks": 14,
+   "skipped_packets": 52,
+   "xfer_fail": 0,
+   "init_s": 0.1582,
+   "wall_s": 1.9253,
+   "x_realtime": 31.164,
+   "reps": [
+    1.9292,
+    1.9184,
+    1.9253
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1209,
+   "seeks": 15,
+   "skipped_packets": 242,
+   "xfer_fail": 0,
+   "init_s": 0.0534,
+   "wall_s": 1.714,
+   "x_realtime": 35.006,
+   "reps": [
+    1.714,
+    1.6868,
+    1.7553
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1464,
+   "seeks": 5,
+   "skipped_packets": 12,
+   "xfer_fail": 0,
+   "init_s": 0.0533,
+   "wall_s": 1.9275,
+   "x_realtime": 31.128,
+   "reps": [
+    1.9239,
+    1.9275,
+    1.9488
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1489,
+   "seeks": 1,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0533,
+   "wall_s": 1.929,
+   "x_realtime": 31.104,
+   "reps": [
+    1.9462,
+    1.9259,
+    1.929
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1495,
+   "seeks": 1,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0534,
+   "wall_s": 1.9488,
+   "x_realtime": 30.788,
+   "reps": [
+    1.9494,
+    1.9442,
+    1.9488
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 823,
+   "seeks": 25,
+   "skipped_packets": 628,
+   "xfer_fail": 0,
+   "init_s": 0.2289,
+   "wall_s": 1.1119,
+   "x_realtime": 53.962,
+   "reps": [
+    1.1271,
+    1.1094,
+    1.1119
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1198,
+   "seeks": 25,
+   "skipped_packets": 278,
+   "xfer_fail": 0,
+   "init_s": 0.189,
+   "wall_s": 1.5697,
+   "x_realtime": 38.224,
+   "reps": [
+    1.5763,
+    1.5695,
+    1.5697
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1388,
+   "seeks": 20,
+   "skipped_packets": 101,
+   "xfer_fail": 0,
+   "init_s": 0.1877,
+   "wall_s": 1.8143,
+   "x_realtime": 33.071,
+   "reps": [
+    1.8109,
+    1.8143,
+    1.8195
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1453,
+   "seeks": 20,
+   "skipped_packets": 42,
+   "xfer_fail": 0,
+   "init_s": 0.1864,
+   "wall_s": 1.9081,
+   "x_realtime": 31.445,
+   "reps": [
+    1.9081,
+    1.9125,
+    1.9068
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 939,
+   "seeks": 30,
+   "skipped_packets": 512,
+   "xfer_fail": 0,
+   "init_s": 0.249,
+   "wall_s": 5.9975,
+   "x_realtime": 10.004,
+   "reps": [
+    5.9344,
+    6.0633,
+    5.9975
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1449,
+   "seeks": 10,
+   "skipped_packets": 27,
+   "xfer_fail": 0,
+   "init_s": 0.2486,
+   "wall_s": 8.5991,
+   "x_realtime": 6.977,
+   "reps": [
+    8.7096,
+    8.5698,
+    8.5991
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1489,
+   "seeks": 1,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.249,
+   "wall_s": 8.6474,
+   "x_realtime": 6.939,
+   "reps": [
+    8.6474,
+    8.6462,
+    8.6582
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1495,
+   "seeks": 1,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.2482,
+   "wall_s": 8.6646,
+   "x_realtime": 6.925,
+   "reps": [
+    8.7417,
+    8.6646,
+    8.5859
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 388,
+   "seeks": 30,
+   "skipped_packets": 1063,
+   "xfer_fail": 0,
+   "init_s": 0.4201,
+   "wall_s": 2.1895,
+   "x_realtime": 27.404,
+   "reps": [
+    2.1895,
+    2.1831,
+    2.2007
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 898,
+   "seeks": 50,
+   "skipped_packets": 578,
+   "xfer_fail": 0,
+   "init_s": 0.3822,
+   "wall_s": 4.8106,
+   "x_realtime": 12.472,
+   "reps": [
+    4.8199,
+    4.7675,
+    4.8106
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1278,
+   "seeks": 40,
+   "skipped_packets": 211,
+   "xfer_fail": 0,
+   "init_s": 0.3791,
+   "wall_s": 6.5499,
+   "x_realtime": 9.16,
+   "reps": [
+    6.5499,
+    6.5671,
+    6.5378
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1408,
+   "seeks": 40,
+   "skipped_packets": 87,
+   "xfer_fail": 0,
+   "init_s": 0.3788,
+   "wall_s": 7.2031,
+   "x_realtime": 8.33,
+   "reps": [
+    7.2031,
+    7.1986,
+    7.2072
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1071,
+   "seeks": 27,
+   "skipped_packets": 380,
+   "xfer_fail": 0,
+   "init_s": 0.2535,
+   "wall_s": 6.3466,
+   "x_realtime": 9.454,
+   "reps": [
+    6.3466,
+    6.3249,
+    6.3619
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1451,
+   "seeks": 11,
+   "skipped_packets": 26,
+   "xfer_fail": 0,
+   "init_s": 0.2531,
+   "wall_s": 8.0091,
+   "x_realtime": 7.491,
+   "reps": [
+    8.0397,
+    8.0091,
+    7.9426
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1489,
+   "seeks": 1,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.2531,
+   "wall_s": 7.9612,
+   "x_realtime": 7.537,
+   "reps": [
+    8.0649,
+    7.9612,
+    7.948
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1495,
+   "seeks": 1,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.2531,
+   "wall_s": 7.9672,
+   "x_realtime": 7.531,
+   "reps": [
+    7.9672,
+    8.0867,
+    7.9264
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 530,
+   "seeks": 30,
+   "skipped_packets": 921,
+   "xfer_fail": 0,
+   "init_s": 0.4243,
+   "wall_s": 2.8614,
+   "x_realtime": 20.969,
+   "reps": [
+    2.8726,
+    2.8614,
+    2.8589
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 979,
+   "seeks": 42,
+   "skipped_packets": 498,
+   "xfer_fail": 0,
+   "init_s": 0.3896,
+   "wall_s": 5.1775,
+   "x_realtime": 11.589,
+   "reps": [
+    5.1681,
+    5.1775,
+    5.1806
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1275,
+   "seeks": 40,
+   "skipped_packets": 214,
+   "xfer_fail": 0,
+   "init_s": 0.3853,
+   "wall_s": 6.5674,
+   "x_realtime": 9.136,
+   "reps": [
+    6.5786,
+    6.565,
+    6.5674
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1413,
+   "seeks": 37,
+   "skipped_packets": 82,
+   "xfer_fail": 0,
+   "init_s": 0.3849,
+   "wall_s": 7.285,
+   "x_realtime": 8.236,
+   "reps": [
+    7.2744,
+    7.2889,
+    7.285
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1771,
+   "seeks": 26,
+   "skipped_packets": 1130,
+   "xfer_fail": 0,
+   "init_s": 0.0206,
+   "wall_s": 1.1048,
+   "x_realtime": 54.308,
+   "reps": [
+    1.1048,
+    1.116,
+    1.0817
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 2631,
+   "seeks": 22,
+   "skipped_packets": 320,
+   "xfer_fail": 0,
+   "init_s": 0.0207,
+   "wall_s": 1.4133,
+   "x_realtime": 42.454,
+   "reps": [
+    1.4014,
+    1.4196,
+    1.4133
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 2958,
+   "seeks": 8,
+   "skipped_packets": 19,
+   "xfer_fail": 0,
+   "init_s": 0.0207,
+   "wall_s": 1.5429,
+   "x_realtime": 38.888,
+   "reps": [
+    1.5263,
+    1.5429,
+    1.5495
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 2989,
+   "seeks": 1,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0208,
+   "wall_s": 1.5677,
+   "x_realtime": 38.273,
+   "reps": [
+    1.5371,
+    1.5677,
+    1.5731
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1252,
+   "seeks": 30,
+   "skipped_packets": 1649,
+   "xfer_fail": 0,
+   "init_s": 0.1968,
+   "wall_s": 1.3692,
+   "x_realtime": 43.821,
+   "reps": [
+    1.3823,
+    1.3659,
+    1.3692
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 2151,
+   "seeks": 31,
+   "skipped_packets": 800,
+   "xfer_fail": 0,
+   "init_s": 0.153,
+   "wall_s": 2.3369,
+   "x_realtime": 25.675,
+   "reps": [
+    2.3369,
+    2.3313,
+    2.337
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 2604,
+   "seeks": 32,
+   "skipped_packets": 373,
+   "xfer_fail": 0,
+   "init_s": 0.1583,
+   "wall_s": 2.8351,
+   "x_realtime": 21.163,
+   "reps": [
+    2.8338,
+    2.8351,
+    2.8424
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 2823,
+   "seeks": 31,
+   "skipped_packets": 166,
+   "xfer_fail": 0,
+   "init_s": 0.1604,
+   "wall_s": 3.086,
+   "x_realtime": 19.443,
+   "reps": [
+    3.086,
+    3.0833,
+    3.094
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 2495,
+   "seeks": 12,
+   "skipped_packets": 406,
+   "xfer_fail": 0,
+   "init_s": 0.0192,
+   "wall_s": 1.2089,
+   "x_realtime": 49.632,
+   "reps": [
+    1.2014,
+    1.2132,
+    1.2089
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 2855,
+   "seeks": 8,
+   "skipped_packets": 96,
+   "xfer_fail": 0,
+   "init_s": 0.0192,
+   "wall_s": 1.35,
+   "x_realtime": 44.444,
+   "reps": [
+    1.3536,
+    1.349,
+    1.35
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 2971,
+   "seeks": 3,
+   "skipped_packets": 5,
+   "xfer_fail": 0,
+   "init_s": 0.0191,
+   "wall_s": 1.3916,
+   "x_realtime": 43.116,
+   "reps": [
+    1.3957,
+    1.3916,
+    1.3872
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "mode": "skip",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 2989,
+   "seeks": 1,
+   "skipped_packets": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0192,
+   "wall_s": 1.3748,
+   "x_realtime": 43.643,
+   "reps": [
+    1.38,
+    1.3748,
+    1.3728
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 2266,
+   "seeks": 14,
+   "skipped_packets": 635,
+   "xfer_fail": 0,
+   "init_s": 0.1964,
+   "wall_s": 2.4535,
+   "x_realtime": 24.455,
+   "reps": [
+    2.4622,
+    2.4528,
+    2.4535
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 2666,
+   "seeks": 14,
+   "skipped_packets": 285,
+   "xfer_fail": 0,
+   "init_s": 0.1483,
+   "wall_s": 2.8761,
+   "x_realtime": 20.862,
+   "reps": [
+    2.8696,
+    2.8841,
+    2.8761
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 2841,
+   "seeks": 14,
+   "skipped_packets": 135,
+   "xfer_fail": 0,
+   "init_s": 0.1508,
+   "wall_s": 3.0817,
+   "x_realtime": 19.47,
+   "reps": [
+    3.0786,
+    3.0835,
+    3.0817
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "mode": "skip",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 2931,
+   "seeks": 13,
+   "skipped_packets": 58,
+   "xfer_fail": 0,
+   "init_s": 0.1514,
+   "wall_s": 3.2088,
+   "x_realtime": 18.699,
+   "reps": [
+    3.2088,
+    3.2015,
+    3.2155
+   ]
+  }
+ ],
+ "aggregate": [
+  {
+   "video_s_total": 300.0,
+   "wall_s": 3.051,
+   "x_realtime_aggregate": 98.315,
+   "per_stream_wall": [
+    2.9928,
+    3.0084,
+    2.9437,
+    2.9407,
+    2.9691
+   ],
+   "decoded": [
+    1363
+   ],
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 0.5
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 3.491,
+   "x_realtime_aggregate": 85.933,
+   "per_stream_wall": [
+    3.4378,
+    3.3868,
+    3.4452,
+    3.4441,
+    3.4132
+   ],
+   "decoded": [
+    1564
+   ],
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 1
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 3.677,
+   "x_realtime_aggregate": 81.588,
+   "per_stream_wall": [
+    3.6206,
+    3.5532,
+    3.6159,
+    3.6363,
+    3.6144
+   ],
+   "decoded": [
+    1669
+   ],
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 2
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 3.905,
+   "x_realtime_aggregate": 76.816,
+   "per_stream_wall": [
+    3.8554,
+    3.8284,
+    3.8085,
+    3.8386,
+    3.8366
+   ],
+   "decoded": [
+    1781
+   ],
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 4
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 3.642,
+   "x_realtime_aggregate": 65.902,
+   "per_stream_wall": [
+    2.9196,
+    2.9173,
+    2.9224,
+    2.9244
+   ],
+   "decoded": [
+    1327
+   ],
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 0.5
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 4.096,
+   "x_realtime_aggregate": 58.596,
+   "per_stream_wall": [
+    3.3341,
+    3.3368,
+    3.3384,
+    3.3375
+   ],
+   "decoded": [
+    1525
+   ],
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 1
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 4.358,
+   "x_realtime_aggregate": 55.072,
+   "per_stream_wall": [
+    3.5765,
+    3.5667,
+    3.565,
+    3.5637
+   ],
+   "decoded": [
+    1630
+   ],
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 2
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 4.608,
+   "x_realtime_aggregate": 52.079,
+   "per_stream_wall": [
+    3.7974,
+    3.7953,
+    3.7976,
+    3.7922
+   ],
+   "decoded": [
+    1742
+   ],
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 4
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 4.703,
+   "x_realtime_aggregate": 114.812,
+   "per_stream_wall": [
+    3.9499,
+    3.9798,
+    4.0053,
+    4.0004,
+    4.0306,
+    3.9512,
+    3.9191,
+    3.9201,
+    3.9283
+   ],
+   "decoded": [
+    1800
+   ],
+   "file": "C1_1080p30",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "seq",
+   "rate": 1
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 3.675,
+   "x_realtime_aggregate": 146.922,
+   "per_stream_wall": [
+    3.0571,
+    3.1011,
+    3.0471,
+    3.0668,
+    3.0899,
+    2.8716,
+    2.9151,
+    2.924,
+    2.9183
+   ],
+   "decoded": [
+    1363
+   ],
+   "file": "C1_1080p30",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 0.5
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 4.117,
+   "x_realtime_aggregate": 131.162,
+   "per_stream_wall": [
+    3.5206,
+    3.5377,
+    3.5353,
+    3.5402,
+    3.4696,
+    3.3137,
+    3.3581,
+    3.3358,
+    3.2793
+   ],
+   "decoded": [
+    1564
+   ],
+   "file": "C1_1080p30",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 1
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 4.44,
+   "x_realtime_aggregate": 121.618,
+   "per_stream_wall": [
+    3.7187,
+    3.7165,
+    3.7557,
+    3.6179,
+    3.7451,
+    3.5639,
+    3.5619,
+    3.58,
+    3.5751
+   ],
+   "decoded": [
+    1669
+   ],
+   "file": "C1_1080p30",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 2
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 4.549,
+   "x_realtime_aggregate": 118.702,
+   "per_stream_wall": [
+    3.9703,
+    3.9687,
+    3.9701,
+    3.9633,
+    3.9861,
+    3.7724,
+    3.764,
+    3.7855,
+    3.7674
+   ],
+   "decoded": [
+    1781
+   ],
+   "file": "C1_1080p30",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 4
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 5.063,
+   "x_realtime_aggregate": 59.258,
+   "per_stream_wall": [
+    4.9752,
+    4.8493,
+    4.9407,
+    4.8981,
+    4.9592
+   ],
+   "decoded": [
+    895
+   ],
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 0.5
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 6.883,
+   "x_realtime_aggregate": 43.585,
+   "per_stream_wall": [
+    6.6152,
+    6.7945,
+    6.7788,
+    6.7574,
+    6.8126
+   ],
+   "decoded": [
+    1265
+   ],
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 1
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 7.706,
+   "x_realtime_aggregate": 38.932,
+   "per_stream_wall": [
+    7.4997,
+    7.4885,
+    7.457,
+    7.6197,
+    7.4572
+   ],
+   "decoded": [
+    1440
+   ],
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 2
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 7.86,
+   "x_realtime_aggregate": 38.168,
+   "per_stream_wall": [
+    7.7723,
+    7.6566,
+    7.6985,
+    7.6941,
+    7.6782
+   ],
+   "decoded": [
+    1490
+   ],
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 4
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 3.151,
+   "x_realtime_aggregate": 76.178,
+   "per_stream_wall": [
+    2.3533,
+    2.3519,
+    2.349,
+    2.3645
+   ],
+   "decoded": [
+    823
+   ],
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 0.5
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 4.124,
+   "x_realtime_aggregate": 58.2,
+   "per_stream_wall": [
+    3.2972,
+    3.3034,
+    3.2942,
+    3.3052
+   ],
+   "decoded": [
+    1198
+   ],
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 1
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 4.648,
+   "x_realtime_aggregate": 51.636,
+   "per_stream_wall": [
+    3.7829,
+    3.782,
+    3.7847,
+    3.7821
+   ],
+   "decoded": [
+    1388
+   ],
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 2
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 4.625,
+   "x_realtime_aggregate": 51.888,
+   "per_stream_wall": [
+    3.9168,
+    3.921,
+    3.9224,
+    3.9325
+   ],
+   "decoded": [
+    1453
+   ],
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 4
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 7.949,
+   "x_realtime_aggregate": 67.93,
+   "per_stream_wall": [
+    7.7926,
+    7.7906,
+    7.7757,
+    7.7253,
+    7.8609,
+    4.0085,
+    4.0216,
+    4.0197,
+    4.0175
+   ],
+   "decoded": [
+    1500
+   ],
+   "file": "C2_1080p25",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "seq",
+   "rate": 1
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 5.092,
+   "x_realtime_aggregate": 106.043,
+   "per_stream_wall": [
+    4.9385,
+    5.0056,
+    4.9905,
+    4.9773,
+    5.0029,
+    2.3804,
+    2.3798,
+    2.3859,
+    2.3822
+   ],
+   "decoded": [
+    895
+   ],
+   "file": "C2_1080p25",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 0.5
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 6.869,
+   "x_realtime_aggregate": 78.609,
+   "per_stream_wall": [
+    6.6902,
+    6.7976,
+    6.7805,
+    6.7376,
+    6.7601,
+    3.3131,
+    3.3182,
+    3.3128,
+    3.3104
+   ],
+   "decoded": [
+    1265
+   ],
+   "file": "C2_1080p25",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 1
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 7.745,
+   "x_realtime_aggregate": 69.725,
+   "per_stream_wall": [
+    7.4989,
+    7.6115,
+    7.5342,
+    7.6342,
+    7.5374,
+    3.787,
+    3.7854,
+    3.784,
+    3.7865
+   ],
+   "decoded": [
+    1440
+   ],
+   "file": "C2_1080p25",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 2
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 7.931,
+   "x_realtime_aggregate": 68.084,
+   "per_stream_wall": [
+    7.8437,
+    7.7795,
+    7.8147,
+    7.8123,
+    7.7492,
+    3.9522,
+    3.9509,
+    3.9519,
+    3.9532
+   ],
+   "decoded": [
+    1490
+   ],
+   "file": "C2_1080p25",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 4
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 11.814,
+   "x_realtime_aggregate": 25.393,
+   "per_stream_wall": [
+    11.4695,
+    11.3381,
+    11.1692,
+    11.4043,
+    11.1989
+   ],
+   "decoded": [
+    475
+   ],
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 0.5
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 24.512,
+   "x_realtime_aggregate": 12.239,
+   "per_stream_wall": [
+    24.1787,
+    24.0576,
+    23.7937,
+    23.9503,
+    23.9811
+   ],
+   "decoded": [
+    1035
+   ],
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 1
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 31.739,
+   "x_realtime_aggregate": 9.452,
+   "per_stream_wall": [
+    31.0889,
+    30.9796,
+    31.0624,
+    30.8778,
+    31.4106
+   ],
+   "decoded": [
+    1385
+   ],
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 2
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 33.725,
+   "x_realtime_aggregate": 8.895,
+   "per_stream_wall": [
+    33.419,
+    32.7096,
+    32.89,
+    33.3468,
+    33.1854
+   ],
+   "decoded": [
+    1485
+   ],
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 4
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 5.614,
+   "x_realtime_aggregate": 42.748,
+   "per_stream_wall": [
+    4.656,
+    4.6484,
+    4.6516,
+    4.6496
+   ],
+   "decoded": [
+    388
+   ],
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 0.5
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 11.062,
+   "x_realtime_aggregate": 21.696,
+   "per_stream_wall": [
+    10.2342,
+    10.2221,
+    10.2228,
+    10.224
+   ],
+   "decoded": [
+    898
+   ],
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 1
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 14.83,
+   "x_realtime_aggregate": 16.183,
+   "per_stream_wall": [
+    13.8576,
+    13.8463,
+    13.8602,
+    13.8534
+   ],
+   "decoded": [
+    1278
+   ],
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 2
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 15.938,
+   "x_realtime_aggregate": 15.059,
+   "per_stream_wall": [
+    14.9891,
+    15.0163,
+    14.9923,
+    15.0744
+   ],
+   "decoded": [
+    1408
+   ],
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 4
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 34.079,
+   "x_realtime_aggregate": 15.845,
+   "per_stream_wall": [
+    33.4646,
+    33.6349,
+    33.5241,
+    33.8045,
+    33.51,
+    15.848,
+    15.8343,
+    15.8322,
+    15.8185
+   ],
+   "decoded": [
+    1500
+   ],
+   "file": "C2_2160p25",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "seq",
+   "rate": 1
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 11.912,
+   "x_realtime_aggregate": 45.331,
+   "per_stream_wall": [
+    11.4186,
+    11.3972,
+    11.3433,
+    11.2389,
+    11.5603,
+    4.6061,
+    4.6647,
+    4.6142,
+    4.6102
+   ],
+   "decoded": [
+    475
+   ],
+   "file": "C2_2160p25",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 0.5
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 24.655,
+   "x_realtime_aggregate": 21.902,
+   "per_stream_wall": [
+    24.3017,
+    24.3191,
+    24.1571,
+    23.8924,
+    23.7272,
+    9.9473,
+    9.999,
+    10.0001,
+    10.0013
+   ],
+   "decoded": [
+    1035
+   ],
+   "file": "C2_2160p25",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 1
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 31.612,
+   "x_realtime_aggregate": 17.082,
+   "per_stream_wall": [
+    31.2346,
+    31.1851,
+    31.0177,
+    31.203,
+    31.1772,
+    13.7488,
+    13.7616,
+    13.7509,
+    13.7349
+   ],
+   "decoded": [
+    1385
+   ],
+   "file": "C2_2160p25",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 2
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 33.893,
+   "x_realtime_aggregate": 15.932,
+   "per_stream_wall": [
+    33.1667,
+    33.5847,
+    33.5088,
+    33.1358,
+    33.3276,
+    14.9441,
+    14.9331,
+    14.9474,
+    14.941
+   ],
+   "decoded": [
+    1485
+   ],
+   "file": "C2_2160p25",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 4
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 14.906,
+   "x_realtime_aggregate": 20.127,
+   "per_stream_wall": [
+    14.3568,
+    14.0842,
+    14.474,
+    14.4323,
+    14.5823
+   ],
+   "decoded": [
+    617
+   ],
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 0.5
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 25.717,
+   "x_realtime_aggregate": 11.666,
+   "per_stream_wall": [
+    25.3627,
+    25.311,
+    25.1496,
+    24.8123,
+    24.8067
+   ],
+   "decoded": [
+    1093
+   ],
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 1
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 30.926,
+   "x_realtime_aggregate": 9.701,
+   "per_stream_wall": [
+    30.5871,
+    30.4316,
+    30.4818,
+    30.226,
+    30.3025
+   ],
+   "decoded": [
+    1373
+   ],
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 2
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 33.2,
+   "x_realtime_aggregate": 9.036,
+   "per_stream_wall": [
+    32.4184,
+    32.8526,
+    32.1649,
+    32.2279,
+    32.1238
+   ],
+   "decoded": [
+    1481
+   ],
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 4
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 7.066,
+   "x_realtime_aggregate": 33.967,
+   "per_stream_wall": [
+    6.0721,
+    6.0651,
+    6.0866,
+    6.0205
+   ],
+   "decoded": [
+    530
+   ],
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 0.5
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 12.077,
+   "x_realtime_aggregate": 19.872,
+   "per_stream_wall": [
+    11.0581,
+    11.0658,
+    11.0555,
+    11.0936
+   ],
+   "decoded": [
+    979
+   ],
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 1
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 14.821,
+   "x_realtime_aggregate": 16.193,
+   "per_stream_wall": [
+    13.9429,
+    13.9722,
+    13.9639,
+    13.968
+   ],
+   "decoded": [
+    1275
+   ],
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 2
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 16.11,
+   "x_realtime_aggregate": 14.898,
+   "per_stream_wall": [
+    15.2533,
+    15.1921,
+    15.2272,
+    15.1739
+   ],
+   "decoded": [
+    1413
+   ],
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 4
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 33.202,
+   "x_realtime_aggregate": 16.264,
+   "per_stream_wall": [
+    32.7116,
+    32.7217,
+    32.748,
+    32.8697,
+    32.9252,
+    16.0126,
+    15.9292,
+    16.0015,
+    15.9587
+   ],
+   "decoded": [
+    1500
+   ],
+   "file": "C3_2160p25",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "seq",
+   "rate": 1
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 14.882,
+   "x_realtime_aggregate": 36.286,
+   "per_stream_wall": [
+    14.3975,
+    14.4799,
+    14.5532,
+    14.4136,
+    14.3008,
+    6.0977,
+    6.1226,
+    6.0884,
+    6.1155
+   ],
+   "decoded": [
+    617
+   ],
+   "file": "C3_2160p25",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 0.5
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 25.732,
+   "x_realtime_aggregate": 20.985,
+   "per_stream_wall": [
+    25.1626,
+    25.3784,
+    25.0966,
+    24.924,
+    25.3548,
+    10.8511,
+    10.9039,
+    10.8894,
+    10.9062
+   ],
+   "decoded": [
+    1093
+   ],
+   "file": "C3_2160p25",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 1
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 31.1,
+   "x_realtime_aggregate": 17.364,
+   "per_stream_wall": [
+    30.6918,
+    30.378,
+    30.668,
+    30.7537,
+    30.6425,
+    13.7264,
+    13.7016,
+    13.7121,
+    13.7293
+   ],
+   "decoded": [
+    1373
+   ],
+   "file": "C3_2160p25",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 2
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 33.072,
+   "x_realtime_aggregate": 16.328,
+   "per_stream_wall": [
+    32.7061,
+    32.5914,
+    32.7222,
+    32.3592,
+    32.4052,
+    15.0613,
+    15.0199,
+    14.9866,
+    15.0278
+   ],
+   "decoded": [
+    1481
+   ],
+   "file": "C3_2160p25",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 4
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 2.704,
+   "x_realtime_aggregate": 110.946,
+   "per_stream_wall": [
+    2.6545,
+    2.6558,
+    2.6201,
+    2.6532,
+    2.6613
+   ],
+   "decoded": [
+    1339
+   ],
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 0.5
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 4.204,
+   "x_realtime_aggregate": 71.365,
+   "per_stream_wall": [
+    4.0937,
+    4.0906,
+    4.1639,
+    4.1277,
+    4.1416
+   ],
+   "decoded": [
+    2239
+   ],
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 1
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 4.93,
+   "x_realtime_aggregate": 60.851,
+   "per_stream_wall": [
+    4.8875,
+    4.8435,
+    4.8532,
+    4.8668,
+    4.829
+   ],
+   "decoded": [
+    2690
+   ],
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 2
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 5.261,
+   "x_realtime_aggregate": 57.02,
+   "per_stream_wall": [
+    5.205,
+    5.174,
+    5.1607,
+    5.2243,
+    5.1803
+   ],
+   "decoded": [
+    2898
+   ],
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 4
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 3.602,
+   "x_realtime_aggregate": 66.627,
+   "per_stream_wall": [
+    2.7709,
+    2.7721,
+    2.7711,
+    2.7751
+   ],
+   "decoded": [
+    1252
+   ],
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 0.5
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 5.372,
+   "x_realtime_aggregate": 44.678,
+   "per_stream_wall": [
+    4.6791,
+    4.6695,
+    4.6636,
+    4.6771
+   ],
+   "decoded": [
+    2151
+   ],
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 1
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 6.373,
+   "x_realtime_aggregate": 37.658,
+   "per_stream_wall": [
+    5.6786,
+    5.6945,
+    5.6783,
+    5.675
+   ],
+   "decoded": [
+    2604
+   ],
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 2
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 6.84,
+   "x_realtime_aggregate": 35.088,
+   "per_stream_wall": [
+    6.1496,
+    6.1555,
+    6.1517,
+    6.1534
+   ],
+   "decoded": [
+    2823
+   ],
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 4
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 7.396,
+   "x_realtime_aggregate": 73.017,
+   "per_stream_wall": [
+    5.4307,
+    5.4365,
+    5.4665,
+    5.4925,
+    5.4805,
+    6.5644,
+    6.54,
+    6.5187,
+    6.5709
+   ],
+   "decoded": [
+    3000
+   ],
+   "file": "C4_1080p50",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "seq",
+   "rate": 1
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 3.475,
+   "x_realtime_aggregate": 155.409,
+   "per_stream_wall": [
+    2.7062,
+    2.659,
+    2.7414,
+    2.7364,
+    2.7494,
+    2.7673,
+    2.7736,
+    2.7496,
+    2.7581
+   ],
+   "decoded": [
+    1339
+   ],
+   "file": "C4_1080p50",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 0.5
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 5.425,
+   "x_realtime_aggregate": 99.542,
+   "per_stream_wall": [
+    4.2693,
+    4.2491,
+    4.217,
+    4.2564,
+    4.2336,
+    4.5512,
+    4.6309,
+    4.5961,
+    4.5999
+   ],
+   "decoded": [
+    2239
+   ],
+   "file": "C4_1080p50",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 1
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 6.555,
+   "x_realtime_aggregate": 82.385,
+   "per_stream_wall": [
+    5.0118,
+    4.937,
+    4.9073,
+    5.0103,
+    4.9951,
+    5.6174,
+    5.6761,
+    5.6844,
+    5.6821
+   ],
+   "decoded": [
+    2690
+   ],
+   "file": "C4_1080p50",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 2
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 7.057,
+   "x_realtime_aggregate": 76.516,
+   "per_stream_wall": [
+    5.3656,
+    5.3965,
+    5.3582,
+    5.3846,
+    5.4071,
+    6.157,
+    6.158,
+    6.1704,
+    6.1829
+   ],
+   "decoded": [
+    2898
+   ],
+   "file": "C4_1080p50",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 4
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 4.319,
+   "x_realtime_aggregate": 69.458,
+   "per_stream_wall": [
+    4.2537,
+    4.2792,
+    4.2222,
+    4.2588,
+    4.2609
+   ],
+   "decoded": [
+    2305
+   ],
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 0.5
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 5.01,
+   "x_realtime_aggregate": 59.884,
+   "per_stream_wall": [
+    4.9645,
+    4.8995,
+    4.9352,
+    4.974,
+    4.9265
+   ],
+   "decoded": [
+    2703
+   ],
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 1
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 5.303,
+   "x_realtime_aggregate": 56.576,
+   "per_stream_wall": [
+    5.1688,
+    5.2631,
+    5.238,
+    5.2421,
+    5.2405
+   ],
+   "decoded": [
+    2875
+   ],
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 2
+  },
+  {
+   "video_s_total": 300.0,
+   "wall_s": 5.466,
+   "x_realtime_aggregate": 54.885,
+   "per_stream_wall": [
+    5.3748,
+    5.3984,
+    5.426,
+    5.3775,
+    5.3757
+   ],
+   "decoded": [
+    2959
+   ],
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "skip",
+   "rate": 4
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 5.661,
+   "x_realtime_aggregate": 42.395,
+   "per_stream_wall": [
+    4.9404,
+    4.9368,
+    4.9379,
+    4.9397
+   ],
+   "decoded": [
+    2266
+   ],
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 0.5
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 6.594,
+   "x_realtime_aggregate": 36.398,
+   "per_stream_wall": [
+    5.7951,
+    5.7955,
+    5.7999,
+    5.7941
+   ],
+   "decoded": [
+    2666
+   ],
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 1
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 6.837,
+   "x_realtime_aggregate": 35.101,
+   "per_stream_wall": [
+    6.1784,
+    6.1732,
+    6.1733,
+    6.1876
+   ],
+   "decoded": [
+    2841
+   ],
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 2
+  },
+  {
+   "video_s_total": 240.0,
+   "wall_s": 7.091,
+   "x_realtime_aggregate": 33.846,
+   "per_stream_wall": [
+    6.3674,
+    6.3749,
+    6.3802,
+    6.3712
+   ],
+   "decoded": [
+    2931
+   ],
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "skip",
+   "rate": 4
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 7.442,
+   "x_realtime_aggregate": 72.564,
+   "per_stream_wall": [
+    5.6253,
+    5.6371,
+    5.5841,
+    5.6831,
+    5.593,
+    6.5671,
+    6.524,
+    6.5545,
+    6.532
+   ],
+   "decoded": [
+    3000
+   ],
+   "file": "C5_1080p50",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "seq",
+   "rate": 1
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 5.797,
+   "x_realtime_aggregate": 93.155,
+   "per_stream_wall": [
+    4.4164,
+    4.4026,
+    4.46,
+    4.4228,
+    4.4016,
+    4.8914,
+    4.9296,
+    4.9197,
+    4.9307
+   ],
+   "decoded": [
+    2305
+   ],
+   "file": "C5_1080p50",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 0.5
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 6.678,
+   "x_realtime_aggregate": 80.857,
+   "per_stream_wall": [
+    5.1144,
+    5.0421,
+    5.1398,
+    5.1541,
+    5.1332,
+    5.7922,
+    5.7798,
+    5.7518,
+    5.7968
+   ],
+   "decoded": [
+    2703
+   ],
+   "file": "C5_1080p50",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 1
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 6.947,
+   "x_realtime_aggregate": 77.732,
+   "per_stream_wall": [
+    5.3512,
+    5.4139,
+    5.4365,
+    5.474,
+    5.371,
+    6.1462,
+    6.1738,
+    6.1804,
+    6.1817
+   ],
+   "decoded": [
+    2875
+   ],
+   "file": "C5_1080p50",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 2
+  },
+  {
+   "video_s_total": 540.0,
+   "wall_s": 7.36,
+   "x_realtime_aggregate": 73.372,
+   "per_stream_wall": [
+    5.6363,
+    5.5519,
+    5.5209,
+    5.5625,
+    5.6018,
+    6.3975,
+    6.4135,
+    6.4154,
+    6.3756
+   ],
+   "decoded": [
+    2959
+   ],
+   "file": "C5_1080p50",
+   "device": "cpu+nvdec",
+   "streams": "5 cpu x 4 threads + 4 nvdec",
+   "mode": "skip",
+   "rate": 4
+  }
+ ]
+}

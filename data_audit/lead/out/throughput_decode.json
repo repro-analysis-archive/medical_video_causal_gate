@@ -1,0 +1,4242 @@
+{
+ "note": "Decode-throughput matrix on the synthetic test videos only (make_synthetic.py): device {cpu, nvdec} x strategy\n{seq, seek, hybrid} x grid rate {0.5, 1, 2, 4} fps, plus keyframe-only decode; single stream (CPU 20 threads,\nNVDEC 1 session; seq/hybrid 3 repetitions, seek/keyonly 1), then aggregate throughput with parallel streams\n(CPU 5 processes x 4 threads; NVDEC 4 sessions) for seq and hybrid. Output: out/throughput_decode.json.",
+ "binary_source": "throughput/decode_bench.c",
+ "gpu": "NVIDIA RTX 4500 Ada (driver 555.52.04)",
+ "cpu_threads": 20,
+ "ffmpeg_libs": "libavformat 58.76.100 / libavcodec 58.134.100 (Ubuntu ffmpeg 4.4.2)",
+ "elapsed_s": 3541.7,
+ "single": [
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1800,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0242,
+   "wall_s": 1.0651,
+   "x_realtime": 56.333,
+   "reps": [
+    1.0651,
+    1.0569,
+    1.0802
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1800,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0242,
+   "wall_s": 1.081,
+   "x_realtime": 55.504,
+   "reps": [
+    1.0931,
+    1.081,
+    1.0554
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1800,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.024,
+   "wall_s": 1.0771,
+   "x_realtime": 55.705,
+   "reps": [
+    1.0771,
+    1.0743,
+    1.0777
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1800,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.024,
+   "wall_s": 1.0767,
+   "x_realtime": 55.726,
+   "reps": [
+    1.1029,
+    1.0767,
+    1.0551
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1303,
+   "seeks": 13,
+   "xfer_fail": 0,
+   "init_s": 0.0243,
+   "wall_s": 1.091,
+   "x_realtime": 54.995,
+   "reps": [
+    1.1325,
+    1.091,
+    1.0812
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1499,
+   "seeks": 14,
+   "xfer_fail": 0,
+   "init_s": 0.0242,
+   "wall_s": 1.2969,
+   "x_realtime": 46.264,
+   "reps": [
+    1.3069,
+    1.2969,
+    1.2915
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1604,
+   "seeks": 14,
+   "xfer_fail": 0,
+   "init_s": 0.0239,
+   "wall_s": 1.4977,
+   "x_realtime": 40.061,
+   "reps": [
+    1.5051,
+    1.4713,
+    1.4977
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1716,
+   "seeks": 14,
+   "xfer_fail": 0,
+   "init_s": 0.0239,
+   "wall_s": 1.4883,
+   "x_realtime": 40.314,
+   "reps": [
+    1.4883,
+    1.5116,
+    1.4872
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1830,
+   "seeks": 30,
+   "xfer_fail": 0,
+   "init_s": 0.0239,
+   "wall_s": 1.9151,
+   "x_realtime": 31.33,
+   "reps": [
+    1.9151
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 3615,
+   "seeks": 60,
+   "xfer_fail": 0,
+   "init_s": 0.0241,
+   "wall_s": 3.8473,
+   "x_realtime": 15.595,
+   "reps": [
+    3.8473
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 7185,
+   "seeks": 120,
+   "xfer_fail": 0,
+   "init_s": 0.024,
+   "wall_s": 7.6326,
+   "x_realtime": 7.861,
+   "reps": [
+    7.6326
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 15330,
+   "seeks": 240,
+   "xfer_fail": 0,
+   "init_s": 0.024,
+   "wall_s": 15.7126,
+   "x_realtime": 3.819,
+   "reps": [
+    15.7126
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "mode": "keyonly",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 0,
+   "selected": 14,
+   "decoded": 14,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.024,
+   "wall_s": 0.0656,
+   "x_realtime": 915.302
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1800,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.225,
+   "wall_s": 1.9436,
+   "x_realtime": 30.871,
+   "reps": [
+    1.9563,
+    1.9436,
+    1.9381
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1800,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1542,
+   "wall_s": 1.9498,
+   "x_realtime": 30.772,
+   "reps": [
+    1.9498,
+    1.9498,
+    1.9522
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1800,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1561,
+   "wall_s": 1.9597,
+   "x_realtime": 30.617,
+   "reps": [
+    1.9643,
+    1.953,
+    1.9597
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1800,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1639,
+   "wall_s": 1.9811,
+   "x_realtime": 30.286,
+   "reps": [
+    1.975,
+    1.9868,
+    1.9811
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1303,
+   "seeks": 13,
+   "xfer_fail": 0,
+   "init_s": 0.1607,
+   "wall_s": 3.3701,
+   "x_realtime": 17.804,
+   "reps": [
+    3.3701,
+    3.3604,
+    3.3834
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1499,
+   "seeks": 14,
+   "xfer_fail": 0,
+   "init_s": 0.1617,
+   "wall_s": 3.52,
+   "x_realtime": 17.045,
+   "reps": [
+    3.5174,
+    3.52,
+    3.5228
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1604,
+   "seeks": 14,
+   "xfer_fail": 0,
+   "init_s": 0.1631,
+   "wall_s": 3.5395,
+   "x_realtime": 16.952,
+   "reps": [
+    3.5395,
+    3.5376,
+    3.5478
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1716,
+   "seeks": 14,
+   "xfer_fail": 0,
+   "init_s": 0.1591,
+   "wall_s": 3.5433,
+   "x_realtime": 16.933,
+   "reps": [
+    3.545,
+    3.5433,
+    3.5378
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1830,
+   "seeks": 30,
+   "xfer_fail": 0,
+   "init_s": 0.1555,
+   "wall_s": 7.9335,
+   "x_realtime": 7.563,
+   "reps": [
+    7.9335
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 3615,
+   "seeks": 60,
+   "xfer_fail": 0,
+   "init_s": 0.1668,
+   "wall_s": 15.8463,
+   "x_realtime": 3.786,
+   "reps": [
+    15.8463
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 7185,
+   "seeks": 120,
+   "xfer_fail": 0,
+   "init_s": 0.1592,
+   "wall_s": 31.9013,
+   "x_realtime": 1.881,
+   "reps": [
+    31.9013
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 15330,
+   "seeks": 240,
+   "xfer_fail": 0,
+   "init_s": 0.1589,
+   "wall_s": 64.0996,
+   "x_realtime": 0.936,
+   "reps": [
+    64.0996
+   ]
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "mode": "keyonly",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 0,
+   "selected": 14,
+   "decoded": 14,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1609,
+   "wall_s": 0.058,
+   "x_realtime": 1034.843
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0538,
+   "wall_s": 1.9549,
+   "x_realtime": 30.692,
+   "reps": [
+    1.9567,
+    1.9438,
+    1.9549
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0532,
+   "wall_s": 1.9558,
+   "x_realtime": 30.678,
+   "reps": [
+    1.9369,
+    1.9558,
+    1.9853
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0532,
+   "wall_s": 1.9457,
+   "x_realtime": 30.837,
+   "reps": [
+    1.9444,
+    1.9457,
+    1.9671
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0533,
+   "wall_s": 1.9611,
+   "x_realtime": 30.595,
+   "reps": [
+    1.9764,
+    1.9611,
+    1.9331
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 775,
+   "seeks": 25,
+   "xfer_fail": 0,
+   "init_s": 0.0534,
+   "wall_s": 2.3768,
+   "x_realtime": 25.244,
+   "reps": [
+    2.3352,
+    2.3813,
+    2.3768
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1150,
+   "seeks": 25,
+   "xfer_fail": 0,
+   "init_s": 0.0533,
+   "wall_s": 2.8324,
+   "x_realtime": 21.183,
+   "reps": [
+    2.8278,
+    2.8379,
+    2.8324
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1350,
+   "seeks": 20,
+   "xfer_fail": 0,
+   "init_s": 0.0533,
+   "wall_s": 2.7738,
+   "x_realtime": 21.631,
+   "reps": [
+    2.7738,
+    2.771,
+    2.781
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1715,
+   "seeks": 20,
+   "xfer_fail": 0,
+   "init_s": 0.0537,
+   "wall_s": 3.2618,
+   "x_realtime": 18.395,
+   "reps": [
+    3.2618,
+    3.1754,
+    3.2897
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 780,
+   "seeks": 30,
+   "xfer_fail": 0,
+   "init_s": 0.0532,
+   "wall_s": 2.6582,
+   "x_realtime": 22.572,
+   "reps": [
+    2.6582
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1710,
+   "seeks": 60,
+   "xfer_fail": 0,
+   "init_s": 0.0532,
+   "wall_s": 5.4147,
+   "x_realtime": 11.081,
+   "reps": [
+    5.4147
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 3600,
+   "seeks": 120,
+   "xfer_fail": 0,
+   "init_s": 0.0534,
+   "wall_s": 10.9803,
+   "x_realtime": 5.464,
+   "reps": [
+    10.9803
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 7380,
+   "seeks": 240,
+   "xfer_fail": 0,
+   "init_s": 0.0533,
+   "wall_s": 22.167,
+   "x_realtime": 2.707,
+   "reps": [
+    22.167
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "mode": "keyonly",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 0,
+   "selected": 25,
+   "decoded": 25,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0535,
+   "wall_s": 0.1135,
+   "x_realtime": 528.577
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.2475,
+   "wall_s": 1.926,
+   "x_realtime": 31.153,
+   "reps": [
+    1.9342,
+    1.926,
+    1.9167
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1858,
+   "wall_s": 1.9327,
+   "x_realtime": 31.045,
+   "reps": [
+    1.9327,
+    1.9286,
+    1.9341
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1863,
+   "wall_s": 1.9397,
+   "x_realtime": 30.933,
+   "reps": [
+    1.9449,
+    1.9397,
+    1.9108
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1911,
+   "wall_s": 1.9849,
+   "x_realtime": 30.228,
+   "reps": [
+    1.9223,
+    1.9849,
+    2.0166
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 775,
+   "seeks": 25,
+   "xfer_fail": 0,
+   "init_s": 0.1963,
+   "wall_s": 6.4708,
+   "x_realtime": 9.272,
+   "reps": [
+    6.4288,
+    6.4708,
+    6.4724
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1150,
+   "seeks": 25,
+   "xfer_fail": 0,
+   "init_s": 0.1946,
+   "wall_s": 6.5026,
+   "x_realtime": 9.227,
+   "reps": [
+    6.4996,
+    6.5026,
+    6.5117
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1350,
+   "seeks": 20,
+   "xfer_fail": 0,
+   "init_s": 0.1943,
+   "wall_s": 5.2568,
+   "x_realtime": 11.414,
+   "reps": [
+    5.2619,
+    5.2392,
+    5.2568
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1715,
+   "seeks": 20,
+   "xfer_fail": 0,
+   "init_s": 0.1884,
+   "wall_s": 5.2481,
+   "x_realtime": 11.433,
+   "reps": [
+    5.2481,
+    5.2622,
+    5.2412
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 780,
+   "seeks": 30,
+   "xfer_fail": 0,
+   "init_s": 0.1885,
+   "wall_s": 7.8163,
+   "x_realtime": 7.676,
+   "reps": [
+    7.8163
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1710,
+   "seeks": 60,
+   "xfer_fail": 0,
+   "init_s": 0.196,
+   "wall_s": 15.9046,
+   "x_realtime": 3.772,
+   "reps": [
+    15.9046
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 3600,
+   "seeks": 120,
+   "xfer_fail": 0,
+   "init_s": 0.1924,
+   "wall_s": 31.9657,
+   "x_realtime": 1.877,
+   "reps": [
+    31.9657
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 7380,
+   "seeks": 240,
+   "xfer_fail": 0,
+   "init_s": 0.1932,
+   "wall_s": 64.0728,
+   "x_realtime": 0.936,
+   "reps": [
+    64.0728
+   ]
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "mode": "keyonly",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 0,
+   "selected": 25,
+   "decoded": 25,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1881,
+   "wall_s": 0.1026,
+   "x_realtime": 584.542
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.2482,
+   "wall_s": 8.7431,
+   "x_realtime": 6.863,
+   "reps": [
+    8.7419,
+    8.8148,
+    8.7431
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.2486,
+   "wall_s": 8.7051,
+   "x_realtime": 6.893,
+   "reps": [
+    8.7051,
+    8.642,
+    8.7944
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.2484,
+   "wall_s": 8.6834,
+   "x_realtime": 6.91,
+   "reps": [
+    8.6834,
+    8.593,
+    8.6899
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.2481,
+   "wall_s": 8.8022,
+   "x_realtime": 6.816,
+   "reps": [
+    8.6681,
+    8.8022,
+    8.8403
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 330,
+   "seeks": 30,
+   "xfer_fail": 0,
+   "init_s": 0.2484,
+   "wall_s": 8.6114,
+   "x_realtime": 6.968,
+   "reps": [
+    8.6072,
+    8.737,
+    8.6114
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 800,
+   "seeks": 50,
+   "xfer_fail": 0,
+   "init_s": 0.2485,
+   "wall_s": 15.4157,
+   "x_realtime": 3.892,
+   "reps": [
+    15.401,
+    15.4567,
+    15.4157
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1200,
+   "seeks": 40,
+   "xfer_fail": 0,
+   "init_s": 0.2485,
+   "wall_s": 15.0305,
+   "x_realtime": 3.992,
+   "reps": [
+    15.0305,
+    15.1173,
+    15.0102
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1630,
+   "seeks": 40,
+   "xfer_fail": 0,
+   "init_s": 0.2482,
+   "wall_s": 16.9144,
+   "x_realtime": 3.547,
+   "reps": [
+    16.9144,
+    17.023,
+    16.8516
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 330,
+   "seeks": 30,
+   "xfer_fail": 0,
+   "init_s": 0.2485,
+   "wall_s": 8.7036,
+   "x_realtime": 6.894,
+   "reps": [
+    8.7036
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 810,
+   "seeks": 60,
+   "xfer_fail": 0,
+   "init_s": 0.2484,
+   "wall_s": 17.7038,
+   "x_realtime": 3.389,
+   "reps": [
+    17.7038
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1800,
+   "seeks": 120,
+   "xfer_fail": 0,
+   "init_s": 0.2486,
+   "wall_s": 35.5581,
+   "x_realtime": 1.687,
+   "reps": [
+    35.5581
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 3780,
+   "seeks": 240,
+   "xfer_fail": 0,
+   "init_s": 0.2486,
+   "wall_s": 72.1795,
+   "x_realtime": 0.831,
+   "reps": [
+    72.1795
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "mode": "keyonly",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 0,
+   "selected": 50,
+   "decoded": 50,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.2482,
+   "wall_s": 0.6771,
+   "x_realtime": 88.616
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.4231,
+   "wall_s": 7.4582,
+   "x_realtime": 8.045,
+   "reps": [
+    7.4763,
+    7.4568,
+    7.4582
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.3818,
+   "wall_s": 7.511,
+   "x_realtime": 7.988,
+   "reps": [
+    7.5136,
+    7.5072,
+    7.511
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.38,
+   "wall_s": 7.5443,
+   "x_realtime": 7.953,
+   "reps": [
+    7.5443,
+    7.5301,
+    7.5574
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.3815,
+   "wall_s": 7.6001,
+   "x_realtime": 7.895,
+   "reps": [
+    7.582,
+    7.6001,
+    7.6032
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 330,
+   "seeks": 30,
+   "xfer_fail": 0,
+   "init_s": 0.3821,
+   "wall_s": 7.8694,
+   "x_realtime": 7.624,
+   "reps": [
+    7.871,
+    7.8386,
+    7.8694
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 800,
+   "seeks": 50,
+   "xfer_fail": 0,
+   "init_s": 0.3861,
+   "wall_s": 13.1887,
+   "x_realtime": 4.549,
+   "reps": [
+    13.1844,
+    13.1887,
+    13.195
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1200,
+   "seeks": 40,
+   "xfer_fail": 0,
+   "init_s": 0.3849,
+   "wall_s": 13.0682,
+   "x_realtime": 4.591,
+   "reps": [
+    13.0682,
+    13.0924,
+    13.0613
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1630,
+   "seeks": 40,
+   "xfer_fail": 0,
+   "init_s": 0.3801,
+   "wall_s": 15.4756,
+   "x_realtime": 3.877,
+   "reps": [
+    15.4896,
+    15.4753,
+    15.4756
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 330,
+   "seeks": 30,
+   "xfer_fail": 0,
+   "init_s": 0.3886,
+   "wall_s": 7.8599,
+   "x_realtime": 7.634,
+   "reps": [
+    7.8599
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 810,
+   "seeks": 60,
+   "xfer_fail": 0,
+   "init_s": 0.3876,
+   "wall_s": 15.8415,
+   "x_realtime": 3.788,
+   "reps": [
+    15.8415
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1800,
+   "seeks": 120,
+   "xfer_fail": 0,
+   "init_s": 0.3824,
+   "wall_s": 31.9378,
+   "x_realtime": 1.879,
+   "reps": [
+    31.9378
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 3780,
+   "seeks": 240,
+   "xfer_fail": 0,
+   "init_s": 0.3827,
+   "wall_s": 64.0219,
+   "x_realtime": 0.937,
+   "reps": [
+    64.0219
+   ]
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "mode": "keyonly",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 0,
+   "selected": 50,
+   "decoded": 50,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.3878,
+   "wall_s": 0.6348,
+   "x_realtime": 94.523
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.2534,
+   "wall_s": 8.1009,
+   "x_realtime": 7.407,
+   "reps": [
+    8.1158,
+    8.1009,
+    8.0308
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.253,
+   "wall_s": 8.0403,
+   "x_realtime": 7.462,
+   "reps": [
+    8.1794,
+    8.0403,
+    8.011
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.2533,
+   "wall_s": 8.1463,
+   "x_realtime": 7.365,
+   "reps": [
+    8.1465,
+    8.0925,
+    8.1463
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.2534,
+   "wall_s": 8.0992,
+   "x_realtime": 7.408,
+   "reps": [
+    8.0992,
+    8.0365,
+    8.1428
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 540,
+   "seeks": 30,
+   "xfer_fail": 0,
+   "init_s": 0.2529,
+   "wall_s": 8.9886,
+   "x_realtime": 6.675,
+   "reps": [
+    8.9886,
+    9.0594,
+    8.9665
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1040,
+   "seeks": 42,
+   "xfer_fail": 0,
+   "init_s": 0.2534,
+   "wall_s": 14.2589,
+   "x_realtime": 4.208,
+   "reps": [
+    14.2625,
+    14.2589,
+    14.2547
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1449,
+   "seeks": 40,
+   "xfer_fail": 0,
+   "init_s": 0.253,
+   "wall_s": 15.7196,
+   "x_realtime": 3.817,
+   "reps": [
+    15.7152,
+    15.7196,
+    15.762
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1845,
+   "seeks": 37,
+   "xfer_fail": 0,
+   "init_s": 0.2535,
+   "wall_s": 16.7472,
+   "x_realtime": 3.583,
+   "reps": [
+    16.6379,
+    16.7506,
+    16.7472
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 540,
+   "seeks": 30,
+   "xfer_fail": 0,
+   "init_s": 0.2531,
+   "wall_s": 8.9886,
+   "x_realtime": 6.675,
+   "reps": [
+    8.9886
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1110,
+   "seeks": 60,
+   "xfer_fail": 0,
+   "init_s": 0.2529,
+   "wall_s": 18.4068,
+   "x_realtime": 3.26,
+   "reps": [
+    18.4068
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 2280,
+   "seeks": 120,
+   "xfer_fail": 0,
+   "init_s": 0.2532,
+   "wall_s": 36.9681,
+   "x_realtime": 1.623,
+   "reps": [
+    36.9681
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 4620,
+   "seeks": 240,
+   "xfer_fail": 0,
+   "init_s": 0.2531,
+   "wall_s": 74.0084,
+   "x_realtime": 0.811,
+   "reps": [
+    74.0084
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "mode": "keyonly",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 0,
+   "selected": 42,
+   "decoded": 42,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.2533,
+   "wall_s": 0.6101,
+   "x_realtime": 98.344
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.4291,
+   "wall_s": 7.5576,
+   "x_realtime": 7.939,
+   "reps": [
+    7.5576,
+    7.5449,
+    7.5589
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.3859,
+   "wall_s": 7.5849,
+   "x_realtime": 7.91,
+   "reps": [
+    7.5982,
+    7.5849,
+    7.5844
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.3838,
+   "wall_s": 7.615,
+   "x_realtime": 7.879,
+   "reps": [
+    7.6148,
+    7.6296,
+    7.615
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1500,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.3863,
+   "wall_s": 7.683,
+   "x_realtime": 7.809,
+   "reps": [
+    7.6874,
+    7.6716,
+    7.683
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 540,
+   "seeks": 30,
+   "xfer_fail": 0,
+   "init_s": 0.3906,
+   "wall_s": 7.8666,
+   "x_realtime": 7.627,
+   "reps": [
+    7.8595,
+    7.8666,
+    7.881
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1040,
+   "seeks": 42,
+   "xfer_fail": 0,
+   "init_s": 0.3866,
+   "wall_s": 11.9327,
+   "x_realtime": 5.028,
+   "reps": [
+    11.9327,
+    12.1732,
+    11.9169
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 1449,
+   "seeks": 40,
+   "xfer_fail": 0,
+   "init_s": 0.3844,
+   "wall_s": 13.22,
+   "x_realtime": 4.539,
+   "reps": [
+    13.4563,
+    13.22,
+    13.207
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 1845,
+   "seeks": 37,
+   "xfer_fail": 0,
+   "init_s": 0.3838,
+   "wall_s": 14.9255,
+   "x_realtime": 4.02,
+   "reps": [
+    14.927,
+    14.9163,
+    14.9255
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 540,
+   "seeks": 30,
+   "xfer_fail": 0,
+   "init_s": 0.3877,
+   "wall_s": 7.8585,
+   "x_realtime": 7.635,
+   "reps": [
+    7.8585
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 1110,
+   "seeks": 60,
+   "xfer_fail": 0,
+   "init_s": 0.3895,
+   "wall_s": 16.0023,
+   "x_realtime": 3.749,
+   "reps": [
+    16.0023
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 2280,
+   "seeks": 120,
+   "xfer_fail": 0,
+   "init_s": 0.3919,
+   "wall_s": 32.4154,
+   "x_realtime": 1.851,
+   "reps": [
+    32.4154
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 4620,
+   "seeks": 240,
+   "xfer_fail": 0,
+   "init_s": 0.3906,
+   "wall_s": 66.0034,
+   "x_realtime": 0.909,
+   "reps": [
+    66.0034
+   ]
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "mode": "keyonly",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 0,
+   "selected": 42,
+   "decoded": 42,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.3901,
+   "wall_s": 0.5356,
+   "x_realtime": 112.018
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 3000,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0208,
+   "wall_s": 1.5983,
+   "x_realtime": 37.54,
+   "reps": [
+    1.5926,
+    1.5983,
+    1.6038
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 3000,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0207,
+   "wall_s": 1.5404,
+   "x_realtime": 38.951,
+   "reps": [
+    1.5737,
+    1.539,
+    1.5404
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 3000,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0209,
+   "wall_s": 1.5345,
+   "x_realtime": 39.101,
+   "reps": [
+    1.5229,
+    1.5345,
+    1.5473
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 3000,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0207,
+   "wall_s": 1.5408,
+   "x_realtime": 38.941,
+   "reps": [
+    1.5438,
+    1.5408,
+    1.5286
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1194,
+   "seeks": 30,
+   "xfer_fail": 0,
+   "init_s": 0.0208,
+   "wall_s": 1.3451,
+   "x_realtime": 44.606,
+   "reps": [
+    1.3451,
+    1.3891,
+    1.3316
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 2187,
+   "seeks": 31,
+   "xfer_fail": 0,
+   "init_s": 0.0206,
+   "wall_s": 1.8306,
+   "x_realtime": 32.776,
+   "reps": [
+    1.8105,
+    1.8381,
+    1.8306
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 2829,
+   "seeks": 32,
+   "xfer_fail": 0,
+   "init_s": 0.0207,
+   "wall_s": 2.3212,
+   "x_realtime": 25.849,
+   "reps": [
+    2.3091,
+    2.3212,
+    2.3303
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 3339,
+   "seeks": 31,
+   "xfer_fail": 0,
+   "init_s": 0.0207,
+   "wall_s": 2.6209,
+   "x_realtime": 22.893,
+   "reps": [
+    2.6209,
+    2.6407,
+    2.5853
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1194,
+   "seeks": 30,
+   "xfer_fail": 0,
+   "init_s": 0.0207,
+   "wall_s": 1.3195,
+   "x_realtime": 45.472,
+   "reps": [
+    1.3195
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 2736,
+   "seeks": 60,
+   "xfer_fail": 0,
+   "init_s": 0.0207,
+   "wall_s": 2.801,
+   "x_realtime": 21.421,
+   "reps": [
+    2.801
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 5820,
+   "seeks": 120,
+   "xfer_fail": 0,
+   "init_s": 0.0225,
+   "wall_s": 5.8941,
+   "x_realtime": 10.18,
+   "reps": [
+    5.8941
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 11760,
+   "seeks": 240,
+   "xfer_fail": 0,
+   "init_s": 0.0207,
+   "wall_s": 11.6976,
+   "x_realtime": 5.129,
+   "reps": [
+    11.6976
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "mode": "keyonly",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 0,
+   "selected": 32,
+   "decoded": 32,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0207,
+   "wall_s": 0.0904,
+   "x_realtime": 663.749
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 3000,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1979,
+   "wall_s": 3.2245,
+   "x_realtime": 18.608,
+   "reps": [
+    3.2406,
+    3.219,
+    3.2245
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 3000,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1554,
+   "wall_s": 3.2283,
+   "x_realtime": 18.586,
+   "reps": [
+    3.2283,
+    3.2284,
+    3.218
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 3000,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1518,
+   "wall_s": 3.2418,
+   "x_realtime": 18.508,
+   "reps": [
+    3.2376,
+    3.2418,
+    3.2504
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 3000,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1604,
+   "wall_s": 3.272,
+   "x_realtime": 18.337,
+   "reps": [
+    3.2613,
+    3.272,
+    3.2825
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1194,
+   "seeks": 30,
+   "xfer_fail": 0,
+   "init_s": 0.1593,
+   "wall_s": 7.7855,
+   "x_realtime": 7.707,
+   "reps": [
+    7.7763,
+    7.7875,
+    7.7855
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 2187,
+   "seeks": 31,
+   "xfer_fail": 0,
+   "init_s": 0.1593,
+   "wall_s": 8.1087,
+   "x_realtime": 7.399,
+   "reps": [
+    8.1089,
+    8.1062,
+    8.1087
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 2829,
+   "seeks": 32,
+   "xfer_fail": 0,
+   "init_s": 0.1657,
+   "wall_s": 8.4006,
+   "x_realtime": 7.142,
+   "reps": [
+    8.4092,
+    8.4006,
+    8.3935
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 3339,
+   "seeks": 31,
+   "xfer_fail": 0,
+   "init_s": 0.1539,
+   "wall_s": 8.1423,
+   "x_realtime": 7.369,
+   "reps": [
+    8.1477,
+    8.1323,
+    8.1423
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 1194,
+   "seeks": 30,
+   "xfer_fail": 0,
+   "init_s": 0.1546,
+   "wall_s": 7.7801,
+   "x_realtime": 7.712,
+   "reps": [
+    7.7801
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 2736,
+   "seeks": 60,
+   "xfer_fail": 0,
+   "init_s": 0.1594,
+   "wall_s": 15.8313,
+   "x_realtime": 3.79,
+   "reps": [
+    15.8313
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 5820,
+   "seeks": 120,
+   "xfer_fail": 0,
+   "init_s": 0.1561,
+   "wall_s": 31.8531,
+   "x_realtime": 1.884,
+   "reps": [
+    31.8531
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 11760,
+   "seeks": 240,
+   "xfer_fail": 0,
+   "init_s": 0.157,
+   "wall_s": 63.7872,
+   "x_realtime": 0.941,
+   "reps": [
+    63.7872
+   ]
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "mode": "keyonly",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 0,
+   "selected": 32,
+   "decoded": 32,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1586,
+   "wall_s": 0.0826,
+   "x_realtime": 726.519
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 3000,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0193,
+   "wall_s": 1.446,
+   "x_realtime": 41.494,
+   "reps": [
+    1.446,
+    1.448,
+    1.4013
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 3000,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0192,
+   "wall_s": 1.4208,
+   "x_realtime": 42.23,
+   "reps": [
+    1.4208,
+    1.4168,
+    1.4377
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 3000,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0191,
+   "wall_s": 1.4072,
+   "x_realtime": 42.638,
+   "reps": [
+    1.4072,
+    1.4037,
+    1.4278
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "mode": "seq",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 3000,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0192,
+   "wall_s": 1.4078,
+   "x_realtime": 42.62,
+   "reps": [
+    1.4433,
+    1.3969,
+    1.4078
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 2240,
+   "seeks": 14,
+   "xfer_fail": 0,
+   "init_s": 0.0191,
+   "wall_s": 1.3497,
+   "x_realtime": 44.454,
+   "reps": [
+    1.3497,
+    1.3283,
+    1.3526
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 2640,
+   "seeks": 14,
+   "xfer_fail": 0,
+   "init_s": 0.0192,
+   "wall_s": 1.5579,
+   "x_realtime": 38.513,
+   "reps": [
+    1.5393,
+    1.5579,
+    1.5737
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 3029,
+   "seeks": 14,
+   "xfer_fail": 0,
+   "init_s": 0.0191,
+   "wall_s": 1.8014,
+   "x_realtime": 33.307,
+   "reps": [
+    1.7942,
+    1.8014,
+    1.8177
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "mode": "hybrid",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 3335,
+   "seeks": 13,
+   "xfer_fail": 0,
+   "init_s": 0.0191,
+   "wall_s": 1.9092,
+   "x_realtime": 31.427,
+   "reps": [
+    1.9439,
+    1.9081,
+    1.9092
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 0.5,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 3084,
+   "seeks": 30,
+   "xfer_fail": 0,
+   "init_s": 0.0191,
+   "wall_s": 2.1277,
+   "x_realtime": 28.199,
+   "reps": [
+    2.1277
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 6384,
+   "seeks": 60,
+   "xfer_fail": 0,
+   "init_s": 0.0192,
+   "wall_s": 4.3872,
+   "x_realtime": 13.676,
+   "reps": [
+    4.3872
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 2,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 12984,
+   "seeks": 120,
+   "xfer_fail": 0,
+   "init_s": 0.0193,
+   "wall_s": 8.901,
+   "x_realtime": 6.741,
+   "reps": [
+    8.901
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "mode": "seek",
+   "rate": 4,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 26030,
+   "seeks": 240,
+   "xfer_fail": 0,
+   "init_s": 0.0194,
+   "wall_s": 17.6241,
+   "x_realtime": 3.404,
+   "reps": [
+    17.6241
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "mode": "keyonly",
+   "rate": 1,
+   "threads": 20,
+   "video_s": 60.0,
+   "targets": 0,
+   "selected": 15,
+   "decoded": 15,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.0191,
+   "wall_s": 0.0597,
+   "x_realtime": 1005.185
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 3000,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1925,
+   "wall_s": 3.2362,
+   "x_realtime": 18.54,
+   "reps": [
+    3.24,
+    3.2362,
+    3.2306
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 3000,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1523,
+   "wall_s": 3.2325,
+   "x_realtime": 18.561,
+   "reps": [
+    3.2398,
+    3.2323,
+    3.2325
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 3000,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1546,
+   "wall_s": 3.2647,
+   "x_realtime": 18.378,
+   "reps": [
+    3.2647,
+    3.2438,
+    3.277
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "mode": "seq",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 3000,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1536,
+   "wall_s": 3.2752,
+   "x_realtime": 18.319,
+   "reps": [
+    3.2752,
+    3.2731,
+    3.2868
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 2240,
+   "seeks": 14,
+   "xfer_fail": 0,
+   "init_s": 0.1585,
+   "wall_s": 3.6255,
+   "x_realtime": 16.549,
+   "reps": [
+    3.6255,
+    3.6333,
+    3.6252
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 2640,
+   "seeks": 14,
+   "xfer_fail": 0,
+   "init_s": 0.1507,
+   "wall_s": 3.6888,
+   "x_realtime": 16.265,
+   "reps": [
+    3.6865,
+    3.6888,
+    3.7029
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 3029,
+   "seeks": 14,
+   "xfer_fail": 0,
+   "init_s": 0.1539,
+   "wall_s": 3.9701,
+   "x_realtime": 15.113,
+   "reps": [
+    3.9701,
+    4.2192,
+    3.9674
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "mode": "hybrid",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 3335,
+   "seeks": 13,
+   "xfer_fail": 0,
+   "init_s": 0.1539,
+   "wall_s": 4.2149,
+   "x_realtime": 14.235,
+   "reps": [
+    4.2149,
+    4.4656,
+    4.2049
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 0.5,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 30,
+   "selected": 30,
+   "decoded": 3084,
+   "seeks": 30,
+   "xfer_fail": 0,
+   "init_s": 0.1498,
+   "wall_s": 7.8953,
+   "x_realtime": 7.599,
+   "reps": [
+    7.8953
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 60,
+   "selected": 60,
+   "decoded": 6384,
+   "seeks": 60,
+   "xfer_fail": 0,
+   "init_s": 0.1583,
+   "wall_s": 15.9698,
+   "x_realtime": 3.757,
+   "reps": [
+    15.9698
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 2,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 120,
+   "selected": 120,
+   "decoded": 12984,
+   "seeks": 120,
+   "xfer_fail": 0,
+   "init_s": 0.1558,
+   "wall_s": 32.0571,
+   "x_realtime": 1.872,
+   "reps": [
+    32.0571
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "mode": "seek",
+   "rate": 4,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 240,
+   "selected": 240,
+   "decoded": 26030,
+   "seeks": 240,
+   "xfer_fail": 0,
+   "init_s": 0.1534,
+   "wall_s": 64.4142,
+   "x_realtime": 0.931,
+   "reps": [
+    64.4142
+   ]
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "mode": "keyonly",
+   "rate": 1,
+   "threads": 1,
+   "video_s": 60.0,
+   "targets": 0,
+   "selected": 15,
+   "decoded": 15,
+   "seeks": 0,
+   "xfer_fail": 0,
+   "init_s": 0.1551,
+   "wall_s": 0.0524,
+   "x_realtime": 1144.337
+  }
+ ],
+ "aggregate": [
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "seq",
+   "rate": 1,
+   "video_s_total": 300.0,
+   "wall_s": 3.927,
+   "x_realtime_aggregate": 76.392,
+   "per_stream_wall": [
+    3.8737,
+    3.8379,
+    3.8868,
+    3.7897,
+    3.8819
+   ],
+   "decoded": 1800
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 0.5,
+   "video_s_total": 300.0,
+   "wall_s": 3.113,
+   "x_realtime_aggregate": 96.377,
+   "per_stream_wall": [
+    3.0601,
+    3.0209,
+    3.0656,
+    3.0673,
+    3.032
+   ],
+   "decoded": 1303
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 1,
+   "video_s_total": 300.0,
+   "wall_s": 3.57,
+   "x_realtime_aggregate": 84.04,
+   "per_stream_wall": [
+    3.5155,
+    3.4813,
+    3.5297,
+    3.5087,
+    3.4771
+   ],
+   "decoded": 1499
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 2,
+   "video_s_total": 300.0,
+   "wall_s": 3.754,
+   "x_realtime_aggregate": 79.911,
+   "per_stream_wall": [
+    3.6964,
+    3.6721,
+    3.7066,
+    3.6394,
+    3.6623
+   ],
+   "decoded": 1604
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 4,
+   "video_s_total": 300.0,
+   "wall_s": 4.192,
+   "x_realtime_aggregate": 71.571,
+   "per_stream_wall": [
+    4.116,
+    4.0977,
+    4.1205,
+    4.1416,
+    4.1312
+   ],
+   "decoded": 1716
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "seq",
+   "rate": 1,
+   "video_s_total": 240.0,
+   "wall_s": 4.685,
+   "x_realtime_aggregate": 51.222,
+   "per_stream_wall": [
+    3.9041,
+    3.9067,
+    3.9175,
+    3.913
+   ],
+   "decoded": 1800
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 0.5,
+   "video_s_total": 240.0,
+   "wall_s": 4.857,
+   "x_realtime_aggregate": 49.412,
+   "per_stream_wall": [
+    4.3001,
+    3.8209,
+    3.68,
+    4.2864
+   ],
+   "decoded": 1303
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 1,
+   "video_s_total": 240.0,
+   "wall_s": 5.852,
+   "x_realtime_aggregate": 41.011,
+   "per_stream_wall": [
+    4.6286,
+    5.2106,
+    3.8786,
+    4.655
+   ],
+   "decoded": 1499
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 2,
+   "video_s_total": 240.0,
+   "wall_s": 6.387,
+   "x_realtime_aggregate": 37.576,
+   "per_stream_wall": [
+    5.7361,
+    5.489,
+    4.6151,
+    4.6981
+   ],
+   "decoded": 1604
+  },
+  {
+   "file": "C1_1080p30",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 4,
+   "video_s_total": 240.0,
+   "wall_s": 6.914,
+   "x_realtime_aggregate": 34.715,
+   "per_stream_wall": [
+    4.9016,
+    6.2666,
+    6.2286,
+    6.0427
+   ],
+   "decoded": 1716
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "seq",
+   "rate": 1,
+   "video_s_total": 300.0,
+   "wall_s": 7.847,
+   "x_realtime_aggregate": 38.232,
+   "per_stream_wall": [
+    7.7749,
+    7.6081,
+    7.7612,
+    7.7765,
+    7.6484
+   ],
+   "decoded": 1500
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 0.5,
+   "video_s_total": 300.0,
+   "wall_s": 5.424,
+   "x_realtime_aggregate": 55.308,
+   "per_stream_wall": [
+    5.2863,
+    5.3329,
+    5.3148,
+    5.281,
+    5.3362
+   ],
+   "decoded": 775
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 1,
+   "video_s_total": 300.0,
+   "wall_s": 7.276,
+   "x_realtime_aggregate": 41.229,
+   "per_stream_wall": [
+    7.1068,
+    7.0384,
+    7.2049,
+    7.1276,
+    7.172
+   ],
+   "decoded": 1150
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 2,
+   "video_s_total": 300.0,
+   "wall_s": 8.106,
+   "x_realtime_aggregate": 37.009,
+   "per_stream_wall": [
+    7.8477,
+    7.7481,
+    8.0221,
+    7.8486,
+    7.8616
+   ],
+   "decoded": 1350
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 4,
+   "video_s_total": 300.0,
+   "wall_s": 10.069,
+   "x_realtime_aggregate": 29.793,
+   "per_stream_wall": [
+    9.9397,
+    9.969,
+    9.9831,
+    9.89,
+    9.9525
+   ],
+   "decoded": 1715
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "seq",
+   "rate": 1,
+   "video_s_total": 240.0,
+   "wall_s": 4.639,
+   "x_realtime_aggregate": 51.733,
+   "per_stream_wall": [
+    3.9896,
+    3.9926,
+    3.9996,
+    3.9841
+   ],
+   "decoded": 1500
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 0.5,
+   "video_s_total": 240.0,
+   "wall_s": 7.385,
+   "x_realtime_aggregate": 32.497,
+   "per_stream_wall": [
+    6.59,
+    6.6026,
+    6.631,
+    6.4979
+   ],
+   "decoded": 775
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 1,
+   "video_s_total": 240.0,
+   "wall_s": 7.433,
+   "x_realtime_aggregate": 32.288,
+   "per_stream_wall": [
+    6.7463,
+    6.7444,
+    6.6312,
+    6.6111
+   ],
+   "decoded": 1150
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 2,
+   "video_s_total": 240.0,
+   "wall_s": 6.362,
+   "x_realtime_aggregate": 37.723,
+   "per_stream_wall": [
+    5.7477,
+    5.723,
+    5.6001,
+    5.6058
+   ],
+   "decoded": 1350
+  },
+  {
+   "file": "C2_1080p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 4,
+   "video_s_total": 240.0,
+   "wall_s": 7.65,
+   "x_realtime_aggregate": 31.373,
+   "per_stream_wall": [
+    6.964,
+    6.5762,
+    6.9431,
+    6.9324
+   ],
+   "decoded": 1715
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "seq",
+   "rate": 1,
+   "video_s_total": 300.0,
+   "wall_s": 33.79,
+   "x_realtime_aggregate": 8.878,
+   "per_stream_wall": [
+    33.5201,
+    33.4202,
+    33.3595,
+    33.3641,
+    33.2393
+   ],
+   "decoded": 1500
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 0.5,
+   "video_s_total": 300.0,
+   "wall_s": 13.493,
+   "x_realtime_aggregate": 22.234,
+   "per_stream_wall": [
+    12.9746,
+    13.1478,
+    12.9576,
+    13.0607,
+    12.8292
+   ],
+   "decoded": 330
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 1,
+   "video_s_total": 300.0,
+   "wall_s": 27.754,
+   "x_realtime_aggregate": 10.809,
+   "per_stream_wall": [
+    27.2495,
+    27.4198,
+    27.3285,
+    26.9879,
+    27.2852
+   ],
+   "decoded": 800
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 2,
+   "video_s_total": 300.0,
+   "wall_s": 34.051,
+   "x_realtime_aggregate": 8.81,
+   "per_stream_wall": [
+    33.4963,
+    33.2012,
+    33.7248,
+    33.65,
+    33.7201
+   ],
+   "decoded": 1200
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 4,
+   "video_s_total": 300.0,
+   "wall_s": 43.947,
+   "x_realtime_aggregate": 6.826,
+   "per_stream_wall": [
+    43.456,
+    43.5101,
+    43.5896,
+    43.2822,
+    43.641
+   ],
+   "decoded": 1630
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "seq",
+   "rate": 1,
+   "video_s_total": 240.0,
+   "wall_s": 16.87,
+   "x_realtime_aggregate": 14.227,
+   "per_stream_wall": [
+    15.8724,
+    15.8744,
+    15.8762,
+    15.8759
+   ],
+   "decoded": 1500
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 0.5,
+   "video_s_total": 240.0,
+   "wall_s": 9.324,
+   "x_realtime_aggregate": 25.74,
+   "per_stream_wall": [
+    8.1825,
+    8.0406,
+    8.5073,
+    8.511
+   ],
+   "decoded": 330
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 1,
+   "video_s_total": 240.0,
+   "wall_s": 16.944,
+   "x_realtime_aggregate": 14.164,
+   "per_stream_wall": [
+    15.3466,
+    15.5295,
+    14.8822,
+    16.125
+   ],
+   "decoded": 800
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 2,
+   "video_s_total": 240.0,
+   "wall_s": 18.6,
+   "x_realtime_aggregate": 12.903,
+   "per_stream_wall": [
+    16.9655,
+    16.3674,
+    17.1747,
+    17.8369
+   ],
+   "decoded": 1200
+  },
+  {
+   "file": "C2_2160p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 4,
+   "video_s_total": 240.0,
+   "wall_s": 22.444,
+   "x_realtime_aggregate": 10.693,
+   "per_stream_wall": [
+    20.8998,
+    21.6249,
+    21.4565,
+    21.3906
+   ],
+   "decoded": 1630
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "seq",
+   "rate": 1,
+   "video_s_total": 300.0,
+   "wall_s": 33.296,
+   "x_realtime_aggregate": 9.01,
+   "per_stream_wall": [
+    32.5676,
+    33.0222,
+    32.4993,
+    32.7062,
+    32.8474
+   ],
+   "decoded": 1500
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 0.5,
+   "video_s_total": 300.0,
+   "wall_s": 17.616,
+   "x_realtime_aggregate": 17.03,
+   "per_stream_wall": [
+    17.2251,
+    17.0239,
+    17.215,
+    17.0455,
+    17.2939
+   ],
+   "decoded": 540
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 1,
+   "video_s_total": 300.0,
+   "wall_s": 30.805,
+   "x_realtime_aggregate": 9.739,
+   "per_stream_wall": [
+    30.2188,
+    30.3555,
+    30.2126,
+    30.0241,
+    30.5223
+   ],
+   "decoded": 1040
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 2,
+   "video_s_total": 300.0,
+   "wall_s": 38.601,
+   "x_realtime_aggregate": 7.772,
+   "per_stream_wall": [
+    37.9081,
+    38.261,
+    37.9855,
+    37.9995,
+    38.2457
+   ],
+   "decoded": 1449
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 4,
+   "video_s_total": 300.0,
+   "wall_s": 47.941,
+   "x_realtime_aggregate": 6.258,
+   "per_stream_wall": [
+    47.3203,
+    47.595,
+    46.4357,
+    47.2594,
+    47.2548
+   ],
+   "decoded": 1845
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "seq",
+   "rate": 1,
+   "video_s_total": 240.0,
+   "wall_s": 17.127,
+   "x_realtime_aggregate": 14.013,
+   "per_stream_wall": [
+    16.2,
+    16.1964,
+    16.2079,
+    16.1988
+   ],
+   "decoded": 1500
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 0.5,
+   "video_s_total": 240.0,
+   "wall_s": 11.166,
+   "x_realtime_aggregate": 21.494,
+   "per_stream_wall": [
+    10.2634,
+    9.2569,
+    10.3518,
+    10.1312
+   ],
+   "decoded": 540
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 1,
+   "video_s_total": 240.0,
+   "wall_s": 17.578,
+   "x_realtime_aggregate": 13.653,
+   "per_stream_wall": [
+    15.5949,
+    16.8757,
+    16.1606,
+    15.9465
+   ],
+   "decoded": 1040
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 2,
+   "video_s_total": 240.0,
+   "wall_s": 22.021,
+   "x_realtime_aggregate": 10.899,
+   "per_stream_wall": [
+    21.1046,
+    18.5629,
+    20.5159,
+    21.1466
+   ],
+   "decoded": 1449
+  },
+  {
+   "file": "C3_2160p25",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 4,
+   "video_s_total": 240.0,
+   "wall_s": 25.176,
+   "x_realtime_aggregate": 9.533,
+   "per_stream_wall": [
+    24.314,
+    23.1327,
+    23.7702,
+    24.3001
+   ],
+   "decoded": 1845
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "seq",
+   "rate": 1,
+   "video_s_total": 300.0,
+   "wall_s": 5.384,
+   "x_realtime_aggregate": 55.719,
+   "per_stream_wall": [
+    5.3065,
+    5.3456,
+    5.3416,
+    5.2657,
+    5.329
+   ],
+   "decoded": 3000
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 0.5,
+   "video_s_total": 300.0,
+   "wall_s": 2.823,
+   "x_realtime_aggregate": 106.27,
+   "per_stream_wall": [
+    2.7077,
+    2.7821,
+    2.708,
+    2.7504,
+    2.7574
+   ],
+   "decoded": 1194
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 1,
+   "video_s_total": 300.0,
+   "wall_s": 4.499,
+   "x_realtime_aggregate": 66.687,
+   "per_stream_wall": [
+    4.3952,
+    4.3758,
+    4.4246,
+    4.4569,
+    4.4357
+   ],
+   "decoded": 2187
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 2,
+   "video_s_total": 300.0,
+   "wall_s": 5.585,
+   "x_realtime_aggregate": 53.717,
+   "per_stream_wall": [
+    5.4894,
+    5.5373,
+    5.5437,
+    5.5323,
+    5.4814
+   ],
+   "decoded": 2829
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 4,
+   "video_s_total": 300.0,
+   "wall_s": 6.544,
+   "x_realtime_aggregate": 45.845,
+   "per_stream_wall": [
+    6.4865,
+    6.4632,
+    6.4091,
+    6.5045,
+    6.4335
+   ],
+   "decoded": 3339
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "seq",
+   "rate": 1,
+   "video_s_total": 240.0,
+   "wall_s": 7.393,
+   "x_realtime_aggregate": 32.463,
+   "per_stream_wall": [
+    6.542,
+    6.5408,
+    6.5453,
+    6.5377
+   ],
+   "decoded": 3000
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 0.5,
+   "video_s_total": 240.0,
+   "wall_s": 8.966,
+   "x_realtime_aggregate": 26.769,
+   "per_stream_wall": [
+    8.2508,
+    8.2015,
+    8.2189,
+    8.2718
+   ],
+   "decoded": 1194
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 1,
+   "video_s_total": 240.0,
+   "wall_s": 9.226,
+   "x_realtime_aggregate": 26.013,
+   "per_stream_wall": [
+    8.614,
+    8.5993,
+    8.2375,
+    8.2462
+   ],
+   "decoded": 2187
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 2,
+   "video_s_total": 240.0,
+   "wall_s": 9.65,
+   "x_realtime_aggregate": 24.872,
+   "per_stream_wall": [
+    8.969,
+    8.9688,
+    9.0746,
+    9.0641
+   ],
+   "decoded": 2829
+  },
+  {
+   "file": "C4_1080p50",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 4,
+   "video_s_total": 240.0,
+   "wall_s": 10.885,
+   "x_realtime_aggregate": 22.048,
+   "per_stream_wall": [
+    9.4303,
+    9.4218,
+    10.3072,
+    10.3295
+   ],
+   "decoded": 3339
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "seq",
+   "rate": 1,
+   "video_s_total": 300.0,
+   "wall_s": 5.564,
+   "x_realtime_aggregate": 53.914,
+   "per_stream_wall": [
+    5.5283,
+    5.4934,
+    5.4867,
+    5.5138,
+    5.4943
+   ],
+   "decoded": 3000
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 0.5,
+   "video_s_total": 300.0,
+   "wall_s": 4.377,
+   "x_realtime_aggregate": 68.54,
+   "per_stream_wall": [
+    4.3151,
+    4.2938,
+    4.3361,
+    4.288,
+    4.3329
+   ],
+   "decoded": 2240
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 1,
+   "video_s_total": 300.0,
+   "wall_s": 5.098,
+   "x_realtime_aggregate": 58.844,
+   "per_stream_wall": [
+    5.004,
+    5.0378,
+    5.0578,
+    5.0141,
+    4.9596
+   ],
+   "decoded": 2640
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 2,
+   "video_s_total": 300.0,
+   "wall_s": 5.818,
+   "x_realtime_aggregate": 51.568,
+   "per_stream_wall": [
+    5.7769,
+    5.691,
+    5.7328,
+    5.7155,
+    5.7233
+   ],
+   "decoded": 3029
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "cpu",
+   "streams": 5,
+   "threads_per_stream": 4,
+   "mode": "hybrid",
+   "rate": 4,
+   "video_s_total": 300.0,
+   "wall_s": 6.391,
+   "x_realtime_aggregate": 46.942,
+   "per_stream_wall": [
+    6.2705,
+    6.3514,
+    6.3357,
+    6.3008,
+    6.307
+   ],
+   "decoded": 3335
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "seq",
+   "rate": 1,
+   "video_s_total": 240.0,
+   "wall_s": 7.393,
+   "x_realtime_aggregate": 32.464,
+   "per_stream_wall": [
+    6.5375,
+    6.5349,
+    6.5367,
+    6.5278
+   ],
+   "decoded": 3000
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 0.5,
+   "video_s_total": 240.0,
+   "wall_s": 7.57,
+   "x_realtime_aggregate": 31.705,
+   "per_stream_wall": [
+    7.0162,
+    7.0251,
+    6.7783,
+    6.5404
+   ],
+   "decoded": 2240
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 1,
+   "video_s_total": 240.0,
+   "wall_s": 7.819,
+   "x_realtime_aggregate": 30.695,
+   "per_stream_wall": [
+    7.1244,
+    7.0832,
+    7.097,
+    7.1665
+   ],
+   "decoded": 2640
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 2,
+   "video_s_total": 240.0,
+   "wall_s": 8.379,
+   "x_realtime_aggregate": 28.642,
+   "per_stream_wall": [
+    7.7166,
+    7.5371,
+    7.5683,
+    7.698
+   ],
+   "decoded": 3029
+  },
+  {
+   "file": "C5_1080p50",
+   "device": "nvdec",
+   "streams": 4,
+   "threads_per_stream": 1,
+   "mode": "hybrid",
+   "rate": 4,
+   "video_s_total": 240.0,
+   "wall_s": 9.207,
+   "x_realtime_aggregate": 26.067,
+   "per_stream_wall": [
+    8.534,
+    8.5706,
+    8.2051,
+    8.5851
+   ],
+   "decoded": 3335
+  }
+ ]
+}

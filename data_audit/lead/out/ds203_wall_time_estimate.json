@@ -1,0 +1,2032 @@
+{
+ "note": "Step 3.5: per-model x per-grid-rate wall time for ALL DS203 full videos (403 files, from out/DS203_codec_facts.json),\ncombining three separately measured or estimated components, each a lower-bound style rate model:\n  I/O    bytes read from LaCie / sustained O_DIRECT read rate (lacie_read_throughput.json). seq and skip read every\n         byte; hybrid reads the fraction of frames it decodes (single-stream NVDEC count) plus 12 ms per seek.\n  decode per centre format: hours / aggregate decode speed (x realtime) measured on the matching synthetic video\n         (throughput_decode.json + throughput_decode_addendum.json), best of {CPU 5x4 threads, NVDEC 4 sessions,\n         both together} x {seq, hybrid, skip}; dense-clip models (documented setting) need seq.\n  model  GPU-h on the RTX 4500 Ada from the 052590c FLOPs/input at 30% of dense BF16 peak, with inputs per video-hour\n         = 3600 R / frames_per_input on a fixed grid of R frames/s (clip models: non-overlapping clips of consecutive\n         grid frames); the 'doc' column uses the 052590c documented sampling instead (rescaled from 145.6 h to all files).\nWall time if the three stages are pipelined = max(component); the bottleneck is the arg max. Serial sum also given.\nResizing / colour conversion of sampled frames and host<->GPU copies of model inputs are not included.",
+ "video_hours_all_files": 150.33,
+ "bytes_all_files": 1360322947099,
+ "io_MBps_sustained": 116.9,
+ "formats": {
+  "C1_1080p30": {
+   "hours": 4.7,
+   "TB": 0.014
+  },
+  "C2_1080p25": {
+   "hours": 21.06,
+   "TB": 0.132
+  },
+  "C2_2160p25": {
+   "hours": 2.59,
+   "TB": 0.067
+  },
+  "C3_2160p25": {
+   "hours": 23.0,
+   "TB": 0.78
+  },
+  "C4_1080p50": {
+   "hours": 40.21,
+   "TB": 0.141
+  },
+  "C5_1080p50": {
+   "hours": 58.78,
+   "TB": 0.225
+  }
+ },
+ "decode_only": {
+  "0.5": {
+   "cpu seq": 5.33,
+   "cpu hybrid": 3.13,
+   "cpu skip": 2.86,
+   "nvdec seq": 5.36,
+   "nvdec hybrid": 5.27,
+   "nvdec skip": 3.08,
+   "cpu+nvdec seq": 3.28,
+   "cpu+nvdec skip": 1.81
+  },
+  "1": {
+   "cpu seq": 5.27,
+   "cpu hybrid": 4.77,
+   "cpu skip": 4.27,
+   "nvdec seq": 5.37,
+   "nvdec hybrid": 6.09,
+   "nvdec skip": 4.23,
+   "cpu+nvdec seq": 3.29,
+   "cpu+nvdec skip": 2.65
+  },
+  "2": {
+   "cpu seq": 5.29,
+   "cpu hybrid": 5.77,
+   "cpu skip": 4.94,
+   "nvdec seq": 5.4,
+   "nvdec hybrid": 6.66,
+   "nvdec skip": 4.82,
+   "cpu+nvdec seq": 3.31,
+   "cpu+nvdec skip": 3.06
+  },
+  "4": {
+   "cpu seq": 5.28,
+   "cpu hybrid": 6.96,
+   "cpu skip": 5.23,
+   "nvdec seq": 5.44,
+   "nvdec hybrid": 7.54,
+   "nvdec skip": 5.09,
+   "cpu+nvdec seq": 3.33,
+   "cpu+nvdec skip": 3.25
+  }
+ },
+ "io_only": {
+  "0.5": {
+   "seq_or_skip": 3.23,
+   "hybrid": 2.1
+  },
+  "1": {
+   "seq_or_skip": 3.23,
+   "hybrid": 3.11
+  },
+  "2": {
+   "seq_or_skip": 3.23,
+   "hybrid": 3.81
+  },
+  "4": {
+   "seq_or_skip": 3.23,
+   "hybrid": 3.92
+  }
+ },
+ "rows": [
+  {
+   "model": "Endo-FM (ViT-B video, 121M)",
+   "arm": "primary",
+   "frames_per_input": 16,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.07,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.31,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.15,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.03,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.3,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.59,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.6,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 7.08,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 30.0 frames/s consumed: seq)",
+     "model_gpu_h": 4.5,
+     "model_note": "",
+     "wall_pipelined_h": 4.5,
+     "wall_serial_h": 11.02,
+     "bottleneck": "model"
+    }
+   }
+  },
+  {
+   "model": "EndoViT (ViT-B/16, 85.8M)",
+   "arm": "primary",
+   "frames_per_input": 1,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.05,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.28,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.11,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.99,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.21,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.51,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.43,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 6.91,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip (1.00 frames/s -> grid 1)",
+     "model_gpu_h": 0.11,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.99,
+     "bottleneck": "I/O"
+    }
+   }
+  },
+  {
+   "model": "SurgeNetXL CAFormer-S18 (24.3M)",
+   "arm": "primary",
+   "frames_per_input": 1,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.01,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.24,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.03,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.91,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.05,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.35,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.1,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 6.58,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip (1.00 frames/s -> grid 1)",
+     "model_gpu_h": 0.03,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.91,
+     "bottleneck": "I/O"
+    }
+   }
+  },
+  {
+   "model": "SurgeNetXL DINO ViT-L/14 (~304M)",
+   "arm": "primary",
+   "frames_per_input": 1,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.25,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.48,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.49,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.38,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.99,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 7.28,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 1.98,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 8.46,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip (1.00 frames/s -> grid 1)",
+     "model_gpu_h": 0.49,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.38,
+     "bottleneck": "I/O"
+    }
+   }
+  },
+  {
+   "model": "SurgeNet / Public variants (CAFormer-S18)",
+   "arm": "primary",
+   "frames_per_input": 1,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.01,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.24,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.03,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.91,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.05,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.35,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.1,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 6.58,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip (1.00 frames/s -> grid 1)",
+     "model_gpu_h": 0.03,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.91,
+     "bottleneck": "I/O"
+    }
+   }
+  },
+  {
+   "model": "SurgVLP / HecVL / PeskaVLP (ResNet-50 visual)",
+   "arm": "primary",
+   "frames_per_input": 1,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.01,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.24,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.03,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.91,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.05,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.35,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.1,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 6.58,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip (1.00 frames/s -> grid 1)",
+     "model_gpu_h": 0.03,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.91,
+     "bottleneck": "I/O"
+    }
+   }
+  },
+  {
+   "model": "EndoMamba (24.46M)",
+   "arm": "primary",
+   "frames_per_input": 16,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.02,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.25,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.03,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.91,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.06,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.35,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.12,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 6.6,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 6.2 frames/s consumed: seq)",
+     "model_gpu_h": 0.19,
+     "model_note": "",
+     "wall_pipelined_h": 3.29,
+     "wall_serial_h": 6.71,
+     "bottleneck": "decode ~ I/O"
+    }
+   }
+  },
+  {
+   "model": "LemonFM (ConvNeXt-L, ~198M std)",
+   "arm": "primary",
+   "frames_per_input": 1,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.11,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.34,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.22,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.1,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.44,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.73,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.87,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 7.35,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip (1.00 frames/s -> grid 1)",
+     "model_gpu_h": 0.22,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.1,
+     "bottleneck": "I/O"
+    }
+   }
+  },
+  {
+   "model": "EndoSSL ViT-L (~304M std)",
+   "arm": "primary",
+   "frames_per_input": 1,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.19,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.42,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.38,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.26,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.76,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 7.05,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 1.51,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 7.99,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip (1.00 frames/s -> grid 1)",
+     "model_gpu_h": 0.38,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.26,
+     "bottleneck": "I/O"
+    }
+   }
+  },
+  {
+   "model": "SelfSupSurg (ResNet-50)",
+   "arm": "primary",
+   "frames_per_input": 1,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.01,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.24,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.03,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.91,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.05,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.35,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.1,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 6.58,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 5.0 frames/s consumed: seq)",
+     "model_gpu_h": 0.13,
+     "model_note": "",
+     "wall_pipelined_h": 3.29,
+     "wall_serial_h": 6.65,
+     "bottleneck": "decode ~ I/O"
+    }
+   }
+  },
+  {
+   "model": "SurgLIME (ViT-B/16 visual)",
+   "arm": "primary",
+   "frames_per_input": 1,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.05,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.29,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.11,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.99,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.21,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.51,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.43,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 6.91,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip (1.00 frames/s -> grid 1)",
+     "model_gpu_h": 0.11,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.99,
+     "bottleneck": "I/O"
+    }
+   }
+  },
+  {
+   "model": "PL-Stitch (ViT-B/16)",
+   "arm": "primary",
+   "frames_per_input": 1,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.05,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.29,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.11,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.99,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.21,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.51,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.43,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 6.91,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip (1.00 frames/s -> grid 1)",
+     "model_gpu_h": 0.11,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.99,
+     "bottleneck": "I/O"
+    }
+   }
+  },
+  {
+   "model": "Basel V-JEPA ViT-L (~304M std)",
+   "arm": "primary",
+   "frames_per_input": 16,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.09,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.33,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.19,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.07,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.38,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.67,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.75,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 7.23,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 16.0 frames/s consumed: seq)",
+     "model_gpu_h": 3.01,
+     "model_note": "",
+     "wall_pipelined_h": 3.29,
+     "wall_serial_h": 9.54,
+     "bottleneck": "decode ~ I/O"
+    }
+   }
+  },
+  {
+   "model": "Cosmos-H-Surgical v0.3.1 (~15.2B DiT)",
+   "arm": "primary",
+   "frames_per_input": 93,
+   "cells": {
+    "0.5": {
+     "io_h": 3.23,
+     "decode_h": 1.81,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 4.84,
+     "model_note": "",
+     "wall_pipelined_h": 4.84,
+     "wall_serial_h": 9.88,
+     "bottleneck": "model"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 9.67,
+     "model_note": "",
+     "wall_pipelined_h": 9.67,
+     "wall_serial_h": 15.55,
+     "bottleneck": "model"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 19.35,
+     "model_note": "",
+     "wall_pipelined_h": 19.35,
+     "wall_serial_h": 25.64,
+     "bottleneck": "model"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 38.69,
+     "model_note": "",
+     "wall_pipelined_h": 38.69,
+     "wall_serial_h": 45.17,
+     "bottleneck": "model"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 16.0 frames/s consumed: seq)",
+     "model_gpu_h": 154.68,
+     "model_note": "",
+     "wall_pipelined_h": 154.68,
+     "wall_serial_h": 161.2,
+     "bottleneck": "model"
+    }
+   }
+  },
+  {
+   "model": "Cosmos-H-Surgical Predict/Transfer 2.5 (2B)",
+   "arm": "primary",
+   "frames_per_input": 93,
+   "cells": {
+    "0.5": {
+     "io_h": 3.23,
+     "decode_h": 1.81,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 5.74,
+     "model_note": "",
+     "wall_pipelined_h": 5.74,
+     "wall_serial_h": 10.79,
+     "bottleneck": "model"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 11.49,
+     "model_note": "",
+     "wall_pipelined_h": 11.49,
+     "wall_serial_h": 17.37,
+     "bottleneck": "model"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 22.98,
+     "model_note": "",
+     "wall_pipelined_h": 22.98,
+     "wall_serial_h": 29.27,
+     "bottleneck": "model"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 45.95,
+     "model_note": "",
+     "wall_pipelined_h": 45.95,
+     "wall_serial_h": 52.43,
+     "bottleneck": "model"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 16.0 frames/s consumed: seq)",
+     "model_gpu_h": 183.7,
+     "model_note": "",
+     "wall_pipelined_h": 183.7,
+     "wall_serial_h": 190.22,
+     "bottleneck": "model"
+    }
+   }
+  },
+  {
+   "model": "Cosmos-H-Surgical-Simulator (~2B)",
+   "arm": "primary",
+   "frames_per_input": 13,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 1.12,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 6.35,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 2.24,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 8.12,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 4.48,
+     "model_note": "",
+     "wall_pipelined_h": 4.48,
+     "wall_serial_h": 10.78,
+     "bottleneck": "model"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 8.97,
+     "model_note": "",
+     "wall_pipelined_h": 8.97,
+     "wall_serial_h": 15.44,
+     "bottleneck": "model"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 10.0 frames/s consumed: seq)",
+     "model_gpu_h": 22.41,
+     "model_note": "",
+     "wall_pipelined_h": 22.41,
+     "wall_serial_h": 28.93,
+     "bottleneck": "model"
+    }
+   }
+  },
+  {
+   "model": "Cosmos-H-Dreams (~2B)",
+   "arm": "primary",
+   "frames_per_input": 12,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.91,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 6.14,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 1.82,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 7.7,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 3.64,
+     "model_note": "",
+     "wall_pipelined_h": 3.64,
+     "wall_serial_h": 9.94,
+     "bottleneck": "model"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 7.28,
+     "model_note": "",
+     "wall_pipelined_h": 7.28,
+     "wall_serial_h": 13.76,
+     "bottleneck": "model"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 10.0 frames/s consumed: seq)",
+     "model_gpu_h": 18.21,
+     "model_note": "",
+     "wall_pipelined_h": 18.21,
+     "wall_serial_h": 24.73,
+     "bottleneck": "model"
+    }
+   }
+  },
+  {
+   "model": "MedSora-B (86.47M)",
+   "arm": "primary",
+   "frames_per_input": 16,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.02,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.25,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.03,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.92,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.07,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.36,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.14,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 6.62,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 25.0 frames/s consumed: seq)",
+     "model_gpu_h": 0.87,
+     "model_note": "",
+     "wall_pipelined_h": 3.29,
+     "wall_serial_h": 7.4,
+     "bottleneck": "decode ~ I/O"
+    }
+   }
+  },
+  {
+   "model": "SG2VID (U-Net ~1.24B, inferred from fp32 file size)",
+   "arm": "primary",
+   "frames_per_input": 16,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 1.0,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 6.24,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 2.01,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 7.89,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 4.01,
+     "model_note": "",
+     "wall_pipelined_h": 4.01,
+     "wall_serial_h": 10.31,
+     "bottleneck": "model"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 8.03,
+     "model_note": "",
+     "wall_pipelined_h": 8.03,
+     "wall_serial_h": 14.51,
+     "bottleneck": "model"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip (4.00 frames/s -> grid 4)",
+     "model_gpu_h": 8.03,
+     "model_note": "",
+     "wall_pipelined_h": 8.03,
+     "wall_serial_h": 14.51,
+     "bottleneck": "model"
+    }
+   }
+  },
+  {
+   "model": "KVLR (~12.06B)",
+   "arm": "primary",
+   "frames_per_input": 17,
+   "cells": {
+    "0.5": {
+     "io_h": 3.23,
+     "decode_h": 1.81,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 6.46,
+     "model_note": "",
+     "wall_pipelined_h": 6.46,
+     "wall_serial_h": 11.5,
+     "bottleneck": "model"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 12.92,
+     "model_note": "",
+     "wall_pipelined_h": 12.92,
+     "wall_serial_h": 18.8,
+     "bottleneck": "model"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 25.84,
+     "model_note": "",
+     "wall_pipelined_h": 25.84,
+     "wall_serial_h": 32.13,
+     "bottleneck": "model"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 51.68,
+     "model_note": "",
+     "wall_pipelined_h": 51.68,
+     "wall_serial_h": 58.15,
+     "bottleneck": "model"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 30.0 frames/s consumed: seq)",
+     "model_gpu_h": 387.57,
+     "model_note": "",
+     "wall_pipelined_h": 387.57,
+     "wall_serial_h": 394.09,
+     "bottleneck": "model"
+    }
+   }
+  },
+  {
+   "model": "Open-Sora VAE v1.2 (384M whole)",
+   "arm": "secondary",
+   "frames_per_input": 17,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 2.35,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 7.59,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 4.71,
+     "model_note": "",
+     "wall_pipelined_h": 4.71,
+     "wall_serial_h": 10.59,
+     "bottleneck": "model"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 9.42,
+     "model_note": "",
+     "wall_pipelined_h": 9.42,
+     "wall_serial_h": 15.71,
+     "bottleneck": "model"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 18.83,
+     "model_note": "",
+     "wall_pipelined_h": 18.83,
+     "wall_serial_h": 25.31,
+     "bottleneck": "model"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 24.0 frames/s consumed: seq)",
+     "model_gpu_h": 112.98,
+     "model_note": "",
+     "wall_pipelined_h": 112.98,
+     "wall_serial_h": 119.5,
+     "bottleneck": "model"
+    }
+   }
+  },
+  {
+   "model": "VideoMAE-B (87M)",
+   "arm": "secondary",
+   "frames_per_input": 16,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.02,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.25,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.04,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.92,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.07,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.36,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.14,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 6.62,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 6.2 frames/s consumed: seq)",
+     "model_gpu_h": 0.22,
+     "model_note": "",
+     "wall_pipelined_h": 3.29,
+     "wall_serial_h": 6.74,
+     "bottleneck": "decode ~ I/O"
+    }
+   }
+  },
+  {
+   "model": "VideoMAE-L (305M)",
+   "arm": "secondary",
+   "frames_per_input": 16,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.06,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.29,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.12,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.0,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.24,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.53,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.47,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 6.95,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 6.2 frames/s consumed: seq)",
+     "model_gpu_h": 0.74,
+     "model_note": "",
+     "wall_pipelined_h": 3.29,
+     "wall_serial_h": 7.26,
+     "bottleneck": "decode ~ I/O"
+    }
+   }
+  },
+  {
+   "model": "VideoMAE-H (633M)",
+   "arm": "secondary",
+   "frames_per_input": 16,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.12,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.35,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.24,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.12,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.47,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.76,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.94,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 7.42,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 6.2 frames/s consumed: seq)",
+     "model_gpu_h": 1.47,
+     "model_note": "",
+     "wall_pipelined_h": 3.29,
+     "wall_serial_h": 7.99,
+     "bottleneck": "decode ~ I/O"
+    }
+   }
+  },
+  {
+   "model": "VideoMAE V2-g (1011M)",
+   "arm": "secondary",
+   "frames_per_input": 16,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.25,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.48,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.5,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.38,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 1.0,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 7.3,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 2.01,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 8.49,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 6.2 frames/s consumed: seq)",
+     "model_gpu_h": 3.14,
+     "model_note": "",
+     "wall_pipelined_h": 3.29,
+     "wall_serial_h": 9.66,
+     "bottleneck": "decode ~ I/O"
+    }
+   }
+  },
+  {
+   "model": "OmniTokenizer",
+   "arm": "secondary",
+   "frames_per_input": 17,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.02,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.26,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.05,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.93,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.1,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.39,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.19,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 6.67,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 25.0 frames/s consumed: seq)",
+     "model_gpu_h": 1.22,
+     "model_note": "",
+     "wall_pipelined_h": 3.29,
+     "wall_serial_h": 7.74,
+     "bottleneck": "decode ~ I/O"
+    }
+   }
+  },
+  {
+   "model": "Open-Sora-Plan v1.2 VAE (enc 94M)",
+   "arm": "secondary",
+   "frames_per_input": 25,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.58,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.81,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 1.15,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 7.03,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 2.3,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 8.6,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 4.61,
+     "model_note": "",
+     "wall_pipelined_h": 4.61,
+     "wall_serial_h": 11.09,
+     "bottleneck": "model"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 25.0 frames/s consumed: seq)",
+     "model_gpu_h": 28.81,
+     "model_note": "",
+     "wall_pipelined_h": 28.81,
+     "wall_serial_h": 35.33,
+     "bottleneck": "model"
+    }
+   }
+  },
+  {
+   "model": "WF-VAE-L 16ch (enc 84M)",
+   "arm": "secondary",
+   "frames_per_input": 33,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.51,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.75,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 1.03,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.91,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 2.06,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 8.35,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 4.12,
+     "model_note": "",
+     "wall_pipelined_h": 4.12,
+     "wall_serial_h": 10.6,
+     "bottleneck": "model"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 25.0 frames/s consumed: seq)",
+     "model_gpu_h": 25.74,
+     "model_note": "",
+     "wall_pipelined_h": 25.74,
+     "wall_serial_h": 32.27,
+     "bottleneck": "model"
+    }
+   }
+  },
+  {
+   "model": "CV-VAE (enc 68M)",
+   "arm": "secondary",
+   "frames_per_input": 17,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.42,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.65,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.83,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.71,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 1.67,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 7.96,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 3.33,
+     "model_note": "",
+     "wall_pipelined_h": 3.33,
+     "wall_serial_h": 9.81,
+     "bottleneck": "model ~ decode"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 25.0 frames/s consumed: seq)",
+     "model_gpu_h": 20.84,
+     "model_note": "",
+     "wall_pipelined_h": 20.84,
+     "wall_serial_h": 27.36,
+     "bottleneck": "model"
+    }
+   }
+  },
+  {
+   "model": "LARP-L (173M)",
+   "arm": "secondary",
+   "frames_per_input": 16,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.04,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.27,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.07,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.95,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.14,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.43,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.28,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 6.76,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 25.0 frames/s consumed: seq)",
+     "model_gpu_h": 1.75,
+     "model_note": "",
+     "wall_pipelined_h": 3.29,
+     "wall_serial_h": 8.27,
+     "bottleneck": "decode ~ I/O"
+    }
+   }
+  },
+  {
+   "model": "LeanVAE (39.8M)",
+   "arm": "secondary",
+   "frames_per_input": 17,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 0.02,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.25,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.04,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.92,
+     "bottleneck": "I/O"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.08,
+     "model_note": "",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.37,
+     "bottleneck": "I/O ~ decode"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 0.15,
+     "model_note": "",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 6.63,
+     "bottleneck": "decode ~ I/O"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 25.0 frames/s consumed: seq)",
+     "model_gpu_h": 0.94,
+     "model_note": "",
+     "wall_pipelined_h": 3.29,
+     "wall_serial_h": 7.47,
+     "bottleneck": "decode ~ I/O"
+    }
+   }
+  },
+  {
+   "model": "Reducio-VAE (437M whole)",
+   "arm": "secondary",
+   "frames_per_input": 16,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 2.68,
+     "model_note": "",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 7.91,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 5.36,
+     "model_note": "",
+     "wall_pipelined_h": 5.36,
+     "wall_serial_h": 11.24,
+     "bottleneck": "model"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 10.72,
+     "model_note": "",
+     "wall_pipelined_h": 10.72,
+     "wall_serial_h": 17.01,
+     "bottleneck": "model"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 21.43,
+     "model_note": "",
+     "wall_pipelined_h": 21.43,
+     "wall_serial_h": 27.91,
+     "bottleneck": "model"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 16.0 frames/s consumed: seq)",
+     "model_gpu_h": 85.72,
+     "model_note": "",
+     "wall_pipelined_h": 85.72,
+     "wall_serial_h": 92.24,
+     "bottleneck": "model"
+    }
+   }
+  },
+  {
+   "model": "Open-MAGVIT2 video",
+   "arm": "secondary",
+   "frames_per_input": 1,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": null,
+     "model_note": "not estimable (params / FLOPs not documented)",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 5.23,
+     "bottleneck": "decode (model n/e)"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": null,
+     "model_note": "not estimable (params / FLOPs not documented)",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.88,
+     "bottleneck": "I/O (model n/e)"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": null,
+     "model_note": "not estimable (params / FLOPs not documented)",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 6.29,
+     "bottleneck": "I/O ~ decode (model n/e)"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": null,
+     "model_note": "not estimable (params / FLOPs not documented)",
+     "wall_pipelined_h": 3.25,
+     "wall_serial_h": 6.48,
+     "bottleneck": "decode ~ I/O (model n/e)"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip (1.00 frames/s -> grid 1)",
+     "model_gpu_h": null,
+     "model_note": "not estimable (params / FLOPs not documented)",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 5.88,
+     "bottleneck": "I/O (model n/e)"
+    }
+   }
+  },
+  {
+   "model": "Cosmos tokenizer CV8x8x8 (Decision 005 reference)",
+   "arm": "reference",
+   "frames_per_input": 121,
+   "cells": {
+    "0.5": {
+     "io_h": 2.1,
+     "decode_h": 3.13,
+     "decode_path": "cpu hybrid",
+     "model_gpu_h": 1.51,
+     "model_note": "0.4-1.5 (high end used)",
+     "wall_pipelined_h": 3.13,
+     "wall_serial_h": 6.74,
+     "bottleneck": "decode"
+    },
+    "1": {
+     "io_h": 3.23,
+     "decode_h": 2.65,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 3.02,
+     "model_note": "0.9-3.0 (high end used)",
+     "wall_pipelined_h": 3.23,
+     "wall_serial_h": 8.9,
+     "bottleneck": "I/O ~ model"
+    },
+    "2": {
+     "io_h": 3.23,
+     "decode_h": 3.06,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 6.04,
+     "model_note": "1.7-6.0 (high end used)",
+     "wall_pipelined_h": 6.04,
+     "wall_serial_h": 12.33,
+     "bottleneck": "model"
+    },
+    "4": {
+     "io_h": 3.23,
+     "decode_h": 3.25,
+     "decode_path": "cpu+nvdec skip",
+     "model_gpu_h": 12.08,
+     "model_note": "3.4-12.1 (high end used)",
+     "wall_pipelined_h": 12.08,
+     "wall_serial_h": 18.56,
+     "bottleneck": "model"
+    },
+    "doc": {
+     "io_h": 3.23,
+     "decode_h": 3.29,
+     "decode_path": "cpu+nvdec seq (dense, 24.2 frames/s consumed: seq)",
+     "model_gpu_h": 73.06,
+     "model_note": "20.7-73.1 (high end used)",
+     "wall_pipelined_h": 73.06,
+     "wall_serial_h": 79.58,
+     "bottleneck": "model"
+    }
+   }
+  }
+ ]
+}

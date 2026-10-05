@@ -1,0 +1,183 @@
+{
+ "note": "Sequential read throughput of the DS203 full-video archive parts on LaCie (bytes only: dd with O_DIRECT to\n/dev/null, so neither the page cache nor any decoder is involved; nothing is extracted or decoded).\nPoints: 2 GiB at the start, middle and end of each of the six parts, plus one 16 GiB sustained read.",
+ "device": "LaCie d2 Professional, USB, rotational (lsblk ROTA=1, TRAN=usb)",
+ "points": [
+  {
+   "file": "Appendix300_Full_Videos.z01",
+   "offset_bytes": 0,
+   "bytes": 2147483648,
+   "wall_s": 15.433,
+   "MBps": 139.1,
+   "dd_tail": "2147483648 bytes (2.1 GB, 2.0 GiB) copied, 15.4261 s, 139 MB/s",
+   "position": 0.0
+  },
+  {
+   "file": "Appendix300_Full_Videos.z01",
+   "offset_bytes": 134217728000,
+   "bytes": 2147483648,
+   "wall_s": 19.479,
+   "MBps": 110.2,
+   "dd_tail": "2147483648 bytes (2.1 GB, 2.0 GiB) copied, 19.4717 s, 110 MB/s",
+   "position": 0.5
+  },
+  {
+   "file": "Appendix300_Full_Videos.z01",
+   "offset_bytes": 260382392320,
+   "bytes": 2147483648,
+   "wall_s": 14.185,
+   "MBps": 151.4,
+   "dd_tail": "2147483648 bytes (2.1 GB, 2.0 GiB) copied, 14.1775 s, 151 MB/s",
+   "position": 0.97
+  },
+  {
+   "file": "Appendix300_Full_Videos.z02",
+   "offset_bytes": 0,
+   "bytes": 2147483648,
+   "wall_s": 20.144,
+   "MBps": 106.6,
+   "dd_tail": "2147483648 bytes (2.1 GB, 2.0 GiB) copied, 20.1359 s, 107 MB/s",
+   "position": 0.0
+  },
+  {
+   "file": "Appendix300_Full_Videos.z02",
+   "offset_bytes": 134217728000,
+   "bytes": 2147483648,
+   "wall_s": 13.491,
+   "MBps": 159.2,
+   "dd_tail": "2147483648 bytes (2.1 GB, 2.0 GiB) copied, 13.4838 s, 159 MB/s",
+   "position": 0.5
+  },
+  {
+   "file": "Appendix300_Full_Videos.z02",
+   "offset_bytes": 260382392320,
+   "bytes": 2147483648,
+   "wall_s": 17.38,
+   "MBps": 123.6,
+   "dd_tail": "2147483648 bytes (2.1 GB, 2.0 GiB) copied, 17.372 s, 124 MB/s",
+   "position": 0.97
+  },
+  {
+   "file": "Appendix300_Full_Videos.z03",
+   "offset_bytes": 0,
+   "bytes": 2147483648,
+   "wall_s": 18.029,
+   "MBps": 119.1,
+   "dd_tail": "2147483648 bytes (2.1 GB, 2.0 GiB) copied, 18.0213 s, 119 MB/s",
+   "position": 0.0
+  },
+  {
+   "file": "Appendix300_Full_Videos.z03",
+   "offset_bytes": 134217728000,
+   "bytes": 2147483648,
+   "wall_s": 19.793,
+   "MBps": 108.5,
+   "dd_tail": "2147483648 bytes (2.1 GB, 2.0 GiB) copied, 19.7862 s, 109 MB/s",
+   "position": 0.5
+  },
+  {
+   "file": "Appendix300_Full_Videos.z03",
+   "offset_bytes": 260382392320,
+   "bytes": 2147483648,
+   "wall_s": 22.542,
+   "MBps": 95.3,
+   "dd_tail": "2147483648 bytes (2.1 GB, 2.0 GiB) copied, 22.5343 s, 95.3 MB/s",
+   "position": 0.97
+  },
+  {
+   "file": "Appendix300_Full_Videos.z04",
+   "offset_bytes": 0,
+   "bytes": 2147483648,
+   "wall_s": 20.847,
+   "MBps": 103.0,
+   "dd_tail": "2147483648 bytes (2.1 GB, 2.0 GiB) copied, 20.8398 s, 103 MB/s",
+   "position": 0.0
+  },
+  {
+   "file": "Appendix300_Full_Videos.z04",
+   "offset_bytes": 134217728000,
+   "bytes": 2147483648,
+   "wall_s": 18.3,
+   "MBps": 117.3,
+   "dd_tail": "2147483648 bytes (2.1 GB, 2.0 GiB) copied, 18.296 s, 117 MB/s",
+   "position": 0.5
+  },
+  {
+   "file": "Appendix300_Full_Videos.z04",
+   "offset_bytes": 260382392320,
+   "bytes": 2147483648,
+   "wall_s": 13.326,
+   "MBps": 161.2,
+   "dd_tail": "2147483648 bytes (2.1 GB, 2.0 GiB) copied, 13.3185 s, 161 MB/s",
+   "position": 0.97
+  },
+  {
+   "file": "Appendix300_Full_Videos.z05",
+   "offset_bytes": 0,
+   "bytes": 2147483648,
+   "wall_s": 18.598,
+   "MBps": 115.5,
+   "dd_tail": "2147483648 bytes (2.1 GB, 2.0 GiB) copied, 18.59 s, 116 MB/s",
+   "position": 0.0
+  },
+  {
+   "file": "Appendix300_Full_Videos.z05",
+   "offset_bytes": 134217728000,
+   "bytes": 2147483648,
+   "wall_s": 16.972,
+   "MBps": 126.5,
+   "dd_tail": "2147483648 bytes (2.1 GB, 2.0 GiB) copied, 16.9645 s, 127 MB/s",
+   "position": 0.5
+  },
+  {
+   "file": "Appendix300_Full_Videos.z05",
+   "offset_bytes": 260382392320,
+   "bytes": 2147483648,
+   "wall_s": 12.467,
+   "MBps": 172.2,
+   "dd_tail": "2147483648 bytes (2.1 GB, 2.0 GiB) copied, 12.4587 s, 172 MB/s",
+   "position": 0.97
+  },
+  {
+   "file": "Appendix300_Full_Videos.zip",
+   "offset_bytes": 0,
+   "bytes": 2147483648,
+   "wall_s": 17.775,
+   "MBps": 120.8,
+   "dd_tail": "2147483648 bytes (2.1 GB, 2.0 GiB) copied, 17.7672 s, 121 MB/s",
+   "position": 0.0
+  },
+  {
+   "file": "Appendix300_Full_Videos.zip",
+   "offset_bytes": 9059696640,
+   "bytes": 2147483648,
+   "wall_s": 16.821,
+   "MBps": 127.7,
+   "dd_tail": "2147483648 bytes (2.1 GB, 2.0 GiB) copied, 16.8127 s, 128 MB/s",
+   "position": 0.5
+  },
+  {
+   "file": "Appendix300_Full_Videos.zip",
+   "offset_bytes": 15971909632,
+   "bytes": 2147483648,
+   "wall_s": 18.186,
+   "MBps": 118.1,
+   "dd_tail": "2147483648 bytes (2.1 GB, 2.0 GiB) copied, 18.1783 s, 118 MB/s",
+   "position": 0.97
+  }
+ ],
+ "sustained": {
+  "file": "Appendix300_Full_Videos.z03",
+  "offset_bytes": 67108864000,
+  "bytes": 17179869184,
+  "wall_s": 146.994,
+  "MBps": 116.9,
+  "dd_tail": "17179869184 bytes (17 GB, 16 GiB) copied, 146.987 s, 117 MB/s",
+  "position": "sustained 16 GiB from 25% of z03"
+ },
+ "MBps": {
+  "min": 95.3,
+  "median": 120.8,
+  "max": 172.2,
+  "sustained": 116.9
+ }
+}
