@@ -1,5 +1,11 @@
 # SS protocol DS203: model selection record (§14 step 3)
 
+> **Current selection (2026-10-05, after CODELOCK_CORRECTION_001; see §8):**
+> * **primary = SurgeNetCholec** (`TimJaspersTue/SurgeNetModels@cc21f4a1…/CHOLEC_checkpoint_epoch0050_teacher.pth`);
+> * **secondary = LeanVAE-4ch** (`Yumic/LeanVAE@4585e461…/LeanVAE-dim4.ckpt`).
+>
+> The primary selection in §4 (SelfSupSurg DINO) is superseded and is kept below as history.
+
 * **Task:** `CC_TASK_SS_step3_model_selection_v1.md`. Executed 2026-10-05.
 * **Protocol:** `docs/SS_PROTOCOL_DS203.md`, frozen at 4c86dc5.
 * **Code base:** final code lock 98cba1e (SDR implementation commit af56777). No repository code was changed. All measurements were made from scratch scripts outside the repository that only import the locked `ss_benchmark` code, run in the locked extraction environment (`/home/user/.venvs/ss_extract`).
@@ -114,7 +120,7 @@ How the evidence was obtained:
    * (a) Load: `prim_resnet50.build(weights=…)` loaded the VISSL trunk with no missing or unexpected keys (23,508,032 parameters). The CPU output is (1, 2048) and finite.
    * (b) Memory: rule-4 peak reserved **0.0797 GB** ≤ 20.0, so feasible.
    * (c) Extraction compute: synthetic throughput **2,251 frames/s** (bf16, batch 64, the pipeline default). Model hours 0.27 (standardized plus native passes over 2,164,752 grid frames); decode 3.06 h and I/O 3.81 h (2012acd). Serial total **7.14 h = 0.30 days** ≤ 7, so feasible.
-   * **Selected (primary): `CAMMA-public/SelfSupSurg/model_final_checkpoint_dino_surg.torch`**, under the mechanical rule; see §5.
+   * **Selected (primary): `CAMMA-public/SelfSupSurg/model_final_checkpoint_dino_surg.torch`**, under the mechanical rule; see §5. **[Superseded by §8: the SurgeNet failure was an adapter error, corrected by CODELOCK_CORRECTION_001.]**
 
 **Secondary arm:**
 
@@ -181,3 +187,45 @@ There are five decode passes:
 
 * §14 step 4 (extraction) has not started.
 * No Cosmos weights were downloaded; they wait for the investigator's Hugging Face token and licence acceptance (§17).
+
+## 8. Superseding primary selection after CODELOCK_CORRECTION_001 (2026-10-05)
+
+**Decision (investigator, `CC_TASK_SS_step3_adapter_fix_v2.md`).**
+* The SurgeNet load failure in §4 was an adapter error, not an objective checkpoint failure. Falling through to rank 3 would have let an implementation error decide the model selection.
+* The adapter was therefore corrected (`decisions/CODELOCK_CORRECTION_001_SURGENET_ADAPTER.md`, commit `ad8833a53b9a41b1f20dd96f9410f80d9b7ab5d3`) and the primary arm was reselected from rank 1.
+* The ranking itself (§3) is unchanged.
+
+**Re-test of ranks 1–2** (corrected adapter, same verified files):
+
+| rank | checkpoint | (a) load | (b) rule-4 peak reserved | equivalence vs official SurgeNet code |
+|---:|---|---|---|---|
+| 1 | SurgeNetCholec | strict, 152 / 152 keys (0 missing, 0 unexpected) | 75,497,472 B (0.0755 GB), so feasible | max abs diff 0.0 |
+| 2 | SurgeNetRARP | strict, 152 / 152 keys | 75,497,472 B, so feasible | 0.0 |
+
+**Frozen tie-breaks** (both pass, and they tie on release 2024-06-19 and on documented compute):
+1. documented level-1 recommendation: none;
+2. protocol-relevant compute: 8.208 = 8.208 GFLOPs (corrected architecture, protocol input);
+3. remeasured synthetic peak memory: 75,497,472 = 75,497,472 B;
+4. lexical identifier: `…/CHOLEC_checkpoint_epoch0050_teacher.pth` < `…/RARP_checkpoint_epoch0050_teacher.pth`.
+
+**Selected (primary): SurgeNetCholec.** Extraction compute (§10.4):
+* synthetic throughput 1,707 frames/s (bf16, batch 64);
+* model hours 0.35 for the standardized and native passes over 2,164,752 grid frames;
+* decode 3.06 h, I/O 3.81 h;
+* serial total **7.22 h = 0.30 days** ≤ 7, so feasible.
+
+**Secondary.** LeanVAE-4ch stands. Its rank trace (§3, including the 4ch-vs-16ch tie-break 2: 115.970 < 116.032 GFLOPs) and its feasibility (§4) are unchanged. Its equivalence check against the official LeanVAE code passed (max abs diff 0.0). The SelfSupSurg DINO equivalence check against the official VISSL trunk also passed (0.0); SelfSupSurg is no longer selected.
+
+**Updated §14 step-4 wall-time projection** (as in §6, with the selected primary):
+
+| pass | (A) frozen §10.4 components (h) | (B) as implemented (h) |
+|---|---:|---:|
+| 4a mask check | 6.87 | 6.67 |
+| primary SurgeNetCholec, standardized | 7.05 | 8.98 |
+| primary, native | 7.05 | 8.24 |
+| secondary LeanVAE-4ch | 7.00 | 8.94 |
+| Cosmos reference | 12.60 | 41.94 |
+| **total** | **40.6 h ≈ 1.7 days** | **74.8 h ≈ 3.1 days** |
+
+* **Bottlenecks:** in (A), decode plus disk I/O; in (B), the Cosmos pass's CPU preprocessing of native frames (29.8 h).
+* **Not started:** §14 step 4. No DS203 frame has been decoded and no representation extracted.
