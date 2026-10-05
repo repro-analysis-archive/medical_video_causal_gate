@@ -1,4 +1,10 @@
-"""OmniTokenizer (ImageNet + K600, VQVAE `imagenet_k600.ckpt`), secondary arm, clip-level.
+"""OmniTokenizer (ImageNet + K600), secondary arm, clip-level: VQVAE `imagenet_k600.ckpt` (variant "vq", default) and
+VAE `imagenet_k600_vae.ckpt` (variant "vae"; README "| VAE | ImageNet + K600 | 0.78 | 13.02 |"; the authors'
+eval_video.sh block for it is identical to the VQ block plus --use_vae). Both checkpoints share the encoder; the VAE's
+pre_vq_conv maps 512 -> 2 x 8 channels (VQGAN.__init__ use_vae branch) and the representation is the posterior mean =
+the first 8 channels (modules/vae.py DiagonalGaussianDistribution: `self.mean, self.logvar = torch.chunk(parameters,
+2, dim=1)`; the authors' encode() samples, which is not done here), averaged over latent time: D = 8 x 32 x 32 = 8192.
+The VQ description follows.
 
 Code: third_party/OmniTokenizer (FoundationVision/OmniTokenizer @ 701b619003b3e941e769269c7626dbf111d0377e).
 Checkpoint (not downloaded here): HF Daniel0724/OmniTokenizer imagenet_k600.ckpt, 742,455,697 B,
@@ -68,6 +74,10 @@ ARGS = dict(  # eval_video.sh (imagenet_k600.ckpt block); the rest argparse defa
 CKPT = dict(repo="Daniel0724/OmniTokenizer", revision="9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d",
             file="imagenet_k600.ckpt", size=742455697,
             sha256="0a1d9f863f874d2af57855951fa53b92cb0d5aea4f8bf2d8f91007e44b14c01c")
+CKPTS = {"vq": CKPT,
+         "vae": dict(repo="Daniel0724/OmniTokenizer", revision="9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d",
+                     file="imagenet_k600_vae.ckpt", size=742471379,
+                     sha256="d1f1dfc5ca56093945d1ecb45c6bedf0a9157ac80dbf0547e33294a02edeb777")}
 
 SPEC = dict(
     name="OmniTokenizer (ImageNet + K600) VQVAE encoder, imagenet_k600.ckpt",
@@ -134,7 +144,20 @@ SPEC = dict(
              copy=_TP + "OmniTokenizer/video_utils.py", level=2),
     ],
     third_party=dict(repo="FoundationVision/OmniTokenizer", commit="701b619003b3e941e769269c7626dbf111d0377e"),
+    variants={"vq": "imagenet_k600.ckpt: F.normalize(pre_vq_conv(encoder(x)), dim=1) (codebook-lookup input)",
+              "vae": "imagenet_k600_vae.ckpt: posterior mean = first 8 of the 16 pre_vq_conv channels (no sampling)"},
+    default_variant="vq",
 )
+SPEC["sources"] += [
+    dict(quote="| VAE | ImageNet + K600 | 0.78 | 13.02 | [imagenet_k600_vae.ckpt](https://huggingface.co/Daniel0724/"
+               "OmniTokenizer/resolve/main/imagenet_k600_vae.ckpt) |", copy=_S + "omnitok_github_README.md", level=2),
+    dict(quote="--vqgan_ckpt \"./ckpts_pub/imagenet_k600_vae.ckpt\"", copy=_TP + "scripts/recons/eval_video.sh",
+         level=3),
+    dict(quote="nn.Linear(args.embedding_dim, args.codebook_dim * 2),", copy=_TP + "OmniTokenizer/omnitokenizer.py",
+         level=2),
+    dict(quote="self.mean, self.logvar = torch.chunk(parameters, 2, dim=1)", copy=_TP + "OmniTokenizer/modules/vae.py",
+         level=2),
+]
 
 
 def _exec(relpath, ns, names=None, skip_imports=()):
@@ -175,10 +198,12 @@ def _encoder_cls():
 
 
 class OmniTokenizerPreVQ(nn.Module):
-    """encoder + pre_vq_conv of OmniTokenizer_VQGAN (VQ mode), argument for argument as in VQGAN.__init__."""
+    """encoder + pre_vq_conv of OmniTokenizer_VQGAN, argument for argument as in VQGAN.__init__ (VQ or VAE mode)."""
 
-    def __init__(self, a=ARGS):
+    def __init__(self, a=ARGS, variant="vq"):
         super().__init__()
+        assert variant in ("vq", "vae")
+        self.variant = variant
         self.encoder = _encoder_cls()(
             image_size=a["resolution"], image_channel=a["image_channels"], norm_type=a["norm_type"],
             block=a["enc_block"], window_size=a["twod_window_size"], spatial_pos=a["spatial_pos"],
@@ -191,12 +216,14 @@ class OmniTokenizerPreVQ(nn.Module):
             sequence_length=a["sequence_length"])
         self.pre_vq_conv = nn.Sequential(
             Rearrange("b c t h w -> b t h w c"),
-            nn.Linear(a["embedding_dim"], a["codebook_dim"]),
+            nn.Linear(a["embedding_dim"], a["codebook_dim"] * (2 if variant == "vae" else 1)),
             Rearrange("b t h w c -> b c t h w"))
 
     def forward(self, x):
-        # x: (B, 3, T, H, W) in [-0.5, 0.5] -> codebook input (B, codebook_dim, T', H/8, W/8), float32
+        # x: (B, 3, T, H, W) in [-0.5, 0.5] -> (B, codebook_dim, T', H/8, W/8), float32
         h = self.pre_vq_conv(self.encoder(x, is_image=False))
+        if self.variant == "vae":
+            return torch.chunk(h.float(), 2, dim=1)[0]  # posterior mean (DiagonalGaussianDistribution)
         return F.normalize(h.float(), p=2, dim=1)  # --l2_code
 
 
@@ -208,22 +235,22 @@ def _sha256(path):
     return h.hexdigest()
 
 
-def _state_dict(path):
+def _state_dict(path, variant="vq"):
     try:
         ckpt = torch.load(path, map_location="cpu", weights_only=True)
     except pickle.UnpicklingError:
         # Lightning checkpoint with pickled hparams: full unpickling only for the pinned release file
-        if _sha256(path) != CKPT["sha256"]:
+        if _sha256(path) != CKPTS[variant]["sha256"]:
             raise
         ckpt = torch.load(path, map_location="cpu", weights_only=False)
     sd = ckpt.get("state_dict", ckpt)
     return {k: v for k, v in sd.items() if k.startswith(("encoder.", "pre_vq_conv."))}
 
 
-def build(weights=None, device="cpu", dtype=torch.float32):
-    model = OmniTokenizerPreVQ()
+def build(weights=None, device="cpu", dtype=torch.float32, variant="vq"):
+    model = OmniTokenizerPreVQ(variant=variant)
     if weights is not None:
-        model.load_state_dict(_state_dict(weights), strict=True)
+        model.load_state_dict(_state_dict(weights, variant), strict=True)
     return model.to(device=device, dtype=dtype).requires_grad_(False).eval()
 
 

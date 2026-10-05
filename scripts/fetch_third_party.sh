@@ -4,6 +4,11 @@
 # PROHIBITED before the final code-lock commit (decisions/CODELOCK_INCIDENT_001_third_party_weight_files.md): the
 # script refuses to run unless --after-final-code-lock is given. third_party/ as used at code lock already exists.
 #
+# Single authorised exception (decisions/CODELOCK_AUTH_002_videomae_source.md): --authorized-videomae-source fetches
+# exactly the two VideoMAE architecture source files listed in VIDEOMAE_FILES, as raw files from
+# raw.githubusercontent.com at the pinned commit (no clone, no archive, no LFS), into third_party/VideoMAE/; only *.py
+# names on that list, at most 1 MB each, no NUL bytes, SHA-256 equal to the recorded values.
+#
 # Mechanism (incident prevention; no "download then strip"): a depth-1 partial fetch of the pinned commit with
 # --filter=blob:none, then a non-cone sparse checkout whose patterns exclude every weight-type file, so the blobs of
 # excluded files are never fetched or written. After checkout, `git rev-list --missing=print` (which does not fetch)
@@ -11,18 +16,41 @@
 # the script aborts and deletes the directory.
 #
 #   scripts/fetch_third_party.sh --after-final-code-lock [--dest DIR] [--list FILE]
+#   scripts/fetch_third_party.sh --authorized-videomae-source [--dest DIR]
 #   (--list: lines "name url commit"; default: the four repositories below)
 set -euo pipefail
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-DEST="$REPO/third_party"; LIST=""; OK=0
+DEST="$REPO/third_party"; LIST=""; OK=0; VMAE=0
+VIDEOMAE_REPO="MCG-NJU/VideoMAE"
+VIDEOMAE_COMMIT="14ef8d856287c94ef1f985fe30f958eb4ec2c55d"
+VIDEOMAE_FILES=("modeling_pretrain.py" "modeling_finetune.py")
+declare -A VIDEOMAE_SHA256=([modeling_pretrain.py]=5689f93f72d7764d13e27f17ca3a6a096c89e7ee0e3fd8e63dffde6ab11ad593 [modeling_finetune.py]=ce9a11ff05c7a1b5085addf6c73b71ffb68933564164f7b250dedad91f6e29b8)  # CODELOCK_AUTH_002
 while [[ $# -gt 0 ]]; do
   case "$1" in
+    --authorized-videomae-source) VMAE=1; shift;;
     --after-final-code-lock) OK=1; shift;;
     --dest) DEST="$2"; shift 2;;
     --list) LIST="$2"; shift 2;;
     *) echo "unknown argument: $1" >&2; exit 2;;
   esac
 done
+if [[ $VMAE -eq 1 ]]; then
+  [[ $OK -eq 0 && -z "$LIST" ]] || { echo "--authorized-videomae-source cannot be combined" >&2; exit 2; }
+  d="$DEST/VideoMAE"; mkdir -p "$d"
+  for f in "${VIDEOMAE_FILES[@]}"; do
+    [[ "$f" == *.py && "$f" != */* ]] || { echo "refused: $f" >&2; exit 2; }
+    url="https://raw.githubusercontent.com/$VIDEOMAE_REPO/$VIDEOMAE_COMMIT/$f"
+    curl -fsSL --max-filesize 1048576 -o "$d/$f.part" "$url"
+    if LC_ALL=C grep -qaP '\x00' "$d/$f.part"; then rm -f "$d/$f.part"; echo "binary content refused: $f" >&2; exit 3; fi
+    sha="$(sha256sum "$d/$f.part" | cut -d' ' -f1)"
+    if [[ -n "${VIDEOMAE_SHA256[$f]:-}" && "${VIDEOMAE_SHA256[$f]}" != "$sha" ]]; then
+      rm -f "$d/$f.part"; echo "sha256 mismatch: $f" >&2; exit 3
+    fi
+    mv "$d/$f.part" "$d/$f"
+    echo "$VIDEOMAE_REPO@$VIDEOMAE_COMMIT/$f $(stat -c %s "$d/$f") bytes sha256 $sha"
+  done
+  exit 0
+fi
 [[ $OK -eq 1 ]] || { echo "refused: third-party retrieval is prohibited before the final code-lock commit" >&2; exit 2; }
 WEIGHT_GLOBS=('*.pt' '*.pth' '*.ckpt' '*.safetensors' '*.bin' '*.pkl' '*.pickle' '*.npz' '*.npy' '*.onnx' '*.h5' \
               '*.hdf5' '*.tar' '*.torch' '*.pb' '*.tflite' '*.msgpack' '*.zip' '*.gz')

@@ -6,6 +6,8 @@
   input size / clip length on CUDA in bf16 (the §4.1.4 rule-4 test code path); its output dimension equals the frozen
   extraction specification (docs/codelock_extraction_spec.json);
 * the frozen extraction specification covers exactly the registry and agrees with every adapter SPEC;
+* the VideoMAE adapter (transformers VideoMAEModel configured from the official definitions) reproduces the official
+  encoder code (third_party/VideoMAE, CODELOCK_AUTH_002) for ViT-S / B / L / H on shared random weights;
 * the extraction compute projection code runs on a measured synthetic throughput (code path only; no decision);
 * the decode path (ffprobe / ffmpeg) on a synthetic lavfi test video (not DS203): 2-fps grid by presentation time,
   standardized frames, near-uniform flag, mask-check accumulation, frame- and clip-level extraction and the Cosmos
@@ -60,14 +62,14 @@ def test_extraction_spec_matches_adapters():
         else:
             assert e["clip_length"] == COSMOS_MAX_FRAMES
         if "checkpoint" in kw:
-            assert kw["checkpoint"] in mod.CHECKPOINTS and key == f"VideoMAE:{kw['checkpoint']}"
+            assert kw["checkpoint"] in mod.CHECKPOINTS and key.endswith(":" + kw["checkpoint"])
         assert all(os.path.exists(os.path.join(REPO, p)) for p in e["sources"]), key
 
 
 @cuda
 def test_extraction_projection_code_path():
-    thr = feasibility.synthetic_throughput("SelfSupSurg-ResNet50", batch=32, n_batches=3)
-    proj = feasibility.extraction_projection("SelfSupSurg-ResNet50", thr["inputs_per_second"])
+    thr = feasibility.synthetic_throughput("SelfSupSurg-ResNet50:moco_v2", batch=32, n_batches=3)
+    proj = feasibility.extraction_projection("SelfSupSurg-ResNet50:moco_v2", thr["inputs_per_second"])
     print(thr, proj)
     assert proj["serial_hours"] > 0
 
@@ -140,7 +142,7 @@ def test_pipeline_extract_case(fake_tree):
     torch.manual_seed(0)
     m = prim_resnet50.build()
     with torch.inference_mode():
-        out, flags, info = pipeline.extract_case(files, "SelfSupSurg-ResNet50", m, prim_resnet50, "standardized",
+        out, flags, info = pipeline.extract_case(files, "SelfSupSurg-ResNet50:moco_v2", m, prim_resnet50, "standardized",
                                                  0.45, 16, "cpu")
     assert out.shape == (9, 2048) and info["n_steps"] == 9 and info["grid_frames_after_step_end"] == 0
     infos, pts, fid, local, dur = pipeline.case_timeline(files)
@@ -156,7 +158,7 @@ def test_pipeline_extract_case(fake_tree):
     np.testing.assert_allclose(out, extract.frame_level_steps(E, 9), rtol=1e-4, atol=1e-5)
     v = sec_videomae.build()
     with torch.inference_mode():
-        out2, _, info2 = pipeline.extract_case(files, "VideoMAE:hf-base-k400-1600", v, sec_videomae, "native", 0.45, 4, "cpu")
+        out2, _, info2 = pipeline.extract_case(files, "VideoMAE:k400-vit-b-1600", v, sec_videomae, "native", 0.45, 4, "cpu")
     assert out2.shape == (9, 768) and np.isfinite(out2).all()
 
 
@@ -201,3 +203,24 @@ def test_pipeline_build_reps_checks_grid_load(tmp_path):
               "E2_primary_normtime", "E2_single_file_normtime", "E2_primary_history"):
         assert r[k]["reporting_only"] is True and "pass" not in r[k], k
     assert "pass" in r["E2_primary"] and "pass" in r["E1_278"]
+
+
+@pytest.mark.parametrize("size,key", [("small", "k400-vit-s-1600"), ("base", "k400-vit-b-1600"),
+                                      ("large", "k400-vit-l-1600"), ("huge", "k400-vit-h-1600")])
+def test_videomae_adapter_matches_official_encoder(size, key, tmp_path):
+    import warnings
+    from ss_benchmark.models import sec_videomae
+    sys.path.insert(0, os.path.join(REPO, "third_party", "VideoMAE"))
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        import modeling_pretrain
+    torch.manual_seed(0)
+    orig = getattr(modeling_pretrain, f"pretrain_videomae_{size}_patch16_224")().eval()
+    path = str(tmp_path / "synthetic_random_weights.pth")
+    torch.save({"model": orig.state_dict()}, path)              # random weights written by this test, not downloaded
+    hf = sec_videomae.build(weights=path, checkpoint=key)
+    x = torch.randn(1, 3, 16, 224, 224)
+    with torch.no_grad():
+        a = orig.encoder.forward_features(x, torch.zeros(1, 1568, dtype=torch.bool))
+        b = hf(pixel_values=x.permute(0, 2, 1, 3, 4)).last_hidden_state
+    assert a.shape == b.shape and float((a - b).abs().max()) < 1e-4

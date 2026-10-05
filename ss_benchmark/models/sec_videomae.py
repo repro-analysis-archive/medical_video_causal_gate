@@ -1,65 +1,89 @@
-"""VideoMAE adapter (clip-level, secondary arm; self-supervised K400 / SSv2 / UCF101 pre-training checkpoints).
+"""VideoMAE adapter (clip-level, secondary arm): the official self-supervised PRE-TRAINING checkpoints.
 
-* Architecture: transformers 4.46.3 VideoMAEModel (encoder only) with the configuration of the checkpoint's size:
-  ViT-B = fm_sources/secondary/videomae_videomae-base_config.json, ViT-L = videomae_videomae-large_config.json
-  (level 3; "num_frames": 16, "image_size": 224, "tubelet_size": 2, "patch_size": 16, "use_mean_pooling": false).
-  The SSv2 / short configs are the same ViT-B configuration. Random initialisation at code lock.
-* Checkpoints covered (ViT-B and ViT-L: the sizes whose compute the eligibility facts quote, paper Table 7):
-  HF format (MCG-NJU): videomae-base (K400, 1600 ep), videomae-base-short (K400, 800 ep), videomae-base-ssv2 (SSv2,
-  2400 ep), videomae-large (K400, 1600 ep); original-repository format (MODEL_ZOO.md, pre-training checkpoints):
-  K400 ViT-B 800 / 1600 ep, K400 ViT-L 1600 ep, SSv2 ViT-B 800 / 2400 ep, UCF101 ViT-B 3200 ep. Original-format
-  state dicts are mapped to transformers names with the encoder rules of transformers'
-  models/videomae/convert_videomae_to_pytorch.py (rename_key / convert_state_dict; decoder, mask token and
-  encoder_to_decoder keys dropped). ViT-S / ViT-H checkpoints are not covered (no saved configuration).
-* Input: clip of L = 16 grid frames ("num_frames": 16), 224 × 224 ("image_size": 224), layout (B, T, 3, H, W).
-* Normalisation: x / 255, then mean / std = the checkpoint's preprocessor_config.json (HF format) when present;
-  otherwise ImageNet mean (0.485, 0.456, 0.406) / std (0.229, 0.224, 0.225) (the VideoMAE code base's
-  IMAGENET_DEFAULT_MEAN / STD; random init and original-format checkpoints).
-* Representation: VideoMAEModel(...).last_hidden_state = the output of the final encoder layer after the final
-  LayerNorm (videomae.layernorm, present because use_mean_pooling = false), averaged over all tokens: 8 temporal
-  (16 frames / tubelet 2) × 14 × 14 spatial = 1,568 patch tokens; VideoMAE has no CLS token. 768 (ViT-B) or 1,024
-  (ViT-L) values. No head, no fc_norm.
-* Inference: eval() (dropout / drop-path inactive; dropout probabilities are 0 in the configs); no token masking
-  (bool_masked_pos is not passed).
+Class line (frozen): "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder
+model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary
+reconstructive/generative class."
+
+* Checkpoints (canonical identifiers): the nine distinct pre-training checkpoints of the official MODEL_ZOO.md
+  (fm_sources/secondary/videomae_github_MODEL_ZOO.md; Google-Drive file ids below); the second K400 ViT-B 800-ep row
+  reuses the same pre-training checkpoint ("same as above"). The Hugging Face MCG-NJU pre-trained-only repositories
+  are converted copies ("first released in this repository"; aliases: videomae-base = K400 ViT-B 1600,
+  videomae-base-short = K400 ViT-B 800, videomae-large = K400 ViT-L 1600, videomae-base-ssv2 = SSv2 ViT-B 2400); they
+  are aliases, not separate ranking candidates, and are not used for extraction.
+* Architecture: the original definitions pretrain_videomae_{small,base,large,huge}_patch16_224 of the official
+  repository (third_party/VideoMAE/modeling_pretrain.py @ MCG-NJU/VideoMAE 14ef8d85, retrieved under
+  decisions/CODELOCK_AUTH_002): encoder embed / depth / heads = S 384 / 12 / 6, B 768 / 12 / 12, L 1024 / 24 / 16,
+  H 1280 / 32 / 16; mlp_ratio 4; qkv_bias True (q and v biases); LayerNorm eps 1e-6; init_values 0 (no layer
+  scale); patch 16, tubelet 2, 16 frames, 224 × 224; fixed sinusoid position table. Implemented with transformers'
+  VideoMAEModel configured to these values; original state dicts are mapped with the encoder rules of transformers'
+  convert_videomae_to_pytorch.py. Equivalence with the original encoder code is checked in
+  tests/test_codelock_extra.py on random weights.
+* Input: L = 16 grid frames, 224 × 224, layout (B, T, 3, H, W).
+* Normalisation: x / 255, then mean (0.5, 0.5, 0.5) / std (0.5, 0.5, 0.5): the default_cfg the official code attaches
+  to every pre-training model (modeling_finetune.py `_cfg`: "'mean': (0.5, 0.5, 0.5), 'std': (0.5, 0.5, 0.5)";
+  modeling_pretrain.py `model.default_cfg = _cfg()`), the only level-1–3 statement of the input normalisation among
+  the saved and authorised sources (rule R1).
+* Representation: the encoder's forward_features output with no token masked, i.e. the final LayerNorm (encoder
+  `self.norm`, = videomae.layernorm) applied to the last block's output, averaged over all 1,568 patch tokens
+  (8 temporal × 14 × 14 spatial); VideoMAE has no CLS token. 384 (S), 768 (B), 1,024 (L) or 1,280 (H) values.
+* Inference: eval(); no token masking; dropout / drop-path rates 0.
 """
-import json
 import os
 
 import torch
 
-_REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-_SRC = os.path.join(_REPO, "data_audit", "lead", "fm_sources", "secondary")
-CONFIGS = {"base": "videomae_videomae-base_config.json", "large": "videomae_videomae-large_config.json"}
-CHECKPOINTS = {
-    # key: (size, format, identifier)
-    "hf-base-k400-1600": ("base", "hf", "MCG-NJU/videomae-base"),
-    "hf-base-k400-800": ("base", "hf", "MCG-NJU/videomae-base-short"),
-    "hf-base-ssv2-2400": ("base", "hf", "MCG-NJU/videomae-base-ssv2"),
-    "hf-large-k400-1600": ("large", "hf", "MCG-NJU/videomae-large"),
-    "orig-base-k400-800": ("base", "original", "MODEL_ZOO K400 ViT-B 800 ep pre-training checkpoint"),
-    "orig-base-k400-1600": ("base", "original", "MODEL_ZOO K400 ViT-B 1600 ep pre-training checkpoint"),
-    "orig-large-k400-1600": ("large", "original", "MODEL_ZOO K400 ViT-L 1600 ep pre-training checkpoint"),
-    "orig-base-ssv2-800": ("base", "original", "MODEL_ZOO SSv2 ViT-B 800 ep pre-training checkpoint"),
-    "orig-base-ssv2-2400": ("base", "original", "MODEL_ZOO SSv2 ViT-B 2400 ep pre-training checkpoint"),
-    "orig-base-ucf101-3200": ("base", "original", "MODEL_ZOO UCF101 ViT-B 3200 ep pre-training checkpoint"),
+SIZES = {  # modeling_pretrain.py pretrain_videomae_*_patch16_224
+    "small": dict(hidden_size=384, num_hidden_layers=12, num_attention_heads=6),
+    "base": dict(hidden_size=768, num_hidden_layers=12, num_attention_heads=12),
+    "large": dict(hidden_size=1024, num_hidden_layers=24, num_attention_heads=16),
+    "huge": dict(hidden_size=1280, num_hidden_layers=32, num_attention_heads=16),
 }
-VARIANTS = {"base": "base", "base-ssv2": "base", "base-short": "base", "large": "large"}
-IMAGENET = ([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+CHECKPOINTS = {  # key: (size, dataset, pre-training epochs, MODEL_ZOO Google-Drive file id, HF alias)
+    "k400-vit-s-1600": ("small", "Kinetics-400", 1600, "1nU-H1u3eJ-VuyCveU7v-WIOcAVxs5Hww", None),
+    "k400-vit-b-800": ("base", "Kinetics-400", 800, "1JfrhN144Hdg7we213H1WxwR3lGYOlmIn", "MCG-NJU/videomae-base-short"),
+    "k400-vit-b-1600": ("base", "Kinetics-400", 1600, "1tEhLyskjb755TJ65ptsrafUG2llSwQE1", "MCG-NJU/videomae-base"),
+    "k400-vit-l-1600": ("large", "Kinetics-400", 1600, "1qLOXWb_MGEvaI7tvuAe94CV7S2HXRwT3", "MCG-NJU/videomae-large"),
+    "k400-vit-h-1600": ("huge", "Kinetics-400", 1600, "1AJQR1Rsi2N1pDn9tLyJ8DQrUREiBA1bO", None),
+    "ssv2-vit-s-2400": ("small", "Something-Something V2", 2400, "1p_I1aaONOeUvRmRQw1UT3-L2H8XJClHu", None),
+    "ssv2-vit-b-800": ("base", "Something-Something V2", 800, "181hLvyrrPW2IOGA46fkxdJk0tNLIgdB2", None),
+    "ssv2-vit-b-2400": ("base", "Something-Something V2", 2400, "1I18dY_7rSalGL8fPWV82c0-foRUDzJJk",
+                        "MCG-NJU/videomae-base-ssv2"),
+    "ucf101-vit-b-3200": ("base", "UCF101", 3200, "1BHev4meNgKM0o_8DMRbuzAsKSP3IpQ3o", None),
+}
+MEAN, STD = (0.5, 0.5, 0.5), (0.5, 0.5, 0.5)
+CLASS_LINE = ("VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; "
+              "supervised fine-tuned classification/action-recognition checkpoints are outside the secondary "
+              "reconstructive/generative class.")
 
 SPEC = dict(name="VideoMAE", arm="secondary", kind="clip", input_size=(224, 224), clip_length=16,
-            representation="last_hidden_state (final encoder layer after videomae.layernorm) averaged over all "
-                           "1568 patch tokens (8 x 14 x 14; no CLS token); 768 (ViT-B) / 1024 (ViT-L)",
-            normalisation="x/255, checkpoint preprocessor_config mean/std (HF format) else ImageNet mean/std",
-            checkpoints=CHECKPOINTS,
-            sources=[dict(quote="\"num_frames\": 16,",
+            representation="encoder forward_features (final LayerNorm of the last block) with no token masked, "
+                           "mean over all 1568 patch tokens (8 x 14 x 14; no CLS token)",
+            normalisation="x/255, mean (0.5, 0.5, 0.5), std (0.5, 0.5, 0.5) (official default_cfg)",
+            checkpoints=CHECKPOINTS, class_line=CLASS_LINE,
+            sources=[dict(quote="encoder_embed_dim=384, encoder_depth=12, encoder_num_heads=6,",
+                          copy="third_party/VideoMAE/modeling_pretrain.py", level=3),
+                     dict(quote="encoder_embed_dim=1280, encoder_depth=32, encoder_num_heads=16,",
+                          copy="third_party/VideoMAE/modeling_pretrain.py", level=3),
+                     dict(quote="norm_layer=partial(nn.LayerNorm, eps=1e-6),",
+                          copy="third_party/VideoMAE/modeling_pretrain.py", level=3),
+                     dict(quote="'mean': (0.5, 0.5, 0.5), 'std': (0.5, 0.5, 0.5),",
+                          copy="third_party/VideoMAE/modeling_finetune.py", level=3),
+                     dict(quote="\"num_frames\": 16,",
                           copy="data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json", level=3),
-                     dict(quote="\"image_size\": 224,",
-                          copy="data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json", level=3),
-                     dict(quote="\"use_mean_pooling\": false",
-                          copy="data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json", level=3),
-                     dict(quote="VideoMAE ViT-B 7 16 180×5×3 87 81.5 95.1",
-                          copy="data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt", level=1)],
-            third_party=None)
+                     dict(quote="VideoMAE ViT-S 7 16 57×5×3 22 79.0 93.8",
+                          copy="data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt.layout.txt",
+                          level=1)],
+            third_party=dict(repo="MCG-NJU/VideoMAE", commit="14ef8d856287c94ef1f985fe30f958eb4ec2c55d"))
+
+
+def config_for(size):
+    from transformers import VideoMAEConfig
+    s = SIZES[size]
+    return VideoMAEConfig(image_size=224, patch_size=16, num_channels=3, num_frames=16, tubelet_size=2,
+                          hidden_size=s["hidden_size"], num_hidden_layers=s["num_hidden_layers"],
+                          num_attention_heads=s["num_attention_heads"], intermediate_size=4 * s["hidden_size"],
+                          hidden_act="gelu", hidden_dropout_prob=0.0, attention_probs_dropout_prob=0.0,
+                          qkv_bias=True, layer_norm_eps=1e-6, use_mean_pooling=False)
 
 
 def _rename_key(name):
@@ -98,15 +122,18 @@ def _rename_key(name):
 
 
 def convert_original(sd, hidden_size):
-    """Original-repository pre-training state dict -> VideoMAEModel state dict (encoder only)."""
+    """Original pre-training state dict -> VideoMAEModel state dict (encoder only; the fixed position table, the
+    decoder, mask token and encoder_to_decoder are not parameters of the representation)."""
     for key in ("model", "module", "state_dict"):
         if key in sd and isinstance(sd[key], dict):
             sd = sd[key]
     out = {}
     for key, val in sd.items():
-        if key.startswith(("decoder", "encoder_to_decoder", "mask_token")):
+        if key.startswith(("decoder", "encoder_to_decoder", "mask_token")) or key.endswith("pos_embed"):
             continue
         k = key[len("encoder."):] if key.startswith("encoder.") else key
+        if k.startswith("head."):
+            continue
         if "qkv" in k:
             layer = int(k.split(".")[1])
             p = f"encoder.layer.{layer}.attention.attention."
@@ -120,32 +147,25 @@ def convert_original(sd, hidden_size):
     return out
 
 
-def build(weights=None, device="cpu", dtype=torch.float32, variant="base", checkpoint=None):
-    """weights=None: random init of the size of ``checkpoint`` (CHECKPOINTS key) or ``variant``; weights=path:
-    an HF directory (format "hf") or an original-repository .pth (format "original")."""
-    from transformers import VideoMAEConfig, VideoMAEModel
-    size, fmt = (CHECKPOINTS[checkpoint][:2] if checkpoint else (VARIANTS[variant], "hf"))
-    config = VideoMAEConfig.from_json_file(os.path.join(_SRC, CONFIGS[size]))
-    mean, std = IMAGENET
-    if weights is None:
-        model = VideoMAEModel(config)
-    elif fmt == "hf":
-        model = VideoMAEModel.from_pretrained(weights, local_files_only=True)
-        pp = os.path.join(weights, "preprocessor_config.json")
-        cfg = json.load(open(pp)) if os.path.exists(pp) else {}
-        mean, std = cfg.get("image_mean", mean), cfg.get("image_std", std)
-    else:
-        model = VideoMAEModel(config)
+def build(weights=None, device="cpu", dtype=torch.float32, checkpoint="k400-vit-b-1600"):
+    """weights=None: random initialisation of the checkpoint's architecture; weights=path: the official original-format
+    pre-training checkpoint file of ``checkpoint`` (strict key check)."""
+    from transformers import VideoMAEModel
+    size = CHECKPOINTS[checkpoint][0]
+    config = config_for(size)
+    model = VideoMAEModel(config)
+    if weights is not None:
         sd = convert_original(torch.load(weights, map_location="cpu", weights_only=False), config.hidden_size)
         missing, unexpected = model.load_state_dict(sd, strict=False)
         if missing or unexpected:
             raise RuntimeError(f"checkpoint mismatch: missing {missing[:5]}, unexpected {unexpected[:5]}")
-    model.ss_norm = (torch.tensor(mean).view(1, 1, 3, 1, 1), torch.tensor(std).view(1, 1, 3, 1, 1))
+    model.ss_checkpoint = checkpoint
     return model.to(device=device, dtype=dtype).eval()
 
 
 def encode(model, x):
     p = next(model.parameters())
-    mean, std = (t.to(x.device) for t in model.ss_norm)
+    mean = torch.tensor(MEAN, device=x.device).view(1, 1, 3, 1, 1)
+    std = torch.tensor(STD, device=x.device).view(1, 1, 3, 1, 1)
     out = model(pixel_values=((x / 255.0 - mean) / std).to(p.dtype))
     return out.last_hidden_state.mean(1)

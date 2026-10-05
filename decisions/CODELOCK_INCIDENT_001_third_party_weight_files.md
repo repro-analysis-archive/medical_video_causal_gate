@@ -77,3 +77,11 @@ third_party/ total: 67 MB, source code only
    * the checkout contained only the two text files;
    * the script refused to run without the flag.
 4. **Limitation.** A server that ignores `--filter` would deliver every blob. Git prints a warning in that case, and the post-checkout check aborts and deletes the directory. GitHub supports the filter.
+
+## Pointer added 2026-10-05 at the investigator's instruction (`CC_TASK_SS_code_lock_coverage_fix_addendum.md` item 1)
+
+* This section is appended only. No text above it was changed.
+* **Approved exception.** The investigator approved one source-only exception to the prevention rule (point 1 above): two raw `.py` files (VideoMAE architecture definitions) from MCG-NJU/VideoMAE at `14ef8d856287c94ef1f985fe30f958eb4ec2c55d`.
+* **How it was done.** They were retrieved with `curl` from raw.githubusercontent.com, with no clone, archive, LFS object or weight. The record is `decisions/CODELOCK_AUTH_002_videomae_source.md`.
+* **Script change.** `scripts/fetch_third_party.sh --authorized-videomae-source` permits exactly that retrieval and verifies the pinned SHA-256 values.
+* **Rule restored.** After it, the no-third-party-retrieval rule is restored until the final code-lock commit.

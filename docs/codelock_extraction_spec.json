@@ -74,21 +74,16 @@
     "data_audit/lead/fm_sources/primary/surgenet_hf_api_blobs.txt"
    ]
   },
-  "SelfSupSurg-ResNet50": {
-   "registry_key": "SelfSupSurg-ResNet50",
+  "SelfSupSurg-ResNet50:moco_v2": {
+   "registry_key": "SelfSupSurg-ResNet50:moco_v2",
    "source_priority": "R1",
    "model": "SelfSupSurg (ResNet-50)",
    "arm": "primary",
    "adapter": "ss_benchmark/models/prim_resnet50.py",
    "checkpoint": {
-    "repository": "CAMMA-public/SelfSupSurg (README model table)",
-    "files": [
-     "model_final_checkpoint_moco_v2_surg.torch",
-     "model_final_checkpoint_simclr_surg.torch",
-     "model_final_checkpoint_swav_surg.torch",
-     "model_final_checkpoint_dino_surg.torch"
-    ],
-    "note": "four checkpoints of one architecture; the trunk is read from classy_state_dict.base_model.model.trunk (VISSL)"
+    "repository": "CAMMA-public/SelfSupSurg (README 'Model Weights for the pre-training experiments')",
+    "file": "model_final_checkpoint_moco_v2_surg.torch",
+    "note": "VISSL checkpoint; the trunk is read from classy_state_dict.base_model.model.trunk"
    },
    "kind": "frame",
    "input_size": [
@@ -109,106 +104,112 @@
     "data_audit/lead/fm_sources/eligibility_v04/selfsupsurg_cfg_h001_yaml.txt"
    ]
   },
-  "VideoMAE:hf-base-k400-1600": {
-   "registry_key": "VideoMAE:hf-base-k400-1600",
+  "SelfSupSurg-ResNet50:simclr": {
+   "registry_key": "SelfSupSurg-ResNet50:simclr",
    "source_priority": "R1",
-   "model": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
-   "arm": "secondary",
-   "adapter": "ss_benchmark/models/sec_videomae.py",
+   "model": "SelfSupSurg (ResNet-50)",
+   "arm": "primary",
+   "adapter": "ss_benchmark/models/prim_resnet50.py",
    "checkpoint": {
-    "repository": "MCG-NJU/videomae-base",
-    "revision": "dc740ceda42fce44faed2ea03c6d447db72f6af9",
-    "format": "hf"
+    "repository": "CAMMA-public/SelfSupSurg (README 'Model Weights for the pre-training experiments')",
+    "file": "model_final_checkpoint_simclr_surg.torch",
+    "note": "VISSL checkpoint; the trunk is read from classy_state_dict.base_model.model.trunk"
    },
-   "kind": "clip",
+   "kind": "frame",
    "input_size": [
     224,
     224
    ],
-   "clip_length": 16,
-   "temporal_sampling": "clip-level: one clip per step = the 16 most recent 2-fps grid frames ending at grid frame 10t+9 (no frame after 5t+5); at the video start the first grid frame is repeated (§4.2). Rationale (protocol §4.2 [v0.4-final2]): the 2-fps grid standardizes acquisition across centres at the cost of temporal fidelity; the model's documented clip length is kept, its documented frame rate is not",
-   "normalisation": "x/255, then the checkpoint's preprocessor_config.json image_mean / image_std (HF format) or ImageNet mean / std (original format; VideoMAE code base IMAGENET_DEFAULT_MEAN / STD)",
-   "representation_tensor": "VideoMAEModel last_hidden_state = final encoder layer output after the final LayerNorm (videomae.layernorm; use_mean_pooling = false); encoder only, no decoder, no head",
-   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
-   "representation_dim": 768,
-   "stochastic_layers": "no token masking at inference (bool_masked_pos not passed); dropout probabilities 0 and eval()",
-   "config_overrides_paper": null,
+   "clip_length": null,
+   "temporal_sampling": "frame-level: every frame of the 2-fps physical-time grid (§3.1 step 1); the step representation is the mean of the step's ten frame embeddings 10t..10t+9 (§4.2)",
+   "normalisation": "x/255, ImageNet mean / std (configs h001-h004: mean [0.485, 0.456, 0.406], std [0.229, 0.224, 0.225])",
+   "representation_tensor": "torchvision resnet50 with fc = Identity: output of the global average pool after layer4",
+   "pooling": "global average over the 7 x 7 layer4 grid; then the ten-frame step mean",
+   "representation_dim": 2048,
+   "stochastic_layers": "none (BatchNorm in eval mode uses running statistics)",
+   "config_overrides_paper": "input 224 x 224 from the SSL configs (size_crops [224, 224]); the downstream Resize [224, 399] is a fine-tuning setting",
    "sources": [
-    "data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json",
-    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
-    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md"
+    "data_audit/lead/fm_sources/primary/selfsupsurg_arxiv_pdf.txt",
+    "data_audit/lead/fm_sources/primary/selfsupsurg_github_readme.txt",
+    "data_audit/lead/fm_sources/eligibility_v04/selfsupsurg_cfg_h001_yaml.txt"
    ]
   },
-  "VideoMAE:hf-base-k400-800": {
-   "registry_key": "VideoMAE:hf-base-k400-800",
+  "SelfSupSurg-ResNet50:swav": {
+   "registry_key": "SelfSupSurg-ResNet50:swav",
    "source_priority": "R1",
-   "model": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
-   "arm": "secondary",
-   "adapter": "ss_benchmark/models/sec_videomae.py",
+   "model": "SelfSupSurg (ResNet-50)",
+   "arm": "primary",
+   "adapter": "ss_benchmark/models/prim_resnet50.py",
    "checkpoint": {
-    "repository": "MCG-NJU/videomae-base-short",
-    "revision": "9fa00797f9e861e08e49069f5039d60e02b37122",
-    "format": "hf"
+    "repository": "CAMMA-public/SelfSupSurg (README 'Model Weights for the pre-training experiments')",
+    "file": "model_final_checkpoint_swav_surg.torch",
+    "note": "VISSL checkpoint; the trunk is read from classy_state_dict.base_model.model.trunk"
    },
-   "kind": "clip",
+   "kind": "frame",
    "input_size": [
     224,
     224
    ],
-   "clip_length": 16,
-   "temporal_sampling": "clip-level: one clip per step = the 16 most recent 2-fps grid frames ending at grid frame 10t+9 (no frame after 5t+5); at the video start the first grid frame is repeated (§4.2). Rationale (protocol §4.2 [v0.4-final2]): the 2-fps grid standardizes acquisition across centres at the cost of temporal fidelity; the model's documented clip length is kept, its documented frame rate is not",
-   "normalisation": "x/255, then the checkpoint's preprocessor_config.json image_mean / image_std (HF format) or ImageNet mean / std (original format; VideoMAE code base IMAGENET_DEFAULT_MEAN / STD)",
-   "representation_tensor": "VideoMAEModel last_hidden_state = final encoder layer output after the final LayerNorm (videomae.layernorm; use_mean_pooling = false); encoder only, no decoder, no head",
-   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
-   "representation_dim": 768,
-   "stochastic_layers": "no token masking at inference (bool_masked_pos not passed); dropout probabilities 0 and eval()",
-   "config_overrides_paper": null,
+   "clip_length": null,
+   "temporal_sampling": "frame-level: every frame of the 2-fps physical-time grid (§3.1 step 1); the step representation is the mean of the step's ten frame embeddings 10t..10t+9 (§4.2)",
+   "normalisation": "x/255, ImageNet mean / std (configs h001-h004: mean [0.485, 0.456, 0.406], std [0.229, 0.224, 0.225])",
+   "representation_tensor": "torchvision resnet50 with fc = Identity: output of the global average pool after layer4",
+   "pooling": "global average over the 7 x 7 layer4 grid; then the ten-frame step mean",
+   "representation_dim": 2048,
+   "stochastic_layers": "none (BatchNorm in eval mode uses running statistics)",
+   "config_overrides_paper": "input 224 x 224 from the SSL configs (size_crops [224, 224]); the downstream Resize [224, 399] is a fine-tuning setting",
    "sources": [
-    "data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json",
-    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
-    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md"
+    "data_audit/lead/fm_sources/primary/selfsupsurg_arxiv_pdf.txt",
+    "data_audit/lead/fm_sources/primary/selfsupsurg_github_readme.txt",
+    "data_audit/lead/fm_sources/eligibility_v04/selfsupsurg_cfg_h001_yaml.txt"
    ]
   },
-  "VideoMAE:hf-base-ssv2-2400": {
-   "registry_key": "VideoMAE:hf-base-ssv2-2400",
+  "SelfSupSurg-ResNet50:dino": {
+   "registry_key": "SelfSupSurg-ResNet50:dino",
    "source_priority": "R1",
-   "model": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
-   "arm": "secondary",
-   "adapter": "ss_benchmark/models/sec_videomae.py",
+   "model": "SelfSupSurg (ResNet-50)",
+   "arm": "primary",
+   "adapter": "ss_benchmark/models/prim_resnet50.py",
    "checkpoint": {
-    "repository": "MCG-NJU/videomae-base-ssv2",
-    "revision": "644bd7ac060b3af0dd8824cc64b2c1935fec29b1",
-    "format": "hf"
+    "repository": "CAMMA-public/SelfSupSurg (README 'Model Weights for the pre-training experiments')",
+    "file": "model_final_checkpoint_dino_surg.torch",
+    "note": "VISSL checkpoint; the trunk is read from classy_state_dict.base_model.model.trunk"
    },
-   "kind": "clip",
+   "kind": "frame",
    "input_size": [
     224,
     224
    ],
-   "clip_length": 16,
-   "temporal_sampling": "clip-level: one clip per step = the 16 most recent 2-fps grid frames ending at grid frame 10t+9 (no frame after 5t+5); at the video start the first grid frame is repeated (§4.2). Rationale (protocol §4.2 [v0.4-final2]): the 2-fps grid standardizes acquisition across centres at the cost of temporal fidelity; the model's documented clip length is kept, its documented frame rate is not",
-   "normalisation": "x/255, then the checkpoint's preprocessor_config.json image_mean / image_std (HF format) or ImageNet mean / std (original format; VideoMAE code base IMAGENET_DEFAULT_MEAN / STD)",
-   "representation_tensor": "VideoMAEModel last_hidden_state = final encoder layer output after the final LayerNorm (videomae.layernorm; use_mean_pooling = false); encoder only, no decoder, no head",
-   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
-   "representation_dim": 768,
-   "stochastic_layers": "no token masking at inference (bool_masked_pos not passed); dropout probabilities 0 and eval()",
-   "config_overrides_paper": null,
+   "clip_length": null,
+   "temporal_sampling": "frame-level: every frame of the 2-fps physical-time grid (§3.1 step 1); the step representation is the mean of the step's ten frame embeddings 10t..10t+9 (§4.2)",
+   "normalisation": "x/255, ImageNet mean / std (configs h001-h004: mean [0.485, 0.456, 0.406], std [0.229, 0.224, 0.225])",
+   "representation_tensor": "torchvision resnet50 with fc = Identity: output of the global average pool after layer4",
+   "pooling": "global average over the 7 x 7 layer4 grid; then the ten-frame step mean",
+   "representation_dim": 2048,
+   "stochastic_layers": "none (BatchNorm in eval mode uses running statistics)",
+   "config_overrides_paper": "input 224 x 224 from the SSL configs (size_crops [224, 224]); the downstream Resize [224, 399] is a fine-tuning setting",
    "sources": [
-    "data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json",
-    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
-    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md"
+    "data_audit/lead/fm_sources/primary/selfsupsurg_arxiv_pdf.txt",
+    "data_audit/lead/fm_sources/primary/selfsupsurg_github_readme.txt",
+    "data_audit/lead/fm_sources/eligibility_v04/selfsupsurg_cfg_h001_yaml.txt"
    ]
   },
-  "VideoMAE:hf-large-k400-1600": {
-   "registry_key": "VideoMAE:hf-large-k400-1600",
+  "VideoMAE:k400-vit-s-1600": {
+   "registry_key": "VideoMAE:k400-vit-s-1600",
    "source_priority": "R1",
    "model": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
    "arm": "secondary",
    "adapter": "ss_benchmark/models/sec_videomae.py",
    "checkpoint": {
-    "repository": "MCG-NJU/videomae-large",
-    "revision": "12da269a02d3e1fbbb7011e610e591fea8061dca",
-    "format": "hf"
+    "repository": "MCG-NJU/VideoMAE MODEL_ZOO.md (pre-train column)",
+    "google_drive_file_id": "1nU-H1u3eJ-VuyCveU7v-WIOcAVxs5Hww",
+    "dataset": "Kinetics-400",
+    "pretraining_epochs": 1600,
+    "architecture": "ViT-S (pretrain_videomae_small_patch16_224)",
+    "format": "original (official pre-training checkpoint; state dict mapped with transformers' convert_videomae_to_pytorch encoder rules)",
+    "hf_alias": null,
+    "hf_alias_note": null,
+    "code": "MCG-NJU/VideoMAE@14ef8d856287c94ef1f985fe30f958eb4ec2c55d modeling_pretrain.py / modeling_finetune.py (CODELOCK_AUTH_002)"
    },
    "kind": "clip",
    "input_size": [
@@ -217,28 +218,154 @@
    ],
    "clip_length": 16,
    "temporal_sampling": "clip-level: one clip per step = the 16 most recent 2-fps grid frames ending at grid frame 10t+9 (no frame after 5t+5); at the video start the first grid frame is repeated (§4.2). Rationale (protocol §4.2 [v0.4-final2]): the 2-fps grid standardizes acquisition across centres at the cost of temporal fidelity; the model's documented clip length is kept, its documented frame rate is not",
-   "normalisation": "x/255, then the checkpoint's preprocessor_config.json image_mean / image_std (HF format) or ImageNet mean / std (original format; VideoMAE code base IMAGENET_DEFAULT_MEAN / STD)",
-   "representation_tensor": "VideoMAEModel last_hidden_state = final encoder layer output after the final LayerNorm (videomae.layernorm; use_mean_pooling = false); encoder only, no decoder, no head",
+   "normalisation": "x/255, then mean (0.5, 0.5, 0.5) / std (0.5, 0.5, 0.5): the default_cfg of the official modeling code (modeling_finetune.py _cfg; modeling_pretrain.py model.default_cfg = _cfg()), the only level-1-3 statement of the input normalisation among the saved and authorised sources (rule R1)",
+   "representation_tensor": "encoder forward_features with no token masked = final LayerNorm (encoder norm, eps 1e-6) of the last block's output; implemented as transformers VideoMAEModel configured from pretrain_videomae_small_patch16_224 (equivalence with the original encoder code checked on random weights)",
+   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
+   "representation_dim": 384,
+   "stochastic_layers": "no token masking at inference; drop / drop-path rates 0; eval()",
+   "config_overrides_paper": "architecture from the official pre-training model definition (rule R1); LayerNorm eps 1e-6 per the official code (the HF alias configs use 1e-12)",
+   "sources": [
+    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md",
+    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt.layout.txt",
+    "third_party/VideoMAE/modeling_pretrain.py",
+    "third_party/VideoMAE/modeling_finetune.py"
+   ],
+   "class_line": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+   "documented_compute": "57 GFLOPs per 16-frame view, 22M parameters (paper Table 7)"
+  },
+  "VideoMAE:k400-vit-b-800": {
+   "registry_key": "VideoMAE:k400-vit-b-800",
+   "source_priority": "R1",
+   "model": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "arm": "secondary",
+   "adapter": "ss_benchmark/models/sec_videomae.py",
+   "checkpoint": {
+    "repository": "MCG-NJU/VideoMAE MODEL_ZOO.md (pre-train column)",
+    "google_drive_file_id": "1JfrhN144Hdg7we213H1WxwR3lGYOlmIn",
+    "dataset": "Kinetics-400",
+    "pretraining_epochs": 800,
+    "architecture": "ViT-B (pretrain_videomae_base_patch16_224)",
+    "format": "original (official pre-training checkpoint; state dict mapped with transformers' convert_videomae_to_pytorch encoder rules)",
+    "hf_alias": "MCG-NJU/videomae-base-short",
+    "hf_alias_note": "converted copy, not used for extraction and not a separate ranking candidate",
+    "code": "MCG-NJU/VideoMAE@14ef8d856287c94ef1f985fe30f958eb4ec2c55d modeling_pretrain.py / modeling_finetune.py (CODELOCK_AUTH_002)"
+   },
+   "kind": "clip",
+   "input_size": [
+    224,
+    224
+   ],
+   "clip_length": 16,
+   "temporal_sampling": "clip-level: one clip per step = the 16 most recent 2-fps grid frames ending at grid frame 10t+9 (no frame after 5t+5); at the video start the first grid frame is repeated (§4.2). Rationale (protocol §4.2 [v0.4-final2]): the 2-fps grid standardizes acquisition across centres at the cost of temporal fidelity; the model's documented clip length is kept, its documented frame rate is not",
+   "normalisation": "x/255, then mean (0.5, 0.5, 0.5) / std (0.5, 0.5, 0.5): the default_cfg of the official modeling code (modeling_finetune.py _cfg; modeling_pretrain.py model.default_cfg = _cfg()), the only level-1-3 statement of the input normalisation among the saved and authorised sources (rule R1)",
+   "representation_tensor": "encoder forward_features with no token masked = final LayerNorm (encoder norm, eps 1e-6) of the last block's output; implemented as transformers VideoMAEModel configured from pretrain_videomae_base_patch16_224 (equivalence with the original encoder code checked on random weights)",
+   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
+   "representation_dim": 768,
+   "stochastic_layers": "no token masking at inference; drop / drop-path rates 0; eval()",
+   "config_overrides_paper": "architecture from the official pre-training model definition (rule R1); LayerNorm eps 1e-6 per the official code (the HF alias configs use 1e-12)",
+   "sources": [
+    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md",
+    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt.layout.txt",
+    "third_party/VideoMAE/modeling_pretrain.py",
+    "third_party/VideoMAE/modeling_finetune.py"
+   ],
+   "class_line": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+   "documented_compute": "180 GFLOPs per view, 87M parameters (paper Table 7)"
+  },
+  "VideoMAE:k400-vit-b-1600": {
+   "registry_key": "VideoMAE:k400-vit-b-1600",
+   "source_priority": "R1",
+   "model": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "arm": "secondary",
+   "adapter": "ss_benchmark/models/sec_videomae.py",
+   "checkpoint": {
+    "repository": "MCG-NJU/VideoMAE MODEL_ZOO.md (pre-train column)",
+    "google_drive_file_id": "1tEhLyskjb755TJ65ptsrafUG2llSwQE1",
+    "dataset": "Kinetics-400",
+    "pretraining_epochs": 1600,
+    "architecture": "ViT-B (pretrain_videomae_base_patch16_224)",
+    "format": "original (official pre-training checkpoint; state dict mapped with transformers' convert_videomae_to_pytorch encoder rules)",
+    "hf_alias": "MCG-NJU/videomae-base",
+    "hf_alias_note": "converted copy, not used for extraction and not a separate ranking candidate",
+    "code": "MCG-NJU/VideoMAE@14ef8d856287c94ef1f985fe30f958eb4ec2c55d modeling_pretrain.py / modeling_finetune.py (CODELOCK_AUTH_002)"
+   },
+   "kind": "clip",
+   "input_size": [
+    224,
+    224
+   ],
+   "clip_length": 16,
+   "temporal_sampling": "clip-level: one clip per step = the 16 most recent 2-fps grid frames ending at grid frame 10t+9 (no frame after 5t+5); at the video start the first grid frame is repeated (§4.2). Rationale (protocol §4.2 [v0.4-final2]): the 2-fps grid standardizes acquisition across centres at the cost of temporal fidelity; the model's documented clip length is kept, its documented frame rate is not",
+   "normalisation": "x/255, then mean (0.5, 0.5, 0.5) / std (0.5, 0.5, 0.5): the default_cfg of the official modeling code (modeling_finetune.py _cfg; modeling_pretrain.py model.default_cfg = _cfg()), the only level-1-3 statement of the input normalisation among the saved and authorised sources (rule R1)",
+   "representation_tensor": "encoder forward_features with no token masked = final LayerNorm (encoder norm, eps 1e-6) of the last block's output; implemented as transformers VideoMAEModel configured from pretrain_videomae_base_patch16_224 (equivalence with the original encoder code checked on random weights)",
+   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
+   "representation_dim": 768,
+   "stochastic_layers": "no token masking at inference; drop / drop-path rates 0; eval()",
+   "config_overrides_paper": "architecture from the official pre-training model definition (rule R1); LayerNorm eps 1e-6 per the official code (the HF alias configs use 1e-12)",
+   "sources": [
+    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md",
+    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt.layout.txt",
+    "third_party/VideoMAE/modeling_pretrain.py",
+    "third_party/VideoMAE/modeling_finetune.py"
+   ],
+   "class_line": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+   "documented_compute": "180 GFLOPs per view, 87M parameters (paper Table 7)"
+  },
+  "VideoMAE:k400-vit-l-1600": {
+   "registry_key": "VideoMAE:k400-vit-l-1600",
+   "source_priority": "R1",
+   "model": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "arm": "secondary",
+   "adapter": "ss_benchmark/models/sec_videomae.py",
+   "checkpoint": {
+    "repository": "MCG-NJU/VideoMAE MODEL_ZOO.md (pre-train column)",
+    "google_drive_file_id": "1qLOXWb_MGEvaI7tvuAe94CV7S2HXRwT3",
+    "dataset": "Kinetics-400",
+    "pretraining_epochs": 1600,
+    "architecture": "ViT-L (pretrain_videomae_large_patch16_224)",
+    "format": "original (official pre-training checkpoint; state dict mapped with transformers' convert_videomae_to_pytorch encoder rules)",
+    "hf_alias": "MCG-NJU/videomae-large",
+    "hf_alias_note": "converted copy, not used for extraction and not a separate ranking candidate",
+    "code": "MCG-NJU/VideoMAE@14ef8d856287c94ef1f985fe30f958eb4ec2c55d modeling_pretrain.py / modeling_finetune.py (CODELOCK_AUTH_002)"
+   },
+   "kind": "clip",
+   "input_size": [
+    224,
+    224
+   ],
+   "clip_length": 16,
+   "temporal_sampling": "clip-level: one clip per step = the 16 most recent 2-fps grid frames ending at grid frame 10t+9 (no frame after 5t+5); at the video start the first grid frame is repeated (§4.2). Rationale (protocol §4.2 [v0.4-final2]): the 2-fps grid standardizes acquisition across centres at the cost of temporal fidelity; the model's documented clip length is kept, its documented frame rate is not",
+   "normalisation": "x/255, then mean (0.5, 0.5, 0.5) / std (0.5, 0.5, 0.5): the default_cfg of the official modeling code (modeling_finetune.py _cfg; modeling_pretrain.py model.default_cfg = _cfg()), the only level-1-3 statement of the input normalisation among the saved and authorised sources (rule R1)",
+   "representation_tensor": "encoder forward_features with no token masked = final LayerNorm (encoder norm, eps 1e-6) of the last block's output; implemented as transformers VideoMAEModel configured from pretrain_videomae_large_patch16_224 (equivalence with the original encoder code checked on random weights)",
    "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
    "representation_dim": 1024,
-   "stochastic_layers": "no token masking at inference (bool_masked_pos not passed); dropout probabilities 0 and eval()",
-   "config_overrides_paper": null,
+   "stochastic_layers": "no token masking at inference; drop / drop-path rates 0; eval()",
+   "config_overrides_paper": "architecture from the official pre-training model definition (rule R1); LayerNorm eps 1e-6 per the official code (the HF alias configs use 1e-12)",
    "sources": [
-    "data_audit/lead/fm_sources/secondary/videomae_videomae-large_config.json",
-    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
-    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md"
-   ]
+    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md",
+    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt.layout.txt",
+    "third_party/VideoMAE/modeling_pretrain.py",
+    "third_party/VideoMAE/modeling_finetune.py"
+   ],
+   "class_line": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+   "documented_compute": "597 GFLOPs per view, 305M parameters (paper Table 7)"
   },
-  "VideoMAE:orig-base-k400-800": {
-   "registry_key": "VideoMAE:orig-base-k400-800",
+  "VideoMAE:k400-vit-h-1600": {
+   "registry_key": "VideoMAE:k400-vit-h-1600",
    "source_priority": "R1",
    "model": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
    "arm": "secondary",
    "adapter": "ss_benchmark/models/sec_videomae.py",
    "checkpoint": {
-    "repository": "MCG-NJU/VideoMAE MODEL_ZOO.md: K400 ViT-B 800 ep pre-training checkpoint",
-    "revision": null,
-    "format": "original (state dict mapped with transformers' convert_videomae_to_pytorch encoder rules)"
+    "repository": "MCG-NJU/VideoMAE MODEL_ZOO.md (pre-train column)",
+    "google_drive_file_id": "1AJQR1Rsi2N1pDn9tLyJ8DQrUREiBA1bO",
+    "dataset": "Kinetics-400",
+    "pretraining_epochs": 1600,
+    "architecture": "ViT-H (pretrain_videomae_huge_patch16_224)",
+    "format": "original (official pre-training checkpoint; state dict mapped with transformers' convert_videomae_to_pytorch encoder rules)",
+    "hf_alias": null,
+    "hf_alias_note": null,
+    "code": "MCG-NJU/VideoMAE@14ef8d856287c94ef1f985fe30f958eb4ec2c55d modeling_pretrain.py / modeling_finetune.py (CODELOCK_AUTH_002)"
    },
    "kind": "clip",
    "input_size": [
@@ -247,28 +374,115 @@
    ],
    "clip_length": 16,
    "temporal_sampling": "clip-level: one clip per step = the 16 most recent 2-fps grid frames ending at grid frame 10t+9 (no frame after 5t+5); at the video start the first grid frame is repeated (§4.2). Rationale (protocol §4.2 [v0.4-final2]): the 2-fps grid standardizes acquisition across centres at the cost of temporal fidelity; the model's documented clip length is kept, its documented frame rate is not",
-   "normalisation": "x/255, then the checkpoint's preprocessor_config.json image_mean / image_std (HF format) or ImageNet mean / std (original format; VideoMAE code base IMAGENET_DEFAULT_MEAN / STD)",
-   "representation_tensor": "VideoMAEModel last_hidden_state = final encoder layer output after the final LayerNorm (videomae.layernorm; use_mean_pooling = false); encoder only, no decoder, no head",
+   "normalisation": "x/255, then mean (0.5, 0.5, 0.5) / std (0.5, 0.5, 0.5): the default_cfg of the official modeling code (modeling_finetune.py _cfg; modeling_pretrain.py model.default_cfg = _cfg()), the only level-1-3 statement of the input normalisation among the saved and authorised sources (rule R1)",
+   "representation_tensor": "encoder forward_features with no token masked = final LayerNorm (encoder norm, eps 1e-6) of the last block's output; implemented as transformers VideoMAEModel configured from pretrain_videomae_huge_patch16_224 (equivalence with the original encoder code checked on random weights)",
+   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
+   "representation_dim": 1280,
+   "stochastic_layers": "no token masking at inference; drop / drop-path rates 0; eval()",
+   "config_overrides_paper": "architecture from the official pre-training model definition (rule R1); LayerNorm eps 1e-6 per the official code (the HF alias configs use 1e-12)",
+   "sources": [
+    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md",
+    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt.layout.txt",
+    "third_party/VideoMAE/modeling_pretrain.py",
+    "third_party/VideoMAE/modeling_finetune.py"
+   ],
+   "class_line": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+   "documented_compute": "1192 GFLOPs per view, 633M parameters (paper Table 7)"
+  },
+  "VideoMAE:ssv2-vit-s-2400": {
+   "registry_key": "VideoMAE:ssv2-vit-s-2400",
+   "source_priority": "R1",
+   "model": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "arm": "secondary",
+   "adapter": "ss_benchmark/models/sec_videomae.py",
+   "checkpoint": {
+    "repository": "MCG-NJU/VideoMAE MODEL_ZOO.md (pre-train column)",
+    "google_drive_file_id": "1p_I1aaONOeUvRmRQw1UT3-L2H8XJClHu",
+    "dataset": "Something-Something V2",
+    "pretraining_epochs": 2400,
+    "architecture": "ViT-S (pretrain_videomae_small_patch16_224)",
+    "format": "original (official pre-training checkpoint; state dict mapped with transformers' convert_videomae_to_pytorch encoder rules)",
+    "hf_alias": null,
+    "hf_alias_note": null,
+    "code": "MCG-NJU/VideoMAE@14ef8d856287c94ef1f985fe30f958eb4ec2c55d modeling_pretrain.py / modeling_finetune.py (CODELOCK_AUTH_002)"
+   },
+   "kind": "clip",
+   "input_size": [
+    224,
+    224
+   ],
+   "clip_length": 16,
+   "temporal_sampling": "clip-level: one clip per step = the 16 most recent 2-fps grid frames ending at grid frame 10t+9 (no frame after 5t+5); at the video start the first grid frame is repeated (§4.2). Rationale (protocol §4.2 [v0.4-final2]): the 2-fps grid standardizes acquisition across centres at the cost of temporal fidelity; the model's documented clip length is kept, its documented frame rate is not",
+   "normalisation": "x/255, then mean (0.5, 0.5, 0.5) / std (0.5, 0.5, 0.5): the default_cfg of the official modeling code (modeling_finetune.py _cfg; modeling_pretrain.py model.default_cfg = _cfg()), the only level-1-3 statement of the input normalisation among the saved and authorised sources (rule R1)",
+   "representation_tensor": "encoder forward_features with no token masked = final LayerNorm (encoder norm, eps 1e-6) of the last block's output; implemented as transformers VideoMAEModel configured from pretrain_videomae_small_patch16_224 (equivalence with the original encoder code checked on random weights)",
+   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
+   "representation_dim": 384,
+   "stochastic_layers": "no token masking at inference; drop / drop-path rates 0; eval()",
+   "config_overrides_paper": "architecture from the official pre-training model definition (rule R1); LayerNorm eps 1e-6 per the official code (the HF alias configs use 1e-12)",
+   "sources": [
+    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md",
+    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt.layout.txt",
+    "third_party/VideoMAE/modeling_pretrain.py",
+    "third_party/VideoMAE/modeling_finetune.py"
+   ],
+   "class_line": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+   "documented_compute": "57 GFLOPs per 16-frame view, 22M parameters (paper Table 7)"
+  },
+  "VideoMAE:ssv2-vit-b-800": {
+   "registry_key": "VideoMAE:ssv2-vit-b-800",
+   "source_priority": "R1",
+   "model": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "arm": "secondary",
+   "adapter": "ss_benchmark/models/sec_videomae.py",
+   "checkpoint": {
+    "repository": "MCG-NJU/VideoMAE MODEL_ZOO.md (pre-train column)",
+    "google_drive_file_id": "181hLvyrrPW2IOGA46fkxdJk0tNLIgdB2",
+    "dataset": "Something-Something V2",
+    "pretraining_epochs": 800,
+    "architecture": "ViT-B (pretrain_videomae_base_patch16_224)",
+    "format": "original (official pre-training checkpoint; state dict mapped with transformers' convert_videomae_to_pytorch encoder rules)",
+    "hf_alias": null,
+    "hf_alias_note": null,
+    "code": "MCG-NJU/VideoMAE@14ef8d856287c94ef1f985fe30f958eb4ec2c55d modeling_pretrain.py / modeling_finetune.py (CODELOCK_AUTH_002)"
+   },
+   "kind": "clip",
+   "input_size": [
+    224,
+    224
+   ],
+   "clip_length": 16,
+   "temporal_sampling": "clip-level: one clip per step = the 16 most recent 2-fps grid frames ending at grid frame 10t+9 (no frame after 5t+5); at the video start the first grid frame is repeated (§4.2). Rationale (protocol §4.2 [v0.4-final2]): the 2-fps grid standardizes acquisition across centres at the cost of temporal fidelity; the model's documented clip length is kept, its documented frame rate is not",
+   "normalisation": "x/255, then mean (0.5, 0.5, 0.5) / std (0.5, 0.5, 0.5): the default_cfg of the official modeling code (modeling_finetune.py _cfg; modeling_pretrain.py model.default_cfg = _cfg()), the only level-1-3 statement of the input normalisation among the saved and authorised sources (rule R1)",
+   "representation_tensor": "encoder forward_features with no token masked = final LayerNorm (encoder norm, eps 1e-6) of the last block's output; implemented as transformers VideoMAEModel configured from pretrain_videomae_base_patch16_224 (equivalence with the original encoder code checked on random weights)",
    "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
    "representation_dim": 768,
-   "stochastic_layers": "no token masking at inference (bool_masked_pos not passed); dropout probabilities 0 and eval()",
-   "config_overrides_paper": null,
+   "stochastic_layers": "no token masking at inference; drop / drop-path rates 0; eval()",
+   "config_overrides_paper": "architecture from the official pre-training model definition (rule R1); LayerNorm eps 1e-6 per the official code (the HF alias configs use 1e-12)",
    "sources": [
-    "data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json",
-    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
-    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md"
-   ]
+    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md",
+    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt.layout.txt",
+    "third_party/VideoMAE/modeling_pretrain.py",
+    "third_party/VideoMAE/modeling_finetune.py"
+   ],
+   "class_line": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+   "documented_compute": "180 GFLOPs per view, 87M parameters (paper Table 7)"
   },
-  "VideoMAE:orig-base-k400-1600": {
-   "registry_key": "VideoMAE:orig-base-k400-1600",
+  "VideoMAE:ssv2-vit-b-2400": {
+   "registry_key": "VideoMAE:ssv2-vit-b-2400",
    "source_priority": "R1",
    "model": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
    "arm": "secondary",
    "adapter": "ss_benchmark/models/sec_videomae.py",
    "checkpoint": {
-    "repository": "MCG-NJU/VideoMAE MODEL_ZOO.md: K400 ViT-B 1600 ep pre-training checkpoint",
-    "revision": null,
-    "format": "original (state dict mapped with transformers' convert_videomae_to_pytorch encoder rules)"
+    "repository": "MCG-NJU/VideoMAE MODEL_ZOO.md (pre-train column)",
+    "google_drive_file_id": "1I18dY_7rSalGL8fPWV82c0-foRUDzJJk",
+    "dataset": "Something-Something V2",
+    "pretraining_epochs": 2400,
+    "architecture": "ViT-B (pretrain_videomae_base_patch16_224)",
+    "format": "original (official pre-training checkpoint; state dict mapped with transformers' convert_videomae_to_pytorch encoder rules)",
+    "hf_alias": "MCG-NJU/videomae-base-ssv2",
+    "hf_alias_note": "converted copy, not used for extraction and not a separate ranking candidate",
+    "code": "MCG-NJU/VideoMAE@14ef8d856287c94ef1f985fe30f958eb4ec2c55d modeling_pretrain.py / modeling_finetune.py (CODELOCK_AUTH_002)"
    },
    "kind": "clip",
    "input_size": [
@@ -277,28 +491,37 @@
    ],
    "clip_length": 16,
    "temporal_sampling": "clip-level: one clip per step = the 16 most recent 2-fps grid frames ending at grid frame 10t+9 (no frame after 5t+5); at the video start the first grid frame is repeated (§4.2). Rationale (protocol §4.2 [v0.4-final2]): the 2-fps grid standardizes acquisition across centres at the cost of temporal fidelity; the model's documented clip length is kept, its documented frame rate is not",
-   "normalisation": "x/255, then the checkpoint's preprocessor_config.json image_mean / image_std (HF format) or ImageNet mean / std (original format; VideoMAE code base IMAGENET_DEFAULT_MEAN / STD)",
-   "representation_tensor": "VideoMAEModel last_hidden_state = final encoder layer output after the final LayerNorm (videomae.layernorm; use_mean_pooling = false); encoder only, no decoder, no head",
+   "normalisation": "x/255, then mean (0.5, 0.5, 0.5) / std (0.5, 0.5, 0.5): the default_cfg of the official modeling code (modeling_finetune.py _cfg; modeling_pretrain.py model.default_cfg = _cfg()), the only level-1-3 statement of the input normalisation among the saved and authorised sources (rule R1)",
+   "representation_tensor": "encoder forward_features with no token masked = final LayerNorm (encoder norm, eps 1e-6) of the last block's output; implemented as transformers VideoMAEModel configured from pretrain_videomae_base_patch16_224 (equivalence with the original encoder code checked on random weights)",
    "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
    "representation_dim": 768,
-   "stochastic_layers": "no token masking at inference (bool_masked_pos not passed); dropout probabilities 0 and eval()",
-   "config_overrides_paper": null,
+   "stochastic_layers": "no token masking at inference; drop / drop-path rates 0; eval()",
+   "config_overrides_paper": "architecture from the official pre-training model definition (rule R1); LayerNorm eps 1e-6 per the official code (the HF alias configs use 1e-12)",
    "sources": [
-    "data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json",
-    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
-    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md"
-   ]
+    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md",
+    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt.layout.txt",
+    "third_party/VideoMAE/modeling_pretrain.py",
+    "third_party/VideoMAE/modeling_finetune.py"
+   ],
+   "class_line": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+   "documented_compute": "180 GFLOPs per view, 87M parameters (paper Table 7)"
   },
-  "VideoMAE:orig-large-k400-1600": {
-   "registry_key": "VideoMAE:orig-large-k400-1600",
+  "VideoMAE:ucf101-vit-b-3200": {
+   "registry_key": "VideoMAE:ucf101-vit-b-3200",
    "source_priority": "R1",
    "model": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
    "arm": "secondary",
    "adapter": "ss_benchmark/models/sec_videomae.py",
    "checkpoint": {
-    "repository": "MCG-NJU/VideoMAE MODEL_ZOO.md: K400 ViT-L 1600 ep pre-training checkpoint",
-    "revision": null,
-    "format": "original (state dict mapped with transformers' convert_videomae_to_pytorch encoder rules)"
+    "repository": "MCG-NJU/VideoMAE MODEL_ZOO.md (pre-train column)",
+    "google_drive_file_id": "1BHev4meNgKM0o_8DMRbuzAsKSP3IpQ3o",
+    "dataset": "UCF101",
+    "pretraining_epochs": 3200,
+    "architecture": "ViT-B (pretrain_videomae_base_patch16_224)",
+    "format": "original (official pre-training checkpoint; state dict mapped with transformers' convert_videomae_to_pytorch encoder rules)",
+    "hf_alias": null,
+    "hf_alias_note": null,
+    "code": "MCG-NJU/VideoMAE@14ef8d856287c94ef1f985fe30f958eb4ec2c55d modeling_pretrain.py / modeling_finetune.py (CODELOCK_AUTH_002)"
    },
    "kind": "clip",
    "input_size": [
@@ -307,107 +530,20 @@
    ],
    "clip_length": 16,
    "temporal_sampling": "clip-level: one clip per step = the 16 most recent 2-fps grid frames ending at grid frame 10t+9 (no frame after 5t+5); at the video start the first grid frame is repeated (§4.2). Rationale (protocol §4.2 [v0.4-final2]): the 2-fps grid standardizes acquisition across centres at the cost of temporal fidelity; the model's documented clip length is kept, its documented frame rate is not",
-   "normalisation": "x/255, then the checkpoint's preprocessor_config.json image_mean / image_std (HF format) or ImageNet mean / std (original format; VideoMAE code base IMAGENET_DEFAULT_MEAN / STD)",
-   "representation_tensor": "VideoMAEModel last_hidden_state = final encoder layer output after the final LayerNorm (videomae.layernorm; use_mean_pooling = false); encoder only, no decoder, no head",
-   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
-   "representation_dim": 1024,
-   "stochastic_layers": "no token masking at inference (bool_masked_pos not passed); dropout probabilities 0 and eval()",
-   "config_overrides_paper": null,
-   "sources": [
-    "data_audit/lead/fm_sources/secondary/videomae_videomae-large_config.json",
-    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
-    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md"
-   ]
-  },
-  "VideoMAE:orig-base-ssv2-800": {
-   "registry_key": "VideoMAE:orig-base-ssv2-800",
-   "source_priority": "R1",
-   "model": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
-   "arm": "secondary",
-   "adapter": "ss_benchmark/models/sec_videomae.py",
-   "checkpoint": {
-    "repository": "MCG-NJU/VideoMAE MODEL_ZOO.md: SSv2 ViT-B 800 ep pre-training checkpoint",
-    "revision": null,
-    "format": "original (state dict mapped with transformers' convert_videomae_to_pytorch encoder rules)"
-   },
-   "kind": "clip",
-   "input_size": [
-    224,
-    224
-   ],
-   "clip_length": 16,
-   "temporal_sampling": "clip-level: one clip per step = the 16 most recent 2-fps grid frames ending at grid frame 10t+9 (no frame after 5t+5); at the video start the first grid frame is repeated (§4.2). Rationale (protocol §4.2 [v0.4-final2]): the 2-fps grid standardizes acquisition across centres at the cost of temporal fidelity; the model's documented clip length is kept, its documented frame rate is not",
-   "normalisation": "x/255, then the checkpoint's preprocessor_config.json image_mean / image_std (HF format) or ImageNet mean / std (original format; VideoMAE code base IMAGENET_DEFAULT_MEAN / STD)",
-   "representation_tensor": "VideoMAEModel last_hidden_state = final encoder layer output after the final LayerNorm (videomae.layernorm; use_mean_pooling = false); encoder only, no decoder, no head",
+   "normalisation": "x/255, then mean (0.5, 0.5, 0.5) / std (0.5, 0.5, 0.5): the default_cfg of the official modeling code (modeling_finetune.py _cfg; modeling_pretrain.py model.default_cfg = _cfg()), the only level-1-3 statement of the input normalisation among the saved and authorised sources (rule R1)",
+   "representation_tensor": "encoder forward_features with no token masked = final LayerNorm (encoder norm, eps 1e-6) of the last block's output; implemented as transformers VideoMAEModel configured from pretrain_videomae_base_patch16_224 (equivalence with the original encoder code checked on random weights)",
    "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
    "representation_dim": 768,
-   "stochastic_layers": "no token masking at inference (bool_masked_pos not passed); dropout probabilities 0 and eval()",
-   "config_overrides_paper": null,
+   "stochastic_layers": "no token masking at inference; drop / drop-path rates 0; eval()",
+   "config_overrides_paper": "architecture from the official pre-training model definition (rule R1); LayerNorm eps 1e-6 per the official code (the HF alias configs use 1e-12)",
    "sources": [
-    "data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json",
-    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
-    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md"
-   ]
-  },
-  "VideoMAE:orig-base-ssv2-2400": {
-   "registry_key": "VideoMAE:orig-base-ssv2-2400",
-   "source_priority": "R1",
-   "model": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
-   "arm": "secondary",
-   "adapter": "ss_benchmark/models/sec_videomae.py",
-   "checkpoint": {
-    "repository": "MCG-NJU/VideoMAE MODEL_ZOO.md: SSv2 ViT-B 2400 ep pre-training checkpoint",
-    "revision": null,
-    "format": "original (state dict mapped with transformers' convert_videomae_to_pytorch encoder rules)"
-   },
-   "kind": "clip",
-   "input_size": [
-    224,
-    224
+    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md",
+    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt.layout.txt",
+    "third_party/VideoMAE/modeling_pretrain.py",
+    "third_party/VideoMAE/modeling_finetune.py"
    ],
-   "clip_length": 16,
-   "temporal_sampling": "clip-level: one clip per step = the 16 most recent 2-fps grid frames ending at grid frame 10t+9 (no frame after 5t+5); at the video start the first grid frame is repeated (§4.2). Rationale (protocol §4.2 [v0.4-final2]): the 2-fps grid standardizes acquisition across centres at the cost of temporal fidelity; the model's documented clip length is kept, its documented frame rate is not",
-   "normalisation": "x/255, then the checkpoint's preprocessor_config.json image_mean / image_std (HF format) or ImageNet mean / std (original format; VideoMAE code base IMAGENET_DEFAULT_MEAN / STD)",
-   "representation_tensor": "VideoMAEModel last_hidden_state = final encoder layer output after the final LayerNorm (videomae.layernorm; use_mean_pooling = false); encoder only, no decoder, no head",
-   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
-   "representation_dim": 768,
-   "stochastic_layers": "no token masking at inference (bool_masked_pos not passed); dropout probabilities 0 and eval()",
-   "config_overrides_paper": null,
-   "sources": [
-    "data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json",
-    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
-    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md"
-   ]
-  },
-  "VideoMAE:orig-base-ucf101-3200": {
-   "registry_key": "VideoMAE:orig-base-ucf101-3200",
-   "source_priority": "R1",
-   "model": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
-   "arm": "secondary",
-   "adapter": "ss_benchmark/models/sec_videomae.py",
-   "checkpoint": {
-    "repository": "MCG-NJU/VideoMAE MODEL_ZOO.md: UCF101 ViT-B 3200 ep pre-training checkpoint",
-    "revision": null,
-    "format": "original (state dict mapped with transformers' convert_videomae_to_pytorch encoder rules)"
-   },
-   "kind": "clip",
-   "input_size": [
-    224,
-    224
-   ],
-   "clip_length": 16,
-   "temporal_sampling": "clip-level: one clip per step = the 16 most recent 2-fps grid frames ending at grid frame 10t+9 (no frame after 5t+5); at the video start the first grid frame is repeated (§4.2). Rationale (protocol §4.2 [v0.4-final2]): the 2-fps grid standardizes acquisition across centres at the cost of temporal fidelity; the model's documented clip length is kept, its documented frame rate is not",
-   "normalisation": "x/255, then the checkpoint's preprocessor_config.json image_mean / image_std (HF format) or ImageNet mean / std (original format; VideoMAE code base IMAGENET_DEFAULT_MEAN / STD)",
-   "representation_tensor": "VideoMAEModel last_hidden_state = final encoder layer output after the final LayerNorm (videomae.layernorm; use_mean_pooling = false); encoder only, no decoder, no head",
-   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
-   "representation_dim": 768,
-   "stochastic_layers": "no token masking at inference (bool_masked_pos not passed); dropout probabilities 0 and eval()",
-   "config_overrides_paper": null,
-   "sources": [
-    "data_audit/lead/fm_sources/secondary/videomae_videomae-base_config.json",
-    "data_audit/lead/fm_sources/secondary/videomae_arxiv_2203.12602v3.txt",
-    "data_audit/lead/fm_sources/secondary/videomae_github_MODEL_ZOO.md"
-   ]
+   "class_line": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+   "documented_compute": "180 GFLOPs per view, 87M parameters (paper Table 7)"
   },
   "OmniTokenizer-imagenet_k600": {
    "registry_key": "OmniTokenizer-imagenet_k600",
@@ -439,6 +575,41 @@
     "data_audit/lead/fm_sources/secondary/omnitok_arxiv_2406.09399_fulltext.txt",
     "data_audit/lead/fm_sources/eligibility_v04/omnitok_omnitokenizer_py.txt",
     "data_audit/lead/fm_sources/secondary/omnitok_Daniel0724__OmniTokenizer_hfapi.json"
+   ]
+  },
+  "OmniTokenizer-imagenet_k600_vae": {
+   "registry_key": "OmniTokenizer-imagenet_k600_vae",
+   "source_priority": "R1",
+   "model": "OmniTokenizer (ImageNet + K600)",
+   "arm": "secondary",
+   "adapter": "ss_benchmark/models/sec_omnitokenizer.py",
+   "checkpoint": {
+    "repository": "Daniel0724/OmniTokenizer",
+    "revision": "9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d",
+    "file": "imagenet_k600_vae.ckpt",
+    "sha256": "d1f1dfc5ca56093945d1ecb45c6bedf0a9157ac80dbf0547e33294a02edeb777",
+    "code": "FoundationVision/OmniTokenizer@701b619003b3e941e769269c7626dbf111d0377e"
+   },
+   "kind": "clip",
+   "input_size": [
+    256,
+    256
+   ],
+   "clip_length": 17,
+   "temporal_sampling": "clip-level: one clip per step = the 17 most recent 2-fps grid frames ending at grid frame 10t+9 (no frame after 5t+5); at the video start the first grid frame is repeated (§4.2). Rationale (protocol §4.2 [v0.4-final2]): the 2-fps grid standardizes acquisition across centres at the cost of temporal fidelity; the model's documented clip length is kept, its documented frame rate is not",
+   "normalisation": "x/255 - 0.5 -> [-0.5, 0.5], layout (B, 3, T, H, W) (data.py VideoNorm mean 0.5, std 1.0)",
+   "representation_tensor": "posterior mean = first 8 of the 16 channels of pre_vq_conv(encoder(x)) (VQGAN use_vae branch: Linear(512, codebook_dim * 2); modules/vae.py DiagonalGaussianDistribution `self.mean, self.logvar = torch.chunk(parameters, 2, dim=1)`); the authors' encode() samples, which is not done here",
+   "pooling": "mean over latent time (T' = 5 at 17 frames), flattened 8 x 32 x 32",
+   "representation_dim": 8192,
+   "stochastic_layers": "posterior mean (no sampling); attn / ff dropout 0; apply_noise / apply_blur are discriminator (training) options and are not built",
+   "config_overrides_paper": "same eval_video.sh hyperparameters as the VQ checkpoint plus --use_vae (released evaluation script block for imagenet_k600_vae.ckpt); encoder blocks 'ttww' per the script (rule R1)",
+   "sources": [
+    "data_audit/lead/fm_sources/secondary/omnitok_github_scripts_recons_eval_video.sh.txt",
+    "data_audit/lead/fm_sources/secondary/omnitok_arxiv_2406.09399_fulltext.txt",
+    "data_audit/lead/fm_sources/eligibility_v04/omnitok_omnitokenizer_py.txt",
+    "data_audit/lead/fm_sources/secondary/omnitok_Daniel0724__OmniTokenizer_hfapi.json",
+    "third_party/OmniTokenizer/scripts/recons/eval_video.sh",
+    "third_party/OmniTokenizer/OmniTokenizer/modules/vae.py"
    ]
   },
   "WF-VAE-L-16ch": {
@@ -598,5 +769,6 @@
     "data_audit/lead/out/cosmos_reference_entry.json"
    ]
   }
- }
+ },
+ "videomae_class_line": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class."
 }

@@ -1,0 +1,622 @@
+{
+ "frozen_at": "SS code lock pre-gate implementation commit (see git log); eligibility facts d3563e7",
+ "scope": "every checkpoint of every eligible candidate (§4.1.5) that the §4.1.4 rules could select, ignoring the post-freeze memory and throughput tests (rules 4-5 / secondary 3-4), which cannot exclude anything now",
+ "videomae_class_line": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+ "release_note": "'release' records only what the saved level-2 API metadata show; the rank criterion 'first public availability of the checkpoint per a level-1-3 source' is applied at §14 step 3",
+ "eligible_candidates": {
+  "primary": [
+   "SurgeNetCholec (CAFormer-S18)",
+   "SurgeNetRARP (CAFormer-S18)",
+   "SelfSupSurg (ResNet-50; MoCo v2 / SimCLR / SwAV / DINO)"
+  ],
+  "secondary": [
+   "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "OmniTokenizer (ImageNet + K600)",
+   "WF-VAE-L 16ch",
+   "LARP-L-Long tokenizer",
+   "LeanVAE"
+  ]
+ },
+ "selectable": [
+  {
+   "candidate": "SurgeNetCholec (CAFormer-S18)",
+   "checkpoint_id": "TimJaspersTue/SurgeNetModels@cc21f4a158f3a17260d8304e9d2b24b580a6ea35/CHOLEC_checkpoint_epoch0050_teacher.pth",
+   "aliases": [
+    "TimJaspersTue/SurgeNetModels@cc21f4a158f3a17260d8304e9d2b24b580a6ea35/CHOLEC_checkpoint0050.pth (README 'Full DINO checkpoint' of the same model row; its 'teacher' entry is the same backbone; not a separate candidate)"
+   ],
+   "stage": "pre-train (DINO self-supervised)",
+   "datasets": "Cholec80, HeiChole, hSDB-Chole; ImageNet-1k initialisation",
+   "architecture": "CAFormer-S18",
+   "release": "HF repository created 2024-06-19 (saved API metadata); first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "CaFormerS18, 24.3M parameters (eligibility facts)",
+   "class_eligibility": "in class",
+   "registry_key": "SurgeNetCholec",
+   "adapter": "ss_benchmark/models/prim_caformer.py",
+   "representation": "timm caformer_s18 forward_features -> forward_head(pre_logits=True): LayerNorm of the stage-4 feature map averaged over H, W (= SurgeNet metaformer.py `self.norm(x.mean([1, 2]))`)",
+   "pooling": "global average over the stage-4 spatial grid (7 x 7 at 224); then the ten-frame step mean",
+   "representation_dim": 512,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "SurgeNetRARP (CAFormer-S18)",
+   "checkpoint_id": "TimJaspersTue/SurgeNetModels@cc21f4a158f3a17260d8304e9d2b24b580a6ea35/RARP_checkpoint_epoch0050_teacher.pth",
+   "aliases": [
+    "TimJaspersTue/SurgeNetModels@cc21f4a158f3a17260d8304e9d2b24b580a6ea35/RARP_checkpoint0050.pth (README 'Full DINO checkpoint' of the same model row; its 'teacher' entry is the same backbone; not a separate candidate)"
+   ],
+   "stage": "pre-train (DINO self-supervised)",
+   "datasets": "ESAD, PSI-AVA, RARP-AvL; ImageNet-1k initialisation",
+   "architecture": "CAFormer-S18",
+   "release": "HF repository created 2024-06-19 (saved API metadata); first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "CaFormerS18, 24.3M parameters (eligibility facts)",
+   "class_eligibility": "in class",
+   "registry_key": "SurgeNetRARP",
+   "adapter": "ss_benchmark/models/prim_caformer.py",
+   "representation": "timm caformer_s18 forward_features -> forward_head(pre_logits=True): LayerNorm of the stage-4 feature map averaged over H, W (= SurgeNet metaformer.py `self.norm(x.mean([1, 2]))`)",
+   "pooling": "global average over the stage-4 spatial grid (7 x 7 at 224); then the ten-frame step mean",
+   "representation_dim": 512,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "SelfSupSurg (ResNet-50; MoCo v2 / SimCLR / SwAV / DINO)",
+   "checkpoint_id": "CAMMA-public/SelfSupSurg/model_final_checkpoint_moco_v2_surg.torch",
+   "aliases": [],
+   "stage": "pre-train (moco_v2 self-supervised)",
+   "datasets": "Cholec80; ImageNet supervised initialisation",
+   "architecture": "ResNet-50",
+   "release": "not recorded in saved sources; first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "ResNet-50, 3.8 billion FLOPs (eligibility facts)",
+   "class_eligibility": "in class",
+   "registry_key": "SelfSupSurg-ResNet50:moco_v2",
+   "adapter": "ss_benchmark/models/prim_resnet50.py",
+   "representation": "torchvision resnet50 with fc = Identity: output of the global average pool after layer4",
+   "pooling": "global average over the 7 x 7 layer4 grid; then the ten-frame step mean",
+   "representation_dim": 2048,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "SelfSupSurg (ResNet-50; MoCo v2 / SimCLR / SwAV / DINO)",
+   "checkpoint_id": "CAMMA-public/SelfSupSurg/model_final_checkpoint_simclr_surg.torch",
+   "aliases": [],
+   "stage": "pre-train (simclr self-supervised)",
+   "datasets": "Cholec80; ImageNet supervised initialisation",
+   "architecture": "ResNet-50",
+   "release": "not recorded in saved sources; first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "ResNet-50, 3.8 billion FLOPs (eligibility facts)",
+   "class_eligibility": "in class",
+   "registry_key": "SelfSupSurg-ResNet50:simclr",
+   "adapter": "ss_benchmark/models/prim_resnet50.py",
+   "representation": "torchvision resnet50 with fc = Identity: output of the global average pool after layer4",
+   "pooling": "global average over the 7 x 7 layer4 grid; then the ten-frame step mean",
+   "representation_dim": 2048,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "SelfSupSurg (ResNet-50; MoCo v2 / SimCLR / SwAV / DINO)",
+   "checkpoint_id": "CAMMA-public/SelfSupSurg/model_final_checkpoint_swav_surg.torch",
+   "aliases": [],
+   "stage": "pre-train (swav self-supervised)",
+   "datasets": "Cholec80; ImageNet supervised initialisation",
+   "architecture": "ResNet-50",
+   "release": "not recorded in saved sources; first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "ResNet-50, 3.8 billion FLOPs (eligibility facts)",
+   "class_eligibility": "in class",
+   "registry_key": "SelfSupSurg-ResNet50:swav",
+   "adapter": "ss_benchmark/models/prim_resnet50.py",
+   "representation": "torchvision resnet50 with fc = Identity: output of the global average pool after layer4",
+   "pooling": "global average over the 7 x 7 layer4 grid; then the ten-frame step mean",
+   "representation_dim": 2048,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "SelfSupSurg (ResNet-50; MoCo v2 / SimCLR / SwAV / DINO)",
+   "checkpoint_id": "CAMMA-public/SelfSupSurg/model_final_checkpoint_dino_surg.torch",
+   "aliases": [],
+   "stage": "pre-train (dino self-supervised)",
+   "datasets": "Cholec80; ImageNet supervised initialisation",
+   "architecture": "ResNet-50",
+   "release": "not recorded in saved sources; first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "ResNet-50, 3.8 billion FLOPs (eligibility facts)",
+   "class_eligibility": "in class",
+   "registry_key": "SelfSupSurg-ResNet50:dino",
+   "adapter": "ss_benchmark/models/prim_resnet50.py",
+   "representation": "torchvision resnet50 with fc = Identity: output of the global average pool after layer4",
+   "pooling": "global average over the 7 x 7 layer4 grid; then the ten-frame step mean",
+   "representation_dim": 2048,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/VideoMAE MODEL_ZOO pre-train gdrive:1nU-H1u3eJ-VuyCveU7v-WIOcAVxs5Hww",
+   "aliases": [],
+   "stage": "pre-train (masked autoencoder, 1600 epochs)",
+   "datasets": "Kinetics-400",
+   "architecture": "ViT-S (pretrain_videomae_small_patch16_224)",
+   "release": "not recorded in saved sources for the original file; first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "57 GFLOPs per 16-frame view, 22M parameters (paper Table 7)",
+   "class_eligibility": "in class: VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+   "registry_key": "VideoMAE:k400-vit-s-1600",
+   "adapter": "ss_benchmark/models/sec_videomae.py",
+   "representation": "encoder forward_features with no token masked = final LayerNorm (encoder norm, eps 1e-6) of the last block's output; implemented as transformers VideoMAEModel configured from pretrain_videomae_small_patch16_224 (equivalence with the original encoder code checked on random weights)",
+   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
+   "representation_dim": 384,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/VideoMAE MODEL_ZOO pre-train gdrive:1JfrhN144Hdg7we213H1WxwR3lGYOlmIn",
+   "aliases": [
+    "MCG-NJU/videomae-base-short (converted copy, 'first released in this repository'; not used, not a separate candidate)"
+   ],
+   "stage": "pre-train (masked autoencoder, 800 epochs)",
+   "datasets": "Kinetics-400",
+   "architecture": "ViT-B (pretrain_videomae_base_patch16_224)",
+   "release": "not recorded in saved sources for the original file; HF alias repository MCG-NJU/videomae-base-short; first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "180 GFLOPs per view, 87M parameters (paper Table 7)",
+   "class_eligibility": "in class: VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+   "registry_key": "VideoMAE:k400-vit-b-800",
+   "adapter": "ss_benchmark/models/sec_videomae.py",
+   "representation": "encoder forward_features with no token masked = final LayerNorm (encoder norm, eps 1e-6) of the last block's output; implemented as transformers VideoMAEModel configured from pretrain_videomae_base_patch16_224 (equivalence with the original encoder code checked on random weights)",
+   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
+   "representation_dim": 768,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/VideoMAE MODEL_ZOO pre-train gdrive:1tEhLyskjb755TJ65ptsrafUG2llSwQE1",
+   "aliases": [
+    "MCG-NJU/videomae-base (converted copy, 'first released in this repository'; not used, not a separate candidate)"
+   ],
+   "stage": "pre-train (masked autoencoder, 1600 epochs)",
+   "datasets": "Kinetics-400",
+   "architecture": "ViT-B (pretrain_videomae_base_patch16_224)",
+   "release": "not recorded in saved sources for the original file; HF alias repository MCG-NJU/videomae-base; first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "180 GFLOPs per view, 87M parameters (paper Table 7)",
+   "class_eligibility": "in class: VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+   "registry_key": "VideoMAE:k400-vit-b-1600",
+   "adapter": "ss_benchmark/models/sec_videomae.py",
+   "representation": "encoder forward_features with no token masked = final LayerNorm (encoder norm, eps 1e-6) of the last block's output; implemented as transformers VideoMAEModel configured from pretrain_videomae_base_patch16_224 (equivalence with the original encoder code checked on random weights)",
+   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
+   "representation_dim": 768,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/VideoMAE MODEL_ZOO pre-train gdrive:1qLOXWb_MGEvaI7tvuAe94CV7S2HXRwT3",
+   "aliases": [
+    "MCG-NJU/videomae-large (converted copy, 'first released in this repository'; not used, not a separate candidate)"
+   ],
+   "stage": "pre-train (masked autoencoder, 1600 epochs)",
+   "datasets": "Kinetics-400",
+   "architecture": "ViT-L (pretrain_videomae_large_patch16_224)",
+   "release": "not recorded in saved sources for the original file; HF alias repository MCG-NJU/videomae-large; first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "597 GFLOPs per view, 305M parameters (paper Table 7)",
+   "class_eligibility": "in class: VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+   "registry_key": "VideoMAE:k400-vit-l-1600",
+   "adapter": "ss_benchmark/models/sec_videomae.py",
+   "representation": "encoder forward_features with no token masked = final LayerNorm (encoder norm, eps 1e-6) of the last block's output; implemented as transformers VideoMAEModel configured from pretrain_videomae_large_patch16_224 (equivalence with the original encoder code checked on random weights)",
+   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
+   "representation_dim": 1024,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/VideoMAE MODEL_ZOO pre-train gdrive:1AJQR1Rsi2N1pDn9tLyJ8DQrUREiBA1bO",
+   "aliases": [],
+   "stage": "pre-train (masked autoencoder, 1600 epochs)",
+   "datasets": "Kinetics-400",
+   "architecture": "ViT-H (pretrain_videomae_huge_patch16_224)",
+   "release": "not recorded in saved sources for the original file; first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "1192 GFLOPs per view, 633M parameters (paper Table 7)",
+   "class_eligibility": "in class: VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+   "registry_key": "VideoMAE:k400-vit-h-1600",
+   "adapter": "ss_benchmark/models/sec_videomae.py",
+   "representation": "encoder forward_features with no token masked = final LayerNorm (encoder norm, eps 1e-6) of the last block's output; implemented as transformers VideoMAEModel configured from pretrain_videomae_huge_patch16_224 (equivalence with the original encoder code checked on random weights)",
+   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
+   "representation_dim": 1280,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/VideoMAE MODEL_ZOO pre-train gdrive:1p_I1aaONOeUvRmRQw1UT3-L2H8XJClHu",
+   "aliases": [],
+   "stage": "pre-train (masked autoencoder, 2400 epochs)",
+   "datasets": "Something-Something V2",
+   "architecture": "ViT-S (pretrain_videomae_small_patch16_224)",
+   "release": "not recorded in saved sources for the original file; first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "57 GFLOPs per 16-frame view, 22M parameters (paper Table 7)",
+   "class_eligibility": "in class: VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+   "registry_key": "VideoMAE:ssv2-vit-s-2400",
+   "adapter": "ss_benchmark/models/sec_videomae.py",
+   "representation": "encoder forward_features with no token masked = final LayerNorm (encoder norm, eps 1e-6) of the last block's output; implemented as transformers VideoMAEModel configured from pretrain_videomae_small_patch16_224 (equivalence with the original encoder code checked on random weights)",
+   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
+   "representation_dim": 384,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/VideoMAE MODEL_ZOO pre-train gdrive:181hLvyrrPW2IOGA46fkxdJk0tNLIgdB2",
+   "aliases": [],
+   "stage": "pre-train (masked autoencoder, 800 epochs)",
+   "datasets": "Something-Something V2",
+   "architecture": "ViT-B (pretrain_videomae_base_patch16_224)",
+   "release": "not recorded in saved sources for the original file; first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "180 GFLOPs per view, 87M parameters (paper Table 7)",
+   "class_eligibility": "in class: VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+   "registry_key": "VideoMAE:ssv2-vit-b-800",
+   "adapter": "ss_benchmark/models/sec_videomae.py",
+   "representation": "encoder forward_features with no token masked = final LayerNorm (encoder norm, eps 1e-6) of the last block's output; implemented as transformers VideoMAEModel configured from pretrain_videomae_base_patch16_224 (equivalence with the original encoder code checked on random weights)",
+   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
+   "representation_dim": 768,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/VideoMAE MODEL_ZOO pre-train gdrive:1I18dY_7rSalGL8fPWV82c0-foRUDzJJk",
+   "aliases": [
+    "MCG-NJU/videomae-base-ssv2 (converted copy, 'first released in this repository'; not used, not a separate candidate)"
+   ],
+   "stage": "pre-train (masked autoencoder, 2400 epochs)",
+   "datasets": "Something-Something V2",
+   "architecture": "ViT-B (pretrain_videomae_base_patch16_224)",
+   "release": "not recorded in saved sources for the original file; HF alias repository MCG-NJU/videomae-base-ssv2; first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "180 GFLOPs per view, 87M parameters (paper Table 7)",
+   "class_eligibility": "in class: VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+   "registry_key": "VideoMAE:ssv2-vit-b-2400",
+   "adapter": "ss_benchmark/models/sec_videomae.py",
+   "representation": "encoder forward_features with no token masked = final LayerNorm (encoder norm, eps 1e-6) of the last block's output; implemented as transformers VideoMAEModel configured from pretrain_videomae_base_patch16_224 (equivalence with the original encoder code checked on random weights)",
+   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
+   "representation_dim": 768,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/VideoMAE MODEL_ZOO pre-train gdrive:1BHev4meNgKM0o_8DMRbuzAsKSP3IpQ3o",
+   "aliases": [],
+   "stage": "pre-train (masked autoencoder, 3200 epochs)",
+   "datasets": "UCF101",
+   "architecture": "ViT-B (pretrain_videomae_base_patch16_224)",
+   "release": "not recorded in saved sources for the original file; first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "180 GFLOPs per view, 87M parameters (paper Table 7)",
+   "class_eligibility": "in class: VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class.",
+   "registry_key": "VideoMAE:ucf101-vit-b-3200",
+   "adapter": "ss_benchmark/models/sec_videomae.py",
+   "representation": "encoder forward_features with no token masked = final LayerNorm (encoder norm, eps 1e-6) of the last block's output; implemented as transformers VideoMAEModel configured from pretrain_videomae_base_patch16_224 (equivalence with the original encoder code checked on random weights)",
+   "pooling": "mean over all 1568 patch tokens (8 temporal x 14 x 14 spatial; tubelet 2, patch 16); no CLS token exists",
+   "representation_dim": 768,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "OmniTokenizer (ImageNet + K600)",
+   "checkpoint_id": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/imagenet_k600.ckpt",
+   "aliases": [],
+   "stage": "pre-train (tokenizer, VQVAE)",
+   "datasets": "ImageNet, Kinetics-600",
+   "architecture": "OmniTokenizer encoder (spatial-temporal ViT, 512-d), VQVAE head",
+   "release": "HF repository created 2024-06-13 (saved API metadata); first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "'Ours 51 262 1.28' (paper; eligibility facts)",
+   "class_eligibility": "in class",
+   "registry_key": "OmniTokenizer-imagenet_k600",
+   "adapter": "ss_benchmark/models/sec_omnitokenizer.py",
+   "representation": "F.normalize(pre_vq_conv(encoder(x)), dim=1): the l2-normalised 8-d code fed to the codebook lookup (not quantised)",
+   "pooling": "mean over latent time (T' = 5 at 17 frames), flattened (c, h, w) = 8 x 32 x 32",
+   "representation_dim": 8192,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "OmniTokenizer (ImageNet + K600)",
+   "checkpoint_id": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/imagenet_k600_vae.ckpt",
+   "aliases": [],
+   "stage": "pre-train (tokenizer, VAE)",
+   "datasets": "ImageNet, Kinetics-600",
+   "architecture": "OmniTokenizer encoder (spatial-temporal ViT, 512-d), VAE head",
+   "release": "HF repository created 2024-06-13 (saved API metadata); first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "'Ours 51 262 1.28' (paper; eligibility facts)",
+   "class_eligibility": "in class",
+   "registry_key": "OmniTokenizer-imagenet_k600_vae",
+   "adapter": "ss_benchmark/models/sec_omnitokenizer.py",
+   "representation": "posterior mean = first 8 of the 16 channels of pre_vq_conv(encoder(x)) (VQGAN use_vae branch: Linear(512, codebook_dim * 2); modules/vae.py DiagonalGaussianDistribution `self.mean, self.logvar = torch.chunk(parameters, 2, dim=1)`); the authors' encode() samples, which is not done here",
+   "pooling": "mean over latent time (T' = 5 at 17 frames), flattened 8 x 32 x 32",
+   "representation_dim": 8192,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "WF-VAE-L 16ch",
+   "checkpoint_id": "chestnutlzj/WF-VAE-L-16Chn@8c0aa9ce3aee55121d71ce06b1d179471b1d0531/diffusion_pytorch_model.safetensors",
+   "aliases": [],
+   "stage": "pre-train (video VAE)",
+   "datasets": "Kinetics-400",
+   "architecture": "WF-VAE-L, 16 latent channels",
+   "release": "HF repository created 2024-11-24 (saved API metadata); first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "316M parameters (README; eligibility facts)",
+   "class_eligibility": "in class",
+   "registry_key": "WF-VAE-L-16ch",
+   "adapter": "ss_benchmark/models/sec_wfvae.py",
+   "representation": "WFVAEModel.encode(x).latent_dist.mode() = posterior mean (first 16 channels of encoder.conv_out); scale / shift not applied",
+   "pooling": "mean over latent time (T' = 9 at 33 frames), flattened 16 x 32 x 32",
+   "representation_dim": 16384,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "LARP-L-Long tokenizer",
+   "checkpoint_id": "hywang66/LARP-L-long-tokenizer@c93a7e2d9ea2eb21b8f84f38484ccc348b3347ea/model.safetensors",
+   "aliases": [],
+   "stage": "pre-train (video tokenizer)",
+   "datasets": "Kinetics-600, UCF101",
+   "architecture": "LARP-L (ViT-B-sized encoder, 1024 holistic queries)",
+   "release": "HF repository created 2024-10-23 (saved API metadata); first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "173M parameters (README; eligibility facts)",
+   "class_eligibility": "in class",
+   "registry_key": "LARP-L-Long",
+   "adapter": "ss_benchmark/models/sec_larp.py",
+   "representation": "F.normalize(bottleneck.project_in(Z), dim=-1): Z = encoder outputs at the 1024 learned holistic query positions; the l2-normalised 16-d codebook-lookup input (not quantised, not sampled)",
+   "pooling": "none over time (holistic query tokens have no latent time axis); flattened 1024 x 16",
+   "representation_dim": 16384,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "LeanVAE",
+   "checkpoint_id": "Yumic/LeanVAE@4585e461c697919a452a99191ebf455b991c13fb/LeanVAE-dim16.ckpt",
+   "aliases": [],
+   "stage": "pre-train (video VAE)",
+   "datasets": "Kinetics-600",
+   "architecture": "LeanVAE, latent_dim 16",
+   "release": "HF repository created 2025-03-18 (saved API metadata); first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "39.8M parameters (README; eligibility facts)",
+   "class_eligibility": "in class",
+   "registry_key": "LeanVAE-16ch",
+   "adapter": "ss_benchmark/models/sec_leanvae.py",
+   "representation": "LeanVAE.encode(x) without tiling = ISTA sensing projection of the encoder feature = posterior mean (z_mean in forward()); latent_dim 16",
+   "pooling": "mean over latent time (T' = 5 at 17 frames), flattened 16 x 32 x 32",
+   "representation_dim": 16384,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  },
+  {
+   "candidate": "LeanVAE",
+   "checkpoint_id": "Yumic/LeanVAE@4585e461c697919a452a99191ebf455b991c13fb/LeanVAE-dim4.ckpt",
+   "aliases": [],
+   "stage": "pre-train (video VAE)",
+   "datasets": "Kinetics-600",
+   "architecture": "LeanVAE, latent_dim 4",
+   "release": "HF repository created 2025-03-18 (saved API metadata); first public availability of the checkpoint (rank criterion 2) is established at §14 step 3 from level-1-3 sources",
+   "documented_compute": "39.8M parameters (README; eligibility facts)",
+   "class_eligibility": "in class",
+   "registry_key": "LeanVAE-4ch",
+   "adapter": "ss_benchmark/models/sec_leanvae.py",
+   "representation": "LeanVAE.encode(x) without tiling = ISTA sensing projection of the encoder feature = posterior mean (z_mean in forward()); latent_dim 4",
+   "pooling": "mean over latent time (T' = 5 at 17 frames), flattened 4 x 32 x 32",
+   "representation_dim": 4096,
+   "ranking_reachable": true,
+   "excluded_reason": null
+  }
+ ],
+ "excluded": [
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/VideoMAE MODEL_ZOO fine-tune gdrive:1ygjLRm1kvs9mwGsP3lLxUExhRo6TWnrx",
+   "stage": "fine-tune (supervised classification after 1600-epoch pre-training)",
+   "datasets": "Kinetics-400",
+   "architecture": "ViT-S",
+   "class_eligibility": "out of class",
+   "registry_key": null,
+   "ranking_reachable": false,
+   "excluded_reason": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class. (§4.1.3; investigator confirmation 2026-10-05)"
+  },
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/VideoMAE MODEL_ZOO fine-tune gdrive:18EEgdXY9347yK3Yb28O-GxFMbk41F6Ne",
+   "stage": "fine-tune (supervised classification after 800-epoch pre-training)",
+   "datasets": "Kinetics-400",
+   "architecture": "ViT-B",
+   "class_eligibility": "out of class",
+   "registry_key": null,
+   "ranking_reachable": false,
+   "excluded_reason": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class. (§4.1.3; investigator confirmation 2026-10-05)"
+  },
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/VideoMAE MODEL_ZOO fine-tune gdrive:1MzwteHH-1yuMnFb8vRBQDvngV1Zl-d3z",
+   "stage": "fine-tune (supervised classification after 1600-epoch pre-training)",
+   "datasets": "Kinetics-400",
+   "architecture": "ViT-B",
+   "class_eligibility": "out of class",
+   "registry_key": null,
+   "ranking_reachable": false,
+   "excluded_reason": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class. (§4.1.3; investigator confirmation 2026-10-05)"
+  },
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/VideoMAE MODEL_ZOO fine-tune gdrive:1jX1CiqxSkCfc94y8FRW1YGHy-GNvHCuD",
+   "stage": "fine-tune (supervised classification after 1600-epoch pre-training)",
+   "datasets": "Kinetics-400",
+   "architecture": "ViT-L",
+   "class_eligibility": "out of class",
+   "registry_key": null,
+   "ranking_reachable": false,
+   "excluded_reason": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class. (§4.1.3; investigator confirmation 2026-10-05)"
+  },
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/VideoMAE MODEL_ZOO fine-tune gdrive:104ouJZxSVPSAm0LwJXd6IzjdA_RGLqZi",
+   "stage": "fine-tune (supervised classification after 1600-epoch pre-training)",
+   "datasets": "Kinetics-400",
+   "architecture": "ViT-H",
+   "class_eligibility": "out of class",
+   "registry_key": null,
+   "ranking_reachable": false,
+   "excluded_reason": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class. (§4.1.3; investigator confirmation 2026-10-05)"
+  },
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/VideoMAE MODEL_ZOO fine-tune gdrive:1ajlMrT06jiiM-5YjNI2X_UFyzsuYbbtZ",
+   "stage": "fine-tune (supervised classification after 2400-epoch pre-training)",
+   "datasets": "Something-Something V2",
+   "architecture": "ViT-S",
+   "class_eligibility": "out of class",
+   "registry_key": null,
+   "ranking_reachable": false,
+   "excluded_reason": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class. (§4.1.3; investigator confirmation 2026-10-05)"
+  },
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/VideoMAE MODEL_ZOO fine-tune gdrive:1xZCiaPF4w7lYmLt5o1D5tIZyDdLtJAvH",
+   "stage": "fine-tune (supervised classification after 800-epoch pre-training)",
+   "datasets": "Something-Something V2",
+   "architecture": "ViT-B",
+   "class_eligibility": "out of class",
+   "registry_key": null,
+   "ranking_reachable": false,
+   "excluded_reason": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class. (§4.1.3; investigator confirmation 2026-10-05)"
+  },
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/VideoMAE MODEL_ZOO fine-tune gdrive:1dt_59tBIyzdZd5Ecr22lTtzs_64MOZkT",
+   "stage": "fine-tune (supervised classification after 2400-epoch pre-training)",
+   "datasets": "Something-Something V2",
+   "architecture": "ViT-B",
+   "class_eligibility": "out of class",
+   "registry_key": null,
+   "ranking_reachable": false,
+   "excluded_reason": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class. (§4.1.3; investigator confirmation 2026-10-05)"
+  },
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/VideoMAE MODEL_ZOO fine-tune gdrive:1MSyon6fPpKz7oqD6WDGPFK4k_Rbyb6fw",
+   "stage": "fine-tune (supervised classification after 3200-epoch pre-training)",
+   "datasets": "UCF101",
+   "architecture": "ViT-B",
+   "class_eligibility": "out of class",
+   "registry_key": null,
+   "ranking_reachable": false,
+   "excluded_reason": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class. (§4.1.3; investigator confirmation 2026-10-05)"
+  },
+  {
+   "candidate": "VideoMAE (K400 / SSv2 / UCF101 checkpoints)",
+   "checkpoint_id": "MCG-NJU/videomae-*-finetuned-* (Hugging Face)",
+   "stage": "fine-tune",
+   "datasets": "Kinetics-400 / Something-Something V2",
+   "architecture": "ViT-S/B/L/H",
+   "class_eligibility": "out of class",
+   "registry_key": null,
+   "ranking_reachable": false,
+   "excluded_reason": "VideoMAE eligibility applies to official pre-training checkpoints of the masked-autoencoder model; supervised fine-tuned classification/action-recognition checkpoints are outside the secondary reconstructive/generative class. (§4.1.3)"
+  }
+ ],
+ "out_of_candidate": [
+  {
+   "file": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/imagenet_only.ckpt",
+   "reason": "tokenizer trained on other data (README model zoo row): not a checkpoint of the eligible candidate 'OmniTokenizer (ImageNet + K600)'; that data combination is not an eligible candidate in d3563e7"
+  },
+  {
+   "file": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/imagenet_ucf.ckpt",
+   "reason": "tokenizer trained on other data (README model zoo row): not a checkpoint of the eligible candidate 'OmniTokenizer (ImageNet + K600)'; that data combination is not an eligible candidate in d3563e7"
+  },
+  {
+   "file": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/imagenet_mit.ckpt",
+   "reason": "tokenizer trained on other data (README model zoo row): not a checkpoint of the eligible candidate 'OmniTokenizer (ImageNet + K600)'; that data combination is not an eligible candidate in d3563e7"
+  },
+  {
+   "file": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/imagenet_sthv2.ckpt",
+   "reason": "tokenizer trained on other data (README model zoo row): not a checkpoint of the eligible candidate 'OmniTokenizer (ImageNet + K600)'; that data combination is not an eligible candidate in d3563e7"
+  },
+  {
+   "file": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/imagenet_ucf_vae.ckpt",
+   "reason": "tokenizer trained on other data (README model zoo row): not a checkpoint of the eligible candidate 'OmniTokenizer (ImageNet + K600)'; that data combination is not an eligible candidate in d3563e7"
+  },
+  {
+   "file": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/celebahq.ckpt",
+   "reason": "tokenizer trained on other data (README model zoo row): not a checkpoint of the eligible candidate 'OmniTokenizer (ImageNet + K600)'; that data combination is not an eligible candidate in d3563e7"
+  },
+  {
+   "file": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/celebahq_k600.ckpt",
+   "reason": "tokenizer trained on other data (README model zoo row): not a checkpoint of the eligible candidate 'OmniTokenizer (ImageNet + K600)'; that data combination is not an eligible candidate in d3563e7"
+  },
+  {
+   "file": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/celebahq_ucf.ckpt",
+   "reason": "tokenizer trained on other data (README model zoo row): not a checkpoint of the eligible candidate 'OmniTokenizer (ImageNet + K600)'; that data combination is not an eligible candidate in d3563e7"
+  },
+  {
+   "file": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/ffhq.ckpt",
+   "reason": "tokenizer trained on other data (README model zoo row): not a checkpoint of the eligible candidate 'OmniTokenizer (ImageNet + K600)'; that data combination is not an eligible candidate in d3563e7"
+  },
+  {
+   "file": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/ffhq_k600.ckpt",
+   "reason": "tokenizer trained on other data (README model zoo row): not a checkpoint of the eligible candidate 'OmniTokenizer (ImageNet + K600)'; that data combination is not an eligible candidate in d3563e7"
+  },
+  {
+   "file": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/ffhq_ucf.ckpt",
+   "reason": "tokenizer trained on other data (README model zoo row): not a checkpoint of the eligible candidate 'OmniTokenizer (ImageNet + K600)'; that data combination is not an eligible candidate in d3563e7"
+  },
+  {
+   "file": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/imagenet_class_lm.ckpt",
+   "reason": "language model / diffusion generator / data file, not a tokenizer checkpoint (README: LM checkpoints for scripts/lm_train)"
+  },
+  {
+   "file": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/ucf_class_lm.ckpt",
+   "reason": "language model / diffusion generator / data file, not a tokenizer checkpoint (README: LM checkpoints for scripts/lm_train)"
+  },
+  {
+   "file": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/k600_fp_lm.ckpt",
+   "reason": "language model / diffusion generator / data file, not a tokenizer checkpoint (README: LM checkpoints for scripts/lm_train)"
+  },
+  {
+   "file": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/dit.pt",
+   "reason": "language model / diffusion generator / data file, not a tokenizer checkpoint (README: LM checkpoints for scripts/lm_train)"
+  },
+  {
+   "file": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/latte_17frms.pt",
+   "reason": "language model / diffusion generator / data file, not a tokenizer checkpoint (README: LM checkpoints for scripts/lm_train)"
+  },
+  {
+   "file": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/imagenet.npz",
+   "reason": "language model / diffusion generator / data file, not a tokenizer checkpoint (README: LM checkpoints for scripts/lm_train)"
+  },
+  {
+   "file": "Daniel0724/OmniTokenizer@9ebde216ba19b3eeaeec4e2960ebc2d0551c8b3d/annotations.zip",
+   "reason": "language model / diffusion generator / data file, not a tokenizer checkpoint (README: LM checkpoints for scripts/lm_train)"
+  },
+  {
+   "file": "Yumic/LeanVAE@4585e461c697919a452a99191ebf455b991c13fb/sky-dim16.pt",
+   "reason": "Latte generator trained on LeanVAE latents (README 'Latte Model' table: 'Latte + LeanVAE-chn*'), not a LeanVAE checkpoint"
+  },
+  {
+   "file": "Yumic/LeanVAE@4585e461c697919a452a99191ebf455b991c13fb/sky-dim4.pt",
+   "reason": "Latte generator trained on LeanVAE latents (README 'Latte Model' table: 'Latte + LeanVAE-chn*'), not a LeanVAE checkpoint"
+  },
+  {
+   "file": "Yumic/LeanVAE@4585e461c697919a452a99191ebf455b991c13fb/ucf-dim16.pt",
+   "reason": "Latte generator trained on LeanVAE latents (README 'Latte Model' table: 'Latte + LeanVAE-chn*'), not a LeanVAE checkpoint"
+  },
+  {
+   "file": "Yumic/LeanVAE@4585e461c697919a452a99191ebf455b991c13fb/ucf-dim4.pt",
+   "reason": "Latte generator trained on LeanVAE latents (README 'Latte Model' table: 'Latte + LeanVAE-chn*'), not a LeanVAE checkpoint"
+  }
+ ],
+ "reference": {
+  "candidate": "Cosmos reference (Decision 005)",
+  "checkpoint_id": "nvidia/Cosmos-1.0-Tokenizer-CV8x8x8@5110dbb3c94a9eb6648eabbbccc19c76180fe426/vae",
+  "registry_key": "Cosmos-CV8x8x8",
+  "adapter": "ss_benchmark/models/ref_cosmos.py",
+  "ranking_reachable": false,
+  "note": "fixed reference arm, not subject to the §4.1.4 rules or ranking"
+ }
+}

@@ -37,8 +37,16 @@ def _vissl_to_torchvision(sd):
     return out
 
 
-def build(weights=None, device="cpu", dtype=torch.float32):
+CHECKPOINTS = {"moco_v2": "model_final_checkpoint_moco_v2_surg.torch",
+               "simclr": "model_final_checkpoint_simclr_surg.torch",
+               "swav": "model_final_checkpoint_swav_surg.torch",
+               "dino": "model_final_checkpoint_dino_surg.torch"}
+
+
+def build(weights=None, device="cpu", dtype=torch.float32, checkpoint=None):
+    """``checkpoint`` names the release file (CHECKPOINTS); all four share this architecture and loader."""
     import torchvision
+    assert checkpoint is None or checkpoint in CHECKPOINTS
     model = torchvision.models.resnet50(weights=None)
     model.fc = torch.nn.Identity()
     if weights is not None:
