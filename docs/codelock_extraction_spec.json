@@ -20,7 +20,8 @@
     "repository": "TimJaspersTue/SurgeNetModels",
     "revision": "cc21f4a158f3a17260d8304e9d2b24b580a6ea35",
     "file": "CHOLEC_checkpoint_epoch0050_teacher.pth",
-    "note": "README 'Teacher Backbone' column (also the README loading example); the 'Full DINO checkpoint' file is not the backbone"
+    "note": "README 'Teacher Backbone' column (also the README loading example); the 'Full DINO checkpoint' file is not the backbone",
+    "code": "TimJaspers0801/SurgeNet@54831cfacf3a6cac0bbf5119f72b9cb9c31c3e82 metaformer.py (sha256 94ef2937bb2b9c8d8b8d53dcfcff49374c6130d805ebd26de4c76ecda5c36718)"
    },
    "kind": "frame",
    "input_size": [
@@ -30,17 +31,19 @@
    "clip_length": null,
    "temporal_sampling": "frame-level: every frame of the 2-fps physical-time grid (§3.1 step 1); the step representation is the mean of the step's ten frame embeddings 10t..10t+9 (§4.2)",
    "normalisation": "x/255, ImageNet mean (0.485, 0.456, 0.406) / std (0.229, 0.224, 0.225)",
-   "representation_tensor": "timm caformer_s18 forward_features -> forward_head(pre_logits=True): LayerNorm of the stage-4 feature map averaged over H, W (= SurgeNet metaformer.py `self.norm(x.mean([1, 2]))`)",
+   "representation_tensor": "official SurgeNet network caformer_s18(pretrained='SurgeNet') from third_party/SurgeNet/metaformer.py (TimJaspers0801/SurgeNet@54831cfacf3a6cac0bbf5119f72b9cb9c31c3e82; CAFormer-S18 with plain ReLU in the SepConv token mixers and MLPs), classification head replaced by Identity, weights loaded with strict key matching; representation = MetaFormer.forward_features(x)[0] = self.norm(x.mean([1, 2])) (LayerNorm of the stage-4 map averaged over H, W) (CODELOCK_CORRECTION_001; the code-lock adapter used timm caformer_s18 with StarReLU)",
    "pooling": "global average over the stage-4 spatial grid (7 x 7 at 224); then the ten-frame step mean",
    "representation_dim": 512,
-   "stochastic_layers": "none active: eval() disables drop-path / dropout",
-   "config_overrides_paper": "input 224 x 224 and ImageNet normalisation: no level-1-3 SurgeNet source states the pretraining input size or normalisation (224 x 399 bicubic is the downstream fine-tuning input); 224 = CAFormer-S18 / ImageNet-1k initialisation resolution and timm pretrained_cfg (judgement call, frozen)",
+   "stochastic_layers": "none active: eval(); drop_path_rate 0.0 and head_dropout 0.0 in the official constructor",
+   "config_overrides_paper": "architecture = the official released model code (rule R1): SurgeNet's caformer_s18(pretrained='SurgeNet') uses nn.ReLU in SepConv / Mlp, not timm's StarReLU (CODELOCK_CORRECTION_001); input 224 x 224 and ImageNet normalisation: no level-1-3 SurgeNet source states the pretraining input size or normalisation (224 x 399 bicubic is the downstream fine-tuning input); 224 = CAFormer-S18 / ImageNet-1k initialisation resolution (judgement call, frozen)",
    "sources": [
     "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
     "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
     "data_audit/lead/fm_sources/primary/surgenet_metaformer_py.txt",
-    "data_audit/lead/fm_sources/primary/surgenet_hf_api_blobs.txt"
-   ]
+    "data_audit/lead/fm_sources/primary/surgenet_hf_api_blobs.txt",
+    "third_party/SurgeNet/metaformer.py"
+   ],
+   "correction": "CODELOCK_CORRECTION_001 (decisions/CODELOCK_CORRECTION_001_SURGENET_ADAPTER.md)"
   },
   "SurgeNetRARP": {
    "registry_key": "SurgeNetRARP",
@@ -52,7 +55,8 @@
     "repository": "TimJaspersTue/SurgeNetModels",
     "revision": "cc21f4a158f3a17260d8304e9d2b24b580a6ea35",
     "file": "RARP_checkpoint_epoch0050_teacher.pth",
-    "note": "README 'Teacher Backbone' column (also the README loading example); the 'Full DINO checkpoint' file is not the backbone"
+    "note": "README 'Teacher Backbone' column (also the README loading example); the 'Full DINO checkpoint' file is not the backbone",
+    "code": "TimJaspers0801/SurgeNet@54831cfacf3a6cac0bbf5119f72b9cb9c31c3e82 metaformer.py (sha256 94ef2937bb2b9c8d8b8d53dcfcff49374c6130d805ebd26de4c76ecda5c36718)"
    },
    "kind": "frame",
    "input_size": [
@@ -62,17 +66,19 @@
    "clip_length": null,
    "temporal_sampling": "frame-level: every frame of the 2-fps physical-time grid (§3.1 step 1); the step representation is the mean of the step's ten frame embeddings 10t..10t+9 (§4.2)",
    "normalisation": "x/255, ImageNet mean (0.485, 0.456, 0.406) / std (0.229, 0.224, 0.225)",
-   "representation_tensor": "timm caformer_s18 forward_features -> forward_head(pre_logits=True): LayerNorm of the stage-4 feature map averaged over H, W (= SurgeNet metaformer.py `self.norm(x.mean([1, 2]))`)",
+   "representation_tensor": "official SurgeNet network caformer_s18(pretrained='SurgeNet') from third_party/SurgeNet/metaformer.py (TimJaspers0801/SurgeNet@54831cfacf3a6cac0bbf5119f72b9cb9c31c3e82; CAFormer-S18 with plain ReLU in the SepConv token mixers and MLPs), classification head replaced by Identity, weights loaded with strict key matching; representation = MetaFormer.forward_features(x)[0] = self.norm(x.mean([1, 2])) (LayerNorm of the stage-4 map averaged over H, W) (CODELOCK_CORRECTION_001; the code-lock adapter used timm caformer_s18 with StarReLU)",
    "pooling": "global average over the stage-4 spatial grid (7 x 7 at 224); then the ten-frame step mean",
    "representation_dim": 512,
-   "stochastic_layers": "none active: eval() disables drop-path / dropout",
-   "config_overrides_paper": "input 224 x 224 and ImageNet normalisation: no level-1-3 SurgeNet source states the pretraining input size or normalisation (224 x 399 bicubic is the downstream fine-tuning input); 224 = CAFormer-S18 / ImageNet-1k initialisation resolution and timm pretrained_cfg (judgement call, frozen)",
+   "stochastic_layers": "none active: eval(); drop_path_rate 0.0 and head_dropout 0.0 in the official constructor",
+   "config_overrides_paper": "architecture = the official released model code (rule R1): SurgeNet's caformer_s18(pretrained='SurgeNet') uses nn.ReLU in SepConv / Mlp, not timm's StarReLU (CODELOCK_CORRECTION_001); input 224 x 224 and ImageNet normalisation: no level-1-3 SurgeNet source states the pretraining input size or normalisation (224 x 399 bicubic is the downstream fine-tuning input); 224 = CAFormer-S18 / ImageNet-1k initialisation resolution (judgement call, frozen)",
    "sources": [
     "data_audit/lead/fm_sources/primary/surgenetxl_arxiv_pdf.txt",
     "data_audit/lead/fm_sources/primary/surgenet_github_readme.txt",
     "data_audit/lead/fm_sources/primary/surgenet_metaformer_py.txt",
-    "data_audit/lead/fm_sources/primary/surgenet_hf_api_blobs.txt"
-   ]
+    "data_audit/lead/fm_sources/primary/surgenet_hf_api_blobs.txt",
+    "third_party/SurgeNet/metaformer.py"
+   ],
+   "correction": "CODELOCK_CORRECTION_001 (decisions/CODELOCK_CORRECTION_001_SURGENET_ADAPTER.md)"
   },
   "SelfSupSurg-ResNet50:moco_v2": {
    "registry_key": "SelfSupSurg-ResNet50:moco_v2",
