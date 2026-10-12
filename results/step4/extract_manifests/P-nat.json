@@ -1,0 +1,5356 @@
+{
+ "C2_002": {
+  "acquisition": "native",
+  "duration": 23.96,
+  "files": [
+   "Center2_002.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 599,
+  "n_steps": 4,
+  "n_steps_by_duration": 4,
+  "r": 0.45,
+  "sha256": "c882b3130e3600ac248ba0041cb479c7fb84d778e122bf209da98aedf670f956",
+  "shape": [
+   4,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_003": {
+  "acquisition": "native",
+  "duration": 3009.6,
+  "files": [
+   "Center2_003.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 75240,
+  "n_steps": 601,
+  "n_steps_by_duration": 601,
+  "r": 0.45,
+  "sha256": "77dde39a9b034ec2237ee48a17aa94a72f71142f3e45c63d0773ef3f173eafae",
+  "shape": [
+   601,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_004": {
+  "acquisition": "native",
+  "duration": 818.64,
+  "files": [
+   "Center2_004.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 20466,
+  "n_steps": 163,
+  "n_steps_by_duration": 163,
+  "r": 0.45,
+  "sha256": "7886fc909bd930063b53ada0d4a14561686ae8d3f4d2e2bbd9220f8ee750f20c",
+  "shape": [
+   163,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_005": {
+  "acquisition": "native",
+  "duration": 1925.96,
+  "files": [
+   "Center2_005.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 48149,
+  "n_steps": 385,
+  "n_steps_by_duration": 385,
+  "r": 0.45,
+  "sha256": "e22b05631978f94d2ce703de1cf52dd16f6d61b72acedb75a30b04885007ea57",
+  "shape": [
+   385,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_006": {
+  "acquisition": "native",
+  "duration": 1529.76,
+  "files": [
+   "Center2_006.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 38244,
+  "n_steps": 305,
+  "n_steps_by_duration": 305,
+  "r": 0.45,
+  "sha256": "11357e14fa1bc781ac973df8f423345dd383c1f14b31262a80cb5af7e319e192",
+  "shape": [
+   305,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_007": {
+  "acquisition": "native",
+  "duration": 5307.0,
+  "files": [
+   "Center2_007.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 132675,
+  "n_steps": 1061,
+  "n_steps_by_duration": 1061,
+  "r": 0.45,
+  "sha256": "9d515bb7990574b932bdde074e9723f442529c69e8dc6cc220c191353d17ede4",
+  "shape": [
+   1061,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_008": {
+  "acquisition": "native",
+  "duration": 1804.32,
+  "files": [
+   "Center2_008.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 45108,
+  "n_steps": 360,
+  "n_steps_by_duration": 360,
+  "r": 0.45,
+  "sha256": "10f5441732637834a2df41980d0ea4c9d56ea0f934845cff609f3ce74d340f76",
+  "shape": [
+   360,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_009": {
+  "acquisition": "native",
+  "duration": 1293.0,
+  "files": [
+   "Center2_009.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 32325,
+  "n_steps": 258,
+  "n_steps_by_duration": 258,
+  "r": 0.45,
+  "sha256": "396f21281aec040321206c6c56156c47c3cdcc6da7396cccda1a5bad017dcd7c",
+  "shape": [
+   258,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_010": {
+  "acquisition": "native",
+  "duration": 1690.32,
+  "files": [
+   "Center2_010.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 42258,
+  "n_steps": 338,
+  "n_steps_by_duration": 338,
+  "r": 0.45,
+  "sha256": "d3f9d8df2e0d02dd52662be822204aba878d6835d90ecb22fb4d34aaeebd73d7",
+  "shape": [
+   338,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_011": {
+  "acquisition": "native",
+  "duration": 1511.04,
+  "files": [
+   "Center2_011.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 37776,
+  "n_steps": 302,
+  "n_steps_by_duration": 302,
+  "r": 0.45,
+  "sha256": "c979408c4c92cf9cb0546a50ec87489310cdaa0d3d29863b86a20842b4e5f257",
+  "shape": [
+   302,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_012": {
+  "acquisition": "native",
+  "duration": 831.96,
+  "files": [
+   "Center2_012.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 20799,
+  "n_steps": 166,
+  "n_steps_by_duration": 166,
+  "r": 0.45,
+  "sha256": "9d6af25bbb4bc716ef7714ef8269cb0e09994cff149259655f9efaccf51fed8d",
+  "shape": [
+   166,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_013": {
+  "acquisition": "native",
+  "duration": 3402.6,
+  "files": [
+   "Center2_013_v01.mp4",
+   "Center2_013_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 85065,
+  "n_steps": 680,
+  "n_steps_by_duration": 680,
+  "r": 0.45,
+  "sha256": "3ba5b4ffa9b777afadd550feff1a5ed87e824f368520caa5f12d3dfee82f3244",
+  "shape": [
+   680,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_014": {
+  "acquisition": "native",
+  "duration": 1805.4,
+  "files": [
+   "Center2_014.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 45135,
+  "n_steps": 361,
+  "n_steps_by_duration": 361,
+  "r": 0.45,
+  "sha256": "b5533f45d0594a55d68755e35086353a0ede0cfce185cf451cc2d8c1a02607f9",
+  "shape": [
+   361,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_015": {
+  "acquisition": "native",
+  "duration": 2415.96,
+  "files": [
+   "Center2_015_v01.mp4",
+   "Center2_015_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 60399,
+  "n_steps": 483,
+  "n_steps_by_duration": 483,
+  "r": 0.45,
+  "sha256": "a2b5b17961800e0a1154155377c40b31b20ad014cd5b33526e782a0b418011c1",
+  "shape": [
+   483,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_016": {
+  "acquisition": "native",
+  "duration": 1218.28,
+  "files": [
+   "Center2_016.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 30457,
+  "n_steps": 243,
+  "n_steps_by_duration": 243,
+  "r": 0.45,
+  "sha256": "295c45fda74f07e86c4bc5300a1906d0f3827a22799f3ad3143ee5d634e3e9e6",
+  "shape": [
+   243,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_017": {
+  "acquisition": "native",
+  "duration": 941.84,
+  "files": [
+   "Center2_017.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 23546,
+  "n_steps": 188,
+  "n_steps_by_duration": 188,
+  "r": 0.45,
+  "sha256": "5370f1e8a080172371293f64de30c6331f7c53e1d4b34454a8702bef4ec86cb3",
+  "shape": [
+   188,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_018": {
+  "acquisition": "native",
+  "duration": 5624.88,
+  "files": [
+   "Center2_018_v01.mp4",
+   "Center2_018_v02.mp4",
+   "Center2_018_v03.mp4",
+   "Center2_018_v04.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 140622,
+  "n_steps": 1124,
+  "n_steps_by_duration": 1124,
+  "r": 0.45,
+  "sha256": "18c4d92f779b6d72935a4303e4a9728c6c250d55bb6540569acea8ccbcca9fde",
+  "shape": [
+   1124,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_019": {
+  "acquisition": "native",
+  "duration": 1803.52,
+  "files": [
+   "Center2_019_v01.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 45088,
+  "n_steps": 360,
+  "n_steps_by_duration": 360,
+  "r": 0.45,
+  "sha256": "97c28102522128789a67d516ef31c8a81cf684e3d57e3f40874feb6f77bb7f80",
+  "shape": [
+   360,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_021": {
+  "acquisition": "native",
+  "duration": 1017.92,
+  "files": [
+   "Center2_021.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 25448,
+  "n_steps": 203,
+  "n_steps_by_duration": 203,
+  "r": 0.45,
+  "sha256": "dfc5100505252a73f70eb7e649d85ace4fa9ceaff45484041171b5e5ab14940a",
+  "shape": [
+   203,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_022": {
+  "acquisition": "native",
+  "duration": 1329.96,
+  "files": [
+   "Center2_022_v01.mp4",
+   "Center2_022_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 33249,
+  "n_steps": 265,
+  "n_steps_by_duration": 265,
+  "r": 0.45,
+  "sha256": "0d5c14d0d207ce566d7bc1a4c8945a8dfc3cc6c931b1eeb951e1cce3af31df75",
+  "shape": [
+   265,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_023": {
+  "acquisition": "native",
+  "duration": 1970.6,
+  "files": [
+   "Center2_023_v01.mp4",
+   "Center2_023_v02.mp4",
+   "Center2_023_v03.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 49265,
+  "n_steps": 394,
+  "n_steps_by_duration": 394,
+  "r": 0.45,
+  "sha256": "8418050a65a1c105701cb2e09ee5c2cb54dbf7546c7b5908d299d331c368022f",
+  "shape": [
+   394,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_024": {
+  "acquisition": "native",
+  "duration": 2277.0,
+  "files": [
+   "Center2_024_v01.mp4",
+   "Center2_024_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 56925,
+  "n_steps": 455,
+  "n_steps_by_duration": 455,
+  "r": 0.45,
+  "sha256": "7868836683c2be08eced7b40cdf60d2bdae99069f4e6c7b11c69471283403579",
+  "shape": [
+   455,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_025": {
+  "acquisition": "native",
+  "duration": 3601.52,
+  "files": [
+   "Center2_025_v01.mp4",
+   "Center2_025_v02.mp4",
+   "Center2_025_v03.mp4",
+   "Center2_025_v04.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 90038,
+  "n_steps": 720,
+  "n_steps_by_duration": 720,
+  "r": 0.45,
+  "sha256": "1258aa1ac47e76abd7d2cdd6578531ecf545007ba65359b67c8e2033e8722534",
+  "shape": [
+   720,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_027": {
+  "acquisition": "native",
+  "duration": 996.4,
+  "files": [
+   "Center2_027_v01.mp4",
+   "Center2_027_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 24910,
+  "n_steps": 199,
+  "n_steps_by_duration": 199,
+  "r": 0.45,
+  "sha256": "4ba9f4914c5766d20426542bfb56604b398421b1e2203aa63d5d807060b7b210",
+  "shape": [
+   199,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_028": {
+  "acquisition": "native",
+  "duration": 3411.3999999999996,
+  "files": [
+   "Center2_028_v01.mp4",
+   "Center2_028_v02.mp4",
+   "Center2_028_v03.mp4",
+   "Center2_028_v04.mp4",
+   "Center2_028_v05.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 85285,
+  "n_steps": 682,
+  "n_steps_by_duration": 682,
+  "r": 0.45,
+  "sha256": "ecc7a453ec3c2f4a42d2156533422529a08376cff337e97d87c2c51b2fc8c949",
+  "shape": [
+   682,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_029": {
+  "acquisition": "native",
+  "duration": 1614.08,
+  "files": [
+   "Center2_029_v01.mp4",
+   "Center2_029_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 40352,
+  "n_steps": 322,
+  "n_steps_by_duration": 322,
+  "r": 0.45,
+  "sha256": "00dadec20c5ab18e3899cbefb5892c6760fae0e139d054bf91c38d9b36dc19f2",
+  "shape": [
+   322,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_030": {
+  "acquisition": "native",
+  "duration": 1691.3600000000001,
+  "files": [
+   "Center2_030_v01.mp4",
+   "Center2_030_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 42284,
+  "n_steps": 338,
+  "n_steps_by_duration": 338,
+  "r": 0.45,
+  "sha256": "e2bb5148e611db9e3ad4329f138b49598216f0682279ee9a0ab36f11b4c68bb1",
+  "shape": [
+   338,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_031": {
+  "acquisition": "native",
+  "duration": 1909.52,
+  "files": [
+   "Center2_031_v01.mp4",
+   "Center2_031_v02.mp4",
+   "Center2_031_v03.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 47738,
+  "n_steps": 381,
+  "n_steps_by_duration": 381,
+  "r": 0.45,
+  "sha256": "ddc0502229c9f3a55f5757c4d2701d66340da672c1b3de4e13cb2e5cd65e8c41",
+  "shape": [
+   381,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_032": {
+  "acquisition": "native",
+  "duration": 1627.16,
+  "files": [
+   "Center2_032_v01.mp4",
+   "Center2_032_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 40679,
+  "n_steps": 325,
+  "n_steps_by_duration": 325,
+  "r": 0.45,
+  "sha256": "5c5c1dce0d3330144e8225c8762cbfdaa0c0a69153a70e6e25a4a3ba15c52f48",
+  "shape": [
+   325,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_035": {
+  "acquisition": "native",
+  "duration": 1997.2000000000003,
+  "files": [
+   "Center2_035_v01.mp4",
+   "Center2_035_v02.mp4",
+   "Center2_035_v03.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 49930,
+  "n_steps": 399,
+  "n_steps_by_duration": 399,
+  "r": 0.45,
+  "sha256": "5f30d4838125815c2f559e847612a96d47a62069332ccb86c4a20e0a17d16475",
+  "shape": [
+   399,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_036": {
+  "acquisition": "native",
+  "duration": 3926.9599999999996,
+  "files": [
+   "Center2_036_v01.mp4",
+   "Center2_036_v02.mp4",
+   "Center2_036_v03.mp4",
+   "Center2_036_v04.mp4",
+   "Center2_036_v05.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 98174,
+  "n_steps": 785,
+  "n_steps_by_duration": 785,
+  "r": 0.45,
+  "sha256": "f732bb1d669612d888c7839305a9f2d160d51c33d1c8b65a4ec0e9a0bcb2897a",
+  "shape": [
+   785,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_037": {
+  "acquisition": "native",
+  "duration": 1773.8400000000001,
+  "files": [
+   "Center2_037_v01.mp4",
+   "Center2_037_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 44346,
+  "n_steps": 354,
+  "n_steps_by_duration": 354,
+  "r": 0.45,
+  "sha256": "afd5b27124faad9088ea9dc98ec6e4d2b3fc0d73e8fdf81c8b5f9157afffc7d1",
+  "shape": [
+   354,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_038": {
+  "acquisition": "native",
+  "duration": 2251.0,
+  "files": [
+   "Center2_038_v01.mp4",
+   "Center2_038_v02.mp4",
+   "Center2_038_v03.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 56275,
+  "n_steps": 450,
+  "n_steps_by_duration": 450,
+  "r": 0.45,
+  "sha256": "a637506ae7d7a68a56195ad981aa3d366441da309af57924a88f816e16b10270",
+  "shape": [
+   450,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_039": {
+  "acquisition": "native",
+  "duration": 2599.88,
+  "files": [
+   "Center2_039_v01.mp4",
+   "Center2_039_v02.mp4",
+   "Center2_039_v03.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 64997,
+  "n_steps": 519,
+  "n_steps_by_duration": 519,
+  "r": 0.45,
+  "sha256": "90c9136f331b7b690d7e6626986685457699797c82d3ab540c451257881161f1",
+  "shape": [
+   519,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_040": {
+  "acquisition": "native",
+  "duration": 904.32,
+  "files": [
+   "Center2_040.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 22608,
+  "n_steps": 180,
+  "n_steps_by_duration": 180,
+  "r": 0.45,
+  "sha256": "73c014f4ffe206d3dd39eed2b250543150a741085f69d927f612deb1f7368a8e",
+  "shape": [
+   180,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_041": {
+  "acquisition": "native",
+  "duration": 893.08,
+  "files": [
+   "Center2_041.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 22327,
+  "n_steps": 178,
+  "n_steps_by_duration": 178,
+  "r": 0.45,
+  "sha256": "19f5ad7c0ed924d26948b0283a31386cd8163a875d23aab5c9582dea8ff825fc",
+  "shape": [
+   178,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_042": {
+  "acquisition": "native",
+  "duration": 900.4,
+  "files": [
+   "Center2_042.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 22510,
+  "n_steps": 180,
+  "n_steps_by_duration": 180,
+  "r": 0.45,
+  "sha256": "a5e19cc1cddd5330e0c6af7c70e7ee461e320656bba7bc028b2dbb466334b6c3",
+  "shape": [
+   180,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_043": {
+  "acquisition": "native",
+  "duration": 913.36,
+  "files": [
+   "Center2_043.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 22834,
+  "n_steps": 182,
+  "n_steps_by_duration": 182,
+  "r": 0.45,
+  "sha256": "d1b8183134014ffae4533f36215a75d0eeba34814760503480a21fe3f757b097",
+  "shape": [
+   182,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_044": {
+  "acquisition": "native",
+  "duration": 900.4,
+  "files": [
+   "Center2_044.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 22510,
+  "n_steps": 180,
+  "n_steps_by_duration": 180,
+  "r": 0.45,
+  "sha256": "c0f65fd3bb97e9980c13dc2d99feb40789335d11fde21e64494eaffa812fdf88",
+  "shape": [
+   180,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_045": {
+  "acquisition": "native",
+  "duration": 901.56,
+  "files": [
+   "Center2_045.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 22539,
+  "n_steps": 180,
+  "n_steps_by_duration": 180,
+  "r": 0.45,
+  "sha256": "5d24360b01567b0d1e1ad4d0b5e8cf6a770809f2ec76180a60a6f09a1b1187dd",
+  "shape": [
+   180,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_046": {
+  "acquisition": "native",
+  "duration": 901.6,
+  "files": [
+   "Center2_046.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 22540,
+  "n_steps": 180,
+  "n_steps_by_duration": 180,
+  "r": 0.45,
+  "sha256": "939fc99a86602e9710d9041a255380fb3afe46381c3b93957071586863685a28",
+  "shape": [
+   180,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_047": {
+  "acquisition": "native",
+  "duration": 901.2,
+  "files": [
+   "Center2_047.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 22530,
+  "n_steps": 180,
+  "n_steps_by_duration": 180,
+  "r": 0.45,
+  "sha256": "a5700af359c5cfcdf72cface04d90507f4ae54b8bed54be3db1da449f4ba5776",
+  "shape": [
+   180,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_048": {
+  "acquisition": "native",
+  "duration": 902.76,
+  "files": [
+   "Center2_048.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 22569,
+  "n_steps": 180,
+  "n_steps_by_duration": 180,
+  "r": 0.45,
+  "sha256": "e1b6369393720408265e9211b1dd7cc4dfc1964fce984b5bf13a4e6ffbb0eaf8",
+  "shape": [
+   180,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_049": {
+  "acquisition": "native",
+  "duration": 900.4,
+  "files": [
+   "Center2_049.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 22510,
+  "n_steps": 180,
+  "n_steps_by_duration": 180,
+  "r": 0.45,
+  "sha256": "313b4843d78cc2a55d0dccc41d248880ede9a76e0765911aba5b11d42d030503",
+  "shape": [
+   180,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_050": {
+  "acquisition": "native",
+  "duration": 901.2,
+  "files": [
+   "Center2_050.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 22530,
+  "n_steps": 180,
+  "n_steps_by_duration": 180,
+  "r": 0.45,
+  "sha256": "637955eb76ce0b5c39f4423e3d2f85440ea1b51e0a38b52089f0baa4e88703f1",
+  "shape": [
+   180,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_051": {
+  "acquisition": "native",
+  "duration": 655.72,
+  "files": [
+   "Center2_051.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 16393,
+  "n_steps": 131,
+  "n_steps_by_duration": 131,
+  "r": 0.45,
+  "sha256": "ceac1139de1b90b6181817714fa6b89fe9d8c9641fe4208d466a16f37d4dd439",
+  "shape": [
+   131,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_052": {
+  "acquisition": "native",
+  "duration": 902.12,
+  "files": [
+   "Center2_052.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 22553,
+  "n_steps": 180,
+  "n_steps_by_duration": 180,
+  "r": 0.45,
+  "sha256": "5ec54ed114e1456fd0054c507ec4b13bac13af652d6ccb4fa20b95c3820e0b84",
+  "shape": [
+   180,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_053": {
+  "acquisition": "native",
+  "duration": 900.4,
+  "files": [
+   "Center2_053.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 22510,
+  "n_steps": 180,
+  "n_steps_by_duration": 180,
+  "r": 0.45,
+  "sha256": "fefb2ee3655a22c746d3487be94331a63a211961ff4d8c22cf1f5a41e12610e5",
+  "shape": [
+   180,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C2_054": {
+  "acquisition": "native",
+  "duration": 903.56,
+  "files": [
+   "Center2_054.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 22589,
+  "n_steps": 180,
+  "n_steps_by_duration": 180,
+  "r": 0.45,
+  "sha256": "b273ca51c3e4d09d6be26cc0786891ac057d79e833b06783f6d2ea0671fb77ae",
+  "shape": [
+   180,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_001": {
+  "acquisition": "native",
+  "duration": 2876.04,
+  "files": [
+   "Center3_001.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 71901,
+  "n_steps": 575,
+  "n_steps_by_duration": 575,
+  "r": 0.45,
+  "sha256": "5a76c72cbb09c64228c2b69d5211fb6dd2b164d43caa8eb85c2cdd4f4edcd0ec",
+  "shape": [
+   575,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_002": {
+  "acquisition": "native",
+  "duration": 1360.08,
+  "files": [
+   "Center3_002.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 34002,
+  "n_steps": 272,
+  "n_steps_by_duration": 272,
+  "r": 0.45,
+  "sha256": "b85ac137611fcfc7f34a82dbeea7bf98492bce23989f57ce28e7418115b50396",
+  "shape": [
+   272,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_003": {
+  "acquisition": "native",
+  "duration": 3415.92,
+  "files": [
+   "Center3_003.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 85398,
+  "n_steps": 683,
+  "n_steps_by_duration": 683,
+  "r": 0.45,
+  "sha256": "4d98939b9c173ca346356ec6487243bf3dc9965582583368f7e0b3994884ee22",
+  "shape": [
+   683,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_005": {
+  "acquisition": "native",
+  "duration": 1381.04,
+  "files": [
+   "Center3_005.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 34526,
+  "n_steps": 276,
+  "n_steps_by_duration": 276,
+  "r": 0.45,
+  "sha256": "9d51d26b01efe7ce3409a923b1332d9709b827583759308af8d6292898332e4e",
+  "shape": [
+   276,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_006": {
+  "acquisition": "native",
+  "duration": 2200.36,
+  "files": [
+   "Center3_006.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 55009,
+  "n_steps": 440,
+  "n_steps_by_duration": 440,
+  "r": 0.45,
+  "sha256": "6371fa3446aa74a393449345371efcc8fedc8df3d09acadd65895ac7dba3fe3a",
+  "shape": [
+   440,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_007": {
+  "acquisition": "native",
+  "duration": 1216.68,
+  "files": [
+   "Center3_007.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 30417,
+  "n_steps": 243,
+  "n_steps_by_duration": 243,
+  "r": 0.45,
+  "sha256": "854a4442597d3e82e40072f8be4ca7bd1e06330d8aec30323b836219c5fae9a1",
+  "shape": [
+   243,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_008": {
+  "acquisition": "native",
+  "duration": 1028.08,
+  "files": [
+   "Center3_008.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 25702,
+  "n_steps": 205,
+  "n_steps_by_duration": 205,
+  "r": 0.45,
+  "sha256": "6273220d9fa93111b70a77a63a9eb064a90627a8f096e53ccc5edf1096a00fab",
+  "shape": [
+   205,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_009": {
+  "acquisition": "native",
+  "duration": 975.6,
+  "files": [
+   "Center3_009.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 24390,
+  "n_steps": 195,
+  "n_steps_by_duration": 195,
+  "r": 0.45,
+  "sha256": "e1d212f74c9a8c8460f7cf9c98d76255f4661f661776d4bcfc53d28e0f3363bd",
+  "shape": [
+   195,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_010": {
+  "acquisition": "native",
+  "duration": 2897.88,
+  "files": [
+   "Center3_010.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 72447,
+  "n_steps": 579,
+  "n_steps_by_duration": 579,
+  "r": 0.45,
+  "sha256": "25795adaf216a6f30a98942c203292ac8200221e56755a29b652f5a8c4c5378c",
+  "shape": [
+   579,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_011": {
+  "acquisition": "native",
+  "duration": 1690.76,
+  "files": [
+   "Center3_011.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 42269,
+  "n_steps": 338,
+  "n_steps_by_duration": 338,
+  "r": 0.45,
+  "sha256": "e664b288511a499679ac0d3b4b4ac6da2f7f723028437033b7452aedc97e6733",
+  "shape": [
+   338,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_012": {
+  "acquisition": "native",
+  "duration": 1698.76,
+  "files": [
+   "Center3_012.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 42469,
+  "n_steps": 339,
+  "n_steps_by_duration": 339,
+  "r": 0.45,
+  "sha256": "33afa01a389934ddd985aff416eb29d97dd1f4eedc46d7f1cf4c0b66309e09e0",
+  "shape": [
+   339,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_013": {
+  "acquisition": "native",
+  "duration": 921.04,
+  "files": [
+   "Center3_013.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 23026,
+  "n_steps": 184,
+  "n_steps_by_duration": 184,
+  "r": 0.45,
+  "sha256": "9de0c5e60d33012495af08df72ee0f194f786e27a6352e74163667b3e59d42b7",
+  "shape": [
+   184,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_014": {
+  "acquisition": "native",
+  "duration": 2270.08,
+  "files": [
+   "Center3_014.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 56752,
+  "n_steps": 454,
+  "n_steps_by_duration": 454,
+  "r": 0.45,
+  "sha256": "e500b606e2c46435bc601f5e572ff570383a0f54ebc1f4f438f069b6cc6d2e7b",
+  "shape": [
+   454,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_015": {
+  "acquisition": "native",
+  "duration": 3069.88,
+  "files": [
+   "Center3_015.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 76747,
+  "n_steps": 613,
+  "n_steps_by_duration": 613,
+  "r": 0.45,
+  "sha256": "7c3cec63ebf50cd5aed7f19bd7012cc7762b39f62716ad5e4e312a748053356d",
+  "shape": [
+   613,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_016": {
+  "acquisition": "native",
+  "duration": 2929.16,
+  "files": [
+   "Center3_016.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 73229,
+  "n_steps": 585,
+  "n_steps_by_duration": 585,
+  "r": 0.45,
+  "sha256": "238d7d009e486b6825ef36f92ada77a61ae1c4d1881ab7e709c5e184c285bed9",
+  "shape": [
+   585,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_017": {
+  "acquisition": "native",
+  "duration": 1248.24,
+  "files": [
+   "Center3_017.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 31206,
+  "n_steps": 249,
+  "n_steps_by_duration": 249,
+  "r": 0.45,
+  "sha256": "09583a96e66e9f3d3fc86ac6a1e0d01a311eb54434391d42178b30c35bbd61a1",
+  "shape": [
+   249,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_018": {
+  "acquisition": "native",
+  "duration": 903.4,
+  "files": [
+   "Center3_018.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 22585,
+  "n_steps": 180,
+  "n_steps_by_duration": 180,
+  "r": 0.45,
+  "sha256": "02f8d8ef398c7cd4ce71435a68d460032b436daa354cb27864d27fe4a28711d2",
+  "shape": [
+   180,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_021": {
+  "acquisition": "native",
+  "duration": 2520.92,
+  "files": [
+   "Center3_021.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 63023,
+  "n_steps": 504,
+  "n_steps_by_duration": 504,
+  "r": 0.45,
+  "sha256": "4af6ef0ab3a8d2c5117db807ffc7366e411f64b7b9732f981b485c2267b0ab32",
+  "shape": [
+   504,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_022": {
+  "acquisition": "native",
+  "duration": 753.68,
+  "files": [
+   "Center3_022.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 18842,
+  "n_steps": 150,
+  "n_steps_by_duration": 150,
+  "r": 0.45,
+  "sha256": "21fde43856844bee61ee253a218447699ea8cda6de428c41c11da929e70be540",
+  "shape": [
+   150,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_023": {
+  "acquisition": "native",
+  "duration": 1626.52,
+  "files": [
+   "Center3_023.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 40663,
+  "n_steps": 325,
+  "n_steps_by_duration": 325,
+  "r": 0.45,
+  "sha256": "5d9e4dbafe0bafb572e35350c5889cd6b8c614c3bb7718002d4a77d9bdedefc6",
+  "shape": [
+   325,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_024": {
+  "acquisition": "native",
+  "duration": 1903.92,
+  "files": [
+   "Center3_024.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 47598,
+  "n_steps": 380,
+  "n_steps_by_duration": 380,
+  "r": 0.45,
+  "sha256": "91b99e44b1e589a55587d3526b2e83c9c75cc33b76c4d7f416813f57de4ff0d1",
+  "shape": [
+   380,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_025": {
+  "acquisition": "native",
+  "duration": 2211.48,
+  "files": [
+   "Center3_025.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 55287,
+  "n_steps": 442,
+  "n_steps_by_duration": 442,
+  "r": 0.45,
+  "sha256": "63724b205f0c320a500e9a030e44a6e6467812ac61b1fa49e02c4364b3e8a980",
+  "shape": [
+   442,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_026": {
+  "acquisition": "native",
+  "duration": 2106.32,
+  "files": [
+   "Center3_026.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 52658,
+  "n_steps": 421,
+  "n_steps_by_duration": 421,
+  "r": 0.45,
+  "sha256": "5e007a2e37ac682c7557c6f32bb145d3d0129aa876d2027132944fffe6a990ba",
+  "shape": [
+   421,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_027": {
+  "acquisition": "native",
+  "duration": 2001.04,
+  "files": [
+   "Center3_027.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 50026,
+  "n_steps": 400,
+  "n_steps_by_duration": 400,
+  "r": 0.45,
+  "sha256": "0b4e610488499482e578f79fb84eb56299f7b456958d8c443ac5e435809a18bc",
+  "shape": [
+   400,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_028": {
+  "acquisition": "native",
+  "duration": 1788.16,
+  "files": [
+   "Center3_028.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 44704,
+  "n_steps": 357,
+  "n_steps_by_duration": 357,
+  "r": 0.45,
+  "sha256": "26f9562649a021299e755372d7a857a9aa3d988e0b09bee72a9e1bf1d602e7fa",
+  "shape": [
+   357,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_029": {
+  "acquisition": "native",
+  "duration": 3708.04,
+  "files": [
+   "Center3_029.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 92701,
+  "n_steps": 741,
+  "n_steps_by_duration": 741,
+  "r": 0.45,
+  "sha256": "e70903f57615274530abd3bac4f435a0c5882e164eef996e2b4b332605378e85",
+  "shape": [
+   741,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_030": {
+  "acquisition": "native",
+  "duration": 1828.2,
+  "files": [
+   "Center3_030.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 45705,
+  "n_steps": 365,
+  "n_steps_by_duration": 365,
+  "r": 0.45,
+  "sha256": "ed9c4b9877471e029246c9687122c7ffaf46c7a5425309ae731597eb0807b6b5",
+  "shape": [
+   365,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_031": {
+  "acquisition": "native",
+  "duration": 1570.48,
+  "files": [
+   "Center3_031.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 39262,
+  "n_steps": 314,
+  "n_steps_by_duration": 314,
+  "r": 0.45,
+  "sha256": "8cfee123155b39574ab8dc642c995c9cbc6fe11588490e518631cde3a41b70be",
+  "shape": [
+   314,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_032": {
+  "acquisition": "native",
+  "duration": 1603.6,
+  "files": [
+   "Center3_032.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 40090,
+  "n_steps": 320,
+  "n_steps_by_duration": 320,
+  "r": 0.45,
+  "sha256": "e5622e3121f94effc1878d72dc6c3c8981e5f490691c1b6660102f11b3506d0d",
+  "shape": [
+   320,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_033": {
+  "acquisition": "native",
+  "duration": 1583.4,
+  "files": [
+   "Center3_033.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 39585,
+  "n_steps": 316,
+  "n_steps_by_duration": 316,
+  "r": 0.45,
+  "sha256": "07fa7d11770fc3bf4b75a86fb63983f338662d7c2ebdf20478b354fa890a54bc",
+  "shape": [
+   316,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_034": {
+  "acquisition": "native",
+  "duration": 2841.48,
+  "files": [
+   "Center3_034.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 71037,
+  "n_steps": 568,
+  "n_steps_by_duration": 568,
+  "r": 0.45,
+  "sha256": "053b63c536ea834a7a49b3f9a92a542c6f56c40f45b9e33c2e069b4a100e6a76",
+  "shape": [
+   568,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_035": {
+  "acquisition": "native",
+  "duration": 2214.6,
+  "files": [
+   "Center3_035.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 55365,
+  "n_steps": 442,
+  "n_steps_by_duration": 442,
+  "r": 0.45,
+  "sha256": "6d51d5be2d60f3ab0ac137ae5c47d1e4103947abcbc81d88e42dd3bd7cd75a9b",
+  "shape": [
+   442,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_036": {
+  "acquisition": "native",
+  "duration": 2879.8,
+  "files": [
+   "Center3_036.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 71995,
+  "n_steps": 575,
+  "n_steps_by_duration": 575,
+  "r": 0.45,
+  "sha256": "0b34d43a1112fe83ab21a92337c1e4435d020554a491967f45934188d6e2f4c0",
+  "shape": [
+   575,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_037": {
+  "acquisition": "native",
+  "duration": 2707.8,
+  "files": [
+   "Center3_037.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 67695,
+  "n_steps": 541,
+  "n_steps_by_duration": 541,
+  "r": 0.45,
+  "sha256": "f08e172a5e53f023fae3ae1804695ecb67eac245805f68d2d2dd1dc21f2b3343",
+  "shape": [
+   541,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_038": {
+  "acquisition": "native",
+  "duration": 2975.68,
+  "files": [
+   "Center3_038.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 74392,
+  "n_steps": 595,
+  "n_steps_by_duration": 595,
+  "r": 0.45,
+  "sha256": "09133b0c87a9d6aefb2adf7b43bc2af18146b2657dabefc8daff933604213644",
+  "shape": [
+   595,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_039": {
+  "acquisition": "native",
+  "duration": 1175.04,
+  "files": [
+   "Center3_039.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 29376,
+  "n_steps": 235,
+  "n_steps_by_duration": 235,
+  "r": 0.45,
+  "sha256": "9b2dff2553082bcc8d74c2f74527eb062562cbf4dcfba3a0ab1976f11ad42e98",
+  "shape": [
+   235,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_040": {
+  "acquisition": "native",
+  "duration": 2084.52,
+  "files": [
+   "Center3_040.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 52113,
+  "n_steps": 416,
+  "n_steps_by_duration": 416,
+  "r": 0.45,
+  "sha256": "db649de067e224d69be4b88358b146c9115a678106941d137b90e372540f02e9",
+  "shape": [
+   416,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_041": {
+  "acquisition": "native",
+  "duration": 1801.08,
+  "files": [
+   "Center3_041.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 45027,
+  "n_steps": 360,
+  "n_steps_by_duration": 360,
+  "r": 0.45,
+  "sha256": "87d08bbd07b6c0608a55c10a8dd04f3ba4c9e9ce0631abc4568e7d4abdba7c3d",
+  "shape": [
+   360,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_042": {
+  "acquisition": "native",
+  "duration": 2578.4,
+  "files": [
+   "Center3_042.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 64460,
+  "n_steps": 515,
+  "n_steps_by_duration": 515,
+  "r": 0.45,
+  "sha256": "c2ba0ad19700db08aa8768687a3204e531000e24ec93f973acaa631509a7c1fd",
+  "shape": [
+   515,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_043": {
+  "acquisition": "native",
+  "duration": 1485.96,
+  "files": [
+   "Center3_043.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 37149,
+  "n_steps": 297,
+  "n_steps_by_duration": 297,
+  "r": 0.45,
+  "sha256": "c533fb2981dd8e80281bea587423f305f13b5d6542410fe2bddbea1f2898efd8",
+  "shape": [
+   297,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C3_044": {
+  "acquisition": "native",
+  "duration": 3403.12,
+  "files": [
+   "Center3_044.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 85078,
+  "n_steps": 680,
+  "n_steps_by_duration": 680,
+  "r": 0.45,
+  "sha256": "399e854c2bc7fa4ec6e23747e88419c379f8ef648fbf57f3f25053650545cbab",
+  "shape": [
+   680,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_001": {
+  "acquisition": "native",
+  "duration": 1619.4,
+  "files": [
+   "Center4_001.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 80970,
+  "n_steps": 323,
+  "n_steps_by_duration": 323,
+  "r": 0.45,
+  "sha256": "47e6da5e231f2d7ff890283d8377e49317f87e9e2dfa19de97375c9b22da5a49",
+  "shape": [
+   323,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_002": {
+  "acquisition": "native",
+  "duration": 1614.62,
+  "files": [
+   "Center4_002.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 80731,
+  "n_steps": 322,
+  "n_steps_by_duration": 322,
+  "r": 0.45,
+  "sha256": "33d88c6086f2758b2927a722cd7c0af77e3057ef8238bc65665d1fd1ec4efc34",
+  "shape": [
+   322,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_003": {
+  "acquisition": "native",
+  "duration": 4048.68,
+  "files": [
+   "Center4_003.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 202434,
+  "n_steps": 809,
+  "n_steps_by_duration": 809,
+  "r": 0.45,
+  "sha256": "1db8ae7d549047bdc17761f9d934630f61cef7e43e1c4fbf369e4f6f0ebb478f",
+  "shape": [
+   809,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_004": {
+  "acquisition": "native",
+  "duration": 1893.9,
+  "files": [
+   "Center4_004.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 94695,
+  "n_steps": 378,
+  "n_steps_by_duration": 378,
+  "r": 0.45,
+  "sha256": "31b44af608fa99ea0f585a96670906956e8975d70917955a85bada52c237594d",
+  "shape": [
+   378,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_005": {
+  "acquisition": "native",
+  "duration": 1660.64,
+  "files": [
+   "Center4_005.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 83032,
+  "n_steps": 332,
+  "n_steps_by_duration": 332,
+  "r": 0.45,
+  "sha256": "d886dea96da72e3147bb5156daff8ab14c50ebd701d49f4514d63145361545e8",
+  "shape": [
+   332,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_006": {
+  "acquisition": "native",
+  "duration": 2165.24,
+  "files": [
+   "Center4_006.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 108262,
+  "n_steps": 433,
+  "n_steps_by_duration": 433,
+  "r": 0.45,
+  "sha256": "3e5703f251de30d81323e620142a04c98f312b7737f13633b880571d388d4f8d",
+  "shape": [
+   433,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_007": {
+  "acquisition": "native",
+  "duration": 3111.3,
+  "files": [
+   "Center4_007.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 155565,
+  "n_steps": 622,
+  "n_steps_by_duration": 622,
+  "r": 0.45,
+  "sha256": "ad5af56cbe7f0f9242dd31b1b9d75bf2158be6c472ea38bd8d8081a7378ce6c8",
+  "shape": [
+   622,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_008": {
+  "acquisition": "native",
+  "duration": 1488.18,
+  "files": [
+   "Center4_008.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 74409,
+  "n_steps": 297,
+  "n_steps_by_duration": 297,
+  "r": 0.45,
+  "sha256": "a81d428812c82251d33e9a06b164f21f0afdbd2a1b7f79ea59e072642f6ca27f",
+  "shape": [
+   297,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_009": {
+  "acquisition": "native",
+  "duration": 2064.78,
+  "files": [
+   "Center4_009.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 103239,
+  "n_steps": 412,
+  "n_steps_by_duration": 412,
+  "r": 0.45,
+  "sha256": "c4ec4fe68b856516b50b84aaeccd112ae3ea12560ec839401e9b5dc8c5220765",
+  "shape": [
+   412,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_010": {
+  "acquisition": "native",
+  "duration": 2735.56,
+  "files": [
+   "Center4_010.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 136778,
+  "n_steps": 547,
+  "n_steps_by_duration": 547,
+  "r": 0.45,
+  "sha256": "79461a5a99f3965c6fefb279420d0f32e9098fa3ea5b226bb3434c1d8e1e4571",
+  "shape": [
+   547,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_011": {
+  "acquisition": "native",
+  "duration": 2792.58,
+  "files": [
+   "Center4_011.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 139629,
+  "n_steps": 558,
+  "n_steps_by_duration": 558,
+  "r": 0.45,
+  "sha256": "24398947eb9744655a535dbd93522498751f824ed155b06c91105459c0a8dd42",
+  "shape": [
+   558,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_012": {
+  "acquisition": "native",
+  "duration": 1091.4,
+  "files": [
+   "Center4_012.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 54570,
+  "n_steps": 218,
+  "n_steps_by_duration": 218,
+  "r": 0.45,
+  "sha256": "91495af520d9a9dc6de5faa27cdbc17515b7dcf79c476cd6599027978be238ce",
+  "shape": [
+   218,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_013": {
+  "acquisition": "native",
+  "duration": 2827.16,
+  "files": [
+   "Center4_013.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 141358,
+  "n_steps": 565,
+  "n_steps_by_duration": 565,
+  "r": 0.45,
+  "sha256": "cf19fb6fdb56853a5042a57ea39e7eda9ca537dbca7b5823845ed86c0c8cfd65",
+  "shape": [
+   565,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_014": {
+  "acquisition": "native",
+  "duration": 4056.64,
+  "files": [
+   "Center4_014.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 202832,
+  "n_steps": 811,
+  "n_steps_by_duration": 811,
+  "r": 0.45,
+  "sha256": "28575f97e0a01563352955792b2bea4d05dc29a3a8d2c48acd32972e84995ce0",
+  "shape": [
+   811,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_015": {
+  "acquisition": "native",
+  "duration": 874.8,
+  "files": [
+   "Center4_015.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 43740,
+  "n_steps": 174,
+  "n_steps_by_duration": 174,
+  "r": 0.45,
+  "sha256": "b79cc448bb6d25de46b1de1fed877df5e2e8f968389dbbde44e8c16c862f0b60",
+  "shape": [
+   174,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_016": {
+  "acquisition": "native",
+  "duration": 2024.68,
+  "files": [
+   "Center4_016.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 101234,
+  "n_steps": 404,
+  "n_steps_by_duration": 404,
+  "r": 0.45,
+  "sha256": "41009d361a8703ac7e4441d429e8e26bd76e6086a6b500388ab687c6467f3720",
+  "shape": [
+   404,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_017": {
+  "acquisition": "native",
+  "duration": 3236.64,
+  "files": [
+   "Center4_017.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 161832,
+  "n_steps": 647,
+  "n_steps_by_duration": 647,
+  "r": 0.45,
+  "sha256": "623f22475ad27c30c65906bd1dc7ed2761b3e9b949efb6de0dc44acd5e0df085",
+  "shape": [
+   647,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_018": {
+  "acquisition": "native",
+  "duration": 4042.8,
+  "files": [
+   "Center4_018.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 202140,
+  "n_steps": 808,
+  "n_steps_by_duration": 808,
+  "r": 0.45,
+  "sha256": "629286be8d761e5ef978a9c26237c55564b558402634c7923bba49b17439bab3",
+  "shape": [
+   808,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_019": {
+  "acquisition": "native",
+  "duration": 1363.8,
+  "files": [
+   "Center4_019.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 68190,
+  "n_steps": 272,
+  "n_steps_by_duration": 272,
+  "r": 0.45,
+  "sha256": "144b46c5524ab9b9b27b460a4979281e4518f1acf4b1ac4e6650c1f0f046d830",
+  "shape": [
+   272,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_020": {
+  "acquisition": "native",
+  "duration": 547.2,
+  "files": [
+   "Center4_020.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 27360,
+  "n_steps": 109,
+  "n_steps_by_duration": 109,
+  "r": 0.45,
+  "sha256": "c00ab2d74d45f2c65c87395c75c88d4dc6a66020156687ec9c668f7a6f3e7750",
+  "shape": [
+   109,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_021": {
+  "acquisition": "native",
+  "duration": 1513.32,
+  "files": [
+   "Center4_021.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 75666,
+  "n_steps": 302,
+  "n_steps_by_duration": 302,
+  "r": 0.45,
+  "sha256": "67536a6fd9f7e272a71bbfd307f50ac48a4471a76228d4306bc6713cc50d44d0",
+  "shape": [
+   302,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_022": {
+  "acquisition": "native",
+  "duration": 519.9,
+  "files": [
+   "Center4_022.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 25995,
+  "n_steps": 103,
+  "n_steps_by_duration": 103,
+  "r": 0.45,
+  "sha256": "a62016e6ecfeb43be602e11ff7fff5ff84cdcf4e9644b0bc0bc87c68d04532f3",
+  "shape": [
+   103,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_023": {
+  "acquisition": "native",
+  "duration": 4072.92,
+  "files": [
+   "Center4_023.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 203646,
+  "n_steps": 814,
+  "n_steps_by_duration": 814,
+  "r": 0.45,
+  "sha256": "464cd3abfe62bd1724df40176303c2662b7d4200f3d52b639f86dba05498193b",
+  "shape": [
+   814,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_024": {
+  "acquisition": "native",
+  "duration": 2639.44,
+  "files": [
+   "Center4_024.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 131972,
+  "n_steps": 527,
+  "n_steps_by_duration": 527,
+  "r": 0.45,
+  "sha256": "b4c61fa15bb6ae3b93ff39b51057f770c2c71779206126293a28057640578961",
+  "shape": [
+   527,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_025": {
+  "acquisition": "native",
+  "duration": 1624.52,
+  "files": [
+   "Center4_025.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 81226,
+  "n_steps": 324,
+  "n_steps_by_duration": 324,
+  "r": 0.45,
+  "sha256": "a3c4fa1188dd90cdb5b858c7bc44c85fb8ce3048316b45b03359f836306246b3",
+  "shape": [
+   324,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_026": {
+  "acquisition": "native",
+  "duration": 1193.1,
+  "files": [
+   "Center4_026.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 59655,
+  "n_steps": 238,
+  "n_steps_by_duration": 238,
+  "r": 0.45,
+  "sha256": "36f8d6d757906325aab557ce72ab7f779213220704ff9bf8f6f8b8c6e84b7759",
+  "shape": [
+   238,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_027": {
+  "acquisition": "native",
+  "duration": 4059.86,
+  "files": [
+   "Center4_027.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 202993,
+  "n_steps": 811,
+  "n_steps_by_duration": 811,
+  "r": 0.45,
+  "sha256": "a73836ced5b937288a915df6c9c02d1b5f1614cc30753c3f0bad69bc49b0d601",
+  "shape": [
+   811,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_028": {
+  "acquisition": "native",
+  "duration": 762.6,
+  "files": [
+   "Center4_028.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 38130,
+  "n_steps": 152,
+  "n_steps_by_duration": 152,
+  "r": 0.45,
+  "sha256": "04d9605a7e11bdfdea2d42fdc9fe4b7a51cf94e59fb800264e863eb18339585d",
+  "shape": [
+   152,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_029": {
+  "acquisition": "native",
+  "duration": 1408.12,
+  "files": [
+   "Center4_029.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 70406,
+  "n_steps": 281,
+  "n_steps_by_duration": 281,
+  "r": 0.45,
+  "sha256": "6fc75cde0f7245f760f27351973a076dd82e1539ca08d3e402aebc5764ddf3dd",
+  "shape": [
+   281,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_030": {
+  "acquisition": "native",
+  "duration": 1363.8,
+  "files": [
+   "Center4_030.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 68190,
+  "n_steps": 272,
+  "n_steps_by_duration": 272,
+  "r": 0.45,
+  "sha256": "be88e31c64b5d8b18751edf91418313e0bde93ff208c84128aff879f3b832058",
+  "shape": [
+   272,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_031": {
+  "acquisition": "native",
+  "duration": 1849.94,
+  "files": [
+   "Center4_031.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 92497,
+  "n_steps": 369,
+  "n_steps_by_duration": 369,
+  "r": 0.45,
+  "sha256": "83102a810814e49929cf3bf11af1793c80cc32dab7b695c613357a4441622690",
+  "shape": [
+   369,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_032": {
+  "acquisition": "native",
+  "duration": 796.2,
+  "files": [
+   "Center4_032.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 39810,
+  "n_steps": 159,
+  "n_steps_by_duration": 159,
+  "r": 0.45,
+  "sha256": "5e92a013e77b5716da62d2c19fc193e5a3f6e526ceb2edda84e0c41694d4033e",
+  "shape": [
+   159,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_033": {
+  "acquisition": "native",
+  "duration": 1516.2,
+  "files": [
+   "Center4_033.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 75810,
+  "n_steps": 303,
+  "n_steps_by_duration": 303,
+  "r": 0.45,
+  "sha256": "fdd08b92b3895a8e4334b3a9fa83bbc0f215e7086ca7db15b8e4bdcff8a1b336",
+  "shape": [
+   303,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_034": {
+  "acquisition": "native",
+  "duration": 1821.84,
+  "files": [
+   "Center4_034.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91092,
+  "n_steps": 364,
+  "n_steps_by_duration": 364,
+  "r": 0.45,
+  "sha256": "69825a45ac6dd539d1d63b6db00a776be3988fcfa2e606982214db73a9800315",
+  "shape": [
+   364,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_035": {
+  "acquisition": "native",
+  "duration": 3051.84,
+  "files": [
+   "Center4_035.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 152592,
+  "n_steps": 610,
+  "n_steps_by_duration": 610,
+  "r": 0.45,
+  "sha256": "deed835eb075b964f8981febc8867d842af85af8977943e98e4b2e247121fd3b",
+  "shape": [
+   610,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_036": {
+  "acquisition": "native",
+  "duration": 336.0,
+  "files": [
+   "Center4_036.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 16800,
+  "n_steps": 67,
+  "n_steps_by_duration": 67,
+  "r": 0.45,
+  "sha256": "8c39b4d16b39b78f25868da178ea3b311da24ca746bfbf17852c24135f0d5cd8",
+  "shape": [
+   67,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_037": {
+  "acquisition": "native",
+  "duration": 2920.96,
+  "files": [
+   "Center4_037.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 146048,
+  "n_steps": 584,
+  "n_steps_by_duration": 584,
+  "r": 0.45,
+  "sha256": "5ba0c5d721451997fb40551253fde7e70ad81427c398c8a37688aa285808d53f",
+  "shape": [
+   584,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_038": {
+  "acquisition": "native",
+  "duration": 2640.0,
+  "files": [
+   "Center4_038.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 132000,
+  "n_steps": 528,
+  "n_steps_by_duration": 528,
+  "r": 0.45,
+  "sha256": "23605d900fc79d1cf6013343ab583031c85614f9c731d83dfcfaf15a05725c25",
+  "shape": [
+   528,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_039": {
+  "acquisition": "native",
+  "duration": 961.48,
+  "files": [
+   "Center4_039.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 48074,
+  "n_steps": 192,
+  "n_steps_by_duration": 192,
+  "r": 0.45,
+  "sha256": "f988f0c09937b1213054fc7565f5c808f023ef83713ba55cca01a7290572ce91",
+  "shape": [
+   192,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_040": {
+  "acquisition": "native",
+  "duration": 998.9,
+  "files": [
+   "Center4_040.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 49945,
+  "n_steps": 199,
+  "n_steps_by_duration": 199,
+  "r": 0.45,
+  "sha256": "7cd4ad2e3dbdb39b0c5da423ee3c0e2bbb8ed659f96b98073f2fa50899b2f81b",
+  "shape": [
+   199,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_041": {
+  "acquisition": "native",
+  "duration": 1904.0,
+  "files": [
+   "Center4_041.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 95200,
+  "n_steps": 380,
+  "n_steps_by_duration": 380,
+  "r": 0.45,
+  "sha256": "eb8491382b63092df3bb7d7838af948b9e27182c9f16cf99d5f4555483ab56f6",
+  "shape": [
+   380,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_042": {
+  "acquisition": "native",
+  "duration": 1729.16,
+  "files": [
+   "Center4_042.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 86458,
+  "n_steps": 345,
+  "n_steps_by_duration": 345,
+  "r": 0.45,
+  "sha256": "4175ee093a34f9fb34c21d5fd0823da34872dc4a959ce4504b82f49783299431",
+  "shape": [
+   345,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_043": {
+  "acquisition": "native",
+  "duration": 3227.96,
+  "files": [
+   "Center4_043.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 161398,
+  "n_steps": 645,
+  "n_steps_by_duration": 645,
+  "r": 0.45,
+  "sha256": "4aaa4a24f4a1f64ff117ada11f10bbbf886e62af368f9c5215e25d9cebfd51db",
+  "shape": [
+   645,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_044": {
+  "acquisition": "native",
+  "duration": 1635.92,
+  "files": [
+   "Center4_044.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 81796,
+  "n_steps": 327,
+  "n_steps_by_duration": 327,
+  "r": 0.45,
+  "sha256": "ee87451537038713628b2945bfc042a50880be1b4a21aa3e2ac4a6bdc5961096",
+  "shape": [
+   327,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_045": {
+  "acquisition": "native",
+  "duration": 2634.82,
+  "files": [
+   "Center4_045.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 131741,
+  "n_steps": 526,
+  "n_steps_by_duration": 526,
+  "r": 0.45,
+  "sha256": "9f3eefced56525f280fbc14a7c686d5aeeac47feee95feff3942d26e59f55689",
+  "shape": [
+   526,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_046": {
+  "acquisition": "native",
+  "duration": 981.82,
+  "files": [
+   "Center4_046.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 49091,
+  "n_steps": 196,
+  "n_steps_by_duration": 196,
+  "r": 0.45,
+  "sha256": "75d1b24bb4c3a91f8c8916b5c0ef0295118fde2f418f4d380085955e28080cca",
+  "shape": [
+   196,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_047": {
+  "acquisition": "native",
+  "duration": 1874.7,
+  "files": [
+   "Center4_047.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 93735,
+  "n_steps": 374,
+  "n_steps_by_duration": 374,
+  "r": 0.45,
+  "sha256": "fa0c83ce3accfba8865660ec49e3dfaa021e1d145e0ee955933a202b9c3cd07e",
+  "shape": [
+   374,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_048": {
+  "acquisition": "native",
+  "duration": 3882.76,
+  "files": [
+   "Center4_048.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 194138,
+  "n_steps": 776,
+  "n_steps_by_duration": 776,
+  "r": 0.45,
+  "sha256": "ef9970a9fc4eff66330bac02975ec238908218bf19b60c76f1da5c9a4a167db3",
+  "shape": [
+   776,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_049": {
+  "acquisition": "native",
+  "duration": 457.2,
+  "files": [
+   "Center4_049.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 22860,
+  "n_steps": 91,
+  "n_steps_by_duration": 91,
+  "r": 0.45,
+  "sha256": "aa84202ddd460629334a7d59aed93103d8e494ae4ecbb6c980526f667a38f25d",
+  "shape": [
+   91,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_050": {
+  "acquisition": "native",
+  "duration": 4068.6,
+  "files": [
+   "Center4_050.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 203430,
+  "n_steps": 813,
+  "n_steps_by_duration": 813,
+  "r": 0.45,
+  "sha256": "1645bd459e44a685c439eb663144ee3c5043daa5e8e79a2661d4d92ea240828f",
+  "shape": [
+   813,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_051": {
+  "acquisition": "native",
+  "duration": 1214.14,
+  "files": [
+   "Center4_051.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 60707,
+  "n_steps": 242,
+  "n_steps_by_duration": 242,
+  "r": 0.45,
+  "sha256": "c2f61a4639dab05c6a2d21c70bd38176218b8fe6ef9d4126b35eef703cf073dc",
+  "shape": [
+   242,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_052": {
+  "acquisition": "native",
+  "duration": 794.9,
+  "files": [
+   "Center4_052.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 39745,
+  "n_steps": 158,
+  "n_steps_by_duration": 158,
+  "r": 0.45,
+  "sha256": "1b539bf42f1e447e2c072d57f2d68a738e5eb23812f7d9753cb33fa312ec63af",
+  "shape": [
+   158,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_053": {
+  "acquisition": "native",
+  "duration": 1544.48,
+  "files": [
+   "Center4_053.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 77224,
+  "n_steps": 308,
+  "n_steps_by_duration": 308,
+  "r": 0.45,
+  "sha256": "cd4da9ff64241fcb9ad006eb21c27f71a50f4064e5a43bc9bf823f0244dceef2",
+  "shape": [
+   308,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_054": {
+  "acquisition": "native",
+  "duration": 981.3,
+  "files": [
+   "Center4_054.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 49065,
+  "n_steps": 196,
+  "n_steps_by_duration": 196,
+  "r": 0.45,
+  "sha256": "57f734232f1b977fc285ad6c5496a229d2d6e2fc9970cdb3182058ee0759127c",
+  "shape": [
+   196,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_055": {
+  "acquisition": "native",
+  "duration": 2723.9,
+  "files": [
+   "Center4_055.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 136195,
+  "n_steps": 544,
+  "n_steps_by_duration": 544,
+  "r": 0.45,
+  "sha256": "7c170115d1294368099f277fe6ad72ace2668805b5dc4b4ac45692b2058c3e7d",
+  "shape": [
+   544,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_056": {
+  "acquisition": "native",
+  "duration": 1523.4,
+  "files": [
+   "Center4_056.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 76170,
+  "n_steps": 304,
+  "n_steps_by_duration": 304,
+  "r": 0.45,
+  "sha256": "820b91e562a0e5095eb65f54a674829e8d3c34b337bf2694a264cf534d8808c4",
+  "shape": [
+   304,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_057": {
+  "acquisition": "native",
+  "duration": 3336.24,
+  "files": [
+   "Center4_057.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 166812,
+  "n_steps": 667,
+  "n_steps_by_duration": 667,
+  "r": 0.45,
+  "sha256": "b3547edd17aa3b4d14dcd3b0f620a0a1341ac79c267bf87e3ec2c91686e17e09",
+  "shape": [
+   667,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_058": {
+  "acquisition": "native",
+  "duration": 2785.54,
+  "files": [
+   "Center4_058.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 139277,
+  "n_steps": 557,
+  "n_steps_by_duration": 557,
+  "r": 0.45,
+  "sha256": "2e1196163e5b319354433a21d149c07cfd17297ced51c7a8260ba43aea3a947a",
+  "shape": [
+   557,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_059": {
+  "acquisition": "native",
+  "duration": 2988.1,
+  "files": [
+   "Center4_059.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 149405,
+  "n_steps": 597,
+  "n_steps_by_duration": 597,
+  "r": 0.45,
+  "sha256": "29b2bd1825163811dd28eaa53d0979260c1a0c1c38d942e58862720f9e32290d",
+  "shape": [
+   597,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_061": {
+  "acquisition": "native",
+  "duration": 1651.8,
+  "files": [
+   "Center4_061.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 82590,
+  "n_steps": 330,
+  "n_steps_by_duration": 330,
+  "r": 0.45,
+  "sha256": "6b8e114b9961ad7a55a9a8c5f9838d99af2717cedabc3f01d2c97f740ef52cb6",
+  "shape": [
+   330,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_062": {
+  "acquisition": "native",
+  "duration": 802.2,
+  "files": [
+   "Center4_062.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 40110,
+  "n_steps": 160,
+  "n_steps_by_duration": 160,
+  "r": 0.45,
+  "sha256": "246a1b5c545e6124ba9843214cdd5958889073afaf19e095e02fd6f438e80aaf",
+  "shape": [
+   160,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_063": {
+  "acquisition": "native",
+  "duration": 2640.78,
+  "files": [
+   "Center4_063.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 132039,
+  "n_steps": 528,
+  "n_steps_by_duration": 528,
+  "r": 0.45,
+  "sha256": "b25800e196ea185f85d93edfb67855365436e799e292bcbbb56e5c52063d0df5",
+  "shape": [
+   528,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_064": {
+  "acquisition": "native",
+  "duration": 1886.14,
+  "files": [
+   "Center4_064.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 94307,
+  "n_steps": 377,
+  "n_steps_by_duration": 377,
+  "r": 0.45,
+  "sha256": "0df2eac480ba8b446adee0279a10524bc6e2b99e66b17ae8317384eb83359dcd",
+  "shape": [
+   377,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_065": {
+  "acquisition": "native",
+  "duration": 1611.9,
+  "files": [
+   "Center4_065.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 80595,
+  "n_steps": 322,
+  "n_steps_by_duration": 322,
+  "r": 0.45,
+  "sha256": "4f67e347b07d252b5cebc7fd2b82e0c4162b6465c149e512a4337aee5c002e55",
+  "shape": [
+   322,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_066": {
+  "acquisition": "native",
+  "duration": 3495.96,
+  "files": [
+   "Center4_066.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 174798,
+  "n_steps": 699,
+  "n_steps_by_duration": 699,
+  "r": 0.45,
+  "sha256": "b6217062dca26b84e046335fdf67884a4891be0e0d0cee63f89952fdc92fded1",
+  "shape": [
+   699,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_067": {
+  "acquisition": "native",
+  "duration": 3482.48,
+  "files": [
+   "Center4_067.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 174124,
+  "n_steps": 696,
+  "n_steps_by_duration": 696,
+  "r": 0.45,
+  "sha256": "41d87e9946f645f2197da08e29f3b365b5d750e6e2f9deb6e8b65194e42bf728",
+  "shape": [
+   696,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_069": {
+  "acquisition": "native",
+  "duration": 1015.32,
+  "files": [
+   "Center4_069.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 50766,
+  "n_steps": 203,
+  "n_steps_by_duration": 203,
+  "r": 0.45,
+  "sha256": "2832dcda8132727229c86aaefed06c0583c504a213cc6f23a05b056dff920d7e",
+  "shape": [
+   203,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_070": {
+  "acquisition": "native",
+  "duration": 961.5,
+  "files": [
+   "Center4_070.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 48075,
+  "n_steps": 192,
+  "n_steps_by_duration": 192,
+  "r": 0.45,
+  "sha256": "66c48489fb0867536eeded40a5b94ebc3f1aa4c4d360caf8c2af848e462b5e0e",
+  "shape": [
+   192,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_071": {
+  "acquisition": "native",
+  "duration": 1149.6,
+  "files": [
+   "Center4_071.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 57480,
+  "n_steps": 229,
+  "n_steps_by_duration": 229,
+  "r": 0.45,
+  "sha256": "b4c46185b477f0a27171b740923d74a29448d6bfe201a87980e90ae3203f6961",
+  "shape": [
+   229,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_072": {
+  "acquisition": "native",
+  "duration": 1097.9,
+  "files": [
+   "Center4_072.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 54895,
+  "n_steps": 219,
+  "n_steps_by_duration": 219,
+  "r": 0.45,
+  "sha256": "5bbd9f7b3c4ba90c5840372364b7e09b535cb8c7d1c05f2e9b9cd738b9624277",
+  "shape": [
+   219,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C4_073": {
+  "acquisition": "native",
+  "duration": 3354.6,
+  "files": [
+   "Center4_073.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 167730,
+  "n_steps": 670,
+  "n_steps_by_duration": 670,
+  "r": 0.45,
+  "sha256": "7c1b03d8217d297a34d14f9d2e39f0d91239c26ce919b3ad105d2d7c714c1832",
+  "shape": [
+   670,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_001": {
+  "acquisition": "native",
+  "duration": 996.8,
+  "files": [
+   "Center5_001.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 49840,
+  "n_steps": 199,
+  "n_steps_by_duration": 199,
+  "r": 0.45,
+  "sha256": "460233399276dd90d8debf2aa137dbe611c318bb4973bd41134015c7c8c7451b",
+  "shape": [
+   199,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_002": {
+  "acquisition": "native",
+  "duration": 1826.26,
+  "files": [
+   "Center5_002.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91313,
+  "n_steps": 365,
+  "n_steps_by_duration": 365,
+  "r": 0.45,
+  "sha256": "43b4abcd01eb5275e7ee0dbb6dda46ebd1e9d51176a4d595dbc59bb5bcaefb1e",
+  "shape": [
+   365,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_003": {
+  "acquisition": "native",
+  "duration": 1759.68,
+  "files": [
+   "Center5_003.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 87984,
+  "n_steps": 351,
+  "n_steps_by_duration": 351,
+  "r": 0.45,
+  "sha256": "5ba606887acc0954d041215868b49e0c56e51cf57f894597d96e6b6ebd827726",
+  "shape": [
+   351,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_004": {
+  "acquisition": "native",
+  "duration": 965.54,
+  "files": [
+   "Center5_004.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 48277,
+  "n_steps": 193,
+  "n_steps_by_duration": 193,
+  "r": 0.45,
+  "sha256": "26f3572667ff32090acdbe90d14e768e8af6c33285ff69a4ecf76fa96856393f",
+  "shape": [
+   193,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_005": {
+  "acquisition": "native",
+  "duration": 779.54,
+  "files": [
+   "Center5_005.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 38977,
+  "n_steps": 155,
+  "n_steps_by_duration": 155,
+  "r": 0.45,
+  "sha256": "2f169c9fb723b617fd74bdbb66b5f37f53e7705cca9a38c1e5cc56037d96d80d",
+  "shape": [
+   155,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_006": {
+  "acquisition": "native",
+  "duration": 1416.56,
+  "files": [
+   "Center5_006.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 70828,
+  "n_steps": 283,
+  "n_steps_by_duration": 283,
+  "r": 0.45,
+  "sha256": "0df23586dc5ab56a9dd5e1f428bcd3756b4a4ffc3f02337e9554f668b661dc00",
+  "shape": [
+   283,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_007": {
+  "acquisition": "native",
+  "duration": 1300.56,
+  "files": [
+   "Center5_007.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 65028,
+  "n_steps": 260,
+  "n_steps_by_duration": 260,
+  "r": 0.45,
+  "sha256": "c7a0d15964d1acd2dd746dbf355285459c26b3ed0a5aeb42f3746b241ea535f3",
+  "shape": [
+   260,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_008": {
+  "acquisition": "native",
+  "duration": 1822.56,
+  "files": [
+   "Center5_008.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91128,
+  "n_steps": 364,
+  "n_steps_by_duration": 364,
+  "r": 0.45,
+  "sha256": "05372a4f745852cd6e0a6cbc77a73b84ae4bf847e7f9c954dc821a9e3de3af8c",
+  "shape": [
+   364,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_009": {
+  "acquisition": "native",
+  "duration": 1822.56,
+  "files": [
+   "Center5_009.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91128,
+  "n_steps": 364,
+  "n_steps_by_duration": 364,
+  "r": 0.45,
+  "sha256": "8e7ea2a9c52fc796dc55fdc0b43d5fa36505b92120414aa897736365429b367b",
+  "shape": [
+   364,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_010": {
+  "acquisition": "native",
+  "duration": 1827.14,
+  "files": [
+   "Center5_010.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91357,
+  "n_steps": 365,
+  "n_steps_by_duration": 365,
+  "r": 0.45,
+  "sha256": "df6bc523839cc0f9b50733a9046d0006d37b819b5d2db3f55698d32810e10a79",
+  "shape": [
+   365,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_011": {
+  "acquisition": "native",
+  "duration": 1680.92,
+  "files": [
+   "Center5_011.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 84046,
+  "n_steps": 336,
+  "n_steps_by_duration": 336,
+  "r": 0.45,
+  "sha256": "2b554ddad944227052e84fea4a4b250191f88058d7976e95437f8f42f01461bf",
+  "shape": [
+   336,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_012": {
+  "acquisition": "native",
+  "duration": 1822.56,
+  "files": [
+   "Center5_012.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91128,
+  "n_steps": 364,
+  "n_steps_by_duration": 364,
+  "r": 0.45,
+  "sha256": "608d22011f5efef1b00f562f889ae50e37ac5a4a17a0401551c0a3146a11c5d9",
+  "shape": [
+   364,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_013": {
+  "acquisition": "native",
+  "duration": 1240.18,
+  "files": [
+   "Center5_013.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 62009,
+  "n_steps": 248,
+  "n_steps_by_duration": 248,
+  "r": 0.45,
+  "sha256": "1b4ed6b5f41c1889973dd997533eef8847f753236e09b4a7ac7d7c22b5559a02",
+  "shape": [
+   248,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_014": {
+  "acquisition": "native",
+  "duration": 1824.66,
+  "files": [
+   "Center5_014.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91233,
+  "n_steps": 364,
+  "n_steps_by_duration": 364,
+  "r": 0.45,
+  "sha256": "0d3849339796ede7c6633daa33bbcbe21d24f1bf1d9a30f442f6e3259a8a126f",
+  "shape": [
+   364,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_015": {
+  "acquisition": "native",
+  "duration": 1825.72,
+  "files": [
+   "Center5_015.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91286,
+  "n_steps": 365,
+  "n_steps_by_duration": 365,
+  "r": 0.45,
+  "sha256": "7096066850ea25f1d08e73098701e00c22170a1a6a4df6853034dbbb61c85d5c",
+  "shape": [
+   365,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_016": {
+  "acquisition": "native",
+  "duration": 1823.08,
+  "files": [
+   "Center5_016.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91154,
+  "n_steps": 364,
+  "n_steps_by_duration": 364,
+  "r": 0.45,
+  "sha256": "1ba714d9a697c6d101afbf9561723e53fb470d63ef77b9dd5816d10a128b88f8",
+  "shape": [
+   364,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_017": {
+  "acquisition": "native",
+  "duration": 939.86,
+  "files": [
+   "Center5_017.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 46993,
+  "n_steps": 187,
+  "n_steps_by_duration": 187,
+  "r": 0.45,
+  "sha256": "b8140f9cb890f0207d0537758558283d01f31606c2420d9cae791503dacdc2de",
+  "shape": [
+   187,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_018": {
+  "acquisition": "native",
+  "duration": 1822.56,
+  "files": [
+   "Center5_018.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91128,
+  "n_steps": 364,
+  "n_steps_by_duration": 364,
+  "r": 0.45,
+  "sha256": "23a13d74a012c7110e173aef6a80392293a9a1a0b91a4347215bf8b5de111091",
+  "shape": [
+   364,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_019": {
+  "acquisition": "native",
+  "duration": 879.42,
+  "files": [
+   "Center5_019.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 43971,
+  "n_steps": 175,
+  "n_steps_by_duration": 175,
+  "r": 0.45,
+  "sha256": "8ab061c01862b8f6cea8d5ecdba1ba107b05fc105953560c50c0417bf108b1da",
+  "shape": [
+   175,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_021": {
+  "acquisition": "native",
+  "duration": 1369.48,
+  "files": [
+   "Center5_021.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 68474,
+  "n_steps": 273,
+  "n_steps_by_duration": 273,
+  "r": 0.45,
+  "sha256": "00e1f1b1b388968cb1832aff7697a3f28bb03027e6f2957c9832635f737ce890",
+  "shape": [
+   273,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_022": {
+  "acquisition": "native",
+  "duration": 1489.66,
+  "files": [
+   "Center5_022.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 74483,
+  "n_steps": 297,
+  "n_steps_by_duration": 297,
+  "r": 0.45,
+  "sha256": "75d55ed90afe56e9d82a5f29c06d24323c20451600c84a5e8ca2977f96335ed8",
+  "shape": [
+   297,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_023": {
+  "acquisition": "native",
+  "duration": 1032.5,
+  "files": [
+   "Center5_023.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 51625,
+  "n_steps": 206,
+  "n_steps_by_duration": 206,
+  "r": 0.45,
+  "sha256": "899f3d0f9cdff68f4dfd6851ec898fd0ccbe7eba82548042fcb5090c83e365bc",
+  "shape": [
+   206,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_024": {
+  "acquisition": "native",
+  "duration": 1298.54,
+  "files": [
+   "Center5_024.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 64927,
+  "n_steps": 259,
+  "n_steps_by_duration": 259,
+  "r": 0.45,
+  "sha256": "345ebbabed66b9bcb78f9f070e1c92619f67fcc22a7197707119f856c8b13f23",
+  "shape": [
+   259,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_025": {
+  "acquisition": "native",
+  "duration": 1418.22,
+  "files": [
+   "Center5_025.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 70911,
+  "n_steps": 283,
+  "n_steps_by_duration": 283,
+  "r": 0.45,
+  "sha256": "b2a77dbe1729ea83223ec383a7d5bafef401c92a24c83eb1034895bacaffcb1d",
+  "shape": [
+   283,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_026": {
+  "acquisition": "native",
+  "duration": 1809.9,
+  "files": [
+   "Center5_026.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 90495,
+  "n_steps": 361,
+  "n_steps_by_duration": 361,
+  "r": 0.45,
+  "sha256": "25ebbc7074a4abd8e99efdd9932dddac571e474f73ec2978742997db48be4464",
+  "shape": [
+   361,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_028": {
+  "acquisition": "native",
+  "duration": 301.46,
+  "files": [
+   "Center5_028.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 15073,
+  "n_steps": 60,
+  "n_steps_by_duration": 60,
+  "r": 0.45,
+  "sha256": "23f07e293017030a745bf03782e900e9f1b89c2be9494854e422435ec9d08ef0",
+  "shape": [
+   60,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_030": {
+  "acquisition": "native",
+  "duration": 1318.88,
+  "files": [
+   "Center5_030.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 65944,
+  "n_steps": 263,
+  "n_steps_by_duration": 263,
+  "r": 0.45,
+  "sha256": "93fb4d0c17d01db56068425c651f08479291bbf49d11a23b7c1902b7a2e95d92",
+  "shape": [
+   263,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_031": {
+  "acquisition": "native",
+  "duration": 770.64,
+  "files": [
+   "Center5_031.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 38532,
+  "n_steps": 154,
+  "n_steps_by_duration": 154,
+  "r": 0.45,
+  "sha256": "0c3f7741c6f61059db3229dcecdabc512cd827230ce33345f5f9523301879b74",
+  "shape": [
+   154,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_032": {
+  "acquisition": "native",
+  "duration": 1732.6,
+  "files": [
+   "Center5_032.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 86630,
+  "n_steps": 346,
+  "n_steps_by_duration": 346,
+  "r": 0.45,
+  "sha256": "b58f7e8fab64f5cddfb244d194916899c49e768fd336f4f0dba9505dc42817fe",
+  "shape": [
+   346,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_033": {
+  "acquisition": "native",
+  "duration": 1730.08,
+  "files": [
+   "Center5_033.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 86504,
+  "n_steps": 346,
+  "n_steps_by_duration": 346,
+  "r": 0.45,
+  "sha256": "97c6ed616ded70d4d07416b3b0e84422d0d1b66d1b8a7b215b127e392264ab67",
+  "shape": [
+   346,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_034": {
+  "acquisition": "native",
+  "duration": 1826.46,
+  "files": [
+   "Center5_034.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91323,
+  "n_steps": 365,
+  "n_steps_by_duration": 365,
+  "r": 0.45,
+  "sha256": "9f3ec3326910ce52a430467f9c81b2ffe825db6fba2895c181134f9970f455ea",
+  "shape": [
+   365,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_035": {
+  "acquisition": "native",
+  "duration": 113.36,
+  "files": [
+   "Center5_035.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 5668,
+  "n_steps": 22,
+  "n_steps_by_duration": 22,
+  "r": 0.45,
+  "sha256": "2591946114e04d7f1f26b8265b30be14f95158a2814c2a4a34e4375d69e29089",
+  "shape": [
+   22,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_036": {
+  "acquisition": "native",
+  "duration": 1169.16,
+  "files": [
+   "Center5_036.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 58458,
+  "n_steps": 233,
+  "n_steps_by_duration": 233,
+  "r": 0.45,
+  "sha256": "4135dfa3ae320377518f7730b3f1413a03a557ad22d36949cc434aae9ffe2e31",
+  "shape": [
+   233,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_039": {
+  "acquisition": "native",
+  "duration": 1571.12,
+  "files": [
+   "Center5_039.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 78556,
+  "n_steps": 314,
+  "n_steps_by_duration": 314,
+  "r": 0.45,
+  "sha256": "9b0f8a6112cb914093512d216e1f7c876534b2c2f12c2da6e26f063b1511b607",
+  "shape": [
+   314,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_040": {
+  "acquisition": "native",
+  "duration": 1822.56,
+  "files": [
+   "Center5_040.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91128,
+  "n_steps": 364,
+  "n_steps_by_duration": 364,
+  "r": 0.45,
+  "sha256": "4d4feed4c17454b64314bcbd48f0a05c75b7da260cf5c44569349577cfe3bd6a",
+  "shape": [
+   364,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_041": {
+  "acquisition": "native",
+  "duration": 1652.42,
+  "files": [
+   "Center5_041.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 82621,
+  "n_steps": 330,
+  "n_steps_by_duration": 330,
+  "r": 0.45,
+  "sha256": "c081dc1a9dcfff0114107f1b5d0b550a14384504aa8e50dd889d1f1766fd348a",
+  "shape": [
+   330,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_042": {
+  "acquisition": "native",
+  "duration": 2520.84,
+  "files": [
+   "Center5_042_v01.mp4",
+   "Center5_042_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 126042,
+  "n_steps": 504,
+  "n_steps_by_duration": 504,
+  "r": 0.45,
+  "sha256": "36cdd927a3826ecf9d65df1d8a861f04ec0fe37d393d9005d72b0a385179217b",
+  "shape": [
+   504,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_046": {
+  "acquisition": "native",
+  "duration": 1823.12,
+  "files": [
+   "Center5_046.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91156,
+  "n_steps": 364,
+  "n_steps_by_duration": 364,
+  "r": 0.45,
+  "sha256": "c58f6cc9f7878f5f6959398008b22f5915c131b6e7bc1125a147a1f909885a9b",
+  "shape": [
+   364,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_047": {
+  "acquisition": "native",
+  "duration": 1824.5,
+  "files": [
+   "Center5_047.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91225,
+  "n_steps": 364,
+  "n_steps_by_duration": 364,
+  "r": 0.45,
+  "sha256": "8294315a192a70a1a82ec2c032fdbec30c58c9c4e074831060f66d0fd95c4484",
+  "shape": [
+   364,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_048": {
+  "acquisition": "native",
+  "duration": 1827.16,
+  "files": [
+   "Center5_048.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91358,
+  "n_steps": 365,
+  "n_steps_by_duration": 365,
+  "r": 0.45,
+  "sha256": "85316a39477dc69d383324f730f058f4f1c9348959bf6932867dc0985a154395",
+  "shape": [
+   365,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_049": {
+  "acquisition": "native",
+  "duration": 1569.08,
+  "files": [
+   "Center5_049.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 78454,
+  "n_steps": 313,
+  "n_steps_by_duration": 313,
+  "r": 0.45,
+  "sha256": "02053b1d325263c5b61aeeef45842968bbb7b37c66627ca2166116783302fe35",
+  "shape": [
+   313,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_050": {
+  "acquisition": "native",
+  "duration": 1822.56,
+  "files": [
+   "Center5_050.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91128,
+  "n_steps": 364,
+  "n_steps_by_duration": 364,
+  "r": 0.45,
+  "sha256": "4a297999ee81da73aecdf85ffdf741b28510ac35396d09febea09d1fd4451e74",
+  "shape": [
+   364,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_051": {
+  "acquisition": "native",
+  "duration": 1822.56,
+  "files": [
+   "Center5_051.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91128,
+  "n_steps": 364,
+  "n_steps_by_duration": 364,
+  "r": 0.45,
+  "sha256": "0525e97a8d27fce545b9d47de3430786b16a5594b0f1dc8f3ef70f462d16463b",
+  "shape": [
+   364,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_052": {
+  "acquisition": "native",
+  "duration": 1746.06,
+  "files": [
+   "Center5_052.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 87303,
+  "n_steps": 349,
+  "n_steps_by_duration": 349,
+  "r": 0.45,
+  "sha256": "aae4d2b2e5c586cda9e97696a2825a1c3c0df817b49941caf47d2ec60cf91834",
+  "shape": [
+   349,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_053": {
+  "acquisition": "native",
+  "duration": 1822.56,
+  "files": [
+   "Center5_053.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91128,
+  "n_steps": 364,
+  "n_steps_by_duration": 364,
+  "r": 0.45,
+  "sha256": "a2817739cd932bc42003b77b4d434f10bc1cf35191cc10bc8d986a9a047a4a57",
+  "shape": [
+   364,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_055": {
+  "acquisition": "native",
+  "duration": 1383.2,
+  "files": [
+   "Center5_055.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 69160,
+  "n_steps": 276,
+  "n_steps_by_duration": 276,
+  "r": 0.45,
+  "sha256": "f2505b3cb9b87424bef61542c23cd0c36362ba46d148c097c668a9f072859e5f",
+  "shape": [
+   276,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_056": {
+  "acquisition": "native",
+  "duration": 1421.94,
+  "files": [
+   "Center5_056.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 71097,
+  "n_steps": 284,
+  "n_steps_by_duration": 284,
+  "r": 0.45,
+  "sha256": "d5a8fb2945ff685d7f38ddabac9a1cfb3136e9f2bfa29bb5ec399f64a281cc52",
+  "shape": [
+   284,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_057": {
+  "acquisition": "native",
+  "duration": 1229.64,
+  "files": [
+   "Center5_057.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 61482,
+  "n_steps": 245,
+  "n_steps_by_duration": 245,
+  "r": 0.45,
+  "sha256": "6c594372f918e013bb116a5adbb30b89734b8c326000c9f1be192556fde11d5c",
+  "shape": [
+   245,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_058": {
+  "acquisition": "native",
+  "duration": 1822.56,
+  "files": [
+   "Center5_058.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91128,
+  "n_steps": 364,
+  "n_steps_by_duration": 364,
+  "r": 0.45,
+  "sha256": "6a4c0f63ba65d7da2bda3f638f4257fea3e544fe8bf2d608d447e05e80b5613d",
+  "shape": [
+   364,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_059": {
+  "acquisition": "native",
+  "duration": 974.62,
+  "files": [
+   "Center5_059.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 48731,
+  "n_steps": 194,
+  "n_steps_by_duration": 194,
+  "r": 0.45,
+  "sha256": "3016cca61ae9d4b435c079f84442c135de7fda57b1cae0b4bec6291239daf59c",
+  "shape": [
+   194,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_060": {
+  "acquisition": "native",
+  "duration": 1829.54,
+  "files": [
+   "Center5_060.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91477,
+  "n_steps": 365,
+  "n_steps_by_duration": 365,
+  "r": 0.45,
+  "sha256": "c5afa96b8271208433c0ef2888ec2ccdde17d0dacc68f5620ab1c2804456ece1",
+  "shape": [
+   365,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_061": {
+  "acquisition": "native",
+  "duration": 1826.08,
+  "files": [
+   "Center5_061.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91304,
+  "n_steps": 365,
+  "n_steps_by_duration": 365,
+  "r": 0.45,
+  "sha256": "26c844b177908f484ef75d2034cce1316bd4d57c01a29d0921c43333fa7d0ad7",
+  "shape": [
+   365,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_062": {
+  "acquisition": "native",
+  "duration": 1668.06,
+  "files": [
+   "Center5_062.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 83403,
+  "n_steps": 333,
+  "n_steps_by_duration": 333,
+  "r": 0.45,
+  "sha256": "fdc1819c524fed79f2acbe38ee61844b478b2ea7c44994df924be2a935aead5d",
+  "shape": [
+   333,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_063": {
+  "acquisition": "native",
+  "duration": 1559.74,
+  "files": [
+   "Center5_063.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 77987,
+  "n_steps": 311,
+  "n_steps_by_duration": 311,
+  "r": 0.45,
+  "sha256": "f1d49cb9b979f6edb3773efafdb36f4285f4bd1fb32566c06081cccb9ea0aff8",
+  "shape": [
+   311,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_064": {
+  "acquisition": "native",
+  "duration": 1823.52,
+  "files": [
+   "Center5_064.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91176,
+  "n_steps": 364,
+  "n_steps_by_duration": 364,
+  "r": 0.45,
+  "sha256": "31a034eb64e90d71563167813214c45f15132b8b6ce6ddbdaa2903cf7144d413",
+  "shape": [
+   364,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_065": {
+  "acquisition": "native",
+  "duration": 1823.76,
+  "files": [
+   "Center5_065.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91188,
+  "n_steps": 364,
+  "n_steps_by_duration": 364,
+  "r": 0.45,
+  "sha256": "e88994ced914ec6e51728716e93581890cfbcbc0906b98eb1815789cc4edff47",
+  "shape": [
+   364,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_066": {
+  "acquisition": "native",
+  "duration": 1826.76,
+  "files": [
+   "Center5_066.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91338,
+  "n_steps": 365,
+  "n_steps_by_duration": 365,
+  "r": 0.45,
+  "sha256": "616ab69255861e0de0a2262ea379a5357bd966e94d56cb6082ea713dda76749f",
+  "shape": [
+   365,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_069": {
+  "acquisition": "native",
+  "duration": 1826.14,
+  "files": [
+   "Center5_069.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 91307,
+  "n_steps": 365,
+  "n_steps_by_duration": 365,
+  "r": 0.45,
+  "sha256": "e87f8aebc9fc0794705cf64d60a4d92aa955224ea70052555646c7ea0ee1ac21",
+  "shape": [
+   365,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_070": {
+  "acquisition": "native",
+  "duration": 1439.14,
+  "files": [
+   "Center5_070.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 71957,
+  "n_steps": 287,
+  "n_steps_by_duration": 287,
+  "r": 0.45,
+  "sha256": "a4ebc01a93756823163a7414193a1b553f6c82696d5904723f639aaa2b50efb7",
+  "shape": [
+   287,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_071": {
+  "acquisition": "native",
+  "duration": 1087.64,
+  "files": [
+   "Center5_071.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 54382,
+  "n_steps": 217,
+  "n_steps_by_duration": 217,
+  "r": 0.45,
+  "sha256": "7fcf4c09aed8bc5f4b1e7a674e8556d7ba0dadb7d7ba488a2d327b5237a4f624",
+  "shape": [
+   217,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_072": {
+  "acquisition": "native",
+  "duration": 1902.9199999999998,
+  "files": [
+   "Center5_072_v01.mp4",
+   "Center5_072_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 95146,
+  "n_steps": 380,
+  "n_steps_by_duration": 380,
+  "r": 0.45,
+  "sha256": "794800b4ae3f4e6dfc7bfbe56bf5a8d533ff24e3cbcfac1620d8877fc96f9b24",
+  "shape": [
+   380,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_075": {
+  "acquisition": "native",
+  "duration": 616.34,
+  "files": [
+   "Center5_075.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 30817,
+  "n_steps": 123,
+  "n_steps_by_duration": 123,
+  "r": 0.45,
+  "sha256": "5541fd70cade30ad17736453bd5f9bb8c67ef6305b5def76d765a3bd6ec50e55",
+  "shape": [
+   123,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_076": {
+  "acquisition": "native",
+  "duration": 891.18,
+  "files": [
+   "Center5_076.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 44559,
+  "n_steps": 178,
+  "n_steps_by_duration": 178,
+  "r": 0.45,
+  "sha256": "d0263ab53bb69f029a4b65128a6500d8a68e38c9121d4dc5953811607507385a",
+  "shape": [
+   178,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_077": {
+  "acquisition": "native",
+  "duration": 1702.34,
+  "files": [
+   "Center5_077.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 85117,
+  "n_steps": 340,
+  "n_steps_by_duration": 340,
+  "r": 0.45,
+  "sha256": "bc4fd7d7ca5296b9e11651d9d299524d1a3e229ccf68d83df9155759e4840cfc",
+  "shape": [
+   340,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_078": {
+  "acquisition": "native",
+  "duration": 2179.68,
+  "files": [
+   "Center5_078_v01.mp4",
+   "Center5_078_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 108984,
+  "n_steps": 435,
+  "n_steps_by_duration": 435,
+  "r": 0.45,
+  "sha256": "bd62c7257e613693d1fc2a29dc597cb731c99a022bd7234b00d7ace0264bef0c",
+  "shape": [
+   435,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_079": {
+  "acquisition": "native",
+  "duration": 2078.2200000000003,
+  "files": [
+   "Center5_079_v01.mp4",
+   "Center5_079_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 103911,
+  "n_steps": 415,
+  "n_steps_by_duration": 415,
+  "r": 0.45,
+  "sha256": "a744682ad49bb2da04cbb027ee4b7f55504c1c3a0e511cb9267b72072d7f9a95",
+  "shape": [
+   415,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_080": {
+  "acquisition": "native",
+  "duration": 2086.2799999999997,
+  "files": [
+   "Center5_080_v01.mp4",
+   "Center5_080_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 104314,
+  "n_steps": 417,
+  "n_steps_by_duration": 417,
+  "r": 0.45,
+  "sha256": "5ac60e7e676eada6f7007f1cc9c0da2344c61e968a992e519a69745cd0b895ee",
+  "shape": [
+   417,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_081": {
+  "acquisition": "native",
+  "duration": 1374.84,
+  "files": [
+   "Center5_081.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 68742,
+  "n_steps": 274,
+  "n_steps_by_duration": 274,
+  "r": 0.45,
+  "sha256": "a7d57b817dbbd8642665ea8fe25d938b9f01717d046b0b7a8dca54abdc95c7d9",
+  "shape": [
+   274,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_083": {
+  "acquisition": "native",
+  "duration": 2443.54,
+  "files": [
+   "Center5_083_v01.mp4",
+   "Center5_083_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 122177,
+  "n_steps": 488,
+  "n_steps_by_duration": 488,
+  "r": 0.45,
+  "sha256": "fb7be675108a85739fb9fa8d5a6d80583dc2921cf7835471d5f74b964d90ee2e",
+  "shape": [
+   488,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_084": {
+  "acquisition": "native",
+  "duration": 873.44,
+  "files": [
+   "Center5_084.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 43672,
+  "n_steps": 174,
+  "n_steps_by_duration": 174,
+  "r": 0.45,
+  "sha256": "f5fdd20b30d470de88311abfcf28e40318ad76008039b03cdd6f2e1c1e9ab3a4",
+  "shape": [
+   174,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_085": {
+  "acquisition": "native",
+  "duration": 3314.62,
+  "files": [
+   "Center5_085_v01.mp4",
+   "Center5_085_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 165731,
+  "n_steps": 662,
+  "n_steps_by_duration": 662,
+  "r": 0.45,
+  "sha256": "17a8243c6a041c366ab146a97bed8608d820ffb6d2d34a88c923af22afe9a696",
+  "shape": [
+   662,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_086": {
+  "acquisition": "native",
+  "duration": 1404.12,
+  "files": [
+   "Center5_086.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 70206,
+  "n_steps": 280,
+  "n_steps_by_duration": 280,
+  "r": 0.45,
+  "sha256": "97d4c306374d96ea8363d09fd63c4055519ba98b03e2a91ac5bd43340e2ce367",
+  "shape": [
+   280,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_087": {
+  "acquisition": "native",
+  "duration": 1491.64,
+  "files": [
+   "Center5_087.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 74582,
+  "n_steps": 298,
+  "n_steps_by_duration": 298,
+  "r": 0.45,
+  "sha256": "320b01a70867eb44a53b10348b05cfa23f1c6b76e84c5f8f2048614208425429",
+  "shape": [
+   298,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_088": {
+  "acquisition": "native",
+  "duration": 2162.3,
+  "files": [
+   "Center5_088_v01.mp4",
+   "Center5_088_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 108115,
+  "n_steps": 432,
+  "n_steps_by_duration": 432,
+  "r": 0.45,
+  "sha256": "44266f6f035db96cceb1348e0c3d55dafb8a6b14f21a88e0ee58b5aeefaf9198",
+  "shape": [
+   432,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_089": {
+  "acquisition": "native",
+  "duration": 1952.1599999999999,
+  "files": [
+   "Center5_089_v01.mp4",
+   "Center5_089_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 97608,
+  "n_steps": 390,
+  "n_steps_by_duration": 390,
+  "r": 0.45,
+  "sha256": "6b8d6cc51501510c8982bd4617fc64402fecfd26d8bcefa6b9e073ddc9570682",
+  "shape": [
+   390,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_090": {
+  "acquisition": "native",
+  "duration": 1655.22,
+  "files": [
+   "Center5_090.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 82761,
+  "n_steps": 331,
+  "n_steps_by_duration": 331,
+  "r": 0.45,
+  "sha256": "361b19e4e62be20b63da622972fe0b12bac1730717fd93c6bd9049a442389d45",
+  "shape": [
+   331,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_091": {
+  "acquisition": "native",
+  "duration": 2578.3599999999997,
+  "files": [
+   "Center5_091_v01.mp4",
+   "Center5_091_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 128918,
+  "n_steps": 515,
+  "n_steps_by_duration": 515,
+  "r": 0.45,
+  "sha256": "e1005640cc67c89d29ef0ed602382f2080d25fb768c0d971c5dbee79c1e78710",
+  "shape": [
+   515,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_092": {
+  "acquisition": "native",
+  "duration": 1685.48,
+  "files": [
+   "Center5_092.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 84274,
+  "n_steps": 337,
+  "n_steps_by_duration": 337,
+  "r": 0.45,
+  "sha256": "beca06f40dc6d7caa1dfdccf3ba89967a638ed60930de0ab56ec07dc78351821",
+  "shape": [
+   337,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_093": {
+  "acquisition": "native",
+  "duration": 1868.6200000000001,
+  "files": [
+   "Center5_093_v01.mp4",
+   "Center5_093_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 93431,
+  "n_steps": 373,
+  "n_steps_by_duration": 373,
+  "r": 0.45,
+  "sha256": "dd0992fbac6a6fb9aafbaf17be629feb37459f54fadc3fb5d5b5e86491f667f5",
+  "shape": [
+   373,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_094": {
+  "acquisition": "native",
+  "duration": 1433.6,
+  "files": [
+   "Center5_094.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 71680,
+  "n_steps": 286,
+  "n_steps_by_duration": 286,
+  "r": 0.45,
+  "sha256": "944cf6aac9b19c9d9fe19ee40e5ca862bcb3c16827fca39a25f86e039937dbc3",
+  "shape": [
+   286,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_095": {
+  "acquisition": "native",
+  "duration": 912.02,
+  "files": [
+   "Center5_095.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 45601,
+  "n_steps": 182,
+  "n_steps_by_duration": 182,
+  "r": 0.45,
+  "sha256": "20dae060f4dc632c055c79a5135758b87ff7adf76ee3bdcc4690a001b278098c",
+  "shape": [
+   182,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_096": {
+  "acquisition": "native",
+  "duration": 1087.64,
+  "files": [
+   "Center5_096.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 54382,
+  "n_steps": 217,
+  "n_steps_by_duration": 217,
+  "r": 0.45,
+  "sha256": "7fcf4c09aed8bc5f4b1e7a674e8556d7ba0dadb7d7ba488a2d327b5237a4f624",
+  "shape": [
+   217,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_097": {
+  "acquisition": "native",
+  "duration": 1669.96,
+  "files": [
+   "Center5_097_v01.mp4",
+   "Center5_097_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 83498,
+  "n_steps": 333,
+  "n_steps_by_duration": 333,
+  "r": 0.45,
+  "sha256": "11bcd5e43f6bd10378898e5b986380e10fb47ebd0f7035c9e06bba7c6ff9be8e",
+  "shape": [
+   333,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_098": {
+  "acquisition": "native",
+  "duration": 2248.38,
+  "files": [
+   "Center5_098_v01.mp4",
+   "Center5_098_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 112419,
+  "n_steps": 449,
+  "n_steps_by_duration": 449,
+  "r": 0.45,
+  "sha256": "91c4327a3915472ef31c9362ddd0dce72885a95cd626553d990319a813ea527e",
+  "shape": [
+   449,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_099": {
+  "acquisition": "native",
+  "duration": 3097.0,
+  "files": [
+   "Center5_099_v01.mp4",
+   "Center5_099_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 154850,
+  "n_steps": 619,
+  "n_steps_by_duration": 619,
+  "r": 0.45,
+  "sha256": "7ebdf9556522c4c2899f8587e12f713018696e4a905625047b3b8323cbe845d5",
+  "shape": [
+   619,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_100": {
+  "acquisition": "native",
+  "duration": 906.86,
+  "files": [
+   "Center5_100.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 45343,
+  "n_steps": 181,
+  "n_steps_by_duration": 181,
+  "r": 0.45,
+  "sha256": "2b072ceb6d05af6ccc284af311b57d37095c84e55ddb42ae852baf65c3756389",
+  "shape": [
+   181,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_101": {
+  "acquisition": "native",
+  "duration": 1897.46,
+  "files": [
+   "Center5_101_v01.mp4",
+   "Center5_101_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 94873,
+  "n_steps": 379,
+  "n_steps_by_duration": 379,
+  "r": 0.45,
+  "sha256": "518e1c3281b681cb84e02f793d1720be9eb6a6519cf6746982e7dc02446b36c4",
+  "shape": [
+   379,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_102": {
+  "acquisition": "native",
+  "duration": 2262.98,
+  "files": [
+   "Center5_102_v01.mp4",
+   "Center5_102_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 113149,
+  "n_steps": 452,
+  "n_steps_by_duration": 452,
+  "r": 0.45,
+  "sha256": "519283587fc25a95eeb6d0aa8283d0bf3e6d8a29fab8544f0069e4848b042252",
+  "shape": [
+   452,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_103": {
+  "acquisition": "native",
+  "duration": 1703.48,
+  "files": [
+   "Center5_103.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 85174,
+  "n_steps": 340,
+  "n_steps_by_duration": 340,
+  "r": 0.45,
+  "sha256": "ca8f16c49a74e845edadd3e4e8f9a2993d916207e358ed06fa6da4b533afc15b",
+  "shape": [
+   340,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_104": {
+  "acquisition": "native",
+  "duration": 1376.78,
+  "files": [
+   "Center5_104.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 68839,
+  "n_steps": 275,
+  "n_steps_by_duration": 275,
+  "r": 0.45,
+  "sha256": "45706e1c8459cdd80c9e15f35483b3c58e72b2139b0ed5ccb881893d1a73432d",
+  "shape": [
+   275,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_105": {
+  "acquisition": "native",
+  "duration": 3019.44,
+  "files": [
+   "Center5_105_v01.mp4",
+   "Center5_105_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 150972,
+  "n_steps": 603,
+  "n_steps_by_duration": 603,
+  "r": 0.45,
+  "sha256": "faacd545c7373f0360ae801b5a8200016c7bef30f13488d3770f1b0ea6bdbc47",
+  "shape": [
+   603,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_106": {
+  "acquisition": "native",
+  "duration": 3668.98,
+  "files": [
+   "Center5_106_v01.mp4",
+   "Center5_106_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 183449,
+  "n_steps": 733,
+  "n_steps_by_duration": 733,
+  "r": 0.45,
+  "sha256": "9dd40ec2b10beb490ddb6ab8b9fa17b147494b3fae5e0139088ceaa51d9a9fe4",
+  "shape": [
+   733,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_107": {
+  "acquisition": "native",
+  "duration": 1460.18,
+  "files": [
+   "Center5_107.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 73009,
+  "n_steps": 292,
+  "n_steps_by_duration": 292,
+  "r": 0.45,
+  "sha256": "77561a7886484a6ae5fc0f7b40d8918262b187f530251d1b894dd6a4c7f2621f",
+  "shape": [
+   292,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_108": {
+  "acquisition": "native",
+  "duration": 1909.1599999999999,
+  "files": [
+   "Center5_108_v01.mp4",
+   "Center5_108_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 95458,
+  "n_steps": 381,
+  "n_steps_by_duration": 381,
+  "r": 0.45,
+  "sha256": "c6ee126d0e7f2766aba88f3f0b17d5bfb555c6f2da87e431fb962d7e22545bda",
+  "shape": [
+   381,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_109": {
+  "acquisition": "native",
+  "duration": 1500.52,
+  "files": [
+   "Center5_109.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 75026,
+  "n_steps": 300,
+  "n_steps_by_duration": 300,
+  "r": 0.45,
+  "sha256": "506d4e4c9c4e5046dee17ddc6b11b5c4ad978cbe17de6f64ab0939df11677901",
+  "shape": [
+   300,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_110": {
+  "acquisition": "native",
+  "duration": 2480.3,
+  "files": [
+   "Center5_110_v01.mp4",
+   "Center5_110_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 124015,
+  "n_steps": 496,
+  "n_steps_by_duration": 496,
+  "r": 0.45,
+  "sha256": "d24d3e941349be08bb8ae102970adfc944af394a4c240bd956af802e3b469ca6",
+  "shape": [
+   496,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_111": {
+  "acquisition": "native",
+  "duration": 1321.88,
+  "files": [
+   "Center5_111.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 66094,
+  "n_steps": 264,
+  "n_steps_by_duration": 264,
+  "r": 0.45,
+  "sha256": "4c6fdcd1dad906edc8040342c7b32e7e20fcc3e0698c5d76b83a397dec0f7945",
+  "shape": [
+   264,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_112": {
+  "acquisition": "native",
+  "duration": 3795.18,
+  "files": [
+   "Center5_112_v01.mp4",
+   "Center5_112_v02.mp4",
+   "Center5_112_v03.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 189759,
+  "n_steps": 759,
+  "n_steps_by_duration": 759,
+  "r": 0.45,
+  "sha256": "602cd456073540d104751fc8f97882fc0d5c2869d3bac3646cd2727e969f96a6",
+  "shape": [
+   759,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_113": {
+  "acquisition": "native",
+  "duration": 4422.0199999999995,
+  "files": [
+   "Center5_113_v01.mp4",
+   "Center5_113_v02.mp4",
+   "Center5_113_v03.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 221101,
+  "n_steps": 884,
+  "n_steps_by_duration": 884,
+  "r": 0.45,
+  "sha256": "3fa94a336e7989ac106d6dcdb0f45844a8046748d97f313d641a91c448f75e5a",
+  "shape": [
+   884,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_114": {
+  "acquisition": "native",
+  "duration": 1627.52,
+  "files": [
+   "Center5_114.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 81376,
+  "n_steps": 325,
+  "n_steps_by_duration": 325,
+  "r": 0.45,
+  "sha256": "de69b0da22ff00385dcbd0e2a5ad75f4ac84e54528dce4ba97148b0e08e6a5c4",
+  "shape": [
+   325,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_115": {
+  "acquisition": "native",
+  "duration": 2128.4,
+  "files": [
+   "Center5_115_v01.mp4",
+   "Center5_115_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 106420,
+  "n_steps": 425,
+  "n_steps_by_duration": 425,
+  "r": 0.45,
+  "sha256": "aed4518b979820e49729fcfb29696f5dc2ebc53bb73f818a0c2794b5c920c92f",
+  "shape": [
+   425,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_116": {
+  "acquisition": "native",
+  "duration": 3385.1400000000003,
+  "files": [
+   "Center5_116_v01.mp4",
+   "Center5_116_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 169257,
+  "n_steps": 677,
+  "n_steps_by_duration": 677,
+  "r": 0.45,
+  "sha256": "c5047e0506f5635faf84ddfd37ee9a42fe352c1e37c251175cea5a76f5e0b174",
+  "shape": [
+   677,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_118": {
+  "acquisition": "native",
+  "duration": 3416.06,
+  "files": [
+   "Center5_118_v01.mp4",
+   "Center5_118_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 170803,
+  "n_steps": 683,
+  "n_steps_by_duration": 683,
+  "r": 0.45,
+  "sha256": "fe440885900058331f479351ffa2515377eab1b4178a24d7461f0099ecee2d89",
+  "shape": [
+   683,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_119": {
+  "acquisition": "native",
+  "duration": 2608.42,
+  "files": [
+   "Center5_119_v01.mp4",
+   "Center5_119_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 130421,
+  "n_steps": 521,
+  "n_steps_by_duration": 521,
+  "r": 0.45,
+  "sha256": "df95c59053b5f98174017a6d5eea8376a90d410246804eea831e4abc6b077fff",
+  "shape": [
+   521,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_120": {
+  "acquisition": "native",
+  "duration": 1626.14,
+  "files": [
+   "Center5_120.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 81307,
+  "n_steps": 325,
+  "n_steps_by_duration": 325,
+  "r": 0.45,
+  "sha256": "8be98dda54cd992a397712fbd5656ea3e9701f285f71f5a6d8469195d67ac9b8",
+  "shape": [
+   325,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_121": {
+  "acquisition": "native",
+  "duration": 2567.48,
+  "files": [
+   "Center5_121_v01.mp4",
+   "Center5_121_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 128374,
+  "n_steps": 513,
+  "n_steps_by_duration": 513,
+  "r": 0.45,
+  "sha256": "ed2b9068df13861e3d7134c9914182d7917af65bc42d933e7523bdbca4e90e9a",
+  "shape": [
+   513,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_122": {
+  "acquisition": "native",
+  "duration": 756.08,
+  "files": [
+   "Center5_122.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 37804,
+  "n_steps": 151,
+  "n_steps_by_duration": 151,
+  "r": 0.45,
+  "sha256": "c5a78b465908479cfb6cdc44189891aa50caaed4bc2deab692c3b3b2df2a17f2",
+  "shape": [
+   151,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_123": {
+  "acquisition": "native",
+  "duration": 2699.54,
+  "files": [
+   "Center5_123_v01.mp4",
+   "Center5_123_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 134977,
+  "n_steps": 539,
+  "n_steps_by_duration": 539,
+  "r": 0.45,
+  "sha256": "ee91b81426efba6c156872f1f8be73d00c6bb225913f342a194e49691fe52636",
+  "shape": [
+   539,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_125": {
+  "acquisition": "native",
+  "duration": 4225.98,
+  "files": [
+   "Center5_125_v01.mp4",
+   "Center5_125_v02.mp4",
+   "Center5_125_v03.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 211299,
+  "n_steps": 845,
+  "n_steps_by_duration": 845,
+  "r": 0.45,
+  "sha256": "085532502d0837af3732837db1570973fa2829f39ee0525609f7324360fb7b5c",
+  "shape": [
+   845,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_126": {
+  "acquisition": "native",
+  "duration": 2575.0,
+  "files": [
+   "Center5_126_v01.mp4",
+   "Center5_126_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 128750,
+  "n_steps": 515,
+  "n_steps_by_duration": 515,
+  "r": 0.45,
+  "sha256": "49ec90c1a0573ddedb886a1a2cad295f785f0882316367ac18c87940a24ac2a8",
+  "shape": [
+   515,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_127": {
+  "acquisition": "native",
+  "duration": 1265.86,
+  "files": [
+   "Center5_127.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 63293,
+  "n_steps": 253,
+  "n_steps_by_duration": 253,
+  "r": 0.45,
+  "sha256": "805f4d934aea2b94d8d632116a32ea263103177ac74634c8079824614b9d1299",
+  "shape": [
+   253,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_129": {
+  "acquisition": "native",
+  "duration": 2072.24,
+  "files": [
+   "Center5_129_v01.mp4",
+   "Center5_129_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 103612,
+  "n_steps": 414,
+  "n_steps_by_duration": 414,
+  "r": 0.45,
+  "sha256": "c206de68b73f964b500b1a2209dd6b354fc54abc34bc3c939d373caaafc3de71",
+  "shape": [
+   414,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_130": {
+  "acquisition": "native",
+  "duration": 2748.34,
+  "files": [
+   "Center5_130_v01.mp4",
+   "Center5_130_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 137417,
+  "n_steps": 549,
+  "n_steps_by_duration": 549,
+  "r": 0.45,
+  "sha256": "1b67886eca48fce1fc913d40e94bf40f69050adce4a5017ff1979005792de4db",
+  "shape": [
+   549,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_132": {
+  "acquisition": "native",
+  "duration": 6682.58,
+  "files": [
+   "Center5_132_v01.mp4",
+   "Center5_132_v02.mp4",
+   "Center5_132_v03.mp4",
+   "Center5_132_v04.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 334129,
+  "n_steps": 1336,
+  "n_steps_by_duration": 1336,
+  "r": 0.45,
+  "sha256": "1ed8f3f307d9b943dab6226c65f2c3aeaee46f26f057c90d5e843fcc5d81aafe",
+  "shape": [
+   1336,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_133": {
+  "acquisition": "native",
+  "duration": 2465.9,
+  "files": [
+   "Center5_133_v01.mp4",
+   "Center5_133_v02.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 123295,
+  "n_steps": 493,
+  "n_steps_by_duration": 493,
+  "r": 0.45,
+  "sha256": "ee88d026062f39f2a89e8340709772293d19c404827a1e0c990eadc448be3129",
+  "shape": [
+   493,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_134": {
+  "acquisition": "native",
+  "duration": 428.6,
+  "files": [
+   "Center5_134.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 21430,
+  "n_steps": 85,
+  "n_steps_by_duration": 85,
+  "r": 0.45,
+  "sha256": "dea4be0394261c7c7647de16264c2f3c2198de6417aae1a8d94e61325fc5e197",
+  "shape": [
+   85,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ },
+ "C5_135": {
+  "acquisition": "native",
+  "duration": 753.6,
+  "files": [
+   "Center5_135.mp4"
+  ],
+  "grid_frames_after_step_end": 0,
+  "model": "SurgeNetCholec",
+  "n_frames": 37680,
+  "n_steps": 150,
+  "n_steps_by_duration": 150,
+  "r": 0.45,
+  "sha256": "4cc271dca7762bf475f18f84719b84ee202724f1bf94be63c68d331c5174f891",
+  "shape": [
+   150,
+   512
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/surgenet/CHOLEC_checkpoint_epoch0050_teacher.pth"
+ }
+}

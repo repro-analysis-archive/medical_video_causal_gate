@@ -1,0 +1,5078 @@
+{
+ "C2_002": {
+  "acquisition": "standardized",
+  "duration": 23.96,
+  "files": [
+   "Center2_002.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 599,
+  "n_steps": 4,
+  "r": 0.45,
+  "sha256": "d667c49ff3b9040a021762025d78247ec49b77b938ed5a66d55f9ffb088626ef",
+  "shape": [
+   4,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_003": {
+  "acquisition": "standardized",
+  "duration": 3009.6,
+  "files": [
+   "Center2_003.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 75240,
+  "n_steps": 601,
+  "r": 0.45,
+  "sha256": "6e931323b7f9a02055bd18868979def7f7f743e0ff3fb9ea13717a03d01eef6a",
+  "shape": [
+   601,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_004": {
+  "acquisition": "standardized",
+  "duration": 818.64,
+  "files": [
+   "Center2_004.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 20466,
+  "n_steps": 163,
+  "r": 0.45,
+  "sha256": "73e9656bd5b5ac27b2348dd4a55e506989cd09e9edba0ed4861085fb5e84cc38",
+  "shape": [
+   163,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_005": {
+  "acquisition": "standardized",
+  "duration": 1925.96,
+  "files": [
+   "Center2_005.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 48149,
+  "n_steps": 385,
+  "r": 0.45,
+  "sha256": "c6a4b319e3c6035f148a03d72486f06b41741477906d661acac9916659284d56",
+  "shape": [
+   385,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_006": {
+  "acquisition": "standardized",
+  "duration": 1529.76,
+  "files": [
+   "Center2_006.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 38244,
+  "n_steps": 305,
+  "r": 0.45,
+  "sha256": "8ac9bbdb898402a42b9b046cce7ffb312b07b9fe5e9c76addfe8138a4b41a47d",
+  "shape": [
+   305,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_007": {
+  "acquisition": "standardized",
+  "duration": 5307.0,
+  "files": [
+   "Center2_007.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 132675,
+  "n_steps": 1061,
+  "r": 0.45,
+  "sha256": "a874c3541a2f2e1217d2a3bcbb4a8d0a87673e8fa03a45312b19be42986fac93",
+  "shape": [
+   1061,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_008": {
+  "acquisition": "standardized",
+  "duration": 1804.32,
+  "files": [
+   "Center2_008.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 45108,
+  "n_steps": 360,
+  "r": 0.45,
+  "sha256": "965758e1158af746b92f3c8f8c8a4af52772fd63c04696c532c1962d8d535b71",
+  "shape": [
+   360,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_009": {
+  "acquisition": "standardized",
+  "duration": 1293.0,
+  "files": [
+   "Center2_009.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 32325,
+  "n_steps": 258,
+  "r": 0.45,
+  "sha256": "5b02e40540f6c081bc76bb95c1875161a6083faec54ec0d6e6aa90517794be69",
+  "shape": [
+   258,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_010": {
+  "acquisition": "standardized",
+  "duration": 1690.32,
+  "files": [
+   "Center2_010.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 42258,
+  "n_steps": 338,
+  "r": 0.45,
+  "sha256": "cd587e45dba4e66f4110eccebee57e6ebfec7e8b7f7c97bf8bda9c857afd55fc",
+  "shape": [
+   338,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_011": {
+  "acquisition": "standardized",
+  "duration": 1511.04,
+  "files": [
+   "Center2_011.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 37776,
+  "n_steps": 302,
+  "r": 0.45,
+  "sha256": "28e1fa3fea8dd82083b4e94dd25a2e55c3f90162a56cd5dbad3f5e640212a8ed",
+  "shape": [
+   302,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_012": {
+  "acquisition": "standardized",
+  "duration": 831.96,
+  "files": [
+   "Center2_012.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 20799,
+  "n_steps": 166,
+  "r": 0.45,
+  "sha256": "e2bad5f802cf68d5eebc38176063a75a563c8de07e1526167a65febdc4704fd9",
+  "shape": [
+   166,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_013": {
+  "acquisition": "standardized",
+  "duration": 3402.6,
+  "files": [
+   "Center2_013_v01.mp4",
+   "Center2_013_v02.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 85065,
+  "n_steps": 680,
+  "r": 0.45,
+  "sha256": "2727ad937938afc9896e2e1664b256a59f8190bdb26dad0c90389e05c02c0a46",
+  "shape": [
+   680,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_014": {
+  "acquisition": "standardized",
+  "duration": 1805.4,
+  "files": [
+   "Center2_014.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 45135,
+  "n_steps": 361,
+  "r": 0.45,
+  "sha256": "11da66a8805e66a57937ecb4595424d82fb0795595cbc14963ae45b0ad113c78",
+  "shape": [
+   361,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_015": {
+  "acquisition": "standardized",
+  "duration": 2415.96,
+  "files": [
+   "Center2_015_v01.mp4",
+   "Center2_015_v02.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 60399,
+  "n_steps": 483,
+  "r": 0.45,
+  "sha256": "2cfdc15eded995c2e78227012d9a3e7c3e4a40c014bb409e8d4cb7e641f7ff7e",
+  "shape": [
+   483,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_016": {
+  "acquisition": "standardized",
+  "duration": 1218.28,
+  "files": [
+   "Center2_016.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 30457,
+  "n_steps": 243,
+  "r": 0.45,
+  "sha256": "5349ce5bef942e1d05b9f8a765bafecea5a85b4c9e6358e1c96affbb18819785",
+  "shape": [
+   243,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_017": {
+  "acquisition": "standardized",
+  "duration": 941.84,
+  "files": [
+   "Center2_017.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 23546,
+  "n_steps": 188,
+  "r": 0.45,
+  "sha256": "bf412908fb6bd7d71cdcaa1b6052890490d02605f2a61b3ccac9b66e870be5cc",
+  "shape": [
+   188,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_018": {
+  "acquisition": "standardized",
+  "duration": 5624.88,
+  "files": [
+   "Center2_018_v01.mp4",
+   "Center2_018_v02.mp4",
+   "Center2_018_v03.mp4",
+   "Center2_018_v04.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 140622,
+  "n_steps": 1124,
+  "r": 0.45,
+  "sha256": "71fd88f6d0d1e75d52b64984fb446169a8e3148108b2f9f259f6fd8e7ae68377",
+  "shape": [
+   1124,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_019": {
+  "acquisition": "standardized",
+  "duration": 1803.52,
+  "files": [
+   "Center2_019_v01.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 45088,
+  "n_steps": 360,
+  "r": 0.45,
+  "sha256": "f56d35453b198bb9b2c38ab5445fa2f80ee808a5c39efa568ec0546c7eea81bd",
+  "shape": [
+   360,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_021": {
+  "acquisition": "standardized",
+  "duration": 1017.92,
+  "files": [
+   "Center2_021.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 25448,
+  "n_steps": 203,
+  "r": 0.45,
+  "sha256": "4ac6c0c762343298b38b8e0ca459bb0e48b46e7f3e768b82f7ddd18853904256",
+  "shape": [
+   203,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_022": {
+  "acquisition": "standardized",
+  "duration": 1329.96,
+  "files": [
+   "Center2_022_v01.mp4",
+   "Center2_022_v02.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 33249,
+  "n_steps": 265,
+  "r": 0.45,
+  "sha256": "8d67c5e66b194f5174850f6fe83b557c5b1add8ba9c7ebcec92c0f675cce817d",
+  "shape": [
+   265,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_023": {
+  "acquisition": "standardized",
+  "duration": 1970.6,
+  "files": [
+   "Center2_023_v01.mp4",
+   "Center2_023_v02.mp4",
+   "Center2_023_v03.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 49265,
+  "n_steps": 394,
+  "r": 0.45,
+  "sha256": "d4163f453413e40246a9eb12d0c6eb225d224433c0a730dc624f93b47ded0dfa",
+  "shape": [
+   394,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_024": {
+  "acquisition": "standardized",
+  "duration": 2277.0,
+  "files": [
+   "Center2_024_v01.mp4",
+   "Center2_024_v02.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 56925,
+  "n_steps": 455,
+  "r": 0.45,
+  "sha256": "87958dfd4d9eeb18935f96f6bbf0ba63b1aa04144fe5ddbaef04f96db6eefbaf",
+  "shape": [
+   455,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_025": {
+  "acquisition": "standardized",
+  "duration": 3601.52,
+  "files": [
+   "Center2_025_v01.mp4",
+   "Center2_025_v02.mp4",
+   "Center2_025_v03.mp4",
+   "Center2_025_v04.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 90038,
+  "n_steps": 720,
+  "r": 0.45,
+  "sha256": "12b05de095d983cfeaf13812b2ae0562e23699782256a8cc82acfefba0154425",
+  "shape": [
+   720,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_027": {
+  "acquisition": "standardized",
+  "duration": 996.4,
+  "files": [
+   "Center2_027_v01.mp4",
+   "Center2_027_v02.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 24910,
+  "n_steps": 199,
+  "r": 0.45,
+  "sha256": "fbe153b7fa348b05e87e9a58871f08b3c4702c8b7c5da17862892222b4d28554",
+  "shape": [
+   199,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_028": {
+  "acquisition": "standardized",
+  "duration": 3411.3999999999996,
+  "files": [
+   "Center2_028_v01.mp4",
+   "Center2_028_v02.mp4",
+   "Center2_028_v03.mp4",
+   "Center2_028_v04.mp4",
+   "Center2_028_v05.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 85285,
+  "n_steps": 682,
+  "r": 0.45,
+  "sha256": "f696f4e82cacd25378a1d92fcbdf1aa4c510c40321145bf19e28b5c252186210",
+  "shape": [
+   682,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_029": {
+  "acquisition": "standardized",
+  "duration": 1614.08,
+  "files": [
+   "Center2_029_v01.mp4",
+   "Center2_029_v02.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 40352,
+  "n_steps": 322,
+  "r": 0.45,
+  "sha256": "849dca61468644e03c71c08f51a3681d5d848faeff42c594b340443e4af557df",
+  "shape": [
+   322,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_030": {
+  "acquisition": "standardized",
+  "duration": 1691.3600000000001,
+  "files": [
+   "Center2_030_v01.mp4",
+   "Center2_030_v02.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 42284,
+  "n_steps": 338,
+  "r": 0.45,
+  "sha256": "e203cf3e66d2e5f20efd90950a4c2866fc07b9e9332c1ff0a6d4b56f2c0acccf",
+  "shape": [
+   338,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_031": {
+  "acquisition": "standardized",
+  "duration": 1909.52,
+  "files": [
+   "Center2_031_v01.mp4",
+   "Center2_031_v02.mp4",
+   "Center2_031_v03.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 47738,
+  "n_steps": 381,
+  "r": 0.45,
+  "sha256": "c0988c62a128389bdd75bdcb1407be726b4274da0e80821a53ff4df530bf1d70",
+  "shape": [
+   381,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_032": {
+  "acquisition": "standardized",
+  "duration": 1627.16,
+  "files": [
+   "Center2_032_v01.mp4",
+   "Center2_032_v02.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 40679,
+  "n_steps": 325,
+  "r": 0.45,
+  "sha256": "e24ccabed658dae4e6b6e79e10c54d444b4ad482db9d4bc3fc533a2a863f31dc",
+  "shape": [
+   325,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_035": {
+  "acquisition": "standardized",
+  "duration": 1997.2000000000003,
+  "files": [
+   "Center2_035_v01.mp4",
+   "Center2_035_v02.mp4",
+   "Center2_035_v03.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 49930,
+  "n_steps": 399,
+  "r": 0.45,
+  "sha256": "c7d8a69560c6eda978c3c41e3d1d24563a2928ca4737bab99de9edf5ae748865",
+  "shape": [
+   399,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_036": {
+  "acquisition": "standardized",
+  "duration": 3926.9599999999996,
+  "files": [
+   "Center2_036_v01.mp4",
+   "Center2_036_v02.mp4",
+   "Center2_036_v03.mp4",
+   "Center2_036_v04.mp4",
+   "Center2_036_v05.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 98174,
+  "n_steps": 785,
+  "r": 0.45,
+  "sha256": "748ea1e23a78a8e44256e664cabb6189721d79e698f0ac5ca3a6808d6ea2c51e",
+  "shape": [
+   785,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_037": {
+  "acquisition": "standardized",
+  "duration": 1773.8400000000001,
+  "files": [
+   "Center2_037_v01.mp4",
+   "Center2_037_v02.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 44346,
+  "n_steps": 354,
+  "r": 0.45,
+  "sha256": "d74304b9c2924a421ec730befaa4fec651db8564abd94e5c073a7ca720e62f29",
+  "shape": [
+   354,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_038": {
+  "acquisition": "standardized",
+  "duration": 2251.0,
+  "files": [
+   "Center2_038_v01.mp4",
+   "Center2_038_v02.mp4",
+   "Center2_038_v03.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 56275,
+  "n_steps": 450,
+  "r": 0.45,
+  "sha256": "4ccd733e3112b42abffe4dfdcb33ef665a54104352c95680658d6d1095f69c46",
+  "shape": [
+   450,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_039": {
+  "acquisition": "standardized",
+  "duration": 2599.88,
+  "files": [
+   "Center2_039_v01.mp4",
+   "Center2_039_v02.mp4",
+   "Center2_039_v03.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 64997,
+  "n_steps": 519,
+  "r": 0.45,
+  "sha256": "0403de1da4a7d526bf70ff91318f28f2c31227f759e9c5ca261f37bda6c5fd6b",
+  "shape": [
+   519,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_040": {
+  "acquisition": "standardized",
+  "duration": 904.32,
+  "files": [
+   "Center2_040.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 22608,
+  "n_steps": 180,
+  "r": 0.45,
+  "sha256": "e922dd37f3a731a25ed1b114e3df88ca02a09c5e36c7fc9a3d119bf184f6ce3b",
+  "shape": [
+   180,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_041": {
+  "acquisition": "standardized",
+  "duration": 893.08,
+  "files": [
+   "Center2_041.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 22327,
+  "n_steps": 178,
+  "r": 0.45,
+  "sha256": "0636fd8ac0a95d782c8388117043222d889eac6f96efd6ef03265b841daf024d",
+  "shape": [
+   178,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_042": {
+  "acquisition": "standardized",
+  "duration": 900.4,
+  "files": [
+   "Center2_042.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 22510,
+  "n_steps": 180,
+  "r": 0.45,
+  "sha256": "0164474cbd3d3a678d8a5fa3968aa34d34d262116180a363e4ec583a03c44dbd",
+  "shape": [
+   180,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_043": {
+  "acquisition": "standardized",
+  "duration": 913.36,
+  "files": [
+   "Center2_043.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 22834,
+  "n_steps": 182,
+  "r": 0.45,
+  "sha256": "0d0485ba2f17b851036edee9e44c60be20b2b847b7ab8fcc60d45ec05e42c5f4",
+  "shape": [
+   182,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_044": {
+  "acquisition": "standardized",
+  "duration": 900.4,
+  "files": [
+   "Center2_044.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 22510,
+  "n_steps": 180,
+  "r": 0.45,
+  "sha256": "0a3438f5074e8eb6a36b7708511d780e43b4b94b38464419c3838d48bab79dd2",
+  "shape": [
+   180,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_045": {
+  "acquisition": "standardized",
+  "duration": 901.56,
+  "files": [
+   "Center2_045.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 22539,
+  "n_steps": 180,
+  "r": 0.45,
+  "sha256": "276837786f0c145ec40c83c6cef635c15ffbb79060d5c68ab36c6901e400bd46",
+  "shape": [
+   180,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_046": {
+  "acquisition": "standardized",
+  "duration": 901.6,
+  "files": [
+   "Center2_046.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 22540,
+  "n_steps": 180,
+  "r": 0.45,
+  "sha256": "6351ff863cd7355e752d8f698c293083fa94b42c95977252cca9376e3a083727",
+  "shape": [
+   180,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_047": {
+  "acquisition": "standardized",
+  "duration": 901.2,
+  "files": [
+   "Center2_047.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 22530,
+  "n_steps": 180,
+  "r": 0.45,
+  "sha256": "55daf475ca45d1adab8be49d006eb28a3592ac25fbd8c0b19a26e4315a720c66",
+  "shape": [
+   180,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_048": {
+  "acquisition": "standardized",
+  "duration": 902.76,
+  "files": [
+   "Center2_048.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 22569,
+  "n_steps": 180,
+  "r": 0.45,
+  "sha256": "245c59717a222d3267c7faeb8e4c5daac49a6dc03e07dbde0a5e036fec0799c3",
+  "shape": [
+   180,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_049": {
+  "acquisition": "standardized",
+  "duration": 900.4,
+  "files": [
+   "Center2_049.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 22510,
+  "n_steps": 180,
+  "r": 0.45,
+  "sha256": "7fcff860112926557d036423343dfc2c74eddeedecad79889cddff5dd6f52790",
+  "shape": [
+   180,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_050": {
+  "acquisition": "standardized",
+  "duration": 901.2,
+  "files": [
+   "Center2_050.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 22530,
+  "n_steps": 180,
+  "r": 0.45,
+  "sha256": "ccacdec7c423d3b4bb59a75beeaff5aa57a4a4f9a5a56d2cf7c3852faf8c3717",
+  "shape": [
+   180,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_051": {
+  "acquisition": "standardized",
+  "duration": 655.72,
+  "files": [
+   "Center2_051.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 16393,
+  "n_steps": 131,
+  "r": 0.45,
+  "sha256": "ad2464ff21324385f45af91e0acd0ba6bc4c1957e1c74603428cbd09f6bfcba5",
+  "shape": [
+   131,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_052": {
+  "acquisition": "standardized",
+  "duration": 902.12,
+  "files": [
+   "Center2_052.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 22553,
+  "n_steps": 180,
+  "r": 0.45,
+  "sha256": "e323c1237b6259673c3b123bcf6ebe473d18c329067bf9c786daafa233c0ba5d",
+  "shape": [
+   180,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_053": {
+  "acquisition": "standardized",
+  "duration": 900.4,
+  "files": [
+   "Center2_053.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 22510,
+  "n_steps": 180,
+  "r": 0.45,
+  "sha256": "2ece0278b05d7c282e676f6b11868d216282bb3e9aee1e9bd90e88628690d541",
+  "shape": [
+   180,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C2_054": {
+  "acquisition": "standardized",
+  "duration": 903.56,
+  "files": [
+   "Center2_054.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 22589,
+  "n_steps": 180,
+  "r": 0.45,
+  "sha256": "366f8a98bf1670b12f2b0b8802ae536f88107cff34a5285b83550d6a61a13777",
+  "shape": [
+   180,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_001": {
+  "acquisition": "standardized",
+  "duration": 2876.04,
+  "files": [
+   "Center3_001.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 71901,
+  "n_steps": 575,
+  "r": 0.45,
+  "sha256": "5ef47f2535afac336b60b8745cca09ffa6f96dab9ab79728fa8f19d6e61fab5f",
+  "shape": [
+   575,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_002": {
+  "acquisition": "standardized",
+  "duration": 1360.08,
+  "files": [
+   "Center3_002.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 34002,
+  "n_steps": 272,
+  "r": 0.45,
+  "sha256": "2e858abc1f33de25e0cf449e127f4a39e0d9cb7ae5c9cd6585dde2dcb6ea66f1",
+  "shape": [
+   272,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_003": {
+  "acquisition": "standardized",
+  "duration": 3415.92,
+  "files": [
+   "Center3_003.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 85398,
+  "n_steps": 683,
+  "r": 0.45,
+  "sha256": "513d361109d8c4babdfdfc911e82f6a2d08d8b188a3bdb647c3d0110c179aabc",
+  "shape": [
+   683,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_005": {
+  "acquisition": "standardized",
+  "duration": 1381.04,
+  "files": [
+   "Center3_005.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 34526,
+  "n_steps": 276,
+  "r": 0.45,
+  "sha256": "8d8d80ed9d37bfd5da9e1ce7e0eeb51e43d94adac55629e4cbb898b5895c2dda",
+  "shape": [
+   276,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_006": {
+  "acquisition": "standardized",
+  "duration": 2200.36,
+  "files": [
+   "Center3_006.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 55009,
+  "n_steps": 440,
+  "r": 0.45,
+  "sha256": "26901e4e422c29c823a429b00bb6950836128eb87bb0b8c980776e03a1d67aa1",
+  "shape": [
+   440,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_007": {
+  "acquisition": "standardized",
+  "duration": 1216.68,
+  "files": [
+   "Center3_007.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 30417,
+  "n_steps": 243,
+  "r": 0.45,
+  "sha256": "29768241b8b03c9ec81ca45b4d934b548006b534b06eccb4eec564a707b21d10",
+  "shape": [
+   243,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_008": {
+  "acquisition": "standardized",
+  "duration": 1028.08,
+  "files": [
+   "Center3_008.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 25702,
+  "n_steps": 205,
+  "r": 0.45,
+  "sha256": "93ff6e45c58a243f4ea023cb554aea77dc7cdc7f3518c6478588a02f50bb2101",
+  "shape": [
+   205,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_009": {
+  "acquisition": "standardized",
+  "duration": 975.6,
+  "files": [
+   "Center3_009.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 24390,
+  "n_steps": 195,
+  "r": 0.45,
+  "sha256": "cf16e3dbbb5dc633ffcfd35e37071ec81ba376a16f3046d442f3c97ac3a6a022",
+  "shape": [
+   195,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_010": {
+  "acquisition": "standardized",
+  "duration": 2897.88,
+  "files": [
+   "Center3_010.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 72447,
+  "n_steps": 579,
+  "r": 0.45,
+  "sha256": "0f1dd6d8e2b2790c39da46e0f22d966d0eac9d516729f26b81a965cf7a6c18df",
+  "shape": [
+   579,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_011": {
+  "acquisition": "standardized",
+  "duration": 1690.76,
+  "files": [
+   "Center3_011.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 42269,
+  "n_steps": 338,
+  "r": 0.45,
+  "sha256": "ce5e26d87f7fc28ab2c69ba2ab8302f2948bca95ae28e7989fc3a86cb8d7c1a3",
+  "shape": [
+   338,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_012": {
+  "acquisition": "standardized",
+  "duration": 1698.76,
+  "files": [
+   "Center3_012.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 42469,
+  "n_steps": 339,
+  "r": 0.45,
+  "sha256": "3eec43d6333c7f57587da14575912068cf0e0878ab49fd97a9db8021b736183b",
+  "shape": [
+   339,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_013": {
+  "acquisition": "standardized",
+  "duration": 921.04,
+  "files": [
+   "Center3_013.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 23026,
+  "n_steps": 184,
+  "r": 0.45,
+  "sha256": "e36b77f2185b0a7d547d2986d7cfe35912a1dc4f42d231ce31acfd8e332a0efe",
+  "shape": [
+   184,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_014": {
+  "acquisition": "standardized",
+  "duration": 2270.08,
+  "files": [
+   "Center3_014.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 56752,
+  "n_steps": 454,
+  "r": 0.45,
+  "sha256": "7511ef34aa085039628614dc6961ecbb95cbad9a87730adc25ae88726dcc73ed",
+  "shape": [
+   454,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_015": {
+  "acquisition": "standardized",
+  "duration": 3069.88,
+  "files": [
+   "Center3_015.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 76747,
+  "n_steps": 613,
+  "r": 0.45,
+  "sha256": "a0c041292bdef43b637f0b209ac2a48e70ef2847145b11576a85d2ae25bbd751",
+  "shape": [
+   613,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_016": {
+  "acquisition": "standardized",
+  "duration": 2929.16,
+  "files": [
+   "Center3_016.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 73229,
+  "n_steps": 585,
+  "r": 0.45,
+  "sha256": "24f945d589c595cb8878c0dbdf615293a47fc489287f204c00519f833174d048",
+  "shape": [
+   585,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_017": {
+  "acquisition": "standardized",
+  "duration": 1248.24,
+  "files": [
+   "Center3_017.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 31206,
+  "n_steps": 249,
+  "r": 0.45,
+  "sha256": "adc5b65863ed5d114f6b3272e1b761ac378886e1175765bbfd346ceb423ad402",
+  "shape": [
+   249,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_018": {
+  "acquisition": "standardized",
+  "duration": 903.4,
+  "files": [
+   "Center3_018.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 22585,
+  "n_steps": 180,
+  "r": 0.45,
+  "sha256": "c7e1f7bc2f126ea960dd12c32df3ad5ebbc0ceaa60431802d8d4f6466b3382bf",
+  "shape": [
+   180,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_021": {
+  "acquisition": "standardized",
+  "duration": 2520.92,
+  "files": [
+   "Center3_021.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 63023,
+  "n_steps": 504,
+  "r": 0.45,
+  "sha256": "f8e3c853cf946ce87b7285e9fc279c29c224cb93ef8c9ff7c36d6d5825299106",
+  "shape": [
+   504,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_022": {
+  "acquisition": "standardized",
+  "duration": 753.68,
+  "files": [
+   "Center3_022.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 18842,
+  "n_steps": 150,
+  "r": 0.45,
+  "sha256": "d23d2218f1a7037b5c92a094ff193b065c771dd32c8eb1aa5dbbef1ae95c7dde",
+  "shape": [
+   150,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_023": {
+  "acquisition": "standardized",
+  "duration": 1626.52,
+  "files": [
+   "Center3_023.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 40663,
+  "n_steps": 325,
+  "r": 0.45,
+  "sha256": "0af7c6d45b76460c6a122f4b225a4d33401d069ddd8634c4b1942763e274b94e",
+  "shape": [
+   325,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_024": {
+  "acquisition": "standardized",
+  "duration": 1903.92,
+  "files": [
+   "Center3_024.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 47598,
+  "n_steps": 380,
+  "r": 0.45,
+  "sha256": "00326c8dbcd4ce7903ce588cb2245cce29dacfff64a6a29fb05a329103a9587f",
+  "shape": [
+   380,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_025": {
+  "acquisition": "standardized",
+  "duration": 2211.48,
+  "files": [
+   "Center3_025.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 55287,
+  "n_steps": 442,
+  "r": 0.45,
+  "sha256": "bc0a7829ee782737f1a0188bb84ac0fef2a47fe1309b2b26113dcc294a632936",
+  "shape": [
+   442,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_026": {
+  "acquisition": "standardized",
+  "duration": 2106.32,
+  "files": [
+   "Center3_026.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 52658,
+  "n_steps": 421,
+  "r": 0.45,
+  "sha256": "ad9897e3f965fb6f4118a1750cbf69223f299a645bd6328ca5cc27c0771cb21e",
+  "shape": [
+   421,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_027": {
+  "acquisition": "standardized",
+  "duration": 2001.04,
+  "files": [
+   "Center3_027.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 50026,
+  "n_steps": 400,
+  "r": 0.45,
+  "sha256": "4370b0bedf7f30c0416263a16d9075a9a916d2c29638729b579971cd4164d68f",
+  "shape": [
+   400,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_028": {
+  "acquisition": "standardized",
+  "duration": 1788.16,
+  "files": [
+   "Center3_028.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 44704,
+  "n_steps": 357,
+  "r": 0.45,
+  "sha256": "3ea20caab20d95b3ba5e4cbbb77605893672d0109801f9941ef8501a5e7ec5e6",
+  "shape": [
+   357,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_029": {
+  "acquisition": "standardized",
+  "duration": 3708.04,
+  "files": [
+   "Center3_029.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 92701,
+  "n_steps": 741,
+  "r": 0.45,
+  "sha256": "80765e14a36e6c541f4a22ff597930180f486213818c186243a6dd0c728e30d5",
+  "shape": [
+   741,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_030": {
+  "acquisition": "standardized",
+  "duration": 1828.2,
+  "files": [
+   "Center3_030.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 45705,
+  "n_steps": 365,
+  "r": 0.45,
+  "sha256": "d02bb4d3359cfea3404be12dbebb90b0a4ee76447b4cb3e79475f60b5a47d67f",
+  "shape": [
+   365,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_031": {
+  "acquisition": "standardized",
+  "duration": 1570.48,
+  "files": [
+   "Center3_031.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 39262,
+  "n_steps": 314,
+  "r": 0.45,
+  "sha256": "42e69546656414d81eb247f10427c1a0ff5e5dfd764826b735883fa969a04fca",
+  "shape": [
+   314,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_032": {
+  "acquisition": "standardized",
+  "duration": 1603.6,
+  "files": [
+   "Center3_032.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 40090,
+  "n_steps": 320,
+  "r": 0.45,
+  "sha256": "6f311bee5b8c08f3f655cc05f2cfb5fce63f67b486bdec25a4e8bd9799941741",
+  "shape": [
+   320,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_033": {
+  "acquisition": "standardized",
+  "duration": 1583.4,
+  "files": [
+   "Center3_033.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 39585,
+  "n_steps": 316,
+  "r": 0.45,
+  "sha256": "ac1de20990f03cda24e4896b4eeb1ae6a591ac488c0e98ed79f5d5147056b14b",
+  "shape": [
+   316,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_034": {
+  "acquisition": "standardized",
+  "duration": 2841.48,
+  "files": [
+   "Center3_034.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 71037,
+  "n_steps": 568,
+  "r": 0.45,
+  "sha256": "4ac612de84cc44638cc90e05ecd0e64dddd389cc233ae961ffac38430e3734e6",
+  "shape": [
+   568,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_035": {
+  "acquisition": "standardized",
+  "duration": 2214.6,
+  "files": [
+   "Center3_035.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 55365,
+  "n_steps": 442,
+  "r": 0.45,
+  "sha256": "b92c0c9acdb192bf448c9871c2c69be1adeca7bda47305d2777afb0594d9436b",
+  "shape": [
+   442,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_036": {
+  "acquisition": "standardized",
+  "duration": 2879.8,
+  "files": [
+   "Center3_036.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 71995,
+  "n_steps": 575,
+  "r": 0.45,
+  "sha256": "297ead222a7b371ed044d7219d32e4d36be2c29d143e6ffaf47ca1a7ce19ca1e",
+  "shape": [
+   575,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_037": {
+  "acquisition": "standardized",
+  "duration": 2707.8,
+  "files": [
+   "Center3_037.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 67695,
+  "n_steps": 541,
+  "r": 0.45,
+  "sha256": "fe5582f8206aaa602ce4cb4d91d89e10cc123f9379c0e8a0043548c2b92c936c",
+  "shape": [
+   541,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_038": {
+  "acquisition": "standardized",
+  "duration": 2975.68,
+  "files": [
+   "Center3_038.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 74392,
+  "n_steps": 595,
+  "r": 0.45,
+  "sha256": "6aeaeb168c20d63ddcd20662e413f80ad05467be1cb650fdf5e02477e5ec5c59",
+  "shape": [
+   595,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_039": {
+  "acquisition": "standardized",
+  "duration": 1175.04,
+  "files": [
+   "Center3_039.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 29376,
+  "n_steps": 235,
+  "r": 0.45,
+  "sha256": "713f848776de4fddf4bcdf9b376f0ebffa885eb1a7bc985ded48a713b3835ff5",
+  "shape": [
+   235,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_040": {
+  "acquisition": "standardized",
+  "duration": 2084.52,
+  "files": [
+   "Center3_040.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 52113,
+  "n_steps": 416,
+  "r": 0.45,
+  "sha256": "9bd813095b8fb21d0a14943f9d11f98f5a82025be08c750e14741449b03af003",
+  "shape": [
+   416,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_041": {
+  "acquisition": "standardized",
+  "duration": 1801.08,
+  "files": [
+   "Center3_041.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 45027,
+  "n_steps": 360,
+  "r": 0.45,
+  "sha256": "1004a6cce9938b068210c5d73accb97d7b88c0a806690e5eb6525b061326497b",
+  "shape": [
+   360,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_042": {
+  "acquisition": "standardized",
+  "duration": 2578.4,
+  "files": [
+   "Center3_042.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 64460,
+  "n_steps": 515,
+  "r": 0.45,
+  "sha256": "3143f3b295537925a25a4bf7c5043fa41d71504526a2da57e3f9df40f35ae6e7",
+  "shape": [
+   515,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_043": {
+  "acquisition": "standardized",
+  "duration": 1485.96,
+  "files": [
+   "Center3_043.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 37149,
+  "n_steps": 297,
+  "r": 0.45,
+  "sha256": "4dabdfdc38be08ed5dd6f0a4ce0a4216aac8b5ae390837c2ecb8569189f6413d",
+  "shape": [
+   297,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C3_044": {
+  "acquisition": "standardized",
+  "duration": 3403.12,
+  "files": [
+   "Center3_044.mp4"
+  ],
+  "frames_per_step_min": 125,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 85078,
+  "n_steps": 680,
+  "r": 0.45,
+  "sha256": "921fe998384278dae0f2fe1e35a67dac1130a79edb3942913a88977dafff14b1",
+  "shape": [
+   680,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_001": {
+  "acquisition": "standardized",
+  "duration": 1619.4,
+  "files": [
+   "Center4_001.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 80970,
+  "n_steps": 323,
+  "r": 0.45,
+  "sha256": "23a1345b7be98a501cb7f5d37f8036b04b2759b0506603888296e6cd772ffe62",
+  "shape": [
+   323,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_002": {
+  "acquisition": "standardized",
+  "duration": 1614.62,
+  "files": [
+   "Center4_002.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 80731,
+  "n_steps": 322,
+  "r": 0.45,
+  "sha256": "408ccfb59990f23bb1a4f1bfe411853bb37a7f51099820d7d8f86affd12fe882",
+  "shape": [
+   322,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_003": {
+  "acquisition": "standardized",
+  "duration": 4048.68,
+  "files": [
+   "Center4_003.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 202434,
+  "n_steps": 809,
+  "r": 0.45,
+  "sha256": "d656bc3bb6e6a2efaa686524d9557adf0c542ea6a6f31400302e9ccf493bf920",
+  "shape": [
+   809,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_004": {
+  "acquisition": "standardized",
+  "duration": 1893.9,
+  "files": [
+   "Center4_004.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 94695,
+  "n_steps": 378,
+  "r": 0.45,
+  "sha256": "a431ca47b16757f69a1a43b1e8a59ef97cc97a02ddc69d126d9cf4d0cfd85a22",
+  "shape": [
+   378,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_005": {
+  "acquisition": "standardized",
+  "duration": 1660.64,
+  "files": [
+   "Center4_005.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 83032,
+  "n_steps": 332,
+  "r": 0.45,
+  "sha256": "aaa4afcd576ab52a204892dc945905f4bca29e4d022bd87ff3832f4afc6884f5",
+  "shape": [
+   332,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_006": {
+  "acquisition": "standardized",
+  "duration": 2165.24,
+  "files": [
+   "Center4_006.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 108262,
+  "n_steps": 433,
+  "r": 0.45,
+  "sha256": "b5425e1d80fc5b45abbafaa52cb1318390aed7947cb480f0efd94cb5fe936912",
+  "shape": [
+   433,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_007": {
+  "acquisition": "standardized",
+  "duration": 3111.3,
+  "files": [
+   "Center4_007.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 155565,
+  "n_steps": 622,
+  "r": 0.45,
+  "sha256": "353a1d5b5e38afd203e0737c9552b6bf67f1fe10691c83cd48370acd456c969d",
+  "shape": [
+   622,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_008": {
+  "acquisition": "standardized",
+  "duration": 1488.18,
+  "files": [
+   "Center4_008.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 74409,
+  "n_steps": 297,
+  "r": 0.45,
+  "sha256": "cfb89eef69b504ef9c529acf40a84b730f2f6bcd2f7a23586239e4782d04eb46",
+  "shape": [
+   297,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_009": {
+  "acquisition": "standardized",
+  "duration": 2064.78,
+  "files": [
+   "Center4_009.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 103239,
+  "n_steps": 412,
+  "r": 0.45,
+  "sha256": "02b09b122b0e30b2e230eb850d625939cf380d63af0cf4ffbb166869ee1f09d0",
+  "shape": [
+   412,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_010": {
+  "acquisition": "standardized",
+  "duration": 2735.56,
+  "files": [
+   "Center4_010.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 136778,
+  "n_steps": 547,
+  "r": 0.45,
+  "sha256": "0b20f821db4af699d77314c601e16b6c68f76cd949b9227a0b931774eb015be1",
+  "shape": [
+   547,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_011": {
+  "acquisition": "standardized",
+  "duration": 2792.58,
+  "files": [
+   "Center4_011.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 139629,
+  "n_steps": 558,
+  "r": 0.45,
+  "sha256": "1b5f2f767b9b989125f58c3f01aca0a901b4988a7c4f307a5f79c7db8065858b",
+  "shape": [
+   558,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_012": {
+  "acquisition": "standardized",
+  "duration": 1091.4,
+  "files": [
+   "Center4_012.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 54570,
+  "n_steps": 218,
+  "r": 0.45,
+  "sha256": "653714a1c5b2c5e84963e846c6723f297b396df8d87a2fb9a8919112f1fcb53c",
+  "shape": [
+   218,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_013": {
+  "acquisition": "standardized",
+  "duration": 2827.16,
+  "files": [
+   "Center4_013.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 141358,
+  "n_steps": 565,
+  "r": 0.45,
+  "sha256": "a261af31ccc027d0ca8898ea10bf764487075f076271594f95273c08a7334458",
+  "shape": [
+   565,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_014": {
+  "acquisition": "standardized",
+  "duration": 4056.64,
+  "files": [
+   "Center4_014.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 202832,
+  "n_steps": 811,
+  "r": 0.45,
+  "sha256": "c13af0accf76402cd212b72cd428537675fb3080d56bf1e22d2a6225383a3aa7",
+  "shape": [
+   811,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_015": {
+  "acquisition": "standardized",
+  "duration": 874.8,
+  "files": [
+   "Center4_015.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 43740,
+  "n_steps": 174,
+  "r": 0.45,
+  "sha256": "9902e4c3937b0b3623541095134e9d02d0afbc0839bca6f9c26a6087c0b8e33e",
+  "shape": [
+   174,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_016": {
+  "acquisition": "standardized",
+  "duration": 2024.68,
+  "files": [
+   "Center4_016.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 101234,
+  "n_steps": 404,
+  "r": 0.45,
+  "sha256": "5ae99776d407a33749c86e2f1c4213452d6e40e0eb746b3cecdeb1f7b1b2cd5c",
+  "shape": [
+   404,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_017": {
+  "acquisition": "standardized",
+  "duration": 3236.64,
+  "files": [
+   "Center4_017.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 161832,
+  "n_steps": 647,
+  "r": 0.45,
+  "sha256": "23bba808ed44b5430a4f9c6a2439a4112677a6f3fbe7844fa01b416d70cf99bf",
+  "shape": [
+   647,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_018": {
+  "acquisition": "standardized",
+  "duration": 4042.8,
+  "files": [
+   "Center4_018.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 202140,
+  "n_steps": 808,
+  "r": 0.45,
+  "sha256": "9e25736b85e78c2f48b153f02a2b256df2ff451b1691cd87cfeb7e240aba84bf",
+  "shape": [
+   808,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_019": {
+  "acquisition": "standardized",
+  "duration": 1363.8,
+  "files": [
+   "Center4_019.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 68190,
+  "n_steps": 272,
+  "r": 0.45,
+  "sha256": "8729c22ce4a3bdce2a28c350ef2e1402ba8bcb21c17e237aac6aa5a19cbc6787",
+  "shape": [
+   272,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_020": {
+  "acquisition": "standardized",
+  "duration": 547.2,
+  "files": [
+   "Center4_020.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 27360,
+  "n_steps": 109,
+  "r": 0.45,
+  "sha256": "b7719d874a79274f5f149b93ec4120eb0fad5a7578ce714b68a790fa87e39849",
+  "shape": [
+   109,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_021": {
+  "acquisition": "standardized",
+  "duration": 1513.32,
+  "files": [
+   "Center4_021.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 75666,
+  "n_steps": 302,
+  "r": 0.45,
+  "sha256": "280e1dfc9ebaa4922e52a4e5e44b99d30e34ff39fda3c1a995b8f78d7c4ce4e5",
+  "shape": [
+   302,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_022": {
+  "acquisition": "standardized",
+  "duration": 519.9,
+  "files": [
+   "Center4_022.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 25995,
+  "n_steps": 103,
+  "r": 0.45,
+  "sha256": "9c486a1a3bdd4632ff26df4a7f40ee2c19064fb5369d0b62f1914b602c0b805a",
+  "shape": [
+   103,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_023": {
+  "acquisition": "standardized",
+  "duration": 4072.92,
+  "files": [
+   "Center4_023.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 203646,
+  "n_steps": 814,
+  "r": 0.45,
+  "sha256": "7af8d81d0ac3a4bc7d2cc5b115c80feba7c5423dc4ec1ab30e40e963aefa4d37",
+  "shape": [
+   814,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_024": {
+  "acquisition": "standardized",
+  "duration": 2639.44,
+  "files": [
+   "Center4_024.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 131972,
+  "n_steps": 527,
+  "r": 0.45,
+  "sha256": "798cc0f99fa19458db90785f8d25d3bd61ec669d03c313ef56a58072cec275e2",
+  "shape": [
+   527,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_025": {
+  "acquisition": "standardized",
+  "duration": 1624.52,
+  "files": [
+   "Center4_025.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 81226,
+  "n_steps": 324,
+  "r": 0.45,
+  "sha256": "61085d5b58f532fdde27edbafcc4c295104fdfe827d0b3d85219279f356aaef5",
+  "shape": [
+   324,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_026": {
+  "acquisition": "standardized",
+  "duration": 1193.1,
+  "files": [
+   "Center4_026.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 59655,
+  "n_steps": 238,
+  "r": 0.45,
+  "sha256": "fcea6aa3ec36a4a012ddc7df542253abedec1dedaa85ae471bf0923530fb7c6d",
+  "shape": [
+   238,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_027": {
+  "acquisition": "standardized",
+  "duration": 4059.86,
+  "files": [
+   "Center4_027.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 202993,
+  "n_steps": 811,
+  "r": 0.45,
+  "sha256": "99a670ee3e43a57c66972f580bb32aa39537cf019e1de5d528d81e146ea7fb6c",
+  "shape": [
+   811,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_028": {
+  "acquisition": "standardized",
+  "duration": 762.6,
+  "files": [
+   "Center4_028.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 38130,
+  "n_steps": 152,
+  "r": 0.45,
+  "sha256": "cd53716aa2ae5afbd688a2669e851c262641802405547bac755bc81ef3855e4a",
+  "shape": [
+   152,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_029": {
+  "acquisition": "standardized",
+  "duration": 1408.12,
+  "files": [
+   "Center4_029.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 70406,
+  "n_steps": 281,
+  "r": 0.45,
+  "sha256": "e336b89b081929617c78a6ace23d2d320d495a592f42c3d7f98b0ee47fe9f351",
+  "shape": [
+   281,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_030": {
+  "acquisition": "standardized",
+  "duration": 1363.8,
+  "files": [
+   "Center4_030.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 68190,
+  "n_steps": 272,
+  "r": 0.45,
+  "sha256": "e163c3fdf1fff1b8516b2bc41766edb1f5f3f49673e6a7371e3b36a10be79cf3",
+  "shape": [
+   272,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_031": {
+  "acquisition": "standardized",
+  "duration": 1849.94,
+  "files": [
+   "Center4_031.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 92497,
+  "n_steps": 369,
+  "r": 0.45,
+  "sha256": "6b2b7e9f5ec03eb48837cee6d472edb70b8c2037e66d3baeeeee91570ef8dba5",
+  "shape": [
+   369,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_032": {
+  "acquisition": "standardized",
+  "duration": 796.2,
+  "files": [
+   "Center4_032.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 39810,
+  "n_steps": 159,
+  "r": 0.45,
+  "sha256": "463a26b3a5c4087ec71befef1451c2d63a9ada112658c9bae48b24f9c3888f81",
+  "shape": [
+   159,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_033": {
+  "acquisition": "standardized",
+  "duration": 1516.2,
+  "files": [
+   "Center4_033.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 75810,
+  "n_steps": 303,
+  "r": 0.45,
+  "sha256": "76dd27c5a47879dc23fcf23e582091973b73d95ca8c14ebd4209916eb9e651fa",
+  "shape": [
+   303,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_034": {
+  "acquisition": "standardized",
+  "duration": 1821.84,
+  "files": [
+   "Center4_034.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91092,
+  "n_steps": 364,
+  "r": 0.45,
+  "sha256": "8f45b76ca4250a3c9fb72e58ace0fef7bed8c3a9a642a3e4a3337fce58cc5fdb",
+  "shape": [
+   364,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_035": {
+  "acquisition": "standardized",
+  "duration": 3051.84,
+  "files": [
+   "Center4_035.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 152592,
+  "n_steps": 610,
+  "r": 0.45,
+  "sha256": "f312a681653e07f10b5091dca231c857f72afa899aa91d889fbdb7430bb57c1e",
+  "shape": [
+   610,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_036": {
+  "acquisition": "standardized",
+  "duration": 336.0,
+  "files": [
+   "Center4_036.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 16800,
+  "n_steps": 67,
+  "r": 0.45,
+  "sha256": "6a4e73528d992bbc5a7c3e595a5975cb062edb784c5066215a37df89df6a62a6",
+  "shape": [
+   67,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_037": {
+  "acquisition": "standardized",
+  "duration": 2920.96,
+  "files": [
+   "Center4_037.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 146048,
+  "n_steps": 584,
+  "r": 0.45,
+  "sha256": "db1a074db13bda6cf288fe7f8a911974f37fbebc883fe5cc0b552b20c6074b7f",
+  "shape": [
+   584,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_038": {
+  "acquisition": "standardized",
+  "duration": 2640.0,
+  "files": [
+   "Center4_038.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 132000,
+  "n_steps": 528,
+  "r": 0.45,
+  "sha256": "742fd64f21e534ca11e5854fb206033c6548d4683a474d95494c1a352b2232bf",
+  "shape": [
+   528,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_039": {
+  "acquisition": "standardized",
+  "duration": 961.48,
+  "files": [
+   "Center4_039.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 48074,
+  "n_steps": 192,
+  "r": 0.45,
+  "sha256": "58843f499cdb5803e98c631a11da89bd5633e582303a4092e87d9ae399de2967",
+  "shape": [
+   192,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_040": {
+  "acquisition": "standardized",
+  "duration": 998.9,
+  "files": [
+   "Center4_040.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 49945,
+  "n_steps": 199,
+  "r": 0.45,
+  "sha256": "fb229c3f2089ba533d7dc8cdacef80cbd05d702bde2dfb624d2d3d58fed59f86",
+  "shape": [
+   199,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_041": {
+  "acquisition": "standardized",
+  "duration": 1904.0,
+  "files": [
+   "Center4_041.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 95200,
+  "n_steps": 380,
+  "r": 0.45,
+  "sha256": "9e32e258cc8ec3f7a7cb6e7e578360a20c29dc9fce9a530932199722e41e85fe",
+  "shape": [
+   380,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_042": {
+  "acquisition": "standardized",
+  "duration": 1729.16,
+  "files": [
+   "Center4_042.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 86458,
+  "n_steps": 345,
+  "r": 0.45,
+  "sha256": "0fa6ce93cbcfd1f5677a1f4d903b53859995930ad4d4756e5a31a0a19b89c6da",
+  "shape": [
+   345,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_043": {
+  "acquisition": "standardized",
+  "duration": 3227.96,
+  "files": [
+   "Center4_043.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 161398,
+  "n_steps": 645,
+  "r": 0.45,
+  "sha256": "3d5a1c6007fbae1e6b59d5f2c0557334c076aff36e6930384fc7d9cdc713d116",
+  "shape": [
+   645,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_044": {
+  "acquisition": "standardized",
+  "duration": 1635.92,
+  "files": [
+   "Center4_044.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 81796,
+  "n_steps": 327,
+  "r": 0.45,
+  "sha256": "a56b7634889204b387d4ec8c029d822d79b82d05bdb306f7731e9863deb94da0",
+  "shape": [
+   327,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_045": {
+  "acquisition": "standardized",
+  "duration": 2634.82,
+  "files": [
+   "Center4_045.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 131741,
+  "n_steps": 526,
+  "r": 0.45,
+  "sha256": "1cb8ace9817d9aecc963aa46b96481fee9f6c19b1d21fbb285c5d844a16529f4",
+  "shape": [
+   526,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_046": {
+  "acquisition": "standardized",
+  "duration": 981.82,
+  "files": [
+   "Center4_046.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 49091,
+  "n_steps": 196,
+  "r": 0.45,
+  "sha256": "858b2d23bd1cd99d751b5e0f3d816664bbc81788d43ff20f2de87703d9fd5182",
+  "shape": [
+   196,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_047": {
+  "acquisition": "standardized",
+  "duration": 1874.7,
+  "files": [
+   "Center4_047.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 93735,
+  "n_steps": 374,
+  "r": 0.45,
+  "sha256": "3874f1674af6fe8de2637d0f4a91cd7103d82b59d55664a9e316cf3f9193742d",
+  "shape": [
+   374,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_048": {
+  "acquisition": "standardized",
+  "duration": 3882.76,
+  "files": [
+   "Center4_048.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 194138,
+  "n_steps": 776,
+  "r": 0.45,
+  "sha256": "112759a8ad37b0ac28188c9d1e1aa9383e70f013b66acf01bae187e990bb5917",
+  "shape": [
+   776,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_049": {
+  "acquisition": "standardized",
+  "duration": 457.2,
+  "files": [
+   "Center4_049.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 22860,
+  "n_steps": 91,
+  "r": 0.45,
+  "sha256": "dfe11cac2502f8a1b0857ba65aee29ecb754102f41fcd42d9092712b632f0ffd",
+  "shape": [
+   91,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_050": {
+  "acquisition": "standardized",
+  "duration": 4068.6,
+  "files": [
+   "Center4_050.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 203430,
+  "n_steps": 813,
+  "r": 0.45,
+  "sha256": "63de137c67e62df18f111e82c93d729d4fc795a940924cd84d767a3ce8feecd3",
+  "shape": [
+   813,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_051": {
+  "acquisition": "standardized",
+  "duration": 1214.14,
+  "files": [
+   "Center4_051.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 60707,
+  "n_steps": 242,
+  "r": 0.45,
+  "sha256": "252562fe5aebaa33ffccfd85e983e71ed48fd0128f39189372459eb92c88ec3f",
+  "shape": [
+   242,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_052": {
+  "acquisition": "standardized",
+  "duration": 794.9,
+  "files": [
+   "Center4_052.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 39745,
+  "n_steps": 158,
+  "r": 0.45,
+  "sha256": "baaec775d2c8497f4200c5fb61697f22ba264e2c2290ee36d23169f4ef89e817",
+  "shape": [
+   158,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_053": {
+  "acquisition": "standardized",
+  "duration": 1544.48,
+  "files": [
+   "Center4_053.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 77224,
+  "n_steps": 308,
+  "r": 0.45,
+  "sha256": "6bedaeded91220584a6887e563e324eda4e4670823275c86d0e657c91f199b4e",
+  "shape": [
+   308,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_054": {
+  "acquisition": "standardized",
+  "duration": 981.3,
+  "files": [
+   "Center4_054.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 49065,
+  "n_steps": 196,
+  "r": 0.45,
+  "sha256": "b7cf1482f155f6a02841fac413ebafc7fbd42c6c8d454bf3a5af0d4bb7d3c925",
+  "shape": [
+   196,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_055": {
+  "acquisition": "standardized",
+  "duration": 2723.9,
+  "files": [
+   "Center4_055.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 136195,
+  "n_steps": 544,
+  "r": 0.45,
+  "sha256": "48306ccb64058f9e5f862d951fbc3f9d1e1a63444c8dd3c670e023d5b6ed0454",
+  "shape": [
+   544,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_056": {
+  "acquisition": "standardized",
+  "duration": 1523.4,
+  "files": [
+   "Center4_056.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 76170,
+  "n_steps": 304,
+  "r": 0.45,
+  "sha256": "35b3719c6561230b53393cee8b2245eae033ce4b675177b2e246d9badb30c912",
+  "shape": [
+   304,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_057": {
+  "acquisition": "standardized",
+  "duration": 3336.24,
+  "files": [
+   "Center4_057.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 166812,
+  "n_steps": 667,
+  "r": 0.45,
+  "sha256": "27d0b14e1a7e2fc109c6fa29a6386f97d6bc9a621cfc399dfdf585141f907deb",
+  "shape": [
+   667,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_058": {
+  "acquisition": "standardized",
+  "duration": 2785.54,
+  "files": [
+   "Center4_058.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 139277,
+  "n_steps": 557,
+  "r": 0.45,
+  "sha256": "5ec002aa96831b8b6a490be2c93edab18d9b59a124e5fd1ff41891236a03825f",
+  "shape": [
+   557,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_059": {
+  "acquisition": "standardized",
+  "duration": 2988.1,
+  "files": [
+   "Center4_059.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 149405,
+  "n_steps": 597,
+  "r": 0.45,
+  "sha256": "922ff13adedfa1634e81dafaff12aa98cddde9a33021231e07c50287f238df1a",
+  "shape": [
+   597,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_061": {
+  "acquisition": "standardized",
+  "duration": 1651.8,
+  "files": [
+   "Center4_061.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 82590,
+  "n_steps": 330,
+  "r": 0.45,
+  "sha256": "c1563e9a4b9dbfd4ce08b2a43b8dc417b4cbdb72781ad31af99d54c907cec5e6",
+  "shape": [
+   330,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_062": {
+  "acquisition": "standardized",
+  "duration": 802.2,
+  "files": [
+   "Center4_062.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 40110,
+  "n_steps": 160,
+  "r": 0.45,
+  "sha256": "13da743867a0c4b0ef259cb8f9733913bd4b4414279468bd93a86f034a838183",
+  "shape": [
+   160,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_063": {
+  "acquisition": "standardized",
+  "duration": 2640.78,
+  "files": [
+   "Center4_063.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 132039,
+  "n_steps": 528,
+  "r": 0.45,
+  "sha256": "92d8ea3c8fead2ff73d914911c3893cb2ea77d690d455bbbc7777d927d0625fe",
+  "shape": [
+   528,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_064": {
+  "acquisition": "standardized",
+  "duration": 1886.14,
+  "files": [
+   "Center4_064.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 94307,
+  "n_steps": 377,
+  "r": 0.45,
+  "sha256": "9db112795dde23b0b880835a36f56ac5acd2f3a24c975191e2f71a9580e9dbd6",
+  "shape": [
+   377,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_065": {
+  "acquisition": "standardized",
+  "duration": 1611.9,
+  "files": [
+   "Center4_065.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 80595,
+  "n_steps": 322,
+  "r": 0.45,
+  "sha256": "38a562af74ce80877744e27bdfe9e4d15bf82891151489f486c31184d0646e8e",
+  "shape": [
+   322,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_066": {
+  "acquisition": "standardized",
+  "duration": 3495.96,
+  "files": [
+   "Center4_066.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 174798,
+  "n_steps": 699,
+  "r": 0.45,
+  "sha256": "eb468e72ef9283dd2600e71fb1f1c446342190bfa5944dd37444e2d9e9ec5903",
+  "shape": [
+   699,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_067": {
+  "acquisition": "standardized",
+  "duration": 3482.48,
+  "files": [
+   "Center4_067.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 174124,
+  "n_steps": 696,
+  "r": 0.45,
+  "sha256": "4f962bcacab737d85e848eecb1b7a5a46055ae6680463da21c9ec67ddfb33d7e",
+  "shape": [
+   696,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_069": {
+  "acquisition": "standardized",
+  "duration": 1015.32,
+  "files": [
+   "Center4_069.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 50766,
+  "n_steps": 203,
+  "r": 0.45,
+  "sha256": "847cc2e12e43187a50d5ce320d76d350fb59e8d4d92b6e285980f4f9edc6e07d",
+  "shape": [
+   203,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_070": {
+  "acquisition": "standardized",
+  "duration": 961.5,
+  "files": [
+   "Center4_070.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 48075,
+  "n_steps": 192,
+  "r": 0.45,
+  "sha256": "1944a9befd58401627ca8017c2d0165f6101afa1f684dd150230a7a034b22f04",
+  "shape": [
+   192,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_071": {
+  "acquisition": "standardized",
+  "duration": 1149.6,
+  "files": [
+   "Center4_071.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 57480,
+  "n_steps": 229,
+  "r": 0.45,
+  "sha256": "5aec73027a4d340e86f091fa6ffe23799b021133a41aba41681ad9ed5db397ae",
+  "shape": [
+   229,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_072": {
+  "acquisition": "standardized",
+  "duration": 1097.9,
+  "files": [
+   "Center4_072.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 54895,
+  "n_steps": 219,
+  "r": 0.45,
+  "sha256": "ea62dd7623ae5e02e29548adb27b15286a4efc453b790ef4eb409dfde1a67713",
+  "shape": [
+   219,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C4_073": {
+  "acquisition": "standardized",
+  "duration": 3354.6,
+  "files": [
+   "Center4_073.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 167730,
+  "n_steps": 670,
+  "r": 0.45,
+  "sha256": "0a46d9fecf22646404c953f034e5515c09e03c7e6d666e7c4f2d85372d177ede",
+  "shape": [
+   670,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_001": {
+  "acquisition": "standardized",
+  "duration": 996.8,
+  "files": [
+   "Center5_001.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 49840,
+  "n_steps": 199,
+  "r": 0.45,
+  "sha256": "7e025a73c5de5f4b7957ff62d224f10ed016de3eaa8c3b247e81bfa407703962",
+  "shape": [
+   199,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_002": {
+  "acquisition": "standardized",
+  "duration": 1826.26,
+  "files": [
+   "Center5_002.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91313,
+  "n_steps": 365,
+  "r": 0.45,
+  "sha256": "8c33732a7218f95abdb3f42f25206e059a328ae81650080d79ea0532bf3d0b58",
+  "shape": [
+   365,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_003": {
+  "acquisition": "standardized",
+  "duration": 1759.68,
+  "files": [
+   "Center5_003.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 87984,
+  "n_steps": 351,
+  "r": 0.45,
+  "sha256": "4179f95c92c9f549ba08efbae5de30f84d36e29c0237d7a1b711cd894aaa1c8f",
+  "shape": [
+   351,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_004": {
+  "acquisition": "standardized",
+  "duration": 965.54,
+  "files": [
+   "Center5_004.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 48277,
+  "n_steps": 193,
+  "r": 0.45,
+  "sha256": "2f86e38a4f6c9c5eb20a402a7dc29d5a3ad4d39307ffca2babef02733a48be4a",
+  "shape": [
+   193,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_005": {
+  "acquisition": "standardized",
+  "duration": 779.54,
+  "files": [
+   "Center5_005.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 38977,
+  "n_steps": 155,
+  "r": 0.45,
+  "sha256": "f1e04b4de732a43006ea6fc0ce59b4e3b6d0c2985a5be53f298f91933a0cb1df",
+  "shape": [
+   155,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_006": {
+  "acquisition": "standardized",
+  "duration": 1416.56,
+  "files": [
+   "Center5_006.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 70828,
+  "n_steps": 283,
+  "r": 0.45,
+  "sha256": "e3b1b36fb8150f376228fdffc0a92ad4588f78f19b7b55b64e7a266ff98064c4",
+  "shape": [
+   283,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_007": {
+  "acquisition": "standardized",
+  "duration": 1300.56,
+  "files": [
+   "Center5_007.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 65028,
+  "n_steps": 260,
+  "r": 0.45,
+  "sha256": "f3c33bd5837993d27356419226a174d80cfc7161a14b809a1ba66158cc728448",
+  "shape": [
+   260,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_008": {
+  "acquisition": "standardized",
+  "duration": 1822.56,
+  "files": [
+   "Center5_008.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91128,
+  "n_steps": 364,
+  "r": 0.45,
+  "sha256": "d0bb58eeb2546c512b49bc608b9033d3983ee1fa1cf8a71cff6ac783c251fb77",
+  "shape": [
+   364,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_009": {
+  "acquisition": "standardized",
+  "duration": 1822.56,
+  "files": [
+   "Center5_009.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91128,
+  "n_steps": 364,
+  "r": 0.45,
+  "sha256": "27522918797cbffb730d6e19c23eb08e824ba65511fb6376a3bbee8b9331f46b",
+  "shape": [
+   364,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_010": {
+  "acquisition": "standardized",
+  "duration": 1827.14,
+  "files": [
+   "Center5_010.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91357,
+  "n_steps": 365,
+  "r": 0.45,
+  "sha256": "e0d72b5f0a570d9fad5a5fff5c7cd70f8e758a4e24d10185fbe43c1c4b9894cc",
+  "shape": [
+   365,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_011": {
+  "acquisition": "standardized",
+  "duration": 1680.92,
+  "files": [
+   "Center5_011.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 84046,
+  "n_steps": 336,
+  "r": 0.45,
+  "sha256": "c439e2f506f423f6f78913f3751f55bb26b695936e250483ad0d06e4bf24d9fc",
+  "shape": [
+   336,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_012": {
+  "acquisition": "standardized",
+  "duration": 1822.56,
+  "files": [
+   "Center5_012.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91128,
+  "n_steps": 364,
+  "r": 0.45,
+  "sha256": "6d35d5812e792aed5fb6e38f6a3801c424a27a59e06eb7b167f71e9f1e269fc9",
+  "shape": [
+   364,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_013": {
+  "acquisition": "standardized",
+  "duration": 1240.18,
+  "files": [
+   "Center5_013.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 62009,
+  "n_steps": 248,
+  "r": 0.45,
+  "sha256": "73908652511804b5cb093c8980ab86fd552cabac5a65ff94ad6cefaa5b259926",
+  "shape": [
+   248,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_014": {
+  "acquisition": "standardized",
+  "duration": 1824.66,
+  "files": [
+   "Center5_014.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91233,
+  "n_steps": 364,
+  "r": 0.45,
+  "sha256": "7e656bc67e2bab6bce9c03eb54410aeb117d0e5f8567087f6d303e99f93b4ae6",
+  "shape": [
+   364,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_015": {
+  "acquisition": "standardized",
+  "duration": 1825.72,
+  "files": [
+   "Center5_015.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91286,
+  "n_steps": 365,
+  "r": 0.45,
+  "sha256": "4126caf77389d707db6a207a73ba0c93aee5daff81b2d801fe687cba2bca1f7c",
+  "shape": [
+   365,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_016": {
+  "acquisition": "standardized",
+  "duration": 1823.08,
+  "files": [
+   "Center5_016.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91154,
+  "n_steps": 364,
+  "r": 0.45,
+  "sha256": "1b4464bc41c2afeb73df3851510b7745be23fa68d3d79d911d47cdf955033fef",
+  "shape": [
+   364,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_017": {
+  "acquisition": "standardized",
+  "duration": 939.86,
+  "files": [
+   "Center5_017.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 46993,
+  "n_steps": 187,
+  "r": 0.45,
+  "sha256": "802860dce53c642fe84c47ce08f73e35b6e99e8f1f42310db66c4a8a64c5b3d1",
+  "shape": [
+   187,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_018": {
+  "acquisition": "standardized",
+  "duration": 1822.56,
+  "files": [
+   "Center5_018.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91128,
+  "n_steps": 364,
+  "r": 0.45,
+  "sha256": "19ec739a57e69812352352139309465ef353c85b5e572a20ea54b9fb7eb0e15b",
+  "shape": [
+   364,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_019": {
+  "acquisition": "standardized",
+  "duration": 879.42,
+  "files": [
+   "Center5_019.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 43971,
+  "n_steps": 175,
+  "r": 0.45,
+  "sha256": "7f07c61dc38e888fc7eb8eab0b130112a81de8bed1e8b0815cf485c041eb8d6b",
+  "shape": [
+   175,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_021": {
+  "acquisition": "standardized",
+  "duration": 1369.48,
+  "files": [
+   "Center5_021.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 68474,
+  "n_steps": 273,
+  "r": 0.45,
+  "sha256": "5279e192539959faa5a988a5a9c944ecfd93c4ac941b8df92ceb672dd472a2df",
+  "shape": [
+   273,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_022": {
+  "acquisition": "standardized",
+  "duration": 1489.66,
+  "files": [
+   "Center5_022.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 74483,
+  "n_steps": 297,
+  "r": 0.45,
+  "sha256": "b78484c72a440813b5e366047a468a082fe0acbcba53d1c4ec2f20234eb8cedf",
+  "shape": [
+   297,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_023": {
+  "acquisition": "standardized",
+  "duration": 1032.5,
+  "files": [
+   "Center5_023.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 51625,
+  "n_steps": 206,
+  "r": 0.45,
+  "sha256": "6b3b0e96dc90f46fc9599fa62fec30fead5e4ec8abe2d7cb8ea3cb15b2849c37",
+  "shape": [
+   206,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_024": {
+  "acquisition": "standardized",
+  "duration": 1298.54,
+  "files": [
+   "Center5_024.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 64927,
+  "n_steps": 259,
+  "r": 0.45,
+  "sha256": "8ac3d6aa925119b2cf41be8e168fe41320370ab8348846ce9e3edc5a3ea502aa",
+  "shape": [
+   259,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_025": {
+  "acquisition": "standardized",
+  "duration": 1418.22,
+  "files": [
+   "Center5_025.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 70911,
+  "n_steps": 283,
+  "r": 0.45,
+  "sha256": "55c11c6ac3c0cb5e269dd5aeaf8edf59fe44f484f4cdb90c7b75499f9529af0c",
+  "shape": [
+   283,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_026": {
+  "acquisition": "standardized",
+  "duration": 1809.9,
+  "files": [
+   "Center5_026.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 90495,
+  "n_steps": 361,
+  "r": 0.45,
+  "sha256": "2132cdc78000a099bab4db438243dd5f3e3d8c0ff23172bedcf6f50f6c2716c4",
+  "shape": [
+   361,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_028": {
+  "acquisition": "standardized",
+  "duration": 301.46,
+  "files": [
+   "Center5_028.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 15073,
+  "n_steps": 60,
+  "r": 0.45,
+  "sha256": "6baebf87ec2846392e3acb0a3e33a0875a884da4161dc4e63a9154ce5e4a01bf",
+  "shape": [
+   60,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_030": {
+  "acquisition": "standardized",
+  "duration": 1318.88,
+  "files": [
+   "Center5_030.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 65944,
+  "n_steps": 263,
+  "r": 0.45,
+  "sha256": "ce73c266a9333795fd29d1ef4eb1cfe6668ae3153df808e08e387070b13ea0f0",
+  "shape": [
+   263,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_031": {
+  "acquisition": "standardized",
+  "duration": 770.64,
+  "files": [
+   "Center5_031.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 38532,
+  "n_steps": 154,
+  "r": 0.45,
+  "sha256": "66b203f1bdc0651cc6bb526341c125485f2f4e9e3a0a3bd02a67700459cde534",
+  "shape": [
+   154,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_032": {
+  "acquisition": "standardized",
+  "duration": 1732.6,
+  "files": [
+   "Center5_032.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 86630,
+  "n_steps": 346,
+  "r": 0.45,
+  "sha256": "12b234a2420b8e64b10846d9a15721109e5c7424881d758ff5315b246cf1f226",
+  "shape": [
+   346,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_033": {
+  "acquisition": "standardized",
+  "duration": 1730.08,
+  "files": [
+   "Center5_033.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 86504,
+  "n_steps": 346,
+  "r": 0.45,
+  "sha256": "201c8810e55e6fca65ad28e376106c7f8eb654f05f9657127cd3f09f19e898fd",
+  "shape": [
+   346,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_034": {
+  "acquisition": "standardized",
+  "duration": 1826.46,
+  "files": [
+   "Center5_034.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91323,
+  "n_steps": 365,
+  "r": 0.45,
+  "sha256": "254b88923aeba39ddada332111d0a8037192d660a0fcb54cff8881f2b5736a67",
+  "shape": [
+   365,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_035": {
+  "acquisition": "standardized",
+  "duration": 113.36,
+  "files": [
+   "Center5_035.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 5668,
+  "n_steps": 22,
+  "r": 0.45,
+  "sha256": "1058fc2ae6fadc932d9ecbd212d9bd2aa31c35401ef9a47766d3801f366b88d8",
+  "shape": [
+   22,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_036": {
+  "acquisition": "standardized",
+  "duration": 1169.16,
+  "files": [
+   "Center5_036.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 58458,
+  "n_steps": 233,
+  "r": 0.45,
+  "sha256": "d4f9a89cb9c20baf73586cb22b35ea7e1d835b602be3df402ed49281e0d86e86",
+  "shape": [
+   233,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_039": {
+  "acquisition": "standardized",
+  "duration": 1571.12,
+  "files": [
+   "Center5_039.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 78556,
+  "n_steps": 314,
+  "r": 0.45,
+  "sha256": "a355bae8c6f841eae085badd21dbeceafb4291c9f5b5696528781869cb365958",
+  "shape": [
+   314,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_040": {
+  "acquisition": "standardized",
+  "duration": 1822.56,
+  "files": [
+   "Center5_040.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91128,
+  "n_steps": 364,
+  "r": 0.45,
+  "sha256": "489c03e73ca4f0cedf0ca8ea8a8bb8f96c41354f97f8b60ad458664f8edff514",
+  "shape": [
+   364,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_041": {
+  "acquisition": "standardized",
+  "duration": 1652.42,
+  "files": [
+   "Center5_041.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 82621,
+  "n_steps": 330,
+  "r": 0.45,
+  "sha256": "cc8a494d19ca0c864dd1c8fe216b798271e79b14754fc8b5f5688421f633a6c5",
+  "shape": [
+   330,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_042": {
+  "acquisition": "standardized",
+  "duration": 2520.84,
+  "files": [
+   "Center5_042_v01.mp4",
+   "Center5_042_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 126042,
+  "n_steps": 504,
+  "r": 0.45,
+  "sha256": "60a1b00293ccbb98c5e5443ab32056e310f1b37f865a255ff02807bce23a14c9",
+  "shape": [
+   504,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_046": {
+  "acquisition": "standardized",
+  "duration": 1823.12,
+  "files": [
+   "Center5_046.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91156,
+  "n_steps": 364,
+  "r": 0.45,
+  "sha256": "fe9650d9dee0e50c2adf95e1609c33d81e6c121fca2e96f39bb4e597d479a1ae",
+  "shape": [
+   364,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_047": {
+  "acquisition": "standardized",
+  "duration": 1824.5,
+  "files": [
+   "Center5_047.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91225,
+  "n_steps": 364,
+  "r": 0.45,
+  "sha256": "ee2c2452d58d540929ce35be3c214d5977e7e96ebeae7c1c8c1e401d14dd77ae",
+  "shape": [
+   364,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_048": {
+  "acquisition": "standardized",
+  "duration": 1827.16,
+  "files": [
+   "Center5_048.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91358,
+  "n_steps": 365,
+  "r": 0.45,
+  "sha256": "0ec3cc3a5a85de8d204ed8acb3217293b74fa9d29d7d920eee9b0bed48530874",
+  "shape": [
+   365,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_049": {
+  "acquisition": "standardized",
+  "duration": 1569.08,
+  "files": [
+   "Center5_049.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 78454,
+  "n_steps": 313,
+  "r": 0.45,
+  "sha256": "2e9fcfe2c94be584b1c4ac39d4d272d4682a909f06ba1b2fb7894c46d571feac",
+  "shape": [
+   313,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_050": {
+  "acquisition": "standardized",
+  "duration": 1822.56,
+  "files": [
+   "Center5_050.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91128,
+  "n_steps": 364,
+  "r": 0.45,
+  "sha256": "adafe0ee9b69249a3c820e86a268d8ba83c7dd126cd6b2aa1ad8ae8b6e542bc0",
+  "shape": [
+   364,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_051": {
+  "acquisition": "standardized",
+  "duration": 1822.56,
+  "files": [
+   "Center5_051.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91128,
+  "n_steps": 364,
+  "r": 0.45,
+  "sha256": "292144e2404f7b91cb0877ac75e48809725a57a65a0afe810627f9964334dbf6",
+  "shape": [
+   364,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_052": {
+  "acquisition": "standardized",
+  "duration": 1746.06,
+  "files": [
+   "Center5_052.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 87303,
+  "n_steps": 349,
+  "r": 0.45,
+  "sha256": "14eab544d640fa080b03b177cb901f69096f0ef919721bce51345e9c56185762",
+  "shape": [
+   349,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_053": {
+  "acquisition": "standardized",
+  "duration": 1822.56,
+  "files": [
+   "Center5_053.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91128,
+  "n_steps": 364,
+  "r": 0.45,
+  "sha256": "f2f2d201d1fb1129fc9f26fdc859191cd1f14248a184ea5f827bfe1a78b93485",
+  "shape": [
+   364,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_055": {
+  "acquisition": "standardized",
+  "duration": 1383.2,
+  "files": [
+   "Center5_055.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 69160,
+  "n_steps": 276,
+  "r": 0.45,
+  "sha256": "f542a541938638c658d4bbde49d612e3913aaf1a1c675cf704fdc6dd6241ea94",
+  "shape": [
+   276,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_056": {
+  "acquisition": "standardized",
+  "duration": 1421.94,
+  "files": [
+   "Center5_056.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 71097,
+  "n_steps": 284,
+  "r": 0.45,
+  "sha256": "568a6e095b92f7c4f860f79aeb62882129c5a573bf1720dba13ff562d551e5fd",
+  "shape": [
+   284,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_057": {
+  "acquisition": "standardized",
+  "duration": 1229.64,
+  "files": [
+   "Center5_057.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 61482,
+  "n_steps": 245,
+  "r": 0.45,
+  "sha256": "3325f59c8f0f95de413ab929cbca04915d5f2295cf6da9c59f77f42664da7d1f",
+  "shape": [
+   245,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_058": {
+  "acquisition": "standardized",
+  "duration": 1822.56,
+  "files": [
+   "Center5_058.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91128,
+  "n_steps": 364,
+  "r": 0.45,
+  "sha256": "d9ee6698f0644827d2e07641d0a8a9373b900fe0e8395bb8f3478a286e54dad8",
+  "shape": [
+   364,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_059": {
+  "acquisition": "standardized",
+  "duration": 974.62,
+  "files": [
+   "Center5_059.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 48731,
+  "n_steps": 194,
+  "r": 0.45,
+  "sha256": "48f0acdd210c8bf83effa0cdf465ce314cf66751cc7c24eca3f18df7df6c405f",
+  "shape": [
+   194,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_060": {
+  "acquisition": "standardized",
+  "duration": 1829.54,
+  "files": [
+   "Center5_060.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91477,
+  "n_steps": 365,
+  "r": 0.45,
+  "sha256": "18f3a58e1be39527905c98bdab11e8579dafe6afda806a3f33b4c1db85c3f541",
+  "shape": [
+   365,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_061": {
+  "acquisition": "standardized",
+  "duration": 1826.08,
+  "files": [
+   "Center5_061.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91304,
+  "n_steps": 365,
+  "r": 0.45,
+  "sha256": "b7a72825569cb12d0ec850132829d254d838805f8831fec0355ca46d21009e95",
+  "shape": [
+   365,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_062": {
+  "acquisition": "standardized",
+  "duration": 1668.06,
+  "files": [
+   "Center5_062.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 83403,
+  "n_steps": 333,
+  "r": 0.45,
+  "sha256": "85480587ef24620a8abb31c578c6e095a29ad18c7dd7c69bf2fbb9db3fea59e8",
+  "shape": [
+   333,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_063": {
+  "acquisition": "standardized",
+  "duration": 1559.74,
+  "files": [
+   "Center5_063.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 77987,
+  "n_steps": 311,
+  "r": 0.45,
+  "sha256": "b439891f8bd10f889cffefc27950eac4e9a34dc461c58d970a0c05fedf5be7f4",
+  "shape": [
+   311,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_064": {
+  "acquisition": "standardized",
+  "duration": 1823.52,
+  "files": [
+   "Center5_064.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91176,
+  "n_steps": 364,
+  "r": 0.45,
+  "sha256": "133fdf4d03bb6f160287ad9f7b136d3b923af87524b6ee47a1ed23b506c53adc",
+  "shape": [
+   364,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_065": {
+  "acquisition": "standardized",
+  "duration": 1823.76,
+  "files": [
+   "Center5_065.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91188,
+  "n_steps": 364,
+  "r": 0.45,
+  "sha256": "ae38f5344673ddf71b11b1f13e34e34771fddb1f422a3ebd540905aa5ee04ca7",
+  "shape": [
+   364,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_066": {
+  "acquisition": "standardized",
+  "duration": 1826.76,
+  "files": [
+   "Center5_066.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91338,
+  "n_steps": 365,
+  "r": 0.45,
+  "sha256": "1ab8afb18f8c63e3e3f0e6c305afa73468d70e83d9f426de6e65b7fa8e5c5d48",
+  "shape": [
+   365,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_069": {
+  "acquisition": "standardized",
+  "duration": 1826.14,
+  "files": [
+   "Center5_069.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 91307,
+  "n_steps": 365,
+  "r": 0.45,
+  "sha256": "e893b19de3e434d985dbb7ff984f2db1eee3de7cf61e4c52880b6dbb99d7c4e2",
+  "shape": [
+   365,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_070": {
+  "acquisition": "standardized",
+  "duration": 1439.14,
+  "files": [
+   "Center5_070.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 71957,
+  "n_steps": 287,
+  "r": 0.45,
+  "sha256": "7c55141ce8b16cf9dc568f26e67398e3dd6be09ecb35d814c93d0171e7ae5eea",
+  "shape": [
+   287,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_071": {
+  "acquisition": "standardized",
+  "duration": 1087.64,
+  "files": [
+   "Center5_071.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 54382,
+  "n_steps": 217,
+  "r": 0.45,
+  "sha256": "a25c04e1f85119bc34cea186aa027167dc1bf78a1c2e0f874f566523aa6c8d10",
+  "shape": [
+   217,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_072": {
+  "acquisition": "standardized",
+  "duration": 1902.9199999999998,
+  "files": [
+   "Center5_072_v01.mp4",
+   "Center5_072_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 95146,
+  "n_steps": 380,
+  "r": 0.45,
+  "sha256": "cb02774432e2c1c348545a3d8fe9cd7f58a74b7b2ed87b58b5b00aca19a59c53",
+  "shape": [
+   380,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_075": {
+  "acquisition": "standardized",
+  "duration": 616.34,
+  "files": [
+   "Center5_075.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 30817,
+  "n_steps": 123,
+  "r": 0.45,
+  "sha256": "82cd03862d39378a8cc6f27b999d6a849f54328142a3f2305d408ddf03e220ec",
+  "shape": [
+   123,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_076": {
+  "acquisition": "standardized",
+  "duration": 891.18,
+  "files": [
+   "Center5_076.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 44559,
+  "n_steps": 178,
+  "r": 0.45,
+  "sha256": "e9fb0474703ad9d8ade6e186295129563305259963649efa7d04dd09790dd8c9",
+  "shape": [
+   178,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_077": {
+  "acquisition": "standardized",
+  "duration": 1702.34,
+  "files": [
+   "Center5_077.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 85117,
+  "n_steps": 340,
+  "r": 0.45,
+  "sha256": "8f143c510bca5490322b9574411c15b6be890b6d878eaa1f40b9e6750d70d610",
+  "shape": [
+   340,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_078": {
+  "acquisition": "standardized",
+  "duration": 2179.68,
+  "files": [
+   "Center5_078_v01.mp4",
+   "Center5_078_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 108984,
+  "n_steps": 435,
+  "r": 0.45,
+  "sha256": "5e56fcb56d64af1a1a499bb6695c10d28b02157a372f999b4886171947b2df5f",
+  "shape": [
+   435,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_079": {
+  "acquisition": "standardized",
+  "duration": 2078.2200000000003,
+  "files": [
+   "Center5_079_v01.mp4",
+   "Center5_079_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 103911,
+  "n_steps": 415,
+  "r": 0.45,
+  "sha256": "72c195760b5b940849f7423051b7de48215d87ccea4ef6e4153c465dffdb5560",
+  "shape": [
+   415,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_080": {
+  "acquisition": "standardized",
+  "duration": 2086.2799999999997,
+  "files": [
+   "Center5_080_v01.mp4",
+   "Center5_080_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 104314,
+  "n_steps": 417,
+  "r": 0.45,
+  "sha256": "6e3b9ec2166006276c143dd81497e3b20ab17c0e1cf6701569656ba4fa84cd12",
+  "shape": [
+   417,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_081": {
+  "acquisition": "standardized",
+  "duration": 1374.84,
+  "files": [
+   "Center5_081.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 68742,
+  "n_steps": 274,
+  "r": 0.45,
+  "sha256": "de5616fca0009a40a570b008e264c06a7b16c3a8b4b3b4881e965f1745fe8c08",
+  "shape": [
+   274,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_083": {
+  "acquisition": "standardized",
+  "duration": 2443.54,
+  "files": [
+   "Center5_083_v01.mp4",
+   "Center5_083_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 122177,
+  "n_steps": 488,
+  "r": 0.45,
+  "sha256": "cbdf564f63f8d75ec207e502a9d771b1e90ccaf4180d5a6cfab21f70ba1f82b7",
+  "shape": [
+   488,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_084": {
+  "acquisition": "standardized",
+  "duration": 873.44,
+  "files": [
+   "Center5_084.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 43672,
+  "n_steps": 174,
+  "r": 0.45,
+  "sha256": "de8c48505e7b4b1b4ffc009f1cd21c4388086566d35093124edf75e0983931ae",
+  "shape": [
+   174,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_085": {
+  "acquisition": "standardized",
+  "duration": 3314.62,
+  "files": [
+   "Center5_085_v01.mp4",
+   "Center5_085_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 165731,
+  "n_steps": 662,
+  "r": 0.45,
+  "sha256": "189ca2cd8891cf325ac38ec895f88379dcd59a14aad8b899995e81402ec23f94",
+  "shape": [
+   662,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_086": {
+  "acquisition": "standardized",
+  "duration": 1404.12,
+  "files": [
+   "Center5_086.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 70206,
+  "n_steps": 280,
+  "r": 0.45,
+  "sha256": "8951af7204f0c75e12a1e55a4a15f7eba5871e0851dc0736b3c08a595377b3c0",
+  "shape": [
+   280,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_087": {
+  "acquisition": "standardized",
+  "duration": 1491.64,
+  "files": [
+   "Center5_087.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 74582,
+  "n_steps": 298,
+  "r": 0.45,
+  "sha256": "3bec14037d2c370fca64add27d8acd60a51feba7192e93b8b6f3b133519d9668",
+  "shape": [
+   298,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_088": {
+  "acquisition": "standardized",
+  "duration": 2162.3,
+  "files": [
+   "Center5_088_v01.mp4",
+   "Center5_088_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 108115,
+  "n_steps": 432,
+  "r": 0.45,
+  "sha256": "81a73392b07e81f26394cfaf137522e83b94a778f9d69ae0bcf575e580b51f7f",
+  "shape": [
+   432,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_089": {
+  "acquisition": "standardized",
+  "duration": 1952.1599999999999,
+  "files": [
+   "Center5_089_v01.mp4",
+   "Center5_089_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 97608,
+  "n_steps": 390,
+  "r": 0.45,
+  "sha256": "f3906c0cc298b9753485927572a838119801bdaf6a87ba2605b4eb48f9d71029",
+  "shape": [
+   390,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_090": {
+  "acquisition": "standardized",
+  "duration": 1655.22,
+  "files": [
+   "Center5_090.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 82761,
+  "n_steps": 331,
+  "r": 0.45,
+  "sha256": "76b74707b5fb0d9612774b90fb6e7518bbb31c44d7f2965ba8800f30eed970ae",
+  "shape": [
+   331,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_091": {
+  "acquisition": "standardized",
+  "duration": 2578.3599999999997,
+  "files": [
+   "Center5_091_v01.mp4",
+   "Center5_091_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 128918,
+  "n_steps": 515,
+  "r": 0.45,
+  "sha256": "36cc5baee3456a0d77fd9264dacfda8c5bbbdf9a3d5f7a450ba2737efbc244d3",
+  "shape": [
+   515,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_092": {
+  "acquisition": "standardized",
+  "duration": 1685.48,
+  "files": [
+   "Center5_092.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 84274,
+  "n_steps": 337,
+  "r": 0.45,
+  "sha256": "9e10ae09d8b16e79afbbc0f0ca15e4199c3dba8acdeeaccb4778c4091bc67880",
+  "shape": [
+   337,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_093": {
+  "acquisition": "standardized",
+  "duration": 1868.6200000000001,
+  "files": [
+   "Center5_093_v01.mp4",
+   "Center5_093_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 93431,
+  "n_steps": 373,
+  "r": 0.45,
+  "sha256": "86f9fecf439039e7e01ad109144e5213c9217dc8952edc672cfa01c50e273a4a",
+  "shape": [
+   373,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_094": {
+  "acquisition": "standardized",
+  "duration": 1433.6,
+  "files": [
+   "Center5_094.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 71680,
+  "n_steps": 286,
+  "r": 0.45,
+  "sha256": "9c4e3974923199e243a3bdfa9360641f7860f35499a080bad0dc81f0bd037bd4",
+  "shape": [
+   286,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_095": {
+  "acquisition": "standardized",
+  "duration": 912.02,
+  "files": [
+   "Center5_095.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 45601,
+  "n_steps": 182,
+  "r": 0.45,
+  "sha256": "2bb35d20ec78b4dc6c34cc06f944cbd4b9471ae046993e53ad40e6f7f6626651",
+  "shape": [
+   182,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_096": {
+  "acquisition": "standardized",
+  "duration": 1087.64,
+  "files": [
+   "Center5_096.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 54382,
+  "n_steps": 217,
+  "r": 0.45,
+  "sha256": "a25c04e1f85119bc34cea186aa027167dc1bf78a1c2e0f874f566523aa6c8d10",
+  "shape": [
+   217,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_097": {
+  "acquisition": "standardized",
+  "duration": 1669.96,
+  "files": [
+   "Center5_097_v01.mp4",
+   "Center5_097_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 83498,
+  "n_steps": 333,
+  "r": 0.45,
+  "sha256": "86a1df0f694b85cfb20e43e89640adb813bde4c743b51ce1a3e5b7ee4abc4a07",
+  "shape": [
+   333,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_098": {
+  "acquisition": "standardized",
+  "duration": 2248.38,
+  "files": [
+   "Center5_098_v01.mp4",
+   "Center5_098_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 112419,
+  "n_steps": 449,
+  "r": 0.45,
+  "sha256": "275df5195253f26764faf9ae99772f46fe84595572f4439fee5c1d7dc1d57bb8",
+  "shape": [
+   449,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_099": {
+  "acquisition": "standardized",
+  "duration": 3097.0,
+  "files": [
+   "Center5_099_v01.mp4",
+   "Center5_099_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 154850,
+  "n_steps": 619,
+  "r": 0.45,
+  "sha256": "99968d6625ca2d4dcbf35e17e14a932c2069bc032229684e746009519abbd75a",
+  "shape": [
+   619,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_100": {
+  "acquisition": "standardized",
+  "duration": 906.86,
+  "files": [
+   "Center5_100.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 45343,
+  "n_steps": 181,
+  "r": 0.45,
+  "sha256": "ef8e8cd566d8985d243a09734b1b91f62bea7d8c078ccb20ad004eefb291600f",
+  "shape": [
+   181,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_101": {
+  "acquisition": "standardized",
+  "duration": 1897.46,
+  "files": [
+   "Center5_101_v01.mp4",
+   "Center5_101_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 94873,
+  "n_steps": 379,
+  "r": 0.45,
+  "sha256": "d459559efca7b7c956766fc203254ba258ac738165dbf6a303f55836f9891175",
+  "shape": [
+   379,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_102": {
+  "acquisition": "standardized",
+  "duration": 2262.98,
+  "files": [
+   "Center5_102_v01.mp4",
+   "Center5_102_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 113149,
+  "n_steps": 452,
+  "r": 0.45,
+  "sha256": "d3c5534d6033c00b7c8a846b9dcf5407db2be5fcf22d1121e359e021abb5f663",
+  "shape": [
+   452,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_103": {
+  "acquisition": "standardized",
+  "duration": 1703.48,
+  "files": [
+   "Center5_103.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 85174,
+  "n_steps": 340,
+  "r": 0.45,
+  "sha256": "c8d64f246a989e632ed3dd4675924df544b5aec528193caf50a50466e9d1d9f9",
+  "shape": [
+   340,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_104": {
+  "acquisition": "standardized",
+  "duration": 1376.78,
+  "files": [
+   "Center5_104.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 68839,
+  "n_steps": 275,
+  "r": 0.45,
+  "sha256": "896178dc36978042df08d78427bf8bc96847ed4ab0c73e083d35bc7162dea339",
+  "shape": [
+   275,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_105": {
+  "acquisition": "standardized",
+  "duration": 3019.44,
+  "files": [
+   "Center5_105_v01.mp4",
+   "Center5_105_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 150972,
+  "n_steps": 603,
+  "r": 0.45,
+  "sha256": "accb1ac01cc2fb4359120fa6a6fc09616f62ce408758772aef8697846b4f1352",
+  "shape": [
+   603,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_106": {
+  "acquisition": "standardized",
+  "duration": 3668.98,
+  "files": [
+   "Center5_106_v01.mp4",
+   "Center5_106_v02.mp4"
+  ],
+  "frames_per_step_min": 249,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 183449,
+  "n_steps": 733,
+  "r": 0.45,
+  "sha256": "72786a277352360e56ca64d6cb6aa7f01632df23051ab72682d15feb2648420b",
+  "shape": [
+   733,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_107": {
+  "acquisition": "standardized",
+  "duration": 1460.18,
+  "files": [
+   "Center5_107.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 73009,
+  "n_steps": 292,
+  "r": 0.45,
+  "sha256": "bca0b9a809589f3d6f82ae5fbf84e2893d68df75a12c8d9911ed8ae5738a7b32",
+  "shape": [
+   292,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_108": {
+  "acquisition": "standardized",
+  "duration": 1909.1599999999999,
+  "files": [
+   "Center5_108_v01.mp4",
+   "Center5_108_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 95458,
+  "n_steps": 381,
+  "r": 0.45,
+  "sha256": "6bc3f8cab623a7257c9adc9cba81a6a55ea51b99e482c943d54e6145d4a4d544",
+  "shape": [
+   381,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_109": {
+  "acquisition": "standardized",
+  "duration": 1500.52,
+  "files": [
+   "Center5_109.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 75026,
+  "n_steps": 300,
+  "r": 0.45,
+  "sha256": "cd7167eda84fe4f7d0674b6a290f7d5c63b94ae63002ec04ecc9347d15cdb550",
+  "shape": [
+   300,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_110": {
+  "acquisition": "standardized",
+  "duration": 2480.3,
+  "files": [
+   "Center5_110_v01.mp4",
+   "Center5_110_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 124015,
+  "n_steps": 496,
+  "r": 0.45,
+  "sha256": "ee60c7fb34c6d8ac4b6d0ded8f89fd47311a27ee2df726702baeecaa4155a9e9",
+  "shape": [
+   496,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_111": {
+  "acquisition": "standardized",
+  "duration": 1321.88,
+  "files": [
+   "Center5_111.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 66094,
+  "n_steps": 264,
+  "r": 0.45,
+  "sha256": "f9b457d55bcafc17cb28b1d95972cf6eafc5cbc0822b1754280dcb9b21e439e7",
+  "shape": [
+   264,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_112": {
+  "acquisition": "standardized",
+  "duration": 3795.18,
+  "files": [
+   "Center5_112_v01.mp4",
+   "Center5_112_v02.mp4",
+   "Center5_112_v03.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 189759,
+  "n_steps": 759,
+  "r": 0.45,
+  "sha256": "b5b7683b491b65f523a1fe9404410bc013a479fb3dad7313b1a6fc191c5cb6fb",
+  "shape": [
+   759,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_113": {
+  "acquisition": "standardized",
+  "duration": 4422.0199999999995,
+  "files": [
+   "Center5_113_v01.mp4",
+   "Center5_113_v02.mp4",
+   "Center5_113_v03.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 221101,
+  "n_steps": 884,
+  "r": 0.45,
+  "sha256": "4f8a6bd64a64a3de3d1db5b4cbddc9f60aed7a38eb93cd190bc2eefef3dbbb9c",
+  "shape": [
+   884,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_114": {
+  "acquisition": "standardized",
+  "duration": 1627.52,
+  "files": [
+   "Center5_114.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 81376,
+  "n_steps": 325,
+  "r": 0.45,
+  "sha256": "95869d84e967a4e666c1f2addd8c9a26112a03fec70afee9bc60655216782c8e",
+  "shape": [
+   325,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_115": {
+  "acquisition": "standardized",
+  "duration": 2128.4,
+  "files": [
+   "Center5_115_v01.mp4",
+   "Center5_115_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 106420,
+  "n_steps": 425,
+  "r": 0.45,
+  "sha256": "e9152720587e261e7569b9ccb686a35af176b9eec47b3923f2e99eb7031af048",
+  "shape": [
+   425,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_116": {
+  "acquisition": "standardized",
+  "duration": 3385.1400000000003,
+  "files": [
+   "Center5_116_v01.mp4",
+   "Center5_116_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 169257,
+  "n_steps": 677,
+  "r": 0.45,
+  "sha256": "3297613b23da68b1157e6e0776ae5b66db2a175814b4c22cbd36c387dd4b74e0",
+  "shape": [
+   677,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_118": {
+  "acquisition": "standardized",
+  "duration": 3416.06,
+  "files": [
+   "Center5_118_v01.mp4",
+   "Center5_118_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 170803,
+  "n_steps": 683,
+  "r": 0.45,
+  "sha256": "ded6ecfc2216211cc78a6ccbef8298e551be6280734ff1585776aa8b9ce624e3",
+  "shape": [
+   683,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_119": {
+  "acquisition": "standardized",
+  "duration": 2608.42,
+  "files": [
+   "Center5_119_v01.mp4",
+   "Center5_119_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 130421,
+  "n_steps": 521,
+  "r": 0.45,
+  "sha256": "67e37e556f6cb529025157303f8d322ee821f76c52a184ee2aea31b1c7352793",
+  "shape": [
+   521,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_120": {
+  "acquisition": "standardized",
+  "duration": 1626.14,
+  "files": [
+   "Center5_120.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 81307,
+  "n_steps": 325,
+  "r": 0.45,
+  "sha256": "3fde95b837f8db5eb0097574f3bbb49f204ed71ee2691a0928b3a0a778bff256",
+  "shape": [
+   325,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_121": {
+  "acquisition": "standardized",
+  "duration": 2567.48,
+  "files": [
+   "Center5_121_v01.mp4",
+   "Center5_121_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 128374,
+  "n_steps": 513,
+  "r": 0.45,
+  "sha256": "592202766299309f1408f3fc750a0b0405c3fc3c655687da5bb5739c41f018a2",
+  "shape": [
+   513,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_122": {
+  "acquisition": "standardized",
+  "duration": 756.08,
+  "files": [
+   "Center5_122.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 37804,
+  "n_steps": 151,
+  "r": 0.45,
+  "sha256": "762db796f2ac50c76430a8984389955b19adc8760064a927e5540acea4a11dfb",
+  "shape": [
+   151,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_123": {
+  "acquisition": "standardized",
+  "duration": 2699.54,
+  "files": [
+   "Center5_123_v01.mp4",
+   "Center5_123_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 134977,
+  "n_steps": 539,
+  "r": 0.45,
+  "sha256": "66e0d0e082ee0485d701e9a3aa3ebb4c018c0e2128d7fe4b14a1972810cf48e2",
+  "shape": [
+   539,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_125": {
+  "acquisition": "standardized",
+  "duration": 4225.98,
+  "files": [
+   "Center5_125_v01.mp4",
+   "Center5_125_v02.mp4",
+   "Center5_125_v03.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 211299,
+  "n_steps": 845,
+  "r": 0.45,
+  "sha256": "0c57d42782d2ba5e6eacde5d44c7d36b4a6772938262184f40066aae3fa3098b",
+  "shape": [
+   845,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_126": {
+  "acquisition": "standardized",
+  "duration": 2575.0,
+  "files": [
+   "Center5_126_v01.mp4",
+   "Center5_126_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 128750,
+  "n_steps": 515,
+  "r": 0.45,
+  "sha256": "6472e33ebd2219c9fda50ed9ca8bed6b6273a8734f41cd53c775027cd285a340",
+  "shape": [
+   515,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_127": {
+  "acquisition": "standardized",
+  "duration": 1265.86,
+  "files": [
+   "Center5_127.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 63293,
+  "n_steps": 253,
+  "r": 0.45,
+  "sha256": "85859d7cf1de4519a1d143448d0d4015436e15f32853a9420fc726ec01ead4ec",
+  "shape": [
+   253,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_129": {
+  "acquisition": "standardized",
+  "duration": 2072.24,
+  "files": [
+   "Center5_129_v01.mp4",
+   "Center5_129_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 103612,
+  "n_steps": 414,
+  "r": 0.45,
+  "sha256": "06dd163db44ec4b32b9766f91b5d61ccad1b4620c7b416807c33581510e33772",
+  "shape": [
+   414,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_130": {
+  "acquisition": "standardized",
+  "duration": 2748.34,
+  "files": [
+   "Center5_130_v01.mp4",
+   "Center5_130_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 137417,
+  "n_steps": 549,
+  "r": 0.45,
+  "sha256": "4025ceb5add18f4b4423b19caec67622e53126d733030075f0e59b6441b23bd9",
+  "shape": [
+   549,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_132": {
+  "acquisition": "standardized",
+  "duration": 6682.58,
+  "files": [
+   "Center5_132_v01.mp4",
+   "Center5_132_v02.mp4",
+   "Center5_132_v03.mp4",
+   "Center5_132_v04.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 334129,
+  "n_steps": 1336,
+  "r": 0.45,
+  "sha256": "623e8662f8397464180229e27d7a3b7257968c8b390f6062f1d5829afcce6c91",
+  "shape": [
+   1336,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_133": {
+  "acquisition": "standardized",
+  "duration": 2465.9,
+  "files": [
+   "Center5_133_v01.mp4",
+   "Center5_133_v02.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 123295,
+  "n_steps": 493,
+  "r": 0.45,
+  "sha256": "9448f60a0b94b21e77c9797c295f27c2a957e6c5bc832b39654ef457a5cd61ef",
+  "shape": [
+   493,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_134": {
+  "acquisition": "standardized",
+  "duration": 428.6,
+  "files": [
+   "Center5_134.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 21430,
+  "n_steps": 85,
+  "r": 0.45,
+  "sha256": "c1d1103b22727e8073dece688755b0a1fbd121d42722d648927b679a64a850fb",
+  "shape": [
+   85,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ },
+ "C5_135": {
+  "acquisition": "standardized",
+  "duration": 753.6,
+  "files": [
+   "Center5_135.mp4"
+  ],
+  "frames_per_step_min": 250,
+  "model": "Cosmos-CV8x8x8",
+  "n_frames": 37680,
+  "n_steps": 150,
+  "r": 0.45,
+  "sha256": "4688ad4fbb5d1d85bf450b3b92815f9d879a77a2647e908fd11e0d5377278020",
+  "shape": [
+   150,
+   25600
+  ],
+  "weights": "/media/user/LaCie/medvideo_gate/weights/cosmos/Cosmos-1.0-Tokenizer-CV8x8x8"
+ }
+}

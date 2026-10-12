@@ -1,0 +1,97 @@
+{
+ "code_snapshot_files": 2124,
+ "code_snapshot_sha256": "74fce80563043ecd122857aa00c822e3fb67595e0ae08c09e746d0ef2b5cd512",
+ "expect_commit": "9e1aa715af3067a912bb69733ab79df106877b53",
+ "mask_check_valid": true,
+ "settings": {
+  "batch": 64,
+  "determinism": {
+   "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+   "cudnn_benchmark": false,
+   "cudnn_deterministic": true,
+   "use_deterministic_algorithms": "True (warn_only)"
+  },
+  "device": "cuda",
+  "dtype_on_cuda": "bfloat16 (locked extract_all)",
+  "lanes": [
+   [
+    "REF"
+   ],
+   [
+    "P",
+    "P-nat",
+    "S"
+   ]
+  ],
+  "max_concurrent_readers": 2,
+  "memory_cap_bytes": 107893551923,
+  "physical_cores": 14,
+  "reserved_cpus": [
+   18,
+   19
+  ],
+  "threads_per_process": 6,
+  "worker_cpus": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17
+  ],
+  "workers": 12
+ },
+ "stages": {
+  "extract_P": {
+   "status": "done",
+   "t_done": "2026-10-09T12:20:39+09:00",
+   "t_running": "2026-10-07T21:33:51+09:00"
+  },
+  "extract_P-nat": {
+   "status": "done",
+   "t_done": "2026-10-11T00:39:50+09:00",
+   "t_running": "2026-10-09T12:20:40+09:00"
+  },
+  "extract_REF": {
+   "status": "done",
+   "t_done": "2026-10-11T16:26:28+09:00",
+   "t_running": "2026-10-07T21:33:51+09:00"
+  },
+  "extract_S": {
+   "status": "done",
+   "t_done": "2026-10-12T13:32:59+09:00",
+   "t_running": "2026-10-11T00:39:50+09:00"
+  },
+  "mask_check": {
+   "status": "done",
+   "t_done": "2026-10-07T21:33:51+09:00",
+   "t_running": "2026-10-06T17:28:52+09:00"
+  },
+  "near_uniform": {
+   "status": "done",
+   "t_done": "2026-10-12T13:33:03+09:00",
+   "t_running": "2026-10-12T13:33:00+09:00"
+  },
+  "stage": {
+   "status": "done",
+   "t_done": "2026-10-06T14:20:15+09:00",
+   "t_running": "2026-10-06T08:04:43+09:00"
+  }
+ },
+ "third_party_digest": {
+  "LeanVAE": "c354a4a7f7cc91b288a1fde4021f8fd87ebb811040edbcbb3d16d48e9d51abdd",
+  "SurgeNet": "a7d3cab6532f44eae4515c6e12cb9774ca42608b73ef05f6e9713ff8e7789252"
+ }
+}
