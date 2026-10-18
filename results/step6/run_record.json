@@ -1,0 +1,74 @@
+{
+ "launch_commit": "7adaf133f8eaac9cf790d5320c2dd4b48d0b05cc",
+ "note": "\u00a714 step 6 units only; replicates.csv, cell_metrics.csv and families.json are \u00a714 step 7",
+ "run_plan": {
+  "n_units": 73200,
+  "placeholder": false,
+  "reductions": "",
+  "root": 20261007,
+  "sets": {
+   "W0": "REAL:W0",
+   "W5": "REAL:W5",
+   "primary": "REAL:primary",
+   "single_file": "REAL:single_file"
+  }
+ },
+ "sdr_commit": "af56777e0f52b5c350dd7ba557d55b2394cbd4bf",
+ "settings": {
+  "memory_cap_bytes": 107893551923,
+  "memory_guard": {
+   "interval_s": 15,
+   "mem_available_min_fraction": 0.05,
+   "psi_full_avg60_max": 10.0,
+   "strikes": 3,
+   "swap_out_rule": null
+  },
+  "orchestrator_cpus": [
+   18,
+   19
+  ],
+  "placeholder": null,
+  "python": "/home/user/miniconda3/bin/python3",
+  "reps": "/media/user/LaCie/medvideo_gate/ss_step4_5/step5/reps.npz",
+  "sdr_commit": "af56777e0f52b5c350dd7ba557d55b2394cbd4bf",
+  "ss_benchmark_files_differing_from_sdr_commit": [
+   "ss_benchmark/models/prim_caformer.py"
+  ],
+  "thread_env": {
+   "MKL_NUM_THREADS": "1",
+   "NUMEXPR_NUM_THREADS": "1",
+   "OMP_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1",
+   "PYTHONDONTWRITEBYTECODE": "1",
+   "PYTHONHASHSEED": "0"
+  },
+  "worker_cpus": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17
+  ],
+  "workers": 18
+ },
+ "shard_digest": "cccba345778652c1fdc7a1a2604a5b800b2eb088d8f24a6aa2738b025362da49",
+ "shards": {
+  "W0": 10800,
+  "W5": 1200,
+  "primary": 48000,
+  "single_file": 13200
+ }
+}

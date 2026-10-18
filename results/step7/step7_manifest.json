@@ -1,0 +1,32 @@
+{
+ "command": "/home/user/miniconda3/bin/python3 -m ss_benchmark.grid_driver --out /media/user/LaCie/medvideo_gate/ss_step6/grid --workers 1 --reps /media/user/LaCie/medvideo_gate/ss_step4_5/step5/reps.npz --conditions /media/user/LaCie/medvideo_gate/ss_step6/code_snapshot/results/step5/grid_conditions.json --gsite /media/user/LaCie/medvideo_gate/ss_step6/code_snapshot/results/codelock_gate/gsite_record.json --projection /media/user/LaCie/medvideo_gate/ss_step6/code_snapshot/results/codelock_gate/projection_PLACEHOLDER.json (cwd /media/user/LaCie/medvideo_gate/ss_step6/code_snapshot)",
+ "n_units": 73200,
+ "outputs": {
+  "cell_metrics.csv": {
+   "bytes": 889775,
+   "path": "/media/user/LaCie/medvideo_gate/ss_step6/grid/cell_metrics.csv",
+   "sha256": "588f991bd81a4f71a0b49e12d98521a4df11a286f49722757ba65b254efca0e8"
+  },
+  "families.json": {
+   "bytes": 30561,
+   "path": "/media/user/LaCie/medvideo_gate/ss_step6/grid/families.json",
+   "sha256": "06ab647e679df65f5b617bceae7e42fff92ef8236fe29d5420f4ffa5ac8f71d5"
+  },
+  "replicates.csv": {
+   "bytes": 191126510,
+   "path": "/media/user/LaCie/medvideo_gate/ss_step6/grid/replicates.csv",
+   "sha256": "63e031deede6228432507fd7de3f3ddd2218e05b1cd28aba24f960c7252a5db3"
+  }
+ },
+ "placeholder": false,
+ "step6_launch_commit": "7adaf133f8eaac9cf790d5320c2dd4b48d0b05cc",
+ "step6_shard_digest": "cccba345778652c1fdc7a1a2604a5b800b2eb088d8f24a6aa2738b025362da49",
+ "thread_env": {
+  "MKL_NUM_THREADS": "1",
+  "NUMEXPR_NUM_THREADS": "1",
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "PYTHONDONTWRITEBYTECODE": "1",
+  "PYTHONHASHSEED": "0"
+ }
+}
