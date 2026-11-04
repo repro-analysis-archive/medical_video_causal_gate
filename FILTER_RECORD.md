@@ -21,3 +21,23 @@
 | remotes in `repo/` | 0 |
 | HEAD original → public | `2880d73` → `f72a7db` |
 | frozen protocol file `docs/SS_PROTOCOL_DS203.md`, SHA-256 | `cd7e1402…d748926` equal in the original at `4c86dc5` and in the public copy at the mapped commit `2661846` and at HEAD |
+
+## Step 2 — third-party e-mail addresses replaced (2026-11-04)
+
+* Rule: four e-mail addresses of third parties (three personal professional addresses, one organisational address), quoted in four derived audit records — quotations of published dataset-access instructions and of a paper's corresponding-author line — are replaced by the literal `[e-mail address removed]` in every version of these files in the whole history. Files (one version each in the history; 10 occurrences): `data_audit/DATA_AUDIT_TABLE.csv`, `data_audit/audits/A_col2_audit.json`, `data_audit/audits/A_surg3_audit.json`, `data_audit/lead/out/dataset_provenance.json`. Not changed: the authors' contact address, `noreply@anthropic.com` in the commit trailers, and the placeholder `t@example.invalid` in a test. In `dataset_provenance.json` the keyword-context windows that contained an address are therefore no longer of fixed width.
+* Tool: git-filter-repo a40bce548d2c (git-filter-repo 2.47.0); in a fresh copy of the release repository, `git filter-repo --replace-text <expressions file> --preserve-commit-hashes --force` (the expressions file lists the four literal addresses and is not published). An earlier pre-release build of 2026-11-04 (private repository and unpublished archive draft only) is superseded; its commit IDs were never public.
+
+| check | result |
+|---|---|
+| commits before → after (pruned) | 70 → 70 (0) |
+| commits keeping their ID | 16 (commits 1–16); commits 17–70 get new IDs (the first is the commit that added `A_col2_audit.json`) |
+| paths with changed content in any commit (trees compared commit by commit) | the four files above only |
+| every changed file = its previous version with the literal replacement applied | yes (byte comparison) |
+| JSON files | valid; same keys, nesting, types and non-string values; only the 6 strings that contained an address differ |
+| CSV file | 195 rows (header included), same columns; 4 cells differ, each only by the replacement |
+| commit messages, authors, committers, author / commit dates | unchanged (all 70); parents map one to one |
+| the four addresses in any reachable object (case-insensitive; also `%40`, `[at]`, `(at)`) | 0 |
+| `git fsck --full --strict` | no problems |
+| frozen protocol `docs/SS_PROTOCOL_DS203.md`, SHA-256 | `cd7e1402…d748926` at the mapped freeze commit `e312b8b71c7568cc5b8e36967c597288942e3eea` and at HEAD |
+
+`COMMIT_ID_MAP.md` maps every original ID to the ID after both steps.

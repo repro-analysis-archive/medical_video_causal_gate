@@ -25,34 +25,34 @@ Each identifier can be checked with `git show <ID>` in a clone of this repositor
 
 | meaning | original ID (cited in the Supplementary Methods / records) | ID in this repository |
 |---|---|---|
-| protocol freeze | `4c86dc5` (`4c86dc5f7df357a09311198f34e141972fe0175a`) | `2661846c5757c2cc351037d75549861d3966c2ba` |
-| freeze record | `8f63e43` (`8f63e4390a36ed6585f74d70b05e841976f94ce5`) | `52ec937fb19386f9caa507a51cd29944af68e7ae` |
-| SDR implementation | `af56777` (`af56777e0f52b5c350dd7ba557d55b2394cbd4bf`) | `62d355748a8f0c865a559f16aac94cf0925bc08c` |
-| final code lock | `98cba1e` (`98cba1e9907c99377890b47b2078f0b6c4270e79`) | `6e3f2fd806690009b9a788432066dfd872ea03a0` |
-| model selection (superseded) | `cb78391` (`cb783913a1ab0175bda2cef2a62fd78040bf7ffd`) | `01542f49a730d7fec1d87a6987bfa8175b90fe08` |
-| post-lock correction CODELOCK_CORRECTION_001 | `ad8833a` (`ad8833a53b9a41b1f20dd96f9410f80d9b7ab5d3`) | `c487e0c85c1f89aa98fb50e2ee5c22cdde8f0086` |
-| model reselection | `ba73820` (`ba73820c1303f723da7dba8f49f432962d3a37a1`) | `8c12b5213042b7d0e499ac61d07cce5dbaf7eb66` |
-| steps 4–5 runner | `9e1aa71` (`9e1aa715af3067a912bb69733ab79df106877b53`) | `1ed8f0533db23eb07e932372f6b79d145388e38d` |
-| step-4 record | `8d4c61a` (`8d4c61a0163e836c5df363166e4b1aee4352c174`) | `200f13679305160452304fd781ae7a7db1dda585` |
-| step-5 record | `0ebf2cf` (`0ebf2cf632d752cdf5136473a3b6e368c0e5094c`) | `6fbac3c83e0b647ce6ad28668dc7ee8f68ba4cde` |
-| §13 record | `0667430` (`066743094ebc0d74b283fee4b6fb4afd282709ba`) | `db1a1930d3376131fcc24828eb18eda70bb8d47c` |
-| step-6 runner | `7adaf13` (`7adaf133f8eaac9cf790d5320c2dd4b48d0b05cc`) | `e5759effe5ad12f30ce09ee7f25410c6037dc493` |
-| step-7 record | `2880d73` (`2880d736c75fbaaed8abbce233e82229b65e4c2f`) | `f72a7db3e40463c12adc573b5f40c95e379f17d6` |
-| video container facts | `2012acd` (`2012acdb8fdecce12e5bc7c62af633a716511eec`) | `698643e2fb62e927d8014b63406e7c24d68c62aa` |
-| window offsets per W | `adf9160` (`adf916023a8cc2da04e4cb12cc896719a0e60314`) | `1af70709e5b6d2b186afd828a5435e40a1c208a2` |
-| per-W G-SITE record | `b987010` (`b9870103eb3644cfd1a7fb4fca4861c74af10a7e`) | `3d8c8cb31131d8e72edb9a97866c46c711db7993` |
-| model facts | `d3563e7` (`d3563e703ae15241970e99c37a82c7c26697e800`) | `b4d34be01f4795281fa0037f843b30bc91a030d4` |
-| download completeness | `dba9c06` (`dba9c068b753e67a135061e0059e07f1caf87da6`) | `b08f999d0bfdc4c3ebb15217b1a8e2f04a6b90d6` |
-| window rule | `dbd5984` (`dbd598441f039d6235443bc396faeae5326b2f08`) | `53e208e33f6685f9b2e7e36d0b5dcd8b38ed6dac` |
-| step-7 runner (task table; not in SM v4) | `80998c1` (`80998c127a887202794645c91ece4cb624d5b555`) | `ac642b70d1eebaac2af7cf7e49535bd034c13b21` |
+| protocol freeze | `4c86dc5` (`4c86dc5f7df357a09311198f34e141972fe0175a`) | `e312b8b71c7568cc5b8e36967c597288942e3eea` |
+| freeze record | `8f63e43` (`8f63e4390a36ed6585f74d70b05e841976f94ce5`) | `7b20e151d0490ed7a6dbb92e0f4e9f499e4d1181` |
+| SDR implementation | `af56777` (`af56777e0f52b5c350dd7ba557d55b2394cbd4bf`) | `398519e47c287016de9f26fe6d0feb5d4562e784` |
+| final code lock | `98cba1e` (`98cba1e9907c99377890b47b2078f0b6c4270e79`) | `09b58f35309fb3d5f8195b5b014c0de83e79cde9` |
+| model selection (superseded) | `cb78391` (`cb783913a1ab0175bda2cef2a62fd78040bf7ffd`) | `3b7891c07c8cbae6a7ab029ce562b81c82d61051` |
+| post-lock correction CODELOCK_CORRECTION_001 | `ad8833a` (`ad8833a53b9a41b1f20dd96f9410f80d9b7ab5d3`) | `39119999249f6049e4ecbb0ebfd6c998edb18e66` |
+| model reselection | `ba73820` (`ba73820c1303f723da7dba8f49f432962d3a37a1`) | `0e70a13aeabf04b38af81e0a5716eb51e8c683ff` |
+| steps 4–5 runner | `9e1aa71` (`9e1aa715af3067a912bb69733ab79df106877b53`) | `2689767e4ce0e2f6c21b77611d9c7fdac3ad8990` |
+| step-4 record | `8d4c61a` (`8d4c61a0163e836c5df363166e4b1aee4352c174`) | `3ce570626518a77a8ccac4c3e96239f5bb633016` |
+| step-5 record | `0ebf2cf` (`0ebf2cf632d752cdf5136473a3b6e368c0e5094c`) | `b1c55a599b765a7b1f84a92194e08c5d27b69347` |
+| §13 record | `0667430` (`066743094ebc0d74b283fee4b6fb4afd282709ba`) | `bba80179823504bc52a08bb40a389271ad3915e8` |
+| step-6 runner | `7adaf13` (`7adaf133f8eaac9cf790d5320c2dd4b48d0b05cc`) | `942d11a0158982ad62ff85a416493919b926ea51` |
+| step-7 record | `2880d73` (`2880d736c75fbaaed8abbce233e82229b65e4c2f`) | `c6628ee671f0a8e5f47d334324297c3045428ae4` |
+| video container facts | `2012acd` (`2012acdb8fdecce12e5bc7c62af633a716511eec`) | `0e72752126c48134487077c31f44a15deaf727b7` |
+| window offsets per W | `adf9160` (`adf916023a8cc2da04e4cb12cc896719a0e60314`) | `4c9394b7b1d0f763af61181315e4b1609288bb35` |
+| per-W G-SITE record | `b987010` (`b9870103eb3644cfd1a7fb4fca4861c74af10a7e`) | `7a06ff2681a79f2bdc5f1baadefbf69002959e23` |
+| model facts | `d3563e7` (`d3563e703ae15241970e99c37a82c7c26697e800`) | `92532d54bcb77acb3d147ad2fb61c0b96c05821a` |
+| download completeness | `dba9c06` (`dba9c068b753e67a135061e0059e07f1caf87da6`) | `594c3d185bc1e92e63e423136d805ab973b6d7e4` |
+| window rule | `dbd5984` (`dbd598441f039d6235443bc396faeae5326b2f08`) | `6e5eae5e0520db0891bfd12522be3a7296641e6b` |
+| step-7 runner (task table; not in SM v4) | `80998c1` (`80998c127a887202794645c91ece4cb624d5b555`) | `fc3d4bf09c1814d22b7beb9cf4f94e24574cfe86` |
 
 ## History filtering and commit identifiers
 
-This repository is a filtered copy of the original history (`git filter-repo`): all third-party material (fetched papers and their extracted text, copies of third-party READMEs / documentation / code / configuration / licences, raw API responses and saved web pages, and 22 screening input batches consisting of fetched abstracts — 1,636 paths) was removed from the whole history (decision D9). 67 commits → 67; the 13 oldest keep their IDs, all later IDs change, including all 19 identifiers cited in the Supplementary Methods (table above). The frozen protocol `docs/SS_PROTOCOL_DS203.md` is identified by its content hash, SHA-256 `cd7e14026c6ace5b2e2e6987c9e73421401cc6b168b3d25830d116b12d748926`, equal at the original freeze commit and at the mapped public commit. Commit messages and dates are unchanged, so messages still name original IDs.
+This repository is a filtered copy of the original history (`git filter-repo`): all third-party material (fetched papers and their extracted text, copies of third-party READMEs / documentation / code / configuration / licences, raw API responses and saved web pages, and 22 screening input batches consisting of fetched abstracts — 1,636 paths) was removed from the whole history (decision D9). 67 commits → 67; the 13 oldest keep their IDs, all later IDs change, including all 19 identifiers cited in the Supplementary Methods (table above). The frozen protocol `docs/SS_PROTOCOL_DS203.md` is identified by its content hash, SHA-256 `cd7e14026c6ace5b2e2e6987c9e73421401cc6b168b3d25830d116b12d748926`, equal at the original freeze commit and at the mapped public commit. Commit messages and dates are unchanged, so messages still name original IDs. In a second step (2026-11-04), four e-mail addresses of third parties quoted in four derived audit records (`data_audit/DATA_AUDIT_TABLE.csv`, `data_audit/audits/A_col2_audit.json`, `data_audit/audits/A_surg3_audit.json`, `data_audit/lead/out/dataset_provenance.json`) were replaced by `[e-mail address removed]` throughout the history; nothing else changed (70 commits → 70; the IDs in the table above and in `COMMIT_ID_MAP.md` are those after both steps).
 
 * `COMMIT_ID_MAP.md` — original → public ID of every commit;
 * `removed_paths.txt` — the exact paths removed from the whole history;
-* `FILTER_RECORD.md` — tool, command and the checks performed when the copy was built (2026-10-28).
+* `FILTER_RECORD.md` — tool, command and the checks performed when the copy was built (2026-10-28) and when the e-mail addresses were replaced (2026-11-04).
 
 The unfiltered original history is not distributed (it contains the removed third-party material). It is kept by the authors as a git bundle (SHA-256 `5072e7bb9e92c5a8760dcb896c79e26b55ccc04b44dafe61ca90b699a1f87f83`) so that the original identifiers can be verified; requests to the corresponding author.
 
@@ -62,7 +62,7 @@ The unfiltered original history is not distributed (it contains the removed thir
 * video frames and staged video archives
 * step-6 / X unit shards and X1 features (their SHA-256 lists are in the records)
 * model weights and checkpoints, and upstream source code (see *Upstream models and licences*)
-* third-party material removed from the whole history (see *History filtering*); the authors' audit notes, scripts and derived tables are kept — derived files quote third-party text only in quotations of ≤ 150 words with their source
+* third-party material removed from the whole history (see *History filtering*); the authors' audit notes, scripts and derived tables are kept — derived files quote third-party text only in quotations of ≤ 150 words with their source (e-mail addresses of third parties in these quotations are replaced by `[e-mail address removed]`)
 
 Case-level derived data (the case list, per-case window offsets, per-file probes and the per-case file lists of the step-4 record) are published as they are: Appendix300 is CC BY 4.0 and the case IDs are the dataset's own identifiers.
 
